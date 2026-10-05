@@ -1,0 +1,4581 @@
+{
+ "materials": [
+  {
+   "id": "shrinking-violet-attar",
+   "name": "Shrinking-Violet Attar",
+   "tier": "rare",
+   "tags": [
+    "oil",
+    "flower",
+    "size",
+    "fey"
+   ],
+   "desc": "A single bead of violet oil that visibly tightens the surface of whatever it touches. Diminution brewers treasure it because raw petals alone never hold the shrinking long enough.",
+   "perish": "1 week",
+   "value": 500,
+   "recipe": {
+    "components": [
+     {
+      "m": "shrinking-violet",
+      "q": 6,
+      "role": "base"
+     },
+     {
+      "m": "moonpetal",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "quicksilver",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "herbalism-kit",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 16,
+    "time": "3 days",
+    "gp": 150,
+    "level": 5,
+    "lore": "Six bushels of violets reduce to one drop; moonpetal keeps the fey virtue from fading, and quicksilver holds it in suspension."
+   }
+  },
+  {
+   "id": "unseen-distillate",
+   "name": "Unseen Distillate",
+   "tier": "very-rare",
+   "tags": [
+    "liquid",
+    "invisibility",
+    "stealth"
+   ],
+   "desc": "A liquid you can only find by touch — the flask looks empty and casts no reflection. The heart of any true draught of invisibility.",
+   "perish": "stable",
+   "value": 4000,
+   "recipe": {
+    "components": [
+     {
+      "m": "glasswing-orchid",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "invisible-stalker-core",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "shadowsilk-thistle",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "crystal-vial",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 19,
+    "time": "7 days",
+    "gp": 1500,
+    "level": 9,
+    "spells": [
+     "invisibility"
+    ],
+    "lore": "Glasswing nectar is only half-unseen; bleeding a stalker's core into it and straining it through shadowsilk finishes the job."
+   }
+  }
+ ],
+ "items": [
+  {
+   "id": "potion-of-healing",
+   "name": "Potion of Healing",
+   "cat": "potion",
+   "tier": "common",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "healing"
+   ],
+   "effect": "A bright red tonic that knits flesh as it goes down, restoring 2d4 + 2 hit points.",
+   "value": 50,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "healers-moss",
+       "silverleaf",
+       "stone-milk"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Common healing herb"
+     },
+     {
+      "m": "yarrow-sprig",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "honey",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "herbalism-kit"
+    ],
+    "station": "campfire",
+    "dc": 12,
+    "time": "1 day",
+    "gp": 5,
+    "level": 1,
+    "yields": 1,
+    "lore": "Every hedge-witch starts here: moss or silverleaf steeped in honeyed water, with yarrow to stanch the bleeding. The red colour comes from the yarrow, not magic — but customers expect it."
+   }
+  },
+  {
+   "id": "potion-of-greater-healing",
+   "name": "Potion of Greater Healing",
+   "cat": "potion",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "healing",
+    "regeneration"
+   ],
+   "effect": "A deeper crimson draught that closes serious wounds, restoring 4d4 + 4 hit points.",
+   "value": 260,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "mendwort",
+       "troll-blood",
+       "unicorn-tears",
+       "knotwood-bracket"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Potent restorative (uncommon+)"
+     },
+     {
+      "m": "healers-moss",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "bloodwood-sap",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "alchemical-base",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "herbalism-kit",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "spells": [
+     "cure wounds"
+    ],
+    "yields": 1,
+    "lore": "Mendwort teaches wounds to remember being whole; troll blood simply refuses to let them stay open. Either way, a base of healer's moss keeps the regrowth from running wild."
+   }
+  },
+  {
+   "id": "potion-of-superior-healing",
+   "name": "Potion of Superior Healing",
+   "cat": "potion",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "healing",
+    "radiant"
+   ],
+   "effect": "A glowing ruby elixir that restores 8d4 + 8 hit points, often mending broken bone outright.",
+   "value": 1900,
+   "recipe": {
+    "components": [
+     {
+      "m": "crystal-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "kingsbalm-lily",
+       "sunmend-orchid",
+       "troll-regenerating-heart",
+       "hydra-regen-tissue"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Rare healing keystone"
+     },
+     {
+      "m": "mendwort",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "unicorn-tears",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "alchemical-base",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "herbalism-kit",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 18,
+    "time": "7.5 days",
+    "gp": 375,
+    "level": 6,
+    "spells": [
+     "cure wounds",
+     "prayer of healing"
+    ],
+    "yields": 1,
+    "lore": "Kingsbalm and sunmend grow only where celestial light falls; a troll's heart or a hydra's regrowing flesh is the darker, cheaper road to the same miracle."
+   }
+  },
+  {
+   "id": "potion-of-supreme-healing",
+   "name": "Potion of Supreme Healing",
+   "cat": "potion",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "healing",
+    "regeneration"
+   ],
+   "effect": "Liquid sunrise in a phial: restores 10d4 + 20 hit points, enough to pull almost anyone back from the brink.",
+   "value": 8100,
+   "recipe": {
+    "components": [
+     {
+      "m": "crystal-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "everbloom-heartroot",
+       "planetar-tears",
+       "celestial-lifesap"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Very rare life-giving keystone"
+     },
+     {
+      "m": "sunmend-orchid",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "kingsbalm-lily",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "celestial-dew",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "herbalism-kit",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 21,
+    "time": "15 days",
+    "gp": 2000,
+    "level": 11,
+    "spells": [
+     "mass cure wounds"
+    ],
+    "yields": 1,
+    "lore": "The Everbloom root has never died once in its existence, and a planetar's tears fall only for the dying. Distilled over celestial dew, they carry that refusal into the drinker."
+   }
+  },
+  {
+   "id": "potion-of-hill-giant-strength",
+   "name": "Potion of Hill Giant Strength",
+   "cat": "potion",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "strength",
+    "giant"
+   ],
+   "effect": "For 1 hour your Strength score becomes 21 (no effect if it's already higher). The draught tastes of iron and the giant's homeland.",
+   "value": 300,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "hill-giant-blood",
+       "hill-giant-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Hill giant blood"
+     },
+     {
+      "m": "ogre-blood",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "giants-knuckle-root",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "alchemical-base",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "spells": [
+     "enhance ability"
+    ],
+    "yields": 1,
+    "lore": "Hill giant blood is thick, sour and stubborn; a knuckle of giant's-root and a splash of ogre blood coax it into a drinkable brew."
+   }
+  },
+  {
+   "id": "potion-of-frost-giant-strength",
+   "name": "Potion of Frost Giant Strength",
+   "cat": "potion",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "strength",
+    "giant"
+   ],
+   "effect": "For 1 hour your Strength score becomes 23 (no effect if it's already higher). The draught tastes of iron and the giant's homeland.",
+   "value": 1800,
+   "recipe": {
+    "components": [
+     {
+      "m": "crystal-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "frost-giant-blood",
+       "frost-giant-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Frost giant blood"
+     },
+     {
+      "m": "giants-knuckle-root",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "frost-giant-glacial-ice-shard",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "alchemical-base",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 18,
+    "time": "7.5 days",
+    "gp": 375,
+    "level": 6,
+    "spells": [
+     "enhance ability"
+    ],
+    "yields": 1,
+    "lore": "The blood must never thaw fully — alchemists stir it over glacier ice from the giant's own stronghold so the strength doesn't bleed away as steam."
+   }
+  },
+  {
+   "id": "potion-of-stone-giant-strength",
+   "name": "Potion of Stone Giant Strength",
+   "cat": "potion",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "strength",
+    "giant"
+   ],
+   "effect": "For 1 hour your Strength score becomes 23 (no effect if it's already higher). The draught tastes of iron and the giant's homeland.",
+   "value": 1500,
+   "recipe": {
+    "components": [
+     {
+      "m": "crystal-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "stone-giant-blood",
+       "stone-giant-heartstone"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Stone giant blood"
+     },
+     {
+      "m": "giants-knuckle-root",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "stoneroot",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "alchemical-base",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 18,
+    "time": "7.5 days",
+    "gp": 375,
+    "level": 6,
+    "spells": [
+     "enhance ability"
+    ],
+    "yields": 1,
+    "lore": "Stone giant blood is half grit; it's settled for days with stoneroot until the sediment falls out and only the mountain's patience remains."
+   }
+  },
+  {
+   "id": "potion-of-fire-giant-strength",
+   "name": "Potion of Fire Giant Strength",
+   "cat": "potion",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "strength",
+    "giant"
+   ],
+   "effect": "For 1 hour your Strength score becomes 25 (no effect if it's already higher). The draught tastes of iron and the giant's homeland.",
+   "value": 2200,
+   "recipe": {
+    "components": [
+     {
+      "m": "crystal-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "fire-giant-blood",
+       "fire-giant-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Fire giant blood"
+     },
+     {
+      "m": "giants-knuckle-root",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "dragons-blood-resin",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "fire-giant-forge-ash",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "alchemical-base",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 18,
+    "time": "7.5 days",
+    "gp": 375,
+    "level": 6,
+    "spells": [
+     "enhance ability"
+    ],
+    "yields": 1,
+    "lore": "Fire giant blood smokes in open air. Forge-ash from their own smithies and dragon's-blood resin keep it simmering without boiling off its might."
+   }
+  },
+  {
+   "id": "potion-of-cloud-giant-strength",
+   "name": "Potion of Cloud Giant Strength",
+   "cat": "potion",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "strength",
+    "giant"
+   ],
+   "effect": "For 1 hour your Strength score becomes 27 (no effect if it's already higher). The draught tastes of iron and the giant's homeland.",
+   "value": 8400,
+   "recipe": {
+    "components": [
+     {
+      "m": "crystal-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "cloud-giant-blood"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Cloud giant blood"
+     },
+     {
+      "m": "giants-knuckle-root",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "cloud-giant-cloudstuff",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "alchemical-base",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 21,
+    "time": "15 days",
+    "gp": 2000,
+    "level": 11,
+    "spells": [
+     "enhance ability"
+    ],
+    "yields": 1,
+    "lore": "Cloud giant blood tries to rise out of the flask; a wisp of cloudstuff gives it somewhere to go, and the root anchors it to the drinker's sinews."
+   }
+  },
+  {
+   "id": "potion-of-storm-giant-strength",
+   "name": "Potion of Storm Giant Strength",
+   "cat": "potion",
+   "tier": "legendary",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "strength",
+    "storm",
+    "giant"
+   ],
+   "effect": "For 1 hour your Strength score becomes 29 (no effect if it's already higher). Faint lightning crawls under the skin while it lasts.",
+   "value": 60000,
+   "recipe": {
+    "components": [
+     {
+      "m": "crystal-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "eye-of-storm-glass",
+       "ancient-blue-dragon-heart",
+       "kraken-storm-organ"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Legendary storm keystone"
+     },
+     {
+      "m": "storm-giant-blood",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "storm-giant-lightning-veined-hair",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "giants-knuckle-root",
+      "q": 3,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 25,
+    "time": "30 days",
+    "gp": 10000,
+    "level": 17,
+    "spells": [
+     "enhance ability",
+     "call lightning"
+    ],
+    "yields": 1,
+    "lore": "Storm giant blood alone is too wild to hold — it cracks the phial at the first thunderclap. Only a heart of the storm itself (eye-glass, an ancient blue's heart or a kraken's storm-organ) can master it."
+   }
+  },
+  {
+   "id": "potion-of-animal-friendship",
+   "name": "Potion of Animal Friendship",
+   "cat": "potion",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "charm",
+    "primal"
+   ],
+   "effect": "For 1 hour you can charm a beast of low intelligence as the animal friendship spell (DC 13), again and again.",
+   "value": 210,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "druid-living-wood-focus",
+       "dryad-heartwood",
+       "glamour-pollen"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Woodland charm keystone"
+     },
+     {
+      "m": "awakened-shrub-wakeful-leaf",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "sweetgrass",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "honey",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "herbalism-kit",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "spells": [
+     "animal friendship"
+    ],
+    "yields": 1,
+    "lore": "Beasts trust what smells like the forest itself. Living wood, a leaf that remembers being awake and honey make the drinker smell like a friendly grove."
+   }
+  },
+  {
+   "id": "potion-of-clairvoyance",
+   "name": "Potion of Clairvoyance",
+   "cat": "potion",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "senses",
+    "knowledge"
+   ],
+   "effect": "Drinking it grants the effect of the clairvoyance spell, letting you see or hear a familiar place far away.",
+   "value": 1200,
+   "recipe": {
+    "components": [
+     {
+      "m": "crystal-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "aboleth-eye",
+       "gynosphinx-eye",
+       "veilpierce-eyebright"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Far-seeing eye (rare+)"
+     },
+     {
+      "m": "eyebright",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "eagle-eye",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "alchemical-base",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "herbalism-kit",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 18,
+    "time": "7.5 days",
+    "gp": 375,
+    "level": 6,
+    "spells": [
+     "clairvoyance"
+    ],
+    "yields": 1,
+    "lore": "An eye that has seen across centuries or dimensions still wants to look further; eyebright and an eagle's eye point it where the drinker chooses."
+   }
+  },
+  {
+   "id": "potion-of-climbing",
+   "name": "Potion of Climbing",
+   "cat": "potion",
+   "tier": "common",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "climbing"
+   ],
+   "effect": "For 1 hour you gain a climbing speed equal to your walking speed and advantage on climbing checks. The liquid is layered brown, silver and grey.",
+   "value": 97,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "giant-lizard-toe-pads",
+       "giant-wolf-spider-bristles",
+       "ape-arm-sinew"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Climber's part"
+     },
+     {
+      "m": "clingvine",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "pine-resin",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "herbalism-kit",
+     "alchemists-supplies"
+    ],
+    "station": "campfire",
+    "dc": 12,
+    "time": "1 day",
+    "gp": 5,
+    "level": 1,
+    "spells": [
+     "spider climb"
+    ],
+    "yields": 1,
+    "lore": "Gecko-footed lizards and spiders never slip; boiled with clingvine tendrils and a thumb of pine resin, the draught leaves your palms faintly tacky for an hour."
+   }
+  },
+  {
+   "id": "potion-of-diminution",
+   "name": "Potion of Diminution",
+   "cat": "potion",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "size",
+    "fey"
+   ],
+   "effect": "For 1d4 hours you shrink as if under the reduce effect of enlarge/reduce, no concentration needed.",
+   "value": 1700,
+   "recipe": {
+    "components": [
+     {
+      "m": "crystal-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "shrinking-violet-attar",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "moonpetal",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "rat-tail",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "alchemical-base",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "herbalism-kit",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 18,
+    "time": "7.5 days",
+    "gp": 375,
+    "level": 6,
+    "spells": [
+     "enlarge/reduce"
+    ],
+    "yields": 1,
+    "lore": "Violets that grow beside fey crossings shrink from footsteps; their attar teaches the drinker to do the same. A rat's tail is added by old tradition 'so you know where to hide.'"
+   }
+  },
+  {
+   "id": "potion-of-flying",
+   "name": "Potion of Flying",
+   "cat": "potion",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "flight",
+    "air"
+   ],
+   "effect": "For 1 hour you gain a flying speed equal to your walking speed and can hover. If it ends mid-air, you fall.",
+   "value": 9700,
+   "recipe": {
+    "components": [
+     {
+      "m": "crystal-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "cloud-giant-blood",
+       "planetar-feather",
+       "solar-feather"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Sky-born keystone (very rare+)"
+     },
+     {
+      "m": "skyfloat-thistle",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "wind-seed",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "giant-eagle-pinion",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 21,
+    "time": "15 days",
+    "gp": 2000,
+    "level": 11,
+    "spells": [
+     "fly"
+    ],
+    "yields": 1,
+    "lore": "Thistle and wind-seed want to drift; a cloud giant's blood or a feather from an angel's wing gives the drift direction and will. Always cork it upside down."
+   }
+  },
+  {
+   "id": "potion-of-gaseous-form",
+   "name": "Potion of Gaseous Form",
+   "cat": "potion",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "air",
+    "shapechange"
+   ],
+   "effect": "For 1 hour you become a drifting cloud as the gaseous form spell; you can end it early as a bonus action.",
+   "value": 1500,
+   "recipe": {
+    "components": [
+     {
+      "m": "crystal-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "cloud-giant-cloudstuff",
+       "vampire-heart-ash",
+       "djinni-cloudsilk-hair"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Mist-body keystone (rare+)"
+     },
+     {
+      "m": "solid-cloud",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "mistcap",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "alchemical-base",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 18,
+    "time": "7.5 days",
+    "gp": 375,
+    "level": 6,
+    "spells": [
+     "gaseous form"
+    ],
+    "yields": 1,
+    "lore": "Vampires turn to mist when wounded and djinn are made half of wind; either remnant, boiled with cloud and mistcap, lets flesh remember how to be vapour."
+   }
+  },
+  {
+   "id": "potion-of-growth",
+   "name": "Potion of Growth",
+   "cat": "potion",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "size",
+    "growth"
+   ],
+   "effect": "For 1d4 hours you swell as if under the enlarge effect of enlarge/reduce, no concentration needed.",
+   "value": 250,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "giantcap-mushroom",
+       "hill-giant-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Growth keystone (uncommon+)"
+     },
+     {
+      "m": "giants-knuckle-root",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "oxheart-tuber",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "alchemical-base",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "herbalism-kit",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "spells": [
+     "enlarge/reduce"
+    ],
+    "yields": 1,
+    "lore": "Giantcaps double in size overnight after rain; a pinch of giant's-root and a hearty tuber give the swelling bulk something to build on."
+   }
+  },
+  {
+   "id": "potion-of-heroism",
+   "name": "Potion of Heroism",
+   "cat": "potion",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "blessing",
+    "protection"
+   ],
+   "effect": "For 1 hour you gain 10 temporary hit points and are blessed as the bless spell, no concentration needed.",
+   "value": 1600,
+   "recipe": {
+    "components": [
+     {
+      "m": "crystal-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "guardian-naga-heart",
+       "deva-essence",
+       "androsphinx-mane-hair"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Valiant keystone (rare+)"
+     },
+     {
+      "m": "lionsmane-thistle",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "lion-heart",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "holy-spring-water",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "herbalism-kit",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 18,
+    "time": "7.5 days",
+    "gp": 375,
+    "level": 6,
+    "spells": [
+     "bless"
+    ],
+    "yields": 1,
+    "lore": "Brewed from things that never flinch — a guardian naga's heart, a deva's essence, a sphinx's mane — with lionsmane and a lion's heart for the old-fashioned courage."
+   }
+  },
+  {
+   "id": "potion-of-invisibility",
+   "name": "Potion of Invisibility",
+   "cat": "potion",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "invisibility",
+    "stealth"
+   ],
+   "effect": "You turn invisible, along with what you carry, for 1 hour; attacking or casting a spell ends it early. The flask looks empty but sloshes.",
+   "value": 10000,
+   "recipe": {
+    "components": [
+     {
+      "m": "crystal-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "unseen-distillate",
+       "ancient-black-dragon-gloom-gland"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Unseen keystone (very rare+)"
+     },
+     {
+      "m": "ghostpetal",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "octopus-ink",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "alchemical-base",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 21,
+    "time": "15 days",
+    "gp": 2000,
+    "level": 11,
+    "spells": [
+     "invisibility"
+    ],
+    "yields": 1,
+    "lore": "The distillate does the vanishing; ghostpetal keeps the effect from fading at the edges, and a drop of octopus ink hides the drinker's shadow."
+   }
+  },
+  {
+   "id": "potion-of-mind-reading",
+   "name": "Potion of Mind Reading",
+   "cat": "potion",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "telepathy",
+    "psychic"
+   ],
+   "effect": "Grants the detect thoughts spell (DC 13) for its duration. The liquid holds a slowly turning pink cloud.",
+   "value": 1400,
+   "recipe": {
+    "components": [
+     {
+      "m": "crystal-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "aboleth-brain",
+       "thought-crystal",
+       "mindbloom-orchid"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Mind keystone (rare+)"
+     },
+     {
+      "m": "mind-mote-dust",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "rememberwort",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "alchemical-base",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "herbalism-kit",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 18,
+    "time": "7.5 days",
+    "gp": 375,
+    "level": 6,
+    "spells": [
+     "detect thoughts"
+    ],
+    "yields": 1,
+    "lore": "An aboleth's brain still listens after death, and mindbloom opens only when someone near it is thinking hard. Both lend their eavesdropping to the drinker."
+   }
+  },
+  {
+   "id": "potion-of-poison",
+   "name": "Potion of Poison",
+   "cat": "potion",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "poison",
+    "curse"
+   ],
+   "effect": "Looks, smells and tastes like a healing potion. The drinker takes 3d6 poison damage, must save (DC 13 Con) or be poisoned, and suffers more damage each turn until it passes.",
+   "value": 170,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "deathcap-toadstool",
+       "drider-venom",
+       "phase-spider-venom"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Treacherous toxin (uncommon+)"
+     },
+     {
+      "m": "healers-moss",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "dye-red",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "alchemical-base",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "poisoners-kit",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "spells": [
+     "poison spray"
+    ],
+    "yields": 1,
+    "lore": "The whole art is disguise: a real sprig of healer's moss masks the bitterness, red dye completes the lie, and the deathcap does the rest."
+   }
+  },
+  {
+   "id": "potion-of-acid-resistance",
+   "name": "Potion of Acid Resistance",
+   "cat": "potion",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "resistance",
+    "acid"
+   ],
+   "effect": "For 1 hour you have resistance to acid damage. The liquid carries a hint of its source — you can usually tell which one it is by colour.",
+   "value": 390,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "sourbog-pitcher",
+       "young-black-dragon-scales",
+       "young-copper-dragon-scales"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Acid-proof keystone (uncommon+)"
+     },
+     {
+      "m": "ankheg-carapace",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "black-dragon-wyrmling-scales",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "alchemical-base",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "herbalism-kit",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "spells": [
+     "protection from energy"
+    ],
+    "yields": 1,
+    "lore": "A pitcher plant never dissolves in its own juices, and a black dragon's scales shrug off what it breathes. Ankheg shell is ground in for good measure."
+   }
+  },
+  {
+   "id": "potion-of-cold-resistance",
+   "name": "Potion of Cold Resistance",
+   "cat": "potion",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "resistance",
+    "cold"
+   ],
+   "effect": "For 1 hour you have resistance to cold damage. The liquid carries a hint of its source — you can usually tell which one it is by colour.",
+   "value": 300,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "frost-lichen",
+       "young-white-dragon-blood",
+       "frost-giant-braid",
+       "winter-wolf-frost-gland"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Cold-proof keystone (uncommon+)"
+     },
+     {
+      "m": "polar-bear-fat",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "snowcap-berry",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "alchemical-base",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "herbalism-kit",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "spells": [
+     "protection from energy"
+    ],
+    "yields": 1,
+    "lore": "Frost lichen thrives on bare glacier; rendered with polar bear fat, it leaves a warmth in the belly that no blizzard can reach."
+   }
+  },
+  {
+   "id": "potion-of-fire-resistance",
+   "name": "Potion of Fire Resistance",
+   "cat": "potion",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "resistance",
+    "fire"
+   ],
+   "effect": "For 1 hour you have resistance to fire damage. The liquid carries a hint of its source — you can usually tell which one it is by colour.",
+   "value": 300,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "emberbloom",
+       "salamander-scales",
+       "hell-hound-pelt",
+       "fire-giant-cinder-braid"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Fire-proof keystone (uncommon+)"
+     },
+     {
+      "m": "aloe-leaf",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "ashlily",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "alchemical-base",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "herbalism-kit",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "spells": [
+     "protection from energy"
+    ],
+    "yields": 1,
+    "lore": "Emberbloom flowers inside volcanic vents; with cooling aloe and ashlily it gives skin the stubbornness of a thing that grew in fire."
+   }
+  },
+  {
+   "id": "potion-of-force-resistance",
+   "name": "Potion of Force Resistance",
+   "cat": "potion",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "resistance",
+    "force"
+   ],
+   "effect": "For 1 hour you have resistance to force damage. The liquid carries a hint of its source — you can usually tell which one it is by colour.",
+   "value": 420,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "young-bronze-dragon-repulsion-gland",
+       "meteoric-iron"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Force-proof keystone (uncommon+)"
+     },
+     {
+      "m": "bronze-dragon-wyrmling-repulsion-gland",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "lodestone",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "alchemical-base",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "herbalism-kit",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "spells": [
+     "shield"
+    ],
+    "yields": 1,
+    "lore": "A bronze dragon's repulsion gland pushes everything away; filings of star-iron and lodestone teach the drinker's body to push back against raw force."
+   }
+  },
+  {
+   "id": "potion-of-lightning-resistance",
+   "name": "Potion of Lightning Resistance",
+   "cat": "potion",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "resistance",
+    "lightning"
+   ],
+   "effect": "For 1 hour you have resistance to lightning damage. The liquid carries a hint of its source — you can usually tell which one it is by colour.",
+   "value": 330,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "young-blue-dragon-scales",
+       "behir-scale",
+       "shambling-mound-vines",
+       "fulgurite"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Lightning-proof keystone (uncommon+)"
+     },
+     {
+      "m": "blue-dragon-wyrmling-scales",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "copper-wire",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "alchemical-base",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "herbalism-kit",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "spells": [
+     "protection from energy"
+    ],
+    "yields": 1,
+    "lore": "Shambling mounds drink lightning and grow stronger; brewers wind the vines around copper wire so the charge drains harmlessly into the flask."
+   }
+  },
+  {
+   "id": "potion-of-necrotic-resistance",
+   "name": "Potion of Necrotic Resistance",
+   "cat": "potion",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "resistance",
+    "necrotic"
+   ],
+   "effect": "For 1 hour you have resistance to necrotic damage. The liquid carries a hint of its source — you can usually tell which one it is by colour.",
+   "value": 300,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "mummy-embalming-resin",
+       "black-coral",
+       "bloodmoss"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Necrotic-proof keystone (uncommon+)"
+     },
+     {
+      "m": "natron",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "garlic-bulb",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "alchemical-base",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "herbalism-kit",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "spells": [
+     "resistance"
+    ],
+    "yields": 1,
+    "lore": "Mummies keep death at bay with their embalming resins; natron dries the rot out, and garlic is there because grandmothers insist."
+   }
+  },
+  {
+   "id": "potion-of-poison-resistance",
+   "name": "Potion of Poison Resistance",
+   "cat": "potion",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "resistance",
+    "poison"
+   ],
+   "effect": "For 1 hour you have resistance to poison damage. The liquid carries a hint of its source — you can usually tell which one it is by colour.",
+   "value": 300,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "wyrmbane-thistle",
+       "young-green-dragon-scales",
+       "otyugh-bile",
+       "purity-lotus"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Poison-proof keystone (uncommon+)"
+     },
+     {
+      "m": "cleansing-sage",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "vulture-gizzard",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "alchemical-base",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "herbalism-kit",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "spells": [
+     "protection from poison"
+    ],
+    "yields": 1,
+    "lore": "A vulture eats carrion without harm, an otyugh wallows in filth; their gut-fortitude plus wyrmbane and sage makes a stomach that refuses venom."
+   }
+  },
+  {
+   "id": "potion-of-psychic-resistance",
+   "name": "Potion of Psychic Resistance",
+   "cat": "potion",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "resistance",
+    "psychic"
+   ],
+   "effect": "For 1 hour you have resistance to psychic damage. The liquid carries a hint of its source — you can usually tell which one it is by colour.",
+   "value": 300,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "thought-crystal",
+       "mind-mote-dust",
+       "doppelganger-brain"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Psychic-proof keystone (uncommon+)"
+     },
+     {
+      "m": "amethyst",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "hushmoss",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "alchemical-base",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "herbalism-kit",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "spells": [
+     "resistance"
+    ],
+    "yields": 1,
+    "lore": "Amethyst has guarded sleepers from nightmares for ages; ground with dust from drifting thoughts, it builds a quiet wall around the mind."
+   }
+  },
+  {
+   "id": "potion-of-radiant-resistance",
+   "name": "Potion of Radiant Resistance",
+   "cat": "potion",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "resistance",
+    "radiant"
+   ],
+   "effect": "For 1 hour you have resistance to radiant damage. The liquid carries a hint of its source — you can usually tell which one it is by colour.",
+   "value": 300,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "couatl-scale",
+       "halo-quartz",
+       "sun-amber"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Radiant-proof keystone (uncommon+)"
+     },
+     {
+      "m": "smoky-quartz",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-birch-bark",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "alchemical-base",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "herbalism-kit",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "spells": [
+     "resistance"
+    ],
+    "yields": 1,
+    "lore": "Things that live in holy light must learn to bear it; couatl scale and halo-quartz carry that tolerance, while smoky quartz dims the glare."
+   }
+  },
+  {
+   "id": "potion-of-thunder-resistance",
+   "name": "Potion of Thunder Resistance",
+   "cat": "potion",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "resistance",
+    "thunder"
+   ],
+   "effect": "For 1 hour you have resistance to thunder damage. The liquid carries a hint of its source — you can usually tell which one it is by colour.",
+   "value": 300,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "resonant-crystal",
+       "tyrannosaurus-rex-roar-sac",
+       "vrock-screech-organ"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Thunder-proof keystone (uncommon+)"
+     },
+     {
+      "m": "hushmoss",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "echo-geode",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "alchemical-base",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "herbalism-kit",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "spells": [
+     "protection from energy"
+    ],
+    "yields": 1,
+    "lore": "A creature that roars must not be deafened by its own voice; its roar-sac, steeped with hushmoss, lets the drinker weather a thunderclap."
+   }
+  },
+  {
+   "id": "potion-of-speed",
+   "name": "Potion of Speed",
+   "cat": "potion",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "speed",
+    "time"
+   ],
+   "effect": "For 1 minute you are hasted as the haste spell, no concentration needed: faster, harder to hit, and with an extra action each turn.",
+   "value": 8000,
+   "recipe": {
+    "components": [
+     {
+      "m": "crystal-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "marilith-essence",
+       "marilith-hand",
+       "androsphinx-tear"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Very rare speed keystone"
+     },
+     {
+      "m": "quickthorn-berry",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "hawk-flight-feathers",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "quicksilver",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 21,
+    "time": "15 days",
+    "gp": 2000,
+    "level": 11,
+    "spells": [
+     "haste"
+    ],
+    "yields": 1,
+    "lore": "A marilith moves six arms faster than most move one; a sphinx's tear bends time outright. Quickthorn and quicksilver carry the haste into the blood — it wobbles in the flask like a nervous animal."
+   }
+  },
+  {
+   "id": "potion-of-water-breathing",
+   "name": "Potion of Water Breathing",
+   "cat": "potion",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "breathing",
+    "water"
+   ],
+   "effect": "For 1 hour you can breathe underwater. The cloudy green fluid smells of the sea and holds a single drifting bubble.",
+   "value": 180,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "gillweed-kelp",
+       "water-elemental-tidewater-pearl",
+       "killer-whale-lungs",
+       "aboleth-mucus"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Deep-breath keystone (uncommon+)"
+     },
+     {
+      "m": "bladderwrack",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "sea-salt",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "alchemical-base",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "herbalism-kit",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "spells": [
+     "water breathing"
+    ],
+    "yields": 1,
+    "lore": "Gillweed grows its own gills in the tide; bladderwrack's air pockets and a pinch of sea salt help the drinker's lungs remember the trick."
+   }
+  },
+  {
+   "id": "potion-of-longevity",
+   "name": "Potion of Longevity",
+   "cat": "potion",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "time",
+    "healing"
+   ],
+   "effect": "Your physical age drops by 1d6 + 6 years (minimum 13). Each further dose risks a cumulative 10% chance of instead aging you 1d6 + 6 years.",
+   "value": 12000,
+   "recipe": {
+    "components": [
+     {
+      "m": "crystal-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "ageless-lotus",
+       "androsphinx-tear",
+       "wishbloom"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Timeless keystone (very rare+)"
+     },
+     {
+      "m": "nautilus-shell",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "amber",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "healers-moss",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "herbalism-kit",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 21,
+    "time": "15 days",
+    "gp": 2000,
+    "level": 11,
+    "spells": [
+     "greater restoration"
+    ],
+    "yields": 1,
+    "lore": "The ageless lotus has bloomed in the same season for a thousand years. Amber holds a moment still and the nautilus counts time in spirals — backwards, if you grind it right."
+   }
+  },
+  {
+   "id": "oil-of-etherealness",
+   "name": "Oil of Etherealness",
+   "cat": "oil",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "oil",
+    "planar",
+    "invisibility"
+   ],
+   "effect": "Spend 10 minutes anointing yourself and for 1 hour you slip into the Ethereal Plane as the etherealness spell. Cloudy grey, it beads on the skin like quicksilver.",
+   "value": 1900,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "night-hag-heartstone",
+       "nalfeshnee-wing",
+       "astral-silver-thread"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Plane-slipping keystone (rare+)"
+     },
+     {
+      "m": "phase-spider-silk",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "ghost-ectoplasm",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "lamp-oil",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 18,
+    "time": "7.5 days",
+    "gp": 375,
+    "level": 6,
+    "spells": [
+     "blink"
+    ],
+    "yields": 1,
+    "lore": "Night hags use their heartstones to walk the Border Ethereal; dissolved with phase-spider silk and a ghost's ectoplasm, the heartstone's trick soaks into the skin."
+   }
+  },
+  {
+   "id": "oil-of-sharpness",
+   "name": "Oil of Sharpness",
+   "cat": "oil",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "oil",
+    "weapon"
+   ],
+   "effect": "Coat one slashing or piercing weapon (or 5 pieces of ammunition) over a minute; for 1 hour it counts as a +3 magic weapon.",
+   "value": 7500,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "marilith-hand",
+       "androsphinx-claw",
+       "tarrasque-claw"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Supreme edge keystone (very rare+)"
+     },
+     {
+      "m": "diamond-dust",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "adamantine-ingot",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "lamp-oil",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies",
+     "smiths-tools"
+    ],
+    "station": "alchemy-lab",
+    "dc": 21,
+    "time": "15 days",
+    "gp": 2000,
+    "level": 11,
+    "spells": [
+     "magic weapon"
+    ],
+    "yields": 1,
+    "lore": "A marilith's hand or a sphinx's claw remembers every cut it made. Mixed with diamond dust and adamantine filings, the oil hones any edge to a legendary bite."
+   }
+  },
+  {
+   "id": "oil-of-slipperiness",
+   "name": "Oil of Slipperiness",
+   "cat": "oil",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "oil",
+    "binding"
+   ],
+   "effect": "Anointed, you gain the benefits of freedom of movement for 8 hours; poured on the ground it creates a grease slick for 8 hours instead.",
+   "value": 400,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "giant-shark-liver-oil",
+       "aboleth-mucus"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Slick keystone (uncommon+)"
+     },
+     {
+      "m": "giant-frog-skin",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "gray-ooze-slime",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "lamp-oil",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "spells": [
+     "grease"
+    ],
+    "yields": 1,
+    "lore": "Shark liver oil never congeals in the coldest sea, and an aboleth's mucus is infamous; with frog slime and a dab of ooze, nothing can get a grip on you."
+   }
+  },
+  {
+   "id": "philter-of-love",
+   "name": "Philter of Love",
+   "cat": "potion",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "charm"
+   ],
+   "effect": "The next creature you see within 10 minutes of drinking charms you for 1 hour — and if it's a creature you could fall for, you're smitten while it lasts.",
+   "value": 190,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "lovers-rose",
+       "succubus-incubus-lips",
+       "lamia-heart"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Heart-stealing keystone (uncommon+)"
+     },
+     {
+      "m": "rose-quartz",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "fragrant-flowers",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "honey",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "herbalism-kit",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "spells": [
+     "charm person"
+    ],
+    "yields": 1,
+    "lore": "Rose-coloured and sweet, with a single heart-shaped bubble. Lover's rose is the honest ingredient; an incubus's lips or a lamia's heart are for brewers with fewer scruples."
+   }
+  },
+  {
+   "id": "elixir-of-health",
+   "name": "Elixir of Health",
+   "cat": "potion",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "potion",
+    "healing",
+    "disease"
+   ],
+   "effect": "Cures any disease and ends the blinded, deafened, paralyzed and poisoned conditions. The clear red liquid glitters with specks of light.",
+   "value": 1200,
+   "recipe": {
+    "components": [
+     {
+      "m": "crystal-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "unicorn-horn",
+       "purity-lotus",
+       "deva-tears"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Purifying keystone (rare+)"
+     },
+     {
+      "m": "feverfew",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "vulture-gizzard",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "holy-spring-water",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "herbalism-kit",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 18,
+    "time": "7.5 days",
+    "gp": 375,
+    "level": 6,
+    "spells": [
+     "lesser restoration"
+    ],
+    "yields": 1,
+    "lore": "Shavings of unicorn horn purify any poison in the cup; feverfew breaks fever and a vulture's gizzard — immune to every rot it swallows — does the rest."
+   }
+  },
+  {
+   "id": "restorative-ointment",
+   "name": "Restorative Ointment",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "healing",
+    "container"
+   ],
+   "effect": "A small jar holding 1d4 + 1 doses of minty salve. Swallowing or rubbing on a dose restores 2d8 + 2 hit points and cures poison and disease.",
+   "value": 300,
+   "recipe": {
+    "components": [
+     {
+      "m": "flask",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "knotwood-bracket",
+       "bloodwood-sap",
+       "unicorn-tears"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Restorative keystone (uncommon+)"
+     },
+     {
+      "m": "aloe-leaf",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "willow-bark",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "beeswax",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "herbalism-kit",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "cure wounds"
+    ],
+    "yields": 1,
+    "lore": "Knotwood mends the trees it grows on and bloodwood sap clots like living blood; worked into beeswax with aloe and willow bark and packed into a small clay pot, the salve smells cool and sharp, like crushed mint."
+   }
+  },
+  {
+   "id": "universal-solvent",
+   "name": "Universal Solvent",
+   "cat": "wondrous",
+   "tier": "legendary",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "acid",
+    "liquid"
+   ],
+   "effect": "A tube of milky liquid that dissolves any adhesive it touches — including sovereign glue — within a round.",
+   "value": 66900,
+   "recipe": {
+    "components": [
+     {
+      "m": "bottle",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "ancient-black-dragon-breath-gland",
+       "ancient-copper-dragon-breath-gland"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Ancient acid gland"
+     },
+     {
+      "m": "black-pudding-acid",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "gray-ooze-corrosion-salt",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "vinegar",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "yields": 1,
+    "lore": "An ancient dragon's acid is too fierce to store, but diluted with pudding acid and ooze-salt it becomes selective: it hungers only for the bonds between things."
+   }
+  },
+  {
+   "id": "sovereign-glue",
+   "name": "Sovereign Glue",
+   "cat": "wondrous",
+   "tier": "legendary",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "binding",
+    "liquid"
+   ],
+   "effect": "Milk-white glue that permanently bonds any two objects after a minute of setting. Only universal solvent, etherealness oil or a wish can part them. Holds 1d6 + 1 ounces.",
+   "value": 66800,
+   "recipe": {
+    "components": [
+     {
+      "m": "bottle",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "kraken-tentacle",
+       "ancient-silver-dragon-paralyzing-gland",
+       "lich-phylactery-shard"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Legendary binding keystone"
+     },
+     {
+      "m": "mimic-adhesive",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "roper-strand",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "oil-of-slipperiness",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "amberpine-sap",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "yields": 1,
+    "lore": "A kraken's suckers never let go of a ship; boiled down with mimic adhesive and roper strands, the glue inherits that grip forever. A dose of oil of slipperiness lines the bottle, or the glue seals itself shut."
+   }
+  },
+  {
+   "id": "dust-of-disappearance",
+   "name": "Dust of Disappearance",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "dust",
+    "invisibility"
+   ],
+   "effect": "A pinch thrown in the air turns you and everyone within 10 feet invisible for 2d4 minutes; attacking or casting ends it for that creature.",
+   "value": 410,
+   "recipe": {
+    "components": [
+     {
+      "m": "pouch",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "invisible-stalker-clearglass",
+       "ghostpetal",
+       "green-hag-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Vanishing keystone (uncommon+)"
+     },
+     {
+      "m": "mistcap",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-dust",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "invisibility"
+    ],
+    "yields": 1,
+    "lore": "Invisible stalker glass is ground finer than flour; mistcap spores carry it on the air, and silver dust makes it cling to everyone nearby rather than drift away."
+   }
+  },
+  {
+   "id": "dust-of-dryness",
+   "name": "Dust of Dryness",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "dust",
+    "water"
+   ],
+   "effect": "Each pinch soaks up a cube of open water up to 15 feet on a side, leaving a marble-sized pellet that releases it all when smashed. A water creature it strikes takes heavy damage.",
+   "value": 310,
+   "recipe": {
+    "components": [
+     {
+      "m": "pouch",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "water-elemental-core",
+       "primordial-brine"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Water-drinking keystone (uncommon+)"
+     },
+     {
+      "m": "natron",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "glass-sand",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "create or destroy water"
+    ],
+    "yields": 1,
+    "lore": "A water elemental's core wants to gather water back to itself. Ground with natron — the embalmer's desiccant — it drinks lakes and folds them into a pebble."
+   }
+  },
+  {
+   "id": "dust-of-sneezing-and-choking",
+   "name": "Dust of Sneezing and Choking",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "dust",
+    "poison",
+    "curse"
+   ],
+   "effect": "Looks exactly like dust of disappearance. Once thrown, everyone within 30 feet must save (DC 15 Con) or be unable to breathe and helpless with fits of choking.",
+   "value": 350,
+   "recipe": {
+    "components": [
+     {
+      "m": "pouch",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "vrock-spores",
+       "hezrou-stench-gland"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Choking keystone (uncommon+)"
+     },
+     {
+      "m": "shrieker-spores",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "violet-fungus-spores",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-dust",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies",
+     "poisoners-kit"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "poison spray"
+    ],
+    "yields": 1,
+    "lore": "Vrock spores choke the lungs of anything that breathes them. Silver dust gives the mix the same glitter as its innocent cousin — the whole point of the trap."
+   }
+  },
+  {
+   "id": "bead-of-force",
+   "name": "Bead of Force",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "force",
+    "protection"
+   ],
+   "effect": "Thrown up to 60 feet, this black glass bead bursts for 5d4 force damage and traps everything nearby in a sphere of force for 1 minute.",
+   "value": 2000,
+   "recipe": {
+    "components": [
+     {
+      "m": "raw-glass",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "young-bronze-dragon-repulsion-gland",
+       "meteoric-iron"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Force keystone (rare+)"
+     },
+     {
+      "m": "bronze-dragon-wyrmling-repulsion-gland",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "obsidian",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "glassblowers-tools"
+    ],
+    "station": "glassworks",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "shield"
+    ],
+    "yields": 1,
+    "lore": "Molten glass is quenched in the fluid of a bronze dragon's repulsion gland; the pent-up push inside the bead is what bursts outward into a shell."
+   }
+  },
+  {
+   "id": "assassins-blood",
+   "name": "Assassin's Blood",
+   "cat": "poison",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "poison",
+    "death"
+   ],
+   "effect": "(Ingested) The victim takes 1d12 poison damage and is poisoned for a day unless they make a DC 10 Con save (half damage, no poisoning).",
+   "value": 200,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "assassins-poison-residue",
+       "deathcap-toadstool",
+       "drider-venom"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Lethal toxin (uncommon+)"
+     },
+     {
+      "m": "hemlock",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "spirits",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "poisoners-kit"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "yields": 1,
+    "lore": "Tasteless in wine, which is why it's the professional's first choice. Hemlock root thickens it; deathcap gives it the kick."
+   }
+  },
+  {
+   "id": "burnt-othur-fumes",
+   "name": "Burnt Othur Fumes",
+   "cat": "poison",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "poison",
+    "death"
+   ],
+   "effect": "(Inhaled) Victims save (DC 13 Con) or take 3d6 poison damage and must repeat the save each turn, taking 1d6 more on each failure until three saves succeed.",
+   "value": 500,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "hezrou-stench-gland",
+       "black-lotus",
+       "iron-golem-vent-slag"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Choking toxin (uncommon+)"
+     },
+     {
+      "m": "sulfur",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "ghast-stench-gland",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "poisoners-kit"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "yields": 1,
+    "lore": "Othur is a paste of demon stench and brimstone that is burned, not drunk. The sulfur makes it smoulder slowly enough to fill a room."
+   }
+  },
+  {
+   "id": "crawler-mucus",
+   "name": "Crawler Mucus",
+   "cat": "poison",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "poison",
+    "paralysis"
+   ],
+   "effect": "(Contact) Save (DC 13 Con) or be poisoned and paralyzed for 1 minute, repeating the save each turn.",
+   "value": 240,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "chuul-tentacle",
+       "widows-hood"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Paralytic secretion (uncommon+)"
+     },
+     {
+      "m": "ghoul-saliva",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "stiffweed",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "poisoners-kit"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "yields": 1,
+    "lore": "The venom is named for the carrion-eating cave crawlers that secrete it; poisoners without one to milk use a chuul's paralytic tentacles instead — cut with ghoul spit and stiffweed, the result is indistinguishable."
+   }
+  },
+  {
+   "id": "drow-poison",
+   "name": "Drow Poison",
+   "cat": "poison",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "poison",
+    "sleep"
+   ],
+   "effect": "(Injury) Save (DC 13 Con) or be poisoned for 1 hour; fail by 5 or more and you also fall unconscious until you take damage or are shaken awake.",
+   "value": 250,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "couatl-venom",
+       "slumberlily"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Sleep venom (uncommon+)"
+     },
+     {
+      "m": "sprite-sleep-poison",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "bellshade",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "poisoners-kit"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "yields": 1,
+    "lore": "The underdark recipe is a secret, but surface poisoners get close with couatl venom or slumberlily, stretched with sprite-arrow sap."
+   }
+  },
+  {
+   "id": "essence-of-ether",
+   "name": "Essence of Ether",
+   "cat": "poison",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "poison",
+    "sleep"
+   ],
+   "effect": "(Inhaled) Save (DC 15 Con) or be poisoned for 8 hours and unconscious while poisoned, until damaged or shaken awake.",
+   "value": 300,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "dreamfruit",
+       "mandrake-root"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Stupefying keystone (uncommon+)"
+     },
+     {
+      "m": "drowsy-poppy",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "chamomile",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "poisoners-kit"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "yields": 1,
+    "lore": "Dreamfruit rind is dried and powdered with poppy so it can be puffed into a sleeper's face; mandrake is the cheaper, nastier substitute."
+   }
+  },
+  {
+   "id": "malice",
+   "name": "Malice",
+   "cat": "poison",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "poison",
+    "shadow"
+   ],
+   "effect": "(Inhaled) Save (DC 15 Con) or be poisoned for 1 hour and blinded while poisoned.",
+   "value": 250,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "gloom-moss",
+       "cloaker-eye",
+       "dread-nettle"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Blinding keystone (uncommon+)"
+     },
+     {
+      "m": "belladonna",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "darkmantle-darkness-gland",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "poisoners-kit"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "yields": 1,
+    "lore": "Gloom-moss drinks light where it grows; its dried spores, stirred with darkmantle ink and belladonna, draw a curtain over the victim's eyes."
+   }
+  },
+  {
+   "id": "midnight-tears",
+   "name": "Midnight Tears",
+   "cat": "poison",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "poison",
+    "death",
+    "time"
+   ],
+   "effect": "(Ingested) Does nothing until the stroke of midnight. Then, unless neutralized first, the victim saves (DC 17 Con) or takes 9d6 poison damage (half on a success).",
+   "value": 1500,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "black-lotus",
+       "spirit-naga-venom",
+       "dusk-pearl"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Delayed death keystone (rare+)"
+     },
+     {
+      "m": "grave-lily",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "moonpetal",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "poisoners-kit"
+    ],
+    "station": "alchemy-lab",
+    "dc": 18,
+    "time": "7.5 days",
+    "gp": 375,
+    "level": 6,
+    "yields": 1,
+    "lore": "Moonpetal only opens at midnight, and the tears won't 'open' either until that hour. Black lotus supplies the deadliness."
+   }
+  },
+  {
+   "id": "oil-of-taggit",
+   "name": "Oil of Taggit",
+   "cat": "poison",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "poison",
+    "sleep"
+   ],
+   "effect": "(Contact) Save (DC 13 Con) or be poisoned for 24 hours and unconscious while poisoned; damage wakes the victim.",
+   "value": 400,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "night-hag-fingernails",
+       "mandrake-root"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Slumber keystone (uncommon+)"
+     },
+     {
+      "m": "bellshade",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "lamp-oil",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "poisoners-kit"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "yields": 1,
+    "lore": "Night hags lull their prey with a touch; their fingernail parings, steeped in oil with bellshade, work through the skin just the same."
+   }
+  },
+  {
+   "id": "pale-tincture",
+   "name": "Pale Tincture",
+   "cat": "poison",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "poison",
+    "disease",
+    "curse"
+   ],
+   "effect": "(Ingested) Save (DC 16 Con) or take 1d6 poison damage and be poisoned; the save repeats every 24 hours, dealing another 1d6 poison damage on each failure, and the damage can't heal until the poison ends after seven successful saves.",
+   "value": 250,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "hags-fingers",
+       "mummy-wrappings"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Wasting keystone (uncommon+)"
+     },
+     {
+      "m": "tomb-mold",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "feverfew",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "poisoners-kit"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "yields": 1,
+    "lore": "Hag's-finger fungus rots whatever it touches; it's cut with tomb mold and — perversely — feverfew, which keeps the victim alive and suffering longer."
+   }
+  },
+  {
+   "id": "purple-worm-poison",
+   "name": "Purple Worm Poison",
+   "cat": "poison",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "poison",
+    "death"
+   ],
+   "effect": "(Injury) Save (DC 19 Con) or take 12d6 poison damage, half as much on a success.",
+   "value": 2600,
+   "recipe": {
+    "components": [
+     {
+      "m": "crystal-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "purple-worm-venom",
+       "purple-worm-stinger"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Purple worm toxin"
+     },
+     {
+      "m": "wyvern-stinger",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "poisoners-kit"
+    ],
+    "station": "alchemy-lab",
+    "dc": 18,
+    "time": "7.5 days",
+    "gp": 375,
+    "level": 6,
+    "yields": 1,
+    "lore": "Only a purple worm will do. The stinger's venom is dangerous to harvest and more dangerous to render; a wyvern barb is used to test each batch on rats."
+   }
+  },
+  {
+   "id": "serpent-venom",
+   "name": "Serpent Venom",
+   "cat": "poison",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "poison",
+    "death"
+   ],
+   "effect": "(Injury) Save (DC 11 Con) or take 3d6 poison damage, half as much on a success.",
+   "value": 270,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "medusa-snake-venom",
+       "guardian-naga-spit-gland",
+       "hydra-fang"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Serpentine toxin (uncommon+)"
+     },
+     {
+      "m": "giant-poisonous-snake-venom",
+      "q": 3,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "poisoners-kit"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "yields": 1,
+    "lore": "Common snake venom is concentrated over days until it's as potent as a single drop from a medusa's hair or a naga's gland — which some poisoners simply use instead."
+   }
+  },
+  {
+   "id": "torpor",
+   "name": "Torpor",
+   "cat": "poison",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "poison",
+    "time",
+    "paralysis"
+   ],
+   "effect": "(Ingested) Save (DC 15 Con) or be poisoned for 4d6 hours, incapacitated for the whole time.",
+   "value": 500,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "stone-golem-lethargy-stone",
+       "young-copper-dragon-slowing-gland",
+       "mandrake-root",
+       "couatl-venom"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Slowing or slumber keystone (uncommon+)"
+     },
+     {
+      "m": "chamomile",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "bellshade",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "poisoners-kit"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "yields": 1,
+    "lore": "A stone golem's lethargy stone slows everything around it; scraped into tea with chamomile, it slows the drinker to a standstill."
+   }
+  },
+  {
+   "id": "truth-serum",
+   "name": "Truth Serum",
+   "cat": "poison",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "poison",
+    "knowledge",
+    "charm"
+   ],
+   "effect": "(Ingested) Save (DC 11 Con) or be poisoned for 1 hour, unable to knowingly tell a lie.",
+   "value": 190,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "seers-leaf",
+       "rememberwort",
+       "doppelganger-brain"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Truth-telling keystone (uncommon+)"
+     },
+     {
+      "m": "eyebright",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "spirits",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "poisoners-kit"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "yields": 1,
+    "lore": "Seer's leaf makes falsehood physically uncomfortable to say. Interrogators add eyebright so the subject's eyes water whenever they try."
+   }
+  },
+  {
+   "id": "wyvern-poison",
+   "name": "Wyvern Poison",
+   "cat": "poison",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "poison",
+    "death"
+   ],
+   "effect": "(Injury) Save (DC 15 Con) or take 7d6 poison damage, half as much on a success.",
+   "value": 2100,
+   "recipe": {
+    "components": [
+     {
+      "m": "crystal-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "wyvern-venom-sac",
+       "bone-devil-venom"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Wyvern-grade venom (rare+)"
+     },
+     {
+      "m": "wyvern-stinger",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "poisoners-kit"
+    ],
+    "station": "alchemy-lab",
+    "dc": 18,
+    "time": "7.5 days",
+    "gp": 375,
+    "level": 6,
+    "yields": 1,
+    "lore": "Milked straight from a wyvern's tail sac and rendered with the stinger's own residue, then stored in crystal — it eats through lesser glass."
+   }
+  },
+  {
+   "id": "spell-scroll-cantrip",
+   "name": "Spell Scroll (Cantrip)",
+   "cat": "scroll",
+   "tier": "common",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "scroll",
+    "arcane"
+   ],
+   "effect": "Holds a cantrip. If the spell is on your class list you can read it to cast it without components, then the scroll crumbles; higher-level spells than you can cast require an ability check.",
+   "value": 50,
+   "recipe": {
+    "components": [
+     {
+      "m": "vellum",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "arcane-ink",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "fine-sand",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies"
+    ],
+    "station": "scriptorium",
+    "dc": 12,
+    "time": "1 day",
+    "gp": 5,
+    "level": 1,
+    "requires": "The scribe must know or have prepared the spell and expends its material components; casting it once per day of work.",
+    "yields": 1,
+    "lore": "The ink does the real work — each grade can hold only so much of a spell's weight before the letters smoke. Sand blots the lines; cheap vellum is fine for small magic."
+   }
+  },
+  {
+   "id": "spell-scroll-1st",
+   "name": "Spell Scroll (1st Level)",
+   "cat": "scroll",
+   "tier": "common",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "scroll",
+    "arcane"
+   ],
+   "effect": "Holds a 1st-level spell. If the spell is on your class list you can read it to cast it without components, then the scroll crumbles; higher-level spells than you can cast require an ability check.",
+   "value": 75,
+   "recipe": {
+    "components": [
+     {
+      "m": "vellum",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "arcane-ink",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "fine-sand",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies"
+    ],
+    "station": "scriptorium",
+    "dc": 12,
+    "time": "1 day",
+    "gp": 5,
+    "level": 1,
+    "requires": "The scribe must know or have prepared the spell and expends its material components; casting it once per day of work.",
+    "yields": 1,
+    "lore": "The ink does the real work — each grade can hold only so much of a spell's weight before the letters smoke. Sand blots the lines; cheap vellum is fine for small magic."
+   }
+  },
+  {
+   "id": "spell-scroll-2nd",
+   "name": "Spell Scroll (2nd Level)",
+   "cat": "scroll",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "scroll",
+    "arcane"
+   ],
+   "effect": "Holds a 2nd-level spell. If the spell is on your class list you can read it to cast it without components, then the scroll crumbles; higher-level spells than you can cast require an ability check.",
+   "value": 150,
+   "recipe": {
+    "components": [
+     {
+      "m": "vellum",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "potent-arcane-ink",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "fine-sand",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies"
+    ],
+    "station": "scriptorium",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "requires": "The scribe must know or have prepared the spell and expends its material components; casting it once per day of work.",
+    "yields": 1,
+    "lore": "The ink does the real work — each grade can hold only so much of a spell's weight before the letters smoke. Sand blots the lines; cheap vellum is fine for small magic."
+   }
+  },
+  {
+   "id": "spell-scroll-3rd",
+   "name": "Spell Scroll (3rd Level)",
+   "cat": "scroll",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "scroll",
+    "arcane"
+   ],
+   "effect": "Holds a 3rd-level spell. If the spell is on your class list you can read it to cast it without components, then the scroll crumbles; higher-level spells than you can cast require an ability check.",
+   "value": 300,
+   "recipe": {
+    "components": [
+     {
+      "m": "vellum",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "potent-arcane-ink",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "fine-sand",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies"
+    ],
+    "station": "scriptorium",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "requires": "The scribe must know or have prepared the spell and expends its material components; casting it once per day of work.",
+    "yields": 1,
+    "lore": "The ink does the real work — each grade can hold only so much of a spell's weight before the letters smoke. Sand blots the lines; cheap vellum is fine for small magic."
+   }
+  },
+  {
+   "id": "spell-scroll-4th",
+   "name": "Spell Scroll (4th Level)",
+   "cat": "scroll",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "scroll",
+    "arcane"
+   ],
+   "effect": "Holds a 4th-level spell. If the spell is on your class list you can read it to cast it without components, then the scroll crumbles; higher-level spells than you can cast require an ability check.",
+   "value": 1200,
+   "recipe": {
+    "components": [
+     {
+      "m": "vellum",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "greater-arcane-ink",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "fine-sand",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "gold-leaf",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies"
+    ],
+    "station": "scriptorium",
+    "dc": 18,
+    "time": "7.5 days",
+    "gp": 375,
+    "level": 6,
+    "requires": "The scribe must know or have prepared the spell and expends its material components; casting it once per day of work.",
+    "yields": 1,
+    "lore": "The ink does the real work — each grade can hold only so much of a spell's weight before the letters smoke. Sand blots the lines; gold leaf seals the edges so the power can't leak out."
+   }
+  },
+  {
+   "id": "spell-scroll-5th",
+   "name": "Spell Scroll (5th Level)",
+   "cat": "scroll",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "scroll",
+    "arcane"
+   ],
+   "effect": "Holds a 5th-level spell. If the spell is on your class list you can read it to cast it without components, then the scroll crumbles; higher-level spells than you can cast require an ability check.",
+   "value": 1500,
+   "recipe": {
+    "components": [
+     {
+      "m": "vellum",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "greater-arcane-ink",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "fine-sand",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "gold-leaf",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies"
+    ],
+    "station": "scriptorium",
+    "dc": 18,
+    "time": "7.5 days",
+    "gp": 375,
+    "level": 6,
+    "requires": "The scribe must know or have prepared the spell and expends its material components; casting it once per day of work.",
+    "yields": 1,
+    "lore": "The ink does the real work — each grade can hold only so much of a spell's weight before the letters smoke. Sand blots the lines; gold leaf seals the edges so the power can't leak out."
+   }
+  },
+  {
+   "id": "spell-scroll-6th",
+   "name": "Spell Scroll (6th Level)",
+   "cat": "scroll",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "scroll",
+    "arcane"
+   ],
+   "effect": "Holds a 6th-level spell. If the spell is on your class list you can read it to cast it without components, then the scroll crumbles; higher-level spells than you can cast require an ability check.",
+   "value": 7500,
+   "recipe": {
+    "components": [
+     {
+      "m": "vellum",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "sublime-arcane-ink",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "fine-sand",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "gold-leaf",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies"
+    ],
+    "station": "scriptorium",
+    "dc": 21,
+    "time": "15 days",
+    "gp": 2000,
+    "level": 11,
+    "requires": "The scribe must know or have prepared the spell and expends its material components; casting it once per day of work.",
+    "yields": 1,
+    "lore": "The ink does the real work — each grade can hold only so much of a spell's weight before the letters smoke. Sand blots the lines; gold leaf seals the edges so the power can't leak out."
+   }
+  },
+  {
+   "id": "spell-scroll-7th",
+   "name": "Spell Scroll (7th Level)",
+   "cat": "scroll",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "scroll",
+    "arcane"
+   ],
+   "effect": "Holds a 7th-level spell. If the spell is on your class list you can read it to cast it without components, then the scroll crumbles; higher-level spells than you can cast require an ability check.",
+   "value": 12000,
+   "recipe": {
+    "components": [
+     {
+      "m": "vellum",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "sublime-arcane-ink",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "fine-sand",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "gold-leaf",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "diamond-dust",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies"
+    ],
+    "station": "scriptorium",
+    "dc": 21,
+    "time": "15 days",
+    "gp": 2000,
+    "level": 11,
+    "requires": "The scribe must know or have prepared the spell and expends its material components; casting it once per day of work.",
+    "yields": 1,
+    "lore": "The ink does the real work — each grade can hold only so much of a spell's weight before the letters smoke. Sand blots the lines; gold leaf seals the edges so the power can't leak out. Diamond dust is pressed into every sigil of the highest workings."
+   }
+  },
+  {
+   "id": "spell-scroll-8th",
+   "name": "Spell Scroll (8th Level)",
+   "cat": "scroll",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "scroll",
+    "arcane"
+   ],
+   "effect": "Holds a 8th-level spell. If the spell is on your class list you can read it to cast it without components, then the scroll crumbles; higher-level spells than you can cast require an ability check.",
+   "value": 25000,
+   "recipe": {
+    "components": [
+     {
+      "m": "vellum",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "sublime-arcane-ink",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "fine-sand",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "gold-leaf",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "diamond-dust",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies"
+    ],
+    "station": "scriptorium",
+    "dc": 21,
+    "time": "15 days",
+    "gp": 2000,
+    "level": 11,
+    "requires": "The scribe must know or have prepared the spell and expends its material components; casting it once per day of work.",
+    "yields": 1,
+    "lore": "The ink does the real work — each grade can hold only so much of a spell's weight before the letters smoke. Sand blots the lines; gold leaf seals the edges so the power can't leak out. Diamond dust is pressed into every sigil of the highest workings."
+   }
+  },
+  {
+   "id": "spell-scroll-9th",
+   "name": "Spell Scroll (9th Level)",
+   "cat": "scroll",
+   "tier": "legendary",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "scroll",
+    "arcane"
+   ],
+   "effect": "Holds a 9th-level spell. If the spell is on your class list you can read it to cast it without components, then the scroll crumbles; higher-level spells than you can cast require an ability check.",
+   "value": 60000,
+   "recipe": {
+    "components": [
+     {
+      "m": "vellum",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "primordial-arcane-ink",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "fine-sand",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "gold-leaf",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "diamond-dust",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies"
+    ],
+    "station": "scriptorium",
+    "dc": 25,
+    "time": "30 days",
+    "gp": 10000,
+    "level": 17,
+    "requires": "The scribe must know or have prepared the spell and expends its material components; casting it once per day of work.",
+    "yields": 1,
+    "lore": "The ink does the real work — each grade can hold only so much of a spell's weight before the letters smoke. Sand blots the lines; gold leaf seals the edges so the power can't leak out. Diamond dust is pressed into every sigil of the highest workings."
+   }
+  },
+  {
+   "id": "giant-boar-roast",
+   "name": "Giant Boar Roast",
+   "cat": "provision",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food",
+    "toughness"
+   ],
+   "effect": "One serving takes an hour to eat. For the next 8 hours you have temporary hit points equal to your proficiency bonus.",
+   "value": 60,
+   "recipe": {
+    "components": [
+     {
+      "m": "giant-boar-meat",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "giant-boar-heart",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "oxheart-tuber",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "salt",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "kitchen",
+    "dc": 12,
+    "time": "1 day",
+    "gp": 5,
+    "level": 1,
+    "yields": 4,
+    "lore": "The heart is slow-roasted in the belly of the joint so its stubborn vigour bastes the meat — boar hunters swear they can take a tusk to the ribs the morning after."
+   }
+  },
+  {
+   "id": "hunters-jerky",
+   "name": "Hunter's Jerky",
+   "cat": "provision",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food",
+    "toughness"
+   ],
+   "effect": "Keeps for a month and counts as a day's food. For 8 hours after eating it you have advantage on saves against exhaustion from forced marches or going without sleep.",
+   "value": 50,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "meat"
+      ],
+      "q": 3,
+      "role": "base",
+      "label": "Any meat"
+     },
+     {
+      "any": [
+       "heart"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Beast or monster heart (common+)",
+      "min": "common"
+     },
+     {
+      "m": "preserving-salts",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "wakeberry",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "campfire",
+    "dc": 12,
+    "time": "1 day",
+    "gp": 5,
+    "level": 1,
+    "yields": 4,
+    "lore": "Dried strips of heart are layered among the ordinary meat — rangers say a beast's endurance lives in its heart, and a pinch of wakeberry keeps the eyelids up."
+   }
+  },
+  {
+   "id": "mammoth-fat-frostbite-salve",
+   "name": "Mammoth-Fat Frostbite Salve",
+   "cat": "provision",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food",
+    "cold",
+    "resistance"
+   ],
+   "effect": "Rub it on at dawn: for 8 hours you automatically succeed on saves against extreme cold, and have advantage on saves against being frozen or slowed by cold magic.",
+   "value": 60,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-pot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "mammoth-fat",
+       "polar-bear-fat",
+       "killer-whale-blubber"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Cold-weather fat"
+     },
+     {
+      "oneOf": [
+       "frost-lichen",
+       "snowcap-berry"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Frost herb"
+     },
+     {
+      "m": "beeswax",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "campfire",
+    "dc": 12,
+    "time": "1 day",
+    "gp": 5,
+    "level": 1,
+    "yields": 4,
+    "lore": "Tundra folk render the fat of beasts that never feel the cold, with a little frost lichen to 'teach' the skin. It smells awful and works wonderfully."
+   }
+  },
+  {
+   "id": "rangers-trail-bread",
+   "name": "Ranger's Trail Bread",
+   "cat": "provision",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food",
+    "healing"
+   ],
+   "effect": "Dense, honeyed and nearly unspoilable. If you eat a slice during a short rest, you regain 1 extra hit point for each Hit Die you spend.",
+   "value": 50,
+   "recipe": {
+    "components": [
+     {
+      "m": "grain",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "manna",
+       "oxheart-tuber",
+       "silverleaf"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Restorative ingredient"
+     },
+     {
+      "m": "trailberries",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "honey",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "campfire",
+    "dc": 12,
+    "time": "1 day",
+    "gp": 5,
+    "level": 1,
+    "yields": 4,
+    "lore": "Baked hard enough to break teeth, the bread is soaked in a stream before eating. Silverleaf or a crumb of manna in the dough is why it heals as it fills."
+   }
+  },
+  {
+   "id": "seafarers-chowder",
+   "name": "Seafarer's Chowder",
+   "cat": "provision",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food",
+    "swimming",
+    "breathing"
+   ],
+   "effect": "For 8 hours you can hold your breath three times as long as normal and have advantage on checks to swim in rough water.",
+   "value": 55,
+   "recipe": {
+    "components": [
+     {
+      "m": "giant-crab-meat",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "sea-horse-dried",
+       "giant-sea-horse-swim-bladder",
+       "plesiosaurus-lung"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Deep-diver ingredient"
+     },
+     {
+      "m": "bladderwrack",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "sea-salt",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "kitchen",
+    "dc": 12,
+    "time": "1 day",
+    "gp": 5,
+    "level": 1,
+    "yields": 4,
+    "lore": "Pearl divers' grandmothers simmer a dried sea horse or a swim bladder into the pot, and the kelp's air-pods make the broth fizz on the tongue."
+   }
+  },
+  {
+   "id": "nightwatch-broth",
+   "name": "Nightwatch Broth",
+   "cat": "provision",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food",
+    "senses",
+    "darkvision"
+   ],
+   "effect": "For 8 hours you have advantage on Wisdom (Perception) checks that rely on sight in dim light, and you can't be surprised while on watch if you are awake.",
+   "value": 50,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-pot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "owl-eye",
+       "giant-owl-eyes",
+       "gloomsight-fungus"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Night-seeing ingredient"
+     },
+     {
+      "m": "cave-truffle",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "wakeberry",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "campfire",
+    "dc": 12,
+    "time": "1 day",
+    "gp": 5,
+    "level": 1,
+    "yields": 4,
+    "lore": "Soldiers of the night watch have always sworn by owl-eye broth. Gloomsight mushrooms do the same job for the squeamish."
+   }
+  },
+  {
+   "id": "lionsmane-honey-cakes",
+   "name": "Lionsmane Honey Cakes",
+   "cat": "provision",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food",
+    "protection",
+    "fear"
+   ],
+   "effect": "For 1 hour after eating one, you have advantage on saving throws against being frightened.",
+   "value": 60,
+   "recipe": {
+    "components": [
+     {
+      "m": "grain",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "lion-heart",
+       "lionsmane-thistle"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Courage ingredient"
+     },
+     {
+      "m": "honey",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "sweetgrass",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "kitchen",
+    "dc": 12,
+    "time": "1 day",
+    "gp": 5,
+    "level": 1,
+    "yields": 4,
+    "lore": "Squires eat them before their first battle. The thistle version is golden and sweet; the lion's-heart version is darker and, reputedly, braver."
+   }
+  },
+  {
+   "id": "owlbear-stew",
+   "name": "Owlbear Stew",
+   "cat": "provision",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food",
+    "strength"
+   ],
+   "effect": "A thick, feathery-smelling stew. For 8 hours you have advantage on Strength (Athletics) checks and count as one size larger for carrying and grappling.",
+   "value": 250,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "meat"
+      ],
+      "q": 2,
+      "role": "base",
+      "label": "Any meat"
+     },
+     {
+      "oneOf": [
+       "owlbear-egg",
+       "minotaur-heart"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Brute-strength ingredient (uncommon+)"
+     },
+     {
+      "m": "oxheart-tuber",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "giants-knuckle-root",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "kitchen",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "yields": 4,
+    "lore": "Owlbear eggs are cracked into the stew at the last moment and stirred until they thicken it. Mothers are advised to be several miles away first."
+   }
+  }
+ ]
+}

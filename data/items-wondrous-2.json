@@ -1,0 +1,4292 @@
+{
+ "materials": [
+  {
+   "id": "void-kernel",
+   "name": "Void Kernel",
+   "tier": "legendary",
+   "tags": [
+    "core",
+    "force",
+    "planar",
+    "death"
+   ],
+   "desc": "A pinprick of absolute black caged in a lattice of god-stone; light bends toward it and dust vanishes as it drifts close. The only known seed from which a sphere of annihilation can be grown.",
+   "perish": "stable",
+   "value": 120000,
+   "recipe": {
+    "components": [
+     {
+      "m": "dead-god-stone",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "tarrasque-essence",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "kraken-ink",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "black-opal",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "meteoric-iron",
+      "q": 6,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools",
+     "alchemists-supplies"
+    ],
+    "station": "enchanting-circle",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "disintegrate",
+     "gate"
+    ],
+    "requires": "Must be refined on the Astral Plane or at a site where a dead god's husk drifts; each failed check by 5+ deals 10d10 force damage to the crafter.",
+    "lore": "Crafters speak of 'hollowing' the god-stone: the tarrasque's magic-eating essence and kraken ink devour what divinity is left inside until only a hole in the world remains, held in shape by a cage of star-iron."
+   }
+  }
+ ],
+ "items": [
+  {
+   "id": "instant-fortress",
+   "name": "Instant Fortress",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "size",
+    "protection"
+   ],
+   "effect": "A palm-sized metal cube that, on a spoken word, erupts into a squat adamantine tower with arrow slits, crenellations and a door that answers only to you. Another word shrinks it back, provided the tower is empty.",
+   "value": 4500,
+   "recipe": {
+    "components": [
+     {
+      "m": "cube-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "stone-giant-heartstone",
+       "living-stone",
+       "roc-egg"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Growing-stone or size-bearing part (rare+)"
+     },
+     {
+      "m": "adamantine-ingot",
+      "q": 4,
+      "role": "supporting"
+     },
+     {
+      "m": "giants-knuckle-root",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "shrinking-violet",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "masons-tools"
+    ],
+    "station": "forge",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "enlarge/reduce",
+     "wall of stone"
+    ],
+    "lore": "Masons say a giant's heartstone 'remembers being a mountain'; folded around adamantine and pressed small with shrinking-violet, it springs back to full size the moment the word releases it."
+   }
+  },
+  {
+   "id": "ioun-stone-absorption",
+   "name": "Ioun Stone (Absorption)",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gem",
+    "antimagic",
+    "protection"
+   ],
+   "effect": "A pale lavender ellipsoid that orbits your head and drinks in hostile spells of 4th level or lower aimed only at you, cancelling them. Once it has swallowed 20 levels of spells it burns out to a dull grey husk.",
+   "value": 13800,
+   "recipe": {
+    "components": [
+     {
+      "m": "drifting-ioun-shard",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "rakshasa-hide",
+       "iron-golem-core",
+       "iron-golem-plating"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Spell-eating part (very rare+)"
+     },
+     {
+      "m": "amethyst",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "nullthorn",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "counterspell",
+     "dispel magic"
+    ],
+    "lore": "A scrap of rakshasa hide or golem iron is ground into the shard's facets; nullthorn sap seals them so the stone feeds on magic instead of shedding it."
+   }
+  },
+  {
+   "id": "ioun-stone-agility",
+   "name": "Ioun Stone (Agility)",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gem",
+    "speed"
+   ],
+   "effect": "A deep red sphere whose restless orbit quickens your reflexes, raising your Dexterity score by 2 (to a maximum of 20).",
+   "value": 20000,
+   "recipe": {
+    "components": [
+     {
+      "m": "drifting-ioun-shard",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "any": [
+       "speed"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Supernaturally swift part (very rare+, e.g. marilith scales)",
+      "min": "very-rare"
+     },
+     {
+      "m": "garnet",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "panther-hamstring",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "haste"
+    ],
+    "lore": "The shard is spun on a lathe of marilith-quick sinew until it will not stop moving; garnets give it the colour of blood rushing to the limbs."
+   }
+  },
+  {
+   "id": "ioun-stone-awareness",
+   "name": "Ioun Stone (Awareness)",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gem",
+    "senses"
+   ],
+   "effect": "A dark blue rhomboid that hums a warning in your mind, so you can never be caught by surprise while it circles you.",
+   "value": 3100,
+   "recipe": {
+    "components": [
+     {
+      "m": "drifting-ioun-shard",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "erinyes-eye",
+       "aboleth-eye",
+       "cloaker-eye"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Ever-watchful eye (rare+)"
+     },
+     {
+      "m": "lapis-lazuli",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "ettin-wakeful-eye",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "alarm"
+    ],
+    "lore": "An eye that never truly closed in life is dissolved into the shard; an ettin's second, always-waking eye keeps it on watch while you sleep."
+   }
+  },
+  {
+   "id": "ioun-stone-fortitude",
+   "name": "Ioun Stone (Fortitude)",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gem",
+    "toughness"
+   ],
+   "effect": "A pink rhomboid whose slow orbit hardens flesh and stamina, raising your Constitution score by 2 (to a maximum of 20).",
+   "value": 20000,
+   "recipe": {
+    "components": [
+     {
+      "m": "drifting-ioun-shard",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "dragon-turtle-essence",
+       "adult-white-dragon-heart",
+       "ice-devil-carapace"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Enduring part (very rare+)"
+     },
+     {
+      "m": "rose-quartz",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "oxheart-tuber",
+      "q": 3,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "aid"
+    ],
+    "lore": "Creatures that shrug off centuries of cold, crushing deep or infernal punishment lend their endurance; rose quartz tints the stone the flush of healthy blood."
+   }
+  },
+  {
+   "id": "ioun-stone-greater-absorption",
+   "name": "Ioun Stone (Greater Absorption)",
+   "cat": "wondrous",
+   "tier": "legendary",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gem",
+    "antimagic",
+    "protection"
+   ],
+   "effect": "A marbled lavender-and-green ellipsoid that devours hostile spells of 8th level or lower targeting only you, up to 50 total spell levels before it goes inert.",
+   "value": 90000,
+   "recipe": {
+    "components": [
+     {
+      "m": "drifting-ioun-shard",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "tarrasque-carapace",
+       "tarrasque-essence",
+       "ancient-bronze-dragon-repulsion-gland"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Legendary spell-warding part"
+     },
+     {
+      "m": "amethyst",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "malachite",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "rakshasa-hide",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "counterspell",
+     "antimagic field"
+    ],
+    "lore": "Only the tarrasque's spell-shedding shell or an ancient bronze wyrm's repulsion gland can feed a stone hungry enough to eat an archmage's fury."
+   }
+  },
+  {
+   "id": "ioun-stone-insight",
+   "name": "Ioun Stone (Insight)",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gem",
+    "knowledge",
+    "truesight"
+   ],
+   "effect": "An incandescent blue sphere that sharpens intuition and judgment, raising your Wisdom score by 2 (to a maximum of 20).",
+   "value": 20000,
+   "recipe": {
+    "components": [
+     {
+      "m": "drifting-ioun-shard",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "planetar-eye",
+       "planetar-essence",
+       "androsphinx-tear"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "All-seeing celestial part (very rare+)"
+     },
+     {
+      "m": "aquamarine",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "seers-leaf",
+      "q": 3,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "augury",
+     "commune"
+    ],
+    "lore": "A planetar's gaze cuts through every lie; a mote of it in the shard lets the bearer feel truths before they are spoken."
+   }
+  },
+  {
+   "id": "ioun-stone-intellect",
+   "name": "Ioun Stone (Intellect)",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gem",
+    "knowledge"
+   ],
+   "effect": "A marbled scarlet-and-blue sphere that keeps your thoughts crisp and quick, raising your Intelligence score by 2 (to a maximum of 20).",
+   "value": 20000,
+   "recipe": {
+    "components": [
+     {
+      "m": "drifting-ioun-shard",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "star-sapphire",
+       "adult-brass-dragon-essence",
+       "sublime-arcane-ink"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Scholar's keystone (very rare+)"
+     },
+     {
+      "m": "sapphire",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "mind-mote-dust",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "identify",
+     "legend lore"
+    ],
+    "lore": "Scarlet and blue swirl where star-sapphire meets the ioun shard; brass dragons, endless talkers, lend their love of learning."
+   }
+  },
+  {
+   "id": "ioun-stone-leadership",
+   "name": "Ioun Stone (Leadership)",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gem",
+    "charm"
+   ],
+   "effect": "A marbled pink-and-green sphere that lends your voice weight and your presence warmth, raising your Charisma score by 2 (to a maximum of 20).",
+   "value": 20000,
+   "recipe": {
+    "components": [
+     {
+      "m": "drifting-ioun-shard",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "adult-green-dragon-heart",
+       "vampire-essence",
+       "adult-green-dragon-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Beguiling heart or essence (very rare+)"
+     },
+     {
+      "m": "rose-quartz",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "malachite",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "lovers-rose",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "enthrall"
+    ],
+    "lore": "Green dragons and vampires bend wills with a word; their persuasion, tamed by lovers-rose, gives a pink-and-green stone that makes crowds listen."
+   }
+  },
+  {
+   "id": "ioun-stone-mastery",
+   "name": "Ioun Stone (Mastery)",
+   "cat": "wondrous",
+   "tier": "legendary",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gem",
+    "knowledge",
+    "luck"
+   ],
+   "effect": "A pale green prism that hones every skill you know, increasing your proficiency bonus by 1.",
+   "value": 120000,
+   "recipe": {
+    "components": [
+     {
+      "m": "drifting-ioun-shard",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "ancient-gold-dragon-eyes",
+       "ancient-brass-dragon-heart",
+       "lich-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Millennia-old wisdom (legendary)"
+     },
+     {
+      "m": "emerald",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "archmage-annotated-spellbook-folio",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "gynosphinx-feather",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "foresight"
+    ],
+    "lore": "Only a mind that has practised for a thousand years holds enough mastery to spare; an ancient wyrm's eyes or a lich's essence is pressed into the shard beside an archmage's marginalia."
+   }
+  },
+  {
+   "id": "ioun-stone-protection",
+   "name": "Ioun Stone (Protection)",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gem",
+    "protection"
+   ],
+   "effect": "A dusty rose prism that drifts between you and harm, granting a +1 bonus to AC.",
+   "value": 4200,
+   "recipe": {
+    "components": [
+     {
+      "m": "drifting-ioun-shard",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "raw-diamond",
+       "shield-guardian-core",
+       "guardian-naga-scale"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Warding part (rare+)"
+     },
+     {
+      "m": "jade",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "rose-quartz",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "shield",
+     "mage armor"
+    ],
+    "lore": "Diamond, a shield guardian's heart or a naga's holy scale teaches the stone to interpose itself; jade dust steadies its orbit."
+   }
+  },
+  {
+   "id": "ioun-stone-regeneration",
+   "name": "Ioun Stone (Regeneration)",
+   "cat": "wondrous",
+   "tier": "legendary",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gem",
+    "regeneration",
+    "healing"
+   ],
+   "effect": "A pearly white spindle that knits your wounds continually, restoring 15 hit points every hour as long as you have at least 1 hit point.",
+   "value": 100000,
+   "recipe": {
+    "components": [
+     {
+      "m": "drifting-ioun-shard",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "tarrasque-heart",
+       "celestial-lifesap",
+       "tarrasque-blood"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Undying life-source (legendary)"
+     },
+     {
+      "m": "pearl",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "hydra-regen-tissue",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "troll-regenerating-heart",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "regenerate"
+    ],
+    "lore": "Hydra tissue and a troll's heart start the healing; the tarrasque's unkillable heart or a drop of celestial lifesap keeps it going for eternity."
+   }
+  },
+  {
+   "id": "ioun-stone-reserve",
+   "name": "Ioun Stone (Reserve)",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gem",
+    "arcane"
+   ],
+   "effect": "A vibrant purple prism that stores up to 3 levels of spells cast into it, letting you release them later as if you had cast them yourself.",
+   "value": 3500,
+   "recipe": {
+    "components": [
+     {
+      "m": "drifting-ioun-shard",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "shield-guardian-spell-cavity",
+       "arcane-crystal",
+       "sapphire"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Spell-holding vessel (rare+)"
+     },
+     {
+      "m": "amethyst",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "quicksilver",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "glyph of warding"
+    ],
+    "lore": "The cavity a shield guardian uses to hold a spell is ideal: carved into the shard, it becomes a little purple larder for magic."
+   }
+  },
+  {
+   "id": "ioun-stone-strength",
+   "name": "Ioun Stone (Strength)",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gem",
+    "strength"
+   ],
+   "effect": "A pale blue rhomboid whose heavy orbit fills your muscles with a giant's power, raising your Strength score by 2 (to a maximum of 20).",
+   "value": 20000,
+   "recipe": {
+    "components": [
+     {
+      "m": "drifting-ioun-shard",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "storm-giant-blood",
+       "cloud-giant-blood",
+       "androsphinx-claw"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Titanic-strength part (very rare+)"
+     },
+     {
+      "m": "turquoise",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "giants-knuckle-root",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "enhance ability"
+    ],
+    "lore": "Storm and cloud giant blood, pale as the sky they rule, is boiled into the shard until the stone itself seems too heavy to lift."
+   }
+  },
+  {
+   "id": "ioun-stone-sustenance",
+   "name": "Ioun Stone (Sustenance)",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gem",
+    "healing",
+    "food"
+   ],
+   "effect": "A clear spindle that nourishes you from within, so you need neither food nor water.",
+   "value": 3100,
+   "recipe": {
+    "components": [
+     {
+      "m": "drifting-ioun-shard",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "treant-sap",
+       "celestial-dew",
+       "starlit-dew"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Life-giving sap or dew (rare+)"
+     },
+     {
+      "m": "quartz",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "manna",
+      "q": 3,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "create food and water",
+     "goodberry"
+    ],
+    "lore": "Treants go years without eating, living on sap and sunlight; their sap, or dew from a kinder plane, sealed with manna keeps the bearer fed."
+   }
+  },
+  {
+   "id": "iron-bands-of-binding",
+   "name": "Iron Bands of Binding",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "binding",
+    "metal"
+   ],
+   "effect": "A rusty iron sphere that, thrown at a Large or smaller creature, bursts into bands that clamp tight and restrain it until released with a command word. It can be used again after a dawn.",
+   "value": 4000,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 3,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "chain-devil-chains",
+       "young-silver-dragon-paralyzing-gland",
+       "marilith-tail-sinew"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Binding part (rare+)"
+     },
+     {
+      "m": "roper-strand",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "giant-constrictor-snake-coil-muscle",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "hold monster"
+    ],
+    "lore": "Smiths quench each band in a slurry of roper strands and constrictor muscle so the iron learns to coil; a chain devil's links teach it never to let go."
+   }
+  },
+  {
+   "id": "iron-flask",
+   "name": "Iron Flask",
+   "cat": "wondrous",
+   "tier": "legendary",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "container",
+    "binding",
+    "planar"
+   ],
+   "effect": "A stoppered brass-and-iron flask etched with sigils. Uncorked at an extraplanar creature, it sucks the target inside (unless it resists) where it is held until released to serve you for an hour.",
+   "value": 150000,
+   "recipe": {
+    "components": [
+     {
+      "m": "flask",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "lich-phylactery-shard",
+       "pit-fiend-essence",
+       "ancient-silver-dragon-paralyzing-gland"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Soul-caging part (legendary)"
+     },
+     {
+      "m": "efreeti-brass-cinders",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "chain-devil-chains",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "djinni-wishglass-bead",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "planar binding",
+     "banishment"
+    ],
+    "lore": "Genies were bottled in brass long before mortals learned the trick; lining the flask with efreeti cinders and a lich's phylactery sliver turns it into a prison no summoned thing can escape unaided."
+   }
+  },
+  {
+   "id": "lantern-of-revealing",
+   "name": "Lantern of Revealing",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "light",
+    "truesight"
+   ],
+   "effect": "A hooded lantern that burns for hours on a pint of oil; while lit, its glow makes invisible creatures and objects within its bright light plainly visible.",
+   "value": 450,
+   "recipe": {
+    "components": [
+     {
+      "m": "lantern",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "green-hag-eye",
+       "veilpierce-eyebright",
+       "invisible-stalker-core"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Veil-piercing part (uncommon+)"
+     },
+     {
+      "m": "prism-crystal",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "lamp-oil",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "glassblowers-tools",
+     "tinkers-tools"
+    ],
+    "station": "workshop",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "see invisibility"
+    ],
+    "lore": "A hag's eye has seen through a thousand glamours; ground into the lamp oil and burned behind prism glass, its sight spills out as light."
+   }
+  },
+  {
+   "id": "mantle-of-spell-resistance",
+   "name": "Mantle of Spell Resistance",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "antimagic",
+    "resistance"
+   ],
+   "effect": "A heavy shoulder-mantle that makes magic slide off you, granting advantage on saving throws against spells.",
+   "value": 5000,
+   "recipe": {
+    "components": [
+     {
+      "m": "cloak",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "rakshasa-hide",
+       "nullthorn",
+       "archmage-arcane-focus",
+       "clay-golem-shem-tablet",
+       "stone-golem-core"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Spell-warding part (rare+): rakshasa hide, nullthorn, archmage focus, or a clay golem's shem or stone golem's core"
+     },
+     {
+      "m": "pseudodragon-scales",
+      "q": 6,
+      "role": "supporting"
+     },
+     {
+      "m": "silk-thread",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "weavers-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "loom",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "globe of invulnerability"
+    ],
+    "lore": "Rakshasa hide shrugs off lesser spells; stitched with pseudodragon scales, which share that stubbornness in small measure, it makes a mantle hostile magic struggles to grip. Golems shrug off most spells; the tablet or core that animates one teaches the mantle the same indifference."
+   }
+  },
+  {
+   "id": "manual-of-bodily-health",
+   "name": "Manual of Bodily Health",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "knowledge",
+    "toughness"
+   ],
+   "effect": "A treatise on diet, breath and endurance. Studying it for 48 hours over six days raises your Constitution score and maximum by 2; the pages then fade and the knowledge will not return for a century.",
+   "value": 35000,
+   "recipe": {
+    "components": [
+     {
+      "m": "tome",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "adult-black-dragon-heart",
+       "nalfeshnee-hide",
+       "tarrasque-blood"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Inexhaustible-vitality part (very rare+)"
+     },
+     {
+      "m": "gynosphinx-tear",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "troll-blood",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "greater-arcane-ink",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies"
+    ],
+    "station": "scriptorium",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "greater restoration"
+    ],
+    "lore": "The ink is thinned with troll blood so the diagrams seem to pulse; the keystone's endurance is bound in by a sphinx's tear, which lets knowledge outlast its reader."
+   }
+  },
+  {
+   "id": "manual-of-gainful-exercise",
+   "name": "Manual of Gainful Exercise",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "knowledge",
+    "strength"
+   ],
+   "effect": "A book of drills and feats of strength. After 48 hours of study over six days your Strength score and maximum rise by 2; the book then loses its magic for a century.",
+   "value": 35000,
+   "recipe": {
+    "components": [
+     {
+      "m": "tome",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "storm-giant-essence",
+       "marilith-tail-sinew",
+       "adult-red-dragon-heart"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Mighty part (very rare+)"
+     },
+     {
+      "m": "gynosphinx-feather",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "giant-ape-arm-sinew",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "greater-arcane-ink",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies",
+     "leatherworkers-tools"
+    ],
+    "station": "scriptorium",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "enhance ability"
+    ],
+    "lore": "Pages are stitched with giant-ape sinew and illustrated in ink bound to a storm giant's essence — readers swear the drawings flex as they turn the page."
+   }
+  },
+  {
+   "id": "manual-of-quickness-of-action",
+   "name": "Manual of Quickness of Action",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "knowledge",
+    "speed"
+   ],
+   "effect": "Exercises in balance, timing and reflex. Six days of study raise your Dexterity score and maximum by 2, after which the book is inert for a century.",
+   "value": 35000,
+   "recipe": {
+    "components": [
+     {
+      "m": "tome",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "marilith-scales",
+       "marilith-essence",
+       "marilith-hand"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Marilith part (very rare)"
+     },
+     {
+      "m": "gynosphinx-feather",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "quickthorn-berry",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "greater-arcane-ink",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies"
+    ],
+    "station": "scriptorium",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "haste"
+    ],
+    "lore": "A marilith strikes six times while a swordsman strikes once; ink made from its scales and quickthorn juice dries almost before the quill lifts."
+   }
+  },
+  {
+   "id": "tome-of-clear-thought",
+   "name": "Tome of Clear Thought",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "knowledge"
+   ],
+   "effect": "A book of logic puzzles and memory techniques. Six days of study raise your Intelligence score and maximum by 2; its magic then lies dormant for a century.",
+   "value": 35000,
+   "recipe": {
+    "components": [
+     {
+      "m": "tome",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "androsphinx-tear",
+       "adult-brass-dragon-heart",
+       "star-sapphire"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Font of intellect (very rare+)"
+     },
+     {
+      "m": "archmage-annotated-spellbook-folio",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "rememberwort",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "sublime-arcane-ink",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies"
+    ],
+    "station": "scriptorium",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "legend lore"
+    ],
+    "lore": "Scribes grind an archmage's marginalia into the ink and brew it with rememberwort; the keystone makes every lesson on the page impossible to forget."
+   }
+  },
+  {
+   "id": "tome-of-leadership-and-influence",
+   "name": "Tome of Leadership and Influence",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "knowledge",
+    "charm"
+   ],
+   "effect": "A guide to rhetoric, etiquette and command. After six days of study your Charisma score and maximum rise by 2, and the book goes quiet for a century.",
+   "value": 35000,
+   "recipe": {
+    "components": [
+     {
+      "m": "tome",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "adult-gold-dragon-heart",
+       "vampire-blood",
+       "adult-green-dragon-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Commanding presence (very rare+)"
+     },
+     {
+      "m": "gynosphinx-tear",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "noble-signet",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "gold-leaf",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "greater-arcane-ink",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies"
+    ],
+    "station": "scriptorium",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "enthrall"
+    ],
+    "lore": "Gilded with gold leaf and sealed with the signets of deposed nobles, the tome borrows the unshakeable presence of a gold dragon — or the dark allure of a vampire."
+   }
+  },
+  {
+   "id": "tome-of-understanding",
+   "name": "Tome of Understanding",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "knowledge",
+    "senses",
+    "blessing"
+   ],
+   "effect": "Meditations on perception, instinct and patience. Six days of study raise your Wisdom score and maximum by 2; the pages then rest for a century.",
+   "value": 35000,
+   "recipe": {
+    "components": [
+     {
+      "m": "tome",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "androsphinx-essence",
+       "golden-bough",
+       "planetar-tears"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Source of deep wisdom (very rare+)"
+     },
+     {
+      "m": "gynosphinx-feather",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "seers-leaf",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "greater-arcane-ink",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies"
+    ],
+    "station": "scriptorium",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "commune"
+    ],
+    "lore": "Sphinxes judge the worthy; a sphinx-feather quill and the keystone's quiet wisdom make a book that only opens its secrets to the patient."
+   }
+  },
+  {
+   "id": "manual-of-golems-clay",
+   "name": "Manual of Golems (Clay)",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "knowledge",
+    "binding"
+   ],
+   "effect": "A heavy grimoire detailing every step of building a clay golem. A reader skilled in the right craft can follow it to animate a golem obedient to them; the book is consumed when the golem wakes.",
+   "value": 20000,
+   "recipe": {
+    "components": [
+     {
+      "m": "tome",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "any": [
+       "knowledge"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Very rare font of lore (sphinx tear, star sapphire, etc.)",
+      "min": "very-rare"
+     },
+     {
+      "m": "clay-golem-shem-tablet",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "clay-golem-clay",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "sublime-arcane-ink",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies"
+    ],
+    "station": "scriptorium",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "geas"
+    ],
+    "lore": "Every clay golem manual begins with a real shem tablet pressed between its pages; the scribe copies the living script around it until the book itself can teach the words."
+   }
+  },
+  {
+   "id": "manual-of-golems-flesh",
+   "name": "Manual of Golems (Flesh)",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "knowledge",
+    "binding"
+   ],
+   "effect": "A heavy grimoire detailing every step of building a flesh golem. A reader skilled in the right craft can follow it to animate a golem obedient to them; the book is consumed when the golem wakes.",
+   "value": 16600,
+   "recipe": {
+    "components": [
+     {
+      "m": "tome",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "any": [
+       "knowledge"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Very rare font of lore (sphinx tear, star sapphire, etc.)",
+      "min": "very-rare"
+     },
+     {
+      "m": "flesh-golem-galvanic-core",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "flesh-golem-stitched-hide",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "sublime-arcane-ink",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies"
+    ],
+    "station": "scriptorium",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "geas",
+     "lightning bolt"
+    ],
+    "lore": "The binding is stitched flesh-golem hide and the diagrams are traced by the spark of a galvanic core, so the text crackles faintly when opened."
+   }
+  },
+  {
+   "id": "manual-of-golems-iron",
+   "name": "Manual of Golems (Iron)",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "knowledge",
+    "binding"
+   ],
+   "effect": "A heavy grimoire detailing every step of building an iron golem. A reader skilled in the right craft can follow it to animate a golem obedient to them; the book is consumed when the golem wakes.",
+   "value": 45000,
+   "recipe": {
+    "components": [
+     {
+      "m": "tome",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "any": [
+       "knowledge"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Very rare font of lore (sphinx tear, star sapphire, etc.)",
+      "min": "very-rare"
+     },
+     {
+      "m": "iron-golem-core",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "iron-golem-plating",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "sublime-arcane-ink",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies"
+    ],
+    "station": "scriptorium",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "geas",
+     "limited wish"
+    ],
+    "lore": "Pages of hammered iron leaf are riveted to a spine cut from golem plating; the core's furnace-script is copied in ink cooled on the plate itself."
+   }
+  },
+  {
+   "id": "manual-of-golems-stone",
+   "name": "Manual of Golems (Stone)",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "knowledge",
+    "binding"
+   ],
+   "effect": "A heavy grimoire detailing every step of building a stone golem. A reader skilled in the right craft can follow it to animate a golem obedient to them; the book is consumed when the golem wakes.",
+   "value": 30000,
+   "recipe": {
+    "components": [
+     {
+      "m": "tome",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "any": [
+       "knowledge"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Very rare font of lore (sphinx tear, star sapphire, etc.)",
+      "min": "very-rare"
+     },
+     {
+      "m": "stone-golem-core",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "stone-golem-lethargy-stone",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "sublime-arcane-ink",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies"
+    ],
+    "station": "scriptorium",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "geas",
+     "flesh to stone"
+    ],
+    "lore": "Slate-thin leaves are split from a stone golem's lethargy stone; the core's binding sigils are cut into each so the finished golem inherits them."
+   }
+  },
+  {
+   "id": "marvelous-pigments",
+   "name": "Marvelous Pigments",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "growth",
+    "illusion"
+   ],
+   "effect": "A small box of paint pots and a brush. Whatever you paint on a surface — a door, a bridge, a haystack, a wall — becomes a real, solid object when the painting is finished, up to a set volume per pot (no living things, no magic, no costly treasure).",
+   "value": 15000,
+   "recipe": {
+    "components": [
+     {
+      "m": "box",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "black-opal",
+       "everbloom-heartroot",
+       "golden-bough"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Reality-shaping part (very rare+)"
+     },
+     {
+      "m": "pigment",
+      "q": 6,
+      "role": "supporting"
+     },
+     {
+      "m": "prism-crystal",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "dye-purple",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "painters-supplies",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "creation",
+     "major image"
+    ],
+    "yields": 1,
+    "lore": "The pigments are ground on a slab of black opal, where illusion first learns to be solid; everbloom root or a sliver of golden bough lends the paint the urge to grow into what it depicts."
+   }
+  },
+  {
+   "id": "medallion-of-thoughts",
+   "name": "Medallion of Thoughts",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "jewelry",
+    "telepathy"
+   ],
+   "effect": "A silver medallion that holds a few charges of mind-reading. Spend one to hear the surface thoughts of those nearby; it recharges at dawn.",
+   "value": 450,
+   "recipe": {
+    "components": [
+     {
+      "m": "medallion",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "doppelganger-brain",
+       "otyugh-tentacle",
+       "mindbloom-orchid"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Thought-reading part (uncommon+)"
+     },
+     {
+      "m": "amethyst",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-wire",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "detect thoughts"
+    ],
+    "lore": "A doppelganger reads minds to steal faces; a thin slice of its brain set behind amethyst lets the wearer eavesdrop in the same way."
+   }
+  },
+  {
+   "id": "mirror-of-life-trapping",
+   "name": "Mirror of Life Trapping",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "binding",
+    "death"
+   ],
+   "effect": "A tall, heavy mirror that, when activated, captures creatures that meet their reflection, imprisoning them in one of twelve extradimensional cells behind the glass. Breaking the mirror frees everyone inside.",
+   "value": 23500,
+   "recipe": {
+    "components": [
+     {
+      "m": "mirror",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "lich-dust",
+       "mummy-lord-essence",
+       "adult-silver-dragon-paralyzing-gland"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Soul-snaring part (very rare+)"
+     },
+     {
+      "m": "night-hag-soul-bag",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "black-pearl",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "quicksilver",
+      "q": 3,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "glassblowers-tools",
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "imprisonment",
+     "magic jar"
+    ],
+    "lore": "Night hags carry souls in little bags; unpicked and sewn behind the quicksilver backing, one gives the mirror its twelve pockets, while lich dust makes whatever enters them unable to leave."
+   }
+  },
+  {
+   "id": "necklace-of-adaptation",
+   "name": "Necklace of Adaptation",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "jewelry",
+    "breathing"
+   ],
+   "effect": "While wearing it you can breathe normally anywhere — underwater, in a vacuum — and have advantage against harmful gases and vapours.",
+   "value": 450,
+   "recipe": {
+    "components": [
+     {
+      "m": "necklace",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "aboleth-mucus",
+       "gillweed-kelp",
+       "water-elemental-tidewater-pearl",
+       "killer-whale-lungs"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Breath-giving part (uncommon+)"
+     },
+     {
+      "m": "cleansing-sage",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "giant-sea-horse-swim-bladder",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools",
+     "herbalism-kit"
+    ],
+    "station": "jewelers-bench",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "water breathing"
+    ],
+    "lore": "A dried swim-bladder, packed with gillweed or aboleth slime, holds a bubble of breathable air around the throat; cleansing sage keeps poison out of it."
+   }
+  },
+  {
+   "id": "necklace-of-fireballs",
+   "name": "Necklace of Fireballs",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "jewelry",
+    "fire"
+   ],
+   "effect": "A string of glowing beads (1d6+3 of them). Detach one and throw it, and it bursts into a fireball where it lands; hurl several at once for a bigger blast.",
+   "value": 3800,
+   "recipe": {
+    "components": [
+     {
+      "m": "bead-string",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "efreeti-brazier-core",
+       "hellfire-ember",
+       "fire-giant-essence",
+       "remorhaz-heat-gland"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Explosive fire source (rare+)"
+     },
+     {
+      "m": "garnet",
+      "q": 6,
+      "role": "supporting"
+     },
+     {
+      "m": "cinder-salt",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "fireball"
+    ],
+    "lore": "Each bead is a hollowed garnet packed with cinder salt and a sliver of efreeti fire; the salt keeps the flame asleep until the bead cracks on impact."
+   }
+  },
+  {
+   "id": "necklace-of-prayer-beads",
+   "name": "Necklace of Prayer Beads",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": "by a cleric, druid or paladin",
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "jewelry",
+    "blessing",
+    "healing"
+   ],
+   "effect": "A string of beads, a few of them magical: each lets the wearer invoke a specific blessing, healing, restoration, smiting or a summoned celestial ally, recharging at dawn.",
+   "value": 4500,
+   "recipe": {
+    "components": [
+     {
+      "m": "bead-string",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "deva-essence",
+       "guardian-naga-essence",
+       "unicorn-horn"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Holy keystone (rare+)"
+     },
+     {
+      "m": "frankincense",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "holy-water",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "gold-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "shrine",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "bless",
+     "planar ally"
+    ],
+    "lore": "Beads are turned from frankincense resin and each blessed with holy water during a day of prayer; a deva's essence or unicorn horn gives them the right to call on the heavens."
+   }
+  },
+  {
+   "id": "pearl-of-power",
+   "name": "Pearl of Power",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": "by a spellcaster",
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "pearl",
+    "arcane"
+   ],
+   "effect": "Once per day, a spellcaster holding this pearl can recover one expended spell slot of up to 3rd level.",
+   "value": 450,
+   "recipe": {
+    "components": [
+     {
+      "m": "pearl",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "chuul-essence",
+       "arcane-crystal",
+       "runestone-fragment"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Arcane reservoir (uncommon+)"
+     },
+     {
+      "m": "quicksilver",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "potent-arcane-ink",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "detect magic"
+    ],
+    "lore": "A pearl grows by wrapping layers around a grain; divers seed it with a sliver of arcane crystal so each nacre layer stores a little power."
+   }
+  },
+  {
+   "id": "periapt-of-health",
+   "name": "Periapt of Health",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "jewelry",
+    "disease",
+    "resistance"
+   ],
+   "effect": "A pendant that renders you immune to catching any disease; illnesses you already have are held at bay while you wear it.",
+   "value": 450,
+   "recipe": {
+    "components": [
+     {
+      "m": "periapt-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "otyugh-essence",
+       "otyugh-bile",
+       "unicorn-tears"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Disease-proof part (uncommon+)"
+     },
+     {
+      "m": "vulture-gizzard",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "feverfew",
+      "q": 3,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools",
+     "herbalism-kit"
+    ],
+    "station": "jewelers-bench",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "lesser restoration"
+    ],
+    "lore": "Otyughs wallow in filth and never sicken; a drop of their bile, tempered with feverfew and a vulture's iron gut, protects the wearer the same way."
+   }
+  },
+  {
+   "id": "periapt-of-proof-against-poison",
+   "name": "Periapt of Proof against Poison",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "jewelry",
+    "poison",
+    "resistance"
+   ],
+   "effect": "A delicate silver pendant on a fine chain. While worn, poisons have no effect on you — you are immune to poison damage and the poisoned condition.",
+   "value": 5000,
+   "recipe": {
+    "components": [
+     {
+      "m": "periapt-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "purity-lotus",
+       "young-green-dragon-blood",
+       "young-green-dragon-scales"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Poison-mastering part (rare+)"
+     },
+     {
+      "m": "otyugh-bile",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "wyrmbane-thistle",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "protection from poison"
+    ],
+    "lore": "A purity lotus drinks toxins from the soil and blooms clean; its petal, lacquered in otyugh bile and wyrmbane, turns the periapt into a lifelong antidote."
+   }
+  },
+  {
+   "id": "periapt-of-wound-closure",
+   "name": "Periapt of Wound Closure",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "jewelry",
+    "healing",
+    "regeneration"
+   ],
+   "effect": "While worn, you stabilise automatically when dying, and whenever you spend Hit Dice to heal you regain twice the usual amount.",
+   "value": 450,
+   "recipe": {
+    "components": [
+     {
+      "m": "periapt-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "troll-blood",
+       "mendwort",
+       "knotwood-bracket"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Wound-knitting part (uncommon+)"
+     },
+     {
+      "m": "bloodstone",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "healers-moss",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools",
+     "herbalism-kit"
+    ],
+    "station": "jewelers-bench",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "spare the dying",
+     "cure wounds"
+    ],
+    "lore": "A single drop of troll blood sealed under bloodstone is enough — the wound closes before the wearer notices it bled."
+   }
+  },
+  {
+   "id": "pipes-of-haunting",
+   "name": "Pipes of Haunting",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "instrument",
+    "fear",
+    "sound"
+   ],
+   "effect": "Pan pipes with a few charges. Playing an eerie tune forces creatures nearby to resist or become frightened of you for a minute. Recharges at dawn.",
+   "value": 450,
+   "recipe": {
+    "components": [
+     {
+      "m": "pan-flute",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "ghost-essence",
+       "wraith-essence",
+       "cloaker-moan-sac"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Dread-voiced part (uncommon+)"
+     },
+     {
+      "m": "skeleton-bone-dust",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "sorrowbloom",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "fear"
+    ],
+    "lore": "The reeds are soaked in water where a ghost once wailed, then bored with bone dust; played, they borrow the dead's moan."
+   }
+  },
+  {
+   "id": "pipes-of-the-sewers",
+   "name": "Pipes of the Sewers",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "instrument",
+    "charm",
+    "sound"
+   ],
+   "effect": "While you play these pipes, rats and rat swarms gather to you and may be commanded, provided they fail to resist the music.",
+   "value": 350,
+   "recipe": {
+    "components": [
+     {
+      "m": "flute",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "any": [
+       "charm"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Luring, charming part (uncommon+)",
+      "min": "uncommon"
+     },
+     {
+      "m": "rat-tail",
+      "q": 12,
+      "role": "supporting"
+     },
+     {
+      "m": "wererat-blood",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "giant-rat-incisors",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "animal friendship",
+     "animal messenger"
+    ],
+    "lore": "Rat-catchers bind twelve rat tails around the flute and anoint its mouthpiece with wererat blood; any charm-magic keystone does the rest, and the vermin hear their king."
+   }
+  },
+  {
+   "id": "portable-hole",
+   "name": "Portable Hole",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "container",
+    "planar"
+   ],
+   "effect": "A circle of fine black cloth that folds to handkerchief size. Laid flat, it becomes a 6-foot-wide, 10-foot-deep extradimensional pit; pick it up and the hole and its contents vanish into the fold. Placing it in another extradimensional space is catastrophic.",
+   "value": 4000,
+   "recipe": {
+    "components": [
+     {
+      "m": "silk-cloth",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "astral-silver-thread",
+       "nalfeshnee-wing",
+       "djinni-wishglass-bead"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Space-folding planar part (rare+)"
+     },
+     {
+      "m": "phase-spider-silk",
+      "q": 4,
+      "role": "supporting"
+     },
+     {
+      "m": "phase-spider-essence",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "dye-black",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "loom",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "rope trick"
+    ],
+    "lore": "Phase spiders weave webs that exist half on the Ethereal; woven into black silk with astral silver thread, the web keeps a hole's worth of space tucked out of the world."
+   }
+  },
+  {
+   "id": "robe-of-eyes",
+   "name": "Robe of Eyes",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "senses",
+    "truesight"
+   ],
+   "effect": "A robe covered in visible, blinking eyes. You see in every direction, gain darkvision, can see invisible and ethereal things, and have advantage on sight-based Perception — but bright light blinds you briefly.",
+   "value": 5000,
+   "recipe": {
+    "components": [
+     {
+      "m": "robe",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "gynosphinx-eye",
+       "veilpierce-eyebright",
+       "planetar-eye"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Truesight keystone (rare+)"
+     },
+     {
+      "any": [
+       "eye"
+      ],
+      "q": 6,
+      "role": "supporting",
+      "label": "Assorted creature eyes"
+     },
+     {
+      "m": "giant-spider-eyes",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "spider-silk-thread",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "weavers-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "loom",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "see invisibility",
+     "darkvision"
+    ],
+    "lore": "Dozens of harvested eyes are stitched on while still wet, each with a spider's many-lensed cluster for peripheral sight; a sphinx's eye at the collar lets them all see truly."
+   }
+  },
+  {
+   "id": "robe-of-scintillating-colors",
+   "name": "Robe of Scintillating Colors",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "light",
+    "illusion"
+   ],
+   "effect": "A few times per day the robe erupts in shifting bands of dazzling colour: foes that see you may be stunned, you shed bright light, and attacks against you are harder to land.",
+   "value": 25000,
+   "recipe": {
+    "components": [
+     {
+      "m": "robe",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "rakshasa-whiskers",
+       "solar-feather",
+       "black-opal"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Dazzling/illusory part (very rare+)"
+     },
+     {
+      "m": "prism-crystal",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "aurora-glass",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silk-thread",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "weavers-tools",
+     "glassblowers-tools"
+    ],
+    "station": "loom",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "color spray",
+     "hypnotic pattern"
+    ],
+    "lore": "Threads are drawn through powdered prism and aurora glass until they split light like a rainbow; the keystone turns the shimmer into a pattern that locks a gazer's mind."
+   }
+  },
+  {
+   "id": "robe-of-stars",
+   "name": "Robe of Stars",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "planar",
+    "arcane",
+    "protection"
+   ],
+   "effect": "A deep blue or black robe scattered with silver stars. It grants +1 to saving throws, lets you tear off stars to cast magic missile, and lets you step bodily into the Astral Plane and back.",
+   "value": 30000,
+   "recipe": {
+    "components": [
+     {
+      "m": "robe",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "star-sapphire",
+       "planetar-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Starlit/astral keystone (very rare+)"
+     },
+     {
+      "m": "meteoric-iron",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "dye-black",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "astral-silver-thread",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "weavers-tools",
+     "jewelers-tools"
+    ],
+    "station": "loom",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "magic missile",
+     "astral projection"
+    ],
+    "lore": "Each star is a bead of meteoric iron — star-stuff that remembers the sky — stitched with thread spun from the Astral's silver cords."
+   }
+  },
+  {
+   "id": "robe-of-the-archmagi",
+   "name": "Robe of the Archmagi",
+   "cat": "wondrous",
+   "tier": "legendary",
+   "attune": "by a sorcerer, warlock or wizard",
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "arcane",
+    "protection",
+    "antimagic"
+   ],
+   "effect": "An elegant robe in the colours of its maker's alignment. It gives you a base AC of 15 + Dex while unarmoured, advantage on saves against spells, and adds 2 to your spell save DC and spell attack bonus.",
+   "value": 120000,
+   "recipe": {
+    "components": [
+     {
+      "m": "robe",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "lich-essence",
+       "primordial-arcane-ink",
+       "ancient-brass-dragon-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Archmage-grade arcane keystone (legendary)"
+     },
+     {
+      "m": "archmage-arcane-focus",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "rakshasa-hide",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "archmage-annotated-spellbook-folio",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "astral-silver-thread",
+      "q": 3,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "weavers-tools",
+     "calligraphers-supplies"
+    ],
+    "station": "enchanting-circle",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "mage armor",
+     "globe of invulnerability"
+    ],
+    "lore": "Tradition demands the robe be embroidered with the formulae of two dead archmagi, lined with rakshasa hide against rival spells and fastened at the collar with the focus they carried."
+   }
+  },
+  {
+   "id": "robe-of-useful-items",
+   "name": "Robe of Useful Items",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "shapechange"
+   ],
+   "effect": "A robe covered in cloth patches. Tear one off and it becomes the thing it depicts — a dagger, a lantern, a pit, a rowboat, a door, a ladder, even a pair of mastiffs — until the patches run out.",
+   "value": 450,
+   "recipe": {
+    "components": [
+     {
+      "m": "robe",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "doppelganger-essence",
+       "doppelganger-skin",
+       "green-hag-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Form-changing part (uncommon+)"
+     },
+     {
+      "m": "linen-cloth",
+      "q": 4,
+      "role": "supporting"
+     },
+     {
+      "m": "fine-silk-scraps",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "thread",
+      "q": 3,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "loom",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "unseen servant",
+     "creation"
+    ],
+    "lore": "Each patch is dipped in a doppelganger's essence, which forgets it is cloth the moment it is torn free and becomes whatever it was drawn as."
+   }
+  },
+  {
+   "id": "rope-of-climbing",
+   "name": "Rope of Climbing",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "climbing"
+   ],
+   "effect": "Sixty feet of thin, strong rope that moves on command: it slithers to where you point, fastens itself, knots itself for handholds and unties when told.",
+   "value": 470,
+   "recipe": {
+    "components": [
+     {
+      "m": "giant-spider-silk-rope",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "drider-silk-gland",
+       "behir-claw",
+       "giant-ape-arm-sinew"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Climber's part (uncommon+)"
+     },
+     {
+      "m": "giant-constrictor-snake-coil-muscle",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "spider-silk",
+      "q": 3,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "loom",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "animate objects",
+     "spider climb"
+    ],
+    "lore": "A drider's gland spins silk that clings and crawls; twisted around constrictor sinew, the rope climbs like a snake up a tree."
+   }
+  },
+  {
+   "id": "rope-of-entanglement",
+   "name": "Rope of Entanglement",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "binding"
+   ],
+   "effect": "A thirty-foot rope that lashes out on command at a creature within 20 feet, restraining it until it breaks free or the rope is cut.",
+   "value": 4300,
+   "recipe": {
+    "components": [
+     {
+      "m": "giant-spider-silk-rope",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "chain-devil-essence",
+       "young-silver-dragon-paralyzing-gland",
+       "marilith-tail-sinew"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Grasping keystone (rare+)"
+     },
+     {
+      "m": "roper-strand",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "shambling-mound-vines",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "loom",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "entangle"
+    ],
+    "lore": "Roper strands and shambling-mound vines are braided into the silk; both hunt by wrapping prey, and the rope keeps the habit."
+   }
+  },
+  {
+   "id": "scarab-of-protection",
+   "name": "Scarab of Protection",
+   "cat": "wondrous",
+   "tier": "legendary",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "jewelry",
+    "protection",
+    "undeath"
+   ],
+   "effect": "A silver scarab medallion that grants advantage on saving throws against spells, and a dozen times can turn aside necrotic magic or an undead's attack meant to kill or control you before crumbling to dust.",
+   "value": 90000,
+   "recipe": {
+    "components": [
+     {
+      "m": "scarab-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "worldheart-diamond",
+       "tarrasque-carapace",
+       "ancient-gold-dragon-scales"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Supreme ward (legendary)"
+     },
+     {
+      "m": "raw-diamond",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "gold-leaf",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "holy-water",
+      "q": 3,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "shrine",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "death ward",
+     "protection from evil and good"
+    ],
+    "lore": "Beetles carried the sun across the sky, the old priests say; gilded and set with a ward no spell can crack, the scarab carries its wearer through death's reach the same way."
+   }
+  },
+  {
+   "id": "sending-stones",
+   "name": "Sending Stones",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "stone",
+    "telepathy"
+   ],
+   "effect": "A matched pair of smooth stones. Once per day, touching one lets you send a short message to whoever holds the other, and hear their reply.",
+   "value": 500,
+   "recipe": {
+    "components": [
+     {
+      "m": "polished-stone",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "thought-crystal",
+       "couatl-essence",
+       "mindbloom-orchid"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Mind-linking part (uncommon+)"
+     },
+     {
+      "m": "echo-geode",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "resonant-crystal",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "masons-tools",
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "sending"
+    ],
+    "yields": 1,
+    "lore": "A single echo geode is split in half and each half set into a stone; the halves still ring together, and the telepathic keystone carries words along that ring."
+   }
+  },
+  {
+   "id": "slippers-of-spider-climbing",
+   "name": "Slippers of Spider Climbing",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "climbing"
+   ],
+   "effect": "Soft slippers that let you walk up walls and across ceilings with your hands free, at your walking speed (but not on slick surfaces).",
+   "value": 470,
+   "recipe": {
+    "components": [
+     {
+      "m": "slippers",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "spidergrip-moss",
+       "vampire-spawn-blood",
+       "drider-silk-gland"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Wall-walking part (uncommon+)"
+     },
+     {
+      "m": "giant-lizard-toe-pads",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "giant-spider-silk",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "cobblers-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "tannery",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "spider climb"
+    ],
+    "lore": "Soles are cut from giant-lizard toe pads, the tiny hooks intact, and lined with spidergrip moss that grips stone like a limpet."
+   }
+  },
+  {
+   "id": "sphere-of-annihilation",
+   "name": "Sphere of Annihilation",
+   "cat": "wondrous",
+   "tier": "legendary",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "force",
+    "death",
+    "planar"
+   ],
+   "effect": "A two-foot globe of pure void. Anything it touches — creature, object, spell — is utterly destroyed. A creature that masters it by force of mind can steer it, but losing the contest may send it rolling toward the controller.",
+   "value": 500000,
+   "recipe": {
+    "components": [
+     {
+      "m": "void-kernel",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "lich-essence",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "ancient-bronze-dragon-repulsion-gland",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "drifting-ioun-shard",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "astral-silver-thread",
+      "q": 3,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools",
+     "alchemists-supplies"
+    ],
+    "station": "enchanting-circle",
+    "dc": 28,
+    "time": "120 days",
+    "gp": 40000,
+    "level": 20,
+    "spells": [
+     "disintegrate",
+     "gate"
+    ],
+    "requires": "Attempted only by a caster of 20th level; a failed crafting check by 5 or more means the half-formed sphere destroys the workshop and everyone within 10 feet. Most sages consider it unmakeable.",
+    "lore": "The void kernel must be fed until it grows; an ancient bronze's repulsion gland and ioun shards keep it from swallowing the crafters, and the lich's essence names the hole so a will can grasp it."
+   }
+  },
+  {
+   "id": "stone-of-controlling-earth-elementals",
+   "name": "Stone of Controlling Earth Elementals",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "stone",
+    "earth",
+    "domination"
+   ],
+   "effect": "A heavy stone that, pressed to the ground and commanded, summons an earth elemental that obeys you for up to an hour. Usable once per day.",
+   "value": 4500,
+   "recipe": {
+    "components": [
+     {
+      "m": "polished-stone",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "living-stone",
+       "stone-giant-essence",
+       "earthheart-geode"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Living earth keystone (rare+)"
+     },
+     {
+      "m": "earth-elemental-core",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "xorn-gut-stones",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "masons-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "conjure elemental"
+    ],
+    "lore": "The shaman carves the stone around an earth elemental's core; living stone or a geode from the Elemental Plane of Earth lends it the authority to summon and command its kin."
+   }
+  },
+  {
+   "id": "stone-of-good-luck",
+   "name": "Stone of Good Luck (Luckstone)",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "stone",
+    "luck"
+   ],
+   "effect": "A polished agate that tilts fortune your way: +1 to ability checks and saving throws while it is on your person.",
+   "value": 500,
+   "recipe": {
+    "components": [
+     {
+      "m": "polished-stone",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "fey-clover",
+       "sphinx-of-wonder-tear",
+       "djinni-wishglass-bead",
+       "star-ruby"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Lucky keystone (uncommon+)"
+     },
+     {
+      "m": "four-leaf-clover",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "malachite",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "sea-horse-dried",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "bless"
+    ],
+    "lore": "Gamblers' wisdom: rub the stone with clover and a dried sea-horse, luck's two most loyal servants, then soak it overnight with a fey-clover so the Feywild's fickle fortune settles on you."
+   }
+  },
+  {
+   "id": "talisman-of-pure-good",
+   "name": "Talisman of Pure Good",
+   "cat": "wondrous",
+   "tier": "legendary",
+   "attune": "by a creature of good alignment",
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "jewelry",
+    "radiant",
+    "celestial",
+    "focus"
+   ],
+   "effect": "A holy talisman that serves as a divine focus, improving the bearer's spell attacks. A few times it can open a fiery rift beneath an evil foe, casting them into the depths. Evil creatures that touch it are burned.",
+   "value": 100000,
+   "recipe": {
+    "components": [
+     {
+      "m": "talisman-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "solar-light-mote",
+       "solar-essence",
+       "celestial-lifesap"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Solar or upper-planar keystone (legendary)"
+     },
+     {
+      "m": "golden-bough",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "gold-ingot",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "holy-spring-water",
+      "q": 3,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "shrine",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "holy aura",
+     "banishment"
+    ],
+    "lore": "A mote of a solar's light is set in gold beaten on consecrated ground; the rift it opens is the same one solars use to hurl fiends home."
+   }
+  },
+  {
+   "id": "talisman-of-the-sphere",
+   "name": "Talisman of the Sphere",
+   "cat": "wondrous",
+   "tier": "legendary",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "jewelry",
+    "force",
+    "domination"
+   ],
+   "effect": "While you hold this talisman, your mental grip on a sphere of annihilation is doubled and control of it grows far more reliable.",
+   "value": 80000,
+   "recipe": {
+    "components": [
+     {
+      "m": "talisman-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "ancient-bronze-dragon-repulsion-gland",
+       "lich-essence",
+       "dead-god-stone"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Force-mastering keystone (legendary)"
+     },
+     {
+      "m": "meteoric-iron",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "star-sapphire",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "astral-silver-thread",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "telekinesis"
+    ],
+    "lore": "An ancient bronze dragon's repulsion gland pushes away anything it dislikes; set into star-iron, it gives the bearer a handle on the one thing that cannot be touched."
+   }
+  },
+  {
+   "id": "talisman-of-ultimate-evil",
+   "name": "Talisman of Ultimate Evil",
+   "cat": "wondrous",
+   "tier": "legendary",
+   "attune": "by a creature of evil alignment",
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "jewelry",
+    "necrotic",
+    "fiendish",
+    "focus"
+   ],
+   "effect": "An unholy talisman that serves as a divine focus and improves spell attacks; a few times it can split the ground beneath a good creature and drop it into oblivion. Good creatures that touch it are seared.",
+   "value": 100000,
+   "recipe": {
+    "components": [
+     {
+      "m": "talisman-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "pit-fiend-heart",
+       "balor-heart-coal",
+       "pit-fiend-essence",
+       "balor-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Archfiend keystone (legendary)"
+     },
+     {
+      "m": "styx-water",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "black-lotus",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "onyx",
+      "q": 3,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "shrine",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "blight",
+     "banishment"
+    ],
+    "lore": "Cultists quench the talisman in Styx water and set it with a pit fiend's still-hot heart; the pit it opens leads straight to where that fiend was spawned."
+   }
+  },
+  {
+   "id": "well-of-many-worlds",
+   "name": "Well of Many Worlds",
+   "cat": "wondrous",
+   "tier": "legendary",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "cloth",
+    "planar",
+    "teleport"
+   ],
+   "effect": "A fine black cloth that folds to handkerchief size. Spread out, it opens a two-way portal to a random plane or world; folding it back up closes the way.",
+   "value": 120000,
+   "recipe": {
+    "components": [
+     {
+      "m": "silk-cloth",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "dead-god-stone",
+       "wishbloom"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Crossroads of the planes (legendary)"
+     },
+     {
+      "m": "astral-silver-thread",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "nalfeshnee-wing",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "phase-spider-silk",
+      "q": 6,
+      "role": "supporting"
+     },
+     {
+      "m": "color-pool-glass",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "loom",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "gate",
+     "plane shift"
+    ],
+    "lore": "Astral colour pools are the doors between worlds; weaving their glass dust and astral thread around a sliver of a drifting god turns the cloth into a pool of its own — one that never opens to the same place twice."
+   }
+  },
+  {
+   "id": "wind-fan",
+   "name": "Wind Fan",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "air"
+   ],
+   "effect": "A folding fan that, waved, conjures a strong gust of wind. Using it more than once a day risks tearing it into useless scraps.",
+   "value": 450,
+   "recipe": {
+    "components": [
+     {
+      "m": "fan",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "air-elemental-core",
+       "wind-seed",
+       "cloud-giant-cloudstuff"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Wind source (uncommon+)"
+     },
+     {
+      "m": "giant-eagle-pinion",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "air-elemental-skygrit",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "weavers-tools"
+    ],
+    "station": "workshop",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "gust of wind"
+    ],
+    "lore": "Ribs of eagle pinion and a leaf lacquered with skygrit hold a pinch of air elemental; overwork it and the elemental tears free."
+   }
+  },
+  {
+   "id": "winged-boots",
+   "name": "Winged Boots",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "flight"
+   ],
+   "effect": "Boots with small feathered wings at the heels. They let you fly at your walking speed for up to four hours a day, recharging as you rest them.",
+   "value": 500,
+   "recipe": {
+    "components": [
+     {
+      "m": "boots",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "pegasus-flight-feather",
+       "couatl-feather",
+       "wyvern-wing-membrane"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Flight keystone (uncommon+)"
+     },
+     {
+      "m": "griffon-feather",
+      "q": 4,
+      "role": "supporting"
+     },
+     {
+      "m": "hippogriff-feather",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "leather-strips",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "cobblers-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "tannery",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "fly"
+    ],
+    "lore": "A pegasus flight feather is split and sewn into each heel with griffon down around it; the boots only carry you as long as the feathers remember the sky, which is why they tire."
+   }
+  },
+  {
+   "id": "wings-of-flying",
+   "name": "Wings of Flying",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "flight"
+   ],
+   "effect": "A cloak that, on command, spreads into a great pair of bat or bird wings, giving you a flying speed of 60 feet for an hour. It must rest before it can unfold again.",
+   "value": 5000,
+   "recipe": {
+    "components": [
+     {
+      "m": "cloak",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "roc-essence",
+       "deva-feather",
+       "adult-bronze-dragon-wing-membrane",
+       "roc-feather"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Great-winged keystone (rare+)"
+     },
+     {
+      "m": "pegasus-feather",
+      "q": 6,
+      "role": "supporting"
+     },
+     {
+      "m": "giant-bat-wing",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "silk-thread",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "weavers-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "loom",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "fly"
+    ],
+    "lore": "Pegasus feathers or bat membrane shape the wings; a roc's essence or a deva's feather gives them the strength to lift a grown adventurer in armour."
+   }
+  },
+  {
+   "id": "instrument-of-the-bards-doss-lute",
+   "name": "Instrument of the Bards (Doss Lute)",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": "by a bard",
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "instrument",
+    "charm",
+    "sound"
+   ],
+   "effect": "A bard's lute that lets its player cast a small set of spells once per day each — befriending animals and warding off fire or poison — and gives charm magic from its music extra bite.",
+   "value": 500,
+   "recipe": {
+    "components": [
+     {
+      "m": "lute",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "glamour-pollen",
+       "feywood",
+       "moonpetal"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Fey-touched part (uncommon+)"
+     },
+     {
+      "m": "satyr-horn",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "emberbloom",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "instrument-strings",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "animal friendship",
+     "protection from poison"
+    ],
+    "lore": "Built from feywood and inlaid with satyr horn, the lute sings the old fey reels that animals trust."
+   }
+  },
+  {
+   "id": "instrument-of-the-bards-fochlucan-bandore",
+   "name": "Instrument of the Bards (Fochlucan Bandore)",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": "by a bard",
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "instrument",
+    "charm",
+    "sound"
+   ],
+   "effect": "A bandore (a deep-bodied lute) carrying druidic magic: once per day each it can entangle, outline foes in faerie light, harden a staff into a shillelagh or let you speak with beasts.",
+   "value": 535,
+   "recipe": {
+    "components": [
+     {
+      "m": "lute",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "peridot",
+       "feywood",
+       "treant-seed-acorn"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Wild-magic part (uncommon+)"
+     },
+     {
+      "m": "druidic-mistletoe",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "awakened-shrub-wakeful-leaf",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "harpy-vocal-cords",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "instrument-strings",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "entangle",
+     "faerie fire"
+    ],
+    "lore": "Fochlucan's college hid mistletoe inside the bandore's soundbox, so every chord carries a druid's blessing."
+   }
+  },
+  {
+   "id": "instrument-of-the-bards-mac-fuirmidh-cittern",
+   "name": "Instrument of the Bards (Mac-Fuirmidh Cittern)",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": "by a bard",
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "instrument",
+    "charm",
+    "sound"
+   ],
+   "effect": "A cittern that grants daily castings of barkskin, cure wounds and fog cloud, and makes its charms harder to resist.",
+   "value": 450,
+   "recipe": {
+    "components": [
+     {
+      "m": "cittern",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "ironbark",
+       "mendwort",
+       "knotwood-bracket"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Bark-and-healing part (uncommon+)"
+     },
+     {
+      "m": "awakened-tree-bark",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "satyr-essence",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "instrument-strings",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "barkskin",
+     "fog cloud"
+    ],
+    "lore": "The back is ironbark and the neck knotwood; a satyr's essence varnished in makes the music warm as a hearth."
+   }
+  },
+  {
+   "id": "instrument-of-the-bards-canaith-mandolin",
+   "name": "Instrument of the Bards (Canaith Mandolin)",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": "by a bard",
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "instrument",
+    "charm",
+    "sound"
+   ],
+   "effect": "A mandolin that lets its player heal with strengthened cure wounds, dispel magic and shield allies from lightning once per day each.",
+   "value": 4000,
+   "recipe": {
+    "components": [
+     {
+      "m": "mandolin",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "sunmend-orchid",
+       "stormglass",
+       "starlit-dew"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Healing-or-storm part (rare+)"
+     },
+     {
+      "m": "unicorn-mane",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "lamia-tongue",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "instrument-strings",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "cure wounds",
+     "dispel magic"
+    ],
+    "lore": "Strung with unicorn mane and tuned against a pane of stormglass, the mandolin both mends and grounds the lightning."
+   }
+  },
+  {
+   "id": "instrument-of-the-bards-cli-lyre",
+   "name": "Instrument of the Bards (Cli Lyre)",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": "by a bard",
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "instrument",
+    "charm",
+    "sound"
+   ],
+   "effect": "A lyre whose songs can reshape stone, raise a wall of fire or summon a wall of wind, each once per day.",
+   "value": 4000,
+   "recipe": {
+    "components": [
+     {
+      "m": "lyre",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "eternal-coal",
+       "living-stone",
+       "skyfloat-thistle",
+       "cloud-giant-essence",
+       "fire-giant-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Elemental keystone (rare+): eternal coal, living stone, skyfloat thistle, or cloud or fire giant essence"
+     },
+     {
+      "m": "magma-glass",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "solid-cloud",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "harpy-vocal-cords",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "instrument-strings",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "stone shape",
+     "wall of fire"
+    ],
+    "lore": "Fire, stone and air each lend a string; the Cli bards set coal, living stone and cloud into the lyre's arms so all three answer the player. Bards who cannot visit the elemental planes string the lyre with the essence of a cloud or fire giant, both born of elemental might."
+   }
+  },
+  {
+   "id": "instrument-of-the-bards-anstruth-harp",
+   "name": "Instrument of the Bards (Anstruth Harp)",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": "by a bard",
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "instrument",
+    "charm",
+    "sound"
+   ],
+   "effect": "A harp of storm and thorn: once per day each it can bend the weather to the player's will, sing a potent healing song, or raise a wall of thorns, and its charms are harder to resist.",
+   "value": 25000,
+   "recipe": {
+    "components": [
+     {
+      "m": "harp",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "thunderhead-shard",
+       "storm-giant-sea-storm-pearl",
+       "everbloom-heartroot"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Storm or wild-growth keystone (very rare+)"
+     },
+     {
+      "m": "shambling-mound-vines",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "treant-sap",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "storm-giant-lightning-veined-hair",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "instrument-strings",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "control weather",
+     "wall of thorns"
+    ],
+    "lore": "Strung with lightning-veined storm-giant hair and varnished with treant sap, its frame bound in shambling-mound vine, the harp plays both the sky and the briar."
+   }
+  },
+  {
+   "id": "instrument-of-the-bards-ollamh-harp",
+   "name": "Instrument of the Bards (Ollamh Harp)",
+   "cat": "wondrous",
+   "tier": "legendary",
+   "attune": "by a bard",
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "instrument",
+    "charm",
+    "sound"
+   ],
+   "effect": "The masterwork of bardic instruments: it can bewilder crowds with confusion, bend the weather and call down a fire storm, each once per day, while making all its charms nearly irresistible.",
+   "value": 120000,
+   "recipe": {
+    "components": [
+     {
+      "m": "harp",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "eye-of-storm-glass",
+       "tideheart-pearl",
+       "primordial-flame"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Primordial keystone (legendary)"
+     },
+     {
+      "m": "ancient-oak-heartwood",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "gold-wire",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "androsphinx-roar-larynx",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "instrument-strings",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "confusion",
+     "fire storm"
+    ],
+    "lore": "Only an Ollamh — a bard-master — may carve it: ancient oak for the frame, gold wire for the strings, a sphinx's larynx in the soundbox and a primordial heart that holds storm and flame."
+   }
+  }
+ ]
+}

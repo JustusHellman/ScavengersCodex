@@ -1,0 +1,12 @@
+{
+  "dmPin": null,
+  "startInPlayerView": false,
+  "spoilage": true,
+  "player": {
+    "places": "all",
+    "creatures": "beasts",
+    "materials": "common",
+    "items": "mundane",
+    "threat": "vague"
+  }
+}

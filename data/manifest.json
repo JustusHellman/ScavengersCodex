@@ -1,0 +1,24 @@
+{
+ "files": [
+  "core.json",
+  "equipment.json",
+  "environments.json",
+  "cultivation.json",
+  "items-arms.json",
+  "items-consumables.json",
+  "items-homebrew.json",
+  "items-hunters-1.json",
+  "items-hunters-2.json",
+  "items-rings-rods-staffs-wands.json",
+  "items-wondrous-1.json",
+  "items-wondrous-2.json",
+  "monsters-beasts-1.json",
+  "monsters-beasts-2.json",
+  "monsters-dragons.json",
+  "monsters-elemental-undead.json",
+  "monsters-giants-humanoids.json",
+  "monsters-monstrosities.json",
+  "monsters-planar.json",
+  "monsters-srd52.json"
+ ]
+}

@@ -1,0 +1,644 @@
+{
+ "materials": [
+  {
+   "id": "iron-ore",
+   "name": "Iron Ore",
+   "tier": "mundane",
+   "tags": [
+    "ore",
+    "metal",
+    "earth"
+   ],
+   "desc": "Rust-streaked rock heavy with iron. The backbone of every smithy.",
+   "perish": "stable",
+   "value": 5
+  },
+  {
+   "id": "copper-ore",
+   "name": "Copper Ore",
+   "tier": "mundane",
+   "tags": [
+    "ore",
+    "metal",
+    "lightning"
+   ],
+   "desc": "Green-crusted stone that tingles faintly when struck by lightning.",
+   "perish": "stable",
+   "value": 1
+  },
+  {
+   "id": "silver-ore",
+   "name": "Silver Ore",
+   "tier": "common",
+   "tags": [
+    "ore",
+    "metal",
+    "radiant"
+   ],
+   "desc": "Pale ore that lycanthropes and fiends instinctively shy away from.",
+   "perish": "stable",
+   "value": 5
+  },
+  {
+   "id": "gold-ore",
+   "name": "Gold Ore",
+   "tier": "common",
+   "tags": [
+    "ore",
+    "metal",
+    "radiant"
+   ],
+   "desc": "Soft, warm-coloured ore; takes enchantments of majesty and charm well.",
+   "perish": "stable",
+   "value": 10
+  },
+  {
+   "id": "mithral-ore",
+   "name": "Mithral Ore",
+   "tier": "uncommon",
+   "tags": [
+    "ore",
+    "metal",
+    "speed"
+   ],
+   "desc": "Silvery ore so light it seems to float in the hand. Found in deep veins beneath mountains.",
+   "perish": "stable",
+   "value": 100
+  },
+  {
+   "id": "adamantine-ore",
+   "name": "Adamantine Ore",
+   "tier": "uncommon",
+   "tags": [
+    "ore",
+    "metal",
+    "toughness"
+   ],
+   "desc": "Black-green ore that dulls ordinary picks. Often found near meteorite falls and the Underdark.",
+   "perish": "stable",
+   "value": 150
+  },
+  {
+   "id": "coal",
+   "name": "Coal",
+   "tier": "mundane",
+   "tags": [
+    "stone",
+    "fire"
+   ],
+   "desc": "Black fuel for forges and furnaces.",
+   "perish": "stable",
+   "value": 0.06
+  },
+  {
+   "id": "iron-ingot",
+   "name": "Iron Ingot",
+   "tier": "mundane",
+   "tags": [
+    "ingot",
+    "metal"
+   ],
+   "desc": "A bar of wrought iron, ready for the anvil.",
+   "perish": "stable",
+   "value": 0.22,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ore",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "coal",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 8,
+    "time": "2 hours",
+    "gp": 0,
+    "lore": "Ore is smelted with coal to drive out slag."
+   }
+  },
+  {
+   "id": "steel-ingot",
+   "name": "Steel Ingot",
+   "tier": "mundane",
+   "tags": [
+    "ingot",
+    "metal",
+    "toughness"
+   ],
+   "desc": "Folded, carbon-hardened iron that holds an edge.",
+   "perish": "stable",
+   "value": 0.22,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "coal",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "4 hours",
+    "gp": 0,
+    "lore": "Iron is reheated with charcoal and folded until it takes on carbon."
+   }
+  },
+  {
+   "id": "copper-ingot",
+   "name": "Copper Ingot",
+   "tier": "mundane",
+   "tags": [
+    "ingot",
+    "metal",
+    "lightning"
+   ],
+   "desc": "A soft reddish bar, excellent for conducting both current and spellwork.",
+   "perish": "stable",
+   "value": 4,
+   "recipe": {
+    "components": [
+     {
+      "m": "copper-ore",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "coal",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 8,
+    "time": "2 hours",
+    "gp": 0,
+    "lore": "Copper melts easily over a charcoal fire."
+   }
+  },
+  {
+   "id": "silver-ingot",
+   "name": "Silver Ingot",
+   "tier": "common",
+   "tags": [
+    "ingot",
+    "metal",
+    "radiant"
+   ],
+   "desc": "Refined silver, the bane of werewolves and devils alike.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": {
+    "components": [
+     {
+      "m": "silver-ore",
+      "q": 3,
+      "role": "base"
+     },
+     {
+      "m": "coal",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "4 hours",
+    "gp": 0,
+    "lore": "Silver ore is cupelled to strip away lead and dross."
+   }
+  },
+  {
+   "id": "gold-ingot",
+   "name": "Gold Ingot",
+   "tier": "common",
+   "tags": [
+    "ingot",
+    "metal",
+    "radiant"
+   ],
+   "desc": "A small, heavy bar of pure gold.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": {
+    "components": [
+     {
+      "m": "gold-ore",
+      "q": 3,
+      "role": "base"
+     },
+     {
+      "m": "coal",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "4 hours",
+    "gp": 0,
+    "lore": "Gold is melted and poured into a crucible mould."
+   }
+  },
+  {
+   "id": "mithral-ingot",
+   "name": "Mithral Ingot",
+   "tier": "uncommon",
+   "tags": [
+    "ingot",
+    "metal",
+    "speed"
+   ],
+   "desc": "A feather-light bar of true mithral. Armour made from it barely hinders movement.",
+   "perish": "stable",
+   "value": 48,
+   "recipe": {
+    "components": [
+     {
+      "m": "mithral-ore",
+      "q": 3,
+      "role": "base"
+     },
+     {
+      "m": "coal",
+      "q": 3,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 15,
+    "time": "2 days",
+    "gp": 20,
+    "lore": "Mithral only flows at a white heat that ordinary forges struggle to reach; dwarven bellows help."
+   }
+  },
+  {
+   "id": "adamantine-ingot",
+   "name": "Adamantine Ingot",
+   "tier": "uncommon",
+   "tags": [
+    "ingot",
+    "metal",
+    "toughness"
+   ],
+   "desc": "An almost unbreakable bar of adamantine that shrugs off blows that would shatter steel.",
+   "perish": "stable",
+   "value": 54,
+   "recipe": {
+    "components": [
+     {
+      "m": "adamantine-ore",
+      "q": 3,
+      "role": "base"
+     },
+     {
+      "any": [
+       "fire",
+       "core"
+      ],
+      "q": 1,
+      "role": "binding",
+      "label": "Any fire core (to reach the melting point)"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 16,
+    "time": "3 days",
+    "gp": 30,
+    "lore": "Coal alone cannot melt adamantine; smiths feed their forge with a fire elemental's core or salamander heart."
+   }
+  },
+  {
+   "id": "timber",
+   "name": "Seasoned Timber",
+   "tier": "mundane",
+   "tags": [
+    "wood"
+   ],
+   "desc": "Dry, straight-grained hardwood for hafts, bows and staves.",
+   "perish": "stable",
+   "value": 5
+  },
+  {
+   "id": "cured-leather",
+   "name": "Cured Leather",
+   "tier": "mundane",
+   "tags": [
+    "leather"
+   ],
+   "desc": "Tanned, supple hide ready for stitching.",
+   "perish": "stable",
+   "value": 0.56,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "hide"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any hide or pelt"
+     },
+     {
+      "m": "tanning-salts",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "tannery",
+    "dc": 8,
+    "time": "1 day",
+    "gp": 0,
+    "lore": "Any hide can be scraped, salted and tanned into leather — but it loses whatever magic it had. Use the raw hide for magical crafting."
+   }
+  },
+  {
+   "id": "tanning-salts",
+   "name": "Tanning Salts",
+   "tier": "mundane",
+   "tags": [
+    "salt",
+    "reagent"
+   ],
+   "desc": "A pouch of salt, alum and oak-bark tannin used to cure hides.",
+   "perish": "stable",
+   "value": 0.12
+  },
+  {
+   "id": "preserving-salts",
+   "name": "Preserving Salts",
+   "tier": "mundane",
+   "tags": [
+    "salt",
+    "reagent"
+   ],
+   "desc": "Packed around organs, blood or meat, these salts extend a perishable part's life to 1 week.",
+   "perish": "stable",
+   "value": 0.22
+  },
+  {
+   "id": "linen-cloth",
+   "name": "Linen Cloth",
+   "tier": "mundane",
+   "tags": [
+    "cloth"
+   ],
+   "desc": "A bolt of plain woven linen.",
+   "perish": "stable",
+   "value": 0.9
+  },
+  {
+   "id": "wool-cloth",
+   "name": "Wool Cloth",
+   "tier": "mundane",
+   "tags": [
+    "cloth",
+    "cold"
+   ],
+   "desc": "Warm, felted wool; resists rain and cold.",
+   "perish": "stable",
+   "value": 1
+  },
+  {
+   "id": "silk-cloth",
+   "name": "Silk Cloth",
+   "tier": "common",
+   "tags": [
+    "cloth",
+    "silk"
+   ],
+   "desc": "Fine silk that takes dyes and enchantments beautifully.",
+   "perish": "stable",
+   "value": 17
+  },
+  {
+   "id": "thread",
+   "name": "Strong Thread",
+   "tier": "mundane",
+   "tags": [
+    "thread"
+   ],
+   "desc": "Waxed linen thread for sewing leather and cloth.",
+   "perish": "stable",
+   "value": 0.05
+  },
+  {
+   "id": "glass-vial",
+   "name": "Glass Vial",
+   "tier": "mundane",
+   "tags": [
+    "vessel",
+    "glass"
+   ],
+   "desc": "A stoppered vial for potions, oils and poisons.",
+   "perish": "stable",
+   "value": 0.56
+  },
+  {
+   "id": "crystal-vial",
+   "name": "Crystal Phial",
+   "tier": "common",
+   "tags": [
+    "vessel",
+    "glass",
+    "crystal"
+   ],
+   "desc": "A cut-crystal phial that holds potent magic without cracking. Needed for rare and stronger potions.",
+   "perish": "stable",
+   "value": 50
+  },
+  {
+   "id": "essence-vessel",
+   "name": "Essence Vessel",
+   "tier": "common",
+   "tags": [
+    "vessel",
+    "glass",
+    "arcane"
+   ],
+   "desc": "A rune-etched glass bulb that captures the magical essence escaping a creature within 1 minute of its death. Empty until used.",
+   "perish": "stable",
+   "value": 25
+  },
+  {
+   "id": "parchment",
+   "name": "Parchment",
+   "tier": "mundane",
+   "tags": [
+    "reagent"
+   ],
+   "desc": "A sheet of scraped and dried sheepskin.",
+   "perish": "stable",
+   "value": 0.45
+  },
+  {
+   "id": "vellum",
+   "name": "Fine Vellum",
+   "tier": "common",
+   "tags": [
+    "reagent",
+    "hide"
+   ],
+   "desc": "Calfskin vellum, smooth enough to hold spell-script without bleeding.",
+   "perish": "stable",
+   "value": 2
+  },
+  {
+   "id": "common-ink",
+   "name": "Common Ink",
+   "tier": "mundane",
+   "tags": [
+    "ink"
+   ],
+   "desc": "Oak-gall and soot ink.",
+   "perish": "stable",
+   "value": 2
+  },
+  {
+   "id": "quicksilver",
+   "name": "Quicksilver",
+   "tier": "common",
+   "tags": [
+    "metal",
+    "liquid",
+    "reagent",
+    "arcane"
+   ],
+   "desc": "Liquid metal that alchemists use to bind unlike essences together.",
+   "perish": "stable",
+   "value": 7
+  },
+  {
+   "id": "sulfur",
+   "name": "Sulfur",
+   "tier": "mundane",
+   "tags": [
+    "stone",
+    "fire",
+    "reagent"
+   ],
+   "desc": "Yellow, foul-smelling crystals from volcanic vents.",
+   "perish": "stable",
+   "value": 4
+  },
+  {
+   "id": "saltpeter",
+   "name": "Saltpeter",
+   "tier": "mundane",
+   "tags": [
+    "salt",
+    "fire",
+    "reagent"
+   ],
+   "desc": "White crystals scraped from caves; feeds flames.",
+   "perish": "stable",
+   "value": 0.07
+  },
+  {
+   "id": "beeswax",
+   "name": "Beeswax",
+   "tier": "mundane",
+   "tags": [
+    "wax"
+   ],
+   "desc": "Golden wax for candles, seals and waterproofing.",
+   "perish": "stable",
+   "value": 0.05
+  },
+  {
+   "id": "lamp-oil",
+   "name": "Lamp Oil",
+   "tier": "mundane",
+   "tags": [
+    "oil",
+    "fire"
+   ],
+   "desc": "Rendered oil that burns steadily.",
+   "perish": "stable",
+   "value": 0.05
+  },
+  {
+   "id": "alchemical-base",
+   "name": "Alchemical Base",
+   "tier": "mundane",
+   "tags": [
+    "liquid",
+    "reagent"
+   ],
+   "desc": "Distilled spirit and purified water — the neutral carrier for every potion.",
+   "perish": "stable",
+   "value": 0.9
+  },
+  {
+   "id": "diamond-dust",
+   "name": "Diamond Dust",
+   "tier": "uncommon",
+   "tags": [
+    "dust",
+    "gem",
+    "protection",
+    "radiant"
+   ],
+   "desc": "Crushed diamond; the classic focus for wards and resurrection magic.",
+   "perish": "stable",
+   "value": 400
+  },
+  {
+   "id": "pearl",
+   "name": "Pearl",
+   "tier": "common",
+   "tags": [
+    "pearl",
+    "water"
+   ],
+   "desc": "A lustrous pearl from an oyster bed.",
+   "perish": "stable",
+   "value": 50
+  },
+  {
+   "id": "arcane-ink",
+   "name": "Arcane Ink",
+   "tier": "common",
+   "tags": [
+    "ink",
+    "arcane"
+   ],
+   "desc": "Ink ground with glimmering residue; required to scribe spell scrolls of 1st level and cantrips.",
+   "perish": "stable",
+   "value": 11
+  }
+ ]
+}

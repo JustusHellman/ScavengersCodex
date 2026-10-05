@@ -1,0 +1,3566 @@
+{
+ "materials": [
+  {
+   "id": "barbed-devil-hide",
+   "name": "Barbed Devil Hide",
+   "tier": "uncommon",
+   "tags": [
+    "hide",
+    "infernal",
+    "protection",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A leathery red hide studded with hooked barbs that tear at anything pressing against it. Armorers use it for punishing gauntlets and shield facings.",
+   "perish": "1 day",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "barbed-devil-spines",
+   "name": "Barbed Devil Spines",
+   "tier": "uncommon",
+   "tags": [
+    "bone",
+    "fire",
+    "infernal",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "Finger-long spines that still smoulder faintly at the tips. They ignite when thrown hard, a trick fletchers try to copy.",
+   "perish": "stable",
+   "value": 60,
+   "recipe": null
+  },
+  {
+   "id": "barbed-devil-eye",
+   "name": "Barbed Devil Eye",
+   "tier": "uncommon",
+   "tags": [
+    "eye",
+    "darkvision",
+    "senses",
+    "fiend"
+   ],
+   "desc": "An amber eye with a slit pupil that sees through magical murk as well as plain darkness. Sentries' lenses and darkvision draughts use it.",
+   "perish": "1 hour",
+   "value": 120,
+   "recipe": null
+  },
+  {
+   "id": "barbed-devil-essence",
+   "name": "Barbed Devil Essence",
+   "tier": "uncommon",
+   "tags": [
+    "essence",
+    "infernal",
+    "fire",
+    "protection",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A prickling ember of hellish vigilance that seems to watch whoever holds the vessel.",
+   "perish": "1 minute",
+   "value": 140,
+   "recipe": null
+  },
+  {
+   "id": "bearded-devil-beard",
+   "name": "Bearded Devil Beard",
+   "tier": "uncommon",
+   "tags": [
+    "hair",
+    "poison",
+    "infernal",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A bundle of wiry, snake-like tendrils that twitch and ooze venom long after they are shorn. Poisoners render it into pastes that sicken the victim and keep wounds from closing.",
+   "perish": "1 day",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "bearded-devil-ichor",
+   "name": "Bearded Devil Ichor",
+   "tier": "uncommon",
+   "tags": [
+    "ichor",
+    "infernal",
+    "fear",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "Thin, rust-coloured ichor that smells of hot iron and makes the skin crawl. A staple of fear-draughts and battle-rage tinctures.",
+   "perish": "1 hour",
+   "value": 90,
+   "recipe": null
+  },
+  {
+   "id": "bearded-devil-essence",
+   "name": "Bearded Devil Essence",
+   "tier": "uncommon",
+   "tags": [
+    "essence",
+    "infernal",
+    "fear",
+    "resistance",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A stubborn, bristling spark of soldierly obedience that refuses to be cowed by charms or terror.",
+   "perish": "1 minute",
+   "value": 120,
+   "recipe": null
+  },
+  {
+   "id": "bone-devil-stinger",
+   "name": "Bone Devil Stinger",
+   "tier": "rare",
+   "tags": [
+    "stinger",
+    "poison",
+    "infernal",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A long, ivory-hard tail spike with a channel for venom. Makes a vicious spearhead or dagger blade.",
+   "perish": "stable",
+   "value": 1600,
+   "recipe": null
+  },
+  {
+   "id": "bone-devil-venom",
+   "name": "Bone Devil Venom",
+   "tier": "rare",
+   "tags": [
+    "venom",
+    "poison",
+    "infernal",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "Sluggish yellow venom that burns like cold fire in the blood and saps the strength of its victim.",
+   "perish": "1 hour",
+   "value": 750,
+   "recipe": null
+  },
+  {
+   "id": "bone-devil-plates",
+   "name": "Bone Devil Plates",
+   "tier": "rare",
+   "tags": [
+    "bone",
+    "toughness",
+    "infernal",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "Pale, ridged bone plates stretched with parchment-dry skin. Light, brutally hard, and cold to the touch - ideal for armor inlays.",
+   "perish": "stable",
+   "value": 1800,
+   "recipe": null
+  },
+  {
+   "id": "bone-devil-wing",
+   "name": "Bone Devil Wing",
+   "tier": "rare",
+   "tags": [
+    "wing",
+    "flight",
+    "infernal",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A tattered leathery wing strung over long finger-bones, still twitching when cut free.",
+   "perish": "1 day",
+   "value": 1200,
+   "recipe": null
+  },
+  {
+   "id": "bone-devil-essence",
+   "name": "Bone Devil Essence",
+   "tier": "rare",
+   "tags": [
+    "essence",
+    "infernal",
+    "fear",
+    "invisibility",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A cold, scheming mote that flickers in and out of sight inside its vessel.",
+   "perish": "1 minute",
+   "value": 1600,
+   "recipe": null
+  },
+  {
+   "id": "chain-devil-chains",
+   "name": "Chain Devil Chains",
+   "tier": "rare",
+   "tags": [
+    "metal",
+    "binding",
+    "infernal",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "Barbed black chain that still coils and twitches as if seeking a limb to wrap. Enchanters bind animation and restraint magic into it.",
+   "perish": "stable",
+   "value": 750,
+   "recipe": null
+  },
+  {
+   "id": "chain-devil-visage",
+   "name": "Chain Devil Visage",
+   "tier": "rare",
+   "tags": [
+    "hide",
+    "illusion",
+    "fear",
+    "fiend"
+   ],
+   "desc": "The flayed skin of its face, which ripples between the features of people you have lost. Mask-makers and illusionists covet it.",
+   "perish": "1 day",
+   "value": 1600,
+   "recipe": null
+  },
+  {
+   "id": "chain-devil-essence",
+   "name": "Chain Devil Essence",
+   "tier": "rare",
+   "tags": [
+    "essence",
+    "infernal",
+    "binding",
+    "fear",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A tight, clinking knot of malice that pulls at the vessel's stopper like a chain drawn taut.",
+   "perish": "1 minute",
+   "value": 1400,
+   "recipe": null
+  },
+  {
+   "id": "erinyes-feather",
+   "name": "Erinyes Feather",
+   "tier": "rare",
+   "tags": [
+    "feather",
+    "flight",
+    "infernal",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A glossy feather black as a starless night, edged with a razor fringe. Prized for fletching and for wings of flying.",
+   "perish": "stable",
+   "value": 1100,
+   "recipe": null
+  },
+  {
+   "id": "erinyes-blood",
+   "name": "Erinyes Blood",
+   "tier": "rare",
+   "tags": [
+    "blood",
+    "poison",
+    "infernal",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "Dark blood that the erinyes coats her blades with; it fouls wounds and weakens the victim for hours.",
+   "perish": "1 hour",
+   "value": 800,
+   "recipe": null
+  },
+  {
+   "id": "erinyes-eye",
+   "name": "Erinyes Eye",
+   "tier": "rare",
+   "tags": [
+    "eye",
+    "truesight",
+    "senses",
+    "fiend"
+   ],
+   "desc": "A burning violet eye that pierces illusion, invisibility and shapechange alike. Among the finest truesight reagents in the lower planes.",
+   "perish": "1 hour",
+   "value": 240,
+   "recipe": null
+  },
+  {
+   "id": "erinyes-essence",
+   "name": "Erinyes Essence",
+   "tier": "rare",
+   "tags": [
+    "essence",
+    "infernal",
+    "binding",
+    "flight",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A cold, righteous fury that circles the vessel like a bird of prey, straining after the nearest liar.",
+   "perish": "1 minute",
+   "value": 1200,
+   "recipe": null
+  },
+  {
+   "id": "hell-hound-fire-gland",
+   "name": "Hell Hound Fire Gland",
+   "tier": "uncommon",
+   "tags": [
+    "gland",
+    "fire",
+    "infernal",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A fist-sized, pulsing sac beneath the throat, warm as a coal and slick with oily secretions. The heart of alchemist's fire and fire-breath draughts.",
+   "perish": "1 day",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "hell-hound-pelt",
+   "name": "Hell Hound Pelt",
+   "tier": "uncommon",
+   "tags": [
+    "fur",
+    "fire",
+    "resistance",
+    "fiend"
+   ],
+   "desc": "Coarse black fur that is always warm and never burns. A classic lining for fire-resistant cloaks.",
+   "perish": "1 day",
+   "value": 90,
+   "recipe": null
+  },
+  {
+   "id": "hell-hound-fang",
+   "name": "Hell Hound Fang",
+   "tier": "uncommon",
+   "tags": [
+    "tooth",
+    "fire",
+    "fiend"
+   ],
+   "desc": "A soot-blackened fang with a faint glow at the root; it heats when the bearer is angry.",
+   "perish": "stable",
+   "value": 60,
+   "recipe": null
+  },
+  {
+   "id": "hell-hound-nose",
+   "name": "Hell Hound Nose",
+   "tier": "uncommon",
+   "tags": [
+    "organ",
+    "senses",
+    "fiend"
+   ],
+   "desc": "A leathery, ever-damp nose that can pick out a trail through smoke. Trackers' charms and scenting oils use it.",
+   "perish": "1 hour",
+   "value": 400,
+   "recipe": null
+  },
+  {
+   "id": "hell-hound-essence",
+   "name": "Hell Hound Essence",
+   "tier": "uncommon",
+   "tags": [
+    "essence",
+    "fire",
+    "infernal",
+    "senses",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A panting, snapping flame that flares whenever the vessel is turned toward prey.",
+   "perish": "1 minute",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "horned-devil-horn",
+   "name": "Horned Devil Horn",
+   "tier": "rare",
+   "tags": [
+    "horn",
+    "fire",
+    "infernal",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A massive, ridged horn that smells of scorched stone. Ground to powder it feeds hurled-flame magic; whole, it becomes war horns and hilts.",
+   "perish": "stable",
+   "value": 1800,
+   "recipe": null
+  },
+  {
+   "id": "horned-devil-tail-barb",
+   "name": "Horned Devil Tail Barb",
+   "tier": "rare",
+   "tags": [
+    "stinger",
+    "curse",
+    "infernal",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A hooked tail barb whose wounds bleed and bleed. Weapon-smiths bind it into blades of wounding.",
+   "perish": "stable",
+   "value": 760,
+   "recipe": null
+  },
+  {
+   "id": "horned-devil-wing",
+   "name": "Horned Devil Wing",
+   "tier": "rare",
+   "tags": [
+    "wing",
+    "flight",
+    "infernal",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A broad, scarred wing of red leather stretched over thick bone.",
+   "perish": "1 day",
+   "value": 1200,
+   "recipe": null
+  },
+  {
+   "id": "horned-devil-essence",
+   "name": "Horned Devil Essence",
+   "tier": "rare",
+   "tags": [
+    "essence",
+    "infernal",
+    "fire",
+    "strength",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A heavy, smouldering presence that makes the vessel feel twice its weight.",
+   "perish": "1 minute",
+   "value": 750,
+   "recipe": null
+  },
+  {
+   "id": "ice-devil-carapace",
+   "name": "Ice Devil Carapace",
+   "tier": "very-rare",
+   "tags": [
+    "carapace",
+    "cold",
+    "toughness",
+    "fiend"
+   ],
+   "desc": "Blue-white chitin rimed with frost that never melts, hard as steel and cold enough to burn. Armorers work it into frost-proof plate.",
+   "perish": "stable",
+   "value": 1200,
+   "recipe": null
+  },
+  {
+   "id": "ice-devil-mandible",
+   "name": "Ice Devil Mandible",
+   "tier": "very-rare",
+   "tags": [
+    "tooth",
+    "cold",
+    "infernal",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A serrated, frosted mandible that frosts the air around it. Makes a terrifying blade.",
+   "perish": "stable",
+   "value": 14000,
+   "recipe": null
+  },
+  {
+   "id": "ice-devil-frost-ichor",
+   "name": "Ice Devil Frost Ichor",
+   "tier": "very-rare",
+   "tags": [
+    "ichor",
+    "cold",
+    "infernal",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "Pale blue ichor that freezes anything it touches into brittle crystal. Used for walls of ice and cold-cone wands.",
+   "perish": "1 hour",
+   "value": 8400,
+   "recipe": null
+  },
+  {
+   "id": "ice-devil-tail",
+   "name": "Ice Devil Tail",
+   "tier": "very-rare",
+   "tags": [
+    "sinew",
+    "cold",
+    "paralysis",
+    "fiend"
+   ],
+   "desc": "A long, spiked tail whose sting numbs and slows the struck limb.",
+   "perish": "1 day",
+   "value": 2000,
+   "recipe": null
+  },
+  {
+   "id": "ice-devil-essence",
+   "name": "Ice Devil Essence",
+   "tier": "very-rare",
+   "tags": [
+    "essence",
+    "infernal",
+    "cold",
+    "protection",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A still, frozen calculation that coats the vessel in frost within seconds.",
+   "perish": "1 minute",
+   "value": 2000,
+   "recipe": null
+  },
+  {
+   "id": "imp-stinger",
+   "name": "Imp Stinger",
+   "tier": "common",
+   "tags": [
+    "stinger",
+    "poison",
+    "infernal",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A needle-thin tail barb that still weeps a drop of venom. Favoured for poisoned darts.",
+   "perish": "stable",
+   "value": 45,
+   "recipe": null
+  },
+  {
+   "id": "imp-wing",
+   "name": "Imp Wing",
+   "tier": "common",
+   "tags": [
+    "wing",
+    "flight",
+    "fiend"
+   ],
+   "desc": "A tiny, veined bat-wing, light as paper and hot to the touch.",
+   "perish": "1 day",
+   "value": 18,
+   "recipe": null
+  },
+  {
+   "id": "imp-tongue",
+   "name": "Imp Tongue",
+   "tier": "common",
+   "tags": [
+    "tongue",
+    "cunning",
+    "infernal",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A forked, silver-tipped tongue. Pickled, it is said to lend a liar's fluency to anyone who keeps it under the pillow.",
+   "perish": "1 hour",
+   "value": 36,
+   "recipe": null
+  },
+  {
+   "id": "imp-essence",
+   "name": "Imp Essence",
+   "tier": "common",
+   "tags": [
+    "essence",
+    "infernal",
+    "invisibility",
+    "shapechange",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A jittery flicker that turns transparent, then rat-shaped, then transparent again inside its vessel.",
+   "perish": "1 minute",
+   "value": 32,
+   "recipe": null
+  },
+  {
+   "id": "lemure-sludge",
+   "name": "Lemure Sludge",
+   "tier": "common",
+   "tags": [
+    "slime",
+    "infernal",
+    "regeneration",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A heavy, oily muck that crawls back toward itself if spilled. Alchemists use it to coax mending into salves.",
+   "perish": "1 day",
+   "value": 20,
+   "recipe": null
+  },
+  {
+   "id": "pit-fiend-scale",
+   "name": "Pit Fiend Scale",
+   "tier": "very-rare",
+   "tags": [
+    "scale",
+    "fire",
+    "toughness",
+    "fiend"
+   ],
+   "desc": "A crimson scale the size of a palm, glowing faintly from within like iron fresh from the forge. The ultimate in fire-proof armor.",
+   "perish": "stable",
+   "value": 18000,
+   "recipe": null
+  },
+  {
+   "id": "pit-fiend-fang",
+   "name": "Pit Fiend Fang",
+   "tier": "very-rare",
+   "tags": [
+    "tooth",
+    "poison",
+    "fire",
+    "fiend"
+   ],
+   "desc": "A curved fang with a venom groove that still sizzles. Blades made from it poison and burn in one stroke.",
+   "perish": "stable",
+   "value": 6800,
+   "recipe": null
+  },
+  {
+   "id": "pit-fiend-wing",
+   "name": "Pit Fiend Wing",
+   "tier": "very-rare",
+   "tags": [
+    "wing",
+    "flight",
+    "fear",
+    "fiend"
+   ],
+   "desc": "A vast wing that can be wrapped around the body like a cloak; its shadow alone makes lesser folk tremble.",
+   "perish": "1 day",
+   "value": 16000,
+   "recipe": null
+  },
+  {
+   "id": "pit-fiend-heart",
+   "name": "Pit Fiend Heart",
+   "tier": "legendary",
+   "tags": [
+    "heart",
+    "infernal",
+    "fear",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A heart like a furnace-coal that beats on for minutes after death, exhaling a haze of terror. One of the most coveted reagents in any plane.",
+   "perish": "1 hour",
+   "value": 40000,
+   "recipe": null
+  },
+  {
+   "id": "pit-fiend-essence",
+   "name": "Pit Fiend Essence",
+   "tier": "legendary",
+   "tags": [
+    "essence",
+    "infernal",
+    "domination",
+    "fear",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A crushing, regal malevolence that bends the will of anyone who stares into the vessel too long.",
+   "perish": "1 minute",
+   "value": 50000,
+   "recipe": null
+  },
+  {
+   "id": "balor-heart-coal",
+   "name": "Balor Heart-Coal",
+   "tier": "legendary",
+   "tags": [
+    "heart",
+    "fire",
+    "abyssal",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A heart burned down to a glowing black coal in the death-blast, still radiating murderous heat.",
+   "perish": "1 week",
+   "value": 40000,
+   "recipe": null
+  },
+  {
+   "id": "balor-horn",
+   "name": "Balor Horn",
+   "tier": "very-rare",
+   "tags": [
+    "horn",
+    "fire",
+    "fear",
+    "fiend"
+   ],
+   "desc": "A colossal, scorched horn that thrums with rage. Carved into war horns, it spreads terror across a battlefield.",
+   "perish": "stable",
+   "value": 12000,
+   "recipe": null
+  },
+  {
+   "id": "balor-wing-membrane",
+   "name": "Balor Wing Membrane",
+   "tier": "very-rare",
+   "tags": [
+    "wing",
+    "flight",
+    "fire",
+    "fiend"
+   ],
+   "desc": "Charred wing leather that still smokes but never burns through. Fire-walkers' cloaks are made from it.",
+   "perish": "1 day",
+   "value": 16000,
+   "recipe": null
+  },
+  {
+   "id": "balor-death-cinder",
+   "name": "Balor Death-Cinder",
+   "tier": "very-rare",
+   "tags": [
+    "ash",
+    "fire",
+    "abyssal",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "Glittering black ash from the balor's death explosion. Powders of it make fireballs hungrier and flames harder to put out.",
+   "perish": "stable",
+   "value": 8000,
+   "recipe": null
+  },
+  {
+   "id": "balor-essence",
+   "name": "Balor Essence",
+   "tier": "legendary",
+   "tags": [
+    "essence",
+    "abyssal",
+    "fire",
+    "fear",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A roaring whirl of flame and hatred that makes the vessel glow cherry-red.",
+   "perish": "1 minute",
+   "value": 40000,
+   "recipe": null
+  },
+  {
+   "id": "dretch-stench-gland",
+   "name": "Dretch Stench Gland",
+   "tier": "common",
+   "tags": [
+    "gland",
+    "poison",
+    "abyssal",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A rubbery, grey-green sac that reeks of rotting eggs. Squeezed, it releases a nauseating cloud; stink bombs start here.",
+   "perish": "1 day",
+   "value": 33,
+   "recipe": null
+  },
+  {
+   "id": "dretch-ichor",
+   "name": "Dretch Ichor",
+   "tier": "common",
+   "tags": [
+    "ichor",
+    "abyssal",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "Brackish, bubbling ichor. The cheapest abyssal reagent there is, used as a base for fiendish inks.",
+   "perish": "1 hour",
+   "value": 12,
+   "recipe": null
+  },
+  {
+   "id": "glabrezu-pincer",
+   "name": "Glabrezu Pincer",
+   "tier": "rare",
+   "tags": [
+    "claw",
+    "strength",
+    "abyssal",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A huge crab-like pincer that can snap a man in half. Smiths turn it into crushing gauntlets and siege tools.",
+   "perish": "stable",
+   "value": 600,
+   "recipe": null
+  },
+  {
+   "id": "glabrezu-hide",
+   "name": "Glabrezu Hide",
+   "tier": "rare",
+   "tags": [
+    "hide",
+    "toughness",
+    "abyssal",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "Thick, pebbled hide the colour of old blood. Tough enough for heavy leather armor.",
+   "perish": "1 day",
+   "value": 450,
+   "recipe": null
+  },
+  {
+   "id": "glabrezu-tongue",
+   "name": "Glabrezu Tongue",
+   "tier": "rare",
+   "tags": [
+    "tongue",
+    "cunning",
+    "charm",
+    "fiend"
+   ],
+   "desc": "A long, honey-sweet tongue that has spoken a thousand bargains. Its magic lends persuasion and deceit.",
+   "perish": "1 hour",
+   "value": 2000,
+   "recipe": null
+  },
+  {
+   "id": "glabrezu-essence",
+   "name": "Glabrezu Essence",
+   "tier": "rare",
+   "tags": [
+    "essence",
+    "abyssal",
+    "cunning",
+    "knowledge",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A soft, whispering temptation that suggests what you might wish for if you only opened the vessel.",
+   "perish": "1 minute",
+   "value": 1200,
+   "recipe": null
+  },
+  {
+   "id": "hezrou-stench-gland",
+   "name": "Hezrou Stench Gland",
+   "tier": "rare",
+   "tags": [
+    "gland",
+    "poison",
+    "abyssal",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A slimy, swollen musk sac whose reek clings for days. Refined, it makes potent stinking clouds and nauseating poisons.",
+   "perish": "1 day",
+   "value": 150,
+   "recipe": null
+  },
+  {
+   "id": "hezrou-hide",
+   "name": "Hezrou Hide",
+   "tier": "rare",
+   "tags": [
+    "hide",
+    "toughness",
+    "resistance",
+    "fiend"
+   ],
+   "desc": "Warty, rubbery hide that shrugs off acid and grime. Hard to work, harder to cut.",
+   "perish": "1 day",
+   "value": 1400,
+   "recipe": null
+  },
+  {
+   "id": "hezrou-claw",
+   "name": "Hezrou Claw",
+   "tier": "rare",
+   "tags": [
+    "claw",
+    "abyssal",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A thick, yellowed claw coated in a slime that never quite washes off.",
+   "perish": "stable",
+   "value": 600,
+   "recipe": null
+  },
+  {
+   "id": "hezrou-essence",
+   "name": "Hezrou Essence",
+   "tier": "rare",
+   "tags": [
+    "essence",
+    "abyssal",
+    "poison",
+    "toughness",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A foul, gurgling fog that stains the inside of the vessel green.",
+   "perish": "1 minute",
+   "value": 1000,
+   "recipe": null
+  },
+  {
+   "id": "marilith-scales",
+   "name": "Marilith Scales",
+   "tier": "very-rare",
+   "tags": [
+    "scale",
+    "speed",
+    "abyssal",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "Glossy green-black serpent scales that seem to shift a hair ahead of the eye. Armor made from them turns aside blows before they land.",
+   "perish": "stable",
+   "value": 2400,
+   "recipe": null
+  },
+  {
+   "id": "marilith-tail-sinew",
+   "name": "Marilith Tail Sinew",
+   "tier": "very-rare",
+   "tags": [
+    "sinew",
+    "strength",
+    "binding",
+    "fiend"
+   ],
+   "desc": "Coils of steel-strong sinew from the constricting tail. Bowstrings and binding cords of it never slacken.",
+   "perish": "1 day",
+   "value": 2400,
+   "recipe": null
+  },
+  {
+   "id": "marilith-hand",
+   "name": "Marilith Hand",
+   "tier": "very-rare",
+   "tags": [
+    "claw",
+    "speed",
+    "cunning",
+    "fiend"
+   ],
+   "desc": "One of six slender hands, still twitching toward a blade grip. Used in charms of quickness and parrying.",
+   "perish": "1 day",
+   "value": 1200,
+   "recipe": null
+  },
+  {
+   "id": "marilith-essence",
+   "name": "Marilith Essence",
+   "tier": "very-rare",
+   "tags": [
+    "essence",
+    "abyssal",
+    "speed",
+    "cunning",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A coiling, calculating essence that anticipates every movement of the vessel's holder.",
+   "perish": "1 minute",
+   "value": 4800,
+   "recipe": null
+  },
+  {
+   "id": "nalfeshnee-tusk",
+   "name": "Nalfeshnee Tusk",
+   "tier": "very-rare",
+   "tags": [
+    "tooth",
+    "abyssal",
+    "strength",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A yellowed, curling tusk as long as a forearm. Carved into hilts, it lends a savage strength.",
+   "perish": "stable",
+   "value": 16000,
+   "recipe": null
+  },
+  {
+   "id": "nalfeshnee-hide",
+   "name": "Nalfeshnee Hide",
+   "tier": "very-rare",
+   "tags": [
+    "hide",
+    "toughness",
+    "resistance",
+    "fiend"
+   ],
+   "desc": "A vast, bristled hide heavy with fat. Tanned, it resists fire, cold and lightning alike.",
+   "perish": "1 day",
+   "value": 12000,
+   "recipe": null
+  },
+  {
+   "id": "nalfeshnee-wing",
+   "name": "Nalfeshnee Wing",
+   "tier": "very-rare",
+   "tags": [
+    "wing",
+    "teleport",
+    "planar",
+    "fiend"
+   ],
+   "desc": "A laughably small feathered wing that nevertheless tugs at space itself; the demon's teleportation is thought to lodge here.",
+   "perish": "1 day",
+   "value": 1200,
+   "recipe": null
+  },
+  {
+   "id": "nalfeshnee-essence",
+   "name": "Nalfeshnee Essence",
+   "tier": "very-rare",
+   "tags": [
+    "essence",
+    "abyssal",
+    "fear",
+    "teleport",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A shimmering rainbow nimbus that fills onlookers with dread.",
+   "perish": "1 minute",
+   "value": 2700,
+   "recipe": null
+  },
+  {
+   "id": "quasit-claw",
+   "name": "Quasit Claw",
+   "tier": "common",
+   "tags": [
+    "claw",
+    "poison",
+    "abyssal",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A tiny hooked claw that injects a weakening poison. Good for poisoned needles and pins.",
+   "perish": "stable",
+   "value": 18,
+   "recipe": null
+  },
+  {
+   "id": "quasit-horn",
+   "name": "Quasit Horn",
+   "tier": "common",
+   "tags": [
+    "horn",
+    "fear",
+    "abyssal",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A little spiral horn that makes people nervous for reasons they can't name.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "quasit-essence",
+   "name": "Quasit Essence",
+   "tier": "common",
+   "tags": [
+    "essence",
+    "abyssal",
+    "invisibility",
+    "shapechange",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A squirming, shape-shifting mote that alternates between toad, bat and nothing at all.",
+   "perish": "1 minute",
+   "value": 32,
+   "recipe": null
+  },
+  {
+   "id": "vrock-feathers",
+   "name": "Vrock Feathers",
+   "tier": "uncommon",
+   "tags": [
+    "feather",
+    "flight",
+    "abyssal",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "Greasy, blood-crusted vulture feathers that smell of carrion. Fletching of them flies true through storms.",
+   "perish": "stable",
+   "value": 90,
+   "recipe": null
+  },
+  {
+   "id": "vrock-spores",
+   "name": "Vrock Spores",
+   "tier": "uncommon",
+   "tags": [
+    "dust",
+    "poison",
+    "disease",
+    "fiend"
+   ],
+   "desc": "A fine, choking green dust shaken from the vrock's feathers. The spores sprout into tendrils in living flesh.",
+   "perish": "1 week",
+   "value": 100,
+   "recipe": null
+  },
+  {
+   "id": "vrock-screech-organ",
+   "name": "Vrock Screech Organ",
+   "tier": "uncommon",
+   "tags": [
+    "organ",
+    "thunder",
+    "sound",
+    "fiend"
+   ],
+   "desc": "A bellows-like voice box that can still loose a dying wail. Horns of blasting and stunning charms use it.",
+   "perish": "1 hour",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "vrock-essence",
+   "name": "Vrock Essence",
+   "tier": "uncommon",
+   "tags": [
+    "essence",
+    "abyssal",
+    "sound",
+    "disease",
+    "fiend",
+    "fiendish"
+   ],
+   "desc": "A shrieking, feathery storm that rattles the vessel.",
+   "perish": "1 minute",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "night-hag-heartstone",
+   "name": "Night Hag Heartstone",
+   "tier": "rare",
+   "tags": [
+    "gem",
+    "protection",
+    "disease",
+    "fiend"
+   ],
+   "desc": "A lustrous black gem that grants its bearer passage to the Ethereal Plane and wards against every disease. It is the night hag's greatest treasure.",
+   "perish": "stable",
+   "value": 1100,
+   "recipe": null
+  },
+  {
+   "id": "night-hag-soul-bag",
+   "name": "Night Hag Soul Bag",
+   "tier": "rare",
+   "tags": [
+    "vessel",
+    "necrotic",
+    "death",
+    "fiend"
+   ],
+   "desc": "A pouch sewn from flayed hide that can hold a trapped soul. Necromancers and soul-freeing clerics both seek it.",
+   "perish": "stable",
+   "value": 2400,
+   "recipe": null
+  },
+  {
+   "id": "night-hag-eye",
+   "name": "Night Hag Eye",
+   "tier": "uncommon",
+   "tags": [
+    "eye",
+    "senses",
+    "knowledge",
+    "fiend"
+   ],
+   "desc": "A milky eye that stares past walls and into dreams. The classic ingredient for scrying charms.",
+   "perish": "1 hour",
+   "value": 120,
+   "recipe": null
+  },
+  {
+   "id": "night-hag-fingernails",
+   "name": "Night Hag Fingernails",
+   "tier": "uncommon",
+   "tags": [
+    "claw",
+    "curse",
+    "sleep",
+    "fiend"
+   ],
+   "desc": "Long, yellow-grey nails that ache when anyone nearby is dreaming. Used in curse rituals and nightmare bindings.",
+   "perish": "stable",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "night-hag-essence",
+   "name": "Night Hag Essence",
+   "tier": "uncommon",
+   "tags": [
+    "essence",
+    "shadow",
+    "planar",
+    "sleep",
+    "fiend"
+   ],
+   "desc": "A ragged smoke of stolen dreams that slips half out of reality when disturbed.",
+   "perish": "1 minute",
+   "value": 140,
+   "recipe": null
+  },
+  {
+   "id": "nightmare-mane",
+   "name": "Nightmare Mane",
+   "tier": "uncommon",
+   "tags": [
+    "hair",
+    "fire",
+    "planar",
+    "fiend"
+   ],
+   "desc": "Hair that burns endlessly with a low, smokeless flame without being consumed. Woven into ropes and tassels for fire magic and planar travel.",
+   "perish": "stable",
+   "value": 90,
+   "recipe": null
+  },
+  {
+   "id": "nightmare-hooves",
+   "name": "Nightmare Hooves",
+   "tier": "uncommon",
+   "tags": [
+    "horn",
+    "fire",
+    "speed",
+    "fiend"
+   ],
+   "desc": "Smouldering black hooves that leave scorched prints. Horseshoes forged with them lend a charger speed and a burning trail.",
+   "perish": "stable",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "nightmare-hide",
+   "name": "Nightmare Hide",
+   "tier": "uncommon",
+   "tags": [
+    "hide",
+    "fire",
+    "resistance",
+    "fiend"
+   ],
+   "desc": "Smoke-black horsehide that feels warm through thick gloves.",
+   "perish": "1 day",
+   "value": 140,
+   "recipe": null
+  },
+  {
+   "id": "nightmare-essence",
+   "name": "Nightmare Essence",
+   "tier": "uncommon",
+   "tags": [
+    "essence",
+    "fire",
+    "planar",
+    "fiendish",
+    "fiend"
+   ],
+   "desc": "A galloping shadow wreathed in flame that fades in and out of the Ethereal as you watch.",
+   "perish": "1 minute",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "rakshasa-claw",
+   "name": "Rakshasa Claw",
+   "tier": "very-rare",
+   "tags": [
+    "claw",
+    "curse",
+    "fiendish",
+    "fiend"
+   ],
+   "desc": "A hooked claw whose scratches rot the victim's mind with a curse that only powerful magic can lift. Blades made from it carry the curse.",
+   "perish": "stable",
+   "value": 1200,
+   "recipe": null
+  },
+  {
+   "id": "rakshasa-hide",
+   "name": "Rakshasa Hide",
+   "tier": "very-rare",
+   "tags": [
+    "hide",
+    "antimagic",
+    "resistance",
+    "fiend"
+   ],
+   "desc": "Striped tiger hide that lesser spells slide off like rain. Cloaks of it are coveted by mage-hunters.",
+   "perish": "1 day",
+   "value": 3000,
+   "recipe": null
+  },
+  {
+   "id": "rakshasa-whiskers",
+   "name": "Rakshasa Whiskers",
+   "tier": "very-rare",
+   "tags": [
+    "hair",
+    "illusion",
+    "cunning",
+    "fiend"
+   ],
+   "desc": "Stiff, silver whiskers that quiver near falsehood. Illusionists use them as foci for disguises.",
+   "perish": "stable",
+   "value": 7600,
+   "recipe": null
+  },
+  {
+   "id": "rakshasa-essence",
+   "name": "Rakshasa Essence",
+   "tier": "very-rare",
+   "tags": [
+    "essence",
+    "fiendish",
+    "illusion",
+    "shapechange",
+    "fiend"
+   ],
+   "desc": "A purring, velvet deception that looks like whatever the viewer most wants to see.",
+   "perish": "1 minute",
+   "value": 8000,
+   "recipe": null
+  },
+  {
+   "id": "succubus-incubus-wing",
+   "name": "Succubus/Incubus Wing",
+   "tier": "uncommon",
+   "tags": [
+    "wing",
+    "flight",
+    "fiendish",
+    "fiend"
+   ],
+   "desc": "A sleek, velvet-soft bat wing of deep crimson. Lightweight flying cloaks and charms use it.",
+   "perish": "1 day",
+   "value": 270,
+   "recipe": null
+  },
+  {
+   "id": "succubus-incubus-lips",
+   "name": "Succubus/Incubus Lips",
+   "tier": "uncommon",
+   "tags": [
+    "organ",
+    "charm",
+    "necrotic",
+    "fiend"
+   ],
+   "desc": "Full, warm lips that still tempt to be kissed. Rendered into balms of allure and life-draining poisons.",
+   "perish": "1 hour",
+   "value": 60,
+   "recipe": null
+  },
+  {
+   "id": "succubus-incubus-hair",
+   "name": "Succubus/Incubus Hair",
+   "tier": "uncommon",
+   "tags": [
+    "hair",
+    "charm",
+    "shapechange",
+    "fiend"
+   ],
+   "desc": "A lock of hair that changes colour to suit whoever looks at it. A favourite of love-charm makers and disguise kits.",
+   "perish": "stable",
+   "value": 140,
+   "recipe": null
+  },
+  {
+   "id": "succubus-incubus-essence",
+   "name": "Succubus/Incubus Essence",
+   "tier": "uncommon",
+   "tags": [
+    "essence",
+    "fiendish",
+    "charm",
+    "shapechange",
+    "fiend"
+   ],
+   "desc": "A sweet, heady haze that whispers promises and takes on a beloved face.",
+   "perish": "1 minute",
+   "value": 140,
+   "recipe": null
+  },
+  {
+   "id": "couatl-feather",
+   "name": "Couatl Feather",
+   "tier": "uncommon",
+   "tags": [
+    "feather",
+    "flight",
+    "radiant",
+    "celestial"
+   ],
+   "desc": "A jewel-bright feather of emerald and gold that drifts upward when dropped. Prized for flight charms and holy fletching.",
+   "perish": "stable",
+   "value": 51,
+   "recipe": null
+  },
+  {
+   "id": "couatl-scale",
+   "name": "Couatl Scale",
+   "tier": "uncommon",
+   "tags": [
+    "scale",
+    "radiant",
+    "protection",
+    "celestial"
+   ],
+   "desc": "A small iridescent scale that warms at the touch of the faithful. Used in protective amulets.",
+   "perish": "stable",
+   "value": 150,
+   "recipe": null
+  },
+  {
+   "id": "couatl-venom",
+   "name": "Couatl Venom",
+   "tier": "uncommon",
+   "tags": [
+    "venom",
+    "sleep",
+    "poison",
+    "celestial"
+   ],
+   "desc": "Clear, faintly glowing venom that brings a deep, merciful sleep rather than death.",
+   "perish": "1 hour",
+   "value": 80,
+   "recipe": null
+  },
+  {
+   "id": "couatl-essence",
+   "name": "Couatl Essence",
+   "tier": "uncommon",
+   "tags": [
+    "essence",
+    "celestial",
+    "telepathy",
+    "shapechange"
+   ],
+   "desc": "A calm, patient light that speaks directly into the mind of whoever holds the vessel.",
+   "perish": "1 minute",
+   "value": 170,
+   "recipe": null
+  },
+  {
+   "id": "deva-feather",
+   "name": "Deva Feather",
+   "tier": "rare",
+   "tags": [
+    "feather",
+    "flight",
+    "celestial"
+   ],
+   "desc": "A shed feather of soft silver that glows faintly in darkness. Among the finest feathers for flying and blessing magic.",
+   "perish": "stable",
+   "value": 1500,
+   "recipe": null
+  },
+  {
+   "id": "deva-tears",
+   "name": "Deva Radiant Tears",
+   "tier": "rare",
+   "tags": [
+    "liquid",
+    "radiant",
+    "healing",
+    "celestial"
+   ],
+   "desc": "Tears of liquid light that heal wounds and banish sickness. Holy healers treasure a single vial above gold.",
+   "perish": "1 week",
+   "value": 700,
+   "recipe": null
+  },
+  {
+   "id": "deva-essence",
+   "name": "Deva Halo-Essence",
+   "tier": "rare",
+   "tags": [
+    "essence",
+    "celestial",
+    "radiant",
+    "healing"
+   ],
+   "desc": "A fading halo of pure warmth that makes the vessel ring softly like a bell.",
+   "perish": "1 minute",
+   "value": 750,
+   "recipe": null
+  },
+  {
+   "id": "planetar-feather",
+   "name": "Planetar Feather",
+   "tier": "very-rare",
+   "tags": [
+    "feather",
+    "flight",
+    "celestial"
+   ],
+   "desc": "A long, snow-white feather that never dirties. Weaves into wings and cloaks of glorious flight.",
+   "perish": "stable",
+   "value": 4800,
+   "recipe": null
+  },
+  {
+   "id": "planetar-tears",
+   "name": "Planetar Radiant Tears",
+   "tier": "very-rare",
+   "tags": [
+    "liquid",
+    "radiant",
+    "healing",
+    "celestial"
+   ],
+   "desc": "Glowing emerald tears said to restore even lost limbs.",
+   "perish": "1 week",
+   "value": 4500,
+   "recipe": null
+  },
+  {
+   "id": "planetar-eye",
+   "name": "Planetar Eye",
+   "tier": "very-rare",
+   "tags": [
+    "eye",
+    "truesight",
+    "radiant",
+    "celestial"
+   ],
+   "desc": "An eye of blazing gold that sees all lies and disguises. Removing it is considered sacrilege by most churches.",
+   "perish": "1 hour",
+   "value": 2400,
+   "recipe": null
+  },
+  {
+   "id": "planetar-essence",
+   "name": "Planetar Halo-Essence",
+   "tier": "very-rare",
+   "tags": [
+    "essence",
+    "celestial",
+    "radiant",
+    "truesight"
+   ],
+   "desc": "A steady, just radiance that makes lies painful to speak near the vessel.",
+   "perish": "1 minute",
+   "value": 7200,
+   "recipe": null
+  },
+  {
+   "id": "solar-feather",
+   "name": "Solar Feather",
+   "tier": "very-rare",
+   "tags": [
+    "feather",
+    "flight",
+    "radiant",
+    "celestial"
+   ],
+   "desc": "A golden feather that shines like a sunrise. A single one can light a cathedral.",
+   "perish": "stable",
+   "value": 4800,
+   "recipe": null
+  },
+  {
+   "id": "solar-tears",
+   "name": "Solar Radiant Tears",
+   "tier": "legendary",
+   "tags": [
+    "liquid",
+    "radiant",
+    "healing",
+    "celestial"
+   ],
+   "desc": "Tears of molten sunlight said to be able to call back a soul from death.",
+   "perish": "1 week",
+   "value": 40000,
+   "recipe": null
+  },
+  {
+   "id": "solar-light-mote",
+   "name": "Solar Light-Mote",
+   "tier": "legendary",
+   "tags": [
+    "crystal",
+    "radiant",
+    "light",
+    "celestial"
+   ],
+   "desc": "A crystallized fragment of the solar's glory, glowing with a warm, unending light that burns undead.",
+   "perish": "stable",
+   "value": 36000,
+   "recipe": null
+  },
+  {
+   "id": "solar-essence",
+   "name": "Solar Halo-Essence",
+   "tier": "legendary",
+   "tags": [
+    "essence",
+    "celestial",
+    "radiant",
+    "blessing"
+   ],
+   "desc": "A blinding, holy radiance that forces anyone evil to look away.",
+   "perish": "1 minute",
+   "value": 36000,
+   "recipe": null
+  },
+  {
+   "id": "pegasus-feather",
+   "name": "Pegasus Feather",
+   "tier": "common",
+   "tags": [
+    "feather",
+    "flight",
+    "celestial"
+   ],
+   "desc": "A soft white feather that drifts upward in still air. A cheap and common flight reagent.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "pegasus-flight-feather",
+   "name": "Pegasus Flight Feather",
+   "tier": "uncommon",
+   "tags": [
+    "feather",
+    "flight",
+    "speed",
+    "celestial"
+   ],
+   "desc": "One of the long primary feathers from the wing tip, stiff and strong. The core of many flying mounts' saddles and flying potions.",
+   "perish": "stable",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "pegasus-mane",
+   "name": "Pegasus Mane",
+   "tier": "common",
+   "tags": [
+    "hair",
+    "celestial",
+    "speed"
+   ],
+   "desc": "Silky white horsehair that never tangles. Used in bowstrings and charms of swiftness.",
+   "perish": "stable",
+   "value": 14,
+   "recipe": null
+  },
+  {
+   "id": "pegasus-essence",
+   "name": "Pegasus Essence",
+   "tier": "common",
+   "tags": [
+    "essence",
+    "celestial",
+    "flight",
+    "speed"
+   ],
+   "desc": "A bright, soaring essence that tugs the vessel upward.",
+   "perish": "1 minute",
+   "value": 36,
+   "recipe": null
+  },
+  {
+   "id": "unicorn-horn",
+   "name": "Unicorn Horn",
+   "tier": "rare",
+   "tags": [
+    "horn",
+    "healing",
+    "celestial"
+   ],
+   "desc": "A spiral horn of pearl-white ivory that purifies poison and heals by touch. Legendary in lore; nearly priceless to the faithful.",
+   "perish": "stable",
+   "value": 750,
+   "recipe": null
+  },
+  {
+   "id": "unicorn-tears",
+   "name": "Unicorn Tears",
+   "tier": "uncommon",
+   "tags": [
+    "liquid",
+    "healing",
+    "celestial"
+   ],
+   "desc": "A few drops of shimmering liquid that close wounds and cure disease. Priceless for healing draughts.",
+   "perish": "1 week",
+   "value": 90,
+   "recipe": null
+  },
+  {
+   "id": "unicorn-mane",
+   "name": "Unicorn Mane",
+   "tier": "uncommon",
+   "tags": [
+    "hair",
+    "celestial",
+    "protection"
+   ],
+   "desc": "Silver-white horsehair that repels evil spirits. Woven into cords and wards.",
+   "perish": "stable",
+   "value": 270,
+   "recipe": null
+  },
+  {
+   "id": "unicorn-hooves",
+   "name": "Unicorn Hooves",
+   "tier": "uncommon",
+   "tags": [
+    "horn",
+    "speed",
+    "celestial"
+   ],
+   "desc": "Gleaming, pearl-like hooves that leave no tracks on moss.",
+   "perish": "stable",
+   "value": 240,
+   "recipe": null
+  },
+  {
+   "id": "unicorn-essence",
+   "name": "Unicorn Essence",
+   "tier": "uncommon",
+   "tags": [
+    "essence",
+    "celestial",
+    "healing",
+    "teleport"
+   ],
+   "desc": "A gentle, blinding purity that makes the vessel feel impossibly clean.",
+   "perish": "1 minute",
+   "value": 120,
+   "recipe": null
+  },
+  {
+   "id": "blink-dog-pelt",
+   "name": "Blink Dog Pelt",
+   "tier": "common",
+   "tags": [
+    "fur",
+    "teleport",
+    "fey"
+   ],
+   "desc": "Tawny fur that flickers slightly at the edges of vision. Used in cloaks and boots of blinking.",
+   "perish": "1 day",
+   "value": 40,
+   "recipe": null
+  },
+  {
+   "id": "blink-dog-fang",
+   "name": "Blink Dog Fang",
+   "tier": "common",
+   "tags": [
+    "tooth",
+    "teleport",
+    "fey"
+   ],
+   "desc": "A small fang that is never quite where you left it.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "blink-dog-essence",
+   "name": "Blink Dog Essence",
+   "tier": "common",
+   "tags": [
+    "essence",
+    "fey",
+    "teleport",
+    "planar"
+   ],
+   "desc": "A flickering, playful essence that seems to jump from one side of the vessel to the other.",
+   "perish": "1 minute",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "dryad-heartwood",
+   "name": "Dryad Heartwood",
+   "tier": "uncommon",
+   "tags": [
+    "wood",
+    "fey",
+    "growth"
+   ],
+   "desc": "A living piece of the dryad's bound tree, still pulsing with green life. Druids' staffs and charms of growth use it.",
+   "perish": "stable",
+   "value": 120,
+   "recipe": null
+  },
+  {
+   "id": "dryad-hair",
+   "name": "Dryad Hair",
+   "tier": "common",
+   "tags": [
+    "leaf",
+    "charm",
+    "fey"
+   ],
+   "desc": "A lock of leafy hair that changes colour with the seasons. Love-charms and friendship tokens use it.",
+   "perish": "1 week",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "dryad-sap",
+   "name": "Dryad Sap",
+   "tier": "common",
+   "tags": [
+    "sap",
+    "fey",
+    "charm"
+   ],
+   "desc": "A sweet, golden sap that smells of honey and fresh rain. Charm potions start here.",
+   "perish": "1 day",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "dryad-essence",
+   "name": "Dryad Essence",
+   "tier": "common",
+   "tags": [
+    "essence",
+    "fey",
+    "charm",
+    "teleport"
+   ],
+   "desc": "A soft green glimmer that drifts toward the nearest tree.",
+   "perish": "1 minute",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "green-hag-eye",
+   "name": "Green Hag Eye",
+   "tier": "uncommon",
+   "tags": [
+    "eye",
+    "illusion",
+    "senses",
+    "fey"
+   ],
+   "desc": "A murky green eye that sees through tricks and disguises. The scrying eye of a hag coven.",
+   "perish": "1 hour",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "green-hag-fingernails",
+   "name": "Green Hag Fingernails",
+   "tier": "uncommon",
+   "tags": [
+    "claw",
+    "curse",
+    "fey"
+   ],
+   "desc": "Long, algae-green fingernails that fester any wound they scratch. Curse-makers value them.",
+   "perish": "stable",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "green-hag-tongue",
+   "name": "Green Hag Tongue",
+   "tier": "uncommon",
+   "tags": [
+    "tongue",
+    "sound",
+    "illusion",
+    "fey"
+   ],
+   "desc": "A slimy tongue that can mimic any voice it has heard. Used in mimicry charms and ventriloquist tricks.",
+   "perish": "1 hour",
+   "value": 120,
+   "recipe": null
+  },
+  {
+   "id": "green-hag-essence",
+   "name": "Green Hag Essence",
+   "tier": "uncommon",
+   "tags": [
+    "essence",
+    "fey",
+    "illusion",
+    "invisibility"
+   ],
+   "desc": "A cackling, shifting fog that looks like a different thing every time you glance at it.",
+   "perish": "1 minute",
+   "value": 140,
+   "recipe": null
+  },
+  {
+   "id": "sea-hag-hair",
+   "name": "Sea Hag Hair",
+   "tier": "common",
+   "tags": [
+    "hair",
+    "water",
+    "fear",
+    "fey"
+   ],
+   "desc": "A tangle of wet, seaweed-like hair that never dries. Used in curses of drowning and nightmares of the sea.",
+   "perish": "stable",
+   "value": 28,
+   "recipe": null
+  },
+  {
+   "id": "sea-hag-eye",
+   "name": "Sea Hag Eye",
+   "tier": "common",
+   "tags": [
+    "eye",
+    "fear",
+    "death",
+    "fey"
+   ],
+   "desc": "A bulging, fish-like eye that retains a shred of the hag's death glare. Dangerous to carry.",
+   "perish": "1 hour",
+   "value": 28,
+   "recipe": null
+  },
+  {
+   "id": "sea-hag-scales",
+   "name": "Sea Hag Scales",
+   "tier": "common",
+   "tags": [
+    "scale",
+    "water",
+    "swimming",
+    "fey"
+   ],
+   "desc": "Slimy, barnacled scales scraped from her arms. Used in potions of water breathing and swimming.",
+   "perish": "stable",
+   "value": 12,
+   "recipe": null
+  },
+  {
+   "id": "sea-hag-essence",
+   "name": "Sea Hag Essence",
+   "tier": "common",
+   "tags": [
+    "essence",
+    "fey",
+    "fear",
+    "illusion"
+   ],
+   "desc": "A murky, brackish essence that looks like a hideous face pressed against the glass.",
+   "perish": "1 minute",
+   "value": 22,
+   "recipe": null
+  },
+  {
+   "id": "satyr-horn",
+   "name": "Satyr Horn",
+   "tier": "common",
+   "tags": [
+    "horn",
+    "fey",
+    "sound"
+   ],
+   "desc": "A small curled horn that hums when music is played nearby. Instrument makers use it for enchanted pipes.",
+   "perish": "stable",
+   "value": 48,
+   "recipe": null
+  },
+  {
+   "id": "satyr-fleece",
+   "name": "Satyr Fleece",
+   "tier": "common",
+   "tags": [
+    "fur",
+    "resistance",
+    "fey"
+   ],
+   "desc": "Curly fleece from the goatish legs that resists spells faintly. Used in cloaks against magic.",
+   "perish": "1 day",
+   "value": 26,
+   "recipe": null
+  },
+  {
+   "id": "satyr-essence",
+   "name": "Satyr Essence",
+   "tier": "common",
+   "tags": [
+    "essence",
+    "fey",
+    "charm",
+    "sound"
+   ],
+   "desc": "A merry, tipsy essence that hums a tune inside its vessel.",
+   "perish": "1 minute",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "sprite-wings",
+   "name": "Sprite Wings",
+   "tier": "common",
+   "tags": [
+    "wing",
+    "flight",
+    "invisibility",
+    "fey"
+   ],
+   "desc": "A pair of dragonfly-like wings that fade from sight when held still. A key reagent for dust of disappearance.",
+   "perish": "1 day",
+   "value": 38,
+   "recipe": null
+  },
+  {
+   "id": "sprite-sleep-poison",
+   "name": "Sprite Sleep Poison",
+   "tier": "common",
+   "tags": [
+    "venom",
+    "sleep",
+    "poison",
+    "fey"
+   ],
+   "desc": "A drop of clear poison from the sprite's quiver, sending the victim into a gentle, dreamless sleep.",
+   "perish": "1 week",
+   "value": 30,
+   "recipe": null
+  },
+  {
+   "id": "sprite-essence",
+   "name": "Sprite Essence",
+   "tier": "common",
+   "tags": [
+    "essence",
+    "fey",
+    "invisibility",
+    "senses"
+   ],
+   "desc": "A tiny, sparkling mote that sees into the heart of whoever looks at it.",
+   "perish": "1 minute",
+   "value": 50,
+   "recipe": null
+  }
+ ],
+ "monsters": [
+  {
+   "id": "barbed-devil",
+   "name": "Barbed Devil",
+   "type": "fiend",
+   "size": "Medium",
+   "cr": "5",
+   "env": [
+    "lower-planes"
+   ],
+   "blurb": "A hunched sentry of the Hells bristling with hooked spines, whose very skin punishes anyone who grapples it.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "barbed-devil-hide",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival",
+     "note": "Slain outside the Hells, the carcass slumps into reeking brimstone within 1 minute; work fast. Heavy gloves required; a failed check deals 1d10 piercing damage to the harvester."
+    },
+    {
+     "m": "barbed-devil-spines",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival",
+     "dice": "2d4",
+     "note": "Pull them against the hook or they snap and lose their heat."
+    },
+    {
+     "m": "barbed-devil-eye",
+     "q": 2,
+     "dc": 13,
+     "skill": "Medicine"
+    },
+    {
+     "m": "barbed-devil-essence",
+     "q": 1,
+     "dc": 13,
+     "skill": "Religion",
+     "note": "Speak no names while you work: the essence listens. Seal it within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "bearded-devil",
+   "name": "Bearded Devil",
+   "type": "fiend",
+   "size": "Medium",
+   "cr": "3",
+   "env": [
+    "lower-planes"
+   ],
+   "blurb": "A shock-trooper of the Hells whose writhing, venomous beard is as dangerous as its saw-toothed glaive.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "bearded-devil-beard",
+     "q": 1,
+     "dc": 13,
+     "skill": "Medicine",
+     "note": "Slain outside the Hells, the carcass slumps into reeking brimstone within 1 minute; work fast. The tendrils still bite: DC 12 Constitution save or be poisoned for 1 minute."
+    },
+    {
+     "m": "bearded-devil-ichor",
+     "q": 1,
+     "dc": 13,
+     "skill": "Religion"
+    },
+    {
+     "m": "bearded-devil-essence",
+     "q": 1,
+     "dc": 13,
+     "skill": "Religion",
+     "note": "It rises as a stinking smoke from the wounds. Cap the Essence Vessel over it within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "bone-devil",
+   "name": "Bone Devil",
+   "type": "fiend",
+   "size": "Large",
+   "cr": "9",
+   "env": [
+    "lower-planes"
+   ],
+   "blurb": "A skeletal taskmaster of the Hells with bat wings and a scorpion tail, cruel and patient in equal measure.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "bone-devil-stinger",
+     "q": 1,
+     "dc": 16,
+     "skill": "Survival",
+     "note": "Slain outside the Hells, the carcass slumps into reeking brimstone within 1 minute; work fast."
+    },
+    {
+     "m": "bone-devil-venom",
+     "q": 1,
+     "dc": 16,
+     "skill": "Medicine",
+     "note": "Milk the sac before the tail stiffens; rupturing it (fail by 5+) exposes you to the poison."
+    },
+    {
+     "m": "bone-devil-plates",
+     "q": 1,
+     "dc": 16,
+     "skill": "Survival",
+     "dice": "1d4"
+    },
+    {
+     "m": "bone-devil-wing",
+     "q": 2,
+     "dc": 16,
+     "skill": "Survival"
+    },
+    {
+     "m": "bone-devil-essence",
+     "q": 1,
+     "dc": 16,
+     "skill": "Religion",
+     "note": "Speak no names while you work: the essence listens. Seal it within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "chain-devil",
+   "name": "Chain Devil",
+   "type": "fiend",
+   "size": "Medium",
+   "cr": "8",
+   "env": [
+    "lower-planes"
+   ],
+   "blurb": "A torturer wrapped in hooked chains it can animate at will, wearing a mask of whoever its victim loves most.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "chain-devil-chains",
+     "q": 1,
+     "dc": 16,
+     "skill": "Investigation",
+     "dice": "1d4",
+     "note": "The chains are part of the devil; they stop moving and rust to flakes if not quenched in salt water within 1 hour."
+    },
+    {
+     "m": "chain-devil-visage",
+     "q": 1,
+     "dc": 16,
+     "skill": "Survival",
+     "note": "Slain outside the Hells, the carcass slumps into reeking brimstone within 1 minute; work fast. Whoever cuts it free sees a loved one's face staring back; DC 14 Wisdom save or be frightened for 1 minute."
+    },
+    {
+     "m": "chain-devil-essence",
+     "q": 1,
+     "dc": 16,
+     "skill": "Religion",
+     "note": "Speak no names while you work: the essence listens. Seal it within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "erinyes",
+   "name": "Erinyes",
+   "type": "fiend",
+   "size": "Medium",
+   "cr": "12",
+   "env": [
+    "lower-planes"
+   ],
+   "blurb": "A winged avenger of the Hells, beautiful and relentless, who hunts oath-breakers with poisoned blades and truesight.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "erinyes-feather",
+     "q": 1,
+     "dc": 16,
+     "skill": "Survival",
+     "dice": "2d4",
+     "note": "Slain outside the Hells, the carcass slumps into reeking brimstone within 1 minute; work fast."
+    },
+    {
+     "m": "erinyes-blood",
+     "q": 1,
+     "dc": 16,
+     "skill": "Medicine"
+    },
+    {
+     "m": "erinyes-eye",
+     "q": 2,
+     "dc": 16,
+     "skill": "Medicine",
+     "note": "Remove with a silver spoon; iron blades cloud the lens."
+    },
+    {
+     "m": "erinyes-essence",
+     "q": 1,
+     "dc": 16,
+     "skill": "Religion",
+     "note": "It tries to slip home to its plane. Seal it in an Essence Vessel within a minute, and never hold the vessel bare-handed."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "hell-hound",
+   "name": "Hell Hound",
+   "type": "fiend",
+   "size": "Medium",
+   "cr": "3",
+   "env": [
+    "lower-planes",
+    "elemental-fire",
+    "mountain"
+   ],
+   "blurb": "A black-furred hound of the lower planes that hunts in packs and belches gouts of fire.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "hell-hound-fire-gland",
+     "q": 1,
+     "dc": 13,
+     "skill": "Medicine",
+     "note": "Keep it cool and sealed; if punctured (fail by 5+) it bursts for 2d6 fire damage."
+    },
+    {
+     "m": "hell-hound-pelt",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival",
+     "note": "Unlike most fiends, a hell hound's body lingers for hours before crumbling to ash."
+    },
+    {
+     "m": "hell-hound-fang",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival",
+     "dice": "1d4"
+    },
+    {
+     "m": "hell-hound-nose",
+     "q": 1,
+     "dc": 13,
+     "skill": "Medicine"
+    },
+    {
+     "m": "hell-hound-essence",
+     "q": 1,
+     "dc": 13,
+     "skill": "Religion",
+     "note": "It rises as a stinking smoke from the wounds. Cap the Essence Vessel over it within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "horned-devil",
+   "name": "Horned Devil",
+   "type": "fiend",
+   "size": "Large",
+   "cr": "11",
+   "env": [
+    "lower-planes"
+   ],
+   "blurb": "A winged brute of the Hells armed with a fork and a barbed tail that leaves wounds that will not close.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "horned-devil-horn",
+     "q": 2,
+     "dc": 16,
+     "skill": "Survival",
+     "note": "Slain outside the Hells, the carcass slumps into reeking brimstone within 1 minute; work fast. The horns survive the dissolution if hacked off at the base."
+    },
+    {
+     "m": "horned-devil-tail-barb",
+     "q": 1,
+     "dc": 16,
+     "skill": "Survival"
+    },
+    {
+     "m": "horned-devil-wing",
+     "q": 2,
+     "dc": 16,
+     "skill": "Survival"
+    },
+    {
+     "m": "horned-devil-essence",
+     "q": 1,
+     "dc": 16,
+     "skill": "Religion",
+     "note": "It rises as a stinking smoke from the wounds. Cap the Essence Vessel over it within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "ice-devil",
+   "name": "Ice Devil",
+   "type": "fiend",
+   "size": "Large",
+   "cr": "14",
+   "env": [
+    "lower-planes",
+    "arctic"
+   ],
+   "blurb": "An insectile giant of the frozen Hells whose touch and tail freeze flesh solid.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "ice-devil-carapace",
+     "q": 1,
+     "dc": 19,
+     "skill": "Survival",
+     "dice": "1d4",
+     "note": "Slain outside the Hells, the carcass slumps into reeking brimstone within 1 minute; work fast. Pry the plates loose before they sublimate into freezing mist."
+    },
+    {
+     "m": "ice-devil-mandible",
+     "q": 2,
+     "dc": 19,
+     "skill": "Survival"
+    },
+    {
+     "m": "ice-devil-frost-ichor",
+     "q": 1,
+     "dc": 19,
+     "skill": "Religion",
+     "note": "Collect in a warmed vessel or it freezes solid and shatters."
+    },
+    {
+     "m": "ice-devil-tail",
+     "q": 1,
+     "dc": 19,
+     "skill": "Survival"
+    },
+    {
+     "m": "ice-devil-essence",
+     "q": 1,
+     "dc": 19,
+     "skill": "Religion",
+     "note": "It rises as a stinking smoke from the wounds. Cap the Essence Vessel over it within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "imp",
+   "name": "Imp",
+   "type": "fiend",
+   "size": "Tiny",
+   "cr": "1",
+   "env": [
+    "lower-planes",
+    "urban"
+   ],
+   "blurb": "A tiny, spiteful devil prized by warlocks as a familiar, able to vanish or take the shape of a rat, raven or spider.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "imp-stinger",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "note": "Slain outside the Hells, the carcass slumps into reeking brimstone within 1 minute; work fast."
+    },
+    {
+     "m": "imp-wing",
+     "q": 2,
+     "dc": 10,
+     "skill": "Survival"
+    },
+    {
+     "m": "imp-tongue",
+     "q": 1,
+     "dc": 10,
+     "skill": "Medicine"
+    },
+    {
+     "m": "imp-essence",
+     "q": 1,
+     "dc": 10,
+     "skill": "Religion",
+     "note": "It tries to slip home to its plane. Seal it in an Essence Vessel within a minute, and never hold the vessel bare-handed."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "lemure",
+   "name": "Lemure",
+   "type": "fiend",
+   "size": "Medium",
+   "cr": "0",
+   "env": [
+    "lower-planes"
+   ],
+   "blurb": "A mindless, molten blob of damned soul-stuff that shambles across the Hells and re-forms if not properly destroyed.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "lemure-sludge",
+     "q": 1,
+     "dc": 10,
+     "skill": "Religion",
+     "dice": "1d4",
+     "note": "Only sludge from a lemure slain with holy water or a blessed weapon stays inert; otherwise it slithers away overnight."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "pit-fiend",
+   "name": "Pit Fiend",
+   "type": "fiend",
+   "size": "Large",
+   "cr": "20",
+   "env": [
+    "lower-planes"
+   ],
+   "blurb": "A general of the Nine Hells, cloaked in wings and radiating dread, whose bite carries a burning venom.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "pit-fiend-scale",
+     "q": 1,
+     "dc": 19,
+     "skill": "Survival",
+     "dice": "2d4",
+     "note": "Slain outside the Hells, the carcass slumps into reeking brimstone within 1 minute; work fast."
+    },
+    {
+     "m": "pit-fiend-fang",
+     "q": 2,
+     "dc": 19,
+     "skill": "Survival"
+    },
+    {
+     "m": "pit-fiend-wing",
+     "q": 2,
+     "dc": 19,
+     "skill": "Survival"
+    },
+    {
+     "m": "pit-fiend-heart",
+     "q": 1,
+     "dc": 24,
+     "skill": "Medicine",
+     "note": "Must be removed before the body dissolves; anyone within 10 feet during the cut must pass a DC 21 Wisdom save or be frightened."
+    },
+    {
+     "m": "pit-fiend-essence",
+     "q": 1,
+     "dc": 22,
+     "skill": "Religion",
+     "note": "It tries to slip home to its plane. Seal it in an Essence Vessel within a minute, and never hold the vessel bare-handed. Unless the vessel is etched with holy symbols, the essence cracks it within a day."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "balor",
+   "name": "Balor",
+   "type": "fiend",
+   "size": "Huge",
+   "cr": "19",
+   "env": [
+    "lower-planes"
+   ],
+   "blurb": "A towering demon of flame and shadow wielding a lightning sword and a fiery whip, which explodes in fire when it dies.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "balor-heart-coal",
+     "q": 1,
+     "dc": 22,
+     "skill": "Medicine",
+     "note": "The balor explodes in fire on death; only the heart-coal and cinders survive. Tongs of cold iron and a lead-lined box are essential."
+    },
+    {
+     "m": "balor-horn",
+     "q": 2,
+     "dc": 19,
+     "skill": "Survival",
+     "note": "Blasted loose by the death-throes; search the blast zone before the ichor claims it."
+    },
+    {
+     "m": "balor-wing-membrane",
+     "q": 1,
+     "dc": 19,
+     "skill": "Survival",
+     "note": "Slain off the Abyss, the body boils away into black ichor within 1 minute; only what you cut free in time remains."
+    },
+    {
+     "m": "balor-death-cinder",
+     "q": 1,
+     "dc": 19,
+     "skill": "Nature",
+     "dice": "2d6"
+    },
+    {
+     "m": "balor-essence",
+     "q": 1,
+     "dc": 22,
+     "skill": "Religion",
+     "note": "Speak no names while you work: the essence listens. Seal it within a minute. The essence tries to escape with the death-blast; DC 22 Dexterity check to cap the vessel in time."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "dretch",
+   "name": "Dretch",
+   "type": "fiend",
+   "size": "Small",
+   "cr": "1/4",
+   "env": [
+    "lower-planes"
+   ],
+   "blurb": "A pot-bellied, miserable demonling that fights in swarms and can belch forth a cloud of choking stench.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "dretch-stench-gland",
+     "q": 1,
+     "dc": 10,
+     "skill": "Medicine",
+     "note": "Slain off the Abyss, the body boils away into black ichor within 1 minute; only what you cut free in time remains. Bursting it (fail by 5+) poisons you until the end of your next turn."
+    },
+    {
+     "m": "dretch-ichor",
+     "q": 1,
+     "dc": 10,
+     "skill": "Religion"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "glabrezu",
+   "name": "Glabrezu",
+   "type": "fiend",
+   "size": "Large",
+   "cr": "9",
+   "env": [
+    "lower-planes"
+   ],
+   "blurb": "A dog-headed demon with crushing pincers, infamous for tempting mortals with granted wishes.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "glabrezu-pincer",
+     "q": 2,
+     "dc": 16,
+     "skill": "Survival",
+     "note": "Slain off the Abyss, the body boils away into black ichor within 1 minute; only what you cut free in time remains."
+    },
+    {
+     "m": "glabrezu-hide",
+     "q": 1,
+     "dc": 16,
+     "skill": "Survival"
+    },
+    {
+     "m": "glabrezu-tongue",
+     "q": 1,
+     "dc": 16,
+     "skill": "Medicine"
+    },
+    {
+     "m": "glabrezu-essence",
+     "q": 1,
+     "dc": 16,
+     "skill": "Religion",
+     "note": "It tries to slip home to its plane. Seal it in an Essence Vessel within a minute, and never hold the vessel bare-handed."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "hezrou",
+   "name": "Hezrou",
+   "type": "fiend",
+   "size": "Large",
+   "cr": "8",
+   "env": [
+    "lower-planes",
+    "swamp"
+   ],
+   "blurb": "A toad-like demon brute whose stench is so foul it can sicken foes before they close to melee.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "hezrou-stench-gland",
+     "q": 1,
+     "dc": 16,
+     "skill": "Medicine",
+     "note": "Slain off the Abyss, the body boils away into black ichor within 1 minute; only what you cut free in time remains. Handle while holding your breath; failing by 5+ leaves you poisoned for an hour."
+    },
+    {
+     "m": "hezrou-hide",
+     "q": 1,
+     "dc": 16,
+     "skill": "Survival"
+    },
+    {
+     "m": "hezrou-claw",
+     "q": 1,
+     "dc": 16,
+     "skill": "Survival",
+     "dice": "1d4"
+    },
+    {
+     "m": "hezrou-essence",
+     "q": 1,
+     "dc": 16,
+     "skill": "Religion",
+     "note": "It tries to slip home to its plane. Seal it in an Essence Vessel within a minute, and never hold the vessel bare-handed."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "marilith",
+   "name": "Marilith",
+   "type": "fiend",
+   "size": "Large",
+   "cr": "16",
+   "env": [
+    "lower-planes"
+   ],
+   "blurb": "A six-armed serpent demon and master tactician whose blades are always where you do not want them.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "marilith-scales",
+     "q": 1,
+     "dc": 19,
+     "skill": "Survival",
+     "dice": "2d4",
+     "note": "Slain off the Abyss, the body boils away into black ichor within 1 minute; only what you cut free in time remains."
+    },
+    {
+     "m": "marilith-tail-sinew",
+     "q": 1,
+     "dc": 19,
+     "skill": "Survival"
+    },
+    {
+     "m": "marilith-hand",
+     "q": 1,
+     "dc": 19,
+     "skill": "Survival",
+     "dice": "1d6"
+    },
+    {
+     "m": "marilith-essence",
+     "q": 1,
+     "dc": 19,
+     "skill": "Religion",
+     "note": "It rises as a stinking smoke from the wounds. Cap the Essence Vessel over it within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "nalfeshnee",
+   "name": "Nalfeshnee",
+   "type": "fiend",
+   "size": "Large",
+   "cr": "13",
+   "env": [
+    "lower-planes"
+   ],
+   "blurb": "A bloated boar-headed demon with absurdly small wings that can teleport and project a nimbus of horror.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "nalfeshnee-tusk",
+     "q": 2,
+     "dc": 19,
+     "skill": "Survival",
+     "note": "Slain off the Abyss, the body boils away into black ichor within 1 minute; only what you cut free in time remains."
+    },
+    {
+     "m": "nalfeshnee-hide",
+     "q": 1,
+     "dc": 19,
+     "skill": "Survival"
+    },
+    {
+     "m": "nalfeshnee-wing",
+     "q": 2,
+     "dc": 19,
+     "skill": "Arcana"
+    },
+    {
+     "m": "nalfeshnee-essence",
+     "q": 1,
+     "dc": 19,
+     "skill": "Religion",
+     "note": "It tries to slip home to its plane. Seal it in an Essence Vessel within a minute, and never hold the vessel bare-handed."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "quasit",
+   "name": "Quasit",
+   "type": "fiend",
+   "size": "Tiny",
+   "cr": "1",
+   "env": [
+    "lower-planes",
+    "ruins"
+   ],
+   "blurb": "A tiny, hateful demon familiar that turns invisible and slips between the shapes of bat, centipede and toad.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "quasit-claw",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "1d4",
+     "note": "Slain off the Abyss, the body boils away into black ichor within 1 minute; only what you cut free in time remains."
+    },
+    {
+     "m": "quasit-horn",
+     "q": 2,
+     "dc": 10,
+     "skill": "Survival"
+    },
+    {
+     "m": "quasit-essence",
+     "q": 1,
+     "dc": 10,
+     "skill": "Religion",
+     "note": "It rises as a stinking smoke from the wounds. Cap the Essence Vessel over it within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "vrock",
+   "name": "Vrock",
+   "type": "fiend",
+   "size": "Large",
+   "cr": "6",
+   "env": [
+    "lower-planes"
+   ],
+   "blurb": "A vulture-like demon that releases clouds of poisonous spores and shrieks to stun its enemies.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "vrock-feathers",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival",
+     "dice": "2d6",
+     "note": "Slain off the Abyss, the body boils away into black ichor within 1 minute; only what you cut free in time remains."
+    },
+    {
+     "m": "vrock-spores",
+     "q": 1,
+     "dc": 13,
+     "skill": "Nature",
+     "dice": "1d4",
+     "note": "Wear a mask; failing by 5+ exposes you to the spores (DC 14 Constitution save)."
+    },
+    {
+     "m": "vrock-screech-organ",
+     "q": 1,
+     "dc": 13,
+     "skill": "Medicine"
+    },
+    {
+     "m": "vrock-essence",
+     "q": 1,
+     "dc": 13,
+     "skill": "Religion",
+     "note": "Speak no names while you work: the essence listens. Seal it within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "night-hag",
+   "name": "Night Hag",
+   "type": "fiend",
+   "size": "Medium",
+   "cr": "5",
+   "env": [
+    "lower-planes",
+    "shadowfell",
+    "swamp"
+   ],
+   "blurb": "A fiendish hag that rides the dreams of sleepers, trading in souls with the help of her heartstone and soul bag.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "night-hag-heartstone",
+     "q": 1,
+     "dc": 16,
+     "skill": "Investigation",
+     "note": "Found among her belongings, never inside her. If she died in ethereal form, the gem is lost with her. Destroyed if struck by a protection from evil spell."
+    },
+    {
+     "m": "night-hag-soul-bag",
+     "q": 1,
+     "dc": 16,
+     "skill": "Investigation",
+     "note": "If it holds a soul, most temples insist on freeing it rather than selling it."
+    },
+    {
+     "m": "night-hag-eye",
+     "q": 2,
+     "dc": 13,
+     "skill": "Medicine"
+    },
+    {
+     "m": "night-hag-fingernails",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival",
+     "dice": "1d10"
+    },
+    {
+     "m": "night-hag-essence",
+     "q": 1,
+     "dc": 13,
+     "skill": "Religion",
+     "note": "It tries to slip home to its plane. Seal it in an Essence Vessel within a minute, and never hold the vessel bare-handed."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "nightmare",
+   "name": "Nightmare",
+   "type": "fiend",
+   "size": "Large",
+   "cr": "3",
+   "env": [
+    "lower-planes",
+    "shadowfell"
+   ],
+   "blurb": "A black steed with a burning mane and hooves that can carry its rider through the Ethereal Plane.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "nightmare-mane",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival",
+     "note": "Cut it while the fire still burns; if it goes out, it is only coarse black hair."
+    },
+    {
+     "m": "nightmare-hooves",
+     "q": 4,
+     "dc": 13,
+     "skill": "Survival"
+    },
+    {
+     "m": "nightmare-hide",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival"
+    },
+    {
+     "m": "nightmare-essence",
+     "q": 1,
+     "dc": 13,
+     "skill": "Religion",
+     "note": "Speak no names while you work: the essence listens. Seal it within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "rakshasa",
+   "name": "Rakshasa",
+   "type": "fiend",
+   "size": "Medium",
+   "cr": "13",
+   "env": [
+    "urban",
+    "lower-planes"
+   ],
+   "blurb": "A tiger-headed fiend with backward hands, a master of illusion whose hide shrugs off most spells.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "rakshasa-claw",
+     "q": 1,
+     "dc": 19,
+     "skill": "Survival",
+     "dice": "1d4",
+     "note": "A slain rakshasa reforms in the Hells; its body dissolves into brimstone in 1 minute. Handle the claws with gloves: a scratch curses the harvester."
+    },
+    {
+     "m": "rakshasa-hide",
+     "q": 1,
+     "dc": 21,
+     "skill": "Survival",
+     "note": "Must be flayed in one piece within the minute before dissolution; a blade blessed by a priest is required to cut it."
+    },
+    {
+     "m": "rakshasa-whiskers",
+     "q": 1,
+     "dc": 19,
+     "skill": "Survival",
+     "dice": "1d6"
+    },
+    {
+     "m": "rakshasa-essence",
+     "q": 1,
+     "dc": 19,
+     "skill": "Religion",
+     "note": "It tries to slip home to its plane. Seal it in an Essence Vessel within a minute, and never hold the vessel bare-handed."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "succubus-incubus",
+   "name": "Succubus/Incubus",
+   "type": "fiend",
+   "size": "Medium",
+   "cr": "4",
+   "env": [
+    "lower-planes",
+    "urban"
+   ],
+   "blurb": "A shapechanging fiend that seduces mortals, draining life with a kiss and corrupting souls through dreams.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "succubus-incubus-wing",
+     "q": 2,
+     "dc": 13,
+     "skill": "Survival",
+     "note": "The body melts to perfumed smoke within 1 minute when slain off its home plane."
+    },
+    {
+     "m": "succubus-incubus-lips",
+     "q": 1,
+     "dc": 13,
+     "skill": "Medicine"
+    },
+    {
+     "m": "succubus-incubus-hair",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival"
+    },
+    {
+     "m": "succubus-incubus-essence",
+     "q": 1,
+     "dc": 13,
+     "skill": "Religion",
+     "note": "It rises as a stinking smoke from the wounds. Cap the Essence Vessel over it within a minute."
+    }
+   ],
+   "aka": [
+    "Succubus",
+    "Incubus"
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "couatl",
+   "name": "Couatl",
+   "type": "celestial",
+   "size": "Medium",
+   "cr": "4",
+   "env": [
+    "upper-planes",
+    "forest",
+    "desert",
+    "ruins"
+   ],
+   "blurb": "A feathered serpent of the gods, a wise guardian that can shape-shift and speak mind-to-mind.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "couatl-feather",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival",
+     "dice": "1d6",
+     "note": "Harvesting a celestial is a grave act; good-aligned deities and their clergy may take offense. Shed feathers can sometimes be gathered from a living couatl's lair (DC 13 Nature) without offense."
+    },
+    {
+     "m": "couatl-scale",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival",
+     "dice": "1d4"
+    },
+    {
+     "m": "couatl-venom",
+     "q": 1,
+     "dc": 13,
+     "skill": "Medicine"
+    },
+    {
+     "m": "couatl-essence",
+     "q": 1,
+     "dc": 13,
+     "skill": "Religion",
+     "note": "Catch the glow in an Essence Vessel before it fades upward. Many deities would call this sacrilege."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "deva",
+   "name": "Deva",
+   "type": "celestial",
+   "size": "Medium",
+   "cr": "10",
+   "env": [
+    "upper-planes",
+    "astral"
+   ],
+   "blurb": "An angelic messenger of the gods, beautiful and radiant, whose touch can heal and whose mace strikes with holy light.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "deva-feather",
+     "q": 1,
+     "dc": 16,
+     "skill": "Religion",
+     "dice": "1d4",
+     "note": "Harvesting a celestial is a grave act; good-aligned deities and their clergy may take offense. Shed feathers sometimes remain where a deva once stood; these carry no taint."
+    },
+    {
+     "m": "deva-tears",
+     "q": 1,
+     "dc": 16,
+     "skill": "Religion",
+     "note": "Collected from a fallen deva as its light fades. Harvesting a celestial is a grave act; good-aligned deities and their clergy may take offense."
+    },
+    {
+     "m": "deva-essence",
+     "q": 1,
+     "dc": 16,
+     "skill": "Religion",
+     "note": "It rises as a soft light within a minute of death. Harvesting a celestial is a grave act; good-aligned clergy may take offence."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "planetar",
+   "name": "Planetar",
+   "type": "celestial",
+   "size": "Large",
+   "cr": "16",
+   "env": [
+    "upper-planes",
+    "astral"
+   ],
+   "blurb": "A towering angelic warrior, emerald-skinned and white-winged, who serves as the sword of the gods.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "planetar-feather",
+     "q": 1,
+     "dc": 19,
+     "skill": "Religion",
+     "dice": "1d4",
+     "note": "Harvesting a celestial is a grave act; good-aligned deities and their clergy may take offense."
+    },
+    {
+     "m": "planetar-tears",
+     "q": 1,
+     "dc": 19,
+     "skill": "Religion",
+     "note": "Gathered as the planetar's light fades. Harvesting a celestial is a grave act; good-aligned deities and their clergy may take offense."
+    },
+    {
+     "m": "planetar-eye",
+     "q": 1,
+     "dc": 19,
+     "skill": "Medicine",
+     "note": "Harvesting a celestial is a grave act; good-aligned deities and their clergy may take offense."
+    },
+    {
+     "m": "planetar-essence",
+     "q": 1,
+     "dc": 19,
+     "skill": "Religion",
+     "note": "It rises as a soft light within a minute of death. Harvesting a celestial is a grave act; good-aligned clergy may take offence."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "solar",
+   "name": "Solar",
+   "type": "celestial",
+   "size": "Large",
+   "cr": "21",
+   "env": [
+    "upper-planes"
+   ],
+   "blurb": "The mightiest of angels, whose golden glory is matched only by its terrible power to smite evil.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "solar-feather",
+     "q": 1,
+     "dc": 19,
+     "skill": "Religion",
+     "note": "Harvesting a celestial is a grave act; good-aligned deities and their clergy may take offense. Only a single shed feather is typically found; the rest crumble to motes of light."
+    },
+    {
+     "m": "solar-tears",
+     "q": 1,
+     "dc": 22,
+     "skill": "Religion",
+     "note": "A fallen solar sheds only a few drops as it fades. Harvesting a celestial is a grave act; good-aligned deities and their clergy may take offense."
+    },
+    {
+     "m": "solar-light-mote",
+     "q": 1,
+     "dc": 22,
+     "skill": "Religion",
+     "note": "Harvesting a celestial is a grave act; good-aligned deities and their clergy may take offense."
+    },
+    {
+     "m": "solar-essence",
+     "q": 1,
+     "dc": 22,
+     "skill": "Religion",
+     "note": "It rises as a soft light within a minute of death. Harvesting a celestial is a grave act; good-aligned clergy may take offence."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "pegasus",
+   "name": "Pegasus",
+   "type": "celestial",
+   "size": "Large",
+   "cr": "2",
+   "env": [
+    "upper-planes",
+    "mountain",
+    "grassland"
+   ],
+   "blurb": "A winged white horse of the heavens that serves only the good-hearted.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "pegasus-feather",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "2d6",
+     "note": "Shed feathers can be collected near pegasus aeries without harm to the herd."
+    },
+    {
+     "m": "pegasus-flight-feather",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival",
+     "dice": "1d4",
+     "note": "Harvesting a celestial is a grave act; good-aligned deities and their clergy may take offense."
+    },
+    {
+     "m": "pegasus-mane",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival"
+    },
+    {
+     "m": "pegasus-essence",
+     "q": 1,
+     "dc": 10,
+     "skill": "Religion",
+     "note": "It rises as a soft light within a minute of death. Harvesting a celestial is a grave act; good-aligned clergy may take offence."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "unicorn",
+   "name": "Unicorn",
+   "type": "celestial",
+   "size": "Large",
+   "cr": "5",
+   "env": [
+    "forest",
+    "feywild",
+    "upper-planes"
+   ],
+   "blurb": "A shining white horse with a spiral horn, guardian of sacred groves, able to heal and to teleport.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "unicorn-horn",
+     "q": 1,
+     "dc": 16,
+     "skill": "Religion",
+     "note": "Must be freely given by a unicorn, or taken from one that fell naturally. A horn stolen by killing turns cursed: it brings misfortune and cannot heal."
+    },
+    {
+     "m": "unicorn-tears",
+     "q": 1,
+     "dc": 13,
+     "skill": "Religion",
+     "note": "Harvesting a celestial is a grave act; good-aligned deities and their clergy may take offense."
+    },
+    {
+     "m": "unicorn-mane",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival",
+     "note": "A unicorn may offer a lock of its mane to a worthy friend; taking it otherwise angers the forest."
+    },
+    {
+     "m": "unicorn-hooves",
+     "q": 4,
+     "dc": 13,
+     "skill": "Survival",
+     "note": "Harvesting a celestial is a grave act; good-aligned deities and their clergy may take offense."
+    },
+    {
+     "m": "unicorn-essence",
+     "q": 1,
+     "dc": 13,
+     "skill": "Religion",
+     "note": "Catch the glow in an Essence Vessel before it fades upward. Many deities would call this sacrilege."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "blink-dog",
+   "name": "Blink Dog",
+   "type": "fey",
+   "size": "Medium",
+   "cr": "1/4",
+   "env": [
+    "feywild",
+    "forest"
+   ],
+   "blurb": "A clever yellow-furred dog of the Feywild that blinks in and out of existence as it hunts.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "blink-dog-pelt",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "note": "Blink dogs are friends to the good folk of the Feywild; wearing its pelt openly there invites trouble."
+    },
+    {
+     "m": "blink-dog-fang",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "1d4"
+    },
+    {
+     "m": "blink-dog-essence",
+     "q": 1,
+     "dc": 10,
+     "skill": "Arcana",
+     "note": "Needs an Essence Vessel within 1 minute of death; stopper it fast, for it keeps trying to blink out of the glass."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "dryad",
+   "name": "Dryad",
+   "type": "fey",
+   "size": "Medium",
+   "cr": "1",
+   "env": [
+    "forest",
+    "feywild"
+   ],
+   "blurb": "A tree spirit bound to a single oak, able to charm travellers and step from tree to tree.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "dryad-heartwood",
+     "q": 1,
+     "dc": 13,
+     "skill": "Nature",
+     "note": "Only obtainable from her bound tree, and only after she has died. Cutting it from a living dryad's tree slays her and curses the cutter."
+    },
+    {
+     "m": "dryad-hair",
+     "q": 1,
+     "dc": 10,
+     "skill": "Nature"
+    },
+    {
+     "m": "dryad-sap",
+     "q": 1,
+     "dc": 10,
+     "skill": "Nature"
+    },
+    {
+     "m": "dryad-essence",
+     "q": 1,
+     "dc": 10,
+     "skill": "Arcana",
+     "note": "Needs an Essence Vessel within 1 minute of death, before it seeps away into her bound tree."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "green-hag",
+   "name": "Green Hag",
+   "type": "fey",
+   "size": "Medium",
+   "cr": "3",
+   "env": [
+    "swamp",
+    "forest",
+    "feywild"
+   ],
+   "blurb": "A wicked hag of swamps and forests who uses illusion and mimicry to lure victims.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "green-hag-eye",
+     "q": 2,
+     "dc": 13,
+     "skill": "Medicine",
+     "note": "If she belonged to a coven, her eyes may already have been made into a hag eye; take it from her neck."
+    },
+    {
+     "m": "green-hag-fingernails",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival",
+     "dice": "1d10"
+    },
+    {
+     "m": "green-hag-tongue",
+     "q": 1,
+     "dc": 13,
+     "skill": "Medicine"
+    },
+    {
+     "m": "green-hag-essence",
+     "q": 1,
+     "dc": 13,
+     "skill": "Arcana",
+     "note": "A faint shimmer over the body marks it. Catch it in an Essence Vessel within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "sea-hag",
+   "name": "Sea Hag",
+   "type": "fey",
+   "size": "Medium",
+   "cr": "2",
+   "env": [
+    "coast",
+    "underwater",
+    "swamp"
+   ],
+   "blurb": "A hideous hag of the shallows whose appearance alone can frighten, and whose glare can stop a heart.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "sea-hag-hair",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival"
+    },
+    {
+     "m": "sea-hag-eye",
+     "q": 2,
+     "dc": 10,
+     "skill": "Medicine",
+     "note": "Cover it at once; anyone meeting its stare while harvesting must pass a DC 11 Wisdom save or be frightened for 1 minute."
+    },
+    {
+     "m": "sea-hag-scales",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "1d6"
+    },
+    {
+     "m": "sea-hag-essence",
+     "q": 1,
+     "dc": 10,
+     "skill": "Arcana",
+     "note": "It escapes with the last breath: hold an Essence Vessel ready and stopper it within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "satyr",
+   "name": "Satyr",
+   "type": "fey",
+   "size": "Medium",
+   "cr": "1/2",
+   "env": [
+    "forest",
+    "feywild"
+   ],
+   "blurb": "A goat-legged reveler of the Feywild, fond of music and trickery and hard for magic to touch.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "satyr-horn",
+     "q": 2,
+     "dc": 10,
+     "skill": "Survival"
+    },
+    {
+     "m": "satyr-fleece",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival"
+    },
+    {
+     "m": "satyr-essence",
+     "q": 1,
+     "dc": 10,
+     "skill": "Arcana",
+     "note": "Needs an Essence Vessel within 1 minute of death; it drifts toward any music, so harvest in silence."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "sprite",
+   "name": "Sprite",
+   "type": "fey",
+   "size": "Tiny",
+   "cr": "1/4",
+   "env": [
+    "forest",
+    "feywild"
+   ],
+   "blurb": "A tiny winged fey warrior who can turn invisible and shoots arrows tipped with sleep poison.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "sprite-wings",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "note": "Most fey courts consider it murder to harvest a sprite; expect retribution in the Feywild."
+    },
+    {
+     "m": "sprite-sleep-poison",
+     "q": 1,
+     "dc": 10,
+     "skill": "Medicine",
+     "dice": "1d4",
+     "note": "Collected from arrows as well as the body."
+    },
+    {
+     "m": "sprite-essence",
+     "q": 1,
+     "dc": 10,
+     "skill": "Arcana",
+     "note": "Needs an Essence Vessel within 1 minute of death; it scatters like pollen in the faintest breeze."
+    }
+   ],
+   "srd": "5.1"
+  }
+ ]
+}

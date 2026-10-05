@@ -1,0 +1,3530 @@
+{
+ "materials": [
+  {
+   "id": "hawk-flight-feathers",
+   "name": "Hawk Flight Feathers",
+   "tier": "common",
+   "tags": [
+    "feather",
+    "flight",
+    "speed",
+    "beast"
+   ],
+   "desc": "Stiff, barred primaries that cut the air with a faint hiss. Fletchers swear arrows fledged with them fly truer.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "hawk-eye",
+   "name": "Hawk Eye",
+   "tier": "common",
+   "tags": [
+    "eye",
+    "senses",
+    "beast"
+   ],
+   "desc": "A tiny amber orb with a pinprick pupil that seems to track movement even after death. Ground into far-seeing tinctures.",
+   "perish": "1 hour",
+   "value": 30,
+   "recipe": null
+  },
+  {
+   "id": "hunter-shark-tooth",
+   "name": "Hunter Shark Tooth",
+   "tier": "common",
+   "tags": [
+    "tooth",
+    "strength",
+    "beast"
+   ],
+   "desc": "A serrated, triangular fang the size of a thumb, endlessly replaced in life. Set into clubs, necklaces and saw-blades.",
+   "perish": "stable",
+   "value": 1,
+   "recipe": null
+  },
+  {
+   "id": "hunter-shark-skin",
+   "name": "Hunter Shark Skin",
+   "tier": "mundane",
+   "tags": [
+    "hide",
+    "swimming",
+    "beast"
+   ],
+   "desc": "Grey hide covered in tiny tooth-like scales that rasp one way and slide the other. Used for grips and as a woodworker's file.",
+   "perish": "1 day",
+   "value": 5,
+   "recipe": null
+  },
+  {
+   "id": "hunter-shark-liver-oil",
+   "name": "Hunter Shark Liver Oil",
+   "tier": "common",
+   "tags": [
+    "oil",
+    "swimming",
+    "senses",
+    "beast"
+   ],
+   "desc": "A pungent golden oil rendered from the enormous liver. Divers rub it on to keep out the chill and sharpen their sense of the water.",
+   "perish": "1 week",
+   "value": 30,
+   "recipe": null
+  },
+  {
+   "id": "hunter-shark-blood-sense-organ",
+   "name": "Hunter Shark Scent Pits",
+   "tier": "common",
+   "tags": [
+    "organ",
+    "senses",
+    "water",
+    "beast"
+   ],
+   "desc": "Paired pitted sacs from the snout that can taste one drop of blood in a bay. Alchemists prize them for tracking draughts.",
+   "perish": "1 hour",
+   "value": 42,
+   "recipe": null
+  },
+  {
+   "id": "hunter-shark-meat",
+   "name": "Shark Meat",
+   "tier": "mundane",
+   "tags": [
+    "meat",
+    "food",
+    "beast"
+   ],
+   "desc": "Dense pale flesh with a sharp ammonia tang unless soaked in brine. Filling fare on long voyages.",
+   "perish": "1 day",
+   "value": 0.05,
+   "recipe": null
+  },
+  {
+   "id": "hyena-hide",
+   "name": "Hyena Hide",
+   "tier": "mundane",
+   "tags": [
+    "hide",
+    "fur",
+    "beast"
+   ],
+   "desc": "Coarse, spotted fur with a rank carrion smell that never quite leaves. Cheap cloaks and tent flaps.",
+   "perish": "1 day",
+   "value": 5,
+   "recipe": null
+  },
+  {
+   "id": "hyena-jawbone",
+   "name": "Hyena Jawbone",
+   "tier": "common",
+   "tags": [
+    "bone",
+    "tooth",
+    "strength",
+    "beast"
+   ],
+   "desc": "A heavy, blunt-toothed jaw built to crush marrow bones. Talismans of it are said to bolster a warrior among allies.",
+   "perish": "stable",
+   "value": 24,
+   "recipe": null
+  },
+  {
+   "id": "hyena-laughing-gland",
+   "name": "Hyena Cackle Gland",
+   "tier": "common",
+   "tags": [
+    "gland",
+    "sound",
+    "madness",
+    "beast"
+   ],
+   "desc": "A slick throat gland that swells when the beast cackles. Tricksters distil it into draughts that provoke helpless laughter.",
+   "perish": "1 day",
+   "value": 36,
+   "recipe": null
+  },
+  {
+   "id": "jackal-pelt",
+   "name": "Jackal Pelt",
+   "tier": "mundane",
+   "tags": [
+    "fur",
+    "hide",
+    "beast"
+   ],
+   "desc": "A thin, sandy pelt with black-tipped guard hairs. Blends well into dunes and dry scrub.",
+   "perish": "1 day",
+   "value": 5,
+   "recipe": null
+  },
+  {
+   "id": "jackal-ears",
+   "name": "Jackal Ears",
+   "tier": "common",
+   "tags": [
+    "organ",
+    "senses",
+    "beast"
+   ],
+   "desc": "Tall, thin ears with velvet backs. Dried and powdered, they go into potions for keen hearing.",
+   "perish": "1 week",
+   "value": 22,
+   "recipe": null
+  },
+  {
+   "id": "killer-whale-blubber",
+   "name": "Killer Whale Blubber",
+   "tier": "common",
+   "tags": [
+    "fat",
+    "cold",
+    "resistance",
+    "beast"
+   ],
+   "desc": "Thick slabs of white fat that render into clear lamp oil and cold-proof salves.",
+   "perish": "1 week",
+   "value": 24,
+   "recipe": null
+  },
+  {
+   "id": "killer-whale-tooth",
+   "name": "Killer Whale Tooth",
+   "tier": "common",
+   "tags": [
+    "tooth",
+    "strength",
+    "cunning",
+    "beast"
+   ],
+   "desc": "A conical ivory tooth, dense and creamy, scrimshawed by sailors into charms of the hunt.",
+   "perish": "stable",
+   "value": 36,
+   "recipe": null
+  },
+  {
+   "id": "killer-whale-echo-melon",
+   "name": "Killer Whale Echo Melon",
+   "tier": "uncommon",
+   "tags": [
+    "fat",
+    "organ",
+    "senses",
+    "sound",
+    "beast"
+   ],
+   "desc": "The waxy lens of fat in the forehead with which it 'sees' by sound. Alchemists use it for blindsight and echo-tracking elixirs.",
+   "perish": "1 day",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "killer-whale-hide",
+   "name": "Killer Whale Hide",
+   "tier": "mundane",
+   "tags": [
+    "hide",
+    "swimming",
+    "water",
+    "beast"
+   ],
+   "desc": "Glossy black-and-white skin, rubbery and waterproof. Makes excellent boat covers and wet-weather boots.",
+   "perish": "1 day",
+   "value": 5,
+   "recipe": null
+  },
+  {
+   "id": "killer-whale-lungs",
+   "name": "Killer Whale Lungs",
+   "tier": "uncommon",
+   "tags": [
+    "organ",
+    "breathing",
+    "swimming",
+    "beast"
+   ],
+   "desc": "Huge, spongy lungs that hold breath for a quarter hour. Key reagent in water-breathing and deep-diving potions.",
+   "perish": "1 hour",
+   "value": 72,
+   "recipe": null
+  },
+  {
+   "id": "lion-mane",
+   "name": "Lion Mane",
+   "tier": "common",
+   "tags": [
+    "fur",
+    "hair",
+    "fear",
+    "strength",
+    "beast"
+   ],
+   "desc": "A heavy ruff of tawny-to-black hair. Worn by champions, it lends a roaring presence that unsettles foes.",
+   "perish": "1 day",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "lion-pelt",
+   "name": "Lion Pelt",
+   "tier": "mundane",
+   "tags": [
+    "hide",
+    "fur",
+    "beast"
+   ],
+   "desc": "Short golden fur over a supple hide. Warm enough for nights on the savanna.",
+   "perish": "1 day",
+   "value": 5,
+   "recipe": null
+  },
+  {
+   "id": "lion-heart",
+   "name": "Lion Heart",
+   "tier": "common",
+   "tags": [
+    "heart",
+    "fear",
+    "strength",
+    "beast"
+   ],
+   "desc": "A big, powerful heart that some warriors eat raw before battle. Alchemists steep it into draughts against fright.",
+   "perish": "1 hour",
+   "value": 36,
+   "recipe": null
+  },
+  {
+   "id": "lion-claw",
+   "name": "Lion Claw",
+   "tier": "common",
+   "tags": [
+    "claw",
+    "strength",
+    "beast"
+   ],
+   "desc": "A thick, hooked claw sheathed in a horny cap. Popular in ceremonial gauntlets and hunt-trophies.",
+   "perish": "stable",
+   "value": 36,
+   "recipe": null
+  },
+  {
+   "id": "lizard-tail",
+   "name": "Lizard Tail",
+   "tier": "common",
+   "tags": [
+    "meat",
+    "regeneration",
+    "beast"
+   ],
+   "desc": "A still-twitching tail that grows back on its owner. Hedge-healers grind it into salves for knitting flesh.",
+   "perish": "1 day",
+   "value": 30,
+   "recipe": null
+  },
+  {
+   "id": "mammoth-ivory",
+   "name": "Mammoth Ivory",
+   "tier": "uncommon",
+   "tags": [
+    "horn",
+    "tooth",
+    "strength",
+    "cold",
+    "beast"
+   ],
+   "desc": "A great spiralling tusk of cream-and-brown ivory, heavy as a log. Carvers make hafts, shields and runes that never crack in frost.",
+   "perish": "stable",
+   "value": 170,
+   "recipe": null
+  },
+  {
+   "id": "mammoth-wool",
+   "name": "Mammoth Wool",
+   "tier": "uncommon",
+   "tags": [
+    "fur",
+    "hair",
+    "cold",
+    "resistance",
+    "beast"
+   ],
+   "desc": "Long, oily red-brown hair over a dense underfleece. Woven, it keeps out even killing cold.",
+   "perish": "1 week",
+   "value": 30,
+   "recipe": null
+  },
+  {
+   "id": "mammoth-hide",
+   "name": "Mammoth Hide",
+   "tier": "common",
+   "tags": [
+    "hide",
+    "toughness",
+    "beast"
+   ],
+   "desc": "An inch-thick hide tough as boiled leather even raw. Makes heavy hide armour and yurt walls.",
+   "perish": "1 day",
+   "value": 1,
+   "recipe": null
+  },
+  {
+   "id": "mammoth-fat",
+   "name": "Mammoth Fat",
+   "tier": "common",
+   "tags": [
+    "fat",
+    "cold",
+    "resistance",
+    "beast"
+   ],
+   "desc": "Firm yellow tallow from the hump. Burns long, and as a salve keeps frostbite at bay.",
+   "perish": "1 week",
+   "value": 24,
+   "recipe": null
+  },
+  {
+   "id": "mammoth-meat",
+   "name": "Mammoth Meat",
+   "tier": "mundane",
+   "tags": [
+    "meat",
+    "food",
+    "beast"
+   ],
+   "desc": "Dark, rich meat marbled with fat. One beast feeds a village for a moon if salted.",
+   "perish": "1 day",
+   "value": 0.1,
+   "recipe": null
+  },
+  {
+   "id": "mastiff-hide",
+   "name": "Mastiff Hide",
+   "tier": "mundane",
+   "tags": [
+    "hide",
+    "fur",
+    "beast"
+   ],
+   "desc": "Short-haired, thick-skinned dog hide. Used for straps and cheap jerkins.",
+   "perish": "1 day",
+   "value": 5,
+   "recipe": null
+  },
+  {
+   "id": "mastiff-nose",
+   "name": "Mastiff Nose",
+   "tier": "common",
+   "tags": [
+    "organ",
+    "senses",
+    "beast"
+   ],
+   "desc": "The damp black nose and scent membranes, dried and ground for tracking potions.",
+   "perish": "1 day",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "mule-hide",
+   "name": "Mule Hide",
+   "tier": "mundane",
+   "tags": [
+    "hide",
+    "leather",
+    "beast"
+   ],
+   "desc": "Tough, dun-coloured hide that tans into hard-wearing leather for packs.",
+   "perish": "1 day",
+   "value": 0.45,
+   "recipe": null
+  },
+  {
+   "id": "mule-sinew",
+   "name": "Mule Sinew",
+   "tier": "common",
+   "tags": [
+    "sinew",
+    "strength",
+    "toughness",
+    "beast"
+   ],
+   "desc": "Long back tendons that never seem to tire. Braided into straps for bags that carry more than they should.",
+   "perish": "1 day",
+   "value": 7,
+   "recipe": null
+  },
+  {
+   "id": "mule-hoof",
+   "name": "Mule Hoof",
+   "tier": "common",
+   "tags": [
+    "horn",
+    "toughness",
+    "climbing",
+    "beast"
+   ],
+   "desc": "A small, hard hoof, sure on scree. Rendered into glue or carved into charms for sure-footedness.",
+   "perish": "stable",
+   "value": 1,
+   "recipe": null
+  },
+  {
+   "id": "octopus-ink-sac",
+   "name": "Octopus Ink Sac",
+   "tier": "common",
+   "tags": [
+    "gland",
+    "ink",
+    "stealth",
+    "water",
+    "beast"
+   ],
+   "desc": "A small sac of inky black fluid that billows into a cloud in water. Makes a fine ink and smoke-concealing reagents.",
+   "perish": "1 day",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "octopus-skin",
+   "name": "Octopus Chromatic Skin",
+   "tier": "common",
+   "tags": [
+    "hide",
+    "stealth",
+    "illusion",
+    "beast"
+   ],
+   "desc": "Soft, slippery skin speckled with colour cells that still shimmer when stroked. Used in camouflage dyes.",
+   "perish": "1 hour",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "octopus-tentacle",
+   "name": "Octopus Tentacle",
+   "tier": "mundane",
+   "tags": [
+    "tentacle",
+    "meat",
+    "food",
+    "climbing",
+    "beast"
+   ],
+   "desc": "A sucker-lined arm; chewy grilled, and the suckers are dried for grip-enhancing glue.",
+   "perish": "1 day",
+   "value": 0.05,
+   "recipe": null
+  },
+  {
+   "id": "owl-feather",
+   "name": "Owl Feather",
+   "tier": "common",
+   "tags": [
+    "feather",
+    "stealth",
+    "sound",
+    "beast"
+   ],
+   "desc": "A soft, fringed feather that makes no sound when brushed. Sewn into cloaks and boots for silent movement.",
+   "perish": "stable",
+   "value": 9,
+   "recipe": null
+  },
+  {
+   "id": "owl-eye",
+   "name": "Owl Eye",
+   "tier": "common",
+   "tags": [
+    "eye",
+    "darkvision",
+    "senses",
+    "beast"
+   ],
+   "desc": "A huge, tubular golden eye that reflects the faintest light. Base of night-sight tinctures.",
+   "perish": "1 hour",
+   "value": 20,
+   "recipe": null
+  },
+  {
+   "id": "panther-pelt",
+   "name": "Panther Pelt",
+   "tier": "common",
+   "tags": [
+    "fur",
+    "hide",
+    "stealth",
+    "shadow",
+    "beast"
+   ],
+   "desc": "A sleek black pelt with faint ghost-rosettes visible in sidelight. Drinks torchlight; beloved of thieves.",
+   "perish": "1 day",
+   "value": 32,
+   "recipe": null
+  },
+  {
+   "id": "panther-claw",
+   "name": "Panther Claw",
+   "tier": "common",
+   "tags": [
+    "claw",
+    "speed",
+    "stealth",
+    "beast"
+   ],
+   "desc": "A needle-sharp, retractable claw. Set in climbing gloves and pounce-charms.",
+   "perish": "stable",
+   "value": 24,
+   "recipe": null
+  },
+  {
+   "id": "panther-hamstring",
+   "name": "Panther Hamstring",
+   "tier": "common",
+   "tags": [
+    "sinew",
+    "speed",
+    "climbing",
+    "beast"
+   ],
+   "desc": "Springy leg tendons that power the leap. Used as bowstrings and in agility draughts.",
+   "perish": "1 day",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "plesiosaurus-flipper",
+   "name": "Plesiosaurus Flipper",
+   "tier": "common",
+   "tags": [
+    "hide",
+    "bone",
+    "swimming",
+    "beast"
+   ],
+   "desc": "A broad, leathery paddle over a lattice of finger-bones. Crafted into fins and swimming gear.",
+   "perish": "1 day",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "plesiosaurus-lung",
+   "name": "Plesiosaurus Lung",
+   "tier": "common",
+   "tags": [
+    "organ",
+    "breathing",
+    "swimming",
+    "beast"
+   ],
+   "desc": "An elastic, oversized lung that holds air for long dives. Rendered into breath-holding elixirs.",
+   "perish": "1 hour",
+   "value": 33,
+   "recipe": null
+  },
+  {
+   "id": "plesiosaurus-neck-vertebrae",
+   "name": "Plesiosaurus Neck Vertebrae",
+   "tier": "common",
+   "tags": [
+    "bone",
+    "swimming",
+    "beast"
+   ],
+   "desc": "A string of disc-shaped bones from the long neck. Carved into flexible whips, flutes and beads.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "plesiosaurus-hide",
+   "name": "Plesiosaurus Hide",
+   "tier": "mundane",
+   "tags": [
+    "hide",
+    "water",
+    "beast"
+   ],
+   "desc": "Smooth, greenish reptile skin that sheds water easily.",
+   "perish": "1 day",
+   "value": 5,
+   "recipe": null
+  },
+  {
+   "id": "poisonous-snake-venom",
+   "name": "Poisonous Snake Venom",
+   "tier": "common",
+   "tags": [
+    "venom",
+    "poison",
+    "beast"
+   ],
+   "desc": "A few drops of clear, amber-tinged venom. The standard base of cheap blade poisons and antivenom.",
+   "perish": "1 week",
+   "value": 24,
+   "recipe": null
+  },
+  {
+   "id": "poisonous-snake-skin",
+   "name": "Snakeskin",
+   "tier": "mundane",
+   "tags": [
+    "hide",
+    "scale",
+    "beast"
+   ],
+   "desc": "Thin patterned skin, supple as silk. Used for belts, scabbard wraps and purses.",
+   "perish": "1 day",
+   "value": 5,
+   "recipe": null
+  },
+  {
+   "id": "poisonous-snake-fang",
+   "name": "Snake Fang",
+   "tier": "common",
+   "tags": [
+    "tooth",
+    "poison",
+    "beast"
+   ],
+   "desc": "A hollow, needle-thin fang. Tinkerers use them as poison-injection needles.",
+   "perish": "stable",
+   "value": 1,
+   "recipe": null
+  },
+  {
+   "id": "polar-bear-pelt",
+   "name": "Polar Bear Pelt",
+   "tier": "common",
+   "tags": [
+    "fur",
+    "hide",
+    "cold",
+    "stealth",
+    "beast"
+   ],
+   "desc": "Dense white fur over black skin, invisible against snow. Makes the warmest cloaks in the north.",
+   "perish": "1 day",
+   "value": 35,
+   "recipe": null
+  },
+  {
+   "id": "polar-bear-fat",
+   "name": "Polar Bear Fat",
+   "tier": "common",
+   "tags": [
+    "fat",
+    "cold",
+    "resistance",
+    "beast"
+   ],
+   "desc": "Thick, clean-smelling fat. Rubbed into skin or brewed with herbs, it wards off killing cold.",
+   "perish": "1 week",
+   "value": 34,
+   "recipe": null
+  },
+  {
+   "id": "polar-bear-claw",
+   "name": "Polar Bear Claw",
+   "tier": "common",
+   "tags": [
+    "claw",
+    "strength",
+    "climbing",
+    "beast"
+   ],
+   "desc": "A dark, curved claw made for gripping ice. Set in ice-picks and crampons.",
+   "perish": "stable",
+   "value": 6,
+   "recipe": null
+  },
+  {
+   "id": "polar-bear-liver",
+   "name": "Polar Bear Liver",
+   "tier": "common",
+   "tags": [
+    "organ",
+    "poison",
+    "beast"
+   ],
+   "desc": "A dark, dense liver so rich it sickens anyone who eats it. Poisoners render it into a slow wasting toxin.",
+   "perish": "1 hour",
+   "value": 28,
+   "recipe": null
+  },
+  {
+   "id": "polar-bear-meat",
+   "name": "Bear Meat",
+   "tier": "mundane",
+   "tags": [
+    "meat",
+    "food",
+    "beast"
+   ],
+   "desc": "Strong-tasting red meat; must be cooked through.",
+   "perish": "1 day",
+   "value": 0.1,
+   "recipe": null
+  },
+  {
+   "id": "pony-hide",
+   "name": "Horsehide",
+   "tier": "mundane",
+   "tags": [
+    "hide",
+    "leather",
+    "beast"
+   ],
+   "desc": "Dense, even-grained hide that tans into fine leather for saddles and shoes.",
+   "perish": "1 day",
+   "value": 0.3,
+   "recipe": null
+  },
+  {
+   "id": "quipper-teeth",
+   "name": "Quipper Teeth",
+   "tier": "common",
+   "tags": [
+    "tooth",
+    "water",
+    "beast"
+   ],
+   "desc": "Tiny razor-edged teeth that interlock like a saw. Set in rows along weapon edges to make them rend.",
+   "perish": "stable",
+   "value": 1,
+   "recipe": null
+  },
+  {
+   "id": "quipper-scales",
+   "name": "Quipper Scales",
+   "tier": "mundane",
+   "tags": [
+    "scale",
+    "water",
+    "beast"
+   ],
+   "desc": "Silver-red scales that flash in the light. Used as sequins and in fishing lures.",
+   "perish": "stable",
+   "value": 0.05,
+   "recipe": null
+  },
+  {
+   "id": "rat-tail",
+   "name": "Rat Tail",
+   "tier": "mundane",
+   "tags": [
+    "hair",
+    "disease",
+    "beast"
+   ],
+   "desc": "A scaly, naked tail. Hedge-witches knot them into charms against — or for — sickness.",
+   "perish": "1 week",
+   "value": 4,
+   "recipe": null
+  },
+  {
+   "id": "rat-incisors",
+   "name": "Rat Incisors",
+   "tier": "common",
+   "tags": [
+    "tooth",
+    "burrowing",
+    "disease",
+    "beast"
+   ],
+   "desc": "Orange, chisel-like front teeth that never stop growing. Ground into gnaw-powder that weakens rope and wood.",
+   "perish": "stable",
+   "value": 13,
+   "recipe": null
+  },
+  {
+   "id": "raven-feather",
+   "name": "Raven Feather",
+   "tier": "common",
+   "tags": [
+    "feather",
+    "knowledge",
+    "cunning",
+    "beast"
+   ],
+   "desc": "A glossy black feather with a purple-green sheen. Scribes cut quills from it for memory-inks and message scrolls.",
+   "perish": "stable",
+   "value": 20,
+   "recipe": null
+  },
+  {
+   "id": "raven-tongue",
+   "name": "Raven Tongue",
+   "tier": "common",
+   "tags": [
+    "tongue",
+    "sound",
+    "cunning",
+    "beast"
+   ],
+   "desc": "A small, surprisingly human-like tongue. Dried and powdered for mimicry and voice-throwing charms.",
+   "perish": "1 day",
+   "value": 45,
+   "recipe": null
+  },
+  {
+   "id": "reef-shark-tooth",
+   "name": "Reef Shark Tooth",
+   "tier": "common",
+   "tags": [
+    "tooth",
+    "beast"
+   ],
+   "desc": "A small, sharp triangular tooth. Strung into necklaces and set in coral weapons.",
+   "perish": "stable",
+   "value": 1,
+   "recipe": null
+  },
+  {
+   "id": "reef-shark-skin",
+   "name": "Reef Shark Skin",
+   "tier": "mundane",
+   "tags": [
+    "hide",
+    "swimming",
+    "beast"
+   ],
+   "desc": "Rough, sandpapery grey skin used as a grip wrap and polishing file.",
+   "perish": "1 day",
+   "value": 5,
+   "recipe": null
+  },
+  {
+   "id": "reef-shark-oil",
+   "name": "Reef Shark Oil",
+   "tier": "common",
+   "tags": [
+    "oil",
+    "swimming",
+    "water",
+    "beast"
+   ],
+   "desc": "A thin yellow oil from the liver; divers smear it on to slip through water.",
+   "perish": "1 week",
+   "value": 38,
+   "recipe": null
+  },
+  {
+   "id": "rhinoceros-horn",
+   "name": "Rhinoceros Horn",
+   "tier": "common",
+   "tags": [
+    "horn",
+    "strength",
+    "toughness",
+    "beast"
+   ],
+   "desc": "A dense, fibrous horn, heavy as stone. Carved into ram-heads for shields and prized in potions of might.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "rhinoceros-hide",
+   "name": "Rhinoceros Hide",
+   "tier": "common",
+   "tags": [
+    "hide",
+    "toughness",
+    "protection",
+    "beast"
+   ],
+   "desc": "Plated grey hide nearly two fingers thick. Tanned into shields and hide armour that turns blades.",
+   "perish": "1 day",
+   "value": 2,
+   "recipe": null
+  },
+  {
+   "id": "rhinoceros-meat",
+   "name": "Rhinoceros Meat",
+   "tier": "mundane",
+   "tags": [
+    "meat",
+    "food",
+    "beast"
+   ],
+   "desc": "Lean, coarse red meat, best stewed.",
+   "perish": "1 day",
+   "value": 0.5,
+   "recipe": null
+  },
+  {
+   "id": "horse-meat",
+   "name": "Horse Meat",
+   "tier": "mundane",
+   "tags": [
+    "meat",
+    "food",
+    "beast"
+   ],
+   "desc": "Sweet, dark red meat; taboo in many lands, a staple in others.",
+   "perish": "1 day",
+   "value": 0.07,
+   "recipe": null
+  },
+  {
+   "id": "riding-horse-sinew",
+   "name": "Riding Horse Sinew",
+   "tier": "common",
+   "tags": [
+    "sinew",
+    "speed",
+    "beast"
+   ],
+   "desc": "Long leg tendons that dry into cord-like strands. Used in horseshoes-of-speed charms and bowstrings.",
+   "perish": "1 day",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "warhorse-heart",
+   "name": "Warhorse Heart",
+   "tier": "common",
+   "tags": [
+    "heart",
+    "toughness",
+    "fear",
+    "speed",
+    "beast"
+   ],
+   "desc": "A great, dense heart that kept the beast charging into spears. Alchemists steep it in draughts of endurance.",
+   "perish": "1 hour",
+   "value": 23,
+   "recipe": null
+  },
+  {
+   "id": "warhorse-hoof",
+   "name": "Warhorse Hoof",
+   "tier": "common",
+   "tags": [
+    "horn",
+    "speed",
+    "toughness",
+    "beast"
+   ],
+   "desc": "A dinner-plate hoof, hard as stone. Carved into luck charms and ground as a binder for speed potions.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "saber-toothed-tiger-fang",
+   "name": "Saber-Toothed Tiger Fang",
+   "tier": "common",
+   "tags": [
+    "tooth",
+    "strength",
+    "fear",
+    "beast"
+   ],
+   "desc": "A curved, flattened tusk as long as a dagger with a serrated back edge. Hafted as a knife or set in ceremonial helms.",
+   "perish": "stable",
+   "value": 36,
+   "recipe": null
+  },
+  {
+   "id": "saber-toothed-tiger-pelt",
+   "name": "Saber-Toothed Tiger Pelt",
+   "tier": "common",
+   "tags": [
+    "fur",
+    "hide",
+    "cold",
+    "stealth",
+    "beast"
+   ],
+   "desc": "A dense, pale-striped pelt made for snow-shadow ambushes. Warm and hard to spot in winter woods.",
+   "perish": "1 day",
+   "value": 1,
+   "recipe": null
+  },
+  {
+   "id": "saber-toothed-tiger-claw",
+   "name": "Saber-Toothed Tiger Claw",
+   "tier": "common",
+   "tags": [
+    "claw",
+    "strength",
+    "beast"
+   ],
+   "desc": "A heavy, hooked claw built to pin prey. Trophy and gauntlet material.",
+   "perish": "stable",
+   "value": 24,
+   "recipe": null
+  },
+  {
+   "id": "scorpion-stinger",
+   "name": "Scorpion Stinger",
+   "tier": "common",
+   "tags": [
+    "stinger",
+    "venom",
+    "poison",
+    "beast"
+   ],
+   "desc": "A curved amber barb with a bulb of venom behind it. Poisoners milk it for painful toxins.",
+   "perish": "1 week",
+   "value": 24,
+   "recipe": null
+  },
+  {
+   "id": "scorpion-carapace",
+   "name": "Scorpion Carapace",
+   "tier": "mundane",
+   "tags": [
+    "carapace",
+    "beast"
+   ],
+   "desc": "A hard, translucent shell that glows faintly under moonlight. Used in lacquer and inlay.",
+   "perish": "stable",
+   "value": 2,
+   "recipe": null
+  },
+  {
+   "id": "sea-horse-dried",
+   "name": "Dried Sea Horse",
+   "tier": "common",
+   "tags": [
+    "meat",
+    "swimming",
+    "luck",
+    "water",
+    "beast"
+   ],
+   "desc": "A curled, bony little body dried stiff. Carried as a charm or ground into water-breathing tonics.",
+   "perish": "stable",
+   "value": 33,
+   "recipe": null
+  },
+  {
+   "id": "spider-silk",
+   "name": "Spider Silk",
+   "tier": "common",
+   "tags": [
+    "silk",
+    "thread",
+    "climbing",
+    "beast"
+   ],
+   "desc": "A fine, sticky thread spooled from the spinnerets. Weavers blend it into strong, near-invisible cord.",
+   "perish": "stable",
+   "value": 6,
+   "recipe": null
+  },
+  {
+   "id": "spider-venom",
+   "name": "Spider Venom",
+   "tier": "common",
+   "tags": [
+    "venom",
+    "gland",
+    "poison",
+    "beast"
+   ],
+   "desc": "A pinhead of potent venom. Used in weak sleep- and pain-poisons.",
+   "perish": "1 day",
+   "value": 18,
+   "recipe": null
+  },
+  {
+   "id": "tiger-pelt",
+   "name": "Tiger Pelt",
+   "tier": "common",
+   "tags": [
+    "fur",
+    "hide",
+    "stealth",
+    "speed",
+    "beast"
+   ],
+   "desc": "Rich orange fur banded with black, perfect camouflage among reeds. A prestige cloak and hunter's mantle.",
+   "perish": "1 day",
+   "value": 1,
+   "recipe": null
+  },
+  {
+   "id": "tiger-whiskers",
+   "name": "Tiger Whiskers",
+   "tier": "common",
+   "tags": [
+    "hair",
+    "senses",
+    "stealth",
+    "beast"
+   ],
+   "desc": "Stiff, white whiskers that feel the air in pitch darkness. Tied into charms for moving silently at night.",
+   "perish": "stable",
+   "value": 9,
+   "recipe": null
+  },
+  {
+   "id": "tiger-fang",
+   "name": "Tiger Fang",
+   "tier": "common",
+   "tags": [
+    "tooth",
+    "strength",
+    "fear",
+    "beast"
+   ],
+   "desc": "A long, ivory canine. Worn as a sign of valour or set in a hunter's knife pommel.",
+   "perish": "stable",
+   "value": 24,
+   "recipe": null
+  },
+  {
+   "id": "tiger-sinew",
+   "name": "Tiger Sinew",
+   "tier": "common",
+   "tags": [
+    "sinew",
+    "speed",
+    "beast"
+   ],
+   "desc": "Powerful haunch tendons that drive the pounce. Used for bowstrings and agility tonics.",
+   "perish": "1 day",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "triceratops-frill",
+   "name": "Triceratops Frill",
+   "tier": "uncommon",
+   "tags": [
+    "bone",
+    "skull",
+    "protection",
+    "toughness",
+    "beast"
+   ],
+   "desc": "A broad, shield-shaped plate of bone fringed with knobs. Split and dressed, it makes a natural shield that shrugs off blows.",
+   "perish": "stable",
+   "value": 140,
+   "recipe": null
+  },
+  {
+   "id": "triceratops-horn",
+   "name": "Triceratops Horn",
+   "tier": "uncommon",
+   "tags": [
+    "horn",
+    "strength",
+    "beast"
+   ],
+   "desc": "A metre-long brow horn, dense and sharp. Hafted as a lance-head or ram and used in potions of the charge.",
+   "perish": "stable",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "triceratops-nose-horn",
+   "name": "Triceratops Nose Horn",
+   "tier": "common",
+   "tags": [
+    "horn",
+    "toughness",
+    "beast"
+   ],
+   "desc": "A short, blunt nasal horn; good material for axe-heads and hammers.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "triceratops-hide",
+   "name": "Triceratops Hide",
+   "tier": "common",
+   "tags": [
+    "hide",
+    "toughness",
+    "protection",
+    "beast"
+   ],
+   "desc": "Pebbly, thick hide that tans into sturdy armour.",
+   "perish": "1 day",
+   "value": 2,
+   "recipe": null
+  },
+  {
+   "id": "triceratops-meat",
+   "name": "Triceratops Meat",
+   "tier": "mundane",
+   "tags": [
+    "meat",
+    "food",
+    "beast"
+   ],
+   "desc": "Heavy, beefy meat; one beast feeds a war-band for weeks.",
+   "perish": "1 day",
+   "value": 1,
+   "recipe": null
+  },
+  {
+   "id": "tyrannosaurus-rex-tooth",
+   "name": "Tyrannosaurus Rex Tooth",
+   "tier": "rare",
+   "tags": [
+    "tooth",
+    "fear",
+    "strength",
+    "beast"
+   ],
+   "desc": "A banana-sized, serrated fang that can punch through plate. Warlords wear them to inspire terror; smiths set them as sword-points.",
+   "perish": "stable",
+   "value": 1600,
+   "recipe": null
+  },
+  {
+   "id": "tyrannosaurus-rex-heart",
+   "name": "Tyrannosaurus Rex Heart",
+   "tier": "rare",
+   "tags": [
+    "heart",
+    "strength",
+    "fear",
+    "toughness",
+    "beast"
+   ],
+   "desc": "A barrel-sized heart that still quivers an hour after death. Brewed into draughts of monstrous strength and fearlessness.",
+   "perish": "1 hour",
+   "value": 1600,
+   "recipe": null
+  },
+  {
+   "id": "tyrannosaurus-rex-roar-sac",
+   "name": "Tyrannosaurus Rex Voice Box",
+   "tier": "uncommon",
+   "tags": [
+    "organ",
+    "sound",
+    "fear",
+    "thunder",
+    "beast"
+   ],
+   "desc": "A cavernous throat resonator that shaped the killing roar. Horn-makers build terrifying war-horns around it.",
+   "perish": "1 day",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "tyrannosaurus-rex-hide",
+   "name": "Tyrannosaurus Rex Hide",
+   "tier": "uncommon",
+   "tags": [
+    "hide",
+    "scale",
+    "toughness",
+    "beast"
+   ],
+   "desc": "Heavy, scaled hide mottled green and brown. Tans into imposing and very tough hide armour.",
+   "perish": "1 day",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "tyrannosaurus-rex-meat",
+   "name": "Tyrannosaurus Rex Meat",
+   "tier": "mundane",
+   "tags": [
+    "meat",
+    "food",
+    "strength",
+    "beast"
+   ],
+   "desc": "Tough, gamey meat. Warriors of some jungle tribes eat it for courage.",
+   "perish": "1 day",
+   "value": 2,
+   "recipe": null
+  },
+  {
+   "id": "vulture-feather",
+   "name": "Vulture Feather",
+   "tier": "mundane",
+   "tags": [
+    "feather",
+    "death",
+    "beast"
+   ],
+   "desc": "A dusty brown pinion that smells faintly of the dead. Used by morticians and in funeral fans.",
+   "perish": "stable",
+   "value": 5,
+   "recipe": null
+  },
+  {
+   "id": "vulture-gizzard",
+   "name": "Vulture Gizzard",
+   "tier": "common",
+   "tags": [
+    "organ",
+    "resistance",
+    "disease",
+    "poison",
+    "beast"
+   ],
+   "desc": "A tough, acid-soaked stomach that digests rot without sickening. The base of cheap anti-disease remedies.",
+   "perish": "1 day",
+   "value": 39,
+   "recipe": null
+  },
+  {
+   "id": "weasel-pelt",
+   "name": "Weasel Pelt",
+   "tier": "common",
+   "tags": [
+    "fur",
+    "stealth",
+    "cunning",
+    "beast"
+   ],
+   "desc": "A slim, glossy pelt that turns white in winter. Trim for hoods and a traditional charm of slipping out of trouble.",
+   "perish": "1 day",
+   "value": 20,
+   "recipe": null
+  },
+  {
+   "id": "wolf-pelt",
+   "name": "Wolf Pelt",
+   "tier": "common",
+   "tags": [
+    "fur",
+    "hide",
+    "cold",
+    "beast"
+   ],
+   "desc": "Thick grey fur with a dense winter underlayer. The classic ranger's cloak and bedroll.",
+   "perish": "1 day",
+   "value": 20,
+   "recipe": null
+  },
+  {
+   "id": "wolf-fang",
+   "name": "Wolf Fang",
+   "tier": "common",
+   "tags": [
+    "tooth",
+    "senses",
+    "strength",
+    "beast"
+   ],
+   "desc": "A long, hooked canine. Worn on cords by trackers, said to keep the pack's instincts sharp.",
+   "perish": "stable",
+   "value": 7,
+   "recipe": null
+  },
+  {
+   "id": "wolf-nose",
+   "name": "Wolf Nose",
+   "tier": "common",
+   "tags": [
+    "organ",
+    "senses",
+    "beast"
+   ],
+   "desc": "The scent-gland lined snout. Dried and powdered for tracking tinctures.",
+   "perish": "1 day",
+   "value": 8,
+   "recipe": null
+  },
+  {
+   "id": "swarm-of-bats-wing-membranes",
+   "name": "Bat Wing Membranes (bundle)",
+   "tier": "common",
+   "tags": [
+    "wing",
+    "flight",
+    "senses",
+    "beast"
+   ],
+   "desc": "A handful of thin, leathery wing-webs. Cured and powdered, they go into flying and echo-sense draughts.",
+   "perish": "1 day",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "swarm-of-bats-guano",
+   "name": "Bat Guano",
+   "tier": "mundane",
+   "tags": [
+    "reagent",
+    "fire",
+    "beast"
+   ],
+   "desc": "Dry, crumbly droppings rich in saltpetre. Farmers and firework-makers both want it.",
+   "perish": "stable",
+   "value": 0.05,
+   "recipe": null
+  },
+  {
+   "id": "swarm-of-bats-ears",
+   "name": "Bat Ears (bundle)",
+   "tier": "common",
+   "tags": [
+    "organ",
+    "senses",
+    "sound",
+    "beast"
+   ],
+   "desc": "Dozens of tiny, ribbed ears. Ground, they grant keen hearing and a sense for echoes.",
+   "perish": "1 hour",
+   "value": 18,
+   "recipe": null
+  },
+  {
+   "id": "swarm-of-beetles-carapace-chips",
+   "name": "Beetle Carapace Chips",
+   "tier": "common",
+   "tags": [
+    "carapace",
+    "protection",
+    "beast"
+   ],
+   "desc": "Iridescent green-and-bronze shell chips. Glued in overlapping rows they make lacquered armour inlays.",
+   "perish": "stable",
+   "value": 2,
+   "recipe": null
+  },
+  {
+   "id": "swarm-of-beetles-dye",
+   "name": "Beetle Dye Paste",
+   "tier": "common",
+   "tags": [
+    "reagent",
+    "ink",
+    "beast"
+   ],
+   "desc": "Crushed beetles yield a deep crimson paste. Dyers and scribes prize it.",
+   "perish": "1 week",
+   "value": 2,
+   "recipe": null
+  },
+  {
+   "id": "swarm-of-centipedes-venom-claws",
+   "name": "Centipede Venom Claws",
+   "tier": "common",
+   "tags": [
+    "claw",
+    "venom",
+    "poison",
+    "paralysis",
+    "beast"
+   ],
+   "desc": "Paired pincer-fangs full of numbing venom. Ground into numbing salves or mild paralytic poisons.",
+   "perish": "1 week",
+   "value": 26,
+   "recipe": null
+  },
+  {
+   "id": "swarm-of-centipedes-segments",
+   "name": "Centipede Segments",
+   "tier": "mundane",
+   "tags": [
+    "carapace",
+    "climbing",
+    "beast"
+   ],
+   "desc": "Hard, red-brown body segments. Strung into rattles and climbing-charms.",
+   "perish": "stable",
+   "value": 2,
+   "recipe": null
+  },
+  {
+   "id": "swarm-of-insects-chitin-dust",
+   "name": "Insect Chitin Dust",
+   "tier": "common",
+   "tags": [
+    "dust",
+    "carapace",
+    "reagent",
+    "beast"
+   ],
+   "desc": "A glittering, crunchy dust of crushed wings and shells. A cheap binder for alchemical pastes.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "swarm-of-insects-wings",
+   "name": "Insect Wings (bundle)",
+   "tier": "common",
+   "tags": [
+    "wing",
+    "flight",
+    "sound",
+    "beast"
+   ],
+   "desc": "A pouch of gauzy, rainbow-sheened wings that hum when blown across. Used in flight and buzzing-noise charms.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "quipper-meat",
+   "name": "Quipper Meat",
+   "tier": "mundane",
+   "tags": [
+    "meat",
+    "food",
+    "beast"
+   ],
+   "desc": "Bony little fillets, sweet if fried crisp.",
+   "perish": "1 day",
+   "value": 0.05,
+   "recipe": null
+  },
+  {
+   "id": "raven-eye",
+   "name": "Raven Eye",
+   "tier": "common",
+   "tags": [
+    "eye",
+    "knowledge",
+    "senses",
+    "beast"
+   ],
+   "desc": "A bead-black glittering eye. Scryers grind it into inks that remember what was written.",
+   "perish": "1 hour",
+   "value": 22,
+   "recipe": null
+  },
+  {
+   "id": "swarm-of-wasps-stingers",
+   "name": "Wasp Stingers",
+   "tier": "common",
+   "tags": [
+    "stinger",
+    "venom",
+    "poison",
+    "beast"
+   ],
+   "desc": "A pouch of tiny, barbed stingers still loaded with venom. Makes a stinging, swelling poison.",
+   "perish": "1 week",
+   "value": 24,
+   "recipe": null
+  },
+  {
+   "id": "swarm-of-wasps-paper-nest",
+   "name": "Wasp Paper Nest",
+   "tier": "common",
+   "tags": [
+    "reagent",
+    "wood",
+    "fire",
+    "beast"
+   ],
+   "desc": "A grey, layered paper comb chewed from wood pulp. Burns hot and fast; makes excellent tinder and light paper.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "swarm-of-wasps-larvae",
+   "name": "Wasp Larvae",
+   "tier": "mundane",
+   "tags": [
+    "food",
+    "meat",
+    "beast"
+   ],
+   "desc": "Plump white grubs from the comb. Toasted, a crunchy delicacy in some lands.",
+   "perish": "1 day",
+   "value": 0.07,
+   "recipe": null
+  },
+  {
+   "id": "hawk-talon",
+   "name": "Hawk Talon",
+   "tier": "common",
+   "tags": [
+    "claw",
+    "senses",
+    "speed",
+    "beast"
+   ],
+   "desc": "A black, needle-hooked talon that closes like a trap. Falconers' charms and arrowhead barbs.",
+   "perish": "stable",
+   "value": 30,
+   "recipe": null
+  },
+  {
+   "id": "owl-talon",
+   "name": "Owl Talon",
+   "tier": "common",
+   "tags": [
+    "claw",
+    "stealth",
+    "darkvision",
+    "beast"
+   ],
+   "desc": "A pale, feather-sheathed talon. Night-hunters wear them as charms for a silent strike.",
+   "perish": "stable",
+   "value": 24,
+   "recipe": null
+  },
+  {
+   "id": "hunter-shark-jaw",
+   "name": "Hunter Shark Jaw",
+   "tier": "common",
+   "tags": [
+    "bone",
+    "tooth",
+    "fear",
+    "beast"
+   ],
+   "desc": "The whole cartilage jaw, bristling with teeth, dried into a gaping trophy. Mounted over tavern doors or built into war-helms.",
+   "perish": "stable",
+   "value": 36,
+   "recipe": null
+  },
+  {
+   "id": "octopus-beak",
+   "name": "Octopus Beak",
+   "tier": "common",
+   "tags": [
+    "tooth",
+    "cunning",
+    "water",
+    "beast"
+   ],
+   "desc": "A small, parrot-like black beak, hard as horn. Carved into fishhooks and clever-charm pendants.",
+   "perish": "stable",
+   "value": 20,
+   "recipe": null
+  },
+  {
+   "id": "tiger-bone",
+   "name": "Tiger Bone",
+   "tier": "common",
+   "tags": [
+    "bone",
+    "strength",
+    "toughness",
+    "beast"
+   ],
+   "desc": "Heavy, dense leg bones. Steeped in strong spirits for liniments said to lend a tiger's vigour.",
+   "perish": "stable",
+   "value": 24,
+   "recipe": null
+  },
+  {
+   "id": "mastiff-fang",
+   "name": "Mastiff Fang",
+   "tier": "mundane",
+   "tags": [
+    "tooth",
+    "beast"
+   ],
+   "desc": "A blunt, thick canine. Cheap charms against thieves.",
+   "perish": "stable",
+   "value": 5,
+   "recipe": null
+  },
+  {
+   "id": "reef-shark-fin",
+   "name": "Reef Shark Fin",
+   "tier": "mundane",
+   "tags": [
+    "meat",
+    "food",
+    "beast"
+   ],
+   "desc": "A stiff grey fin; dried and boiled, it makes a gelatinous coastal soup.",
+   "perish": "1 week",
+   "value": 0.05,
+   "recipe": null
+  },
+  {
+   "id": "weasel-musk-gland",
+   "name": "Weasel Musk Gland",
+   "tier": "common",
+   "tags": [
+    "gland",
+    "stealth",
+    "cunning",
+    "beast"
+   ],
+   "desc": "A tiny sac of sharp, musky oil. Hunters dab it on to mask their own scent from hounds.",
+   "perish": "1 day",
+   "value": 20,
+   "recipe": null
+  },
+  {
+   "id": "saber-toothed-tiger-meat",
+   "name": "Saber-Toothed Tiger Meat",
+   "tier": "mundane",
+   "tags": [
+    "meat",
+    "food",
+    "beast"
+   ],
+   "desc": "Tough, dark big-cat meat, best smoked for the trail.",
+   "perish": "1 day",
+   "value": 0.1,
+   "recipe": null
+  },
+  {
+   "id": "wolf-meat",
+   "name": "Wolf Meat",
+   "tier": "mundane",
+   "tags": [
+    "meat",
+    "food",
+    "beast"
+   ],
+   "desc": "Stringy, strong-tasting meat — edible when there is nothing better.",
+   "perish": "1 day",
+   "value": 0.07,
+   "recipe": null
+  }
+ ],
+ "monsters": [
+  {
+   "id": "hawk",
+   "name": "Hawk",
+   "type": "beast",
+   "size": "Tiny",
+   "cr": "0",
+   "env": [
+    "forest",
+    "grassland",
+    "hill",
+    "mountain",
+    "coast"
+   ],
+   "blurb": "A keen-eyed raptor whose flight feathers and sharp eyes are staples of the fletcher and the scryer's apprentice.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "hawk-flight-feathers",
+     "q": 2,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "1d4+1",
+     "note": "Pluck the long primaries only; a torn vane makes them worthless for fletching."
+    },
+    {
+     "m": "hawk-eye",
+     "q": 2,
+     "dc": 11,
+     "skill": "Medicine",
+     "note": "Delicate; must be scooped whole and sunk in brine at once."
+    },
+    {
+     "m": "hawk-talon",
+     "q": 2,
+     "dc": 10,
+     "skill": "Survival"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "hunter-shark",
+   "name": "Hunter Shark",
+   "type": "beast",
+   "size": "Large",
+   "cr": "2",
+   "env": [
+    "underwater",
+    "coast"
+   ],
+   "blurb": "A blood-scenting open-water killer; its rows of teeth, oily liver and sandpaper skin are all valuable to coastal crafters.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "hunter-shark-tooth",
+     "q": 6,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "2d6"
+    },
+    {
+     "m": "hunter-shark-skin",
+     "q": 1,
+     "dc": 9,
+     "skill": "Survival",
+     "note": "Skin it against the grain or the denticles strip away."
+    },
+    {
+     "m": "hunter-shark-liver-oil",
+     "q": 1,
+     "dc": 11,
+     "skill": "Medicine",
+     "dice": "1d2",
+     "note": "Render the liver within a day; spoiled liver turns rank and useless."
+    },
+    {
+     "m": "hunter-shark-blood-sense-organ",
+     "q": 1,
+     "dc": 12,
+     "skill": "Medicine",
+     "note": "Must be cut out before the head is gaffed or crushed."
+    },
+    {
+     "m": "hunter-shark-meat",
+     "q": 10,
+     "dc": 8,
+     "skill": "Survival",
+     "dice": "4d6"
+    },
+    {
+     "m": "hunter-shark-jaw",
+     "q": 1,
+     "dc": 12,
+     "skill": "Survival",
+     "note": "Dry it slowly in shade or the cartilage warps and the teeth fall out."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "hyena",
+   "name": "Hyena",
+   "type": "beast",
+   "size": "Medium",
+   "cr": "0",
+   "env": [
+    "grassland",
+    "desert",
+    "hill"
+   ],
+   "blurb": "A cackling scavenger with jaws that crack bone; its jawbone is a talisman for those who fight in packs, its hide little more than a rank tent-flap.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "hyena-hide",
+     "q": 1,
+     "dc": 8,
+     "skill": "Survival"
+    },
+    {
+     "m": "hyena-jawbone",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival"
+    },
+    {
+     "m": "hyena-laughing-gland",
+     "q": 1,
+     "dc": 11,
+     "skill": "Medicine"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "jackal",
+   "name": "Jackal",
+   "type": "beast",
+   "size": "Small",
+   "cr": "0",
+   "env": [
+    "desert",
+    "grassland",
+    "hill"
+   ],
+   "blurb": "A skulking desert dog whose sharp nose and ears make its parts useful to scouts and trackers.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "jackal-pelt",
+     "q": 1,
+     "dc": 8,
+     "skill": "Survival"
+    },
+    {
+     "m": "jackal-ears",
+     "q": 2,
+     "dc": 10,
+     "skill": "Medicine",
+     "note": "Dry them in shade; direct sun cracks the cartilage."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "killer-whale",
+   "name": "Killer Whale",
+   "type": "beast",
+   "size": "Huge",
+   "cr": "3",
+   "env": [
+    "underwater",
+    "coast",
+    "arctic"
+   ],
+   "blurb": "A cunning, echo-seeing sea hunter; its blubber, teeth and the oily melon of its skull are treasures of polar coasts.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "killer-whale-blubber",
+     "q": 6,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "3d4"
+    },
+    {
+     "m": "killer-whale-tooth",
+     "q": 4,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "2d4"
+    },
+    {
+     "m": "killer-whale-echo-melon",
+     "q": 1,
+     "dc": 14,
+     "skill": "Medicine",
+     "note": "Slice carefully around it; a nicked melon leaks and loses its focus."
+    },
+    {
+     "m": "killer-whale-hide",
+     "q": 1,
+     "dc": 9,
+     "skill": "Survival"
+    },
+    {
+     "m": "killer-whale-lungs",
+     "q": 1,
+     "dc": 13,
+     "skill": "Medicine",
+     "note": "Must be tied off before the carcass sinks or the air is lost."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "lion",
+   "name": "Lion",
+   "type": "beast",
+   "size": "Large",
+   "cr": "1",
+   "env": [
+    "grassland",
+    "hill",
+    "desert"
+   ],
+   "blurb": "The pride-leader of the plains; its mane and heart are symbols of courage in every culture that knows it.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "lion-mane",
+     "q": 1,
+     "dc": 11,
+     "skill": "Survival",
+     "note": "Only males bear a full mane; take it with the scalp to keep it intact."
+    },
+    {
+     "m": "lion-pelt",
+     "q": 1,
+     "dc": 8,
+     "skill": "Survival"
+    },
+    {
+     "m": "lion-heart",
+     "q": 1,
+     "dc": 11,
+     "skill": "Medicine"
+    },
+    {
+     "m": "lion-claw",
+     "q": 4,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "2d4"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "lizard",
+   "name": "Lizard",
+   "type": "beast",
+   "size": "Tiny",
+   "cr": "0",
+   "env": [
+    "desert",
+    "forest",
+    "swamp",
+    "hill",
+    "ruins"
+   ],
+   "blurb": "A common basking lizard; its shed tail is an old hedge-witch ingredient.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "lizard-tail",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "note": "Grab the lizard too hard and it drops the tail and escapes — which is fine."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "mammoth",
+   "name": "Mammoth",
+   "type": "beast",
+   "size": "Huge",
+   "cr": "6",
+   "env": [
+    "arctic",
+    "grassland",
+    "mountain"
+   ],
+   "blurb": "A shaggy, tusked giant of the frozen steppe; its ivory, wool and fat keep whole tribes alive through winter.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "mammoth-ivory",
+     "q": 2,
+     "dc": 13,
+     "skill": "Survival",
+     "note": "Each tusk needs hours of sawing; hurry and it splits along the growth rings."
+    },
+    {
+     "m": "mammoth-wool",
+     "q": 3,
+     "dc": 13,
+     "skill": "Survival",
+     "dice": "1d4+1"
+    },
+    {
+     "m": "mammoth-hide",
+     "q": 1,
+     "dc": 11,
+     "skill": "Survival"
+    },
+    {
+     "m": "mammoth-fat",
+     "q": 6,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "3d4"
+    },
+    {
+     "m": "mammoth-meat",
+     "q": 40,
+     "dc": 8,
+     "skill": "Survival",
+     "dice": "10d8"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "mastiff",
+   "name": "Mastiff",
+   "type": "beast",
+   "size": "Medium",
+   "cr": "1/8",
+   "env": [
+    "urban",
+    "grassland",
+    "hill",
+    "forest"
+   ],
+   "blurb": "A loyal guard dog with an unerring nose; its teeth and hide are humble but honest goods.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "mastiff-hide",
+     "q": 1,
+     "dc": 8,
+     "skill": "Survival"
+    },
+    {
+     "m": "mastiff-nose",
+     "q": 1,
+     "dc": 10,
+     "skill": "Medicine",
+     "note": "Many folk consider butchering a war-dog shameful; expect hard looks in town."
+    },
+    {
+     "m": "mastiff-fang",
+     "q": 4,
+     "dc": 8,
+     "skill": "Survival"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "mule",
+   "name": "Mule",
+   "type": "beast",
+   "size": "Medium",
+   "cr": "1/8",
+   "env": [
+    "grassland",
+    "hill",
+    "mountain",
+    "urban"
+   ],
+   "blurb": "A stubborn, sure-footed pack animal whose sinews and hooves are prized for hauling gear.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "mule-hide",
+     "q": 1,
+     "dc": 8,
+     "skill": "Survival"
+    },
+    {
+     "m": "mule-sinew",
+     "q": 2,
+     "dc": 10,
+     "skill": "Survival"
+    },
+    {
+     "m": "mule-hoof",
+     "q": 4,
+     "dc": 9,
+     "skill": "Survival"
+    },
+    {
+     "m": "horsehair",
+     "skill": "Survival",
+     "dc": 5,
+     "dice": "1d4",
+     "note": "Tail and mane hair, cut without harm to a living animal too."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "octopus",
+   "name": "Octopus",
+   "type": "beast",
+   "size": "Small",
+   "cr": "0",
+   "env": [
+    "underwater",
+    "coast"
+   ],
+   "blurb": "A clever tidepool hunter that changes colour and vanishes in a cloud of ink.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "octopus-ink-sac",
+     "q": 1,
+     "dc": 10,
+     "skill": "Medicine",
+     "note": "Squeeze the body carelessly and it jets its ink away in death."
+    },
+    {
+     "m": "octopus-skin",
+     "q": 1,
+     "dc": 11,
+     "skill": "Survival"
+    },
+    {
+     "m": "octopus-tentacle",
+     "q": 8,
+     "dc": 8,
+     "skill": "Survival",
+     "dice": "1d4+4"
+    },
+    {
+     "m": "octopus-beak",
+     "q": 1,
+     "dc": 9,
+     "skill": "Survival"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "owl",
+   "name": "Owl",
+   "type": "beast",
+   "size": "Tiny",
+   "cr": "0",
+   "env": [
+    "forest",
+    "grassland",
+    "hill",
+    "ruins",
+    "urban"
+   ],
+   "blurb": "A silent night hunter; its feathers muffle sound and its eyes drink the dark.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "owl-feather",
+     "q": 3,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "1d4+2"
+    },
+    {
+     "m": "owl-eye",
+     "q": 2,
+     "dc": 11,
+     "skill": "Medicine",
+     "note": "Harvest at night; alchemists claim sunlight dulls them."
+    },
+    {
+     "m": "owl-talon",
+     "q": 2,
+     "dc": 10,
+     "skill": "Survival"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "panther",
+   "name": "Panther",
+   "type": "beast",
+   "size": "Medium",
+   "cr": "1/4",
+   "env": [
+    "forest",
+    "grassland",
+    "hill"
+   ],
+   "blurb": "A black-coated ambusher of the forest canopy; its pelt is the quiet hunter's cloak of choice.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "panther-pelt",
+     "q": 1,
+     "dc": 11,
+     "skill": "Survival",
+     "note": "Nicks show as pale scars in the fur; skin it slowly."
+    },
+    {
+     "m": "panther-claw",
+     "q": 4,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "2d4"
+    },
+    {
+     "m": "panther-hamstring",
+     "q": 2,
+     "dc": 10,
+     "skill": "Survival"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "plesiosaurus",
+   "name": "Plesiosaurus",
+   "type": "beast",
+   "size": "Large",
+   "cr": "2",
+   "env": [
+    "underwater",
+    "coast"
+   ],
+   "blurb": "A long-necked marine reptile that dives deep and long; its lungs and flippers are sought for water-work.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "plesiosaurus-flipper",
+     "q": 4,
+     "dc": 10,
+     "skill": "Survival"
+    },
+    {
+     "m": "plesiosaurus-lung",
+     "q": 2,
+     "dc": 12,
+     "skill": "Medicine",
+     "note": "Deflates and rots quickly out of water; pack it in wet kelp."
+    },
+    {
+     "m": "plesiosaurus-neck-vertebrae",
+     "q": 6,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "3d4"
+    },
+    {
+     "m": "plesiosaurus-hide",
+     "q": 1,
+     "dc": 9,
+     "skill": "Survival"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "poisonous-snake",
+   "name": "Poisonous Snake",
+   "type": "beast",
+   "size": "Tiny",
+   "cr": "1/8",
+   "env": [
+    "desert",
+    "forest",
+    "grassland",
+    "swamp",
+    "hill",
+    "ruins"
+   ],
+   "blurb": "A small, brightly banded viper; its venom sac is the cheapest reliable poison a rogue can find.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "poisonous-snake-venom",
+     "q": 1,
+     "dc": 11,
+     "skill": "Medicine",
+     "note": "Fail by 5 or more and you nick yourself on a fang: take the snake's poison as if bitten."
+    },
+    {
+     "m": "poisonous-snake-fang",
+     "q": 2,
+     "dc": 10,
+     "skill": "Survival"
+    },
+    {
+     "m": "poisonous-snake-skin",
+     "q": 1,
+     "dc": 8,
+     "skill": "Survival"
+    }
+   ],
+   "aka": [
+    "Venomous Snake"
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "polar-bear",
+   "name": "Polar Bear",
+   "type": "beast",
+   "size": "Large",
+   "cr": "2",
+   "env": [
+    "arctic",
+    "coast"
+   ],
+   "blurb": "The white ice-hunter, huge and patient; its fat and pelt keep hunters alive where nothing else could.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "polar-bear-pelt",
+     "q": 1,
+     "dc": 11,
+     "skill": "Survival",
+     "note": "Keep it out of blood; stains never quite wash out of the white."
+    },
+    {
+     "m": "polar-bear-fat",
+     "q": 4,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "2d4"
+    },
+    {
+     "m": "polar-bear-claw",
+     "q": 6,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "2d4+2"
+    },
+    {
+     "m": "polar-bear-liver",
+     "q": 1,
+     "dc": 11,
+     "skill": "Medicine",
+     "note": "Wise hunters bury it; hungry ones get very ill."
+    },
+    {
+     "m": "polar-bear-meat",
+     "q": 15,
+     "dc": 8,
+     "skill": "Survival",
+     "dice": "4d6"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "pony",
+   "name": "Pony",
+   "type": "beast",
+   "size": "Medium",
+   "cr": "1/8",
+   "env": [
+    "grassland",
+    "hill",
+    "urban"
+   ],
+   "blurb": "A small, hardy mount; its hair and hide are everyday goods.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "pony-hide",
+     "q": 1,
+     "dc": 8,
+     "skill": "Survival",
+     "note": "Shared by all horse-kin."
+    },
+    {
+     "m": "horsehair",
+     "skill": "Survival",
+     "dc": 5,
+     "dice": "1d4",
+     "note": "Tail and mane hair, cut without harm to a living animal too."
+    },
+    {
+     "m": "horse-meat",
+     "q": 7,
+     "dc": 8,
+     "skill": "Survival",
+     "dice": "2d6"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "quipper",
+   "name": "Quipper",
+   "type": "beast",
+   "size": "Tiny",
+   "cr": "0",
+   "env": [
+    "underwater",
+    "swamp",
+    "forest"
+   ],
+   "blurb": "A little river fish with a terrible bite; alone it's a snack, its teeth are what count.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "quipper-teeth",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "note": "Fingers near the jaw can still get bitten in the death twitch."
+    },
+    {
+     "m": "quipper-scales",
+     "q": 1,
+     "dc": 8,
+     "skill": "Survival"
+    },
+    {
+     "m": "quipper-meat",
+     "q": 1,
+     "dc": 8,
+     "skill": "Survival"
+    }
+   ],
+   "aka": [
+    "Piranha"
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "rat",
+   "name": "Rat",
+   "type": "beast",
+   "size": "Tiny",
+   "cr": "0",
+   "env": [
+    "urban",
+    "ruins",
+    "swamp",
+    "underdark"
+   ],
+   "blurb": "Ubiquitous vermin; worthless alone, but its parts have a place in hedge-craft.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "rat-tail",
+     "q": 1,
+     "dc": 8,
+     "skill": "Survival",
+     "note": "Wear gloves; a scratch can pass on filth fever."
+    },
+    {
+     "m": "rat-incisors",
+     "q": 2,
+     "dc": 10,
+     "skill": "Survival"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "raven",
+   "name": "Raven",
+   "type": "beast",
+   "size": "Tiny",
+   "cr": "0",
+   "env": [
+    "forest",
+    "hill",
+    "mountain",
+    "urban",
+    "ruins",
+    "shadowfell"
+   ],
+   "blurb": "A clever black bird that mimics voices; its feathers are the traditional quill of scholars and spies.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "raven-feather",
+     "q": 3,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "1d4+1"
+    },
+    {
+     "m": "raven-tongue",
+     "q": 1,
+     "dc": 11,
+     "skill": "Medicine",
+     "note": "The bird's mimicry is said to fade if the tongue is taken after dawn."
+    },
+    {
+     "m": "raven-eye",
+     "q": 2,
+     "dc": 11,
+     "skill": "Medicine",
+     "note": "Take them quickly; other ravens go for the eyes of the fallen first."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "reef-shark",
+   "name": "Reef Shark",
+   "type": "beast",
+   "size": "Medium",
+   "cr": "1/2",
+   "env": [
+    "underwater",
+    "coast"
+   ],
+   "blurb": "A pack-hunting shark of warm shallows; smaller cousin of the hunter shark with similarly useful parts.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "reef-shark-tooth",
+     "q": 6,
+     "dc": 9,
+     "skill": "Survival",
+     "dice": "2d4"
+    },
+    {
+     "m": "reef-shark-skin",
+     "q": 1,
+     "dc": 8,
+     "skill": "Survival"
+    },
+    {
+     "m": "reef-shark-oil",
+     "q": 1,
+     "dc": 10,
+     "skill": "Medicine"
+    },
+    {
+     "m": "reef-shark-fin",
+     "q": 3,
+     "dc": 8,
+     "skill": "Survival"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "rhinoceros",
+   "name": "Rhinoceros",
+   "type": "beast",
+   "size": "Large",
+   "cr": "2",
+   "env": [
+    "grassland",
+    "desert"
+   ],
+   "blurb": "An armoured, short-sighted charger; its horn and hide are both famously hard.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "rhinoceros-horn",
+     "q": 1,
+     "dc": 11,
+     "skill": "Survival",
+     "note": "Saw it at the base; hacking splinters the fibres."
+    },
+    {
+     "m": "rhinoceros-hide",
+     "q": 1,
+     "dc": 11,
+     "skill": "Survival"
+    },
+    {
+     "m": "rhinoceros-meat",
+     "q": 15,
+     "dc": 8,
+     "skill": "Survival",
+     "dice": "4d6"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "riding-horse",
+   "name": "Riding Horse",
+   "type": "beast",
+   "size": "Large",
+   "cr": "1/4",
+   "env": [
+    "grassland",
+    "hill",
+    "urban"
+   ],
+   "blurb": "The common saddle horse; its parts are workaday goods, but its sinews carry some of its speed.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "pony-hide",
+     "q": 1,
+     "dc": 8,
+     "skill": "Survival"
+    },
+    {
+     "m": "riding-horse-sinew",
+     "q": 2,
+     "dc": 10,
+     "skill": "Survival"
+    },
+    {
+     "m": "horse-meat",
+     "q": 20,
+     "dc": 8,
+     "skill": "Survival",
+     "dice": "5d6"
+    },
+    {
+     "m": "horsehair",
+     "skill": "Survival",
+     "dc": 5,
+     "dice": "1d4",
+     "note": "Tail and mane hair, cut without harm to a living animal too."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "warhorse",
+   "name": "Warhorse",
+   "type": "beast",
+   "size": "Large",
+   "cr": "1/2",
+   "env": [
+    "grassland",
+    "hill",
+    "urban"
+   ],
+   "blurb": "A heavy, battle-trained charger; its heart and hooves carry the reputation of steadfast courage.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "pony-hide",
+     "q": 1,
+     "dc": 8,
+     "skill": "Survival"
+    },
+    {
+     "m": "warhorse-heart",
+     "q": 1,
+     "dc": 11,
+     "skill": "Medicine"
+    },
+    {
+     "m": "warhorse-hoof",
+     "q": 4,
+     "dc": 10,
+     "skill": "Survival"
+    },
+    {
+     "m": "horse-meat",
+     "q": 25,
+     "dc": 8,
+     "skill": "Survival",
+     "dice": "6d6"
+    },
+    {
+     "m": "horsehair",
+     "skill": "Survival",
+     "dc": 5,
+     "dice": "1d4",
+     "note": "Tail and mane hair, cut without harm to a living animal too."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "saber-toothed-tiger",
+   "name": "Saber-Toothed Tiger",
+   "type": "beast",
+   "size": "Large",
+   "cr": "2",
+   "env": [
+    "arctic",
+    "mountain",
+    "grassland",
+    "forest"
+   ],
+   "blurb": "An ice-age cat with dagger-length fangs; its sabres are among the finest natural blades.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "saber-toothed-tiger-fang",
+     "q": 2,
+     "dc": 12,
+     "skill": "Survival",
+     "note": "Must be extracted with the root; cracked sabres are worth a third."
+    },
+    {
+     "m": "saber-toothed-tiger-pelt",
+     "q": 1,
+     "dc": 11,
+     "skill": "Survival"
+    },
+    {
+     "m": "saber-toothed-tiger-claw",
+     "q": 6,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "2d4+2"
+    },
+    {
+     "m": "saber-toothed-tiger-meat",
+     "q": 12,
+     "dc": 8,
+     "skill": "Survival",
+     "dice": "3d6"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "scorpion",
+   "name": "Scorpion",
+   "type": "beast",
+   "size": "Tiny",
+   "cr": "0",
+   "env": [
+    "desert",
+    "hill",
+    "underdark"
+   ],
+   "blurb": "A small, venomous desert arachnid; its stinger is the prize, its shell a curiosity.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "scorpion-stinger",
+     "q": 1,
+     "dc": 11,
+     "skill": "Medicine",
+     "note": "Fail by 5 or more and the barb pierces your glove: you are poisoned as by its sting."
+    },
+    {
+     "m": "scorpion-carapace",
+     "q": 1,
+     "dc": 8,
+     "skill": "Survival"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "sea-horse",
+   "name": "Sea Horse",
+   "type": "beast",
+   "size": "Tiny",
+   "cr": "0",
+   "env": [
+    "underwater",
+    "coast"
+   ],
+   "blurb": "A delicate, drifting fish; dried whole it's an old sailor's charm for safe waters.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "sea-horse-dried",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "note": "Dry it in the sun on a flat stone or it curls unevenly and crumbles."
+    }
+   ],
+   "aka": [
+    "Seahorse"
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "spider",
+   "name": "Spider",
+   "type": "beast",
+   "size": "Tiny",
+   "cr": "0",
+   "env": [
+    "forest",
+    "urban",
+    "ruins",
+    "underdark",
+    "swamp"
+   ],
+   "blurb": "A common web-spinner; its silk and venom are small but steady trade goods.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "spider-silk",
+     "q": 1,
+     "dc": 10,
+     "skill": "Nature",
+     "note": "Spool it from the web and spinnerets together, or it tangles into uselessness."
+    },
+    {
+     "m": "spider-venom",
+     "q": 1,
+     "dc": 11,
+     "skill": "Medicine",
+     "note": "Fail by 5 or more and it bites you on the way: you suffer its poison."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "tiger",
+   "name": "Tiger",
+   "type": "beast",
+   "size": "Large",
+   "cr": "1",
+   "env": [
+    "forest",
+    "grassland",
+    "swamp",
+    "hill"
+   ],
+   "blurb": "A striped, solitary jungle hunter, swift and silent; its pelt and whiskers are sought by the stealthy.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "tiger-pelt",
+     "q": 1,
+     "dc": 11,
+     "skill": "Survival",
+     "note": "Arrow and spear holes ruin its value; best taken from a clean kill."
+    },
+    {
+     "m": "tiger-whiskers",
+     "q": 6,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "2d6"
+    },
+    {
+     "m": "tiger-fang",
+     "q": 4,
+     "dc": 10,
+     "skill": "Survival"
+    },
+    {
+     "m": "tiger-sinew",
+     "q": 2,
+     "dc": 10,
+     "skill": "Survival"
+    },
+    {
+     "m": "tiger-bone",
+     "q": 4,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "1d4+2"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "triceratops",
+   "name": "Triceratops",
+   "type": "beast",
+   "size": "Huge",
+   "cr": "5",
+   "env": [
+    "grassland",
+    "forest",
+    "hill"
+   ],
+   "blurb": "A three-horned herbivore with a bony frill; its armour-grade parts are the pride of any jungle smith.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "triceratops-frill",
+     "q": 1,
+     "dc": 14,
+     "skill": "Survival",
+     "note": "The frill cracks if you pry it before the skin is fully peeled back."
+    },
+    {
+     "m": "triceratops-horn",
+     "q": 2,
+     "dc": 13,
+     "skill": "Survival"
+    },
+    {
+     "m": "triceratops-nose-horn",
+     "q": 1,
+     "dc": 11,
+     "skill": "Survival"
+    },
+    {
+     "m": "triceratops-hide",
+     "q": 1,
+     "dc": 11,
+     "skill": "Survival"
+    },
+    {
+     "m": "triceratops-meat",
+     "q": 40,
+     "dc": 8,
+     "skill": "Survival",
+     "dice": "10d6"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "tyrannosaurus-rex",
+   "name": "Tyrannosaurus Rex",
+   "type": "beast",
+   "size": "Huge",
+   "cr": "8",
+   "env": [
+    "grassland",
+    "forest",
+    "swamp"
+   ],
+   "blurb": "The tyrant lizard, apex of the jungle; its teeth, roar and heart are the stuff of legend among hunters.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "tyrannosaurus-rex-tooth",
+     "q": 4,
+     "dc": 16,
+     "skill": "Survival",
+     "dice": "1d6+2"
+    },
+    {
+     "m": "tyrannosaurus-rex-heart",
+     "q": 1,
+     "dc": 17,
+     "skill": "Medicine",
+     "note": "Needs two harvesters and a saw through the ribcage; a pierced chamber floods it with blood and ruins it."
+    },
+    {
+     "m": "tyrannosaurus-rex-roar-sac",
+     "q": 1,
+     "dc": 14,
+     "skill": "Medicine"
+    },
+    {
+     "m": "tyrannosaurus-rex-hide",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival"
+    },
+    {
+     "m": "tyrannosaurus-rex-meat",
+     "q": 40,
+     "dc": 8,
+     "skill": "Survival",
+     "dice": "10d8"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "vulture",
+   "name": "Vulture",
+   "type": "beast",
+   "size": "Medium",
+   "cr": "0",
+   "env": [
+    "desert",
+    "grassland",
+    "hill",
+    "mountain"
+   ],
+   "blurb": "A bald carrion bird with an iron gut; its stomach and feathers are tied to disease and death lore.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "vulture-feather",
+     "q": 3,
+     "dc": 8,
+     "skill": "Survival",
+     "dice": "1d6"
+    },
+    {
+     "m": "vulture-gizzard",
+     "q": 1,
+     "dc": 11,
+     "skill": "Medicine",
+     "note": "Handle with gloves; the juices burn skin."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "weasel",
+   "name": "Weasel",
+   "type": "beast",
+   "size": "Tiny",
+   "cr": "0",
+   "env": [
+    "forest",
+    "grassland",
+    "hill",
+    "urban"
+   ],
+   "blurb": "A slinky, sharp-nosed predator; its pelt is a small, sleek fur for trim and charms.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "weasel-pelt",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival"
+    },
+    {
+     "m": "weasel-musk-gland",
+     "q": 1,
+     "dc": 11,
+     "skill": "Medicine",
+     "note": "Burst it and you'll reek for a day; hounds and sentries will notice."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "wolf",
+   "name": "Wolf",
+   "type": "beast",
+   "size": "Medium",
+   "cr": "1/4",
+   "env": [
+    "forest",
+    "hill",
+    "grassland",
+    "arctic",
+    "mountain"
+   ],
+   "blurb": "The grey pack hunter; its pelt, fangs and nose are the classic trophies of the ranger.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "wolf-pelt",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "note": "Winter pelts fetch double; summer ones are thin and mangy."
+    },
+    {
+     "m": "wolf-fang",
+     "q": 4,
+     "dc": 9,
+     "skill": "Survival"
+    },
+    {
+     "m": "wolf-nose",
+     "q": 1,
+     "dc": 10,
+     "skill": "Medicine"
+    },
+    {
+     "m": "wolf-meat",
+     "q": 6,
+     "dc": 8,
+     "skill": "Survival",
+     "dice": "2d4"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "swarm-of-bats",
+   "name": "Swarm of Bats",
+   "type": "beast",
+   "size": "Medium",
+   "cr": "1/4",
+   "env": [
+    "underdark",
+    "forest",
+    "ruins",
+    "urban"
+   ],
+   "blurb": "A shrieking cloud of bats; afterwards the cave floor is littered with wings and guano.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "swarm-of-bats-wing-membranes",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "1d4",
+     "note": "Collect only the unbroken ones."
+    },
+    {
+     "m": "swarm-of-bats-guano",
+     "q": 2,
+     "dc": 8,
+     "skill": "Nature",
+     "dice": "1d4",
+     "note": "Wear a cloth over your face; guano dust breeds cave sickness."
+    },
+    {
+     "m": "swarm-of-bats-ears",
+     "q": 1,
+     "dc": 11,
+     "skill": "Medicine"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "swarm-of-beetles",
+   "name": "Swarm of Beetles",
+   "type": "beast",
+   "size": "Medium",
+   "cr": "1/2",
+   "env": [
+    "forest",
+    "swamp",
+    "desert",
+    "ruins",
+    "underdark"
+   ],
+   "blurb": "A clattering carpet of beetles; the fallen yield glittering shell chips and pungent grubs.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "swarm-of-beetles-carapace-chips",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "2d4"
+    },
+    {
+     "m": "swarm-of-beetles-dye",
+     "q": 1,
+     "dc": 9,
+     "skill": "Nature"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "swarm-of-centipedes",
+   "name": "Swarm of Centipedes",
+   "type": "beast",
+   "size": "Medium",
+   "cr": "1/2",
+   "env": [
+    "forest",
+    "swamp",
+    "underdark",
+    "ruins"
+   ],
+   "blurb": "A writhing mass of centipedes whose paralytic bites leave a harvest of tiny venom claws.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "swarm-of-centipedes-venom-claws",
+     "q": 1,
+     "dc": 11,
+     "skill": "Medicine",
+     "dice": "2d4",
+     "note": "Fail by 5 or more and a still-twitching centipede bites you: you are exposed to its poison."
+    },
+    {
+     "m": "swarm-of-centipedes-segments",
+     "q": 1,
+     "dc": 8,
+     "skill": "Survival",
+     "dice": "1d6"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "swarm-of-insects",
+   "name": "Swarm of Insects",
+   "type": "beast",
+   "size": "Medium",
+   "cr": "1/2",
+   "env": [
+    "forest",
+    "swamp",
+    "grassland",
+    "desert"
+   ],
+   "blurb": "A buzzing cloud of biting insects; the dead leave chitin dust and wings for hedge alchemy.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "swarm-of-insects-chitin-dust",
+     "q": 1,
+     "dc": 9,
+     "skill": "Nature",
+     "dice": "1d4"
+    },
+    {
+     "m": "swarm-of-insects-wings",
+     "q": 1,
+     "dc": 10,
+     "skill": "Nature"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "swarm-of-poisonous-snakes",
+   "name": "Swarm of Poisonous Snakes",
+   "type": "beast",
+   "size": "Medium",
+   "cr": "2",
+   "env": [
+    "swamp",
+    "forest",
+    "desert",
+    "ruins"
+   ],
+   "blurb": "A seething knot of vipers; dangerous to harvest, but it yields a rich haul of venom.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "poisonous-snake-venom",
+     "q": 1,
+     "dc": 12,
+     "skill": "Medicine",
+     "dice": "2d4",
+     "note": "Every harvest roll that fails by 5 or more means a surviving snake bites: take its poison."
+    },
+    {
+     "m": "poisonous-snake-fang",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "2d6"
+    },
+    {
+     "m": "poisonous-snake-skin",
+     "q": 1,
+     "dc": 8,
+     "skill": "Survival",
+     "dice": "2d4"
+    }
+   ],
+   "aka": [
+    "Swarm of Venomous Snakes"
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "swarm-of-quippers",
+   "name": "Swarm of Quippers",
+   "type": "beast",
+   "size": "Medium",
+   "cr": "1",
+   "env": [
+    "underwater",
+    "swamp",
+    "forest"
+   ],
+   "blurb": "A frenzied school of flesh-stripping fish; the teeth of the dead are a crafter's windfall.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "quipper-teeth",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "3d6",
+     "note": "Harvest from shore; any blood in the water draws the rest back."
+    },
+    {
+     "m": "quipper-scales",
+     "q": 1,
+     "dc": 8,
+     "skill": "Survival",
+     "dice": "3d6"
+    },
+    {
+     "m": "quipper-meat",
+     "q": 1,
+     "dc": 8,
+     "skill": "Survival",
+     "dice": "2d4"
+    }
+   ],
+   "aka": [
+    "Swarm of Piranhas"
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "swarm-of-rats",
+   "name": "Swarm of Rats",
+   "type": "beast",
+   "size": "Medium",
+   "cr": "1/4",
+   "env": [
+    "urban",
+    "ruins",
+    "underdark",
+    "swamp"
+   ],
+   "blurb": "A squealing tide of rats from the sewers; the haul is filthy but plentiful.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "rat-tail",
+     "q": 1,
+     "dc": 8,
+     "skill": "Survival",
+     "dice": "3d6",
+     "note": "Gloves or a DC 10 Con save against filth fever."
+    },
+    {
+     "m": "rat-incisors",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "2d6"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "swarm-of-ravens",
+   "name": "Swarm of Ravens",
+   "type": "beast",
+   "size": "Medium",
+   "cr": "1/4",
+   "env": [
+    "forest",
+    "hill",
+    "ruins",
+    "shadowfell"
+   ],
+   "blurb": "A storm of black wings and beaks; the fallen birds shed a scribe's fortune in quills.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "raven-feather",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "3d6"
+    },
+    {
+     "m": "raven-tongue",
+     "q": 1,
+     "dc": 11,
+     "skill": "Medicine",
+     "dice": "1d4"
+    },
+    {
+     "m": "raven-eye",
+     "q": 1,
+     "dc": 11,
+     "skill": "Medicine",
+     "dice": "1d4",
+     "note": "Pecked-out eyes are common in a swarm; only a few come intact."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "swarm-of-spiders",
+   "name": "Swarm of Spiders",
+   "type": "beast",
+   "size": "Medium",
+   "cr": "1/2",
+   "env": [
+    "forest",
+    "underdark",
+    "ruins",
+    "swamp"
+   ],
+   "blurb": "A skittering carpet of spiders; their webs and venom sacs can be gathered by the careful.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "spider-silk",
+     "q": 1,
+     "dc": 10,
+     "skill": "Nature",
+     "dice": "2d4"
+    },
+    {
+     "m": "spider-venom",
+     "q": 1,
+     "dc": 12,
+     "skill": "Medicine",
+     "dice": "1d6",
+     "note": "Fail by 5 or more and a survivor bites: you suffer its poison."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "swarm-of-wasps",
+   "name": "Swarm of Wasps",
+   "type": "beast",
+   "size": "Medium",
+   "cr": "1/2",
+   "env": [
+    "forest",
+    "grassland",
+    "hill"
+   ],
+   "blurb": "An angry cloud of wasps, and usually a paper nest nearby worth the risk.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "swarm-of-wasps-stingers",
+     "q": 1,
+     "dc": 11,
+     "skill": "Medicine",
+     "dice": "2d6",
+     "note": "Fail by 5 or more and you're stung repeatedly: take the swarm's poison."
+    },
+    {
+     "m": "swarm-of-wasps-paper-nest",
+     "q": 1,
+     "dc": 10,
+     "skill": "Nature",
+     "note": "Smoke the nest first unless you want another fight."
+    },
+    {
+     "m": "swarm-of-wasps-larvae",
+     "q": 1,
+     "dc": 9,
+     "skill": "Nature",
+     "dice": "1d6"
+    }
+   ],
+   "srd": "5.1"
+  }
+ ]
+}

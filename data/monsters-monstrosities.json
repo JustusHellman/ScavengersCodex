@@ -1,0 +1,4854 @@
+{
+ "materials": [
+  {
+   "id": "aboleth-mucus",
+   "name": "Aboleth Mucus",
+   "tier": "rare",
+   "tags": [
+    "slime",
+    "water",
+    "breathing",
+    "aberration"
+   ],
+   "desc": "Clear, cold slime that clings to skin in a shimmering film; a coating lets lungs draw breath from water.",
+   "perish": "1 day",
+   "value": 150,
+   "recipe": null
+  },
+  {
+   "id": "aboleth-tentacle",
+   "name": "Aboleth Tentacle",
+   "tier": "rare",
+   "tags": [
+    "tentacle",
+    "disease",
+    "water",
+    "aberration"
+   ],
+   "desc": "A thick, rubbery limb whose touch leaves skin translucent and clammy. Used in transformation and waterborne curses.",
+   "perish": "1 day",
+   "value": 790,
+   "recipe": null
+  },
+  {
+   "id": "aboleth-brain",
+   "name": "Aboleth Brain",
+   "tier": "rare",
+   "tags": [
+    "brain",
+    "psychic",
+    "telepathy",
+    "domination",
+    "aberration"
+   ],
+   "desc": "A heavy, three-lobed brain that still hums with stolen memories. The heart of mind-control and telepathy magic.",
+   "perish": "1 hour",
+   "value": 270,
+   "recipe": null
+  },
+  {
+   "id": "aboleth-eye",
+   "name": "Aboleth Eye",
+   "tier": "rare",
+   "tags": [
+    "eye",
+    "senses",
+    "knowledge",
+    "aberration"
+   ],
+   "desc": "A lidless, milky-red orb that seems to watch whoever holds it. Seers grind it into scrying salves.",
+   "perish": "1 hour",
+   "value": 150,
+   "recipe": null
+  },
+  {
+   "id": "aboleth-hide",
+   "name": "Aboleth Hide",
+   "tier": "uncommon",
+   "tags": [
+    "hide",
+    "water",
+    "swimming",
+    "aberration"
+   ],
+   "desc": "Grey-green slick hide that never quite dries. Makes superb waterproof leather.",
+   "perish": "1 day",
+   "value": 240,
+   "recipe": null
+  },
+  {
+   "id": "aboleth-essence",
+   "name": "Aboleth Essence",
+   "tier": "rare",
+   "tags": [
+    "essence",
+    "psychic",
+    "domination",
+    "telepathy",
+    "aberration"
+   ],
+   "desc": "A dim green murk in the vessel that whispers promises; the prime keystone for enslaving or mind-linking magic.",
+   "perish": "1 minute",
+   "value": 1400,
+   "recipe": null
+  },
+  {
+   "id": "androsphinx-mane-hair",
+   "name": "Androsphinx Mane Hair",
+   "tier": "very-rare",
+   "tags": [
+    "hair",
+    "celestial",
+    "blessing",
+    "protection",
+    "monstrosity"
+   ],
+   "desc": "Coarse golden hair that crackles faintly with holy power. Woven into wards and oath-cords.",
+   "perish": "stable",
+   "value": 1200,
+   "recipe": null
+  },
+  {
+   "id": "androsphinx-roar-larynx",
+   "name": "Androsphinx Larynx",
+   "tier": "very-rare",
+   "tags": [
+    "organ",
+    "thunder",
+    "fear",
+    "sound",
+    "monstrosity"
+   ],
+   "desc": "A great ribbed voice-box that still thrums when struck. Fashioned into horns that terrify, deafen and shake stone.",
+   "perish": "1 hour",
+   "value": 1200,
+   "recipe": null
+  },
+  {
+   "id": "androsphinx-claw",
+   "name": "Androsphinx Claw",
+   "tier": "very-rare",
+   "tags": [
+    "claw",
+    "radiant",
+    "strength",
+    "monstrosity"
+   ],
+   "desc": "A pale golden talon as long as a dagger that never dulls. Treasured for holy weapons.",
+   "perish": "stable",
+   "value": 4500,
+   "recipe": null
+  },
+  {
+   "id": "androsphinx-tear",
+   "name": "Androsphinx Tear",
+   "tier": "very-rare",
+   "tags": [
+    "liquid",
+    "time",
+    "knowledge",
+    "truesight",
+    "monstrosity"
+   ],
+   "desc": "A single amber drop that shows glimpses of past and future when held to the eye.",
+   "perish": "1 week",
+   "value": 4800,
+   "recipe": null
+  },
+  {
+   "id": "androsphinx-essence",
+   "name": "Androsphinx Essence",
+   "tier": "very-rare",
+   "tags": [
+    "essence",
+    "celestial",
+    "knowledge",
+    "time",
+    "monstrosity"
+   ],
+   "desc": "Warm golden light that recites riddles in a whisper; the keystone for divination, time and holy guardian magic.",
+   "perish": "1 minute",
+   "value": 11000,
+   "recipe": null
+  },
+  {
+   "id": "ankheg-carapace",
+   "name": "Ankheg Carapace",
+   "tier": "common",
+   "tags": [
+    "carapace",
+    "toughness",
+    "acid",
+    "monstrosity"
+   ],
+   "desc": "Glossy brown chitin plates that shrug off acid. Armourers shape them into light, resilient armour.",
+   "perish": "stable",
+   "value": 45,
+   "recipe": null
+  },
+  {
+   "id": "ankheg-acid-gland",
+   "name": "Ankheg Acid Gland",
+   "tier": "common",
+   "tags": [
+    "gland",
+    "acid",
+    "monstrosity"
+   ],
+   "desc": "A swollen amber sac of stomach acid that fizzes through leather. Base for acid flasks and etching.",
+   "perish": "1 day",
+   "value": 20,
+   "recipe": null
+  },
+  {
+   "id": "ankheg-mandible",
+   "name": "Ankheg Mandible",
+   "tier": "common",
+   "tags": [
+    "claw",
+    "burrowing",
+    "strength",
+    "monstrosity"
+   ],
+   "desc": "Serrated pincers strong enough to crush a horse's leg; make fine picks and digging tools.",
+   "perish": "stable",
+   "value": 2,
+   "recipe": null
+  },
+  {
+   "id": "ankheg-meat",
+   "name": "Ankheg Meat",
+   "tier": "mundane",
+   "tags": [
+    "meat",
+    "food",
+    "monstrosity"
+   ],
+   "desc": "Pale, sweet flesh reminiscent of crab. Farmers fry it as revenge.",
+   "perish": "1 day",
+   "value": 0.07,
+   "recipe": null
+  },
+  {
+   "id": "basilisk-eye",
+   "name": "Basilisk Eye",
+   "tier": "uncommon",
+   "tags": [
+    "eye",
+    "petrification",
+    "earth",
+    "monstrosity"
+   ],
+   "desc": "A dull green orb that still turns flesh grey when you meet its reflection. The iconic reagent for petrification.",
+   "perish": "1 hour",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "basilisk-gizzard-stone",
+   "name": "Basilisk Gizzard Stone",
+   "tier": "uncommon",
+   "tags": [
+    "stone",
+    "petrification",
+    "toughness",
+    "monstrosity"
+   ],
+   "desc": "Polished pebbles swallowed and turned half-magical in the basilisk's gut. Ground into stoneskin and flesh-to-stone brews.",
+   "perish": "stable",
+   "value": 90,
+   "recipe": null
+  },
+  {
+   "id": "basilisk-blood",
+   "name": "Basilisk Blood",
+   "tier": "uncommon",
+   "tags": [
+    "blood",
+    "petrification",
+    "healing",
+    "monstrosity"
+   ],
+   "desc": "Thick, grit-flecked blood; oddly, alchemists refine it into salves that undo petrification.",
+   "perish": "1 hour",
+   "value": 100,
+   "recipe": null
+  },
+  {
+   "id": "basilisk-scale",
+   "name": "Basilisk Scales",
+   "tier": "uncommon",
+   "tags": [
+    "scale",
+    "toughness",
+    "earth",
+    "monstrosity"
+   ],
+   "desc": "Stone-grey scales heavy as slate. Sewn into armour that turns blades.",
+   "perish": "stable",
+   "value": 20,
+   "recipe": null
+  },
+  {
+   "id": "basilisk-fang",
+   "name": "Basilisk Fang",
+   "tier": "common",
+   "tags": [
+    "tooth",
+    "poison",
+    "monstrosity"
+   ],
+   "desc": "A needle-thin fang coated with a mild venom.",
+   "perish": "stable",
+   "value": 24,
+   "recipe": null
+  },
+  {
+   "id": "basilisk-essence",
+   "name": "Basilisk Essence",
+   "tier": "uncommon",
+   "tags": [
+    "essence",
+    "earth",
+    "petrification",
+    "monstrosity"
+   ],
+   "desc": "A heavy, sluggish grey mist that makes the vessel feel like it is turning to stone.",
+   "perish": "1 minute",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "behir-lightning-gland",
+   "name": "Behir Lightning Gland",
+   "tier": "rare",
+   "tags": [
+    "gland",
+    "lightning",
+    "storm",
+    "monstrosity"
+   ],
+   "desc": "A crackling blue sac behind the throat that arcs to nearby metal. The keystone of lightning weapons.",
+   "perish": "1 day",
+   "value": 270,
+   "recipe": null
+  },
+  {
+   "id": "behir-scale",
+   "name": "Behir Scales",
+   "tier": "rare",
+   "tags": [
+    "scale",
+    "lightning",
+    "resistance",
+    "monstrosity"
+   ],
+   "desc": "Electric-blue scales that tingle to the touch. Armour from them grounds lightning harmlessly.",
+   "perish": "stable",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "behir-fang",
+   "name": "Behir Fang",
+   "tier": "rare",
+   "tags": [
+    "tooth",
+    "lightning",
+    "monstrosity"
+   ],
+   "desc": "A curved fang with a faint blue spark trapped inside.",
+   "perish": "stable",
+   "value": 600,
+   "recipe": null
+  },
+  {
+   "id": "behir-claw",
+   "name": "Behir Claws",
+   "tier": "uncommon",
+   "tags": [
+    "claw",
+    "climbing",
+    "strength",
+    "monstrosity"
+   ],
+   "desc": "Hooked climbing claws from its many feet; ideal for climbing gear.",
+   "perish": "stable",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "behir-essence",
+   "name": "Behir Essence",
+   "tier": "rare",
+   "tags": [
+    "essence",
+    "lightning",
+    "storm",
+    "monstrosity"
+   ],
+   "desc": "A jittering thread of blue-white light that crackles loudly against the glass.",
+   "perish": "1 minute",
+   "value": 1600,
+   "recipe": null
+  },
+  {
+   "id": "centaur-longbow",
+   "name": "Centaur Longbow",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "wood",
+    "speed"
+   ],
+   "desc": "A tall, horn-backed bow strung for mounted shooting. Balanced and swift.",
+   "perish": "stable",
+   "value": 45,
+   "recipe": null
+  },
+  {
+   "id": "centaur-herb-pouch",
+   "name": "Centaur Herbal Pouch",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "herb",
+    "healing"
+   ],
+   "desc": "A beaded leather pouch of dried plains herbs for poultices and trail-teas.",
+   "perish": "1 week",
+   "value": 11,
+   "recipe": null
+  },
+  {
+   "id": "centaur-quiver",
+   "name": "Centaur Quiver",
+   "tier": "mundane",
+   "tags": [
+    "salvage",
+    "leather"
+   ],
+   "desc": "A long quiver of fletched arrows and bright trade beads.",
+   "perish": "stable",
+   "value": 5,
+   "recipe": null
+  },
+  {
+   "id": "chimera-fire-gland",
+   "name": "Chimera Fire Gland",
+   "tier": "uncommon",
+   "tags": [
+    "gland",
+    "fire",
+    "monstrosity"
+   ],
+   "desc": "A sooty, egg-shaped gland from the dragon head; breathes fire when squeezed. Base for fire flasks and flame weapons.",
+   "perish": "1 day",
+   "value": 270,
+   "recipe": null
+  },
+  {
+   "id": "chimera-goat-horn",
+   "name": "Chimera Goat Horn",
+   "tier": "uncommon",
+   "tags": [
+    "horn",
+    "strength",
+    "monstrosity"
+   ],
+   "desc": "A twisted ram's horn scorched black at the tips. Makes battering helms and hunting horns.",
+   "perish": "stable",
+   "value": 340,
+   "recipe": null
+  },
+  {
+   "id": "chimera-lion-mane",
+   "name": "Chimera Lion Mane",
+   "tier": "uncommon",
+   "tags": [
+    "fur",
+    "fear",
+    "monstrosity"
+   ],
+   "desc": "Coarse tawny mane that bristles when wolves are near. Worn by warlords to cow their foes.",
+   "perish": "1 day",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "chimera-dragon-scale",
+   "name": "Chimera Dragon Scales",
+   "tier": "uncommon",
+   "tags": [
+    "scale",
+    "fire",
+    "resistance",
+    "monstrosity"
+   ],
+   "desc": "Red-black scales from the draconic neck, warm and fire-proof.",
+   "perish": "stable",
+   "value": 36,
+   "recipe": null
+  },
+  {
+   "id": "chimera-essence",
+   "name": "Chimera Essence",
+   "tier": "uncommon",
+   "tags": [
+    "essence",
+    "fire",
+    "primal",
+    "strength",
+    "monstrosity"
+   ],
+   "desc": "A snarling, tri-coloured smoke that butts against the glass.",
+   "perish": "1 minute",
+   "value": 120,
+   "recipe": null
+  },
+  {
+   "id": "chuul-tentacle",
+   "name": "Chuul Paralytic Tentacles",
+   "tier": "uncommon",
+   "tags": [
+    "tentacle",
+    "paralysis",
+    "poison",
+    "aberration"
+   ],
+   "desc": "A tangle of pale feelers that still twitch; their slime numbs skin instantly. Distilled into paralytic poisons.",
+   "perish": "1 day",
+   "value": 120,
+   "recipe": null
+  },
+  {
+   "id": "chuul-carapace",
+   "name": "Chuul Carapace",
+   "tier": "uncommon",
+   "tags": [
+    "carapace",
+    "toughness",
+    "water",
+    "aberration"
+   ],
+   "desc": "Heavy mottled shell plates with a nacreous inner surface. Superb for underwater armour.",
+   "perish": "stable",
+   "value": 400,
+   "recipe": null
+  },
+  {
+   "id": "chuul-pincer",
+   "name": "Chuul Pincer",
+   "tier": "uncommon",
+   "tags": [
+    "claw",
+    "strength",
+    "aberration"
+   ],
+   "desc": "A crushing claw the size of a shield; can be mounted as a grappling weapon.",
+   "perish": "stable",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "chuul-antennae",
+   "name": "Chuul Antennae",
+   "tier": "uncommon",
+   "tags": [
+    "organ",
+    "senses",
+    "arcane",
+    "aberration"
+   ],
+   "desc": "Delicate feelers that twitch toward magic. Used in detect-magic lenses and wands.",
+   "perish": "1 day",
+   "value": 100,
+   "recipe": null
+  },
+  {
+   "id": "chuul-essence",
+   "name": "Chuul Essence",
+   "tier": "uncommon",
+   "tags": [
+    "essence",
+    "water",
+    "arcane",
+    "senses",
+    "aberration"
+   ],
+   "desc": "A pearly swirl that drifts toward any enchanted object nearby.",
+   "perish": "1 minute",
+   "value": 190,
+   "recipe": null
+  },
+  {
+   "id": "cloaker-hide",
+   "name": "Cloaker Hide",
+   "tier": "rare",
+   "tags": [
+    "hide",
+    "shadow",
+    "stealth",
+    "aberration"
+   ],
+   "desc": "A supple black hide that seems to drink lamplight. The ideal base for cloaks of shadow and concealment.",
+   "perish": "1 day",
+   "value": 1700,
+   "recipe": null
+  },
+  {
+   "id": "cloaker-moan-sac",
+   "name": "Cloaker Moan Sac",
+   "tier": "rare",
+   "tags": [
+    "organ",
+    "psychic",
+    "fear",
+    "sound",
+    "aberration"
+   ],
+   "desc": "A ribbed throat sac that produces a sub-audible groan when squeezed. Makes horns of dread.",
+   "perish": "1 day",
+   "value": 210,
+   "recipe": null
+  },
+  {
+   "id": "cloaker-eye",
+   "name": "Cloaker Eyes",
+   "tier": "rare",
+   "tags": [
+    "eye",
+    "darkvision",
+    "illusion",
+    "aberration"
+   ],
+   "desc": "Glowing red eyes set like brooch-gems; they see perfectly in pitch dark.",
+   "perish": "1 hour",
+   "value": 150,
+   "recipe": null
+  },
+  {
+   "id": "cloaker-tail-spine",
+   "name": "Cloaker Tail Spine",
+   "tier": "uncommon",
+   "tags": [
+    "bone",
+    "shadow",
+    "aberration"
+   ],
+   "desc": "A whip-like bony tail tip, black as jet.",
+   "perish": "stable",
+   "value": 400,
+   "recipe": null
+  },
+  {
+   "id": "cloaker-essence",
+   "name": "Cloaker Essence",
+   "tier": "rare",
+   "tags": [
+    "essence",
+    "shadow",
+    "illusion",
+    "fear",
+    "aberration"
+   ],
+   "desc": "A flickering dark shape that doubles and blurs inside the vessel.",
+   "perish": "1 minute",
+   "value": 240,
+   "recipe": null
+  },
+  {
+   "id": "cockatrice-feather",
+   "name": "Cockatrice Feathers",
+   "tier": "common",
+   "tags": [
+    "feather",
+    "petrification",
+    "monstrosity"
+   ],
+   "desc": "Dull, stiff feathers that feel faintly like grit. Used to fletch arrows that slow and stiffen.",
+   "perish": "stable",
+   "value": 14,
+   "recipe": null
+  },
+  {
+   "id": "cockatrice-beak",
+   "name": "Cockatrice Beak",
+   "tier": "common",
+   "tags": [
+    "tooth",
+    "petrification",
+    "earth",
+    "monstrosity"
+   ],
+   "desc": "A hooked grey beak crusted with mineral residue; its saliva ducts still petrify.",
+   "perish": "stable",
+   "value": 29,
+   "recipe": null
+  },
+  {
+   "id": "cockatrice-egg",
+   "name": "Cockatrice Egg",
+   "tier": "common",
+   "tags": [
+    "organ",
+    "petrification",
+    "reagent",
+    "monstrosity"
+   ],
+   "desc": "A leathery egg that is cold and heavy as a river stone.",
+   "perish": "1 week",
+   "value": 28,
+   "recipe": null
+  },
+  {
+   "id": "cockatrice-essence",
+   "name": "Cockatrice Essence",
+   "tier": "common",
+   "tags": [
+    "essence",
+    "earth",
+    "petrification",
+    "monstrosity"
+   ],
+   "desc": "A faint gritty haze that settles like dust on the vessel walls.",
+   "perish": "1 minute",
+   "value": 36,
+   "recipe": null
+  },
+  {
+   "id": "darkmantle-darkness-gland",
+   "name": "Darkmantle Darkness Gland",
+   "tier": "common",
+   "tags": [
+    "gland",
+    "shadow",
+    "stealth",
+    "monstrosity"
+   ],
+   "desc": "A black, velvety nodule; pinching it releases a puff of unnatural darkness. Used in dark-powder and shadow ink.",
+   "perish": "1 day",
+   "value": 34,
+   "recipe": null
+  },
+  {
+   "id": "darkmantle-mantle",
+   "name": "Darkmantle Mantle",
+   "tier": "common",
+   "tags": [
+    "hide",
+    "shadow",
+    "monstrosity"
+   ],
+   "desc": "A thin, rubbery skin like a wet umbrella. Makes light-swallowing hoods.",
+   "perish": "1 day",
+   "value": 46,
+   "recipe": null
+  },
+  {
+   "id": "darkmantle-tentacle",
+   "name": "Darkmantle Tentacles",
+   "tier": "mundane",
+   "tags": [
+    "tentacle",
+    "food",
+    "monstrosity"
+   ],
+   "desc": "Short, rubbery tentacles; chewy but edible if boiled.",
+   "perish": "1 day",
+   "value": 0.05,
+   "recipe": null
+  },
+  {
+   "id": "death-dog-fang",
+   "name": "Death Dog Fangs",
+   "tier": "common",
+   "tags": [
+    "tooth",
+    "disease",
+    "monstrosity"
+   ],
+   "desc": "Yellowed fangs pitted with rot. Grounds for plague-bane remedies — and plague poisons.",
+   "perish": "stable",
+   "value": 9,
+   "recipe": null
+  },
+  {
+   "id": "death-dog-saliva",
+   "name": "Death Dog Saliva",
+   "tier": "common",
+   "tags": [
+    "liquid",
+    "disease",
+    "poison",
+    "monstrosity"
+   ],
+   "desc": "Grey, foul-smelling drool thick with sickness.",
+   "perish": "1 day",
+   "value": 22,
+   "recipe": null
+  },
+  {
+   "id": "death-dog-pelt",
+   "name": "Death Dog Pelt",
+   "tier": "mundane",
+   "tags": [
+    "fur",
+    "hide",
+    "monstrosity"
+   ],
+   "desc": "Patchy, mangy dun fur; cheap and rather unpleasant.",
+   "perish": "1 day",
+   "value": 5,
+   "recipe": null
+  },
+  {
+   "id": "death-dog-skull",
+   "name": "Death Dog Twin Skull",
+   "tier": "common",
+   "tags": [
+    "skull",
+    "senses",
+    "fear",
+    "monstrosity"
+   ],
+   "desc": "A fused two-headed skull; shamans hang them as wards against ambush.",
+   "perish": "stable",
+   "value": 32,
+   "recipe": null
+  },
+  {
+   "id": "doppelganger-skin",
+   "name": "Doppelganger Skin",
+   "tier": "uncommon",
+   "tags": [
+    "hide",
+    "shapechange",
+    "illusion",
+    "monstrosity"
+   ],
+   "desc": "Grey, rubbery skin that ripples and faintly takes on the colour of whoever holds it. Makes masks and disguise cloaks.",
+   "perish": "1 day",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "doppelganger-brain",
+   "name": "Doppelganger Brain",
+   "tier": "uncommon",
+   "tags": [
+    "brain",
+    "telepathy",
+    "psychic",
+    "monstrosity"
+   ],
+   "desc": "A smooth, almost featureless brain; mind-readers distil surface-thought potions from it.",
+   "perish": "1 hour",
+   "value": 90,
+   "recipe": null
+  },
+  {
+   "id": "doppelganger-blood",
+   "name": "Doppelganger Blood",
+   "tier": "uncommon",
+   "tags": [
+    "blood",
+    "shapechange",
+    "monstrosity"
+   ],
+   "desc": "Colourless blood that takes on the hue of any vessel it's poured into.",
+   "perish": "1 hour",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "doppelganger-essence",
+   "name": "Doppelganger Essence",
+   "tier": "uncommon",
+   "tags": [
+    "essence",
+    "shapechange",
+    "illusion",
+    "monstrosity"
+   ],
+   "desc": "A shifting grey mist that forms half-familiar faces.",
+   "perish": "1 minute",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "drider-silk-gland",
+   "name": "Drider Silk Gland",
+   "tier": "uncommon",
+   "tags": [
+    "gland",
+    "silk",
+    "climbing",
+    "monstrosity"
+   ],
+   "desc": "A pearly spinneret pouch still full of fine grey silk. Spins thread for climbing cords and dark cloaks.",
+   "perish": "1 day",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "drider-venom",
+   "name": "Drider Venom",
+   "tier": "uncommon",
+   "tags": [
+    "venom",
+    "poison",
+    "monstrosity"
+   ],
+   "desc": "A dark, oily poison from the drider's fangs.",
+   "perish": "1 day",
+   "value": 60,
+   "recipe": null
+  },
+  {
+   "id": "drider-blade",
+   "name": "Drider Poisoned Blade",
+   "tier": "uncommon",
+   "tags": [
+    "salvage",
+    "metal",
+    "poison",
+    "monstrosity"
+   ],
+   "desc": "A wicked drow longsword with a groove along the fuller still slick with poison.",
+   "perish": "stable",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "drider-carapace",
+   "name": "Drider Carapace",
+   "tier": "uncommon",
+   "tags": [
+    "carapace",
+    "shadow",
+    "toughness",
+    "monstrosity"
+   ],
+   "desc": "Black, glossy chitin from the spider half; light and stiff.",
+   "perish": "stable",
+   "value": 220,
+   "recipe": null
+  },
+  {
+   "id": "drider-essence",
+   "name": "Drider Essence",
+   "tier": "uncommon",
+   "tags": [
+    "essence",
+    "shadow",
+    "curse",
+    "monstrosity"
+   ],
+   "desc": "A bitter violet smoke with eight grasping tendrils.",
+   "perish": "1 minute",
+   "value": 400,
+   "recipe": null
+  },
+  {
+   "id": "ettercap-silk-gland",
+   "name": "Ettercap Silk Gland",
+   "tier": "common",
+   "tags": [
+    "gland",
+    "silk",
+    "binding",
+    "monstrosity"
+   ],
+   "desc": "A sticky, pale bladder of web-stuff. Spun into snares and trap-lines.",
+   "perish": "1 day",
+   "value": 36,
+   "recipe": null
+  },
+  {
+   "id": "ettercap-venom",
+   "name": "Ettercap Venom",
+   "tier": "common",
+   "tags": [
+    "venom",
+    "poison",
+    "monstrosity"
+   ],
+   "desc": "A thin, greenish venom from its fangs that sickens and weakens. A cheap, reliable base for blade poisons.",
+   "perish": "1 day",
+   "value": 14,
+   "recipe": null
+  },
+  {
+   "id": "ettercap-web-silk",
+   "name": "Ettercap Webbing",
+   "tier": "common",
+   "tags": [
+    "silk",
+    "thread",
+    "binding",
+    "monstrosity"
+   ],
+   "desc": "Thick strands scraped from its nest; strong as rope once treated.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "gibbering-mouther-tongue",
+   "name": "Gibbering Mouther Tongues",
+   "tier": "common",
+   "tags": [
+    "tongue",
+    "madness",
+    "psychic",
+    "aberration"
+   ],
+   "desc": "A bundle of twitching tongues that sometimes still mumble. Used in confusion and madness draughts.",
+   "perish": "1 day",
+   "value": 15,
+   "recipe": null
+  },
+  {
+   "id": "gibbering-mouther-eye",
+   "name": "Gibbering Mouther Eyes",
+   "tier": "common",
+   "tags": [
+    "eye",
+    "senses",
+    "madness",
+    "aberration"
+   ],
+   "desc": "Mismatched eyeballs of every colour; oddly, they see in the dark.",
+   "perish": "1 hour",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "gibbering-mouther-flesh",
+   "name": "Gibbering Mouther Flesh",
+   "tier": "common",
+   "tags": [
+    "organ",
+    "earth",
+    "binding",
+    "aberration"
+   ],
+   "desc": "Doughy flesh that turns the ground to sticky mire when pressed down.",
+   "perish": "1 day",
+   "value": 3,
+   "recipe": null
+  },
+  {
+   "id": "gibbering-mouther-essence",
+   "name": "Gibbering Mouther Essence",
+   "tier": "common",
+   "tags": [
+    "essence",
+    "psychic",
+    "madness",
+    "aberration"
+   ],
+   "desc": "A chattering swirl that sounds like a hundred distant voices.",
+   "perish": "1 minute",
+   "value": 26,
+   "recipe": null
+  },
+  {
+   "id": "gorgon-breath-gland",
+   "name": "Gorgon Breath Gland",
+   "tier": "uncommon",
+   "tags": [
+    "gland",
+    "petrification",
+    "air",
+    "monstrosity"
+   ],
+   "desc": "A heavy iron-grey lung sac that exhales a greenish vapour; the keystone for petrifying breath and stone gas.",
+   "perish": "1 day",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "gorgon-iron-hide",
+   "name": "Gorgon Iron Hide",
+   "tier": "uncommon",
+   "tags": [
+    "metal",
+    "hide",
+    "toughness",
+    "monstrosity"
+   ],
+   "desc": "Overlapping plates of living iron; smiths work it into superb heavy armour.",
+   "perish": "stable",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "gorgon-horn",
+   "name": "Gorgon Horns",
+   "tier": "uncommon",
+   "tags": [
+    "horn",
+    "metal",
+    "strength",
+    "monstrosity"
+   ],
+   "desc": "Steel-hard horns for trampling charges.",
+   "perish": "stable",
+   "value": 400,
+   "recipe": null
+  },
+  {
+   "id": "gorgon-essence",
+   "name": "Gorgon Essence",
+   "tier": "uncommon",
+   "tags": [
+    "essence",
+    "earth",
+    "petrification",
+    "toughness",
+    "monstrosity"
+   ],
+   "desc": "A dense green-grey fog that clicks against the glass like pebbles.",
+   "perish": "1 minute",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "grick-beak",
+   "name": "Grick Beak",
+   "tier": "common",
+   "tags": [
+    "tooth",
+    "strength",
+    "monstrosity"
+   ],
+   "desc": "A sharp, horn-coloured beak that crushes bone. Carved into picks and war-hooks.",
+   "perish": "stable",
+   "value": 2,
+   "recipe": null
+  },
+  {
+   "id": "grick-hide",
+   "name": "Grick Hide",
+   "tier": "common",
+   "tags": [
+    "hide",
+    "stealth",
+    "earth",
+    "monstrosity"
+   ],
+   "desc": "Rough, stone-mottled skin that blends into rock.",
+   "perish": "1 day",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "grick-tentacle",
+   "name": "Grick Tentacles",
+   "tier": "mundane",
+   "tags": [
+    "tentacle",
+    "food",
+    "monstrosity"
+   ],
+   "desc": "Four stubby head-tentacles; rubbery bait for cave fishing.",
+   "perish": "1 day",
+   "value": 0.05,
+   "recipe": null
+  },
+  {
+   "id": "griffon-feather",
+   "name": "Griffon Feathers",
+   "tier": "common",
+   "tags": [
+    "feather",
+    "flight",
+    "air",
+    "monstrosity"
+   ],
+   "desc": "Broad golden-brown flight feathers. Fletching and flight charms.",
+   "perish": "stable",
+   "value": 28,
+   "recipe": null
+  },
+  {
+   "id": "griffon-talon",
+   "name": "Griffon Talons",
+   "tier": "common",
+   "tags": [
+    "claw",
+    "strength",
+    "monstrosity"
+   ],
+   "desc": "Hooked eagle talons as long as a finger, built to lift a horse. Set into grappling hooks and gauntlets for an iron grip.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "griffon-egg",
+   "name": "Griffon Egg",
+   "tier": "uncommon",
+   "tags": [
+    "organ",
+    "flight",
+    "monstrosity"
+   ],
+   "desc": "A speckled egg; hatchlings raised by hand become loyal mounts.",
+   "perish": "1 week",
+   "value": 120,
+   "recipe": null
+  },
+  {
+   "id": "griffon-pelt",
+   "name": "Griffon Pelt",
+   "tier": "common",
+   "tags": [
+    "fur",
+    "hide",
+    "monstrosity"
+   ],
+   "desc": "Tawny lion pelt with a feathered ruff.",
+   "perish": "1 day",
+   "value": 1,
+   "recipe": null
+  },
+  {
+   "id": "guardian-naga-spit-gland",
+   "name": "Guardian Naga Spit Gland",
+   "tier": "rare",
+   "tags": [
+    "gland",
+    "venom",
+    "poison",
+    "monstrosity"
+   ],
+   "desc": "A golden-green gland holding a burning, spray-ready venom.",
+   "perish": "1 day",
+   "value": 150,
+   "recipe": null
+  },
+  {
+   "id": "guardian-naga-scale",
+   "name": "Guardian Naga Scales",
+   "tier": "rare",
+   "tags": [
+    "scale",
+    "celestial",
+    "protection",
+    "monstrosity"
+   ],
+   "desc": "Gold-and-green scales with a gentle shimmer. Woven into holy wards.",
+   "perish": "stable",
+   "value": 1500,
+   "recipe": null
+  },
+  {
+   "id": "guardian-naga-heart",
+   "name": "Guardian Naga Heart",
+   "tier": "rare",
+   "tags": [
+    "heart",
+    "regeneration",
+    "blessing",
+    "monstrosity"
+   ],
+   "desc": "A great, softly glowing heart. Unless blessed and destroyed, the naga may return — some priests keep it in trust.",
+   "perish": "1 hour",
+   "value": 500,
+   "recipe": null
+  },
+  {
+   "id": "guardian-naga-essence",
+   "name": "Guardian Naga Essence",
+   "tier": "rare",
+   "tags": [
+    "essence",
+    "celestial",
+    "protection",
+    "blessing",
+    "monstrosity"
+   ],
+   "desc": "A calm golden coil of light that hums like a hymn.",
+   "perish": "1 minute",
+   "value": 1800,
+   "recipe": null
+  },
+  {
+   "id": "gynosphinx-feather",
+   "name": "Gynosphinx Feather",
+   "tier": "rare",
+   "tags": [
+    "feather",
+    "knowledge",
+    "truesight",
+    "monstrosity"
+   ],
+   "desc": "A wing feather that shows hidden truths when looked through edgewise. Only gifted or shed feathers keep their power.",
+   "perish": "stable",
+   "value": 1000,
+   "recipe": null
+  },
+  {
+   "id": "gynosphinx-eye",
+   "name": "Gynosphinx Eye",
+   "tier": "rare",
+   "tags": [
+    "eye",
+    "truesight",
+    "knowledge",
+    "monstrosity"
+   ],
+   "desc": "A golden eye with a starry iris; seers polish it into lenses of true seeing.",
+   "perish": "1 hour",
+   "value": 750,
+   "recipe": null
+  },
+  {
+   "id": "gynosphinx-claw",
+   "name": "Gynosphinx Claw",
+   "tier": "rare",
+   "tags": [
+    "claw",
+    "radiant",
+    "monstrosity"
+   ],
+   "desc": "A pale golden claw marked with tiny glyphs.",
+   "perish": "stable",
+   "value": 2000,
+   "recipe": null
+  },
+  {
+   "id": "gynosphinx-tear",
+   "name": "Gynosphinx Tear",
+   "tier": "rare",
+   "tags": [
+    "liquid",
+    "time",
+    "knowledge",
+    "monstrosity"
+   ],
+   "desc": "A shimmering drop that shows fleeting visions of the past.",
+   "perish": "1 week",
+   "value": 270,
+   "recipe": null
+  },
+  {
+   "id": "gynosphinx-essence",
+   "name": "Gynosphinx Essence",
+   "tier": "rare",
+   "tags": [
+    "essence",
+    "celestial",
+    "knowledge",
+    "time",
+    "monstrosity"
+   ],
+   "desc": "A spiralling golden mote that murmurs unanswered riddles.",
+   "perish": "1 minute",
+   "value": 1600,
+   "recipe": null
+  },
+  {
+   "id": "harpy-vocal-cords",
+   "name": "Harpy Vocal Cords",
+   "tier": "common",
+   "tags": [
+    "organ",
+    "charm",
+    "sound",
+    "monstrosity"
+   ],
+   "desc": "Silvery, delicate cords that hum a lingering note when plucked. Strung into luring instruments and charm-songs.",
+   "perish": "1 day",
+   "value": 36,
+   "recipe": null
+  },
+  {
+   "id": "harpy-feather",
+   "name": "Harpy Feathers",
+   "tier": "common",
+   "tags": [
+    "feather",
+    "flight",
+    "monstrosity"
+   ],
+   "desc": "Greasy grey-brown feathers that smell of carrion yet thrum faintly when wind crosses them. Fletchers use them for cheap flight charms and luring whistles.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "harpy-talon",
+   "name": "Harpy Talons",
+   "tier": "common",
+   "tags": [
+    "claw",
+    "monstrosity"
+   ],
+   "desc": "Filthy hooked talons, sharp as knives and never quite clean. Set into grapnel hooks and cruel hand-claws.",
+   "perish": "stable",
+   "value": 3,
+   "recipe": null
+  },
+  {
+   "id": "harpy-essence",
+   "name": "Harpy Essence",
+   "tier": "common",
+   "tags": [
+    "essence",
+    "charm",
+    "sound",
+    "monstrosity"
+   ],
+   "desc": "A pale mist that sings a faint, beguiling tune.",
+   "perish": "1 minute",
+   "value": 26,
+   "recipe": null
+  },
+  {
+   "id": "hippogriff-feather",
+   "name": "Hippogriff Feathers",
+   "tier": "common",
+   "tags": [
+    "feather",
+    "flight",
+    "speed",
+    "monstrosity"
+   ],
+   "desc": "Long white-and-brown quills. Popular for fletching and feather-fall charms.",
+   "perish": "stable",
+   "value": 20,
+   "recipe": null
+  },
+  {
+   "id": "hippogriff-hide",
+   "name": "Hippogriff Hide",
+   "tier": "mundane",
+   "tags": [
+    "hide",
+    "monstrosity"
+   ],
+   "desc": "Horse-like hide, durable and plain.",
+   "perish": "1 day",
+   "value": 1,
+   "recipe": null
+  },
+  {
+   "id": "hippogriff-meat",
+   "name": "Hippogriff Meat",
+   "tier": "mundane",
+   "tags": [
+    "meat",
+    "food",
+    "monstrosity"
+   ],
+   "desc": "Dark, lean meat, like game fowl.",
+   "perish": "1 day",
+   "value": 0.07,
+   "recipe": null
+  },
+  {
+   "id": "hydra-heart",
+   "name": "Hydra Heart",
+   "tier": "rare",
+   "tags": [
+    "heart",
+    "regeneration",
+    "monstrosity"
+   ],
+   "desc": "A huge, multi-chambered heart that keeps beating in the jar. The finest keystone for regeneration magic.",
+   "perish": "1 hour",
+   "value": 1600,
+   "recipe": null
+  },
+  {
+   "id": "hydra-regen-tissue",
+   "name": "Hydra Regenerating Flesh",
+   "tier": "rare",
+   "tags": [
+    "meat",
+    "regeneration",
+    "healing",
+    "monstrosity"
+   ],
+   "desc": "Glistening flesh that knits back together when cut. Must be seared with fire to stop it budding new heads.",
+   "perish": "1 day",
+   "value": 750,
+   "recipe": null
+  },
+  {
+   "id": "hydra-scale",
+   "name": "Hydra Scales",
+   "tier": "rare",
+   "tags": [
+    "scale",
+    "water",
+    "toughness",
+    "monstrosity"
+   ],
+   "desc": "Slick green-bronze scales that regrow when chipped.",
+   "perish": "stable",
+   "value": 340,
+   "recipe": null
+  },
+  {
+   "id": "hydra-fang",
+   "name": "Hydra Fangs",
+   "tier": "uncommon",
+   "tags": [
+    "tooth",
+    "poison",
+    "monstrosity"
+   ],
+   "desc": "Rows of backward-curved fangs; each head offers a handful.",
+   "perish": "stable",
+   "value": 120,
+   "recipe": null
+  },
+  {
+   "id": "hydra-blood",
+   "name": "Hydra Blood",
+   "tier": "rare",
+   "tags": [
+    "blood",
+    "regeneration",
+    "poison",
+    "monstrosity"
+   ],
+   "desc": "Dark green blood, both healing and venomous depending on how it's refined.",
+   "perish": "1 hour",
+   "value": 1200,
+   "recipe": null
+  },
+  {
+   "id": "hydra-essence",
+   "name": "Hydra Essence",
+   "tier": "rare",
+   "tags": [
+    "essence",
+    "primal",
+    "regeneration",
+    "monstrosity"
+   ],
+   "desc": "A mist that keeps dividing into more tendrils the more you watch it.",
+   "perish": "1 minute",
+   "value": 1800,
+   "recipe": null
+  },
+  {
+   "id": "kraken-ink",
+   "name": "Kraken Ink",
+   "tier": "legendary",
+   "tags": [
+    "ink",
+    "shadow",
+    "water",
+    "monstrosity"
+   ],
+   "desc": "Vast quantities of jet-black ink that swallow light entirely. The ultimate scribing medium for storm and sea spells.",
+   "perish": "1 week",
+   "value": 15000,
+   "recipe": null
+  },
+  {
+   "id": "kraken-beak",
+   "name": "Kraken Beak",
+   "tier": "legendary",
+   "tags": [
+    "tooth",
+    "strength",
+    "water",
+    "monstrosity"
+   ],
+   "desc": "A black, shipwrecking beak as large as a cart. Carved into weapons that split hulls.",
+   "perish": "stable",
+   "value": 60000,
+   "recipe": null
+  },
+  {
+   "id": "kraken-tentacle",
+   "name": "Kraken Tentacle",
+   "tier": "legendary",
+   "tags": [
+    "tentacle",
+    "strength",
+    "binding",
+    "monstrosity"
+   ],
+   "desc": "A single sucker-lined limb as long as a ship's mast. Its grip is unbreakable.",
+   "perish": "1 day",
+   "value": 22000,
+   "recipe": null
+  },
+  {
+   "id": "kraken-storm-organ",
+   "name": "Kraken Storm Organ",
+   "tier": "legendary",
+   "tags": [
+    "organ",
+    "storm",
+    "lightning",
+    "water",
+    "monstrosity"
+   ],
+   "desc": "A pulsing blue organ near the brain that crackles like a sea squall. The keystone of storm magic.",
+   "perish": "1 day",
+   "value": 32000,
+   "recipe": null
+  },
+  {
+   "id": "kraken-eye",
+   "name": "Kraken Eye",
+   "tier": "legendary",
+   "tags": [
+    "eye",
+    "senses",
+    "darkvision",
+    "monstrosity"
+   ],
+   "desc": "A barrel-sized eye that sees through black water; seers polish its lens for deep scrying.",
+   "perish": "1 hour",
+   "value": 40000,
+   "recipe": null
+  },
+  {
+   "id": "kraken-hide",
+   "name": "Kraken Hide",
+   "tier": "very-rare",
+   "tags": [
+    "hide",
+    "water",
+    "swimming",
+    "monstrosity"
+   ],
+   "desc": "Mottled red-grey hide that changes colour slowly after death.",
+   "perish": "1 day",
+   "value": 18000,
+   "recipe": null
+  },
+  {
+   "id": "kraken-essence",
+   "name": "Kraken Essence",
+   "tier": "legendary",
+   "tags": [
+    "essence",
+    "water",
+    "storm",
+    "domination",
+    "monstrosity"
+   ],
+   "desc": "A roiling miniature storm that batters the vessel walls.",
+   "perish": "1 minute",
+   "value": 25000,
+   "recipe": null
+  },
+  {
+   "id": "lamia-claw",
+   "name": "Lamia Claws",
+   "tier": "uncommon",
+   "tags": [
+    "claw",
+    "curse",
+    "monstrosity"
+   ],
+   "desc": "Elegant, gilded claws whose touch clouds the mind.",
+   "perish": "stable",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "lamia-tongue",
+   "name": "Lamia Tongue",
+   "tier": "uncommon",
+   "tags": [
+    "tongue",
+    "charm",
+    "illusion",
+    "monstrosity"
+   ],
+   "desc": "A sweet-scented tongue used in potions of persuasion and glamour.",
+   "perish": "1 day",
+   "value": 150,
+   "recipe": null
+  },
+  {
+   "id": "lamia-pelt",
+   "name": "Lamia Pelt",
+   "tier": "uncommon",
+   "tags": [
+    "fur",
+    "hide",
+    "monstrosity"
+   ],
+   "desc": "A sleek golden lion pelt, warm and luxurious, faintly perfumed even after tanning. Made into rich mantles and rugs for the vain.",
+   "perish": "1 day",
+   "value": 120,
+   "recipe": null
+  },
+  {
+   "id": "lamia-heart",
+   "name": "Lamia Heart",
+   "tier": "uncommon",
+   "tags": [
+    "heart",
+    "illusion",
+    "charm",
+    "monstrosity"
+   ],
+   "desc": "A heart whose outline seems to shift in lamplight, never quite the same shape twice. Illusionists and charm-brewers render it into glamours.",
+   "perish": "1 hour",
+   "value": 60,
+   "recipe": null
+  },
+  {
+   "id": "lamia-essence",
+   "name": "Lamia Essence",
+   "tier": "uncommon",
+   "tags": [
+    "essence",
+    "illusion",
+    "charm",
+    "curse",
+    "monstrosity"
+   ],
+   "desc": "A seductive, perfumed shimmer that shows you what you desire.",
+   "perish": "1 minute",
+   "value": 140,
+   "recipe": null
+  },
+  {
+   "id": "manticore-tail-spike",
+   "name": "Manticore Tail Spikes",
+   "tier": "uncommon",
+   "tags": [
+    "stinger",
+    "bone",
+    "monstrosity"
+   ],
+   "desc": "Iron-hard spikes the length of a forearm. Fletchers fashion them into brutal arrowheads and darts.",
+   "perish": "stable",
+   "value": 33,
+   "recipe": null
+  },
+  {
+   "id": "manticore-wing",
+   "name": "Manticore Wing Membrane",
+   "tier": "uncommon",
+   "tags": [
+    "wing",
+    "flight",
+    "monstrosity"
+   ],
+   "desc": "A leathery, bat-like wing membrane veined with dark blood vessels. Stretched over frames for gliding cloaks and flight charms.",
+   "perish": "1 day",
+   "value": 140,
+   "recipe": null
+  },
+  {
+   "id": "manticore-mane",
+   "name": "Manticore Mane",
+   "tier": "uncommon",
+   "tags": [
+    "fur",
+    "fear",
+    "monstrosity"
+   ],
+   "desc": "A dark, matted lion's mane that reeks of old blood. Worn as a mantle, it makes onlookers flinch; fear-charms use it.",
+   "perish": "1 day",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "manticore-tooth",
+   "name": "Manticore Teeth",
+   "tier": "common",
+   "tags": [
+    "tooth",
+    "monstrosity"
+   ],
+   "desc": "Triple rows of disturbingly human teeth set in a lion's jaw. Strung as grisly trophies or set into serrated clubs.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "medusa-head",
+   "name": "Medusa Head",
+   "tier": "rare",
+   "tags": [
+    "skull",
+    "petrification",
+    "curse",
+    "monstrosity"
+   ],
+   "desc": "The whole severed head, snake-hair still twitching. Its gaze petrifies for a short time after death.",
+   "perish": "1 day",
+   "value": 500,
+   "recipe": null
+  },
+  {
+   "id": "medusa-eye",
+   "name": "Medusa Eyes",
+   "tier": "uncommon",
+   "tags": [
+    "eye",
+    "petrification",
+    "monstrosity"
+   ],
+   "desc": "Glittering green eyes with slit pupils. The keystone of petrifying weapons and stone-gaze wands.",
+   "perish": "1 hour",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "medusa-snake-venom",
+   "name": "Medusa Snake-Hair Venom",
+   "tier": "uncommon",
+   "tags": [
+    "venom",
+    "poison",
+    "petrification",
+    "monstrosity"
+   ],
+   "desc": "A glittering venom from the hair-snakes that numbs and stiffens flesh.",
+   "perish": "1 day",
+   "value": 80,
+   "recipe": null
+  },
+  {
+   "id": "medusa-snake-hair",
+   "name": "Medusa Snake Hair",
+   "tier": "uncommon",
+   "tags": [
+    "hair",
+    "curse",
+    "monstrosity"
+   ],
+   "desc": "Dried serpent-locks that retain a faint hiss.",
+   "perish": "stable",
+   "value": 100,
+   "recipe": null
+  },
+  {
+   "id": "medusa-essence",
+   "name": "Medusa Essence",
+   "tier": "uncommon",
+   "tags": [
+    "essence",
+    "petrification",
+    "curse",
+    "monstrosity"
+   ],
+   "desc": "A green mist with slit-pupilled eyes that seem to watch you.",
+   "perish": "1 minute",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "merrow-harpoon",
+   "name": "Merrow Harpoon",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "metal",
+    "water",
+    "monstrosity"
+   ],
+   "desc": "A barbed, coral-crusted harpoon with a braided kelp line.",
+   "perish": "stable",
+   "value": 20,
+   "recipe": null
+  },
+  {
+   "id": "merrow-scale",
+   "name": "Merrow Scales",
+   "tier": "common",
+   "tags": [
+    "scale",
+    "swimming",
+    "water",
+    "monstrosity"
+   ],
+   "desc": "Rough, green scales like rusted chain.",
+   "perish": "stable",
+   "value": 14,
+   "recipe": null
+  },
+  {
+   "id": "merrow-tusk",
+   "name": "Merrow Tusks",
+   "tier": "common",
+   "tags": [
+    "tooth",
+    "abyssal",
+    "monstrosity",
+    "fiendish"
+   ],
+   "desc": "Jagged tusks stained dark from demonic rites.",
+   "perish": "stable",
+   "value": 1,
+   "recipe": null
+  },
+  {
+   "id": "mimic-adhesive",
+   "name": "Mimic Adhesive",
+   "tier": "common",
+   "tags": [
+    "slime",
+    "binding",
+    "monstrosity"
+   ],
+   "desc": "A clear, overwhelmingly sticky glue. The go-to reagent for sovereign glues and binding traps.",
+   "perish": "1 day",
+   "value": 42,
+   "recipe": null
+  },
+  {
+   "id": "mimic-pseudopod",
+   "name": "Mimic Pseudopod",
+   "tier": "common",
+   "tags": [
+    "organ",
+    "shapechange",
+    "monstrosity"
+   ],
+   "desc": "A piece of shapeshifting flesh that slowly drifts into the shape it's pressed against.",
+   "perish": "1 day",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "mimic-teeth",
+   "name": "Mimic Teeth",
+   "tier": "common",
+   "tags": [
+    "tooth",
+    "monstrosity"
+   ],
+   "desc": "Splinter-like teeth disguised as wood.",
+   "perish": "stable",
+   "value": 11,
+   "recipe": null
+  },
+  {
+   "id": "mimic-essence",
+   "name": "Mimic Essence",
+   "tier": "common",
+   "tags": [
+    "essence",
+    "shapechange",
+    "binding",
+    "monstrosity"
+   ],
+   "desc": "A sticky mist that shapes itself into the vessel's form.",
+   "perish": "1 minute",
+   "value": 30,
+   "recipe": null
+  },
+  {
+   "id": "minotaur-horn",
+   "name": "Minotaur Horns",
+   "tier": "uncommon",
+   "tags": [
+    "horn",
+    "strength",
+    "senses",
+    "monstrosity"
+   ],
+   "desc": "Massive, spiralled horns that always seem to point toward home. Carved into compasses and battering helms.",
+   "perish": "stable",
+   "value": 140,
+   "recipe": null
+  },
+  {
+   "id": "minotaur-hide",
+   "name": "Minotaur Hide",
+   "tier": "uncommon",
+   "tags": [
+    "hide",
+    "toughness",
+    "monstrosity"
+   ],
+   "desc": "Thick, black bovine hide scarred by a thousand labyrinth walls. Tans into heavy leather for charging harness and hide armour.",
+   "perish": "1 day",
+   "value": 68,
+   "recipe": null
+  },
+  {
+   "id": "minotaur-heart",
+   "name": "Minotaur Heart",
+   "tier": "uncommon",
+   "tags": [
+    "heart",
+    "strength",
+    "cunning",
+    "monstrosity"
+   ],
+   "desc": "A muscular heart that still thrums with rage; used in potions of charging and wayfinding.",
+   "perish": "1 hour",
+   "value": 100,
+   "recipe": null
+  },
+  {
+   "id": "minotaur-essence",
+   "name": "Minotaur Essence",
+   "tier": "uncommon",
+   "tags": [
+    "essence",
+    "primal",
+    "strength",
+    "cunning",
+    "monstrosity"
+   ],
+   "desc": "A red mist that paces restless paths inside the glass.",
+   "perish": "1 minute",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "otyugh-bile",
+   "name": "Otyugh Bile",
+   "tier": "uncommon",
+   "tags": [
+    "organ",
+    "disease",
+    "resistance",
+    "aberration"
+   ],
+   "desc": "A foul-smelling fluid that neutralises rot and toxins. Distilled into disease-resistance tonics.",
+   "perish": "1 day",
+   "value": 39,
+   "recipe": null
+  },
+  {
+   "id": "otyugh-tentacle",
+   "name": "Otyugh Tentacles",
+   "tier": "uncommon",
+   "tags": [
+    "tentacle",
+    "telepathy",
+    "aberration"
+   ],
+   "desc": "Spiked, grasping tentacles; its sensory stalk carries a faint telepathic hum.",
+   "perish": "1 day",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "otyugh-hide",
+   "name": "Otyugh Hide",
+   "tier": "uncommon",
+   "tags": [
+    "hide",
+    "toughness",
+    "disease",
+    "aberration"
+   ],
+   "desc": "Rough, pitted leathery hide that sickness never seems to take root in. Tanned into grim but disease-proof gloves and aprons.",
+   "perish": "1 day",
+   "value": 120,
+   "recipe": null
+  },
+  {
+   "id": "otyugh-tooth",
+   "name": "Otyugh Teeth",
+   "tier": "common",
+   "tags": [
+    "tooth",
+    "disease",
+    "aberration"
+   ],
+   "desc": "Filthy fangs crusted with sickness.",
+   "perish": "stable",
+   "value": 25,
+   "recipe": null
+  },
+  {
+   "id": "otyugh-essence",
+   "name": "Otyugh Essence",
+   "tier": "uncommon",
+   "tags": [
+    "essence",
+    "disease",
+    "resistance",
+    "telepathy",
+    "aberration"
+   ],
+   "desc": "A greenish murk that seems strangely clean at its heart.",
+   "perish": "1 minute",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "owlbear-feather",
+   "name": "Owlbear Feathers",
+   "tier": "common",
+   "tags": [
+    "feather",
+    "stealth",
+    "monstrosity"
+   ],
+   "desc": "Soft, barred feathers that muffle sound. Fletched into silent arrows.",
+   "perish": "stable",
+   "value": 12,
+   "recipe": null
+  },
+  {
+   "id": "owlbear-pelt",
+   "name": "Owlbear Pelt",
+   "tier": "uncommon",
+   "tags": [
+    "fur",
+    "hide",
+    "strength",
+    "monstrosity"
+   ],
+   "desc": "A great pelt of fur merging into feathers around the neck. Makes rugged cloaks.",
+   "perish": "1 day",
+   "value": 140,
+   "recipe": null
+  },
+  {
+   "id": "owlbear-beak",
+   "name": "Owlbear Beak",
+   "tier": "uncommon",
+   "tags": [
+    "tooth",
+    "strength",
+    "monstrosity"
+   ],
+   "desc": "A hooked, thick beak capable of crushing bone. Hafted as a war-pick head or mounted as a hunter's proudest trophy.",
+   "perish": "stable",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "owlbear-claw",
+   "name": "Owlbear Claws",
+   "tier": "common",
+   "tags": [
+    "claw",
+    "monstrosity"
+   ],
+   "desc": "Thick, curved bear claws.",
+   "perish": "stable",
+   "value": 26,
+   "recipe": null
+  },
+  {
+   "id": "owlbear-egg",
+   "name": "Owlbear Egg",
+   "tier": "uncommon",
+   "tags": [
+    "organ",
+    "growth",
+    "monstrosity"
+   ],
+   "desc": "A large mottled egg; hatchlings can be raised as ferocious companions.",
+   "perish": "1 week",
+   "value": 100,
+   "recipe": null
+  },
+  {
+   "id": "phase-spider-silk",
+   "name": "Phase Spider Silk",
+   "tier": "uncommon",
+   "tags": [
+    "silk",
+    "planar",
+    "teleport",
+    "monstrosity"
+   ],
+   "desc": "Faintly translucent silk that flickers between planes when you look at it sideways. Woven into blink-cloaks and portal cords.",
+   "perish": "stable",
+   "value": 90,
+   "recipe": null
+  },
+  {
+   "id": "phase-spider-venom",
+   "name": "Phase Spider Venom",
+   "tier": "uncommon",
+   "tags": [
+    "venom",
+    "poison",
+    "monstrosity"
+   ],
+   "desc": "A shimmering, clear venom that seems to be slightly out of step with the vial holding it. Poisoners prize it for blade venoms that bite hard.",
+   "perish": "1 day",
+   "value": 90,
+   "recipe": null
+  },
+  {
+   "id": "phase-spider-eye",
+   "name": "Phase Spider Eyes",
+   "tier": "uncommon",
+   "tags": [
+    "eye",
+    "planar",
+    "senses",
+    "monstrosity"
+   ],
+   "desc": "Clustered eyes that still see across the planar veil.",
+   "perish": "1 hour",
+   "value": 100,
+   "recipe": null
+  },
+  {
+   "id": "phase-spider-leg",
+   "name": "Phase Spider Legs",
+   "tier": "common",
+   "tags": [
+    "bone",
+    "climbing",
+    "monstrosity"
+   ],
+   "desc": "Long, faintly translucent legs with hooked, sure-gripping tips. Cut into climbing spikes and light, strong struts.",
+   "perish": "stable",
+   "value": 26,
+   "recipe": null
+  },
+  {
+   "id": "phase-spider-essence",
+   "name": "Phase Spider Essence",
+   "tier": "uncommon",
+   "tags": [
+    "essence",
+    "planar",
+    "teleport",
+    "monstrosity"
+   ],
+   "desc": "A flickering spark that keeps vanishing and reappearing in the vessel.",
+   "perish": "1 minute",
+   "value": 200,
+   "recipe": null
+  },
+  {
+   "id": "purple-worm-venom",
+   "name": "Purple Worm Venom",
+   "tier": "very-rare",
+   "tags": [
+    "venom",
+    "poison",
+    "monstrosity"
+   ],
+   "desc": "A thick, violet poison that burns through flesh. Poisoners' most coveted prize.",
+   "perish": "1 week",
+   "value": 1200,
+   "recipe": null
+  },
+  {
+   "id": "purple-worm-stinger",
+   "name": "Purple Worm Stinger",
+   "tier": "very-rare",
+   "tags": [
+    "stinger",
+    "poison",
+    "monstrosity"
+   ],
+   "desc": "A barbed, sword-length stinger still grooved with venom channels.",
+   "perish": "stable",
+   "value": 1200,
+   "recipe": null
+  },
+  {
+   "id": "purple-worm-gullet",
+   "name": "Purple Worm Gullet",
+   "tier": "very-rare",
+   "tags": [
+    "organ",
+    "acid",
+    "vessel",
+    "monstrosity"
+   ],
+   "desc": "A vast, acid-resistant throat lining that swallows almost anything. The basis of bags of devouring and portable holds.",
+   "perish": "1 day",
+   "value": 1200,
+   "recipe": null
+  },
+  {
+   "id": "purple-worm-hide",
+   "name": "Purple Worm Hide",
+   "tier": "very-rare",
+   "tags": [
+    "hide",
+    "toughness",
+    "burrowing",
+    "monstrosity"
+   ],
+   "desc": "Tough, rippling purple hide that shrugs off stone.",
+   "perish": "1 day",
+   "value": 4500,
+   "recipe": null
+  },
+  {
+   "id": "purple-worm-tooth",
+   "name": "Purple Worm Teeth",
+   "tier": "rare",
+   "tags": [
+    "tooth",
+    "burrowing",
+    "monstrosity"
+   ],
+   "desc": "Huge serrated teeth ringing its maw, perfect for digging picks.",
+   "perish": "stable",
+   "value": 1500,
+   "recipe": null
+  },
+  {
+   "id": "purple-worm-essence",
+   "name": "Purple Worm Essence",
+   "tier": "very-rare",
+   "tags": [
+    "essence",
+    "earth",
+    "burrowing",
+    "poison",
+    "monstrosity"
+   ],
+   "desc": "A heavy purple haze that coils and bores at the glass.",
+   "perish": "1 minute",
+   "value": 4800,
+   "recipe": null
+  },
+  {
+   "id": "remorhaz-heat-gland",
+   "name": "Remorhaz Heat Gland",
+   "tier": "rare",
+   "tags": [
+    "gland",
+    "fire",
+    "monstrosity"
+   ],
+   "desc": "A searing orange organ that stays hot for days after death. Keystone for fire-resistance and warming charms.",
+   "perish": "1 day",
+   "value": 1800,
+   "recipe": null
+  },
+  {
+   "id": "remorhaz-carapace",
+   "name": "Remorhaz Carapace",
+   "tier": "rare",
+   "tags": [
+    "carapace",
+    "fire",
+    "toughness",
+    "monstrosity"
+   ],
+   "desc": "Ruby-streaked chitin plates that never fully cool. Makes armour that keeps its wearer warm in blizzards.",
+   "perish": "stable",
+   "value": 300,
+   "recipe": null
+  },
+  {
+   "id": "remorhaz-mandible",
+   "name": "Remorhaz Mandibles",
+   "tier": "rare",
+   "tags": [
+    "claw",
+    "burrowing",
+    "monstrosity"
+   ],
+   "desc": "Heavy, heat-scarred mandibles that cut through ice.",
+   "perish": "stable",
+   "value": 680,
+   "recipe": null
+  },
+  {
+   "id": "remorhaz-essence",
+   "name": "Remorhaz Essence",
+   "tier": "rare",
+   "tags": [
+    "essence",
+    "fire",
+    "elemental",
+    "monstrosity"
+   ],
+   "desc": "A searing orange glow that fogs and heats the vessel.",
+   "perish": "1 minute",
+   "value": 1800,
+   "recipe": null
+  },
+  {
+   "id": "roc-feather",
+   "name": "Roc Feather",
+   "tier": "rare",
+   "tags": [
+    "feather",
+    "flight",
+    "size",
+    "monstrosity"
+   ],
+   "desc": "A flight feather as long as a man. Keystone for flying carpets, brooms and giant-size charms.",
+   "perish": "stable",
+   "value": 210,
+   "recipe": null
+  },
+  {
+   "id": "roc-talon",
+   "name": "Roc Talons",
+   "tier": "rare",
+   "tags": [
+    "claw",
+    "strength",
+    "monstrosity"
+   ],
+   "desc": "Talons the size of scythes.",
+   "perish": "stable",
+   "value": 600,
+   "recipe": null
+  },
+  {
+   "id": "roc-egg",
+   "name": "Roc Egg",
+   "tier": "rare",
+   "tags": [
+    "organ",
+    "size",
+    "growth",
+    "monstrosity"
+   ],
+   "desc": "A giant speckled egg as large as a cart wheel. Hatchlings can be raised as mounts.",
+   "perish": "1 week",
+   "value": 1700,
+   "recipe": null
+  },
+  {
+   "id": "roc-beak",
+   "name": "Roc Beak",
+   "tier": "rare",
+   "tags": [
+    "tooth",
+    "strength",
+    "monstrosity"
+   ],
+   "desc": "A hooked beak large enough to split a horse.",
+   "perish": "stable",
+   "value": 1600,
+   "recipe": null
+  },
+  {
+   "id": "roc-essence",
+   "name": "Roc Essence",
+   "tier": "rare",
+   "tags": [
+    "essence",
+    "air",
+    "flight",
+    "size",
+    "monstrosity"
+   ],
+   "desc": "A gusting wind that makes the vessel feel impossibly light.",
+   "perish": "1 minute",
+   "value": 750,
+   "recipe": null
+  },
+  {
+   "id": "roper-strand",
+   "name": "Roper Strands",
+   "tier": "uncommon",
+   "tags": [
+    "sinew",
+    "binding",
+    "strength",
+    "monstrosity"
+   ],
+   "desc": "Long, sticky tendrils that weaken whoever they grip. Used in binding ropes and strength-draining poisons.",
+   "perish": "1 day",
+   "value": 200,
+   "recipe": null
+  },
+  {
+   "id": "roper-gizzard",
+   "name": "Roper Gizzard Stones",
+   "tier": "uncommon",
+   "tags": [
+    "stone",
+    "gem",
+    "monstrosity"
+   ],
+   "desc": "Gems and odd stones swallowed with prey, polished smooth.",
+   "perish": "stable",
+   "value": 68,
+   "recipe": null
+  },
+  {
+   "id": "roper-hide",
+   "name": "Roper Hide",
+   "tier": "uncommon",
+   "tags": [
+    "hide",
+    "stealth",
+    "earth",
+    "monstrosity"
+   ],
+   "desc": "Knobbly, stone-textured hide the colour of cave rock. Draped over a hunter or a door, it vanishes against any cavern wall.",
+   "perish": "1 day",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "roper-essence",
+   "name": "Roper Essence",
+   "tier": "uncommon",
+   "tags": [
+    "essence",
+    "earth",
+    "binding",
+    "monstrosity"
+   ],
+   "desc": "A grey mist that clings to anything it touches.",
+   "perish": "1 minute",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "rust-monster-antennae",
+   "name": "Rust Monster Antennae",
+   "tier": "common",
+   "tags": [
+    "organ",
+    "acid",
+    "metal",
+    "monstrosity"
+   ],
+   "desc": "Feathery antennae that corrode metal on contact. Used to make rust-bane oils.",
+   "perish": "1 day",
+   "value": 17,
+   "recipe": null
+  },
+  {
+   "id": "rust-monster-carapace",
+   "name": "Rust Monster Carapace",
+   "tier": "common",
+   "tags": [
+    "carapace",
+    "resistance",
+    "monstrosity"
+   ],
+   "desc": "Russet plates that metal cannot scratch.",
+   "perish": "stable",
+   "value": 28,
+   "recipe": null
+  },
+  {
+   "id": "rust-monster-gut",
+   "name": "Rust Monster Gut",
+   "tier": "common",
+   "tags": [
+    "organ",
+    "metal",
+    "monstrosity"
+   ],
+   "desc": "A gut full of rust and half-dissolved metal.",
+   "perish": "1 day",
+   "value": 16,
+   "recipe": null
+  },
+  {
+   "id": "rust-monster-essence",
+   "name": "Rust Monster Essence",
+   "tier": "common",
+   "tags": [
+    "essence",
+    "acid",
+    "metal",
+    "monstrosity"
+   ],
+   "desc": "A red, flaky mist that corrodes metal near the vessel.",
+   "perish": "1 minute",
+   "value": 13,
+   "recipe": null
+  },
+  {
+   "id": "spirit-naga-venom",
+   "name": "Spirit Naga Venom",
+   "tier": "rare",
+   "tags": [
+    "venom",
+    "poison",
+    "necrotic",
+    "monstrosity"
+   ],
+   "desc": "A dark, oily venom that drains life. The keystone of necrotic poisons.",
+   "perish": "1 day",
+   "value": 900,
+   "recipe": null
+  },
+  {
+   "id": "spirit-naga-scale",
+   "name": "Spirit Naga Scales",
+   "tier": "rare",
+   "tags": [
+    "scale",
+    "necrotic",
+    "protection",
+    "monstrosity"
+   ],
+   "desc": "Black scales rimmed with silver.",
+   "perish": "stable",
+   "value": 1100,
+   "recipe": null
+  },
+  {
+   "id": "spirit-naga-heart",
+   "name": "Spirit Naga Heart",
+   "tier": "rare",
+   "tags": [
+    "heart",
+    "undeath",
+    "regeneration",
+    "monstrosity"
+   ],
+   "desc": "A cold heart that pulses with dark will; if not destroyed the naga may return.",
+   "perish": "1 hour",
+   "value": 1800,
+   "recipe": null
+  },
+  {
+   "id": "spirit-naga-essence",
+   "name": "Spirit Naga Essence",
+   "tier": "rare",
+   "tags": [
+    "essence",
+    "necrotic",
+    "undeath",
+    "death",
+    "monstrosity"
+   ],
+   "desc": "A black coil that hisses and strikes at the glass.",
+   "perish": "1 minute",
+   "value": 2000,
+   "recipe": null
+  },
+  {
+   "id": "tarrasque-carapace",
+   "name": "Tarrasque Carapace",
+   "tier": "legendary",
+   "tags": [
+    "carapace",
+    "antimagic",
+    "resistance",
+    "monstrosity"
+   ],
+   "desc": "An enormous shell plate with a mirror-like sheen that turns aside spells. Keystone for antimagic and spell-reflecting shields.",
+   "perish": "stable",
+   "value": 15000,
+   "recipe": null
+  },
+  {
+   "id": "tarrasque-heart",
+   "name": "Tarrasque Heart",
+   "tier": "legendary",
+   "tags": [
+    "heart",
+    "regeneration",
+    "toughness",
+    "monstrosity"
+   ],
+   "desc": "A house-sized heart that keeps beating for weeks. Keystone for unmatched regeneration.",
+   "perish": "1 week",
+   "value": 40000,
+   "recipe": null
+  },
+  {
+   "id": "tarrasque-horn",
+   "name": "Tarrasque Horns",
+   "tier": "legendary",
+   "tags": [
+    "horn",
+    "strength",
+    "antimagic",
+    "monstrosity"
+   ],
+   "desc": "Colossal horns that shatter fortress walls.",
+   "perish": "stable",
+   "value": 18000,
+   "recipe": null
+  },
+  {
+   "id": "tarrasque-claw",
+   "name": "Tarrasque Claws",
+   "tier": "legendary",
+   "tags": [
+    "claw",
+    "strength",
+    "monstrosity"
+   ],
+   "desc": "Talon-like claws as long as a spear.",
+   "perish": "stable",
+   "value": 8000,
+   "recipe": null
+  },
+  {
+   "id": "tarrasque-tooth",
+   "name": "Tarrasque Teeth",
+   "tier": "legendary",
+   "tags": [
+    "tooth",
+    "strength",
+    "monstrosity"
+   ],
+   "desc": "Dagger-long teeth by the dozen.",
+   "perish": "stable",
+   "value": 60000,
+   "recipe": null
+  },
+  {
+   "id": "tarrasque-blood",
+   "name": "Tarrasque Blood",
+   "tier": "legendary",
+   "tags": [
+    "blood",
+    "regeneration",
+    "toughness",
+    "monstrosity"
+   ],
+   "desc": "Dark red blood that knits flesh before your eyes.",
+   "perish": "1 hour",
+   "value": 9000,
+   "recipe": null
+  },
+  {
+   "id": "tarrasque-essence",
+   "name": "Tarrasque Essence",
+   "tier": "legendary",
+   "tags": [
+    "essence",
+    "primal",
+    "antimagic",
+    "regeneration",
+    "monstrosity"
+   ],
+   "desc": "A crushing wave of mute fury that cracks the vessel it's stored in.",
+   "perish": "1 minute",
+   "value": 22000,
+   "recipe": null
+  },
+  {
+   "id": "winter-wolf-pelt",
+   "name": "Winter Wolf Pelt",
+   "tier": "uncommon",
+   "tags": [
+    "fur",
+    "cold",
+    "stealth",
+    "monstrosity"
+   ],
+   "desc": "White fur that blends perfectly into snow. Makes cold-resistance cloaks and white camouflage.",
+   "perish": "1 day",
+   "value": 68,
+   "recipe": null
+  },
+  {
+   "id": "winter-wolf-frost-gland",
+   "name": "Winter Wolf Frost Gland",
+   "tier": "uncommon",
+   "tags": [
+    "gland",
+    "cold",
+    "monstrosity"
+   ],
+   "desc": "A frosted sac behind the throat that still breathes freezing air when squeezed. The heart of frost-breath draughts and cold-snap flasks.",
+   "perish": "1 day",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "winter-wolf-fang",
+   "name": "Winter Wolf Fangs",
+   "tier": "uncommon",
+   "tags": [
+    "tooth",
+    "cold",
+    "monstrosity"
+   ],
+   "desc": "White fangs that are always cold to the touch and rime over at night. Set into daggers and charms that bite with frost.",
+   "perish": "stable",
+   "value": 270,
+   "recipe": null
+  },
+  {
+   "id": "winter-wolf-essence",
+   "name": "Winter Wolf Essence",
+   "tier": "uncommon",
+   "tags": [
+    "essence",
+    "cold",
+    "cunning",
+    "monstrosity"
+   ],
+   "desc": "A swirl of white frost that howls faintly.",
+   "perish": "1 minute",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "worg-pelt",
+   "name": "Worg Pelt",
+   "tier": "common",
+   "tags": [
+    "fur",
+    "hide",
+    "fear",
+    "monstrosity"
+   ],
+   "desc": "Rough, dark fur that smells of blood. Goblin warlords wear them.",
+   "perish": "1 day",
+   "value": 24,
+   "recipe": null
+  },
+  {
+   "id": "worg-fang",
+   "name": "Worg Fangs",
+   "tier": "common",
+   "tags": [
+    "tooth",
+    "senses",
+    "monstrosity"
+   ],
+   "desc": "Yellowed fangs; charms against ambush.",
+   "perish": "stable",
+   "value": 7,
+   "recipe": null
+  },
+  {
+   "id": "worg-meat",
+   "name": "Worg Meat",
+   "tier": "mundane",
+   "tags": [
+    "meat",
+    "food",
+    "monstrosity"
+   ],
+   "desc": "Stringy, gamy meat.",
+   "perish": "1 day",
+   "value": 0.07,
+   "recipe": null
+  }
+ ],
+ "monsters": [
+  {
+   "id": "aboleth",
+   "name": "Aboleth",
+   "type": "aberration",
+   "size": "Large",
+   "cr": "10",
+   "env": [
+    "underwater",
+    "underdark",
+    "coast"
+   ],
+   "blurb": "An ancient, slime-sheathed fish-thing of vast memory; its mucus and brain are coveted by alchemists who dare the deep lakes.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "aboleth-mucus",
+     "q": 1,
+     "dc": 16,
+     "skill": "Medicine",
+     "dice": "1d4",
+     "note": "Scrape it into sealed jars while the body is still wet; once dry it turns to useless flakes."
+    },
+    {
+     "m": "aboleth-tentacle",
+     "q": 4,
+     "dc": 16,
+     "skill": "Medicine",
+     "note": "Handle only with gloves: raw contact risks the skin-sloughing disease the aboleth carries."
+    },
+    {
+     "m": "aboleth-brain",
+     "q": 1,
+     "dc": 18,
+     "skill": "Medicine",
+     "note": "Anyone who touches it bare-handed must shrug off a flood of alien memories (Wisdom save)."
+    },
+    {
+     "m": "aboleth-eye",
+     "q": 3,
+     "dc": 16,
+     "skill": "Medicine"
+    },
+    {
+     "m": "aboleth-hide",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival"
+    },
+    {
+     "m": "aboleth-essence",
+     "q": 1,
+     "dc": 16,
+     "skill": "Arcana",
+     "note": "It escapes with the last breath: hold an Essence Vessel ready and stopper it within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "androsphinx",
+   "name": "Androsphinx",
+   "type": "monstrosity",
+   "size": "Large",
+   "cr": "17",
+   "env": [
+    "desert",
+    "ruins",
+    "mountain"
+   ],
+   "blurb": "A lion-bodied, man-faced guardian of sacred secrets; to slay one is sacrilege, so most of its gifts come freely shed or honourably earned.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "androsphinx-mane-hair",
+     "q": 1,
+     "dc": 19,
+     "skill": "Religion",
+     "dice": "1d6",
+     "note": "Only hair given willingly or shed at its lair keeps its virtue; hair cut from a slain sphinx is inert."
+    },
+    {
+     "m": "androsphinx-roar-larynx",
+     "q": 1,
+     "dc": 19,
+     "skill": "Medicine",
+     "note": "Only from a sphinx that died beyond saving; taking it from one killed without cause invites a curse from the gods it serves."
+    },
+    {
+     "m": "androsphinx-claw",
+     "q": 4,
+     "dc": 19,
+     "skill": "Survival"
+    },
+    {
+     "m": "androsphinx-tear",
+     "q": 1,
+     "dc": 19,
+     "skill": "Religion",
+     "note": "A sphinx sheds tears only when moved by great grief or truth; they cannot be taken by force."
+    },
+    {
+     "m": "androsphinx-essence",
+     "q": 1,
+     "dc": 19,
+     "skill": "Religion",
+     "note": "A faint shimmer over the body marks it. Catch it in an Essence Vessel within a minute."
+    }
+   ],
+   "aka": [
+    "Sphinx of Valor"
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "ankheg",
+   "name": "Ankheg",
+   "type": "monstrosity",
+   "size": "Large",
+   "cr": "2",
+   "env": [
+    "grassland",
+    "forest",
+    "hill"
+   ],
+   "blurb": "A burrowing, acid-spitting insect the size of a cart, dreaded by farmers and prized by armourers for its shell.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "ankheg-carapace",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "1d4",
+     "note": "Split along the seams; prying at the plates cracks them."
+    },
+    {
+     "m": "ankheg-acid-gland",
+     "q": 1,
+     "dc": 10,
+     "skill": "Medicine",
+     "note": "Rupture it (fail by 5+) and take a splash of acid."
+    },
+    {
+     "m": "ankheg-mandible",
+     "q": 2,
+     "dc": 10,
+     "skill": "Survival"
+    },
+    {
+     "m": "ankheg-meat",
+     "q": 1,
+     "dc": 8,
+     "skill": "Survival",
+     "dice": "2d6"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "basilisk",
+   "name": "Basilisk",
+   "type": "monstrosity",
+   "size": "Medium",
+   "cr": "3",
+   "env": [
+    "mountain",
+    "underdark",
+    "ruins",
+    "hill"
+   ],
+   "blurb": "An eight-legged reptile whose gaze turns flesh to stone; its lair is ringed with the statues of careless hunters.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "basilisk-eye",
+     "q": 2,
+     "dc": 15,
+     "skill": "Medicine",
+     "note": "Harvest blindfolded or by mirror; a direct look at a fresh eye can still stiffen your limbs (Constitution save)."
+    },
+    {
+     "m": "basilisk-gizzard-stone",
+     "q": 1,
+     "dc": 13,
+     "skill": "Nature",
+     "dice": "1d6"
+    },
+    {
+     "m": "basilisk-blood",
+     "q": 1,
+     "dc": 13,
+     "skill": "Medicine",
+     "note": "Collect it before it clots into sand."
+    },
+    {
+     "m": "basilisk-scale",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival",
+     "dice": "2d4"
+    },
+    {
+     "m": "basilisk-fang",
+     "q": 2,
+     "dc": 10,
+     "skill": "Survival"
+    },
+    {
+     "m": "basilisk-essence",
+     "q": 1,
+     "dc": 13,
+     "skill": "Arcana",
+     "note": "A faint shimmer over the body marks it. Catch it in an Essence Vessel within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "behir",
+   "name": "Behir",
+   "type": "monstrosity",
+   "size": "Huge",
+   "cr": "11",
+   "env": [
+    "mountain",
+    "underdark",
+    "hill"
+   ],
+   "blurb": "A many-legged, serpentine storm-beast that spits lightning and hates dragons; its lightning gland is a smith's treasure.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "behir-lightning-gland",
+     "q": 1,
+     "dc": 18,
+     "skill": "Medicine",
+     "note": "Discharge the gland with an iron rod first or take the leftover charge (lightning damage)."
+    },
+    {
+     "m": "behir-scale",
+     "q": 1,
+     "dc": 16,
+     "skill": "Survival",
+     "dice": "2d6"
+    },
+    {
+     "m": "behir-fang",
+     "q": 1,
+     "dc": 16,
+     "skill": "Survival",
+     "dice": "1d4"
+    },
+    {
+     "m": "behir-claw",
+     "q": 6,
+     "dc": 13,
+     "skill": "Survival"
+    },
+    {
+     "m": "behir-essence",
+     "q": 1,
+     "dc": 16,
+     "skill": "Arcana",
+     "note": "A faint shimmer over the body marks it. Catch it in an Essence Vessel within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "centaur",
+   "name": "Centaur",
+   "type": "monstrosity",
+   "size": "Large",
+   "cr": "2",
+   "env": [
+    "forest",
+    "grassland"
+   ],
+   "blurb": "A proud horse-bodied people of the wild plains; they are not prey — only their gear may be recovered, and honourably.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "centaur-longbow",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation",
+     "note": "Returning a fallen centaur's bow to its herd earns their lasting friendship."
+    },
+    {
+     "m": "centaur-herb-pouch",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "centaur-quiver",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ],
+   "aka": [
+    "Centaur Trooper"
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "chimera",
+   "name": "Chimera",
+   "type": "monstrosity",
+   "size": "Large",
+   "cr": "6",
+   "env": [
+    "mountain",
+    "hill",
+    "grassland"
+   ],
+   "blurb": "A three-headed horror of lion, goat and dragon; each head offers a very different trophy.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "chimera-fire-gland",
+     "q": 1,
+     "dc": 14,
+     "skill": "Medicine",
+     "note": "Handle with tongs; a jolt makes it vent a gout of flame."
+    },
+    {
+     "m": "chimera-goat-horn",
+     "q": 2,
+     "dc": 13,
+     "skill": "Survival"
+    },
+    {
+     "m": "chimera-lion-mane",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival"
+    },
+    {
+     "m": "chimera-dragon-scale",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival",
+     "dice": "1d6"
+    },
+    {
+     "m": "chimera-essence",
+     "q": 1,
+     "dc": 13,
+     "skill": "Arcana",
+     "note": "Seal it in an Essence Vessel within a minute of death, or it's gone."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "chuul",
+   "name": "Chuul",
+   "type": "aberration",
+   "size": "Large",
+   "cr": "4",
+   "env": [
+    "underwater",
+    "swamp",
+    "underdark",
+    "coast"
+   ],
+   "blurb": "A crustacean horror guarding ancient ruins; its face-tentacles paralyse prey and its shell is aquatic armour.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "chuul-tentacle",
+     "q": 1,
+     "dc": 13,
+     "skill": "Medicine",
+     "note": "Wear gloves; brushing them bare risks paralysis (Constitution save)."
+    },
+    {
+     "m": "chuul-carapace",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival",
+     "dice": "1d4"
+    },
+    {
+     "m": "chuul-pincer",
+     "q": 2,
+     "dc": 13,
+     "skill": "Survival"
+    },
+    {
+     "m": "chuul-antennae",
+     "q": 2,
+     "dc": 13,
+     "skill": "Medicine"
+    },
+    {
+     "m": "chuul-essence",
+     "q": 1,
+     "dc": 13,
+     "skill": "Arcana",
+     "note": "A faint shimmer over the body marks it. Catch it in an Essence Vessel within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "cloaker",
+   "name": "Cloaker",
+   "type": "aberration",
+   "size": "Large",
+   "cr": "8",
+   "env": [
+    "underdark",
+    "ruins"
+   ],
+   "blurb": "A manta-shaped predator that mimics a cloak and moans to drive prey mad; its hide is the finest shadow-leather known.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "cloaker-hide",
+     "q": 1,
+     "dc": 18,
+     "skill": "Survival",
+     "note": "Must be flayed in darkness; exposure to bright light before curing makes it brittle."
+    },
+    {
+     "m": "cloaker-moan-sac",
+     "q": 1,
+     "dc": 16,
+     "skill": "Medicine"
+    },
+    {
+     "m": "cloaker-eye",
+     "q": 2,
+     "dc": 16,
+     "skill": "Medicine"
+    },
+    {
+     "m": "cloaker-tail-spine",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival"
+    },
+    {
+     "m": "cloaker-essence",
+     "q": 1,
+     "dc": 16,
+     "skill": "Arcana",
+     "note": "Seal it in an Essence Vessel within a minute of death, or it's gone."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "cockatrice",
+   "name": "Cockatrice",
+   "type": "monstrosity",
+   "size": "Small",
+   "cr": "1/2",
+   "env": [
+    "grassland",
+    "hill",
+    "forest"
+   ],
+   "blurb": "A bad-tempered rooster-lizard whose bite slowly turns flesh to stone.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "cockatrice-feather",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "2d6"
+    },
+    {
+     "m": "cockatrice-beak",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "note": "Scrape the ducts without breaking skin, or risk stiffening joints (Constitution save)."
+    },
+    {
+     "m": "cockatrice-egg",
+     "q": 1,
+     "dc": 10,
+     "skill": "Nature",
+     "note": "Only in a nest; about one in three is fertile."
+    },
+    {
+     "m": "cockatrice-essence",
+     "q": 1,
+     "dc": 10,
+     "skill": "Arcana",
+     "note": "Needs an Essence Vessel within 1 minute of death; leave the stopper off and the glass slowly greys to stone."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "darkmantle",
+   "name": "Darkmantle",
+   "type": "monstrosity",
+   "size": "Small",
+   "cr": "1/2",
+   "env": [
+    "underdark"
+   ],
+   "blurb": "A cave-ceiling ambusher that drops onto prey and smothers it in magical darkness.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "darkmantle-darkness-gland",
+     "q": 1,
+     "dc": 10,
+     "skill": "Medicine",
+     "note": "Pops if squeezed carelessly, filling the area with darkness for a minute."
+    },
+    {
+     "m": "darkmantle-mantle",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival"
+    },
+    {
+     "m": "darkmantle-tentacle",
+     "q": 1,
+     "dc": 8,
+     "skill": "Survival",
+     "dice": "1d4"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "death-dog",
+   "name": "Death Dog",
+   "type": "monstrosity",
+   "size": "Medium",
+   "cr": "1",
+   "env": [
+    "desert",
+    "grassland",
+    "hill"
+   ],
+   "blurb": "A two-headed hound of the wastes whose bite carries a wasting sickness.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "death-dog-fang",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "2d4",
+     "note": "Boil before handling; nicking yourself risks the wasting disease."
+    },
+    {
+     "m": "death-dog-saliva",
+     "q": 1,
+     "dc": 10,
+     "skill": "Medicine",
+     "note": "Collect with a bone scoop; a failed check (by 5+) exposes you to its disease."
+    },
+    {
+     "m": "death-dog-pelt",
+     "q": 1,
+     "dc": 8,
+     "skill": "Survival"
+    },
+    {
+     "m": "death-dog-skull",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "doppelganger",
+   "name": "Doppelganger",
+   "type": "monstrosity",
+   "size": "Medium",
+   "cr": "3",
+   "env": [
+    "urban",
+    "underdark",
+    "ruins"
+   ],
+   "blurb": "A grey, featureless shapeshifter that steals faces and secrets; its body is the stuff of disguise magic.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "doppelganger-skin",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival",
+     "note": "Keep it in darkness; once it sets into a random face, its magic fades."
+    },
+    {
+     "m": "doppelganger-brain",
+     "q": 1,
+     "dc": 13,
+     "skill": "Medicine"
+    },
+    {
+     "m": "doppelganger-blood",
+     "q": 1,
+     "dc": 13,
+     "skill": "Medicine"
+    },
+    {
+     "m": "doppelganger-essence",
+     "q": 1,
+     "dc": 13,
+     "skill": "Arcana",
+     "note": "A faint shimmer over the body marks it. Catch it in an Essence Vessel within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "drider",
+   "name": "Drider",
+   "type": "monstrosity",
+   "size": "Large",
+   "cr": "6",
+   "env": [
+    "underdark"
+   ],
+   "blurb": "A cursed drow fused with a giant spider; its silk and its poisoned drow weapons are both prized.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "drider-silk-gland",
+     "q": 1,
+     "dc": 14,
+     "skill": "Medicine"
+    },
+    {
+     "m": "drider-venom",
+     "q": 1,
+     "dc": 13,
+     "skill": "Medicine",
+     "note": "Milk the fangs into a vial before the jaw stiffens."
+    },
+    {
+     "m": "drider-blade",
+     "q": 1,
+     "dc": 13,
+     "skill": "Investigation",
+     "note": "Salvage from its gear; handle the edge only by the grip."
+    },
+    {
+     "m": "drider-carapace",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival",
+     "dice": "1d4"
+    },
+    {
+     "m": "drider-essence",
+     "q": 1,
+     "dc": 13,
+     "skill": "Arcana",
+     "note": "Seal it in an Essence Vessel within a minute of death, or it's gone."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "ettercap",
+   "name": "Ettercap",
+   "type": "monstrosity",
+   "size": "Medium",
+   "cr": "2",
+   "env": [
+    "forest",
+    "underdark",
+    "swamp"
+   ],
+   "blurb": "A spider-keeping forest hag-thing whose silk glands make the strongest webbing in the woods.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "ettercap-silk-gland",
+     "q": 1,
+     "dc": 10,
+     "skill": "Medicine"
+    },
+    {
+     "m": "ettercap-venom",
+     "q": 1,
+     "dc": 10,
+     "skill": "Medicine"
+    },
+    {
+     "m": "ettercap-web-silk",
+     "q": 1,
+     "dc": 10,
+     "skill": "Nature",
+     "dice": "2d6",
+     "note": "Gathered from the lair; burning debris ruins it."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "gibbering-mouther",
+   "name": "Gibbering Mouther",
+   "type": "aberration",
+   "size": "Medium",
+   "cr": "2",
+   "env": [
+    "underdark",
+    "ruins",
+    "swamp"
+   ],
+   "blurb": "A heaving mass of eyes and mouths whose endless babble fractures sanity.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "gibbering-mouther-tongue",
+     "q": 1,
+     "dc": 10,
+     "skill": "Medicine",
+     "dice": "1d4",
+     "note": "Listening too long while cutting risks a bout of short madness."
+    },
+    {
+     "m": "gibbering-mouther-eye",
+     "q": 1,
+     "dc": 10,
+     "skill": "Medicine",
+     "dice": "2d6"
+    },
+    {
+     "m": "gibbering-mouther-flesh",
+     "q": 1,
+     "dc": 10,
+     "skill": "Medicine"
+    },
+    {
+     "m": "gibbering-mouther-essence",
+     "q": 1,
+     "dc": 10,
+     "skill": "Arcana",
+     "note": "It escapes with the last breath: hold an Essence Vessel ready and stopper it within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "gorgon",
+   "name": "Gorgon",
+   "type": "monstrosity",
+   "size": "Large",
+   "cr": "5",
+   "env": [
+    "hill",
+    "grassland",
+    "mountain"
+   ],
+   "blurb": "A bull of iron plates whose breath turns everything to stone; its hide is armour and its lungs a weapon.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "gorgon-breath-gland",
+     "q": 1,
+     "dc": 15,
+     "skill": "Medicine",
+     "note": "Seal it in wax before transport; a rupture releases a petrifying cloud."
+    },
+    {
+     "m": "gorgon-iron-hide",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival",
+     "dice": "1d4",
+     "note": "Requires a hacksaw or smith's tools to pry the plates free."
+    },
+    {
+     "m": "gorgon-horn",
+     "q": 2,
+     "dc": 13,
+     "skill": "Survival"
+    },
+    {
+     "m": "gorgon-essence",
+     "q": 1,
+     "dc": 13,
+     "skill": "Arcana",
+     "note": "It escapes with the last breath: hold an Essence Vessel ready and stopper it within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "grick",
+   "name": "Grick",
+   "type": "monstrosity",
+   "size": "Medium",
+   "cr": "2",
+   "env": [
+    "underdark",
+    "forest",
+    "ruins"
+   ],
+   "blurb": "A worm-bodied ambusher with a beaked, tentacled head, colored to match cave stone.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "grick-beak",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival"
+    },
+    {
+     "m": "grick-hide",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival"
+    },
+    {
+     "m": "grick-tentacle",
+     "q": 4,
+     "dc": 8,
+     "skill": "Survival"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "griffon",
+   "name": "Griffon",
+   "type": "monstrosity",
+   "size": "Large",
+   "cr": "2",
+   "env": [
+    "mountain",
+    "hill",
+    "grassland"
+   ],
+   "blurb": "An eagle-headed lion of the high peaks; trained as mounts, but its feathers are prized too.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "griffon-feather",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "2d6"
+    },
+    {
+     "m": "griffon-talon",
+     "q": 4,
+     "dc": 10,
+     "skill": "Survival"
+    },
+    {
+     "m": "griffon-egg",
+     "q": 1,
+     "dc": 13,
+     "skill": "Nature",
+     "note": "Must be kept warm; worth far more alive than cooked."
+    },
+    {
+     "m": "griffon-pelt",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "guardian-naga",
+   "name": "Guardian Naga",
+   "type": "monstrosity",
+   "size": "Large",
+   "cr": "10",
+   "env": [
+    "ruins",
+    "forest",
+    "upper-planes"
+   ],
+   "blurb": "A wise, serpentine guardian of holy places that spits venom and returns from death unless cleansed.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "guardian-naga-spit-gland",
+     "q": 1,
+     "dc": 16,
+     "skill": "Medicine",
+     "note": "Spit can still spray in a death reflex; wear a mask."
+    },
+    {
+     "m": "guardian-naga-scale",
+     "q": 1,
+     "dc": 16,
+     "skill": "Survival",
+     "dice": "2d6"
+    },
+    {
+     "m": "guardian-naga-heart",
+     "q": 1,
+     "dc": 16,
+     "skill": "Religion",
+     "note": "Removing it without holy rites draws the naga's vengeance upon rebirth."
+    },
+    {
+     "m": "guardian-naga-essence",
+     "q": 1,
+     "dc": 16,
+     "skill": "Religion",
+     "note": "It escapes with the last breath: hold an Essence Vessel ready and stopper it within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "gynosphinx",
+   "name": "Gynosphinx",
+   "type": "monstrosity",
+   "size": "Large",
+   "cr": "11",
+   "env": [
+    "desert",
+    "ruins",
+    "mountain"
+   ],
+   "blurb": "A lion-bodied sphinx of riddles and prophecy; slaying one is sacrilege, but its shed feathers and gifts are priceless.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "gynosphinx-feather",
+     "q": 1,
+     "dc": 16,
+     "skill": "Religion",
+     "dice": "1d4",
+     "note": "Only shed or given feathers work — plucked ones are dull and ordinary."
+    },
+    {
+     "m": "gynosphinx-eye",
+     "q": 1,
+     "dc": 16,
+     "skill": "Medicine",
+     "note": "Only from a sphinx that died of natural causes or in honourable duel."
+    },
+    {
+     "m": "gynosphinx-claw",
+     "q": 4,
+     "dc": 16,
+     "skill": "Survival"
+    },
+    {
+     "m": "gynosphinx-tear",
+     "q": 1,
+     "dc": 16,
+     "skill": "Religion",
+     "note": "Given freely in grief or for a riddle answered; cannot be taken."
+    },
+    {
+     "m": "gynosphinx-essence",
+     "q": 1,
+     "dc": 16,
+     "skill": "Religion",
+     "note": "A faint shimmer over the body marks it. Catch it in an Essence Vessel within a minute."
+    }
+   ],
+   "aka": [
+    "Sphinx of Lore"
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "harpy",
+   "name": "Harpy",
+   "type": "monstrosity",
+   "size": "Medium",
+   "cr": "1",
+   "env": [
+    "coast",
+    "mountain",
+    "hill"
+   ],
+   "blurb": "A vulture-winged hag whose sweet song lures sailors and travellers to their deaths.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "harpy-vocal-cords",
+     "q": 1,
+     "dc": 12,
+     "skill": "Medicine",
+     "note": "Extremely fragile; a clumsy cut (fail by 5+) snaps them."
+    },
+    {
+     "m": "harpy-feather",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "2d6"
+    },
+    {
+     "m": "harpy-talon",
+     "q": 2,
+     "dc": 10,
+     "skill": "Survival"
+    },
+    {
+     "m": "harpy-essence",
+     "q": 1,
+     "dc": 10,
+     "skill": "Arcana",
+     "note": "Seal it in an Essence Vessel within a minute of death, or it's gone."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "hippogriff",
+   "name": "Hippogriff",
+   "type": "monstrosity",
+   "size": "Large",
+   "cr": "1",
+   "env": [
+    "grassland",
+    "hill",
+    "mountain"
+   ],
+   "blurb": "A horse-bodied, eagle-fronted flyer; easier to tame than a griffon and plentiful on high meadows.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "hippogriff-feather",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "2d6"
+    },
+    {
+     "m": "hippogriff-hide",
+     "q": 1,
+     "dc": 8,
+     "skill": "Survival"
+    },
+    {
+     "m": "hippogriff-meat",
+     "q": 1,
+     "dc": 8,
+     "skill": "Survival",
+     "dice": "3d6"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "hydra",
+   "name": "Hydra",
+   "type": "monstrosity",
+   "size": "Huge",
+   "cr": "8",
+   "env": [
+    "swamp",
+    "coast",
+    "underwater"
+   ],
+   "blurb": "A many-headed swamp serpent that grows two heads for each one severed; only fire stops its flesh from regrowing.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "hydra-heart",
+     "q": 1,
+     "dc": 18,
+     "skill": "Medicine",
+     "note": "Still beats after death; keep it in brine or it tries to regrow tissue around itself."
+    },
+    {
+     "m": "hydra-regen-tissue",
+     "q": 1,
+     "dc": 16,
+     "skill": "Medicine",
+     "dice": "1d4",
+     "note": "Cauterise each cut with fire within a minute, or a writhing new head-bud begins to grow."
+    },
+    {
+     "m": "hydra-scale",
+     "q": 1,
+     "dc": 16,
+     "skill": "Survival",
+     "dice": "2d6"
+    },
+    {
+     "m": "hydra-fang",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival",
+     "dice": "3d6"
+    },
+    {
+     "m": "hydra-blood",
+     "q": 1,
+     "dc": 16,
+     "skill": "Medicine"
+    },
+    {
+     "m": "hydra-essence",
+     "q": 1,
+     "dc": 16,
+     "skill": "Arcana",
+     "note": "A faint shimmer over the body marks it. Catch it in an Essence Vessel within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "kraken",
+   "name": "Kraken",
+   "type": "monstrosity",
+   "size": "Gargantuan",
+   "cr": "23",
+   "env": [
+    "underwater",
+    "coast"
+   ],
+   "blurb": "A leviathan squid of the abyssal trenches that calls storms and drags fleets to their doom.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "kraken-ink",
+     "q": 1,
+     "dc": 22,
+     "skill": "Medicine",
+     "dice": "2d6",
+     "note": "The ink sac must be drained in the water; out of it the sac bursts."
+    },
+    {
+     "m": "kraken-beak",
+     "q": 1,
+     "dc": 22,
+     "skill": "Survival"
+    },
+    {
+     "m": "kraken-tentacle",
+     "q": 10,
+     "dc": 22,
+     "skill": "Survival",
+     "note": "Each takes a team of workers a full day to cut and salt."
+    },
+    {
+     "m": "kraken-storm-organ",
+     "q": 1,
+     "dc": 24,
+     "skill": "Medicine",
+     "note": "Draw the lingering charge before cutting or you're struck by lightning."
+    },
+    {
+     "m": "kraken-eye",
+     "q": 2,
+     "dc": 22,
+     "skill": "Medicine"
+    },
+    {
+     "m": "kraken-hide",
+     "q": 1,
+     "dc": 19,
+     "skill": "Survival",
+     "dice": "2d4"
+    },
+    {
+     "m": "kraken-essence",
+     "q": 1,
+     "dc": 22,
+     "skill": "Arcana",
+     "note": "A faint shimmer over the body marks it. Catch it in an Essence Vessel within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "lamia",
+   "name": "Lamia",
+   "type": "monstrosity",
+   "size": "Large",
+   "cr": "4",
+   "env": [
+    "desert",
+    "ruins"
+   ],
+   "blurb": "A lion-bodied temptress of desert ruins who weaves illusions and saps the wisdom of those it touches.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "lamia-claw",
+     "q": 4,
+     "dc": 13,
+     "skill": "Survival"
+    },
+    {
+     "m": "lamia-tongue",
+     "q": 1,
+     "dc": 13,
+     "skill": "Medicine"
+    },
+    {
+     "m": "lamia-pelt",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival"
+    },
+    {
+     "m": "lamia-heart",
+     "q": 1,
+     "dc": 13,
+     "skill": "Medicine"
+    },
+    {
+     "m": "lamia-essence",
+     "q": 1,
+     "dc": 13,
+     "skill": "Arcana",
+     "note": "Seal it in an Essence Vessel within a minute of death, or it's gone."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "manticore",
+   "name": "Manticore",
+   "type": "monstrosity",
+   "size": "Large",
+   "cr": "3",
+   "env": [
+    "mountain",
+    "hill",
+    "desert"
+   ],
+   "blurb": "A man-faced, bat-winged lion that looses volleys of tail spikes at its prey.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "manticore-tail-spike",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival",
+     "dice": "3d6"
+    },
+    {
+     "m": "manticore-wing",
+     "q": 2,
+     "dc": 13,
+     "skill": "Survival"
+    },
+    {
+     "m": "manticore-mane",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival"
+    },
+    {
+     "m": "manticore-tooth",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "2d6"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "medusa",
+   "name": "Medusa",
+   "type": "monstrosity",
+   "size": "Medium",
+   "cr": "6",
+   "env": [
+    "ruins",
+    "desert",
+    "coast"
+   ],
+   "blurb": "A cursed, snake-haired recluse whose gaze turns onlookers to stone; its head is a legendary trophy.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "medusa-head",
+     "q": 1,
+     "dc": 16,
+     "skill": "Medicine",
+     "note": "Behead and bag it by mirror alone; its eyes still petrify for 1 hour after death."
+    },
+    {
+     "m": "medusa-eye",
+     "q": 2,
+     "dc": 15,
+     "skill": "Medicine",
+     "note": "Harvest blindfolded or by mirror only."
+    },
+    {
+     "m": "medusa-snake-venom",
+     "q": 1,
+     "dc": 13,
+     "skill": "Medicine",
+     "note": "The hair-snakes may still bite for a minute after death."
+    },
+    {
+     "m": "medusa-snake-hair",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival",
+     "dice": "2d6"
+    },
+    {
+     "m": "medusa-essence",
+     "q": 1,
+     "dc": 13,
+     "skill": "Arcana",
+     "note": "Seal it in an Essence Vessel within a minute of death, or it's gone."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "merrow",
+   "name": "Merrow",
+   "type": "monstrosity",
+   "size": "Large",
+   "cr": "2",
+   "env": [
+    "underwater",
+    "coast"
+   ],
+   "blurb": "A brutish, harpoon-wielding sea-ogre corrupted by demonic worship.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "merrow-harpoon",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "merrow-scale",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "1d6"
+    },
+    {
+     "m": "merrow-tusk",
+     "q": 2,
+     "dc": 10,
+     "skill": "Survival"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "mimic",
+   "name": "Mimic",
+   "type": "monstrosity",
+   "size": "Medium",
+   "cr": "2",
+   "env": [
+    "ruins",
+    "underdark",
+    "urban"
+   ],
+   "blurb": "A shapeshifting ambusher that poses as chests and doors, gluing victims fast with its adhesive skin.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "mimic-adhesive",
+     "q": 1,
+     "dc": 10,
+     "skill": "Medicine",
+     "dice": "1d4",
+     "note": "Scrape it with wooden tools; metal sticks fast and is lost."
+    },
+    {
+     "m": "mimic-pseudopod",
+     "q": 1,
+     "dc": 10,
+     "skill": "Medicine"
+    },
+    {
+     "m": "mimic-teeth",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "2d6"
+    },
+    {
+     "m": "mimic-essence",
+     "q": 1,
+     "dc": 10,
+     "skill": "Arcana",
+     "note": "A faint shimmer over the body marks it. Catch it in an Essence Vessel within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "minotaur",
+   "name": "Minotaur",
+   "type": "monstrosity",
+   "size": "Large",
+   "cr": "3",
+   "env": [
+    "underdark",
+    "ruins",
+    "hill"
+   ],
+   "blurb": "A bull-headed labyrinth dweller that never loses its way and charges with devastating force.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "minotaur-horn",
+     "q": 2,
+     "dc": 13,
+     "skill": "Survival",
+     "note": "Saw at the base; cracking the core loses the sense-of-direction virtue."
+    },
+    {
+     "m": "minotaur-hide",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival"
+    },
+    {
+     "m": "minotaur-heart",
+     "q": 1,
+     "dc": 13,
+     "skill": "Medicine"
+    },
+    {
+     "m": "minotaur-essence",
+     "q": 1,
+     "dc": 13,
+     "skill": "Arcana",
+     "note": "A faint shimmer over the body marks it. Catch it in an Essence Vessel within a minute."
+    }
+   ],
+   "aka": [
+    "Minotaur of Baphomet"
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "otyugh",
+   "name": "Otyugh",
+   "type": "aberration",
+   "size": "Large",
+   "cr": "5",
+   "env": [
+    "underdark",
+    "urban",
+    "swamp"
+   ],
+   "blurb": "A filth-eating sewer horror whose bite spreads sickness — yet its body resists every disease.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "otyugh-bile",
+     "q": 1,
+     "dc": 13,
+     "skill": "Medicine",
+     "note": "The stench forces a Constitution save or you're poisoned for an hour."
+    },
+    {
+     "m": "otyugh-tentacle",
+     "q": 2,
+     "dc": 13,
+     "skill": "Medicine"
+    },
+    {
+     "m": "otyugh-hide",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival"
+    },
+    {
+     "m": "otyugh-tooth",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "2d4",
+     "note": "Pull them with tongs and boil them before bare hands touch them; the crust carries the otyugh's disease."
+    },
+    {
+     "m": "otyugh-essence",
+     "q": 1,
+     "dc": 13,
+     "skill": "Arcana",
+     "note": "A faint shimmer over the body marks it. Catch it in an Essence Vessel within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "owlbear",
+   "name": "Owlbear",
+   "type": "monstrosity",
+   "size": "Large",
+   "cr": "3",
+   "env": [
+    "forest"
+   ],
+   "blurb": "A hulking, owl-headed bear of the deep woods, beloved by trophy hunters.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "owlbear-feather",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "2d6"
+    },
+    {
+     "m": "owlbear-pelt",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival"
+    },
+    {
+     "m": "owlbear-beak",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival"
+    },
+    {
+     "m": "owlbear-claw",
+     "q": 8,
+     "dc": 10,
+     "skill": "Survival"
+    },
+    {
+     "m": "owlbear-egg",
+     "q": 1,
+     "dc": 13,
+     "skill": "Nature",
+     "note": "Nests are guarded; take them only when the parents are gone."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "phase-spider",
+   "name": "Phase Spider",
+   "type": "monstrosity",
+   "size": "Large",
+   "cr": "3",
+   "env": [
+    "forest",
+    "underdark",
+    "astral"
+   ],
+   "blurb": "A giant spider that blinks in and out of the Ethereal Plane; its silk slips between worlds.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "phase-spider-silk",
+     "q": 1,
+     "dc": 13,
+     "skill": "Nature",
+     "dice": "1d4",
+     "note": "Gather from the web while the spider is visible; sometimes strands phase away as you collect them."
+    },
+    {
+     "m": "phase-spider-venom",
+     "q": 1,
+     "dc": 13,
+     "skill": "Medicine"
+    },
+    {
+     "m": "phase-spider-eye",
+     "q": 8,
+     "dc": 13,
+     "skill": "Medicine"
+    },
+    {
+     "m": "phase-spider-leg",
+     "q": 8,
+     "dc": 10,
+     "skill": "Survival"
+    },
+    {
+     "m": "phase-spider-essence",
+     "q": 1,
+     "dc": 13,
+     "skill": "Arcana",
+     "note": "Seal it in an Essence Vessel within a minute of death, or it's gone."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "purple-worm",
+   "name": "Purple Worm",
+   "type": "monstrosity",
+   "size": "Gargantuan",
+   "cr": "15",
+   "env": [
+    "underdark",
+    "desert",
+    "mountain"
+   ],
+   "blurb": "A colossal burrowing worm that swallows prey whole; its tail venom is the most famous poison in the world.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "purple-worm-venom",
+     "q": 1,
+     "dc": 19,
+     "skill": "Medicine",
+     "dice": "1d4",
+     "note": "Milk the tail stinger slowly; rupture the sac (fail by 5+) and you're exposed to its full poison."
+    },
+    {
+     "m": "purple-worm-stinger",
+     "q": 1,
+     "dc": 19,
+     "skill": "Survival"
+    },
+    {
+     "m": "purple-worm-gullet",
+     "q": 1,
+     "dc": 19,
+     "skill": "Medicine",
+     "note": "Sift through first — gullets often hold swallowed treasure and armour."
+    },
+    {
+     "m": "purple-worm-hide",
+     "q": 1,
+     "dc": 19,
+     "skill": "Survival",
+     "dice": "2d6"
+    },
+    {
+     "m": "purple-worm-tooth",
+     "q": 1,
+     "dc": 16,
+     "skill": "Survival",
+     "dice": "2d6"
+    },
+    {
+     "m": "purple-worm-essence",
+     "q": 1,
+     "dc": 19,
+     "skill": "Arcana",
+     "note": "A faint shimmer over the body marks it. Catch it in an Essence Vessel within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "remorhaz",
+   "name": "Remorhaz",
+   "type": "monstrosity",
+   "size": "Huge",
+   "cr": "11",
+   "env": [
+    "arctic"
+   ],
+   "blurb": "A glacier-burrowing centipede whose back glows red-hot; its heat gland is a forge in a sac.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "remorhaz-heat-gland",
+     "q": 1,
+     "dc": 18,
+     "skill": "Medicine",
+     "note": "Wait for the back plates to cool from white-hot before cutting, or take fire damage."
+    },
+    {
+     "m": "remorhaz-carapace",
+     "q": 1,
+     "dc": 16,
+     "skill": "Survival",
+     "dice": "1d6"
+    },
+    {
+     "m": "remorhaz-mandible",
+     "q": 2,
+     "dc": 16,
+     "skill": "Survival"
+    },
+    {
+     "m": "remorhaz-essence",
+     "q": 1,
+     "dc": 16,
+     "skill": "Arcana",
+     "note": "It escapes with the last breath: hold an Essence Vessel ready and stopper it within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "roc",
+   "name": "Roc",
+   "type": "monstrosity",
+   "size": "Gargantuan",
+   "cr": "11",
+   "env": [
+    "mountain",
+    "coast",
+    "desert"
+   ],
+   "blurb": "A bird so vast it carries off elephants; a single feather could sail a boat.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "roc-feather",
+     "q": 1,
+     "dc": 16,
+     "skill": "Survival",
+     "dice": "2d6"
+    },
+    {
+     "m": "roc-talon",
+     "q": 4,
+     "dc": 16,
+     "skill": "Survival"
+    },
+    {
+     "m": "roc-egg",
+     "q": 1,
+     "dc": 16,
+     "skill": "Nature",
+     "note": "Nests are high on peaks; parents are never far."
+    },
+    {
+     "m": "roc-beak",
+     "q": 1,
+     "dc": 16,
+     "skill": "Survival"
+    },
+    {
+     "m": "roc-essence",
+     "q": 1,
+     "dc": 16,
+     "skill": "Arcana",
+     "note": "Seal it in an Essence Vessel within a minute of death, or it's gone."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "roper",
+   "name": "Roper",
+   "type": "monstrosity",
+   "size": "Large",
+   "cr": "5",
+   "env": [
+    "underdark"
+   ],
+   "blurb": "A stalagmite-shaped cave predator with adhesive strands that sap strength.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "roper-strand",
+     "q": 6,
+     "dc": 13,
+     "skill": "Medicine",
+     "note": "Cut near the base while the roper is still; live strands drag you in."
+    },
+    {
+     "m": "roper-gizzard",
+     "q": 1,
+     "dc": 13,
+     "skill": "Nature",
+     "dice": "1d4"
+    },
+    {
+     "m": "roper-hide",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival"
+    },
+    {
+     "m": "roper-essence",
+     "q": 1,
+     "dc": 13,
+     "skill": "Arcana",
+     "note": "It escapes with the last breath: hold an Essence Vessel ready and stopper it within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "rust-monster",
+   "name": "Rust Monster",
+   "type": "monstrosity",
+   "size": "Medium",
+   "cr": "1/2",
+   "env": [
+    "underdark",
+    "ruins"
+   ],
+   "blurb": "An armoured, insectoid metal-eater whose antennae rust iron on contact.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "rust-monster-antennae",
+     "q": 2,
+     "dc": 10,
+     "skill": "Medicine",
+     "note": "Use bone or wooden tools only — metal blades rust instantly."
+    },
+    {
+     "m": "rust-monster-carapace",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival"
+    },
+    {
+     "m": "rust-monster-gut",
+     "q": 1,
+     "dc": 10,
+     "skill": "Medicine"
+    },
+    {
+     "m": "rust-monster-essence",
+     "q": 1,
+     "dc": 10,
+     "skill": "Arcana",
+     "note": "Needs an Essence Vessel within 1 minute of death; use a glass or wax stopper, as it rusts a metal cap shut."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "spirit-naga",
+   "name": "Spirit Naga",
+   "type": "monstrosity",
+   "size": "Large",
+   "cr": "8",
+   "env": [
+    "ruins",
+    "underdark",
+    "swamp"
+   ],
+   "blurb": "A cruel, necromantic serpent that returns from death unless its body is destroyed.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "spirit-naga-venom",
+     "q": 1,
+     "dc": 16,
+     "skill": "Medicine"
+    },
+    {
+     "m": "spirit-naga-scale",
+     "q": 1,
+     "dc": 16,
+     "skill": "Survival",
+     "dice": "2d6"
+    },
+    {
+     "m": "spirit-naga-heart",
+     "q": 1,
+     "dc": 16,
+     "skill": "Religion",
+     "note": "Destroy it in holy fire or keep it under consecrated seal; the naga returns if it's left intact."
+    },
+    {
+     "m": "spirit-naga-essence",
+     "q": 1,
+     "dc": 16,
+     "skill": "Religion",
+     "note": "Seal it in an Essence Vessel within a minute of death, or it's gone."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "tarrasque",
+   "name": "Tarrasque",
+   "type": "monstrosity",
+   "size": "Gargantuan",
+   "cr": "30",
+   "env": [
+    "grassland",
+    "mountain",
+    "hill",
+    "underdark"
+   ],
+   "blurb": "The world-ending engine of destruction; its reflective carapace turns aside spells, and every part is legendary.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "tarrasque-carapace",
+     "q": 1,
+     "dc": 22,
+     "skill": "Survival",
+     "dice": "1d4",
+     "note": "Requires adamantine tools and days of work per plate."
+    },
+    {
+     "m": "tarrasque-heart",
+     "q": 1,
+     "dc": 24,
+     "skill": "Medicine",
+     "note": "Must be pierced and drained; while beating, it regenerates the tarrasque if not destroyed."
+    },
+    {
+     "m": "tarrasque-horn",
+     "q": 2,
+     "dc": 22,
+     "skill": "Survival"
+    },
+    {
+     "m": "tarrasque-claw",
+     "q": 4,
+     "dc": 22,
+     "skill": "Survival"
+    },
+    {
+     "m": "tarrasque-tooth",
+     "q": 1,
+     "dc": 22,
+     "skill": "Survival",
+     "dice": "3d6"
+    },
+    {
+     "m": "tarrasque-blood",
+     "q": 1,
+     "dc": 22,
+     "skill": "Medicine",
+     "dice": "2d6"
+    },
+    {
+     "m": "tarrasque-essence",
+     "q": 1,
+     "dc": 22,
+     "skill": "Arcana",
+     "note": "A faint shimmer over the body marks it. Catch it in an Essence Vessel within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "winter-wolf",
+   "name": "Winter Wolf",
+   "type": "monstrosity",
+   "size": "Large",
+   "cr": "3",
+   "env": [
+    "arctic",
+    "mountain"
+   ],
+   "blurb": "A cunning, speaking wolf of the frozen north that breathes freezing wind.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "winter-wolf-pelt",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival",
+     "note": "Skin in one piece; the pelt loses its magic if torn."
+    },
+    {
+     "m": "winter-wolf-frost-gland",
+     "q": 1,
+     "dc": 13,
+     "skill": "Medicine",
+     "note": "Can still exhale a frost burst for an hour after death."
+    },
+    {
+     "m": "winter-wolf-fang",
+     "q": 2,
+     "dc": 13,
+     "skill": "Survival"
+    },
+    {
+     "m": "winter-wolf-essence",
+     "q": 1,
+     "dc": 13,
+     "skill": "Arcana",
+     "note": "It escapes with the last breath: hold an Essence Vessel ready and stopper it within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "worg",
+   "name": "Worg",
+   "type": "monstrosity",
+   "size": "Large",
+   "cr": "1/2",
+   "env": [
+    "forest",
+    "hill",
+    "grassland"
+   ],
+   "blurb": "A malevolent, intelligent wolf that serves goblins as a mount.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "worg-pelt",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival"
+    },
+    {
+     "m": "worg-fang",
+     "q": 2,
+     "dc": 10,
+     "skill": "Survival"
+    },
+    {
+     "m": "worg-meat",
+     "q": 1,
+     "dc": 8,
+     "skill": "Survival",
+     "dice": "2d6"
+    }
+   ],
+   "srd": "5.1"
+  }
+ ]
+}

@@ -1,0 +1,1740 @@
+{
+ "materials": [
+  {
+   "id": "stirge-proboscis",
+   "name": "Stirge Proboscis",
+   "tier": "common",
+   "tags": [
+    "stinger",
+    "healing",
+    "monstrosity"
+   ],
+   "desc": "A hollow, needle-fine beak the length of a finger, ridged inside like a drinking straw. Leeches and field-surgeons use it to draw fluid from a wound without widening it.",
+   "perish": "stable",
+   "value": 8,
+   "recipe": null
+  },
+  {
+   "id": "stirge-blood-bladder",
+   "name": "Stirge Blood Bladder",
+   "tier": "common",
+   "tags": [
+    "organ",
+    "vessel",
+    "blood",
+    "monstrosity"
+   ],
+   "desc": "A thin, rubbery sac that swells like a ripe plum when the stirge has fed. Emptied and dried it becomes a squeezable pipette-bulb that never leaks.",
+   "perish": "1 hour",
+   "value": 5,
+   "recipe": null
+  },
+  {
+   "id": "allosaurus-tooth",
+   "name": "Allosaurus Tooth",
+   "tier": "common",
+   "tags": [
+    "tooth",
+    "bone",
+    "strength",
+    "beast"
+   ],
+   "desc": "A serrated, backward-curving blade of enamel as long as a dagger. Hunters set them into clubs and knuckle-guards for a vicious tearing bite.",
+   "perish": "stable",
+   "value": 6,
+   "recipe": null
+  },
+  {
+   "id": "allosaurus-claw",
+   "name": "Allosaurus Sprint-Claw",
+   "tier": "common",
+   "tags": [
+    "claw",
+    "speed",
+    "beast"
+   ],
+   "desc": "A hooked foot-claw worn smooth on its underside from running down prey. Charm-makers believe it lends a burst of reckless speed.",
+   "perish": "stable",
+   "value": 10,
+   "recipe": null
+  },
+  {
+   "id": "allosaurus-hide",
+   "name": "Allosaurus Hide",
+   "tier": "mundane",
+   "tags": [
+    "hide",
+    "beast"
+   ],
+   "desc": "Pebbly, olive-brown skin, tough but flexible. Good for boots and saddles.",
+   "perish": "1 day",
+   "value": 4,
+   "recipe": null
+  },
+  {
+   "id": "ankylosaurus-tail-club",
+   "name": "Ankylosaurus Tail Club",
+   "tier": "uncommon",
+   "tags": [
+    "bone",
+    "strength",
+    "beast"
+   ],
+   "desc": "A fused knot of bone the size of a keg, heavy enough to shatter a wagon wheel. Smiths build maul-heads and battering rams around it.",
+   "perish": "stable",
+   "value": 120,
+   "recipe": null
+  },
+  {
+   "id": "ankylosaurus-osteoderms",
+   "name": "Ankylosaurus Osteoderms",
+   "tier": "uncommon",
+   "tags": [
+    "bone",
+    "scale",
+    "protection",
+    "toughness",
+    "beast"
+   ],
+   "desc": "Plate-sized studs of bone that grow in the beast's skin like cobbles in a road. Armourers rivet them onto leather for near-steel protection.",
+   "perish": "stable",
+   "value": 60,
+   "recipe": null
+  },
+  {
+   "id": "archelon-shell-plate",
+   "name": "Archelon Shell Plate",
+   "tier": "uncommon",
+   "tags": [
+    "shell",
+    "protection",
+    "swimming",
+    "beast"
+   ],
+   "desc": "A broad, leathery-edged plate of sea-turtle shell, dark green and ribbed like a hull. It sheds water, floats, and turns a spear with ease.",
+   "perish": "stable",
+   "value": 90,
+   "recipe": null
+  },
+  {
+   "id": "archelon-flipper-sinew",
+   "name": "Archelon Flipper Sinew",
+   "tier": "common",
+   "tags": [
+    "sinew",
+    "swimming",
+    "beast"
+   ],
+   "desc": "Long, rubbery tendons from a front flipper that never go slack in water. Used for straps and bindings on anything meant to be swum with.",
+   "perish": "1 day",
+   "value": 15,
+   "recipe": null
+  },
+  {
+   "id": "bulette-armor-plate",
+   "name": "Bulette Armour Plate",
+   "tier": "uncommon",
+   "tags": [
+    "carapace",
+    "scale",
+    "protection",
+    "toughness",
+    "monstrosity"
+   ],
+   "desc": "A wedge of blue-grey 'landshark' plate as thick as a thumb, dense as iron but a third the weight. The classic stuff of monster-hunters' shields.",
+   "perish": "stable",
+   "value": 200,
+   "recipe": null
+  },
+  {
+   "id": "bulette-burrowing-gland",
+   "name": "Bulette Burrowing Gland",
+   "tier": "uncommon",
+   "tags": [
+    "gland",
+    "burrowing",
+    "earth",
+    "monstrosity"
+   ],
+   "desc": "A gritty, fist-sized gland behind the jaw that secretes a soil-loosening slurry. Smells of wet clay and rust.",
+   "perish": "1 day",
+   "value": 120,
+   "recipe": null
+  },
+  {
+   "id": "hippopotamus-ivory-tusk",
+   "name": "Hippopotamus Ivory Tusk",
+   "tier": "uncommon",
+   "tags": [
+    "tooth",
+    "bone",
+    "strength",
+    "beast"
+   ],
+   "desc": "A heavy, curved lower tusk of creamy ivory, harder than elephant ivory and self-sharpening where it grinds. Carvers and weaponsmiths both want it.",
+   "perish": "stable",
+   "value": 80,
+   "recipe": null
+  },
+  {
+   "id": "hippopotamus-hide",
+   "name": "Hippopotamus Hide",
+   "tier": "common",
+   "tags": [
+    "hide",
+    "toughness",
+    "beast"
+   ],
+   "desc": "Skin two fingers thick that oozes a reddish sun-guard oil when fresh. Cures into leather hard enough for shields.",
+   "perish": "1 day",
+   "value": 20,
+   "recipe": null
+  },
+  {
+   "id": "pteranodon-wing-membrane",
+   "name": "Pteranodon Wing Membrane",
+   "tier": "common",
+   "tags": [
+    "wing",
+    "hide",
+    "flight",
+    "beast"
+   ],
+   "desc": "A translucent, leathery sail stretched across a long finger-bone, surprisingly strong for its thinness. Glider-cloaks and kites are made from it.",
+   "perish": "1 day",
+   "value": 12,
+   "recipe": null
+  },
+  {
+   "id": "pteranodon-hollow-bones",
+   "name": "Pteranodon Hollow Bones",
+   "tier": "mundane",
+   "tags": [
+    "bone",
+    "flight",
+    "beast"
+   ],
+   "desc": "Paper-light, air-filled bones that whistle when blown across. Handy for flutes, whistles and glider frames.",
+   "perish": "stable",
+   "value": 2,
+   "recipe": null
+  },
+  {
+   "id": "sphinx-of-wonder-riddle-feather",
+   "name": "Riddle-Feather of a Sphinx of Wonder",
+   "tier": "common",
+   "tags": [
+    "feather",
+    "knowledge",
+    "luck",
+    "celestial"
+   ],
+   "desc": "A small golden feather whose barbs shift into faint lettering when read by candlelight. Scribes swear quills cut from it guess the next word before you do.",
+   "perish": "stable",
+   "value": 40,
+   "recipe": null
+  },
+  {
+   "id": "sphinx-of-wonder-tear",
+   "name": "Tear of a Sphinx of Wonder",
+   "tier": "uncommon",
+   "tags": [
+    "liquid",
+    "radiant",
+    "luck",
+    "knowledge",
+    "celestial"
+   ],
+   "desc": "A single warm, honey-bright drop that glows faintly and hums when a question is asked near it. Charm-makers treasure it for luck and flashes of insight.",
+   "perish": "1 day",
+   "value": 150,
+   "recipe": null
+  },
+  {
+   "id": "crawling-claw-hand-bones",
+   "name": "Crawling-Claw Hand Bones",
+   "tier": "common",
+   "tags": [
+    "bone",
+    "undeath",
+    "undead"
+   ],
+   "desc": "A clattering bag of finger and wrist bones that still twitch faintly when handled. Necromancers and charm-carvers find endless uses for them.",
+   "perish": "stable",
+   "value": 5,
+   "recipe": null
+  },
+  {
+   "id": "crawling-claw-grave-dust",
+   "name": "Crawling-Claw Grave-Dust",
+   "tier": "uncommon",
+   "tags": [
+    "dust",
+    "necrotic",
+    "undeath",
+    "undead"
+   ],
+   "desc": "Grey, cold dust that sifts from the severed hands as the animating curse leaves them. It clings to skin like frost and numbs whatever it touches.",
+   "perish": "stable",
+   "value": 90,
+   "recipe": null
+  },
+  {
+   "id": "troll-limb-knitting-flesh",
+   "name": "Troll-Limb Knitting Flesh",
+   "tier": "common",
+   "tags": [
+    "meat",
+    "regeneration",
+    "giant"
+   ],
+   "desc": "Grey-green muscle that slowly crawls back together when cut, smelling of swamp and wet iron. Healers render it into salves; the brave eat it.",
+   "perish": "1 day",
+   "value": 30,
+   "recipe": null
+  },
+  {
+   "id": "goblin-boss-knucklebone-rattle",
+   "name": "Goblin Boss's Knucklebone Rattle",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "bone",
+    "fear",
+    "fey"
+   ],
+   "desc": "A gourd stuffed with teeth and knucklebones on a stick, shaken to drive minions forward. Carvers reuse the polished bones.",
+   "perish": "stable",
+   "value": 12,
+   "recipe": null
+  },
+  {
+   "id": "goblin-minion-crude-javelin",
+   "name": "Goblin Minion's Crude Javelin",
+   "tier": "mundane",
+   "tags": [
+    "salvage",
+    "wood",
+    "fey"
+   ],
+   "desc": "A fire-hardened stick with a sharpened tip and a hopeful chicken feather. The seasoned shaft is still decent wood.",
+   "perish": "stable",
+   "value": 0.3,
+   "recipe": null
+  },
+  {
+   "id": "hobgoblin-captain-war-horn",
+   "name": "Hobgoblin Captain's War Horn",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "horn",
+    "sound",
+    "fey"
+   ],
+   "desc": "A banded horn whose blasts carry drilled commands across a battlefield. Its brassy note still makes soldiers stand straighter.",
+   "perish": "stable",
+   "value": 25,
+   "recipe": null
+  },
+  {
+   "id": "bugbear-stalker-hush-cowl",
+   "name": "Bugbear Stalker's Hush Cowl",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "cloth",
+    "stealth",
+    "fey"
+   ],
+   "desc": "A shaggy, soot-dyed hood lined with moss that seems to swallow sound. Stalkers wear them until they stink of the forest floor.",
+   "perish": "stable",
+   "value": 25,
+   "recipe": null
+  },
+  {
+   "id": "guard-captain-signal-horn",
+   "name": "Guard Captain's Signal Horn",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "horn",
+    "sound",
+    "humanoid"
+   ],
+   "desc": "A brass-capped ox-horn stamped with the city arms, used to call the watch to arms. Loud enough to wake a barracks.",
+   "perish": "stable",
+   "value": 25,
+   "recipe": null
+  },
+  {
+   "id": "pirate-belaying-pin",
+   "name": "Pirate's Belaying Pin",
+   "tier": "mundane",
+   "tags": [
+    "salvage",
+    "wood",
+    "humanoid"
+   ],
+   "desc": "A salt-hardened hardwood pin, worn smooth by rope and handy as a cudgel. Good seasoned timber for small work.",
+   "perish": "stable",
+   "value": 0.5,
+   "recipe": null
+  },
+  {
+   "id": "pirate-captain-treasure-chart",
+   "name": "Pirate Captain's Treasure Chart",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "ink",
+    "knowledge",
+    "humanoid"
+   ],
+   "desc": "A water-stained sea chart with a hand-inked cove, soundings, and one smudged X. Cartographers and fortune-hunters both pay for it.",
+   "perish": "stable",
+   "value": 45,
+   "recipe": null
+  },
+  {
+   "id": "tough-boss-weighted-cudgel",
+   "name": "Tough Boss's Weighted Cudgel",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "wood",
+    "strength",
+    "humanoid"
+   ],
+   "desc": "A hickory club with a lead core and notches for every debt collected. The wood is dense and beautifully seasoned.",
+   "perish": "stable",
+   "value": 8,
+   "recipe": null
+  },
+  {
+   "id": "vampire-familiar-sigil-ring",
+   "name": "Vampire Familiar's Sigil Ring",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "relic",
+    "necrotic",
+    "binding",
+    "humanoid"
+   ],
+   "desc": "A cold iron ring bearing its master's crest, worn smooth on the inside. It still tugs faintly toward the vampire it binds.",
+   "perish": "stable",
+   "value": 45,
+   "recipe": null
+  }
+ ],
+ "monsters": [
+  {
+   "id": "stirge",
+   "name": "Stirge",
+   "type": "monstrosity",
+   "size": "Tiny",
+   "cr": "1/8",
+   "env": [
+    "forest",
+    "swamp",
+    "underdark",
+    "hill",
+    "ruins"
+   ],
+   "blurb": "A mosquito-winged bat-thing that clamps on and drinks; its tube-beak and gorged belly are what alchemists pay for.",
+   "salvage": false,
+   "srd": "5.1",
+   "harvest": [
+    {
+     "m": "stirge-proboscis",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "note": "Snap it off at the base, not midway: a cracked tube leaks and is useless for siphoning."
+    },
+    {
+     "m": "stirge-blood-bladder",
+     "q": 1,
+     "dc": 10,
+     "skill": "Medicine",
+     "note": "Tie off both ends before cutting. A freshly fed stirge's bladder bursts easily (fail by 5+) and sprays you with someone else's blood."
+    }
+   ]
+  },
+  {
+   "id": "allosaurus",
+   "name": "Allosaurus",
+   "type": "beast",
+   "size": "Large",
+   "cr": "2",
+   "env": [
+    "forest",
+    "grassland",
+    "hill"
+   ],
+   "blurb": "A fast-striding predator that sprints down prey and pins it with its feet; its claws and teeth are prized trophies.",
+   "salvage": false,
+   "srd": "5.2",
+   "harvest": [
+    {
+     "m": "allosaurus-tooth",
+     "q": 2,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "2d4",
+     "note": "Rock each tooth out of its socket; prying sideways snaps the root."
+    },
+    {
+     "m": "allosaurus-claw",
+     "q": 2,
+     "dc": 10,
+     "skill": "Survival",
+     "note": "Take the inner claws of the hind feet; the outer ones are too blunted."
+    },
+    {
+     "m": "allosaurus-hide",
+     "q": 1,
+     "dc": 8,
+     "skill": "Survival"
+    }
+   ]
+  },
+  {
+   "id": "ankylosaurus",
+   "name": "Ankylosaurus",
+   "type": "beast",
+   "size": "Huge",
+   "cr": "3",
+   "env": [
+    "forest",
+    "grassland",
+    "hill"
+   ],
+   "blurb": "A walking fortress of bone plates with a tail that ends in a wrecking ball; armourers covet the lot.",
+   "salvage": false,
+   "srd": "5.2",
+   "harvest": [
+    {
+     "m": "ankylosaurus-tail-club",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival",
+     "note": "Cut through the stiffened tail at the last flexible joint; it takes an hour and a saw. Dropping the club (fail by 5+) crushes a foot for 2d6 bludgeoning."
+    },
+    {
+     "m": "ankylosaurus-osteoderms",
+     "q": 2,
+     "dc": 13,
+     "skill": "Survival",
+     "dice": "2d4",
+     "note": "Only the back plates are thick enough; the flank studs crumble when levered free."
+    }
+   ]
+  },
+  {
+   "id": "archelon",
+   "name": "Archelon",
+   "type": "beast",
+   "size": "Huge",
+   "cr": "4",
+   "env": [
+    "coast",
+    "underwater"
+   ],
+   "blurb": "A giant, ancient sea turtle whose shell plates are the finest waterproof armour-stuff the sea offers.",
+   "salvage": false,
+   "srd": "5.2",
+   "harvest": [
+    {
+     "m": "archelon-shell-plate",
+     "q": 2,
+     "dc": 13,
+     "skill": "Survival",
+     "dice": "1d4+1",
+     "note": "Separate the plates along their seams while the body is still wet; dry shell cracks when levered."
+    },
+    {
+     "m": "archelon-flipper-sinew",
+     "q": 2,
+     "dc": 10,
+     "skill": "Survival"
+    }
+   ]
+  },
+  {
+   "id": "bulette",
+   "name": "Bulette",
+   "type": "monstrosity",
+   "size": "Large",
+   "cr": "5",
+   "env": [
+    "grassland",
+    "hill",
+    "mountain",
+    "forest"
+   ],
+   "blurb": "The 'landshark': a burrowing armoured predator that erupts under its prey; its plates are legendary shield-stock.",
+   "salvage": false,
+   "srd": "5.2",
+   "harvest": [
+    {
+     "m": "bulette-armor-plate",
+     "q": 2,
+     "dc": 13,
+     "skill": "Survival",
+     "dice": "1d4+1",
+     "note": "The dorsal crest plates are best. Chisel along the growth ridges; a split plate is only good for scale mail."
+    },
+    {
+     "m": "bulette-burrowing-gland",
+     "q": 1,
+     "dc": 13,
+     "skill": "Medicine",
+     "note": "Keep it damp. Nick it (fail by 5+) and the slurry sets like mortar on your hands (DC 12 Strength to free them)."
+    }
+   ]
+  },
+  {
+   "id": "hippopotamus",
+   "name": "Hippopotamus",
+   "type": "beast",
+   "size": "Large",
+   "cr": "4",
+   "env": [
+    "swamp",
+    "grassland",
+    "coast"
+   ],
+   "blurb": "A river-bank titan with a temper to match; its ivory and armour-thick hide repay the danger.",
+   "salvage": false,
+   "srd": "5.2",
+   "harvest": [
+    {
+     "m": "hippopotamus-ivory-tusk",
+     "q": 2,
+     "dc": 13,
+     "skill": "Survival",
+     "note": "Cut the tusks out of the jaw, don't break them; half the length sits inside the bone."
+    },
+    {
+     "m": "hippopotamus-hide",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "note": "Needs two people and a day; the hide must be salted at once or it rots from the inside."
+    }
+   ]
+  },
+  {
+   "id": "pteranodon",
+   "name": "Pteranodon",
+   "type": "beast",
+   "size": "Medium",
+   "cr": "1/4",
+   "env": [
+    "coast",
+    "mountain",
+    "hill"
+   ],
+   "blurb": "A crested, fish-snatching glider of sea cliffs; its wing membranes are the lightest sailcloth a hunter can take.",
+   "salvage": false,
+   "srd": "5.2",
+   "harvest": [
+    {
+     "m": "pteranodon-wing-membrane",
+     "q": 2,
+     "dc": 10,
+     "skill": "Survival",
+     "note": "Cut along the finger-bone and the body wall; any tear spreads when the membrane is stretched."
+    },
+    {
+     "m": "pteranodon-hollow-bones",
+     "q": 1,
+     "dc": 8,
+     "skill": "Survival",
+     "dice": "1d4"
+    }
+   ]
+  },
+  {
+   "id": "sphinx-of-wonder",
+   "name": "Sphinx of Wonder",
+   "type": "celestial",
+   "size": "Tiny",
+   "cr": "1",
+   "env": [
+    "upper-planes",
+    "ruins",
+    "desert",
+    "urban"
+   ],
+   "blurb": "A tiny winged sphinx that guards secrets and loves a good riddle; its gifts are only worth anything if freely given.",
+   "salvage": false,
+   "srd": "5.2",
+   "harvest": [
+    {
+     "m": "sphinx-of-wonder-riddle-feather",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "note": "Only shed or given freely, often as a prize for a clever answer. A feather torn from a slain sphinx is dull, ordinary plumage."
+    },
+    {
+     "m": "sphinx-of-wonder-tear",
+     "q": 1,
+     "dc": 13,
+     "skill": "Religion",
+     "note": "Shed only when a riddle's answer truly delights it or a sorrow moves it; catch the drop in a crystal phial. It cannot be taken from the dead."
+    }
+   ]
+  },
+  {
+   "id": "swarm-of-crawling-claws",
+   "name": "Swarm of Crawling Claws",
+   "type": "undead",
+   "size": "Medium",
+   "cr": "3",
+   "env": [
+    "ruins",
+    "urban",
+    "shadowfell",
+    "underdark"
+   ],
+   "blurb": "A skittering carpet of animated severed hands; when it finally stills, the bones and grave-dust are the prize.",
+   "salvage": false,
+   "srd": "5.2",
+   "harvest": [
+    {
+     "m": "crawling-claw-hand-bones",
+     "q": 3,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "2d6",
+     "note": "Crush the knuckles of each hand first; unbroken ones sometimes crawl back out of the sack by night."
+    },
+    {
+     "m": "crawling-claw-grave-dust",
+     "q": 1,
+     "dc": 13,
+     "skill": "Religion",
+     "note": "Sweep it up within the hour on a cloth soaked in holy water or it drifts away on the first draught."
+    }
+   ]
+  },
+  {
+   "id": "troll-limb",
+   "name": "Troll Limb",
+   "type": "giant",
+   "size": "Small",
+   "cr": "1",
+   "env": [
+    "forest",
+    "swamp",
+    "hill",
+    "mountain",
+    "underdark"
+   ],
+   "blurb": "A hacked-off troll arm or leg that keeps grabbing and clawing on its own; the flesh never quite stops trying to heal.",
+   "salvage": false,
+   "srd": "5.2",
+   "harvest": [
+    {
+     "m": "troll-claw",
+     "q": 2,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "1d4"
+    },
+    {
+     "m": "troll-limb-knitting-flesh",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "note": "Sear the cut ends with a torch as you butcher; unseared flesh creeps off the block and tries to rejoin its body."
+    }
+   ]
+  },
+  {
+   "id": "goblin-boss",
+   "name": "Goblin Boss",
+   "type": "fey",
+   "size": "Small",
+   "cr": "1",
+   "env": [
+    "forest",
+    "hill",
+    "underdark",
+    "ruins"
+   ],
+   "blurb": "A sly goblin warlord who hides behind its minions; its rattle and hoard are the loot.",
+   "salvage": true,
+   "srd": "5.2",
+   "harvest": [
+    {
+     "m": "goblin-boss-knucklebone-rattle",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "goblin-scrap-trinkets",
+     "q": 2,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "scrap-leather",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "coin-purse",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ]
+  },
+  {
+   "id": "goblin-minion",
+   "name": "Goblin Minion",
+   "type": "fey",
+   "size": "Small",
+   "cr": "1/8",
+   "env": [
+    "forest",
+    "hill",
+    "underdark",
+    "ruins"
+   ],
+   "blurb": "The expendable rank and file of a goblin band, carrying little more than a sharpened stick.",
+   "salvage": true,
+   "srd": "5.2",
+   "harvest": [
+    {
+     "m": "goblin-minion-crude-javelin",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation",
+     "dice": "1d3"
+    },
+    {
+     "m": "goblin-scrap-trinkets",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "tattered-cloth",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ]
+  },
+  {
+   "id": "hobgoblin-captain",
+   "name": "Hobgoblin Captain",
+   "type": "fey",
+   "size": "Medium",
+   "cr": "3",
+   "env": [
+    "forest",
+    "hill",
+    "grassland",
+    "mountain"
+   ],
+   "blurb": "A disciplined goblinoid officer who drills its troops by horn-call; its kit is well kept.",
+   "salvage": true,
+   "srd": "5.2",
+   "harvest": [
+    {
+     "m": "hobgoblin-captain-war-horn",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "hobgoblin-military-kit",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "scrap-steel",
+     "q": 2,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "coin-purse",
+     "q": 2,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ]
+  },
+  {
+   "id": "bugbear-stalker",
+   "name": "Bugbear Stalker",
+   "type": "fey",
+   "size": "Medium",
+   "cr": "3",
+   "env": [
+    "forest",
+    "underdark",
+    "hill"
+   ],
+   "blurb": "A bugbear hunter-assassin that stalks from shadow; its sound-swallowing cowl is its trademark.",
+   "salvage": true,
+   "srd": "5.2",
+   "harvest": [
+    {
+     "m": "bugbear-stalker-hush-cowl",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "bugbear-ambush-sack",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "scrap-steel",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "scrap-leather",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "coin-purse",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ]
+  },
+  {
+   "id": "guard-captain",
+   "name": "Guard Captain",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "4",
+   "env": [
+    "urban",
+    "coast",
+    "hill"
+   ],
+   "blurb": "A seasoned watch commander in good armour, carrying the horn that summons the garrison.",
+   "salvage": true,
+   "srd": "5.2",
+   "harvest": [
+    {
+     "m": "guard-captain-signal-horn",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "guard-watch-insignia",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "scrap-chain-links",
+     "q": 2,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "scrap-steel",
+     "q": 2,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "coin-purse",
+     "q": 2,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ]
+  },
+  {
+   "id": "pirate",
+   "name": "Pirate",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "1",
+   "env": [
+    "coast",
+    "urban",
+    "underwater"
+   ],
+   "blurb": "A swaggering deckhand-raider; rope, a belaying pin and whatever coin it hasn't drunk.",
+   "salvage": true,
+   "srd": "5.2",
+   "harvest": [
+    {
+     "m": "pirate-belaying-pin",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "worn-rope-coil",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "scrap-steel",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "coin-purse",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ]
+  },
+  {
+   "id": "pirate-captain",
+   "name": "Pirate Captain",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "6",
+   "env": [
+    "coast",
+    "urban"
+   ],
+   "blurb": "A flamboyant ship's master with a spyglass, a heavy purse and a chart to something buried.",
+   "salvage": true,
+   "srd": "5.2",
+   "harvest": [
+    {
+     "m": "pirate-captain-treasure-chart",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation",
+     "note": "Usually sewn into a coat lining or hidden in a boot heel; a careless search tears it."
+    },
+    {
+     "m": "scouts-spyglass-lens",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "coin-purse",
+     "q": 3,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "scrap-steel",
+     "q": 2,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ]
+  },
+  {
+   "id": "tough-boss",
+   "name": "Tough Boss",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "4",
+   "env": [
+    "urban",
+    "coast"
+   ],
+   "blurb": "A gang boss who rules the street by fist and cudgel; its purse is heavy with protection money.",
+   "salvage": true,
+   "srd": "5.2",
+   "harvest": [
+    {
+     "m": "tough-boss-weighted-cudgel",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "thug-knuckle-duster",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "scrap-chain-links",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "scrap-leather",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "coin-purse",
+     "q": 3,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ]
+  },
+  {
+   "id": "vampire-familiar",
+   "name": "Vampire Familiar",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "3",
+   "env": [
+    "urban",
+    "ruins",
+    "shadowfell"
+   ],
+   "blurb": "A living mortal sworn to a vampire's service, marked by its master's sigil ring.",
+   "salvage": true,
+   "srd": "5.2",
+   "harvest": [
+    {
+     "m": "vampire-familiar-sigil-ring",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation",
+     "note": "The ring is ice-cold; wrap it before pocketing or the vampire may sense who took it."
+    },
+    {
+     "m": "scrap-leather",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "tattered-cloth",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "coin-purse",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "bulette-plate-shield",
+   "name": "Bulette-Plate Shield",
+   "cat": "armor",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "shield",
+    "armor",
+    "protection"
+   ],
+   "effect": "A shield faced with overlapping landshark plates. It grants +1 AC on top of the normal shield bonus, and you have advantage on checks and saves against being shoved or knocked prone while you carry it.",
+   "value": 510,
+   "recipe": {
+    "components": [
+     {
+      "m": "shield",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "bulette-armor-plate",
+      "q": 2,
+      "role": "keystone"
+     },
+     {
+      "m": "steel-ingot",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "leather-strips",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "forge",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "shield of faith"
+    ],
+    "yields": 1,
+    "lore": "Bulette plate turns picks and teeth alike, and the beast never loses its footing while tunnelling. Old hunters say a landshark shield plants you like a boulder."
+   }
+  },
+  {
+   "id": "landshark-tunnelling-tonic",
+   "name": "Landshark Tunnelling Tonic",
+   "cat": "potion",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "potion",
+    "burrowing",
+    "earth"
+   ],
+   "effect": "For 10 minutes after drinking this gritty draught you gain a burrowing speed of 10 feet through sand, soil and mud (not solid rock), leaving a collapsing tunnel behind you.",
+   "value": 250,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "bulette-burrowing-gland",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "clay",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "spells": [
+     "meld into stone"
+    ],
+    "yields": 1,
+    "lore": "The bulette's jaw-gland turns earth to slurry ahead of it. Thinned with clay-water it lets a digger slip through loam like a mole, though the taste of rust lingers for days."
+   }
+  },
+  {
+   "id": "wondertear-locket",
+   "name": "Wondertear Locket",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "jewelry",
+    "luck",
+    "knowledge"
+   ],
+   "effect": "A golden locket holding a glowing sphinx tear behind a riddle-feather. Once per dawn, when you fail an Intelligence or Wisdom check, you can reroll it and must use the new result.",
+   "value": 400,
+   "recipe": {
+    "components": [
+     {
+      "m": "amulet-setting",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "sphinx-of-wonder-tear",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "sphinx-of-wonder-riddle-feather",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "gold-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "augury"
+    ],
+    "yields": 1,
+    "lore": "A sphinx of wonder only weeps at a truly delightful answer, so its tear remembers the moment of insight. Jewellers say the locket nudges you toward the answer the sphinx would have liked."
+   }
+  },
+  {
+   "id": "stirge-needle-siphon",
+   "name": "Stirge-Needle Siphon",
+   "cat": "wondrous",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "tool",
+    "healing"
+   ],
+   "effect": "A bulb-and-needle made from a stirge's beak and bladder. Once per dawn, as an action, you can draw venom from a poisoned creature's wound, ending the poisoned condition on it.",
+   "value": 80,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "stirge-proboscis",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "stirge-blood-bladder",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies",
+     "tinkers-tools"
+    ],
+    "station": "alchemy-lab",
+    "dc": 12,
+    "time": "2 days",
+    "gp": 10,
+    "level": 1,
+    "yields": 1,
+    "lore": "The stirge's beak is made to drink without clotting; its bladder holds what it drinks without leaking. Put them to work backwards and they suck poison out instead of blood."
+   }
+  },
+  {
+   "id": "archelon-shell-shield",
+   "name": "Archelon Shell Shield",
+   "cat": "armor",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "shield",
+    "armor",
+    "swimming",
+    "protection"
+   ],
+   "effect": "A broad, buoyant shield of sea-turtle shell. While you carry it you have a swimming speed equal to your walking speed and it never drags you under; once per dawn you can use your reaction to gain +2 AC against one attack while swimming.",
+   "value": 400,
+   "recipe": {
+    "components": [
+     {
+      "m": "shield",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "archelon-shell-plate",
+      "q": 2,
+      "role": "keystone"
+     },
+     {
+      "m": "archelon-flipper-sinew",
+      "q": 1,
+      "role": "binding"
+     },
+     {
+      "m": "sea-salt",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "shield"
+    ],
+    "yields": 1,
+    "lore": "An archelon's shell floats and turns sharks; lashed with its own flipper-tendons, the shield swims with you instead of against you. Sailors cure it in sea salt so it never forgets the water."
+   }
+  },
+  {
+   "id": "allosaur-pounce-spurs",
+   "name": "Allosaur Pounce-Spurs",
+   "cat": "wondrous",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "speed"
+   ],
+   "effect": "Boots with hooked allosaurus claws set at the heels. Once per dawn, as a bonus action, your walking speed increases by 10 feet until the end of your turn.",
+   "value": 90,
+   "recipe": {
+    "components": [
+     {
+      "m": "boots",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "allosaurus-claw",
+      "q": 2,
+      "role": "keystone"
+     },
+     {
+      "m": "allosaurus-hide",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "cobblers-tools"
+    ],
+    "station": "tannery",
+    "dc": 12,
+    "time": "2 days",
+    "gp": 10,
+    "level": 1,
+    "yields": 1,
+    "lore": "Allosaurus claws are worn by sprinting, not by fighting. Cobblers set them at the heel so the wearer's first lunge carries the beast's burst of speed."
+   }
+  },
+  {
+   "id": "gravegrip-gauntlet",
+   "name": "Gravegrip Gauntlet",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "necrotic",
+    "undeath"
+   ],
+   "effect": "A glove stitched with finger-bones and dusted with grave-dust. Once per short rest, when you hit with a melee attack, the target takes an extra 1d8 necrotic damage and must succeed on a DC 13 Strength save or have its speed reduced to 0 until the start of your next turn.",
+   "value": 450,
+   "recipe": {
+    "components": [
+     {
+      "m": "gloves",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "crawling-claw-grave-dust",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "crawling-claw-hand-bones",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "thread",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "shrine",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "ray of enfeeblement"
+    ],
+    "yields": 1,
+    "lore": "The dust that falls from a crawling claw is the curse that moved it. Sewn into a glove with the hands' own knuckles, it makes the wearer's grip cling like a dead man's."
+   }
+  },
+  {
+   "id": "dead-reckoners-compass",
+   "name": "Dead Reckoner's Compass",
+   "cat": "wondrous",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "gear",
+    "knowledge"
+   ],
+   "effect": "A brass compass with a scrap of treasure chart under its glass. You always know which way is north, and you can mark one spot on the chart; while within 10 miles of it, the needle points there instead.",
+   "value": 100,
+   "recipe": {
+    "components": [
+     {
+      "oneOf": [
+       "pirate-captain-treasure-chart",
+       "bandit-hideout-map"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "A much-used treasure or cache map"
+     },
+     {
+      "oneOf": [
+       "lodestone",
+       "iron-ore"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Magnetised needle"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "binding"
+     },
+     {
+      "m": "bronze-ingot",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "cartographers-tools",
+     "tinkers-tools"
+    ],
+    "station": "workshop",
+    "dc": 12,
+    "time": "2 days",
+    "gp": 10,
+    "level": 1,
+    "yields": 1,
+    "lore": "A captain's chart (or a bandit chief's cache map) has been pored over so long it wants to be followed. Set over a lodestone needle, it pulls the needle toward whatever spot its owner marks."
+   }
+  },
+  {
+   "id": "thrall-breaker-charm",
+   "name": "Thrall-Breaker Charm",
+   "cat": "wondrous",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "jewelry",
+    "protection"
+   ],
+   "effect": "A vampire's sigil ring, bent open and bound in silver. While you wear it you have advantage on saves against being charmed by undead, and it turns ice-cold when a vampire is within 60 feet.",
+   "value": 100,
+   "recipe": {
+    "components": [
+     {
+      "m": "vampire-familiar-sigil-ring",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "binding"
+     },
+     {
+      "m": "holy-water",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "shrine",
+    "dc": 12,
+    "time": "2 days",
+    "gp": 10,
+    "level": 1,
+    "yields": 1,
+    "lore": "A familiar's ring is the leash the vampire holds; broken and bound in blessed silver, it warns the wearer when the hand on the other end draws near."
+   }
+  },
+  {
+   "id": "stalkers-hush-cowl",
+   "name": "Stalker's Hush Cowl",
+   "cat": "wondrous",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "stealth"
+   ],
+   "effect": "A moss-lined hood cut from a bugbear stalker's cowl. Once per dawn, you can give yourself advantage on one Dexterity (Stealth) check made while in dim light or darkness.",
+   "value": 75,
+   "recipe": {
+    "components": [
+     {
+      "m": "cloak",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "bugbear-stalker-hush-cowl",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "thread",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "loom",
+    "dc": 12,
+    "time": "2 days",
+    "gp": 10,
+    "level": 1,
+    "yields": 1,
+    "lore": "Stalkers line their hoods with bog-moss until the cloth drinks every sound. Re-cut onto a cloak, the old hood still remembers how to wait unseen."
+   }
+  },
+  {
+   "id": "rallying-horn",
+   "name": "Captain's Rallying Horn",
+   "cat": "wondrous",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "instrument",
+    "sound"
+   ],
+   "effect": "A battle horn taken from an officer. Once per dawn, as a bonus action, you can sound it; each ally within 60 feet who hears it gains 1d4 temporary hit points.",
+   "value": 80,
+   "recipe": {
+    "components": [
+     {
+      "oneOf": [
+       "guard-captain-signal-horn",
+       "hobgoblin-captain-war-horn"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "An officer's horn (guard or hobgoblin captain)"
+     },
+     {
+      "m": "leather-strips",
+      "q": 1,
+      "role": "binding"
+     },
+     {
+      "m": "bronze-ingot",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 12,
+    "time": "2 days",
+    "gp": 10,
+    "level": 1,
+    "yields": 1,
+    "lore": "A horn blown to summon soldiers a thousand times carries that command in its note. Re-mouthed and bound fresh, it still makes tired troops square up."
+   }
+  },
+  {
+   "id": "pteranodon-glider-cloak",
+   "name": "Pteranodon Glider Cloak",
+   "cat": "wondrous",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "flight"
+   ],
+   "effect": "A cloak with pteranodon wing-sails sewn along the arms. When you fall while not incapacitated, you can spread it to descend only 60 feet per round and take no falling damage, drifting 2 feet sideways for every foot you drop.",
+   "value": 90,
+   "recipe": {
+    "components": [
+     {
+      "m": "cloak",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "pteranodon-wing-membrane",
+      "q": 2,
+      "role": "keystone"
+     },
+     {
+      "m": "pteranodon-hollow-bones",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "thread",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "weavers-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "loom",
+    "dc": 12,
+    "time": "2 days",
+    "gp": 10,
+    "level": 1,
+    "yields": 1,
+    "lore": "Pteranodons barely flap; they ride the wind off sea cliffs. Stretch their sails over hollow-bone struts and a cliff-diver can do the same, if not gracefully."
+   }
+  }
+ ]
+}

@@ -1,0 +1,5535 @@
+{
+ "items": [
+  {
+   "id": "adamantine-chain-shirt",
+   "name": "Adamantine Chain Shirt",
+   "cat": "armor",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "medium-armor",
+    "toughness",
+    "protection"
+   ],
+   "effect": "A suit of chain shirt rebuilt in black-green adamantine. Blows that find a weak spot glance away: any critical hit against the wearer lands as an ordinary hit instead.",
+   "value": 390,
+   "recipe": {
+    "components": [
+     {
+      "m": "chain-shirt",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "adamantine-ingot",
+      "q": 2,
+      "role": "keystone"
+     },
+     {
+      "oneOf": [
+       "azer-forge-core",
+       "magma-mephit-core",
+       "cinder-salt"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Forge heat source"
+     },
+     {
+      "m": "leather-strips",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [],
+    "yields": 1,
+    "lore": "Adamantine barely softens in a common forge, so armourers feed the fire with an azer's forge-core or a magma mephit's cinder heart. The original suit is taken apart and used as a pattern, link by link."
+   }
+  },
+  {
+   "id": "mithral-chain-shirt",
+   "name": "Mithral Chain Shirt",
+   "cat": "armor",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "medium-armor",
+    "speed",
+    "stealth"
+   ],
+   "effect": "Chain Shirt forged from feather-light, silvery mithral. It imposes no penalty on Stealth, and even the heavy styles can be worn without the usual Strength requirement.",
+   "value": 350,
+   "recipe": {
+    "components": [
+     {
+      "m": "chain-shirt",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "mithral-ingot",
+      "q": 2,
+      "role": "keystone"
+     },
+     {
+      "m": "quicksilver",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silk-cloth",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [],
+    "yields": 1,
+    "lore": "Mithral is worked cold and fluxed with quicksilver so it keeps its silken flex; the lining is silk rather than wool, because wadding would add back the weight the metal saved."
+   }
+  },
+  {
+   "id": "adamantine-scale-mail",
+   "name": "Adamantine Scale Mail",
+   "cat": "armor",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "medium-armor",
+    "toughness",
+    "protection"
+   ],
+   "effect": "A suit of scale mail rebuilt in black-green adamantine. Blows that find a weak spot glance away: any critical hit against the wearer lands as an ordinary hit instead.",
+   "value": 450,
+   "recipe": {
+    "components": [
+     {
+      "m": "scale-mail",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "adamantine-ingot",
+      "q": 3,
+      "role": "keystone"
+     },
+     {
+      "oneOf": [
+       "azer-forge-core",
+       "magma-mephit-core",
+       "cinder-salt"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Forge heat source"
+     },
+     {
+      "m": "leather-strips",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [],
+    "yields": 1,
+    "lore": "Adamantine barely softens in a common forge, so armourers feed the fire with an azer's forge-core or a magma mephit's cinder heart. The original suit is taken apart and used as a pattern, plate by plate."
+   }
+  },
+  {
+   "id": "mithral-scale-mail",
+   "name": "Mithral Scale Mail",
+   "cat": "armor",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "medium-armor",
+    "speed",
+    "stealth"
+   ],
+   "effect": "Scale Mail forged from feather-light, silvery mithral. It imposes no penalty on Stealth, and even the heavy styles can be worn without the usual Strength requirement.",
+   "value": 400,
+   "recipe": {
+    "components": [
+     {
+      "m": "scale-mail",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "mithral-ingot",
+      "q": 3,
+      "role": "keystone"
+     },
+     {
+      "m": "quicksilver",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silk-cloth",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [],
+    "yields": 1,
+    "lore": "Mithral is worked cold and fluxed with quicksilver so it keeps its silken flex; the lining is silk rather than wool, because wadding would add back the weight the metal saved."
+   }
+  },
+  {
+   "id": "adamantine-breastplate",
+   "name": "Adamantine Breastplate",
+   "cat": "armor",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "medium-armor",
+    "toughness",
+    "protection"
+   ],
+   "effect": "A suit of breastplate rebuilt in black-green adamantine. Blows that find a weak spot glance away: any critical hit against the wearer lands as an ordinary hit instead.",
+   "value": 840,
+   "recipe": {
+    "components": [
+     {
+      "m": "breastplate",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "adamantine-ingot",
+      "q": 3,
+      "role": "keystone"
+     },
+     {
+      "oneOf": [
+       "azer-forge-core",
+       "magma-mephit-core",
+       "cinder-salt"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Forge heat source"
+     },
+     {
+      "m": "leather-strips",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [],
+    "yields": 1,
+    "lore": "Adamantine barely softens in a common forge, so armourers feed the fire with an azer's forge-core or a magma mephit's cinder heart. The original suit is taken apart and used as a pattern, plate by plate."
+   }
+  },
+  {
+   "id": "mithral-breastplate",
+   "name": "Mithral Breastplate",
+   "cat": "armor",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "medium-armor",
+    "speed",
+    "stealth"
+   ],
+   "effect": "Breastplate forged from feather-light, silvery mithral. It imposes no penalty on Stealth, and even the heavy styles can be worn without the usual Strength requirement.",
+   "value": 790,
+   "recipe": {
+    "components": [
+     {
+      "m": "breastplate",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "mithral-ingot",
+      "q": 3,
+      "role": "keystone"
+     },
+     {
+      "m": "quicksilver",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silk-cloth",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [],
+    "yields": 1,
+    "lore": "Mithral is worked cold and fluxed with quicksilver so it keeps its silken flex; the lining is silk rather than wool, because wadding would add back the weight the metal saved."
+   }
+  },
+  {
+   "id": "adamantine-half-plate",
+   "name": "Adamantine Half Plate",
+   "cat": "armor",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "medium-armor",
+    "toughness",
+    "protection"
+   ],
+   "effect": "A suit of half plate rebuilt in black-green adamantine. Blows that find a weak spot glance away: any critical hit against the wearer lands as an ordinary hit instead.",
+   "value": 1200,
+   "recipe": {
+    "components": [
+     {
+      "m": "half-plate",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "adamantine-ingot",
+      "q": 4,
+      "role": "keystone"
+     },
+     {
+      "oneOf": [
+       "azer-forge-core",
+       "magma-mephit-core",
+       "cinder-salt"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Forge heat source"
+     },
+     {
+      "m": "leather-strips",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [],
+    "yields": 1,
+    "lore": "Adamantine barely softens in a common forge, so armourers feed the fire with an azer's forge-core or a magma mephit's cinder heart. The original suit is taken apart and used as a pattern, plate by plate."
+   }
+  },
+  {
+   "id": "mithral-half-plate",
+   "name": "Mithral Half Plate",
+   "cat": "armor",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "medium-armor",
+    "speed",
+    "stealth"
+   ],
+   "effect": "Half Plate forged from feather-light, silvery mithral. It imposes no penalty on Stealth, and even the heavy styles can be worn without the usual Strength requirement.",
+   "value": 1200,
+   "recipe": {
+    "components": [
+     {
+      "m": "half-plate",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "mithral-ingot",
+      "q": 4,
+      "role": "keystone"
+     },
+     {
+      "m": "quicksilver",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silk-cloth",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [],
+    "yields": 1,
+    "lore": "Mithral is worked cold and fluxed with quicksilver so it keeps its silken flex; the lining is silk rather than wool, because wadding would add back the weight the metal saved."
+   }
+  },
+  {
+   "id": "adamantine-ring-mail",
+   "name": "Adamantine Ring Mail",
+   "cat": "armor",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "heavy-armor",
+    "toughness",
+    "protection"
+   ],
+   "effect": "A suit of ring mail rebuilt in black-green adamantine. Blows that find a weak spot glance away: any critical hit against the wearer lands as an ordinary hit instead.",
+   "value": 430,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-mail",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "adamantine-ingot",
+      "q": 3,
+      "role": "keystone"
+     },
+     {
+      "oneOf": [
+       "azer-forge-core",
+       "magma-mephit-core",
+       "cinder-salt"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Forge heat source"
+     },
+     {
+      "m": "leather-strips",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [],
+    "yields": 1,
+    "lore": "Adamantine barely softens in a common forge, so armourers feed the fire with an azer's forge-core or a magma mephit's cinder heart. The original suit is taken apart and used as a pattern, link by link."
+   }
+  },
+  {
+   "id": "mithral-ring-mail",
+   "name": "Mithral Ring Mail",
+   "cat": "armor",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "heavy-armor",
+    "speed",
+    "stealth"
+   ],
+   "effect": "Ring Mail forged from feather-light, silvery mithral. It imposes no penalty on Stealth, and even the heavy styles can be worn without the usual Strength requirement.",
+   "value": 380,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-mail",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "mithral-ingot",
+      "q": 3,
+      "role": "keystone"
+     },
+     {
+      "m": "quicksilver",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silk-cloth",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [],
+    "yields": 1,
+    "lore": "Mithral is worked cold and fluxed with quicksilver so it keeps its silken flex; the lining is silk rather than wool, because wadding would add back the weight the metal saved."
+   }
+  },
+  {
+   "id": "adamantine-chain-mail",
+   "name": "Adamantine Chain Mail",
+   "cat": "armor",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "heavy-armor",
+    "toughness",
+    "protection"
+   ],
+   "effect": "A suit of chain mail rebuilt in black-green adamantine. Blows that find a weak spot glance away: any critical hit against the wearer lands as an ordinary hit instead.",
+   "value": 540,
+   "recipe": {
+    "components": [
+     {
+      "m": "chain-mail",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "adamantine-ingot",
+      "q": 4,
+      "role": "keystone"
+     },
+     {
+      "oneOf": [
+       "azer-forge-core",
+       "magma-mephit-core",
+       "cinder-salt"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Forge heat source"
+     },
+     {
+      "m": "leather-strips",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [],
+    "yields": 1,
+    "lore": "Adamantine barely softens in a common forge, so armourers feed the fire with an azer's forge-core or a magma mephit's cinder heart. The original suit is taken apart and used as a pattern, link by link."
+   }
+  },
+  {
+   "id": "mithral-chain-mail",
+   "name": "Mithral Chain Mail",
+   "cat": "armor",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "heavy-armor",
+    "speed",
+    "stealth"
+   ],
+   "effect": "Chain Mail forged from feather-light, silvery mithral. It imposes no penalty on Stealth, and even the heavy styles can be worn without the usual Strength requirement.",
+   "value": 490,
+   "recipe": {
+    "components": [
+     {
+      "m": "chain-mail",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "mithral-ingot",
+      "q": 4,
+      "role": "keystone"
+     },
+     {
+      "m": "quicksilver",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silk-cloth",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [],
+    "yields": 1,
+    "lore": "Mithral is worked cold and fluxed with quicksilver so it keeps its silken flex; the lining is silk rather than wool, because wadding would add back the weight the metal saved."
+   }
+  },
+  {
+   "id": "adamantine-splint",
+   "name": "Adamantine Splint Armor",
+   "cat": "armor",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "heavy-armor",
+    "toughness",
+    "protection"
+   ],
+   "effect": "A suit of splint armor rebuilt in black-green adamantine. Blows that find a weak spot glance away: any critical hit against the wearer lands as an ordinary hit instead.",
+   "value": 700,
+   "recipe": {
+    "components": [
+     {
+      "m": "splint-armor",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "adamantine-ingot",
+      "q": 5,
+      "role": "keystone"
+     },
+     {
+      "oneOf": [
+       "azer-forge-core",
+       "magma-mephit-core",
+       "cinder-salt"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Forge heat source"
+     },
+     {
+      "m": "leather-strips",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [],
+    "yields": 1,
+    "lore": "Adamantine barely softens in a common forge, so armourers feed the fire with an azer's forge-core or a magma mephit's cinder heart. The original suit is taken apart and used as a pattern, plate by plate."
+   }
+  },
+  {
+   "id": "mithral-splint",
+   "name": "Mithral Splint Armor",
+   "cat": "armor",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "heavy-armor",
+    "speed",
+    "stealth"
+   ],
+   "effect": "Splint Armor forged from feather-light, silvery mithral. It imposes no penalty on Stealth, and even the heavy styles can be worn without the usual Strength requirement.",
+   "value": 680,
+   "recipe": {
+    "components": [
+     {
+      "m": "splint-armor",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "mithral-ingot",
+      "q": 5,
+      "role": "keystone"
+     },
+     {
+      "m": "quicksilver",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silk-cloth",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [],
+    "yields": 1,
+    "lore": "Mithral is worked cold and fluxed with quicksilver so it keeps its silken flex; the lining is silk rather than wool, because wadding would add back the weight the metal saved."
+   }
+  },
+  {
+   "id": "adamantine-plate",
+   "name": "Adamantine Plate Armor",
+   "cat": "armor",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "heavy-armor",
+    "toughness",
+    "protection"
+   ],
+   "effect": "A suit of plate armor rebuilt in black-green adamantine. Blows that find a weak spot glance away: any critical hit against the wearer lands as an ordinary hit instead.",
+   "value": 2000,
+   "recipe": {
+    "components": [
+     {
+      "m": "plate-armor",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "adamantine-ingot",
+      "q": 6,
+      "role": "keystone"
+     },
+     {
+      "oneOf": [
+       "azer-forge-core",
+       "magma-mephit-core",
+       "cinder-salt"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Forge heat source"
+     },
+     {
+      "m": "leather-strips",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [],
+    "yields": 1,
+    "lore": "Adamantine barely softens in a common forge, so armourers feed the fire with an azer's forge-core or a magma mephit's cinder heart. The original suit is taken apart and used as a pattern, plate by plate."
+   }
+  },
+  {
+   "id": "mithral-plate",
+   "name": "Mithral Plate Armor",
+   "cat": "armor",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "heavy-armor",
+    "speed",
+    "stealth"
+   ],
+   "effect": "Plate Armor forged from feather-light, silvery mithral. It imposes no penalty on Stealth, and even the heavy styles can be worn without the usual Strength requirement.",
+   "value": 2000,
+   "recipe": {
+    "components": [
+     {
+      "m": "plate-armor",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "mithral-ingot",
+      "q": 6,
+      "role": "keystone"
+     },
+     {
+      "m": "quicksilver",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silk-cloth",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [],
+    "yields": 1,
+    "lore": "Mithral is worked cold and fluxed with quicksilver so it keeps its silken flex; the lining is silk rather than wool, because wadding would add back the weight the metal saved."
+   }
+  },
+  {
+   "id": "armor-plus-1",
+   "name": "Armor +1",
+   "cat": "armor",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "protection",
+    "toughness"
+   ],
+   "effect": "Any suit of armour laced with the hardened hide or plating of a formidable creature. The wearer's Armor Class rises by 1 above what the armour normally grants.",
+   "value": 2000,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "armor"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any suit of armor"
+     },
+     {
+      "any": [
+       "toughness"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "min": "rare",
+      "label": "Toughened part (rare+)"
+     },
+     {
+      "m": "steel-plates",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "jade",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "hardened-leather",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "forge",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "mage armor"
+    ],
+    "yields": 1,
+    "lore": "The oldest armourer's rule: borrow the hide of what nothing could kill. The keystone is beaten or stitched into the backing of every plate, and a ground gem seals its stubbornness into the metal."
+   }
+  },
+  {
+   "id": "armor-plus-2",
+   "name": "Armor +2",
+   "cat": "armor",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "protection",
+    "toughness"
+   ],
+   "effect": "Any suit of armour laced with the hardened hide or plating of a formidable creature. The wearer's Armor Class rises by 2 above what the armour normally grants.",
+   "value": 12000,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "armor"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any suit of armor"
+     },
+     {
+      "any": [
+       "toughness"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "min": "very-rare",
+      "label": "Toughened part (very-rare+)"
+     },
+     {
+      "m": "steel-plates",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "raw-diamond",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "hardened-leather",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "forge",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "shield of faith"
+    ],
+    "yields": 1,
+    "lore": "The oldest armourer's rule: borrow the hide of what nothing could kill. The keystone is beaten or stitched into the backing of every plate, and a ground gem seals its stubbornness into the metal."
+   }
+  },
+  {
+   "id": "armor-plus-3",
+   "name": "Armor +3",
+   "cat": "armor",
+   "tier": "legendary",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "protection",
+    "toughness"
+   ],
+   "effect": "Any suit of armour laced with the hardened hide or plating of a formidable creature. The wearer's Armor Class rises by 3 above what the armour normally grants.",
+   "value": 67100,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "armor"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any suit of armor"
+     },
+     {
+      "any": [
+       "toughness"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "min": "legendary",
+      "label": "Toughened part (legendary+)"
+     },
+     {
+      "m": "steel-plates",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "worldheart-diamond",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "hardened-leather",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "forge",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "globe of invulnerability"
+    ],
+    "yields": 1,
+    "lore": "The oldest armourer's rule: borrow the hide of what nothing could kill. The keystone is beaten or stitched into the backing of every plate, and a ground gem seals its stubbornness into the metal."
+   }
+  },
+  {
+   "id": "shield-plus-1",
+   "name": "Shield +1",
+   "cat": "armor",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "shield",
+    "protection"
+   ],
+   "effect": "A shield bossed with a warding relic of some guardian beast or spirit. It grants +1 Armor Class on top of a shield's usual bonus.",
+   "value": 370,
+   "recipe": {
+    "components": [
+     {
+      "m": "shield",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "any": [
+       "protection"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "min": "uncommon",
+      "label": "Warding part (uncommon+)"
+     },
+     {
+      "oneOf": [
+       "ironwood",
+       "ironbark"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Tough timber backing"
+     },
+     {
+      "m": "hardened-leather",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "woodcarvers-tools"
+    ],
+    "station": "forge",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "shield"
+    ],
+    "yields": 1,
+    "lore": "Shieldwrights set the keystone behind the boss, where the arm braces; the belief is that a guardian's power works best when it is held, not worn."
+   }
+  },
+  {
+   "id": "shield-plus-2",
+   "name": "Shield +2",
+   "cat": "armor",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "shield",
+    "protection"
+   ],
+   "effect": "A shield bossed with a warding relic of some guardian beast or spirit. It grants +2 Armor Class on top of a shield's usual bonus.",
+   "value": 2000,
+   "recipe": {
+    "components": [
+     {
+      "m": "shield",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "any": [
+       "protection"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "min": "rare",
+      "label": "Warding part (rare+)"
+     },
+     {
+      "oneOf": [
+       "ironwood",
+       "ironbark"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Tough timber backing"
+     },
+     {
+      "m": "hardened-leather",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "woodcarvers-tools"
+    ],
+    "station": "forge",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "shield"
+    ],
+    "yields": 1,
+    "lore": "Shieldwrights set the keystone behind the boss, where the arm braces; the belief is that a guardian's power works best when it is held, not worn."
+   }
+  },
+  {
+   "id": "shield-plus-3",
+   "name": "Shield +3",
+   "cat": "armor",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "shield",
+    "protection"
+   ],
+   "effect": "A shield bossed with a warding relic of some guardian beast or spirit. It grants +3 Armor Class on top of a shield's usual bonus.",
+   "value": 10800,
+   "recipe": {
+    "components": [
+     {
+      "m": "shield",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "any": [
+       "protection"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "min": "very-rare",
+      "label": "Warding part (very-rare+)"
+     },
+     {
+      "oneOf": [
+       "ironwood",
+       "ironbark"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Tough timber backing"
+     },
+     {
+      "m": "hardened-leather",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "woodcarvers-tools"
+    ],
+    "station": "forge",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "shield",
+     "globe of invulnerability"
+    ],
+    "yields": 1,
+    "lore": "Shieldwrights set the keystone behind the boss, where the arm braces; the belief is that a guardian's power works best when it is held, not worn."
+   }
+  },
+  {
+   "id": "weapon-plus-1",
+   "name": "Weapon +1",
+   "cat": "weapon",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "weapon"
+   ],
+   "effect": "Any weapon reforged around an enchanted core. Attack and damage rolls made with it gain a +1 bonus.",
+   "value": 400,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "weapon"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any weapon"
+     },
+     {
+      "any": [
+       "metal"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "min": "uncommon",
+      "label": "Exceptional metal (uncommon+)"
+     },
+     {
+      "m": "whetstone",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "quicksilver",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "magic weapon"
+    ],
+    "yields": 1,
+    "lore": "A plain blade becomes a magic one when its edge is refolded with a metal that already remembers being more than metal. Quicksilver or star-fallen iron carries the enchantment down the fuller."
+   }
+  },
+  {
+   "id": "weapon-plus-2",
+   "name": "Weapon +2",
+   "cat": "weapon",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "weapon"
+   ],
+   "effect": "Any weapon reforged around an enchanted core. Attack and damage rolls made with it gain a +2 bonus.",
+   "value": 2000,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "weapon"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any weapon"
+     },
+     {
+      "any": [
+       "metal"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "min": "rare",
+      "label": "Exceptional metal (rare+)"
+     },
+     {
+      "m": "whetstone",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "meteoric-iron",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "magic weapon"
+    ],
+    "yields": 1,
+    "lore": "A plain blade becomes a magic one when its edge is refolded with a metal that already remembers being more than metal. Quicksilver or star-fallen iron carries the enchantment down the fuller."
+   }
+  },
+  {
+   "id": "weapon-plus-3",
+   "name": "Weapon +3",
+   "cat": "weapon",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "weapon"
+   ],
+   "effect": "Any weapon reforged around an enchanted core. Attack and damage rolls made with it gain a +3 bonus.",
+   "value": 12000,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "weapon"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any weapon"
+     },
+     {
+      "any": [
+       "essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "min": "very-rare",
+      "label": "Very rare essence"
+     },
+     {
+      "m": "meteoric-iron",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "adamantine-ingot",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "magic weapon"
+    ],
+    "yields": 1,
+    "lore": "Only a mighty creature's captured essence, quenched into an edge of star iron and adamantine, gives a blade that eerie, perfect heft that masters call a +3."
+   }
+  },
+  {
+   "id": "ammunition-plus-1",
+   "name": "Ammunition +1",
+   "cat": "ammunition",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "ammunition"
+   ],
+   "effect": "Arrows, bolts, bullets or needles tipped and fletched with magical materials. Each gives +1 to attack and damage rolls, then loses its magic once it hits.",
+   "value": 150,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "ammunition"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Bundle of ammunition"
+     },
+     {
+      "any": [
+       "feather"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "min": "uncommon",
+      "label": "Magical flight feather (uncommon+)"
+     },
+     {
+      "m": "silver-dust",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "bone-glue",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "smiths-tools"
+    ],
+    "station": "workshop",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "spells": [
+     "magic weapon"
+    ],
+    "yields": 5,
+    "lore": "Fletchers split a single feather of a magical flyer into vanes for a whole handful of shafts; the creature's sure aim in the air passes into every one."
+   }
+  },
+  {
+   "id": "ammunition-plus-2",
+   "name": "Ammunition +2",
+   "cat": "ammunition",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "ammunition"
+   ],
+   "effect": "Arrows, bolts, bullets or needles tipped and fletched with magical materials. Each gives +2 to attack and damage rolls, then loses its magic once it hits.",
+   "value": 1200,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "ammunition"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Bundle of ammunition"
+     },
+     {
+      "any": [
+       "feather"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "min": "rare",
+      "label": "Magical flight feather (rare+)"
+     },
+     {
+      "m": "silver-dust",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "bone-glue",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "smiths-tools"
+    ],
+    "station": "workshop",
+    "dc": 18,
+    "time": "7.5 days",
+    "gp": 375,
+    "level": 6,
+    "spells": [
+     "magic weapon"
+    ],
+    "yields": 5,
+    "lore": "Fletchers split a single feather of a magical flyer into vanes for a whole handful of shafts; the creature's sure aim in the air passes into every one."
+   }
+  },
+  {
+   "id": "ammunition-plus-3",
+   "name": "Ammunition +3",
+   "cat": "ammunition",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "ammunition"
+   ],
+   "effect": "Arrows, bolts, bullets or needles tipped and fletched with magical materials. Each gives +3 to attack and damage rolls, then loses its magic once it hits.",
+   "value": 7500,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "ammunition"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Bundle of ammunition"
+     },
+     {
+      "any": [
+       "feather"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "min": "very-rare",
+      "label": "Magical flight feather (very-rare+)"
+     },
+     {
+      "m": "silver-dust",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "bone-glue",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "smiths-tools"
+    ],
+    "station": "workshop",
+    "dc": 21,
+    "time": "15 days",
+    "gp": 2000,
+    "level": 11,
+    "spells": [
+     "magic weapon"
+    ],
+    "yields": 5,
+    "lore": "Fletchers split a single feather of a magical flyer into vanes for a whole handful of shafts; the creature's sure aim in the air passes into every one."
+   }
+  },
+  {
+   "id": "armor-of-acid-resistance",
+   "name": "Armor of Resistance (Acid)",
+   "cat": "armor",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "acid",
+    "resistance"
+   ],
+   "effect": "A suit of armour that dulls one kind of harm. While attuned and wearing it, you have resistance to acid damage.",
+   "value": 2300,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "armor"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any suit of armor"
+     },
+     {
+      "oneOf": [
+       "young-black-dragon-scales",
+       "young-copper-dragon-scales",
+       "clay-golem-clay"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Acid-proof scale"
+     },
+     {
+      "m": "sourbog-pitcher",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "hardened-leather",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "protection from energy"
+    ],
+    "yields": 1,
+    "lore": "Black and copper dragons bathe in their own acid; their scales shrug off what would strip a knight to the bone."
+   }
+  },
+  {
+   "id": "armor-of-cold-resistance",
+   "name": "Armor of Resistance (Cold)",
+   "cat": "armor",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "cold",
+    "resistance"
+   ],
+   "effect": "A suit of armour that dulls one kind of harm. While attuned and wearing it, you have resistance to cold damage.",
+   "value": 2200,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "armor"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any suit of armor"
+     },
+     {
+      "oneOf": [
+       "young-silver-dragon-scales",
+       "frost-giant-blood",
+       "ice-devil-carapace"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Frost-hardened part"
+     },
+     {
+      "m": "frost-lichen",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "hardened-leather",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "protection from energy"
+    ],
+    "yields": 1,
+    "lore": "Frost giants and silver dragons live where breath freezes; their blood and scales carry that indifference to cold."
+   }
+  },
+  {
+   "id": "armor-of-fire-resistance",
+   "name": "Armor of Resistance (Fire)",
+   "cat": "armor",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "fire",
+    "resistance"
+   ],
+   "effect": "A suit of armour that dulls one kind of harm. While attuned and wearing it, you have resistance to fire damage.",
+   "value": 2200,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "armor"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any suit of armor"
+     },
+     {
+      "oneOf": [
+       "young-red-dragon-scales",
+       "remorhaz-carapace",
+       "efreeti-ember-blood",
+       "fire-giant-blood"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Fireproof part"
+     },
+     {
+      "m": "emberbloom",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "hardened-leather",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "protection from energy"
+    ],
+    "yields": 1,
+    "lore": "Anything that swims in its own heat, from a red dragon to a remorhaz, gives armour the same contempt for flame."
+   }
+  },
+  {
+   "id": "armor-of-force-resistance",
+   "name": "Armor of Resistance (Force)",
+   "cat": "armor",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "force",
+    "resistance"
+   ],
+   "effect": "A suit of armour that dulls one kind of harm. While attuned and wearing it, you have resistance to force damage.",
+   "value": 2000,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "armor"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any suit of armor"
+     },
+     {
+      "oneOf": [
+       "meteoric-iron",
+       "adult-bronze-dragon-repulsion-gland"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Force-bearing part"
+     },
+     {
+      "m": "arcane-residue",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "hardened-leather",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "shield"
+    ],
+    "yields": 1,
+    "lore": "Star iron has already survived the hammer of the heavens; a bronze dragon's repulsion gland throws force back where it came from."
+   }
+  },
+  {
+   "id": "armor-of-lightning-resistance",
+   "name": "Armor of Resistance (Lightning)",
+   "cat": "armor",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "lightning",
+    "resistance"
+   ],
+   "effect": "A suit of armour that dulls one kind of harm. While attuned and wearing it, you have resistance to lightning damage.",
+   "value": 2000,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "armor"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any suit of armor"
+     },
+     {
+      "oneOf": [
+       "young-blue-dragon-scales",
+       "young-bronze-dragon-scales",
+       "behir-scale",
+       "stormglass"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Lightning-proof part"
+     },
+     {
+      "m": "copper-wire",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "hardened-leather",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "protection from energy"
+    ],
+    "yields": 1,
+    "lore": "Scales from storm-breathers ground a bolt harmlessly, and copper wire through the lining gives the charge somewhere to go."
+   }
+  },
+  {
+   "id": "armor-of-necrotic-resistance",
+   "name": "Armor of Resistance (Necrotic)",
+   "cat": "armor",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "necrotic",
+    "resistance"
+   ],
+   "effect": "A suit of armour that dulls one kind of harm. While attuned and wearing it, you have resistance to necrotic damage.",
+   "value": 2900,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "armor"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any suit of armor"
+     },
+     {
+      "oneOf": [
+       "spirit-naga-scale",
+       "black-pearl",
+       "dusk-pearl"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Death-warding part"
+     },
+     {
+      "m": "holy-water",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "hardened-leather",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "death ward"
+    ],
+    "yields": 1,
+    "lore": "A spirit naga keeps returning from death; its scales, or a pearl grown in darkness, teach armour to refuse the grave's chill."
+   }
+  },
+  {
+   "id": "armor-of-poison-resistance",
+   "name": "Armor of Resistance (Poison)",
+   "cat": "armor",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "poison",
+    "resistance"
+   ],
+   "effect": "A suit of armour that dulls one kind of harm. While attuned and wearing it, you have resistance to poison damage.",
+   "value": 2300,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "armor"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any suit of armor"
+     },
+     {
+      "oneOf": [
+       "young-green-dragon-scales",
+       "purity-lotus",
+       "hydra-blood"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Venom-proof part"
+     },
+     {
+      "m": "wyrmbane-thistle",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "hardened-leather",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "protection from poison"
+    ],
+    "yields": 1,
+    "lore": "Green dragons breathe poison and never choke on it; a purity lotus cleanses what touches it."
+   }
+  },
+  {
+   "id": "armor-of-psychic-resistance",
+   "name": "Armor of Resistance (Psychic)",
+   "cat": "armor",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "psychic",
+    "resistance"
+   ],
+   "effect": "A suit of armour that dulls one kind of harm. While attuned and wearing it, you have resistance to psychic damage.",
+   "value": 2300,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "armor"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any suit of armor"
+     },
+     {
+      "oneOf": [
+       "thought-crystal",
+       "aboleth-brain",
+       "mindbloom-orchid"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Mind-warding part"
+     },
+     {
+      "m": "mind-mote-dust",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "hardened-leather",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "protection from evil and good"
+    ],
+    "yields": 1,
+    "lore": "An aboleth's brain or a thought crystal set over the heart acts as a lightning rod for hostile thoughts."
+   }
+  },
+  {
+   "id": "armor-of-radiant-resistance",
+   "name": "Armor of Resistance (Radiant)",
+   "cat": "armor",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "radiant",
+    "resistance"
+   ],
+   "effect": "A suit of armour that dulls one kind of harm. While attuned and wearing it, you have resistance to radiant damage.",
+   "value": 2000,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "armor"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any suit of armor"
+     },
+     {
+      "oneOf": [
+       "raw-diamond",
+       "sun-amber",
+       "deva-tears"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Light-bearing part"
+     },
+     {
+      "m": "silver-dust",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "hardened-leather",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "protection from evil and good"
+    ],
+    "yields": 1,
+    "lore": "What has held the sun's light for an age, like diamond or sun-amber, is no longer dazzled by it."
+   }
+  },
+  {
+   "id": "armor-of-thunder-resistance",
+   "name": "Armor of Resistance (Thunder)",
+   "cat": "armor",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "thunder",
+    "resistance"
+   ],
+   "effect": "A suit of armour that dulls one kind of harm. While attuned and wearing it, you have resistance to thunder damage.",
+   "value": 2700,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "armor"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any suit of armor"
+     },
+     {
+      "oneOf": [
+       "thunderhead-shard",
+       "djinni-tempest-core",
+       "androsphinx-roar-larynx",
+       "young-blue-dragon-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Thunder-bearing part: djinni core, thunderhead shard, androsphinx larynx or young blue dragon essence"
+     },
+     {
+      "m": "resonant-crystal",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "hardened-leather",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "protection from energy"
+    ],
+    "yields": 1,
+    "lore": "Armour that has swallowed a thunderhead or a sphinx's roar rings like a bell instead of shattering. A young blue dragon's essence is steeped in the storms it flies through and has learned to shrug off their thunder."
+   }
+  },
+  {
+   "id": "armor-of-vulnerability",
+   "name": "Armor of Vulnerability",
+   "cat": "armor",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "resistance",
+    "curse"
+   ],
+   "effect": "Cursed armour that makes the wearer shrug off one of bludgeoning, piercing or slashing damage while becoming vulnerable to the other two. Once attuned, the wearer is loath to remove it until the curse is lifted.",
+   "value": 2400,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "armor"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any suit of armor"
+     },
+     {
+      "oneOf": [
+       "horned-devil-tail-barb",
+       "medusa-head",
+       "styx-water"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Cursed relic"
+     },
+     {
+      "m": "hags-fingers",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "steel-plates",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "bestow curse"
+    ],
+    "yields": 1,
+    "lore": "Hedge-smiths say every protection has a price, and a cursed keystone always collects it twice. Many suits were made by accident, by armourers who thought a medusa's head was simply tough."
+   }
+  },
+  {
+   "id": "animated-shield",
+   "name": "Animated Shield",
+   "cat": "armor",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "shield",
+    "protection",
+    "flight"
+   ],
+   "effect": "With a spoken command the shield lifts from your arm and hovers beside you, guarding you for about a minute and leaving both hands free. It then drops unless you catch it.",
+   "value": 20000,
+   "recipe": {
+    "components": [
+     {
+      "m": "shield",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "adult-bronze-dragon-repulsion-gland",
+       "iron-golem-core",
+       "androsphinx-mane-hair"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Self-willed guardian part"
+     },
+     {
+      "m": "earthmote-stone",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "chain-links",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "tinkers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "animate objects"
+    ],
+    "yields": 1,
+    "lore": "A golem's core or a bronze dragon's repulsion gland lends the shield a will of its own, and floating earthmotes set into the rim keep it aloft."
+   }
+  },
+  {
+   "id": "arrow-catching-shield",
+   "name": "Arrow-Catching Shield",
+   "cat": "armor",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "shield",
+    "protection",
+    "air"
+   ],
+   "effect": "Grants extra protection against ranged attacks, and when a missile is aimed at someone beside you, you can let the shield pull it off course and take the hit yourself.",
+   "value": 3000,
+   "recipe": {
+    "components": [
+     {
+      "m": "shield",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "djinni-tempest-core",
+       "cloud-giant-cloudstuff",
+       "roc-feather"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Wind-bending part"
+     },
+     {
+      "m": "giant-eagle-talons",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "hardened-leather",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "woodcarvers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "shield"
+    ],
+    "yields": 1,
+    "lore": "Winds bent around a djinni's tempest core, or the downdraft trapped in a roc feather, curl arrows toward the shield face, while eagle talons on the rim 'snatch' them from the air."
+   }
+  },
+  {
+   "id": "shield-of-missile-attraction",
+   "name": "Shield of Missile Attraction",
+   "cat": "armor",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "shield",
+    "curse",
+    "resistance"
+   ],
+   "effect": "Cursed. It protects you well against ranged weapon damage, but every missile shot at anyone nearby veers toward you instead. The bearer cannot bring themselves to set it down.",
+   "value": 2700,
+   "recipe": {
+    "components": [
+     {
+      "m": "shield",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "chain-devil-chains",
+       "clay-golem-shem-tablet",
+       "rakshasa-claw"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Binding cursed relic"
+     },
+     {
+      "m": "lodestone",
+      "q": 3,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "bestow curse"
+    ],
+    "yields": 1,
+    "lore": "Lodestones draw iron, and a devil's chains draw victims; bound together, they draw every arrow on the field. Fools forge it hoping to copy the arrow-catching shield."
+   }
+  },
+  {
+   "id": "spellguard-shield",
+   "name": "Spellguard Shield",
+   "cat": "armor",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "shield",
+    "antimagic",
+    "protection"
+   ],
+   "effect": "While you carry it, you have advantage on saving throws against spells and other magical effects, and spell attacks have disadvantage against you.",
+   "value": 25000,
+   "recipe": {
+    "components": [
+     {
+      "m": "shield",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "rakshasa-hide",
+       "iron-golem-plating",
+       "tarrasque-carapace"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Spell-shrugging part"
+     },
+     {
+      "m": "nullthorn",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-ingot",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "counterspell"
+    ],
+    "yields": 1,
+    "lore": "A rakshasa laughs off lesser spells; so do iron golems. Their hide or plating is faced with silver and bound with nullthorn, whose sap unpicks weaves of magic."
+   }
+  },
+  {
+   "id": "armor-of-invulnerability",
+   "name": "Armor of Invulnerability",
+   "cat": "armor",
+   "tier": "legendary",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "heavy-armor",
+    "resistance",
+    "protection"
+   ],
+   "effect": "Plate armour that turns aside ordinary weapons: you resist nonmagical damage while wearing it. Once a day you can command it to make you immune to such damage for ten minutes.",
+   "value": 120000,
+   "recipe": {
+    "components": [
+     {
+      "m": "plate-armor",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "tarrasque-carapace",
+       "worldheart-diamond"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Unbreakable legendary part"
+     },
+     {
+      "m": "adamantine-ingot",
+      "q": 4,
+      "role": "supporting"
+     },
+     {
+      "m": "earthheart-geode",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "hardened-leather",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "stoneskin",
+     "globe of invulnerability"
+    ],
+    "yields": 1,
+    "lore": "Only something no weapon has ever truly hurt, the Tarrasque's shell or the diamond at the heart of a world, can teach steel to ignore swords. Adamantine is needed simply to hold it."
+   }
+  },
+  {
+   "id": "demon-armor",
+   "name": "Demon Armor",
+   "cat": "armor",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "heavy-armor",
+    "abyssal",
+    "curse"
+   ],
+   "effect": "Plate with clawed gauntlets that improve your AC, rake foes with magic claws, and let you understand Abyssal. It is cursed: you can't remove it and fight poorly against demons while wearing it.",
+   "value": 30000,
+   "recipe": {
+    "components": [
+     {
+      "m": "plate-armor",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "marilith-scales",
+       "nalfeshnee-hide",
+       "balor-horn",
+       "balor-death-cinder"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Demon part (very rare)"
+     },
+     {
+      "m": "abyssal-thornvine",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "brimstone",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "gauntlets",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "bestow curse"
+    ],
+    "yields": 1,
+    "lore": "The demon whose hide lines the plates never fully leaves it; the thornvine stitching lets its hunger reach the wearer's hands, and its hatred for rival demons turns on the wearer's aim."
+   }
+  },
+  {
+   "id": "dragon-scale-mail-black",
+   "name": "Dragon Scale Mail (Black)",
+   "cat": "armor",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "medium-armor",
+    "acid",
+    "resistance"
+   ],
+   "effect": "Scale mail of black dragon hide. It adds to your AC, grants advantage against dragons' frightful presence and breath, and gives resistance to acid. Once a day you can sense the nearest black dragon within 30 miles.",
+   "value": 25900,
+   "recipe": {
+    "components": [
+     {
+      "m": "scale-mail",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "adult-black-dragon-scales",
+       "ancient-black-dragon-scales"
+      ],
+      "q": 12,
+      "role": "keystone",
+      "label": "Black dragon scales (adult or ancient)"
+     },
+     {
+      "m": "dragons-blood-resin",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "cured-leather",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "smiths-tools"
+    ],
+    "station": "tannery",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "protection from energy"
+    ],
+    "yields": 1,
+    "lore": "Each scale is overlapped as it lay on the living black dragon, so its wards still face outward. Dragon's-blood resin glues them; old smiths swear the armour still smells its kin across the miles."
+   }
+  },
+  {
+   "id": "dragon-scale-mail-blue",
+   "name": "Dragon Scale Mail (Blue)",
+   "cat": "armor",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "medium-armor",
+    "lightning",
+    "resistance"
+   ],
+   "effect": "Scale mail of blue dragon hide. It adds to your AC, grants advantage against dragons' frightful presence and breath, and gives resistance to lightning. Once a day you can sense the nearest blue dragon within 30 miles.",
+   "value": 25900,
+   "recipe": {
+    "components": [
+     {
+      "m": "scale-mail",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "adult-blue-dragon-scales",
+       "ancient-blue-dragon-scales"
+      ],
+      "q": 12,
+      "role": "keystone",
+      "label": "Blue dragon scales (adult or ancient)"
+     },
+     {
+      "m": "dragons-blood-resin",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "cured-leather",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "smiths-tools"
+    ],
+    "station": "tannery",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "protection from energy"
+    ],
+    "yields": 1,
+    "lore": "Each scale is overlapped as it lay on the living blue dragon, so its wards still face outward. Dragon's-blood resin glues them; old smiths swear the armour still smells its kin across the miles."
+   }
+  },
+  {
+   "id": "dragon-scale-mail-brass",
+   "name": "Dragon Scale Mail (Brass)",
+   "cat": "armor",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "medium-armor",
+    "fire",
+    "resistance"
+   ],
+   "effect": "Scale mail of brass dragon hide. It adds to your AC, grants advantage against dragons' frightful presence and breath, and gives resistance to fire. Once a day you can sense the nearest brass dragon within 30 miles.",
+   "value": 25900,
+   "recipe": {
+    "components": [
+     {
+      "m": "scale-mail",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "adult-brass-dragon-scales",
+       "ancient-brass-dragon-scales"
+      ],
+      "q": 12,
+      "role": "keystone",
+      "label": "Brass dragon scales (adult or ancient)"
+     },
+     {
+      "m": "dragons-blood-resin",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "cured-leather",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "smiths-tools"
+    ],
+    "station": "tannery",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "protection from energy"
+    ],
+    "yields": 1,
+    "lore": "Each scale is overlapped as it lay on the living brass dragon, so its wards still face outward. Dragon's-blood resin glues them; old smiths swear the armour still smells its kin across the miles."
+   }
+  },
+  {
+   "id": "dragon-scale-mail-bronze",
+   "name": "Dragon Scale Mail (Bronze)",
+   "cat": "armor",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "medium-armor",
+    "lightning",
+    "resistance"
+   ],
+   "effect": "Scale mail of bronze dragon hide. It adds to your AC, grants advantage against dragons' frightful presence and breath, and gives resistance to lightning. Once a day you can sense the nearest bronze dragon within 30 miles.",
+   "value": 25900,
+   "recipe": {
+    "components": [
+     {
+      "m": "scale-mail",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "adult-bronze-dragon-scales",
+       "ancient-bronze-dragon-scales"
+      ],
+      "q": 12,
+      "role": "keystone",
+      "label": "Bronze dragon scales (adult or ancient)"
+     },
+     {
+      "m": "dragons-blood-resin",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "cured-leather",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "smiths-tools"
+    ],
+    "station": "tannery",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "protection from energy"
+    ],
+    "yields": 1,
+    "lore": "Each scale is overlapped as it lay on the living bronze dragon, so its wards still face outward. Dragon's-blood resin glues them; old smiths swear the armour still smells its kin across the miles."
+   }
+  },
+  {
+   "id": "dragon-scale-mail-copper",
+   "name": "Dragon Scale Mail (Copper)",
+   "cat": "armor",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "medium-armor",
+    "acid",
+    "resistance"
+   ],
+   "effect": "Scale mail of copper dragon hide. It adds to your AC, grants advantage against dragons' frightful presence and breath, and gives resistance to acid. Once a day you can sense the nearest copper dragon within 30 miles.",
+   "value": 25900,
+   "recipe": {
+    "components": [
+     {
+      "m": "scale-mail",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "adult-copper-dragon-scales",
+       "ancient-copper-dragon-scales"
+      ],
+      "q": 12,
+      "role": "keystone",
+      "label": "Copper dragon scales (adult or ancient)"
+     },
+     {
+      "m": "dragons-blood-resin",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "cured-leather",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "smiths-tools"
+    ],
+    "station": "tannery",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "protection from energy"
+    ],
+    "yields": 1,
+    "lore": "Each scale is overlapped as it lay on the living copper dragon, so its wards still face outward. Dragon's-blood resin glues them; old smiths swear the armour still smells its kin across the miles."
+   }
+  },
+  {
+   "id": "dragon-scale-mail-gold",
+   "name": "Dragon Scale Mail (Gold)",
+   "cat": "armor",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "medium-armor",
+    "fire",
+    "resistance"
+   ],
+   "effect": "Scale mail of gold dragon hide. It adds to your AC, grants advantage against dragons' frightful presence and breath, and gives resistance to fire. Once a day you can sense the nearest gold dragon within 30 miles.",
+   "value": 25900,
+   "recipe": {
+    "components": [
+     {
+      "m": "scale-mail",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "adult-gold-dragon-scales",
+       "ancient-gold-dragon-scales"
+      ],
+      "q": 12,
+      "role": "keystone",
+      "label": "Gold dragon scales (adult or ancient)"
+     },
+     {
+      "m": "dragons-blood-resin",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "cured-leather",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "smiths-tools"
+    ],
+    "station": "tannery",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "protection from energy"
+    ],
+    "yields": 1,
+    "lore": "Each scale is overlapped as it lay on the living gold dragon, so its wards still face outward. Dragon's-blood resin glues them; old smiths swear the armour still smells its kin across the miles."
+   }
+  },
+  {
+   "id": "dragon-scale-mail-green",
+   "name": "Dragon Scale Mail (Green)",
+   "cat": "armor",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "medium-armor",
+    "poison",
+    "resistance"
+   ],
+   "effect": "Scale mail of green dragon hide. It adds to your AC, grants advantage against dragons' frightful presence and breath, and gives resistance to poison. Once a day you can sense the nearest green dragon within 30 miles.",
+   "value": 25900,
+   "recipe": {
+    "components": [
+     {
+      "m": "scale-mail",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "adult-green-dragon-scales",
+       "ancient-green-dragon-scales"
+      ],
+      "q": 12,
+      "role": "keystone",
+      "label": "Green dragon scales (adult or ancient)"
+     },
+     {
+      "m": "dragons-blood-resin",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "cured-leather",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "smiths-tools"
+    ],
+    "station": "tannery",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "protection from poison"
+    ],
+    "yields": 1,
+    "lore": "Each scale is overlapped as it lay on the living green dragon, so its wards still face outward. Dragon's-blood resin glues them; old smiths swear the armour still smells its kin across the miles."
+   }
+  },
+  {
+   "id": "dragon-scale-mail-red",
+   "name": "Dragon Scale Mail (Red)",
+   "cat": "armor",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "medium-armor",
+    "fire",
+    "resistance"
+   ],
+   "effect": "Scale mail of red dragon hide. It adds to your AC, grants advantage against dragons' frightful presence and breath, and gives resistance to fire. Once a day you can sense the nearest red dragon within 30 miles.",
+   "value": 25900,
+   "recipe": {
+    "components": [
+     {
+      "m": "scale-mail",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "adult-red-dragon-scales",
+       "ancient-red-dragon-scales"
+      ],
+      "q": 12,
+      "role": "keystone",
+      "label": "Red dragon scales (adult or ancient)"
+     },
+     {
+      "m": "dragons-blood-resin",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "cured-leather",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "smiths-tools"
+    ],
+    "station": "tannery",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "protection from energy"
+    ],
+    "yields": 1,
+    "lore": "Each scale is overlapped as it lay on the living red dragon, so its wards still face outward. Dragon's-blood resin glues them; old smiths swear the armour still smells its kin across the miles."
+   }
+  },
+  {
+   "id": "dragon-scale-mail-silver",
+   "name": "Dragon Scale Mail (Silver)",
+   "cat": "armor",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "medium-armor",
+    "cold",
+    "resistance"
+   ],
+   "effect": "Scale mail of silver dragon hide. It adds to your AC, grants advantage against dragons' frightful presence and breath, and gives resistance to cold. Once a day you can sense the nearest silver dragon within 30 miles.",
+   "value": 25900,
+   "recipe": {
+    "components": [
+     {
+      "m": "scale-mail",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "adult-silver-dragon-scales",
+       "ancient-silver-dragon-scales"
+      ],
+      "q": 12,
+      "role": "keystone",
+      "label": "Silver dragon scales (adult or ancient)"
+     },
+     {
+      "m": "dragons-blood-resin",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "cured-leather",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "smiths-tools"
+    ],
+    "station": "tannery",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "protection from energy"
+    ],
+    "yields": 1,
+    "lore": "Each scale is overlapped as it lay on the living silver dragon, so its wards still face outward. Dragon's-blood resin glues them; old smiths swear the armour still smells its kin across the miles."
+   }
+  },
+  {
+   "id": "dragon-scale-mail-white",
+   "name": "Dragon Scale Mail (White)",
+   "cat": "armor",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "medium-armor",
+    "cold",
+    "resistance"
+   ],
+   "effect": "Scale mail of white dragon hide. It adds to your AC, grants advantage against dragons' frightful presence and breath, and gives resistance to cold. Once a day you can sense the nearest white dragon within 30 miles.",
+   "value": 25900,
+   "recipe": {
+    "components": [
+     {
+      "m": "scale-mail",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "adult-white-dragon-scales",
+       "ancient-white-dragon-scales"
+      ],
+      "q": 12,
+      "role": "keystone",
+      "label": "White dragon scales (adult or ancient)"
+     },
+     {
+      "m": "dragons-blood-resin",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "cured-leather",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "smiths-tools"
+    ],
+    "station": "tannery",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "protection from energy"
+    ],
+    "yields": 1,
+    "lore": "Each scale is overlapped as it lay on the living white dragon, so its wards still face outward. Dragon's-blood resin glues them; old smiths swear the armour still smells its kin across the miles."
+   }
+  },
+  {
+   "id": "dwarven-plate",
+   "name": "Dwarven Plate",
+   "cat": "armor",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "heavy-armor",
+    "earth",
+    "toughness"
+   ],
+   "effect": "Superb plate that grants +2 AC beyond normal. When something tries to shove or drag you, you can use your reaction to cut the distance down by up to 10 feet.",
+   "value": 20000,
+   "recipe": {
+    "components": [
+     {
+      "m": "plate-armor",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "earthheart-geode",
+       "purple-worm-hide",
+       "distilled-stone-giant-might"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Immovable very rare part"
+     },
+     {
+      "m": "adamantine-ingot",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "stoneroot",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "hardened-leather",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "masons-tools"
+    ],
+    "station": "forge",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "stoneskin"
+    ],
+    "yields": 1,
+    "lore": "Dwarven smiths quench the plates in water where an earthheart geode has soaked; the wearer becomes as stubborn to move as bedrock. Stoneroot fibres weave the padding."
+   }
+  },
+  {
+   "id": "elven-chain",
+   "name": "Elven Chain",
+   "cat": "armor",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "medium-armor",
+    "stealth",
+    "fey"
+   ],
+   "effect": "A shimmering chain shirt that adds +1 AC. Anyone may wear it as though proficient, even without medium armour training, and it slips on silently.",
+   "value": 4000,
+   "recipe": {
+    "components": [
+     {
+      "m": "chain-shirt",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "shadowsilk-thistle",
+       "moonwillow-branch",
+       "astral-silver-thread"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Elven weaving material"
+     },
+     {
+      "m": "mithral-ingot",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "moonpetal",
+      "q": 3,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "weavers-tools"
+    ],
+    "station": "loom",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "pass without trace"
+    ],
+    "yields": 1,
+    "lore": "Elven chain is woven more than forged: mithral wire is drawn fine as thread and plied with shadowsilk or moonwillow fibres on a loom, the way elves weave their cloaks."
+   }
+  },
+  {
+   "id": "glamoured-studded-leather",
+   "name": "Glamoured Studded Leather",
+   "cat": "armor",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "light-armor",
+    "illusion",
+    "stealth"
+   ],
+   "effect": "Studded leather with +1 AC that can disguise itself on command as any ordinary outfit, keeping its shape, weight and protection while it looks like clothing.",
+   "value": 2300,
+   "recipe": {
+    "components": [
+     {
+      "m": "studded-leather-armor",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "mirage-lotus",
+       "oni-horn",
+       "cloaker-eye"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Rare illusion part"
+     },
+     {
+      "m": "doppelganger-skin",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "glamour-pollen",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "tannery",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "disguise self"
+    ],
+    "yields": 1,
+    "lore": "Doppelganger skin never forgets how to be something else; tanned with glamour pollen and an oni's illusion-horn, the leather learns to wear fine clothes as a mask."
+   }
+  },
+  {
+   "id": "mariners-armor",
+   "name": "Mariner's Armor",
+   "cat": "armor",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "water",
+    "swimming"
+   ],
+   "effect": "Armour decorated with waves and shells. The wearer swims as fast as they walk, and if they start a turn sinking while unconscious, they float up toward the surface.",
+   "value": 400,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "armor"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any suit of armor"
+     },
+     {
+      "oneOf": [
+       "water-elemental-core",
+       "water-elemental-tidewater-pearl",
+       "aboleth-hide",
+       "giant-shark-skin"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Sea-born part"
+     },
+     {
+      "m": "current-kelp",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "merfolk-coral-charm",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "forge",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "water breathing"
+    ],
+    "yields": 1,
+    "lore": "Current-kelp and shark skin teach the wearer the sea's grain; the water elemental's heart in the breast plate makes the ocean itself reluctant to drown them."
+   }
+  },
+  {
+   "id": "plate-armor-of-etherealness",
+   "name": "Plate Armor of Etherealness",
+   "cat": "armor",
+   "tier": "legendary",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "armor",
+    "heavy-armor",
+    "planar",
+    "invisibility"
+   ],
+   "effect": "Once a day, speaking its command word lets the wearer step into the Ethereal Plane for up to ten minutes, as the etherealness spell.",
+   "value": 80000,
+   "recipe": {
+    "components": [
+     {
+      "m": "plate-armor",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "dead-god-stone",
+       "ancient-black-dragon-gloom-gland"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Legendary plane-slipping part"
+     },
+     {
+      "m": "ghost-ectoplasm",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "phase-spider-silk",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "nalfeshnee-wing",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "weavers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "etherealness"
+    ],
+    "yields": 1,
+    "lore": "Ghosts and phase spiders live half out of the world; their ectoplasm and silk line the plate, while the keystone forces open the veil wide enough for a knight in full steel."
+   }
+  },
+  {
+   "id": "berserker-axe",
+   "name": "Berserker Axe",
+   "cat": "weapon",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "weapon",
+    "axe",
+    "strength",
+    "curse"
+   ],
+   "effect": "Cursed axe that grants +1 to hit and damage and adds hit points per level. When you are hurt by an enemy you must resist flying into a blind rage, attacking whoever is nearest.",
+   "value": 3000,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "axe"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any axe"
+     },
+     {
+      "oneOf": [
+       "tyrannosaurus-rex-heart",
+       "giant-ape-heart",
+       "troll-regenerating-heart"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Heart of a raging brute"
+     },
+     {
+      "m": "minotaur-horn",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "dread-nettle",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "bestow curse"
+    ],
+    "yields": 1,
+    "lore": "A great beast's heart, burned into the haft while still warm, gives the wielder its endless stamina and its temper too. Axes made with troll hearts are said to be the hardest to put down."
+   }
+  },
+  {
+   "id": "dagger-of-venom",
+   "name": "Dagger of Venom",
+   "cat": "weapon",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "weapon",
+    "dagger",
+    "poison"
+   ],
+   "effect": "A +1 dagger. Once a day the blade can weep a thick poison that coats it for a minute; the next creature it hits must resist or suffer heavy poison damage and be poisoned.",
+   "value": 2600,
+   "recipe": {
+    "components": [
+     {
+      "m": "dagger",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "wyvern-venom-sac",
+       "purple-worm-venom",
+       "bone-devil-venom",
+       "spirit-naga-venom"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Potent venom (rare+)"
+     },
+     {
+      "m": "giant-poisonous-snake-venom",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "giant-poisonous-snake-fangs",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "poisoners-kit"
+    ],
+    "station": "forge",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "magic weapon"
+    ],
+    "yields": 1,
+    "lore": "The blade is hollow-ground with a hair-thin channel, and the venom sac is sealed into the pommel so it slowly refills itself. Snake fangs set in the guard are said to 'teach' it when to bite."
+   }
+  },
+  {
+   "id": "dancing-sword",
+   "name": "Dancing Sword",
+   "cat": "weapon",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "weapon",
+    "sword",
+    "flight"
+   ],
+   "effect": "Toss this sword into the air and it fights on its own, flying up to 30 feet and attacking the foes you choose for several rounds before returning to your hand.",
+   "value": 20000,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "sword"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any sword"
+     },
+     {
+      "oneOf": [
+       "marilith-hand",
+       "planetar-feather",
+       "cloud-giant-blood"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Many-armed or sky-born part"
+     },
+     {
+      "m": "earthmote-stone",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "air-elemental-skygrit",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "animate objects"
+    ],
+    "yields": 1,
+    "lore": "A marilith's severed hand keeps trying to fight; bound into the grip, it gives the sword a mind for swordplay, while earthmotes and elemental grit carry it through the air."
+   }
+  },
+  {
+   "id": "defender",
+   "name": "Defender",
+   "cat": "weapon",
+   "tier": "legendary",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "weapon",
+    "sword",
+    "protection"
+   ],
+   "effect": "A +3 sword that lets you shift some or all of its bonus from attack and damage into your Armor Class each turn, trading offence for defence as the fight demands.",
+   "value": 90000,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "sword"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any sword"
+     },
+     {
+      "oneOf": [
+       "ancient-bronze-dragon-repulsion-gland",
+       "ancient-silver-dragon-scales"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Legendary warding part"
+     },
+     {
+      "m": "meteoric-iron",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "halo-quartz",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "gold-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "jewelers-tools"
+    ],
+    "station": "forge",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "shield",
+     "magic weapon"
+    ],
+    "yields": 1,
+    "lore": "The ward of an ancient metallic dragon is folded into the steel, so the blade can be either a sword or a wall. Halo-quartz in the crossguard is the 'dial' that the wielder turns."
+   }
+  },
+  {
+   "id": "dragon-slayer",
+   "name": "Dragon Slayer",
+   "cat": "weapon",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "weapon",
+    "sword"
+   ],
+   "effect": "A +1 sword that deals an extra 3d6 damage whenever it strikes a dragon, including kin such as dragon turtles and wyverns.",
+   "value": 4000,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "sword"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any sword"
+     },
+     {
+      "oneOf": [
+       "adult-black-dragon-fangs",
+       "adult-blue-dragon-fangs",
+       "adult-green-dragon-fangs",
+       "adult-red-dragon-fangs",
+       "adult-white-dragon-fangs",
+       "dragon-turtle-beak",
+       "young-red-dragon-blood",
+       "young-black-dragon-blood",
+       "young-green-dragon-blood"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Dragon fang, beak or heart-blood (rare+)"
+     },
+     {
+      "m": "wyrmbane-thistle",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "dragons-blood-resin",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "magic weapon"
+    ],
+    "yields": 1,
+    "lore": "A dragon's own fang, ground into the edge, knows exactly where scales part. Wyrmbane thistle is steeped into the quench because dragons are said to hate its smell. Slayers who have only brought down a young dragon quench the blade in its heart-blood instead of setting a fang in the hilt."
+   }
+  },
+  {
+   "id": "dwarven-thrower",
+   "name": "Dwarven Thrower",
+   "cat": "weapon",
+   "tier": "very-rare",
+   "attune": "by a dwarf",
+   "src": "SRD 5.1",
+   "tags": [
+    "weapon",
+    "hammer",
+    "earth",
+    "strength"
+   ],
+   "effect": "A +3 warhammer that a dwarf can hurl and have fly back to the hand. Thrown, it hits harder, and harder still against giants.",
+   "value": 22000,
+   "recipe": {
+    "components": [
+     {
+      "m": "warhammer",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "earthheart-geode",
+       "thunderhead-shard",
+       "iron-golem-core"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Returning power (very rare)"
+     },
+     {
+      "m": "stone-giant-throwing-boulder-shard",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "adamantine-ingot",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "lodestone",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "magic weapon"
+    ],
+    "yields": 1,
+    "lore": "Dwarves put a shard of a giant's own throwing stone in the head, so the hammer longs to hit giants back. A lodestone in the grip pulls it home."
+   }
+  },
+  {
+   "id": "flame-tongue",
+   "name": "Flame Tongue",
+   "cat": "weapon",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "weapon",
+    "sword",
+    "fire",
+    "light"
+   ],
+   "effect": "Speak the command and the blade bursts into flame, shedding bright light and dealing an extra 2d6 fire damage on each hit until you sheathe it or speak again.",
+   "value": 5000,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "sword"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any sword"
+     },
+     {
+      "oneOf": [
+       "efreeti-brazier-core",
+       "remorhaz-heat-gland",
+       "hellfire-ember",
+       "eternal-coal",
+       "fire-giant-blood",
+       "fire-giant-forge-hammer-iron"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Undying heat source (rare+): genie or remorhaz fire, hellfire, eternal coal, or fire giant blood or forge-iron"
+     },
+     {
+      "oneOf": [
+       "fire-elemental-core",
+       "salamander-heart",
+       "hell-hound-fire-gland"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Fire creature part"
+     },
+     {
+      "m": "lamp-oil",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "fire bolt",
+     "heat metal"
+    ],
+    "yields": 1,
+    "lore": "The keystone is sealed in a hollow fuller, and a salamander's heart or hell hound's gland is ground into the quench so the steel 'remembers' how to burn. Oil wiped along the edge is the traditional wick. A fire giant's blood, or iron from the hammer it has swung in its forge for a century, holds heat just as stubbornly."
+   }
+  },
+  {
+   "id": "frost-brand",
+   "name": "Frost Brand",
+   "cat": "weapon",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "weapon",
+    "sword",
+    "cold",
+    "resistance"
+   ],
+   "effect": "A sword rimed with frost that deals an extra 1d6 cold damage, grants fire resistance, glows in freezing air, and can snuff out nearby flames once an hour.",
+   "value": 22000,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "sword"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any sword"
+     },
+     {
+      "oneOf": [
+       "eternal-ice",
+       "ice-devil-frost-ichor",
+       "adult-white-dragon-heart"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Everlasting cold (very rare)"
+     },
+     {
+      "m": "winter-wolf-frost-gland",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "frost-giant-glacial-ice-shard",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "rime-crystal",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "cone of cold"
+    ],
+    "yields": 1,
+    "lore": "The blade is quenched in meltwater that never quite melts; a winter wolf's gland keeps the edge rimed, and the cold drinks up heat from any fire nearby."
+   }
+  },
+  {
+   "id": "giant-slayer",
+   "name": "Giant Slayer",
+   "cat": "weapon",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "weapon",
+    "sword",
+    "axe",
+    "strength"
+   ],
+   "effect": "A +1 axe or sword that deals an extra 2d6 damage to giants and can knock a struck giant prone if it fails a Strength save.",
+   "value": 4000,
+   "recipe": {
+    "components": [
+     {
+      "oneOf": [
+       "longsword",
+       "greatsword",
+       "battleaxe",
+       "greataxe",
+       "handaxe",
+       "shortsword",
+       "scimitar"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any axe or sword"
+     },
+     {
+      "any": [
+       "blood",
+       "giant"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "min": "rare",
+      "label": "True giant's blood (rare+)"
+     },
+     {
+      "m": "hill-giant-club-iron",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "giants-knuckle-root",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "magic weapon"
+    ],
+    "yields": 1,
+    "lore": "Smiths quench the steel in a true giant's blood so the weapon learns the weight it must topple; iron from a hill giant's club is folded in for the same reason."
+   }
+  },
+  {
+   "id": "hammer-of-thunderbolts",
+   "name": "Hammer of Thunderbolts",
+   "cat": "weapon",
+   "tier": "legendary",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "weapon",
+    "hammer",
+    "lightning",
+    "thunder",
+    "storm"
+   ],
+   "effect": "A +1 maul that grants the strength of a giant when worn with the right belt and gauntlets, can kill a giant outright on a hit, and can be hurled to explode in thunder and lightning.",
+   "value": 100000,
+   "recipe": {
+    "components": [
+     {
+      "m": "maul",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "eye-of-storm-glass",
+       "kraken-storm-organ",
+       "ancient-blue-dragon-heart"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Heart of the storm (legendary)"
+     },
+     {
+      "m": "storm-giant-blood",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "storm-giant-lightning-veined-hair",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "fulgurite",
+      "q": 3,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "lightning bolt",
+     "call lightning"
+    ],
+    "yields": 1,
+    "lore": "Forged on a mountaintop during a storm, with a storm giant's blood as quench water and its lightning-veined hair wrapped about the haft. The keystone in the head is what calls the thunderbolt down."
+   }
+  },
+  {
+   "id": "holy-avenger",
+   "name": "Holy Avenger",
+   "cat": "weapon",
+   "tier": "legendary",
+   "attune": "by a paladin",
+   "src": "SRD 5.1",
+   "tags": [
+    "weapon",
+    "sword",
+    "radiant",
+    "celestial",
+    "blessing"
+   ],
+   "effect": "A +3 sword that deals extra radiant damage to fiends and undead, and radiates an aura granting allies advantage on saves against spells and magic.",
+   "value": 120000,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "sword"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any sword"
+     },
+     {
+      "oneOf": [
+       "solar-essence",
+       "solar-light-mote",
+       "dead-god-stone"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Legendary holy relic"
+     },
+     {
+      "m": "golden-bough",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-ingot",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "holy-water",
+      "q": 3,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "shrine",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "dispel evil and good",
+     "bless"
+    ],
+    "yields": 1,
+    "lore": "A mote of a solar's light is sealed in the pommel and the blade is quenched in blessed water on a holy day; many paladin orders will only let one be made at their own altar."
+   }
+  },
+  {
+   "id": "javelin-of-lightning",
+   "name": "Javelin of Lightning",
+   "cat": "weapon",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "weapon",
+    "spear",
+    "lightning",
+    "storm"
+   ],
+   "effect": "Thrown and named, this javelin becomes a bolt of lightning, blasting everything in a line to its target and adding lightning damage on a hit. It recharges each dawn.",
+   "value": 470,
+   "recipe": {
+    "components": [
+     {
+      "m": "javelin",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "blue-dragon-wyrmling-breath-gland",
+       "behir-lightning-gland",
+       "air-elemental-stormglass",
+       "flesh-golem-galvanic-core"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Lightning source (uncommon+)"
+     },
+     {
+      "m": "copper-wire",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "lightning-struck-wood",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "woodcarvers-tools"
+    ],
+    "station": "forge",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "lightning bolt"
+    ],
+    "yields": 1,
+    "lore": "The shaft is cut from wood that lightning has already struck, so the bolt knows the path; copper wire spirals from the gland in the head to the butt."
+   }
+  },
+  {
+   "id": "luck-blade",
+   "name": "Luck Blade",
+   "cat": "weapon",
+   "tier": "legendary",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "weapon",
+    "sword",
+    "luck"
+   ],
+   "effect": "A +1 sword that also gives +1 to saving throws, lets you reroll one bad roll a day, and may hold a few wishes that fade once spent.",
+   "value": 100000,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "sword"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any sword"
+     },
+     {
+      "oneOf": [
+       "wishbloom",
+       "ancient-blue-dragon-hoard-scale",
+       "ancient-copper-dragon-heart"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Legendary luck"
+     },
+     {
+      "m": "djinni-wishglass-bead",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "fey-clover",
+      "q": 4,
+      "role": "supporting"
+     },
+     {
+      "m": "gold-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "bless",
+     "guidance"
+    ],
+    "yields": 1,
+    "lore": "A wishbloom pressed into the hilt, and a djinni's wishglass bead in the pommel, trap fortune itself; four-leaf fey clover is wrapped under the grip leather for good measure."
+   }
+  },
+  {
+   "id": "mace-of-disruption",
+   "name": "Mace of Disruption",
+   "cat": "weapon",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "weapon",
+    "bludgeon",
+    "radiant",
+    "light"
+   ],
+   "effect": "Struck fiends and undead take extra radiant damage and may be destroyed outright if badly hurt. The mace glows, and its light gives you courage against them.",
+   "value": 5000,
+   "recipe": {
+    "components": [
+     {
+      "m": "mace",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "deva-essence",
+       "unicorn-horn",
+       "gynosphinx-claw",
+       "celestial-dew"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Rare holy part"
+     },
+     {
+      "m": "silver-ingot",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "holy-water",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "shrine",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "daylight",
+     "bless"
+    ],
+    "yields": 1,
+    "lore": "Silver flanges soaked in a deva's essence or a unicorn's horn-powder burn anything that should not be walking. Priests quench each flange in holy water in turn."
+   }
+  },
+  {
+   "id": "mace-of-smiting",
+   "name": "Mace of Smiting",
+   "cat": "weapon",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "weapon",
+    "bludgeon",
+    "strength"
+   ],
+   "effect": "A +1 mace, +3 against constructs. A natural 20 deals heavy extra damage, and to a construct even more; a badly damaged construct is shattered.",
+   "value": 3000,
+   "recipe": {
+    "components": [
+     {
+      "m": "mace",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "meteoric-iron",
+       "fire-giant-forge-hammer-iron",
+       "stone-golem-core"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Rare smiting metal"
+     },
+     {
+      "m": "steel-ingot",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "verdigris",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "magic weapon"
+    ],
+    "yields": 1,
+    "lore": "What better to break golems than the iron of a fire giant's hammer or a stone golem's own core? Verdigris in the quench helps it eat into metal and stone."
+   }
+  },
+  {
+   "id": "mace-of-terror",
+   "name": "Mace of Terror",
+   "cat": "weapon",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "weapon",
+    "bludgeon",
+    "fear"
+   ],
+   "effect": "Holds three charges; spend one to emit a wave of dread that sends nearby creatures fleeing in panic for a minute. Recharges partly at dawn.",
+   "value": 4000,
+   "recipe": {
+    "components": [
+     {
+      "m": "mace",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "cloaker-moan-sac",
+       "bone-devil-essence",
+       "tyrannosaurus-rex-tooth"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Terror-bearing part"
+     },
+     {
+      "m": "mummy-glare-eye",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "dread-nettle",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "fear"
+    ],
+    "yields": 1,
+    "lore": "A cloaker's moan sac or a bone devil's essence sealed inside the head makes the mace hum with terror; a mummy's eye set in the pommel watches for those who flee."
+   }
+  },
+  {
+   "id": "nine-lives-stealer",
+   "name": "Nine Lives Stealer",
+   "cat": "weapon",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "weapon",
+    "sword",
+    "death",
+    "necrotic"
+   ],
+   "effect": "A +2 sword that on a critical hit can tear the life from a weakened creature outright. It holds a limited number of such killings, then becomes merely +2.",
+   "value": 25000,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "sword"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any sword"
+     },
+     {
+      "oneOf": [
+       "lich-dust",
+       "mummy-lord-essence",
+       "dusk-pearl"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Soul-reaping part (very rare)"
+     },
+     {
+      "m": "night-hag-soul-bag",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "soulless-ash",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "blight"
+    ],
+    "yields": 1,
+    "lore": "A night hag's soul bag is stitched into the grip to hold the stolen lives, and the blade is dusted with a lich's ash so it knows how to take them."
+   }
+  },
+  {
+   "id": "oathbow",
+   "name": "Oathbow",
+   "cat": "weapon",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "weapon",
+    "bow",
+    "senses"
+   ],
+   "effect": "Name a sworn enemy as you shoot and the bow marks them: you ignore cover and disadvantage from range, and your arrows deal extra damage to that foe until it dies.",
+   "value": 22000,
+   "recipe": {
+    "components": [
+     {
+      "m": "longbow",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "planetar-eye",
+       "solar-feather",
+       "androsphinx-tear"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Unerring celestial part"
+     },
+     {
+      "m": "erinyes-feather",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "ancient-oak-heartwood",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "bowstring",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "hunter's mark"
+    ],
+    "yields": 1,
+    "lore": "Erinyes feathers in the fletching give it their vengeful tracking, while the keystone set under the grip never loses sight of whoever the archer has sworn to kill."
+   }
+  },
+  {
+   "id": "scimitar-of-speed",
+   "name": "Scimitar of Speed",
+   "cat": "weapon",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "weapon",
+    "sword",
+    "speed"
+   ],
+   "effect": "A +2 scimitar so quick you can make an extra attack with it as a bonus action every turn.",
+   "value": 25000,
+   "recipe": {
+    "components": [
+     {
+      "m": "scimitar",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "marilith-scales",
+       "marilith-essence",
+       "ageless-lotus"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Very rare swiftness"
+     },
+     {
+      "m": "quickthorn-berry",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "mithral-ingot",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "haste"
+    ],
+    "yields": 1,
+    "lore": "Marilith scales, laid in the blade like damask, carry the demon's six-armed speed. Mithral keeps it light; quickthorn juice is the quench."
+   }
+  },
+  {
+   "id": "sun-blade",
+   "name": "Sun Blade",
+   "cat": "weapon",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "weapon",
+    "sword",
+    "radiant",
+    "light"
+   ],
+   "effect": "A hilt that springs a blade of pure sunlight when commanded. It is a +2 finesse longsword dealing radiant damage, hurts undead more, and glows like daylight.",
+   "value": 5000,
+   "recipe": {
+    "components": [
+     {
+      "m": "longsword",
+      "q": 1,
+      "role": "base",
+      "label": "Longsword hilt"
+     },
+     {
+      "oneOf": [
+       "sun-amber",
+       "young-gold-dragon-essence",
+       "aurora-glass"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Captured sunlight"
+     },
+     {
+      "m": "sun-sand",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "gold-ingot",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "jewelers-tools"
+    ],
+    "station": "shrine",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "daylight"
+    ],
+    "yields": 1,
+    "lore": "Only the hilt of the longsword is kept: the steel is replaced by sun-amber set in a gold cross-guard, so the blade that springs forth is made of the light it once trapped."
+   }
+  },
+  {
+   "id": "sword-of-life-stealing",
+   "name": "Sword of Life Stealing",
+   "cat": "weapon",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "weapon",
+    "sword",
+    "necrotic",
+    "healing"
+   ],
+   "effect": "On a natural 20 against a living creature, the sword drains extra necrotic damage and you gain as many temporary hit points.",
+   "value": 5000,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "sword"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any sword"
+     },
+     {
+      "oneOf": [
+       "night-hag-soul-bag",
+       "spirit-naga-essence",
+       "black-lotus"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Life-draining part"
+     },
+     {
+      "m": "vampire-spawn-blood",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "wight-barrow-dust",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "vampiric touch"
+    ],
+    "yields": 1,
+    "lore": "The blade is quenched in vampire-spawn blood and scoured with barrow dust; the keystone in the pommel is the throat through which the stolen life flows back to the wielder."
+   }
+  },
+  {
+   "id": "sword-of-sharpness",
+   "name": "Sword of Sharpness",
+   "cat": "weapon",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "weapon",
+    "sword",
+    "strength"
+   ],
+   "effect": "Slashing blade that deals maximum damage to objects and, on a natural 20, extra damage and a chance to lop off a limb. It can also glow on command.",
+   "value": 25000,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "sword"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any slashing sword"
+     },
+     {
+      "any": [
+       "claw"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "min": "very-rare",
+      "label": "Very rare claw"
+     },
+     {
+      "m": "adamantine-ingot",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "whetstone",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "magic weapon"
+    ],
+    "yields": 1,
+    "lore": "A sphinx's or marilith's claw, ground to powder and folded into adamantine, gives an edge that never truly dulls. The finishing whetstone is thrown away afterward; it is always cut in half."
+   }
+  },
+  {
+   "id": "sword-of-wounding",
+   "name": "Sword of Wounding",
+   "cat": "weapon",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "weapon",
+    "sword",
+    "necrotic"
+   ],
+   "effect": "Wounds it inflicts heal only by rest, and once per turn a hit leaves a bleeding wound that deals extra necrotic damage each round until the victim staunches it.",
+   "value": 4000,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "sword"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any sword"
+     },
+     {
+      "oneOf": [
+       "horned-devil-tail-barb",
+       "bone-devil-stinger",
+       "clay-golem-clay"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Unhealing wound source"
+     },
+     {
+      "m": "hydra-fang",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "bloodmoss",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "bestow curse"
+    ],
+    "yields": 1,
+    "lore": "A horned devil's tail leaves wounds that will not close; its barb, ground into the edge, passes on the gift. Bloodmoss is packed into the fuller to keep the blood flowing."
+   }
+  },
+  {
+   "id": "trident-of-fish-command",
+   "name": "Trident of Fish Command",
+   "cat": "weapon",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "weapon",
+    "spear",
+    "water",
+    "domination"
+   ],
+   "effect": "A trident with three charges. Spend one to charm a sea beast with a swimming speed, as if with a beast-dominating spell. Regains charges at dawn.",
+   "value": 500,
+   "recipe": {
+    "components": [
+     {
+      "m": "trident",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "chuul-essence",
+       "water-elemental-core",
+       "aboleth-brain"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Sea-ruling part"
+     },
+     {
+      "m": "sahuagin-shark-call-shell",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "sahuagin-shark-tooth-trident-tip",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "aquamarine",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "dominate beast"
+    ],
+    "yields": 1,
+    "lore": "Sahuagin priests call sharks with conch shells; mounted in the trident's collar beside an aboleth's brain or a chuul's essence, the shell no longer asks, it commands."
+   }
+  },
+  {
+   "id": "vicious-weapon",
+   "name": "Vicious Weapon",
+   "cat": "weapon",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "weapon",
+    "strength"
+   ],
+   "effect": "On a natural 20, this weapon deals an extra 2d6 damage of its own type.",
+   "value": 2800,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "weapon"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any weapon"
+     },
+     {
+      "oneOf": [
+       "roc-talon",
+       "glabrezu-pincer",
+       "hezrou-claw",
+       "behir-fang"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Savage rare part"
+     },
+     {
+      "m": "giant-shark-teeth",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "magic weapon"
+    ],
+    "yields": 1,
+    "lore": "Barbs of shark tooth and a flake of a roc's talon or a demon's pincer turn a lucky blow into a rending one."
+   }
+  },
+  {
+   "id": "vorpal-sword",
+   "name": "Vorpal Sword",
+   "cat": "weapon",
+   "tier": "legendary",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "weapon",
+    "sword",
+    "death"
+   ],
+   "effect": "A +3 sword that ignores slashing resistance and, on a natural 20 against a creature with a head, cuts it clean off, killing it unless it can survive losing a head.",
+   "value": 150000,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "sword"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any slashing sword"
+     },
+     {
+      "oneOf": [
+       "tarrasque-tooth",
+       "tarrasque-claw",
+       "kraken-beak"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Legendary severing part"
+     },
+     {
+      "m": "adamantine-ingot",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "meteoric-iron",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "quicksilver",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "magic weapon",
+     "power word kill"
+    ],
+    "yields": 1,
+    "lore": "Nothing short of a Tarrasque's tooth or claw, or a kraken's beak has ever sheared through anything it bit. Ground and folded into adamantine and star iron, it keeps that hunger; the old saying is 'snicker-snack'."
+   }
+  },
+  {
+   "id": "arrow-of-slaying-dragons",
+   "name": "Arrow of Slaying (Dragons)",
+   "cat": "ammunition",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "ammunition",
+    "death"
+   ],
+   "effect": "A single arrow or bolt keyed to one kind of foe. When it hits a creature of that kind (dragons), the target takes a huge burst of piercing damage, halved on a successful Constitution save. It then becomes mundane.",
+   "value": 13700,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "ammunition"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Bundle of ammunition (one shaft is used)"
+     },
+     {
+      "any": [
+       "heart",
+       "dragon"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "min": "very-rare",
+      "label": "Very rare dragon heart"
+     },
+     {
+      "m": "wyrmbane-thistle",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "bone-glue",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "smiths-tools"
+    ],
+    "station": "workshop",
+    "dc": 21,
+    "time": "15 days",
+    "gp": 2000,
+    "level": 11,
+    "spells": [
+     "hunter's mark",
+     "blight"
+    ],
+    "yields": 1,
+    "lore": "A dragon's heart knows every other dragon's heart; the arrowhead cut from it flies straight to its kin's."
+   }
+  },
+  {
+   "id": "arrow-of-slaying-giants",
+   "name": "Arrow of Slaying (Giants)",
+   "cat": "ammunition",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "ammunition",
+    "death"
+   ],
+   "effect": "A single arrow or bolt keyed to one kind of foe. When it hits a creature of that kind (giants), the target takes a huge burst of piercing damage, halved on a successful Constitution save. It then becomes mundane.",
+   "value": 8000,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "ammunition"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Bundle of ammunition (one shaft is used)"
+     },
+     {
+      "any": [
+       "giant"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "min": "very-rare",
+      "label": "Very rare giant part"
+     },
+     {
+      "m": "giants-knuckle-root",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "bone-glue",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "smiths-tools"
+    ],
+    "station": "workshop",
+    "dc": 21,
+    "time": "15 days",
+    "gp": 2000,
+    "level": 11,
+    "spells": [
+     "hunter's mark",
+     "blight"
+    ],
+    "yields": 1,
+    "lore": "Giant's blood or bone ground into the head gives the arrow a hunger for giant flesh."
+   }
+  },
+  {
+   "id": "arrow-of-slaying-undead",
+   "name": "Arrow of Slaying (Undead)",
+   "cat": "ammunition",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "ammunition",
+    "death"
+   ],
+   "effect": "A single arrow or bolt keyed to one kind of foe. When it hits a creature of that kind (undead), the target takes a huge burst of piercing damage, halved on a successful Constitution save. It then becomes mundane.",
+   "value": 7500,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "ammunition"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Bundle of ammunition (one shaft is used)"
+     },
+     {
+      "any": [
+       "undead"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "min": "very-rare",
+      "label": "Very rare undead remnant"
+     },
+     {
+      "m": "holy-water",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "bone-glue",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "smiths-tools"
+    ],
+    "station": "workshop",
+    "dc": 21,
+    "time": "15 days",
+    "gp": 2000,
+    "level": 11,
+    "spells": [
+     "hunter's mark",
+     "dispel evil and good"
+    ],
+    "yields": 1,
+    "lore": "Tipping the head with a lich's dust or a vampire's heart-ash is simply turning death against itself; holy water seals it so the arrow does not rise on its own."
+   }
+  },
+  {
+   "id": "arrow-of-slaying-fiends",
+   "name": "Arrow of Slaying (Fiends)",
+   "cat": "ammunition",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "ammunition",
+    "death"
+   ],
+   "effect": "A single arrow or bolt keyed to one kind of foe. When it hits a creature of that kind (fiends), the target takes a huge burst of piercing damage, halved on a successful Constitution save. It then becomes mundane.",
+   "value": 7500,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "ammunition"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Bundle of ammunition (one shaft is used)"
+     },
+     {
+      "any": [
+       "fiend"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "min": "very-rare",
+      "label": "Very rare fiend part"
+     },
+     {
+      "m": "holy-water",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "bone-glue",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "smiths-tools"
+    ],
+    "station": "workshop",
+    "dc": 21,
+    "time": "15 days",
+    "gp": 2000,
+    "level": 11,
+    "spells": [
+     "hunter's mark",
+     "dispel evil and good"
+    ],
+    "yields": 1,
+    "lore": "A fiend's own scale, horn or tusk carries its true name; the arrow that bears it cannot miss the fiend's heart."
+   }
+  },
+  {
+   "id": "arrow-of-slaying-monstrosities",
+   "name": "Arrow of Slaying (Monstrosities)",
+   "cat": "ammunition",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "ammunition",
+    "death"
+   ],
+   "effect": "A single arrow or bolt keyed to one kind of foe. When it hits a creature of that kind (monstrosities), the target takes a huge burst of piercing damage, halved on a successful Constitution save. It then becomes mundane.",
+   "value": 7500,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "ammunition"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Bundle of ammunition (one shaft is used)"
+     },
+     {
+      "any": [
+       "monstrosity"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "min": "very-rare",
+      "label": "Very rare monstrosity part"
+     },
+     {
+      "m": "wyrmbane-thistle",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "bone-glue",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "smiths-tools"
+    ],
+    "station": "workshop",
+    "dc": 21,
+    "time": "15 days",
+    "gp": 2000,
+    "level": 11,
+    "spells": [
+     "hunter's mark",
+     "blight"
+    ],
+    "yields": 1,
+    "lore": "Hunters say a monster can only be undone by the monster that hunts it, so they fashion the head from a sphinx, a worm or a kraken."
+   }
+  },
+  {
+   "id": "arrow-of-slaying-elementals",
+   "name": "Arrow of Slaying (Elementals)",
+   "cat": "ammunition",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "ammunition",
+    "death"
+   ],
+   "effect": "A single arrow or bolt keyed to one kind of foe. When it hits a creature of that kind (elementals), the target takes a huge burst of piercing damage, halved on a successful Constitution save. It then becomes mundane.",
+   "value": 7500,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "ammunition"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Bundle of ammunition (one shaft is used)"
+     },
+     {
+      "any": [
+       "elemental"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "min": "very-rare",
+      "label": "Very rare elemental matter"
+     },
+     {
+      "m": "cinder-salt",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "bone-glue",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "smiths-tools"
+    ],
+    "station": "workshop",
+    "dc": 21,
+    "time": "15 days",
+    "gp": 2000,
+    "level": 11,
+    "spells": [
+     "hunter's mark",
+     "dispel evil and good"
+    ],
+    "yields": 1,
+    "lore": "Elementals are pure matter with a will; an arrowhead of everlasting ice or living flame unbinds that will on impact."
+   }
+  },
+  {
+   "id": "arrow-of-slaying-constructs",
+   "name": "Arrow of Slaying (Constructs)",
+   "cat": "ammunition",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "ammunition",
+    "death"
+   ],
+   "effect": "A single arrow or bolt keyed to one kind of foe. When it hits a creature of that kind (constructs), the target takes a huge burst of piercing damage, halved on a successful Constitution save. It then becomes mundane.",
+   "value": 7500,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "ammunition"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Bundle of ammunition (one shaft is used)"
+     },
+     {
+      "any": [
+       "construct"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "min": "very-rare",
+      "label": "Very rare construct part"
+     },
+     {
+      "m": "verdigris",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "bone-glue",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "smiths-tools"
+    ],
+    "station": "workshop",
+    "dc": 21,
+    "time": "15 days",
+    "gp": 2000,
+    "level": 11,
+    "spells": [
+     "hunter's mark",
+     "shatter"
+    ],
+    "yields": 1,
+    "lore": "Iron-golem plating filed into a bodkin is the only thing that finds the flaw in every golem's making."
+   }
+  }
+ ]
+}

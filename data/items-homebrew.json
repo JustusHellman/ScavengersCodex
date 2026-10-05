@@ -1,0 +1,3873 @@
+{
+ "materials": [
+  {
+   "id": "troll-leather",
+   "name": "Troll Leather",
+   "tier": "uncommon",
+   "tags": [
+    "leather",
+    "hide",
+    "regeneration",
+    "toughness",
+    "giant"
+   ],
+   "desc": "Grey-green leather that still knits its own nicks closed overnight, smelling faintly of swamp. Armourers value it because it never cracks or wears thin.",
+   "perish": "stable",
+   "value": 34,
+   "recipe": {
+    "components": [
+     {
+      "m": "troll-hide",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "tanning-salts",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "vinegar",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "wood-ash",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "tannery",
+    "dc": 14,
+    "time": "3 days",
+    "gp": 20,
+    "lore": "Troll hide keeps trying to heal while it tans, so it is soaked in ash-lye and vinegar to stun the flesh just long enough for the salts to set; what remains is leather that still mends small wounds."
+   }
+  },
+  {
+   "id": "giantsteel-ingot",
+   "name": "Giantsteel Ingot",
+   "tier": "uncommon",
+   "tags": [
+    "ingot",
+    "metal",
+    "strength",
+    "earth",
+    "toughness"
+   ],
+   "desc": "A dense, blue-grey bar that rings like a bell and weighs half again what steel should. Smiths favour it for heavy hafts and hammer-heads that must survive giant-sized blows.",
+   "perish": "stable",
+   "value": 220,
+   "recipe": {
+    "components": [
+     {
+      "m": "steel-ingot",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "hill-giant-blood",
+       "stone-giant-blood",
+       "ettin-blood"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Giant's blood (quench)"
+     },
+     {
+      "m": "iron-ore",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "coal",
+      "q": 3,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 14,
+    "time": "1 day",
+    "gp": 30,
+    "lore": "Steel quenched in the blood of a giant takes on a little of its stubborn mass; forge-masters say the metal 'remembers being big'."
+   }
+  },
+  {
+   "id": "quellsalt-brine",
+   "name": "Quellsalt Brine",
+   "tier": "common",
+   "tags": [
+    "salt",
+    "liquid",
+    "reagent",
+    "time"
+   ],
+   "desc": "Cloudy, bitter-smelling brine that leaves a crust of pale crystals on anything it touches. Harvesters paint it onto organs and glands to slow their decay.",
+   "perish": "stable",
+   "value": 22,
+   "recipe": {
+    "components": [
+     {
+      "m": "preserving-salts",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "natron",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "vinegar",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "myrrh",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 12,
+    "time": "8 hours",
+    "gp": 5,
+    "lore": "The same natron and myrrh that tomb-priests use on their kings, cut with salt and vinegar: a poor man's embalming fluid that buys a fresh gland a few extra days."
+   }
+  }
+ ],
+ "items": [
+  {
+   "id": "owlbear-feather-fletching",
+   "name": "Owlbear-Feather Fletching",
+   "cat": "ammunition",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "ammunition",
+    "stealth"
+   ],
+   "effect": "Arrows fletched with owlbear down fly without a whisper. Firing one never gives away your position: if you were hidden and miss, you remain hidden. The fletching is spent when the arrow hits.",
+   "value": 60,
+   "recipe": {
+    "components": [
+     {
+      "m": "arrows",
+      "q": 10,
+      "role": "base"
+     },
+     {
+      "m": "owlbear-feather",
+      "q": 2,
+      "role": "keystone"
+     },
+     {
+      "m": "hushmoss",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "amberpine-sap",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 12,
+    "time": "1 day",
+    "gp": 5,
+    "level": 1,
+    "yields": 10,
+    "lore": "Owlbears hunt like owls do, on feathers soft enough to swallow sound; hushmoss rubbed into the shafts and a dab of pine-amber glue kill the last of the whistle."
+   }
+  },
+  {
+   "id": "fire-beetle-lantern",
+   "name": "Fire-Beetle Lantern",
+   "cat": "wondrous",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "gear",
+    "light"
+   ],
+   "effect": "A lantern whose pair of fire-beetle glands glow on command, shedding bright light in a 20-foot radius and dim light for another 20 feet. It gives off no heat, needs no fuel, and keeps shining underwater or in a gale.",
+   "value": 91,
+   "recipe": {
+    "components": [
+     {
+      "m": "lantern",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "giant-fire-beetle-gland",
+      "q": 2,
+      "role": "keystone"
+     },
+     {
+      "m": "glowcap",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "giant-fire-beetle-carapace",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "tinkers-tools",
+     "alchemists-supplies"
+    ],
+    "station": "workshop",
+    "dc": 12,
+    "time": "2 days",
+    "gp": 10,
+    "level": 1,
+    "spells": [
+     "light"
+    ],
+    "lore": "A fire beetle's glands keep glowing for days after death; steeped with glowcap spores they never dim, and a scrap of the beetle's own shell makes the shutter that dims them."
+   }
+  },
+  {
+   "id": "wolf-fang-charm",
+   "name": "Wolf-Fang Charm",
+   "cat": "wondrous",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "jewelry",
+    "senses"
+   ],
+   "effect": "A cord of wolf teeth that sharpens your nose and ears. Once per short rest, you can add 1d4 to a Wisdom (Survival) check to follow tracks or a Wisdom (Perception) check that relies on smell or hearing.",
+   "value": 74,
+   "recipe": {
+    "components": [
+     {
+      "m": "leather-strips",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "wolf-fang",
+       "dire-wolf-fang",
+       "worg-fang"
+      ],
+      "q": 3,
+      "role": "keystone",
+      "label": "Wolf-kin fang (x3)"
+     },
+     {
+      "m": "wolf-nose",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "wolfsbane",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "none",
+    "dc": 12,
+    "time": "2 days",
+    "gp": 10,
+    "level": 1,
+    "lore": "Hill-folk hang a wolf's teeth by the door to 'borrow its nose'; a sprig of wolfsbane knotted into the cord keeps the wolf's spirit from borrowing back."
+   }
+  },
+  {
+   "id": "mimic-glue-gloves",
+   "name": "Mimic-Glue Gloves",
+   "cat": "wondrous",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "climbing",
+    "binding"
+   ],
+   "effect": "As a bonus action you make the palms tacky or dry. While tacky, you can't be disarmed, and you have advantage on Strength (Athletics) checks to climb and to keep hold of something; you also can't let go of anything until you dry them.",
+   "value": 100,
+   "recipe": {
+    "components": [
+     {
+      "m": "gloves",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "mimic-adhesive",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "giant-lizard-toe-pads",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "bone-glue",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "alchemists-supplies"
+    ],
+    "station": "workshop",
+    "dc": 12,
+    "time": "2 days",
+    "gp": 10,
+    "level": 1,
+    "lore": "Mimic glue is the one adhesive that lets go when told to, because it was always obeying a will; lizard toe-pads give the palm the grip, the glue gives it the stubbornness."
+   }
+  },
+  {
+   "id": "carrion-eaters-gloves",
+   "name": "Carrion-Eater's Gloves",
+   "cat": "tool",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "tool",
+    "clothing",
+    "resistance"
+   ],
+   "effect": "Heavy gauntleted gloves lined with vulture-gut membrane. While wearing them you have advantage on saving throws against poisons, acids and diseases you are exposed to while harvesting a creature, and any such damage is halved.",
+   "value": 80,
+   "recipe": {
+    "components": [
+     {
+      "m": "gloves",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "giant-vulture-stomach",
+       "vulture-gizzard",
+       "otyugh-bile"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Carrion-eater's gut lining"
+     },
+     {
+      "m": "cured-leather",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "cleansing-sage",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "harvesting-kit"
+    ],
+    "station": "tannery",
+    "dc": 12,
+    "time": "2 days",
+    "gp": 10,
+    "level": 1,
+    "lore": "A vulture eats rot and never sickens; its stomach lining, washed in cleansing sage, is the harvester's oldest trick for handling the parts that bite back."
+   }
+  },
+  {
+   "id": "marshlight-jar",
+   "name": "Marshlight Jar",
+   "cat": "wondrous",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "container",
+    "light",
+    "illusion"
+   ],
+   "effect": "A stoppered jar holding a flickering blue spark. Unstopper it as an action to cast dancing lights, with the lights obeying your mental commands; once used, it can't be used again until the next dusk.",
+   "value": 96,
+   "recipe": {
+    "components": [
+     {
+      "m": "bottle",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "will-o-wisp-lantern-core",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "will-o-wisp-marsh-glow",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "bog-myrtle",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "glassblowers-tools"
+    ],
+    "station": "glassworks",
+    "dc": 12,
+    "time": "2 days",
+    "gp": 10,
+    "level": 1,
+    "spells": [
+     "dancing lights"
+    ],
+    "lore": "A wisp's core wants to lure; kept in a jar packed with bog-myrtle, it lures only where you point it."
+   }
+  },
+  {
+   "id": "harpy-throat-lure",
+   "name": "Harpy-Throat Lure",
+   "cat": "wondrous",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "instrument",
+    "sound"
+   ],
+   "effect": "A reed call built around a dried harpy larynx. You can perfectly mimic any animal cry, bird call or short phrase you have heard; a listener must succeed on a DC 14 Wisdom (Insight) check to realise the sound is false.",
+   "value": 95,
+   "recipe": {
+    "components": [
+     {
+      "m": "signal-whistle",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "harpy-vocal-cords",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "conch-shell",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 12,
+    "time": "2 days",
+    "gp": 10,
+    "level": 1,
+    "spells": [
+     "minor illusion"
+    ],
+    "lore": "Harpies sing whatever will bring prey closer; the conch gives the voice a body so it carries across cliffs and water the way a real cry would."
+   }
+  },
+  {
+   "id": "hawk-eye-drops",
+   "name": "Hawk-Eye Drops",
+   "cat": "potion",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "potion",
+    "senses"
+   ],
+   "effect": "Two stinging drops per eye. For 1 hour you can make out fine detail up to a mile away as if it were 100 feet off, and you have advantage on Wisdom (Perception) checks that rely on sight at long range.",
+   "value": 75,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "giant-eagle-eye",
+       "hawk-eye",
+       "eagle-eye"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Raptor's eye"
+     },
+     {
+      "m": "eyebright",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "alchemical-base",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 12,
+    "time": "1 day",
+    "gp": 5,
+    "level": 1,
+    "lore": "The vitreous humour of a raptor's eye, thinned with eyebright tincture, lends the drinker the bird's long focus. Tears are normal for the first minute."
+   }
+  },
+  {
+   "id": "satyr-horn-pipes",
+   "name": "Satyr-Horn Pipes",
+   "cat": "wondrous",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "instrument",
+    "fey",
+    "healing"
+   ],
+   "effect": "Pan-pipes capped with satyr horn. If you play them throughout a short rest, each friendly creature that listens and spends Hit Dice regains an extra 1d4 hit points. Anyone who dislikes you finds the tune maddeningly catchy.",
+   "value": 110,
+   "recipe": {
+    "components": [
+     {
+      "m": "pan-flute",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "satyr-horn",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "four-leaf-clover",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "instrument-strings",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 12,
+    "time": "2 days",
+    "gp": 10,
+    "level": 1,
+    "spells": [
+     "healing word"
+    ],
+    "lore": "Satyr music is revelry distilled; the horn keeps a little of the Feywild's refusal to be tired, and a lucky clover wrapped round the reeds keeps the pipes in tune."
+   }
+  },
+  {
+   "id": "ankheg-acid-flask",
+   "name": "Ankheg Acid Flask",
+   "cat": "gear",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "gear",
+    "acid",
+    "container"
+   ],
+   "effect": "A waxed ceramic flask of ankheg spit. As an action, throw it up to 20 feet to shatter it in a 5-foot radius: each creature there makes a DC 12 Dexterity save, taking 2d6 acid damage on a failure (half on success) and 1d6 more acid at the start of its next turn if it failed. The flask is used up.",
+   "value": 50,
+   "recipe": {
+    "components": [
+     {
+      "m": "flask",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "ankheg-acid-gland",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "vinegar",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "beeswax",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies",
+     "potters-tools"
+    ],
+    "station": "alchemy-lab",
+    "dc": 12,
+    "time": "1 day",
+    "gp": 5,
+    "level": 1,
+    "yields": 2,
+    "lore": "Ankhegs spit acid that clings; cut with vinegar it stays liquid in the flask, and a beeswax seal is the only thing it won't eat through."
+   }
+  },
+  {
+   "id": "blink-dog-collar",
+   "name": "Blink-Dog Collar",
+   "cat": "wondrous",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "gear",
+    "teleport",
+    "fey"
+   ],
+   "effect": "A soft collar sized for a hound, horse or halfling. Once per day, when the wearer is hit by an attack, it can use its reaction to teleport up to 10 feet to an unoccupied space it can see after the damage is dealt.",
+   "value": 100,
+   "recipe": {
+    "components": [
+     {
+      "m": "leather-strips",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "blink-dog-essence",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "blink-dog-pelt",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silk-thread",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 12,
+    "time": "2 days",
+    "gp": 10,
+    "level": 1,
+    "spells": [
+     "misty step"
+    ],
+    "requires": "Misty step is a 2nd-level spell, so the caster must be at least 3rd level; otherwise a participant must expend a scroll of it each crafting day.",
+    "lore": "Blink dogs flicker away the instant they are bitten; a strip of their pelt and a breath of their essence teach any wearer the same flinch."
+   }
+  },
+  {
+   "id": "rust-monster-antennae-rod",
+   "name": "Rust-Monster Antennae Rod",
+   "cat": "rod",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "rod",
+    "acid"
+   ],
+   "effect": "A copper rod tipped with twitching feelers. Once per day as an action, touch a nonmagical metal object no larger than a 3-foot cube (a lock, chain, hinge or blade) to corrode it to flaking rust; worn or carried metal requires a melee spell attack and armour instead loses 1 AC until repaired.",
+   "value": 97,
+   "recipe": {
+    "components": [
+     {
+      "m": "rod-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "rust-monster-antennae",
+      "q": 2,
+      "role": "keystone"
+     },
+     {
+      "m": "rust-monster-essence",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "copper-wire",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "tinkers-tools"
+    ],
+    "station": "workshop",
+    "dc": 12,
+    "time": "2 days",
+    "gp": 10,
+    "level": 1,
+    "lore": "Rust monsters smell metal and eat it; their antennae keep the hunger. Copper is the one metal they refuse, so it makes the handle."
+   }
+  },
+  {
+   "id": "rune-etched-skinning-knife",
+   "name": "Rune-Etched Skinning Knife",
+   "cat": "tool",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "tool",
+    "dagger",
+    "weapon",
+    "knowledge"
+   ],
+   "effect": "A magical dagger whose runes flare along the cleanest cut. Harvesting checks you make with it have advantage, and if you fail one by 5 or more the part is only damaged (half value) instead of ruined.",
+   "value": 360,
+   "recipe": {
+    "components": [
+     {
+      "m": "dagger",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "runestone-fragment",
+       "night-hag-eye",
+       "chuul-antennae"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Seeing-stone or seer's organ"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "steel-ingot",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "potent-arcane-ink",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "calligraphers-supplies"
+    ],
+    "station": "forge",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "identify"
+    ],
+    "lore": "The runes are old anatomists' marks; set with a fragment that 'sees' (a runestone, a chuul's feeler, a hag's eye) the blade knows where the seams of a body are before the harvester does."
+   }
+  },
+  {
+   "id": "preservers-satchel",
+   "name": "Preserver's Satchel",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "container",
+    "time"
+   ],
+   "effect": "A salt-lined pack holding up to 1 cubic foot or 30 pounds. Harvested parts inside don't decay: their perish time is paused for up to 10 days, and an Essence Vessel carried inside keeps its essence viable indefinitely.",
+   "value": 500,
+   "recipe": {
+    "components": [
+     {
+      "m": "backpack",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "nautilus-shell",
+       "stone-golem-lethargy-stone",
+       "gynosphinx-tear"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Time-slowing keystone"
+     },
+     {
+      "m": "mummy-embalming-resin",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "quellsalt-brine",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "natron",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "alchemists-supplies"
+    ],
+    "station": "enchanting-circle",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "gentle repose"
+    ],
+    "lore": "Tomb-priests' embalming resin and quellsalt stop rot; a nautilus shell, a golem's lethargy stone or a sphinx's tear stops the clock itself inside the pack."
+   }
+  },
+  {
+   "id": "basilisk-hide-shield",
+   "name": "Basilisk-Hide Shield",
+   "cat": "armor",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "armor",
+    "shield",
+    "petrification"
+   ],
+   "effect": "You have advantage on saves against being petrified. Once per long rest, when a creature you can see hits you with a melee attack, you can use your reaction to flash the shield's petrifying eye: it must succeed on a DC 13 Constitution save or be restrained until the end of its next turn.",
+   "value": 510,
+   "recipe": {
+    "components": [
+     {
+      "m": "shield",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "basilisk-eye",
+       "basilisk-essence",
+       "gorgon-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Petrifying keystone"
+     },
+     {
+      "m": "basilisk-scale",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "basilisk-gizzard-stone",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "smiths-tools"
+    ],
+    "station": "workshop",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "hold person"
+    ],
+    "lore": "Basilisk scale laid over the boss resists the creature's own gaze, and the eye set at its centre still remembers how to turn flesh stiff for a heartbeat."
+   }
+  },
+  {
+   "id": "troll-hide-armour",
+   "name": "Troll-Hide Armour",
+   "cat": "armor",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "armor",
+    "medium-armor",
+    "regeneration"
+   ],
+   "effect": "Hide armour that keeps healing itself, and you. When you spend Hit Dice during a short rest, you regain 1 extra hit point per die. Once per long rest, as a bonus action while you have half your hit points or fewer, you can regain 2d6 + 2 hit points, unless you took acid or fire damage since your last turn.",
+   "value": 450,
+   "recipe": {
+    "components": [
+     {
+      "m": "hide-armor",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "troll-blood",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "troll-leather",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "knotwood-bracket",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "tannery",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "cure wounds"
+    ],
+    "lore": "Troll leather still knits itself; soaked in troll blood and a steeped knotwood bracket, it passes that stubbornness on to the body inside. Swamp hunters warn: it hates fire as much as the troll did."
+   }
+  },
+  {
+   "id": "hell-hound-gauntlets",
+   "name": "Hell-Hound Gauntlets",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "fire",
+    "infernal"
+   ],
+   "effect": "Blackened gauntlets that smoulder when you clench your fists. You can make them shed dim light in a 10-foot radius, and once per short rest when you hit with a melee attack you can add 2d6 fire damage.",
+   "value": 500,
+   "recipe": {
+    "components": [
+     {
+      "m": "gauntlets",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "hell-hound-fire-gland",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "hell-hound-pelt",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "brimstone",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "forge",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "burning hands"
+    ],
+    "lore": "A hell hound's fire gland keeps flaring whenever it senses violence; stitched into the knuckles with its own pelt and packed with brimstone, it flares with your punches instead of its bite."
+   }
+  },
+  {
+   "id": "winter-wolf-mantle",
+   "name": "Winter-Wolf Mantle",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "cold",
+    "stealth"
+   ],
+   "effect": "You are unharmed by extreme cold and have advantage on Dexterity (Stealth) checks in snow or ice. Once per long rest, as an action, you can exhale a 15-foot cone of frost: DC 13 Constitution save, 3d8 cold damage on a failure or half on a success.",
+   "value": 500,
+   "recipe": {
+    "components": [
+     {
+      "m": "cloak",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "winter-wolf-frost-gland",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "winter-wolf-pelt",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "frost-lichen",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "weavers-tools"
+    ],
+    "station": "tannery",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "ray of frost",
+     "fog cloud"
+    ],
+    "lore": "The mantle is the wolf's own pelt, its frost gland sewn into the throat so that it rests over yours. Frost lichen rubbed into the fur keeps it from thawing and shedding."
+   }
+  },
+  {
+   "id": "phase-spider-shroud",
+   "name": "Phase-Spider Shroud",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "teleport",
+    "planar"
+   ],
+   "effect": "A grey cowl that seems slightly out of focus. You have advantage on checks and saves to escape webs and restraints, and once per long rest you can cast misty step as a bonus action.",
+   "value": 500,
+   "recipe": {
+    "components": [
+     {
+      "m": "cloak",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "phase-spider-silk",
+      "q": 2,
+      "role": "keystone"
+     },
+     {
+      "m": "phase-spider-eye",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "oneOf": [
+       "color-pool-glass",
+       "blink-dog-fang",
+       "faerie-ring-mushroom"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Plane-slipping reagent (colour-pool glass, blink dog fang or faerie-ring mushroom)"
+     },
+     {
+      "m": "spider-silk-thread",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "loom",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "misty step"
+    ],
+    "lore": "Phase-spider silk is spun half on the Ethereal Plane; woven around a chip of colour-pool glass from the Astral, it keeps one foot out of the world for its wearer too. Crafters who never reach the Astral Sea use a blink dog's fang or a faerie-ring mushroom instead; both know how to be somewhere else."
+   }
+  },
+  {
+   "id": "mummy-wrap-bandages",
+   "name": "Mummy-Wrap Bandages",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "healing",
+    "necrotic",
+    "undeath"
+   ],
+   "effect": "A roll of resin-stiff linen with 3 charges (regains 1d3 at dawn). As an action, spend a charge to bind a creature: it regains 2d4 + 2 hit points, becomes stable if dying, and has resistance to necrotic damage for 1 hour. Those healed this way smell of tomb spice for a day.",
+   "value": 300,
+   "recipe": {
+    "components": [
+     {
+      "m": "linen-cloth",
+      "q": 3,
+      "role": "base"
+     },
+     {
+      "m": "mummy-wrappings",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "myrrh",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "natron",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "weavers-tools",
+     "alchemists-supplies"
+    ],
+    "station": "shrine",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "spare the dying",
+     "cure wounds"
+    ],
+    "lore": "A mummy's wrappings are soaked in rites meant to stop a body from dying further; unravelled, purified with myrrh and re-rolled with fresh linen, they do the same for the living."
+   }
+  },
+  {
+   "id": "medusa-eye-monocle",
+   "name": "Medusa-Eye Monocle",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "jewelry",
+    "petrification",
+    "senses"
+   ],
+   "effect": "A gold-rimmed lens of polished medusa eye. You have advantage on saves against gaze effects and petrification. Once per long rest, as an action, you can fix a creature within 30 feet with its stare: DC 13 Constitution save or it is restrained as its limbs stiffen, repeating the save at the end of each of its turns (1 minute).",
+   "value": 500,
+   "recipe": {
+    "components": [
+     {
+      "m": "lens",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "medusa-eye",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "gold-wire",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "medusa-snake-hair",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools",
+     "glassblowers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "hold person"
+    ],
+    "lore": "A medusa's eye only petrifies what it meets; ground into a lens and ringed with snake-hair wire, it lets you meet the gaze of others first."
+   }
+  },
+  {
+   "id": "roc-feather-glider",
+   "name": "Roc-Feather Glider",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "flight",
+    "air"
+   ],
+   "effect": "A feathered cape with arm-loops. While you fall and aren't incapacitated, you descend only 60 feet per round, take no falling damage, and can move up to 2 feet horizontally for every 1 foot you descend.",
+   "value": 470,
+   "recipe": {
+    "components": [
+     {
+      "m": "cloak",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "roc-feather",
+       "pegasus-flight-feather",
+       "wyvern-wing-membrane",
+       "manticore-wing"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Great flight feather or wing"
+     },
+     {
+      "m": "feather-fern",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "hippogriff-feather",
+      "q": 4,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "weavers-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "workshop",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "feather fall"
+    ],
+    "lore": "One great primary from a roc (or a pegasus, if you can bear it) gives the lift; hippogriff feathers trim the edges and mountain feather-fern keeps the whole thing light as spring air."
+   }
+  },
+  {
+   "id": "labyrinth-horn-helm",
+   "name": "Labyrinth-Horn Helm",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "strength",
+    "senses"
+   ],
+   "effect": "You always remember every path you have walked and can't become lost by nonmagical means. Once per short rest, if you move at least 10 feet straight toward a creature and then hit it with a melee attack, it takes an extra 2d6 piercing damage and must succeed on a DC 13 Strength save or be knocked prone.",
+   "value": 500,
+   "recipe": {
+    "components": [
+     {
+      "m": "helm",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "minotaur-horn",
+      "q": 2,
+      "role": "keystone"
+     },
+     {
+      "m": "minotaur-hide",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "lodestone",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "forge",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "longstrider"
+    ],
+    "lore": "Minotaurs never lose their way in a maze; a lodestone set between the horns points the wearer home, and the horns themselves still want to gore."
+   }
+  },
+  {
+   "id": "doppelganger-skin-mask",
+   "name": "Doppelganger-Skin Mask",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "shapechange",
+    "illusion"
+   ],
+   "effect": "A limp, featureless mask that moulds to your face. Once per long rest you can cast disguise self (lasting 8 hours). If you touched the creature you imitate within the last day, you also have advantage on Charisma (Deception) checks to pass as them.",
+   "value": 470,
+   "recipe": {
+    "components": [
+     {
+      "m": "costume",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "doppelganger-skin",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "mistcap",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "fine-silk-scraps",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "painters-supplies"
+    ],
+    "station": "workshop",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "disguise self"
+    ],
+    "lore": "Doppelganger skin still wants to be someone else; mistcap spores keep it soft, and silk backing stops it clinging too tightly to its new face."
+   }
+  },
+  {
+   "id": "wraithlight-lantern",
+   "name": "Wraithlight Lantern",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "gear",
+    "light",
+    "undeath"
+   ],
+   "effect": "Its cold grey flame burns only while undead or ethereal creatures are within 60 feet, leaning toward the nearest. Within 20 feet of it, creatures on the Ethereal Plane appear as faint silhouettes that you can see (though not necessarily reach).",
+   "value": 490,
+   "recipe": {
+    "components": [
+     {
+      "m": "lantern",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "ghost-ectoplasm",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "grave-lily",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "candle",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "glassblowers-tools",
+     "tinkers-tools"
+    ],
+    "station": "shrine",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "detect evil and good"
+    ],
+    "lore": "A ghost's ectoplasm is the residue of a spirit half in the Ethereal; burned with grave-lily wax, its flame bows toward others of its kind."
+   }
+  },
+  {
+   "id": "wraith-ectoplasm-cloak",
+   "name": "Wraith-Ectoplasm Cloak",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "planar",
+    "stealth"
+   ],
+   "effect": "Once per long rest, as a bonus action, you become partly incorporeal until the end of your turn: you can move through creatures and objects as difficult terrain. If you end your turn inside something, you are shunted to the nearest free space and take 1d10 force damage.",
+   "value": 500,
+   "recipe": {
+    "components": [
+     {
+      "m": "cloak",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "wraith-ectoplasm",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "specter-ectoplasm",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "oneOf": [
+       "gloom-moss",
+       "shadow-umbral-residue"
+      ],
+      "q": 2,
+      "role": "supporting",
+      "label": "Shadow-stuff"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "shrine",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "misty step"
+    ],
+    "lore": "Wraiths drift through walls because their substance barely agrees with the world; soaked into gloom-moss felt, a little of that disagreement becomes yours for a heartbeat."
+   }
+  },
+  {
+   "id": "tyrant-roar-horn",
+   "name": "Tyrant's Roar Horn",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "instrument",
+    "fear",
+    "sound"
+   ],
+   "effect": "A war-horn resonating with an apex predator's roar. Once per long rest, as an action, blow it: each creature of your choice within 30 feet that can hear it must succeed on a DC 13 Wisdom save or be frightened of you for 1 minute, repeating the save at the end of each of its turns.",
+   "value": 500,
+   "recipe": {
+    "components": [
+     {
+      "m": "horn",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "tyrannosaurus-rex-roar-sac",
+       "killer-whale-echo-melon",
+       "vrock-screech-organ"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Great voice-organ (uncommon+)"
+     },
+     {
+      "m": "lion-mane",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "resonant-crystal",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "tinkers-tools"
+    ],
+    "station": "workshop",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "thunderwave"
+    ],
+    "lore": "The roar sac is stretched across the horn's bell so every blast carries the apex predator's voice; resonant crystal and a lion's mane make it bellow rather than squeak."
+   }
+  },
+  {
+   "id": "salamander-scale-bracers",
+   "name": "Salamander-Scale Bracers",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "fire",
+    "resistance"
+   ],
+   "effect": "You ignore extreme heat and can handle hot coals or molten metal without harm for up to a minute. Once per long rest, when you take fire damage, you can use your reaction to halve it, and your next melee hit before the end of your next turn deals an extra 2d6 fire damage.",
+   "value": 500,
+   "recipe": {
+    "components": [
+     {
+      "m": "bracers",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "salamander-scales",
+      "q": 3,
+      "role": "keystone"
+     },
+     {
+      "m": "magma-glass",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "azer-bronze-flesh",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "forge",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "burning hands"
+    ],
+    "lore": "Salamander scale drinks heat and gives it back; mounted on azer bronze with a magma-glass stud, the bracers do the same for your arms."
+   }
+  },
+  {
+   "id": "xorn-tooth-prospectors-rod",
+   "name": "Xorn-Tooth Prospector's Rod",
+   "cat": "rod",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "rod",
+    "tool",
+    "earth",
+    "senses"
+   ],
+   "effect": "As an action, you learn the direction and rough distance of the largest concentration of precious metal, ore or gemstones within 120 feet (through up to 10 feet of stone). You also have advantage on checks to harvest or gather ores, gems and minerals.",
+   "value": 410,
+   "recipe": {
+    "components": [
+     {
+      "m": "rod-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "xorn-essence",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "xorn-jaw-teeth",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "deep-gem-cluster",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "tinkers-tools",
+     "masons-tools"
+    ],
+    "station": "workshop",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "locate object"
+    ],
+    "lore": "A xorn can smell a gem through a mountain; its teeth, set around a cluster of deep gems, pull toward treasure the way a compass pulls north."
+   }
+  },
+  {
+   "id": "galvanic-heart-starter",
+   "name": "Galvanic Heart-Starter",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "gear",
+    "lightning",
+    "healing"
+   ],
+   "effect": "A pair of copper paddles wired to a flesh golem's core, with 3 charges (regains all at dawn). As an action, touch a creature at 0 hit points and spend a charge: it regains 1d4 + 4 hit points and can stand up without spending movement. A creature can benefit only once per long rest.",
+   "value": 430,
+   "recipe": {
+    "components": [
+     {
+      "m": "copper-wire",
+      "q": 3,
+      "role": "base"
+     },
+     {
+      "m": "flesh-golem-galvanic-core",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "flesh-golem-mismatched-organs",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "copper-ingot",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "tinkers-tools"
+    ],
+    "station": "workshop",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "shocking grasp",
+     "cure wounds"
+    ],
+    "lore": "A flesh golem's galvanic core is what jolted dead meat into walking; copper paddles route that same jolt into a heart that has only just stopped."
+   }
+  },
+  {
+   "id": "couatl-plume-circlet",
+   "name": "Couatl-Plume Circlet",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "jewelry",
+    "telepathy",
+    "celestial"
+   ],
+   "effect": "You can speak telepathically with any creature you can see within 30 feet that knows at least one language. Once per long rest you can cast detect thoughts (save DC 13).",
+   "value": 500,
+   "recipe": {
+    "components": [
+     {
+      "m": "circlet",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "couatl-essence",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "couatl-feather",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "oneOf": [
+       "halo-quartz",
+       "sunstone",
+       "holy-symbol-fragment"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Holy light-stone (halo quartz, sunstone or a holy symbol fragment)"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "shrine",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "detect thoughts"
+    ],
+    "lore": "A couatl speaks mind to mind; its feathers and a chip of halo-quartz from the Upper Planes carry that voice through the brow. A desert sunstone or a shard of a well-used holy symbol carries enough borrowed light to stand in for halo quartz."
+   }
+  },
+  {
+   "id": "nightmare-hoof-horseshoes",
+   "name": "Nightmare-Hoof Horseshoes",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "gear",
+    "speed",
+    "fire"
+   ],
+   "effect": "Four shoes of hoof-horn and iron that leave smoking prints. The shod creature's walking speed increases by 10 feet, and once per long rest it can Dash as a bonus action and ignore difficult terrain until the end of that turn.",
+   "value": 500,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "nightmare-hooves",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "nightmare-mane",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "oneOf": [
+       "avernian-ash",
+       "brimstone"
+      ],
+      "q": 2,
+      "role": "supporting",
+      "label": "Hellish fire reagent (hell-ash or brimstone)"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "longstrider"
+    ],
+    "lore": "Nightmares gallop between planes on hooves of fire; iron forged in ash from the Nine Hells and set with their hoof-horn lets an ordinary horse borrow a few strides of that gallop. Brimstone from a mortal volcano smoulders almost as sullenly as hell-ash."
+   }
+  },
+  {
+   "id": "sharkskin-diving-suit",
+   "name": "Sharkskin Diving Suit",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "swimming",
+    "water"
+   ],
+   "effect": "A sleek, rough-grained bodysuit worn instead of armour. While you wear no armour over it, you gain a swimming speed equal to your walking speed and can smell blood in the water within 300 feet.",
+   "value": 310,
+   "recipe": {
+    "components": [
+     {
+      "m": "clothes-common",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "giant-shark-skin",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "giant-shark-liver-oil",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "bladderwrack",
+      "q": 3,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "weavers-tools"
+    ],
+    "station": "tannery",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "lore": "Sharkskin sheds water like oil sheds rain, and a coat of the shark's own liver oil keeps it supple; bladderwrack seams float the wearer just enough."
+   }
+  },
+  {
+   "id": "lamia-tongue-lozenge",
+   "name": "Lamia-Tongue Lozenge",
+   "cat": "potion",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "potion",
+    "charm",
+    "illusion"
+   ],
+   "effect": "A honey-sweet lozenge that dissolves on the tongue. For 1 hour you have advantage on Charisma (Persuasion) and (Deception) checks, and once during that hour you can cast charm person (save DC 13) without components.",
+   "value": 250,
+   "recipe": {
+    "components": [
+     {
+      "m": "honey",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "lamia-tongue",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "lovers-rose",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "fragrant-flowers",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies",
+     "cooks-utensils"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "spells": [
+     "charm person"
+    ],
+    "yields": 3,
+    "lore": "A lamia's tongue is where its honeyed lies are made; rendered down in rose-water and honey, a sliver of it lends the same sweetness to the eater's voice."
+   }
+  },
+  {
+   "id": "scorpion-stinger-bolts",
+   "name": "Scorpion-Stinger Bolts",
+   "cat": "ammunition",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "ammunition",
+    "crossbow",
+    "poison"
+   ],
+   "effect": "Crossbow bolts tipped with giant scorpion stingers. A creature hit by one must make a DC 13 Constitution saving throw, taking 3d6 poison damage on a failure or half on a success. The tip breaks off on impact.",
+   "value": 160,
+   "recipe": {
+    "components": [
+     {
+      "m": "crossbow-bolts",
+      "q": 5,
+      "role": "base"
+     },
+     {
+      "m": "giant-scorpion-stinger",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "orpiment",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "pitch",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "poisoners-kit"
+    ],
+    "station": "workshop",
+    "dc": 15,
+    "time": "2.5 days",
+    "gp": 25,
+    "level": 3,
+    "yields": 5,
+    "lore": "Each stinger is split into barbed flakes and seated with pitch; a dusting of desert orpiment keeps the venom from drying out in the quiver."
+   }
+  },
+  {
+   "id": "owlbear-pelt-grappler",
+   "name": "Owlbear-Pelt Grappler's Vest",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "strength"
+   ],
+   "effect": "A shaggy, feather-collared vest. You have advantage on Strength (Athletics) checks to grapple and to escape grapples, and a creature you are grappling takes 1d6 bludgeoning damage at the start of each of your turns.",
+   "value": 400,
+   "recipe": {
+    "components": [
+     {
+      "m": "clothes-travelers",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "owlbear-pelt",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "owlbear-claw",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "owlbear-feather",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "tannery",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "enlarge/reduce"
+    ],
+    "lore": "The owlbear's famous hug comes from shoulders built like a bear's; its pelt, still lined with the claw-sinews, squeezes along with you."
+   }
+  },
+  {
+   "id": "stonefather-maul",
+   "name": "Stonefather Maul",
+   "cat": "weapon",
+   "tier": "rare",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "weapon",
+    "hammer",
+    "bludgeon",
+    "earth",
+    "strength",
+    "thunder"
+   ],
+   "effect": "+1 maul whose hits deal an extra 1d6 thunder damage. Once per short rest, when you hit a Large or smaller creature, it must succeed on a DC 15 Strength save or be knocked prone. Once per long rest you can hurl it like a giant's boulder (range 60/240): on a hit it deals 4d10 bludgeoning damage plus its thunder damage and the target must make the same save or be knocked prone; the maul then rolls back to your feet.",
+   "value": 4500,
+   "recipe": {
+    "components": [
+     {
+      "m": "maul",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "stone-giant-heartstone",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "stone-giant-throwing-boulder-shard",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "giantsteel-ingot",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "earth-elemental-tremor-gravel",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "masons-tools"
+    ],
+    "station": "forge",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "thunderwave",
+     "shatter"
+    ],
+    "lore": "Stone giants say every giant is born with a mountain in its chest. Set the heartstone into the hammer-head, lap it with shards of the boulders its owner used to throw, and the maul remembers how to fly and how to shake the ground."
+   }
+  },
+  {
+   "id": "behir-coil-whip",
+   "name": "Behir Coil Whip",
+   "cat": "weapon",
+   "tier": "rare",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "weapon",
+    "lightning",
+    "binding",
+    "storm"
+   ],
+   "effect": "A magic whip of plaited behir hide with a 15-foot reach that deals an extra 1d6 lightning damage on a hit. Once per long rest, when you hit, the lash coils around a Large or smaller target: it is grappled (escape DC 15) and takes 2d10 lightning damage, and 1d10 again at the start of each of its turns while grappled (up to 1 minute).",
+   "value": 4000,
+   "recipe": {
+    "components": [
+     {
+      "m": "whip",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "behir-lightning-gland",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "behir-scale",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "fulgurite",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "stormbloom",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "tannery",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "lightning bolt",
+     "shocking grasp"
+    ],
+    "lore": "Behirs crush prey in their coils and then breathe lightning into them; the whip does both. Fulgurite beads in the braid carry the charge, and stormbloom fibres keep the lash from burning through."
+   }
+  },
+  {
+   "id": "remorhaz-breastplate",
+   "name": "Remorhaz Breastplate",
+   "cat": "armor",
+   "tier": "rare",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "armor",
+    "medium-armor",
+    "fire",
+    "cold"
+   ],
+   "effect": "You have resistance to cold damage and suffer no harm from extreme cold. Once per long rest, as a bonus action, you can make the plates glow white-hot for 1 minute: any creature that touches you or hits you with a melee attack takes 2d6 fire damage, and you shed bright light for 10 feet.",
+   "value": 5000,
+   "recipe": {
+    "components": [
+     {
+      "m": "breastplate",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "remorhaz-heat-gland",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "remorhaz-carapace",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "cinder-salt",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "blue-ice",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "heat metal"
+    ],
+    "lore": "Remorhaz carapace is armour built to hold fire in and keep ice out. The heat gland is seated over the sternum, quenched in blue glacier ice so it only burns when asked."
+   }
+  },
+  {
+   "id": "hydra-heart-amulet",
+   "name": "Hydra-Heart Amulet",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "jewelry",
+    "regeneration",
+    "healing"
+   ],
+   "effect": "Once per long rest, when you are reduced to 0 hit points but not killed outright, you drop to 1 hit point instead and regain 5 hit points at the start of each of your next three turns. The regrowth stops early if you take fire damage.",
+   "value": 4500,
+   "recipe": {
+    "components": [
+     {
+      "m": "amulet-setting",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "hydra-heart",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "hydra-scale",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "bloodwood-sap",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "bloodstone",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "cure wounds",
+     "revivify"
+    ],
+    "lore": "A hydra keeps growing heads until you burn the stumps; its heart, shrunk in bloodwood sap and caged in a bloodstone setting, lends that refusal to die, and the same weakness."
+   }
+  },
+  {
+   "id": "unicorn-horn-chalice",
+   "name": "Unicorn-Horn Chalice",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "container",
+    "healing",
+    "celestial"
+   ],
+   "effect": "Any liquid poured into this silver cup is purified of poison and disease. Once per dawn, clean water left in it for a minute becomes three draughts that each restore 2d4 + 2 hit points and end one disease or the poisoned condition. Undrunk draughts turn back into water at the next dawn.",
+   "value": 4500,
+   "recipe": {
+    "components": [
+     {
+      "m": "bowl",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "unicorn-horn",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "silver-ingot",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "holy-spring-water",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "unicorn-mane",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools",
+     "smiths-tools"
+    ],
+    "station": "shrine",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "lesser restoration",
+     "cure wounds"
+    ],
+    "lore": "A unicorn's horn cleanses any water it dips into; shaved into the base of a silver cup and blessed with holy spring water, it keeps doing so for whoever drinks from it."
+   }
+  },
+  {
+   "id": "cloaker-hide-mantle",
+   "name": "Cloaker-Hide Mantle",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "shadow",
+    "stealth",
+    "fear"
+   ],
+   "effect": "You have advantage on Dexterity (Stealth) checks in dim light or darkness. Once per long rest you can use an action to either moan (each creature within 60 feet that can hear you makes a DC 15 Wisdom save or is frightened until the end of your next turn) or cast mirror image.",
+   "value": 4300,
+   "recipe": {
+    "components": [
+     {
+      "m": "cloak",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "cloaker-hide",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "cloaker-tail-spine",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "umbral-crystal",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "gloom-moss",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "weavers-tools"
+    ],
+    "station": "tannery",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "mirror image",
+     "darkness"
+    ],
+    "lore": "Cloakers already look like cloaks; the trick is getting one to stop trying to eat the wearer. An umbral crystal clasp, charged in the Shadowfell, keeps the hide sleepy and obedient."
+   }
+  },
+  {
+   "id": "aboleth-mucus-hood",
+   "name": "Aboleth-Mucus Hood",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "breathing",
+    "swimming",
+    "telepathy"
+   ],
+   "effect": "A slick, translucent hood. You can breathe water and air, gain a swimming speed of 40 feet, and can communicate telepathically with any creature within 60 feet that has a swimming speed. Drawback: out of water, you must douse the hood each hour or take 1d6 psychic damage as it dries.",
+   "value": 4500,
+   "recipe": {
+    "components": [
+     {
+      "m": "cap",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "aboleth-mucus",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "aboleth-hide",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "gillweed-kelp",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "abyssal-driftkelp",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "weavers-tools",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "water breathing",
+     "detect thoughts"
+    ],
+    "lore": "Aboleth mucus turns a surface-dweller's lungs to gills; held in a hood of the aboleth's own hide and kept alive with deep-sea kelp, it works without the enslaving thoughts that usually come with it, mostly."
+   }
+  },
+  {
+   "id": "frostbraid-girdle",
+   "name": "Frostbraid Girdle",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "cold",
+    "size",
+    "strength"
+   ],
+   "effect": "A belt woven from a frost giant's braid. You have resistance to cold damage. Once per long rest, as a bonus action, you can swell to Large size for 1 minute, gaining advantage on Strength checks and saves and dealing an extra 1d6 cold damage with weapon hits.",
+   "value": 4500,
+   "recipe": {
+    "components": [
+     {
+      "m": "belt",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "frost-giant-essence",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "frost-giant-braid",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "frost-giant-glacial-ice-shard",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "mammoth-wool",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "loom",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "enlarge/reduce"
+    ],
+    "lore": "Frost giants braid their hair on the day they come of age; tighten that braid around a lesser waist with a breath of its owner's essence and the wearer grows toward the giant it came from."
+   }
+  },
+  {
+   "id": "cloudstep-boots",
+   "name": "Cloudstep Boots",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "flight",
+    "air"
+   ],
+   "effect": "You can stand and walk on clouds, fog and mist as if they were solid ground. The boots have 3 charges (regain 1d3 at dawn): as a bonus action, spend one to walk on air for 1 minute, climbing or descending up to 10 feet per round as part of your movement.",
+   "value": 4000,
+   "recipe": {
+    "components": [
+     {
+      "m": "boots",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "cloud-giant-cloudstuff",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "solid-cloud",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "earthmote-stone",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "hippogriff-feather",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "cobblers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "levitate",
+     "feather fall"
+    ],
+    "lore": "Cloud giants build castles on cloudstuff; lined with it and weighted with a floating earthmote, a pair of boots treats the sky as a very soft floor."
+   }
+  },
+  {
+   "id": "wyvern-venom-stiletto",
+   "name": "Wyvern-Venom Stiletto",
+   "cat": "weapon",
+   "tier": "rare",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "weapon",
+    "dagger",
+    "poison"
+   ],
+   "effect": "+1 dagger with a hollow channel. It holds 3 charges (regains 1d3 at dawn). When you hit a creature, you can spend a charge: it makes a DC 15 Constitution save, taking 4d6 poison damage on a failure or half as much on a success.",
+   "value": 3500,
+   "recipe": {
+    "components": [
+     {
+      "m": "dagger",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "wyvern-venom-sac",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "wyvern-stinger",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "deathcap-toadstool",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "poisoners-kit"
+    ],
+    "station": "forge",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "protection from poison"
+    ],
+    "lore": "A wyvern's tail carries a sac that refills itself; seated in the stiletto's hilt and cut with deathcap to keep it from clotting, it pumps a dose through the blade's channel on command."
+   }
+  },
+  {
+   "id": "hellbound-chain",
+   "name": "Hellbound Chain",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "gear",
+    "binding",
+    "infernal"
+   ],
+   "effect": "A 20-foot chain of barbed, rust-red links. Once per long rest, as an action, it lashes at a creature within 20 feet: DC 15 Dexterity save or it is restrained and takes 2d6 slashing damage at the start of each of its turns (escape DC 15; the chain has AC 18, 20 hp). It lasts 1 minute or until you let go.",
+   "value": 4000,
+   "recipe": {
+    "components": [
+     {
+      "m": "chain",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "chain-devil-chains",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "infernal-iron-ore",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "avernian-ash",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "hold person"
+    ],
+    "lore": "Chain devils' chains obey whoever carries the will to bind; reforged with infernal iron in the ash of the Nine Hells, they learn a new master's voice, and never quite stop wanting blood."
+   }
+  },
+  {
+   "id": "draconic-breath-torc",
+   "name": "Draconic Breath Torc",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "jewelry",
+    "dragon",
+    "breathing"
+   ],
+   "effect": "A torc whose dragon-gland keystone sets its damage type (fire, lightning or cold). It has 3 charges (regains 1d3 at dawn). As an action, spend one to exhale a 15-foot cone (or a 30-foot line for lightning): DC 15 Dexterity save, 4d6 damage of the torc's type, half on a success. You also have resistance to that damage type.",
+   "value": 4500,
+   "recipe": {
+    "components": [
+     {
+      "m": "necklace",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "young-red-dragon-breath-gland",
+       "young-blue-dragon-breath-gland",
+       "young-silver-dragon-breath-gland",
+       "young-bronze-dragon-breath-gland"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Young dragon breath gland"
+     },
+     {
+      "m": "gold-wire",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "dragons-blood-resin",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools",
+     "alchemists-supplies"
+    ],
+    "station": "jewelers-bench",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "burning hands",
+     "protection from energy"
+    ],
+    "lore": "A young dragon's breath gland keeps its charge for years if sealed in dragon's-blood resin; worn at the throat on gold wire, it waits for the wearer's own breath to set it off."
+   }
+  },
+  {
+   "id": "treant-bark-shield",
+   "name": "Treant-Bark Shield",
+   "cat": "armor",
+   "tier": "rare",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "armor",
+    "shield",
+    "toughness",
+    "plant"
+   ],
+   "effect": "+1 shield. Once per long rest, as a bonus action, you can take root for 1 minute: your speed becomes 0, you can't be moved or knocked prone against your will, and you have resistance to bludgeoning, piercing and slashing damage. While rooted you are vulnerable to fire damage.",
+   "value": 4000,
+   "recipe": {
+    "components": [
+     {
+      "m": "shield",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "treant-bark",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "ironwood",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "awakened-tree-sap",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "carpenters-tools"
+    ],
+    "station": "workshop",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "barkskin"
+    ],
+    "lore": "Treant bark still carries the tree's memory of standing through storms; face it over ironwood and seal it with awakened sap, and it lends that deep-rooted patience to the wielder. It remembers fire, too."
+   }
+  },
+  {
+   "id": "hag-heartstone-amulet",
+   "name": "Hag Heartstone Amulet",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "jewelry",
+    "protection",
+    "disease"
+   ],
+   "effect": "You are immune to disease and can't be possessed. Once per long rest, you can touch a creature to cast lesser restoration on it, or cast protection from evil and good on yourself without concentration (1 minute).",
+   "value": 4500,
+   "recipe": {
+    "components": [
+     {
+      "m": "amulet-setting",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "night-hag-heartstone",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "jet",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "shrine",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "lesser restoration",
+     "protection from evil and good"
+    ],
+    "lore": "Night hags guard their heartstones jealously because the stones ward off sickness and keep the hag's body her own; in a jet-and-silver setting, the stone keeps its virtues without its mistress's malice."
+   }
+  },
+  {
+   "id": "riddlers-eye-lenses",
+   "name": "Riddler's Eye Lenses",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "senses",
+    "knowledge",
+    "truesight"
+   ],
+   "effect": "Goggles with lenses of sphinx eye. You have advantage on Intelligence (Investigation) and Wisdom (Insight) checks. They have 3 charges (regain 1d3 at dawn): spend 1 to cast see invisibility or detect thoughts (DC 15), or 2 to cast clairvoyance.",
+   "value": 4500,
+   "recipe": {
+    "components": [
+     {
+      "m": "goggles",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "gynosphinx-eye",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "gynosphinx-feather",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "seers-leaf",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "glassblowers-tools",
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "see invisibility",
+     "clairvoyance"
+    ],
+    "lore": "A sphinx sees through every lie and every riddle; its eye, ground to lenses and cleaned with seer's-leaf, keeps asking questions for you."
+   }
+  },
+  {
+   "id": "tempest-bottle",
+   "name": "Tempest Bottle",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "container",
+    "air",
+    "storm"
+   ],
+   "effect": "A blue glass flask with a howl inside. It has 3 charges (regains 1d3 at dawn). Unstopper it to cast gust of wind (1 charge) or wind wall (2 charges), save DC 15.",
+   "value": 4000,
+   "recipe": {
+    "components": [
+     {
+      "m": "bottle",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "djinni-tempest-core",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "air-elemental-skygrit",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "stormglass",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "glassblowers-tools"
+    ],
+    "station": "glassworks",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "gust of wind",
+     "wind wall"
+    ],
+    "lore": "A djinni's tempest core is a whirlwind with a mind; a bottle of stormglass holds it, and a pinch of air-elemental grit gives it something to spit."
+   }
+  },
+  {
+   "id": "ward-bond-bracers",
+   "name": "Ward-Bond Bracers",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "protection",
+    "binding"
+   ],
+   "effect": "A matched pair, each attuned by a different creature. While both wearers are within 60 feet of each other, when one is hit by an attack, the other can use its reaction to take half that attack's damage in its place.",
+   "value": 4600,
+   "recipe": {
+    "components": [
+     {
+      "m": "bracers",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "shield-guardian-core",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "shield-guardian-amulet-shard",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "animated-armor-plate",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "tinkers-tools",
+     "smiths-tools"
+    ],
+    "station": "workshop",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "warding bond"
+    ],
+    "requires": "Both future wearers must be present on the final crafting day.",
+    "lore": "A shield guardian's core is built to shoulder its master's wounds; split across two bracers with a shard of its control amulet, it lets two friends share the load instead."
+   }
+  },
+  {
+   "id": "deva-tear-phial",
+   "name": "Deva-Tear Phial",
+   "cat": "potion",
+   "tier": "rare",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "potion",
+    "healing",
+    "radiant",
+    "celestial"
+   ],
+   "effect": "A phial of shining liquid. When you drink it you regain 8d4 + 8 hit points, and one curse, disease, or the blinded, deafened, paralysed or poisoned condition affecting you ends.",
+   "value": 2500,
+   "recipe": {
+    "components": [
+     {
+      "m": "crystal-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "deva-tears",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "kingsbalm-lily",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "holy-spring-water",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "shrine",
+    "dc": 18,
+    "time": "8 days",
+    "gp": 375,
+    "level": 6,
+    "spells": [
+     "cure wounds",
+     "remove curse"
+    ],
+    "lore": "Devas weep only for mortals they could not save; bottled with kingsbalm and holy water, those tears save the next one."
+   }
+  },
+  {
+   "id": "oni-horn-mask",
+   "name": "Oni-Horn Mask",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "invisibility",
+    "shapechange",
+    "fiendish"
+   ],
+   "effect": "A lacquered demon-mask. Once per long rest each, you can cast invisibility on yourself and alter self. While wearing it, you regain 5 extra hit points whenever you spend Hit Dice during a short rest.",
+   "value": 4000,
+   "recipe": {
+    "components": [
+     {
+      "m": "costume",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "oni-horn",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "oni-blood",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "dye-red",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "feywood",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "painters-supplies"
+    ],
+    "station": "workshop",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "invisibility",
+     "alter self"
+    ],
+    "lore": "An oni hides its horns when it wants to, and grows back what you cut off; its horn carved into a feywood mask and lacquered with its blood lends both tricks."
+   }
+  },
+  {
+   "id": "kraken-ink-quill",
+   "name": "Kraken-Ink Quill",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": "by a spellcaster",
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "focus",
+    "shadow",
+    "water",
+    "knowledge"
+   ],
+   "effect": "A black-barbed quill that never runs dry. Spell scrolls you scribe with it take half the usual time and cost, and you can make any writing visible only to creatures you name. Once per long rest you can flick ink to cast black tentacles (save DC 17) as a mass of inky arms.",
+   "value": 25000,
+   "recipe": {
+    "components": [
+     {
+      "m": "feather-fletching",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "kraken-ink",
+       "adult-black-dragon-essence",
+       "androsphinx-tear"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Deep-knowledge ink source (kraken ink, adult black dragon essence or an androsphinx tear)"
+     },
+     {
+      "m": "octopus-ink-sac",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "black-pearl",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "sublime-arcane-ink",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies"
+    ],
+    "station": "scriptorium",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "black tentacles",
+     "illusory script"
+    ],
+    "lore": "Kraken ink holds the memory of the crushing deep and a mind older than kingdoms; a quill dipped in it writes secrets that choose their readers, and a spilled drop still grabs. Scribes who cannot reach a kraken steep the quill in an adult black dragon's inky essence or an androsphinx's tear, which remembers everything it has seen."
+   }
+  },
+  {
+   "id": "lich-dust-hourglass",
+   "name": "Lich-Dust Hourglass",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": "by a spellcaster",
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "time",
+    "necrotic",
+    "undeath"
+   ],
+   "effect": "An hourglass of grey dust with 3 charges (regains 1d3 at dawn). As a reaction, spend 1 to force a creature within 60 feet to reroll an attack roll, ability check or saving throw it just made; or as an action spend 2 to cast slow (save DC 17). Each charge spent ages you by a week, and you feel the chill of the grave until your next rest.",
+   "value": 30000,
+   "recipe": {
+    "components": [
+     {
+      "m": "hourglass",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "lich-dust",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "lich-finger-bones",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "amber",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "onyx",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "glassblowers-tools",
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "slow",
+     "gentle repose"
+    ],
+    "lore": "Liches cheat time; their dust is the part of them that time never managed to claim. Sealed in amber-stoppered glass, it trickles backwards whenever you ask, and takes its price from your years."
+   }
+  },
+  {
+   "id": "purple-wormhide-armour",
+   "name": "Purple-Wormhide Armour",
+   "cat": "armor",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "armor",
+    "medium-armor",
+    "burrowing",
+    "earth",
+    "poison"
+   ],
+   "effect": "+1 hide armour. You gain a burrowing speed of 15 feet through sand, earth and loose rock (not solid stone), leaving a tunnel behind, and tremorsense out to 30 feet while touching the ground. You also have resistance to poison damage.",
+   "value": 30000,
+   "recipe": {
+    "components": [
+     {
+      "m": "hide-armor",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "purple-worm-essence",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "purple-worm-hide",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "purple-worm-tooth",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "living-stone",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "tannery",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "stone shape",
+     "meld into stone"
+    ],
+    "lore": "Purple-worm hide is armoured against the pressure of the deep earth; bound with the worm's essence and a chunk of living stone from the Plane of Earth, it lets the wearer swim the ground the way the worm did."
+   }
+  },
+  {
+   "id": "wyrmheart-greatsword",
+   "name": "Wyrmheart Greatsword",
+   "cat": "weapon",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "weapon",
+    "sword",
+    "dragon",
+    "fear"
+   ],
+   "effect": "+1 greatsword forged around an adult dragon's heart, which sets its type (fire, lightning or cold). Hits deal an extra 1d8 damage of that type, you have resistance to it, and once per long rest you can breathe a 30-foot cone of it: DC 17 Dexterity save, 8d6 damage, half on a success.",
+   "value": 40000,
+   "recipe": {
+    "components": [
+     {
+      "m": "greatsword",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "adult-red-dragon-heart",
+       "adult-blue-dragon-heart",
+       "adult-white-dragon-heart",
+       "adult-silver-dragon-heart"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Adult dragon heart"
+     },
+     {
+      "any": [
+       "scale",
+       "dragon"
+      ],
+      "q": 3,
+      "role": "supporting",
+      "label": "Dragon scales (rare+)",
+      "min": "rare"
+     },
+     {
+      "m": "adamantine-ingot",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "ruby",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "protection from energy",
+     "fear"
+    ],
+    "lore": "The heart is quenched in the steel still beating; smiths say the blade takes its first breath the moment the heart takes its last. The ruby pommel keeps the flame from turning on the wielder."
+   }
+  },
+  {
+   "id": "sanguine-rapier",
+   "name": "Sanguine Rapier",
+   "cat": "weapon",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "weapon",
+    "sword",
+    "necrotic",
+    "regeneration"
+   ],
+   "effect": "+1 rapier with a fang-shaped guard. Its hits deal an extra 1d6 necrotic damage, and once per turn you regain hit points equal to the necrotic damage dealt, to a maximum of 20 hit points regained this way per long rest. Drawback: while you stand in sunlight the blade's magic (including the +1) is suppressed and you have disadvantage on Constitution saving throws.",
+   "value": 30000,
+   "recipe": {
+    "components": [
+     {
+      "m": "rapier",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "vampire-fang",
+      "q": 2,
+      "role": "keystone"
+     },
+     {
+      "m": "vampire-spawn-blood",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "mourning-salt",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "black-pearl",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "jewelers-tools"
+    ],
+    "station": "forge",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "vampiric touch"
+    ],
+    "lore": "A vampire's fang drinks for its owner; set into a rapier's guard and quenched in spawn-blood and Shadowfell salt, it drinks for the wielder instead, and hates the sun just as much."
+   }
+  },
+  {
+   "id": "stormcallers-pearl",
+   "name": "Stormcaller's Pearl",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "jewelry",
+    "storm",
+    "lightning",
+    "water"
+   ],
+   "effect": "You have resistance to lightning and thunder damage and can breathe water. The pearl has 5 charges (regains 1d4 + 1 at dawn): spend 1 to cast thunderwave at 3rd level, or 3 to cast call lightning (save DC 17) without concentration for its first minute outdoors.",
+   "value": 35000,
+   "recipe": {
+    "components": [
+     {
+      "m": "amulet-setting",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "storm-giant-sea-storm-pearl",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "storm-giant-lightning-veined-hair",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "aquamarine",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "thunderhead-shard",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "call lightning",
+     "water breathing"
+    ],
+    "lore": "Storm giants grow these pearls in their beards during tempests at sea; strung on lightning-veined hair beside a thunderhead shard, one will keep calling the storm for a new keeper."
+   }
+  },
+  {
+   "id": "planetar-gaze-circlet",
+   "name": "Planetar-Gaze Circlet",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "jewelry",
+    "truesight",
+    "radiant",
+    "celestial"
+   ],
+   "effect": "You have truesight out to 30 feet and advantage on saves against illusions. Once per long rest, as a reaction when a creature within 30 feet that you can see casts a spell, you can glare at it: DC 17 Constitution save, 5d10 radiant damage on a failure or half on a success.",
+   "value": 40000,
+   "recipe": {
+    "components": [
+     {
+      "m": "circlet",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "planetar-eye",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "halo-quartz",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "gold-leaf",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "raw-diamond",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "shrine",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "true seeing",
+     "guiding bolt"
+    ],
+    "lore": "A planetar's eye sees every soul as it truly is; set above the brow with a raw diamond and halo-quartz, it never quite forgives what it sees."
+   }
+  },
+  {
+   "id": "golemforged-plate",
+   "name": "Golemforged Plate",
+   "cat": "armor",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "armor",
+    "heavy-armor",
+    "fire",
+    "protection",
+    "antimagic"
+   ],
+   "effect": "+1 plate armour built around an iron golem's core. You have resistance to fire and poison damage and can't be charmed. Once per long rest, as an action, you can vent a 15-foot cube of toxic smoke: DC 17 Constitution save, 6d8 poison damage, half on a success. Your speed is reduced by 5 feet while wearing it.",
+   "value": 40000,
+   "recipe": {
+    "components": [
+     {
+      "m": "plate-armor",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "iron-golem-core",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "iron-golem-plating",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "adamantine-ingot",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "eternal-coal",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "protection from energy",
+     "stoneskin"
+    ],
+    "lore": "An iron golem's core never learned to obey a second master, so it is sealed behind its own plating and fed an eternal coal until it treats the wearer as its body."
+   }
+  },
+  {
+   "id": "rakshasa-hide-coat",
+   "name": "Rakshasa-Hide Coat",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "antimagic",
+    "resistance",
+    "fiendish"
+   ],
+   "effect": "You have advantage on saving throws against spells. Once per long rest, when a spell of 4th level or lower targets only you, you can use your reaction to have it fail against you. Drawback: you register as a fiend to divination magic, and celestials instinctively distrust you.",
+   "value": 35000,
+   "recipe": {
+    "components": [
+     {
+      "m": "clothes-fine",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "rakshasa-hide",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "rakshasa-whiskers",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "nullthorn",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "weavers-tools"
+    ],
+    "station": "tannery",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "counterspell",
+     "dispel magic"
+    ],
+    "lore": "Rakshasas shrug off lesser magic as a birthright; their striped hide, lined with Underdark nullthorn, shrugs it off for the wearer, and keeps a little of the fiend's reek."
+   }
+  },
+  {
+   "id": "tarrasque-aegis",
+   "name": "Tarrasque Aegis",
+   "cat": "armor",
+   "tier": "legendary",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "armor",
+    "shield",
+    "antimagic",
+    "protection"
+   ],
+   "effect": "+3 shield carved from the Tarrasque's carapace. You have advantage on saving throws against spells and magical effects. When a magic missile spell, a line spell, or a spell requiring a ranged attack targets only you, roll a d6: on a 1–5 you are unaffected, and on a 6 the spell rebounds, targeting its caster as if you had cast it.",
+   "value": 120000,
+   "recipe": {
+    "components": [
+     {
+      "m": "shield",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "tarrasque-carapace",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "tarrasque-horn",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "adamantine-ingot",
+      "q": 4,
+      "role": "supporting"
+     },
+     {
+      "m": "earthheart-geode",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "masons-tools"
+    ],
+    "station": "forge",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "globe of invulnerability",
+     "antimagic field"
+    ],
+    "lore": "The Tarrasque's shell turns aside spells the way a cliff turns aside rain. It takes a whole guild of smiths to cut one plate; an earthheart geode binds it so it forgets it was ever part of something alive."
+   }
+  },
+  {
+   "id": "soulbound-phylactery",
+   "name": "Soulbound Phylactery",
+   "cat": "wondrous",
+   "tier": "legendary",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "jewelry",
+    "undeath",
+    "death",
+    "necrotic"
+   ],
+   "effect": "A locket that anchors your soul. If you die while attuned and the locket is intact and on the same plane, your soul waits inside; after 1d10 days your body re-forms within 5 feet of it with full hit points. The locket then goes cold for a year and a day, and each return permanently reduces your hit point maximum by 1d4.",
+   "value": 150000,
+   "recipe": {
+    "components": [
+     {
+      "m": "medallion",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "lich-phylactery-shard",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "dusk-pearl",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "onyx",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "primordial-arcane-ink",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools",
+     "calligraphers-supplies"
+    ],
+    "station": "enchanting-circle",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "clone",
+     "magic jar"
+    ],
+    "requires": "The wearer-to-be must place a drop of their blood in the locket on the final day.",
+    "lore": "A shard of a lich's phylactery still knows how to hold a soul; bound in onyx with a Shadowfell dusk-pearl, it will hold yours. Every crafter who makes one swears they will never wear it."
+   }
+  },
+  {
+   "id": "dread-crown-of-the-wyrm",
+   "name": "Dread Crown of the Wyrm",
+   "cat": "wondrous",
+   "tier": "legendary",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "jewelry",
+    "fear",
+    "domination",
+    "fire",
+    "dragon"
+   ],
+   "effect": "A spiked crown of ancient-dragon horn. Your Charisma score increases by 2, to a maximum of 22, and you have resistance to fire damage. Once per short rest, as an action, you can unleash a dragon's terror: each creature of your choice within 120 feet that can see you must succeed on a DC 19 Wisdom save or be frightened for 1 minute, repeating the save at the end of each of its turns; a creature that succeeds is immune to this crown for 24 hours.",
+   "value": 110000,
+   "recipe": {
+    "components": [
+     {
+      "m": "circlet",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "ancient-red-dragon-dread-gland",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "ancient-red-dragon-horns",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "gold-ingot",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "star-ruby",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools",
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "fear",
+     "dominate person"
+    ],
+    "lore": "The dread gland is the organ that makes whole kingdoms kneel before an ancient red; worn at the brow within the wyrm's own horns, it makes the wearer the thing others fear."
+   }
+  }
+ ]
+}

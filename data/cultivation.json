@@ -1,0 +1,397 @@
+{
+ "cultivation": [
+  {
+   "m": "chamomile",
+   "site": "plot",
+   "days": 7,
+   "yield": "1d4",
+   "regrows": true,
+   "needs": "Full sun and loose soil. Picked as the flowers open."
+  },
+  {
+   "m": "feverfew",
+   "site": "plot",
+   "days": 7,
+   "yield": "1d4",
+   "regrows": true,
+   "needs": "Any garden bed; it self-seeds happily."
+  },
+  {
+   "m": "yarrow-sprig",
+   "site": "plot",
+   "days": 7,
+   "yield": "1d4",
+   "regrows": true,
+   "needs": "Poor, dry soil suits it best."
+  },
+  {
+   "m": "garlic-bulb",
+   "site": "plot",
+   "days": 14,
+   "yield": "1d4+1",
+   "regrows": false,
+   "needs": "Plant cloves in autumn; lift the bulbs when the leaves yellow."
+  },
+  {
+   "m": "marsh-mallow-root",
+   "site": "plot",
+   "days": 14,
+   "yield": "1d4",
+   "regrows": true,
+   "needs": "A wet corner or a sunken, well-watered bed."
+  },
+  {
+   "m": "bog-myrtle",
+   "site": "plot",
+   "days": 14,
+   "yield": "1d4",
+   "regrows": true,
+   "needs": "Acidic, waterlogged soil. A barrel of peat will do."
+  },
+  {
+   "m": "heather",
+   "site": "plot",
+   "days": 14,
+   "yield": "2d4",
+   "regrows": true,
+   "needs": "Thin, acidic soil and wind. Hates rich compost."
+  },
+  {
+   "m": "woad-leaf",
+   "site": "plot",
+   "days": 14,
+   "yield": "1d6",
+   "regrows": true,
+   "needs": "Any sunny bed. Cut leaves before it flowers."
+  },
+  {
+   "m": "flax-stalk",
+   "site": "plot",
+   "days": 21,
+   "yield": "2d6",
+   "regrows": false,
+   "needs": "Sown thick in spring and pulled whole, root and all."
+  },
+  {
+   "m": "trailberries",
+   "site": "plot",
+   "days": 14,
+   "yield": "1d6",
+   "regrows": true,
+   "needs": "A bramble patch along a fence. Mind the thorns."
+  },
+  {
+   "m": "wakeberry",
+   "site": "plot",
+   "days": 14,
+   "yield": "1d4",
+   "regrows": true,
+   "needs": "A sheltered, sunny wall."
+  },
+  {
+   "m": "aloe-leaf",
+   "site": "greenhouse",
+   "days": 14,
+   "yield": "1d4",
+   "regrows": true,
+   "needs": "Warmth and very little water. It rots in cold, wet beds."
+  },
+  {
+   "m": "gutter-cap",
+   "site": "cellar",
+   "days": 7,
+   "yield": "1d4",
+   "regrows": true,
+   "needs": "Damp straw and darkness. It thrives on neglect."
+  },
+  {
+   "m": "healers-moss",
+   "site": "plot",
+   "days": 14,
+   "yield": "1d4",
+   "regrows": true,
+   "needs": "Shade, damp stone and still air. Grows on a north wall."
+  },
+  {
+   "m": "silverleaf",
+   "site": "plot",
+   "days": 14,
+   "yield": "1d4",
+   "regrows": true,
+   "needs": "Loamy soil and morning dew. Harvest before midday."
+  },
+  {
+   "m": "cleansing-sage",
+   "site": "plot",
+   "days": 14,
+   "yield": "1d4",
+   "regrows": true,
+   "needs": "A dry, sunny bed. Bundle and hang to dry."
+  },
+  {
+   "m": "drowsy-poppy",
+   "site": "plot",
+   "days": 14,
+   "yield": "1d4+1",
+   "regrows": false,
+   "needs": "Sown on disturbed ground. Sleepy bees are a good sign."
+  },
+  {
+   "m": "eyebright",
+   "site": "plot",
+   "days": 14,
+   "yield": "1d3",
+   "regrows": true,
+   "needs": "Grows among grass, feeding on its roots. Sow it into a lawn."
+  },
+  {
+   "m": "wolfsbane",
+   "site": "plot",
+   "days": 21,
+   "yield": "1d4",
+   "regrows": true,
+   "needs": "Cool, shaded soil. Gloves when handling; it is poison."
+  },
+  {
+   "m": "oxheart-tuber",
+   "site": "plot",
+   "days": 21,
+   "yield": "1d4+1",
+   "regrows": false,
+   "needs": "Deep-dug soil and plenty of manure."
+  },
+  {
+   "m": "belladonna",
+   "site": "plot",
+   "days": 21,
+   "yield": "1d3",
+   "regrows": true,
+   "needs": "Chalky shade. Keep it well away from anything edible."
+  },
+  {
+   "m": "bellshade",
+   "site": "plot",
+   "days": 21,
+   "yield": "1d3",
+   "regrows": true,
+   "needs": "A boggy, shaded bed. The bells ring faintly at dusk when ripe."
+  },
+  {
+   "m": "ashlily",
+   "site": "greenhouse",
+   "days": 21,
+   "yield": "1d3",
+   "regrows": true,
+   "needs": "Needs real heat: a hotbed over a smithy or a brazier-warmed glasshouse."
+  },
+  {
+   "m": "snowcap-berry",
+   "site": "greenhouse",
+   "days": 21,
+   "yield": "1d4",
+   "regrows": true,
+   "needs": "Needs frost to ripen: an ice-packed cold frame or a winter bed."
+  },
+  {
+   "m": "glowcap",
+   "site": "cellar",
+   "days": 14,
+   "yield": "1d6",
+   "regrows": true,
+   "needs": "Total darkness and rotting logs. Lights the cellar faintly blue."
+  },
+  {
+   "m": "cave-truffle",
+   "site": "cellar",
+   "days": 21,
+   "yield": "1d3",
+   "regrows": true,
+   "needs": "Buried in dark, chalky soil around an old root."
+  },
+  {
+   "m": "dreamcap",
+   "site": "cellar",
+   "days": 14,
+   "yield": "1d3",
+   "regrows": true,
+   "needs": "Damp darkness. Those who sleep in the cellar have vivid dreams."
+  },
+  {
+   "m": "gloomsight-fungus",
+   "site": "cellar",
+   "days": 21,
+   "yield": "1d3",
+   "regrows": true,
+   "needs": "Needs absolute darkness. A single candle ruins the bed."
+  },
+  {
+   "m": "mistcap",
+   "site": "cellar",
+   "days": 14,
+   "yield": "1d3",
+   "regrows": true,
+   "needs": "Constant damp: a dripping cellar or a covered well."
+  },
+  {
+   "m": "tomb-mold",
+   "site": "cellar",
+   "days": 21,
+   "yield": "1d2",
+   "regrows": true,
+   "needs": "Grave soil in a sealed crypt or ossuary. The neighbours will talk."
+  },
+  {
+   "m": "mendwort",
+   "site": "greenhouse",
+   "days": 30,
+   "yield": "1d2",
+   "regrows": true,
+   "needs": "Warm, humid glass and daily watering."
+  },
+  {
+   "m": "quickthorn-berry",
+   "site": "greenhouse",
+   "days": 30,
+   "yield": "1d3",
+   "regrows": true,
+   "needs": "Pruned hard each week, or it takes over the glasshouse."
+  },
+  {
+   "m": "lovers-rose",
+   "site": "greenhouse",
+   "days": 30,
+   "yield": "1",
+   "regrows": true,
+   "needs": "Must be tended by the same hands every day. It wilts when neglected."
+  },
+  {
+   "m": "wyrmbane-thistle",
+   "site": "greenhouse",
+   "days": 30,
+   "yield": "1",
+   "regrows": true,
+   "needs": "Thin mountain grit and cold nights. Grown under glass in the lowlands."
+  },
+  {
+   "m": "sourbog-pitcher",
+   "site": "greenhouse",
+   "days": 30,
+   "yield": "1d2",
+   "regrows": true,
+   "needs": "A peat pool under glass, fed a dead insect or two each week."
+  },
+  {
+   "m": "mandrake-root",
+   "site": "greenhouse",
+   "days": 60,
+   "yield": "1d3+1",
+   "regrows": false,
+   "needs": "Deep, rich soil. Pulling it screams: everyone within 30 ft who can hear makes a DC 13 Con save or is stunned for 1 minute. Stop your ears."
+  },
+  {
+   "m": "widows-hood",
+   "site": "cellar",
+   "days": 30,
+   "yield": "1d2",
+   "regrows": true,
+   "needs": "A dark, warm cellar on a bed of dung."
+  },
+  {
+   "m": "ravings-cap",
+   "site": "cellar",
+   "days": 30,
+   "yield": "1",
+   "regrows": true,
+   "needs": "Absolute darkness and silence. Tenders hear whispering."
+  },
+  {
+   "m": "spidergrip-moss",
+   "site": "cellar",
+   "days": 30,
+   "yield": "1d2",
+   "regrows": true,
+   "needs": "Damp stone ceilings. It grows upside down."
+  },
+  {
+   "m": "deathcap-toadstool",
+   "site": "cellar",
+   "days": 30,
+   "yield": "1d2",
+   "regrows": true,
+   "needs": "Under oak roots in a dark cellar. Gloves, always."
+  },
+  {
+   "m": "whisperleaf-vine",
+   "site": "grove",
+   "days": 30,
+   "yield": "1d2",
+   "regrows": true,
+   "needs": "A fey grove or a warded circle. It edges away from careless tenders."
+  },
+  {
+   "m": "faerie-ring-mushroom",
+   "site": "grove",
+   "days": 30,
+   "yield": "1d2",
+   "regrows": true,
+   "needs": "Planted in a true ring on a moonlit night. Stepping inside the ring is unwise."
+  },
+  {
+   "m": "moonpetal",
+   "site": "grove",
+   "days": 30,
+   "yield": "1d2",
+   "regrows": true,
+   "needs": "Opens only under the full moon: harvest on that night or the bloom is lost."
+  },
+  {
+   "m": "dreamfruit",
+   "site": "grove",
+   "days": 60,
+   "yield": "1",
+   "regrows": true,
+   "needs": "A grove with a sleeping guardian. The tree fruits once each season."
+  },
+  {
+   "m": "purity-lotus",
+   "site": "grove",
+   "days": 60,
+   "yield": "1d2+1",
+   "regrows": false,
+   "needs": "A consecrated pool within the grove, kept clean by prayer."
+  },
+  {
+   "m": "sunmend-orchid",
+   "site": "grove",
+   "days": 60,
+   "yield": "1",
+   "regrows": true,
+   "needs": "Needs sunlight blessed by a cleric of a sun god at least once a week."
+  },
+  {
+   "m": "medicinal-herbs",
+   "site": "plot",
+   "days": 7,
+   "yield": "1d4",
+   "regrows": true,
+   "needs": "Any kitchen garden. The first thing every village healer plants."
+  },
+  {
+   "m": "toxic-herbs",
+   "site": "plot",
+   "days": 14,
+   "yield": "1d3",
+   "regrows": true,
+   "needs": "A shaded, fenced corner, well away from the kitchen herbs and the children."
+  },
+  {
+   "m": "fragrant-flowers",
+   "site": "plot",
+   "days": 7,
+   "yield": "1d4",
+   "regrows": true,
+   "needs": "A sunny border. Bees will find it."
+  }
+ ],
+ "_note": "Plants the party can grow in its own beds. site: plot | greenhouse | cellar | grove. Tending DC = the forage DC for that plant."
+}

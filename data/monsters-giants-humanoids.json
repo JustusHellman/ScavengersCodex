@@ -1,0 +1,3656 @@
+{
+ "materials": [
+  {
+   "id": "hill-giant-blood",
+   "name": "Hill Giant Blood",
+   "tier": "uncommon",
+   "tags": [
+    "blood",
+    "strength",
+    "earth",
+    "giant"
+   ],
+   "desc": "Thick, muddy-red blood that smells of turned earth and stale ale. The humblest reagent for potions and belts of giant strength.",
+   "perish": "1 hour",
+   "value": 27,
+   "recipe": null
+  },
+  {
+   "id": "hill-giant-club-iron",
+   "name": "Hill Giant Club-Iron",
+   "tier": "common",
+   "tags": [
+    "metal",
+    "strength",
+    "giant"
+   ],
+   "desc": "Crude iron bands hammered around a tree-trunk club, dented by years of brute swings. Smiths reforge it into heavy bludgeon heads.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "hill-giant-sack-trinkets",
+   "name": "Hill Giant Sack-Hoard",
+   "tier": "mundane",
+   "tags": [
+    "salvage",
+    "giant"
+   ],
+   "desc": "A reeking hide sack stuffed with whatever caught a hill giant's eye: cart wheels, a goat skull, shiny pots, the odd coin.",
+   "perish": "stable",
+   "value": 3,
+   "recipe": null
+  },
+  {
+   "id": "hill-giant-essence",
+   "name": "Hill Giant Essence",
+   "tier": "uncommon",
+   "tags": [
+    "essence",
+    "earth",
+    "strength",
+    "size",
+    "giant"
+   ],
+   "desc": "A slow, heavy glow like a sunset seen through dust. Keystone for charms that lend raw, unrefined might.",
+   "perish": "1 minute",
+   "value": 150,
+   "recipe": null
+  },
+  {
+   "id": "stone-giant-blood",
+   "name": "Stone Giant Blood",
+   "tier": "rare",
+   "tags": [
+    "blood",
+    "earth",
+    "strength",
+    "toughness",
+    "giant"
+   ],
+   "desc": "Grey, gritty blood that settles into a fine sediment of stone dust in the vial. Brewers prize it for draughts of stone giant strength.",
+   "perish": "1 hour",
+   "value": 150,
+   "recipe": null
+  },
+  {
+   "id": "stone-giant-heartstone",
+   "name": "Stone Giant Heartstone",
+   "tier": "rare",
+   "tags": [
+    "stone",
+    "earth",
+    "strength",
+    "toughness",
+    "giant"
+   ],
+   "desc": "A smooth, dream-carved throwing stone each stone giant keeps for life, polished by a lifetime of handling and faintly warm. The ideal core for a magical stone maul or earthen talisman.",
+   "perish": "stable",
+   "value": 750,
+   "recipe": null
+  },
+  {
+   "id": "stone-giant-throwing-boulder-shard",
+   "name": "Stone Giant Boulder Shard",
+   "tier": "uncommon",
+   "tags": [
+    "stone",
+    "earth",
+    "strength",
+    "giant"
+   ],
+   "desc": "A dense wedge of granite split from a hurled boulder, still marked with the giant's grip. Masons shape it into maul heads and sling stones that hit like hammers.",
+   "perish": "stable",
+   "value": 340,
+   "recipe": null
+  },
+  {
+   "id": "stone-giant-essence",
+   "name": "Stone Giant Essence",
+   "tier": "rare",
+   "tags": [
+    "essence",
+    "earth",
+    "strength",
+    "toughness",
+    "petrification",
+    "giant"
+   ],
+   "desc": "A quiet, grey luminescence that feels like the pressure deep under a mountain. Keystone for stoneskin, earth-shaping and giant-strength enchantments.",
+   "perish": "1 minute",
+   "value": 1300,
+   "recipe": null
+  },
+  {
+   "id": "frost-giant-blood",
+   "name": "Frost Giant Blood",
+   "tier": "rare",
+   "tags": [
+    "blood",
+    "cold",
+    "strength",
+    "giant"
+   ],
+   "desc": "Pale blue blood that forms a crust of rime on the inside of the vial and never quite thaws. Used for potions and belts of frost giant strength.",
+   "perish": "1 hour",
+   "value": 450,
+   "recipe": null
+  },
+  {
+   "id": "frost-giant-glacial-ice-shard",
+   "name": "Frost Giant Glacial Ice",
+   "tier": "uncommon",
+   "tags": [
+    "ice",
+    "cold",
+    "toughness",
+    "giant"
+   ],
+   "desc": "Blue-black ice chipped from the glacial plates frost giants lash to their gear. It melts only slowly even in summer and chills any blade set in it.",
+   "perish": "1 week",
+   "value": 340,
+   "recipe": null
+  },
+  {
+   "id": "frost-giant-braid",
+   "name": "Frost Giant Braid",
+   "tier": "uncommon",
+   "tags": [
+    "hair",
+    "cold",
+    "resistance",
+    "giant"
+   ],
+   "desc": "A rope-thick braid of frost-white hair, knotted with iron rings and trophies. Weavers twist it into cords that shrug off killing cold.",
+   "perish": "stable",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "frost-giant-axe-iron",
+   "name": "Frost Giant Rime-Iron",
+   "tier": "uncommon",
+   "tags": [
+    "metal",
+    "cold",
+    "strength",
+    "giant"
+   ],
+   "desc": "Blackened iron from a frost giant's greataxe, forever beaded with frost. Smiths favour it for cold-touched weapons.",
+   "perish": "stable",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "frost-giant-essence",
+   "name": "Frost Giant Essence",
+   "tier": "rare",
+   "tags": [
+    "essence",
+    "cold",
+    "strength",
+    "resistance",
+    "giant"
+   ],
+   "desc": "A howling, ice-blue light that fogs the vessel's glass from within. Keystone for cold resistance and frost-strength enchantments.",
+   "perish": "1 minute",
+   "value": 900,
+   "recipe": null
+  },
+  {
+   "id": "fire-giant-blood",
+   "name": "Fire Giant Blood",
+   "tier": "rare",
+   "tags": [
+    "blood",
+    "fire",
+    "strength",
+    "giant"
+   ],
+   "desc": "Magma-hot blood that glows orange and hisses when it touches steel; it must be caught in stone or crystal. The reagent for potions and belts of fire giant strength.",
+   "perish": "1 hour",
+   "value": 500,
+   "recipe": null
+  },
+  {
+   "id": "fire-giant-forge-ash",
+   "name": "Fire Giant Forge-Ash",
+   "tier": "uncommon",
+   "tags": [
+    "ash",
+    "fire",
+    "toughness",
+    "giant"
+   ],
+   "desc": "Fine black ash scraped from a fire giant's apron and soot-pouch, still warm to the touch. Alchemists fold it into fire-proofing salves and tempering baths.",
+   "perish": "stable",
+   "value": 300,
+   "recipe": null
+  },
+  {
+   "id": "fire-giant-forge-hammer-iron",
+   "name": "Fire Giant Forge-Iron",
+   "tier": "rare",
+   "tags": [
+    "metal",
+    "fire",
+    "strength",
+    "giant"
+   ],
+   "desc": "Dense, ember-red iron from the forge hammer a fire giant carries, soaked in centuries of heat. Fire-aspected weapons forged from it never quite cool.",
+   "perish": "stable",
+   "value": 1800,
+   "recipe": null
+  },
+  {
+   "id": "fire-giant-cinder-braid",
+   "name": "Fire Giant Cinder-Braid",
+   "tier": "uncommon",
+   "tags": [
+    "hair",
+    "fire",
+    "resistance",
+    "giant"
+   ],
+   "desc": "A braid of coarse flame-red hair studded with iron beads, smouldering at the tips without burning away. Woven into fire-resistant cloaks and cords.",
+   "perish": "stable",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "fire-giant-essence",
+   "name": "Fire Giant Essence",
+   "tier": "rare",
+   "tags": [
+    "essence",
+    "fire",
+    "strength",
+    "resistance",
+    "giant"
+   ],
+   "desc": "A roaring forge-glow that makes the vessel too hot to hold bare-handed. Keystone for fire resistance, flaming weapons and fire giant might.",
+   "perish": "1 minute",
+   "value": 1200,
+   "recipe": null
+  },
+  {
+   "id": "cloud-giant-blood",
+   "name": "Cloud Giant Blood",
+   "tier": "very-rare",
+   "tags": [
+    "blood",
+    "air",
+    "strength",
+    "flight",
+    "giant"
+   ],
+   "desc": "Silvery, almost weightless blood that beads upward against the stopper. Few alchemists ever see it; it is the heart of potions of cloud giant strength.",
+   "perish": "1 hour",
+   "value": 3000,
+   "recipe": null
+  },
+  {
+   "id": "cloud-giant-cloudstuff",
+   "name": "Cloudstuff",
+   "tier": "rare",
+   "tags": [
+    "air",
+    "flight",
+    "illusion",
+    "giant"
+   ],
+   "desc": "Solid-seeming cloud from a cloud giant's castle-hem, cool and springy as fleece. Weavers bind it into levitating cloth, but it evaporates if left unsealed.",
+   "perish": "1 week",
+   "value": 210,
+   "recipe": null
+  },
+  {
+   "id": "cloud-giant-sky-silver",
+   "name": "Sky-Silver",
+   "tier": "rare",
+   "tags": [
+    "metal",
+    "air",
+    "flight",
+    "giant"
+   ],
+   "desc": "Pale, feather-light silver jewellery worn by cloud giant nobles, so light it drifts when dropped. Jewellers use it for rings and brooches of feather falling and flight.",
+   "perish": "stable",
+   "value": 3500,
+   "recipe": null
+  },
+  {
+   "id": "cloud-giant-essence",
+   "name": "Cloud Giant Essence",
+   "tier": "rare",
+   "tags": [
+    "essence",
+    "air",
+    "flight",
+    "illusion",
+    "giant"
+   ],
+   "desc": "A drifting, pearl-grey mist that rearranges itself into shapes when watched. Keystone for flight, fog and illusion magic.",
+   "perish": "1 minute",
+   "value": 750,
+   "recipe": null
+  },
+  {
+   "id": "storm-giant-blood",
+   "name": "Storm Giant Blood",
+   "tier": "very-rare",
+   "tags": [
+    "blood",
+    "lightning",
+    "strength",
+    "storm",
+    "giant"
+   ],
+   "desc": "Blue-violet blood that crackles with tiny sparks and smells of ozone and brine. The rarest giant blood, sought for potions and belts of storm giant strength.",
+   "perish": "1 hour",
+   "value": 3700,
+   "recipe": null
+  },
+  {
+   "id": "storm-giant-sea-storm-pearl",
+   "name": "Sea-Storm Pearl",
+   "tier": "very-rare",
+   "tags": [
+    "pearl",
+    "lightning",
+    "water",
+    "storm",
+    "giant"
+   ],
+   "desc": "A fist-sized, storm-grey pearl that storm giants wear as a talisman; lightning flickers deep inside it. A keystone for storm-calling and weather-command items.",
+   "perish": "stable",
+   "value": 10000,
+   "recipe": null
+  },
+  {
+   "id": "storm-giant-lightning-veined-hair",
+   "name": "Lightning-Veined Hair",
+   "tier": "rare",
+   "tags": [
+    "hair",
+    "lightning",
+    "storm",
+    "giant"
+   ],
+   "desc": "Long hair with bright veins that spark when brushed. Twisted into cords, it conducts and stores lightning.",
+   "perish": "stable",
+   "value": 3500,
+   "recipe": null
+  },
+  {
+   "id": "storm-giant-essence",
+   "name": "Storm Giant Essence",
+   "tier": "very-rare",
+   "tags": [
+    "essence",
+    "lightning",
+    "thunder",
+    "storm",
+    "strength",
+    "breathing",
+    "giant"
+   ],
+   "desc": "A churning thunderhead in miniature, flashing and rumbling inside the vessel. Keystone for lightning, thunder, water-breathing and control-weather enchantments.",
+   "perish": "1 minute",
+   "value": 7200,
+   "recipe": null
+  },
+  {
+   "id": "ettin-blood",
+   "name": "Ettin Blood",
+   "tier": "uncommon",
+   "tags": [
+    "blood",
+    "strength",
+    "giant"
+   ],
+   "desc": "Dark, clotting blood that separates into two layers in the vial, as if it can't agree with itself. A crude substitute for hill giant blood.",
+   "perish": "1 hour",
+   "value": 27,
+   "recipe": null
+  },
+  {
+   "id": "ettin-wakeful-eye",
+   "name": "Ettin Wakeful Eye",
+   "tier": "uncommon",
+   "tags": [
+    "eye",
+    "senses",
+    "sleep",
+    "giant"
+   ],
+   "desc": "One eye of an ettin's ever-watching head, bloodshot and never quite closed. Alchemists grind it into tonics against sleep and surprise.",
+   "perish": "1 hour",
+   "value": 400,
+   "recipe": null
+  },
+  {
+   "id": "ettin-crude-morningstar-iron",
+   "name": "Ettin Morningstar Iron",
+   "tier": "common",
+   "tags": [
+    "metal",
+    "strength",
+    "giant"
+   ],
+   "desc": "Spiked iron balls from an ettin's twin weapons, crude but massive. Good heavy scrap for smiths.",
+   "perish": "stable",
+   "value": 4,
+   "recipe": null
+  },
+  {
+   "id": "ogre-blood",
+   "name": "Ogre Blood",
+   "tier": "common",
+   "tags": [
+    "blood",
+    "strength",
+    "giant"
+   ],
+   "desc": "Sour, brownish blood with a faint strength-giving kick. Hedge alchemists use it for cheap brawn tonics.",
+   "perish": "1 hour",
+   "value": 34,
+   "recipe": null
+  },
+  {
+   "id": "ogre-greatclub-knot",
+   "name": "Ogre Greatclub Knot",
+   "tier": "mundane",
+   "tags": [
+    "wood",
+    "strength",
+    "giant"
+   ],
+   "desc": "The iron-hard, gnarled head of an ogre's club, stained darker than anyone likes to ask about. Solid stock for mauls and cudgels.",
+   "perish": "stable",
+   "value": 5,
+   "recipe": null
+  },
+  {
+   "id": "ogre-sack-trophies",
+   "name": "Ogre Trophy Sack",
+   "tier": "mundane",
+   "tags": [
+    "salvage",
+    "giant"
+   ],
+   "desc": "A greasy sack of stolen oddments: a helm, a few coins, a child's doll, half a ham.",
+   "perish": "stable",
+   "value": 0.3,
+   "recipe": null
+  },
+  {
+   "id": "oni-horn",
+   "name": "Oni Horn",
+   "tier": "rare",
+   "tags": [
+    "horn",
+    "fiendish",
+    "shapechange",
+    "illusion",
+    "giant"
+   ],
+   "desc": "A lacquer-dark horn that shifts subtly in shape if you look away. Carvers turn it into masks and wands of disguise.",
+   "perish": "stable",
+   "value": 1200,
+   "recipe": null
+  },
+  {
+   "id": "oni-blood",
+   "name": "Oni Blood",
+   "tier": "rare",
+   "tags": [
+    "blood",
+    "fiendish",
+    "regeneration",
+    "healing",
+    "giant"
+   ],
+   "desc": "Inky blue blood that crawls back together when spilled. A potent, unwholesome ingredient in regenerative draughts.",
+   "perish": "1 hour",
+   "value": 400,
+   "recipe": null
+  },
+  {
+   "id": "oni-glaive-edge",
+   "name": "Oni Glaive Edge",
+   "tier": "uncommon",
+   "tags": [
+    "metal",
+    "fiendish",
+    "giant"
+   ],
+   "desc": "The curved, wickedly keen blade of an oni's glaive, cold with fiendish menace. Reforged into cruel polearms.",
+   "perish": "stable",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "oni-essence",
+   "name": "Oni Essence",
+   "tier": "rare",
+   "tags": [
+    "essence",
+    "fiendish",
+    "shapechange",
+    "invisibility",
+    "illusion",
+    "giant"
+   ],
+   "desc": "A shifting blue-black smoke that shows a different face every time you look. Keystone for invisibility, disguise and shapechanging magic.",
+   "perish": "1 minute",
+   "value": 1900,
+   "recipe": null
+  },
+  {
+   "id": "troll-blood",
+   "name": "Troll Blood",
+   "tier": "uncommon",
+   "tags": [
+    "blood",
+    "regeneration",
+    "healing",
+    "giant"
+   ],
+   "desc": "Green-black blood that keeps trying to clot into new flesh. The classic base for regenerative salves; it spoils instantly near fire or acid.",
+   "perish": "1 hour",
+   "value": 90,
+   "recipe": null
+  },
+  {
+   "id": "troll-hide",
+   "name": "Troll Hide",
+   "tier": "uncommon",
+   "tags": [
+    "hide",
+    "regeneration",
+    "toughness",
+    "giant"
+   ],
+   "desc": "Rubbery, warty green hide that slowly regrows where it is cut. Tanners must sear the edges or it will seal every stitch shut.",
+   "perish": "1 week",
+   "value": 300,
+   "recipe": null
+  },
+  {
+   "id": "troll-claw",
+   "name": "Troll Claw",
+   "tier": "common",
+   "tags": [
+    "claw",
+    "regeneration",
+    "giant"
+   ],
+   "desc": "A black, hooked claw that keeps growing for weeks after removal. Useful for cheap weapon spikes that repair their own chips.",
+   "perish": "stable",
+   "value": 15,
+   "recipe": null
+  },
+  {
+   "id": "troll-regenerating-heart",
+   "name": "Troll Heart",
+   "tier": "rare",
+   "tags": [
+    "heart",
+    "regeneration",
+    "healing",
+    "giant"
+   ],
+   "desc": "A heart that keeps beating sluggishly in a jar, and will try to grow a new troll if left in the dark. Keystone for regeneration rings and potions of healing.",
+   "perish": "1 week",
+   "value": 750,
+   "recipe": null
+  },
+  {
+   "id": "stone-giant-dream-carving",
+   "name": "Stone Giant Dream-Carving",
+   "tier": "rare",
+   "tags": [
+    "stone",
+    "earth",
+    "knowledge",
+    "sleep",
+    "giant"
+   ],
+   "desc": "A slab of slate carved in a trance, its flowing lines said to record what the giant saw in the waking dream of the surface. Seers use it for divination and dreamwork.",
+   "perish": "stable",
+   "value": 1400,
+   "recipe": null
+  },
+  {
+   "id": "frost-giant-mammoth-fur-cloak",
+   "name": "Frost Giant's Mammoth Cloak",
+   "tier": "common",
+   "tags": [
+    "fur",
+    "cold",
+    "resistance",
+    "giant"
+   ],
+   "desc": "A shaggy cloak of mammoth or yeti fur big enough to roof a hut. Cut down, it makes a dozen warm cloaks.",
+   "perish": "stable",
+   "value": 45,
+   "recipe": null
+  },
+  {
+   "id": "fire-giant-obsidian-blade-shard",
+   "name": "Fire Giant Blade Shard",
+   "tier": "uncommon",
+   "tags": [
+    "metal",
+    "fire",
+    "giant"
+   ],
+   "desc": "A slab of a fire giant's greatsword, blackened steel with a glowing temper line. Reforged into flame-touched blades.",
+   "perish": "stable",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "storm-giant-oracle-shell",
+   "name": "Storm Giant Oracle Shell",
+   "tier": "rare",
+   "tags": [
+    "shell",
+    "water",
+    "storm",
+    "knowledge",
+    "giant"
+   ],
+   "desc": "A spiralled sea-shell storm giants listen to for omens; held to the ear, it murmurs of coming weather. A focus for divination and weather-reading.",
+   "perish": "stable",
+   "value": 500,
+   "recipe": null
+  },
+  {
+   "id": "ogre-hide-loincloth",
+   "name": "Ogre Hide Wraps",
+   "tier": "mundane",
+   "tags": [
+    "salvage",
+    "leather",
+    "giant"
+   ],
+   "desc": "Crudely stitched hides of whatever the ogre last ate, cinched with rope. Tough, if you can bear the smell.",
+   "perish": "stable",
+   "value": 0.6,
+   "recipe": null
+  },
+  {
+   "id": "scrap-steel",
+   "name": "Scrap Steel",
+   "tier": "mundane",
+   "tags": [
+    "salvage",
+    "metal"
+   ],
+   "desc": "Notched blades, bent buckles and broken helm bands. Every smith will take it by the pound.",
+   "perish": "stable",
+   "value": 0.45,
+   "recipe": null
+  },
+  {
+   "id": "scrap-leather",
+   "name": "Scrap Leather",
+   "tier": "mundane",
+   "tags": [
+    "salvage",
+    "leather"
+   ],
+   "desc": "Scuffed straps, belts and armour panels still good for patching.",
+   "perish": "stable",
+   "value": 5,
+   "recipe": null
+  },
+  {
+   "id": "tattered-cloth",
+   "name": "Tattered Cloth",
+   "tier": "mundane",
+   "tags": [
+    "salvage",
+    "cloth"
+   ],
+   "desc": "Stained tunics, cloaks and bandages, fit only for rags or padding.",
+   "perish": "stable",
+   "value": 0.1,
+   "recipe": null
+  },
+  {
+   "id": "scrap-chain-links",
+   "name": "Scrap Chain Links",
+   "tier": "mundane",
+   "tags": [
+    "salvage",
+    "metal",
+    "protection"
+   ],
+   "desc": "Handfuls of riveted rings from torn mail, useful for repairs.",
+   "perish": "stable",
+   "value": 1,
+   "recipe": null
+  },
+  {
+   "id": "salvaged-arrowheads",
+   "name": "Salvaged Arrowheads",
+   "tier": "mundane",
+   "tags": [
+    "salvage",
+    "metal"
+   ],
+   "desc": "Iron points pulled from quivers and targets, most still sharp.",
+   "perish": "stable",
+   "value": 0.9,
+   "recipe": null
+  },
+  {
+   "id": "battered-shield-planks",
+   "name": "Battered Shield Planks",
+   "tier": "mundane",
+   "tags": [
+    "salvage",
+    "wood",
+    "protection"
+   ],
+   "desc": "Split boards from a shield, bound with warped iron.",
+   "perish": "stable",
+   "value": 0.5,
+   "recipe": null
+  },
+  {
+   "id": "worn-rope-coil",
+   "name": "Worn Rope Coil",
+   "tier": "mundane",
+   "tags": [
+    "salvage",
+    "thread"
+   ],
+   "desc": "Frayed hemp rope, a few dozen feet of it, still holds a knot.",
+   "perish": "stable",
+   "value": 0.5,
+   "recipe": null
+  },
+  {
+   "id": "coin-purse",
+   "name": "Coin Purse",
+   "tier": "mundane",
+   "tags": [
+    "salvage",
+    "humanoid"
+   ],
+   "desc": "A pouch of mixed coin and small valuables; contents vary by owner (listed value is a rough average).",
+   "perish": "stable",
+   "value": 5,
+   "recipe": null
+  },
+  {
+   "id": "commoners-sundries",
+   "name": "Commoner's Sundries",
+   "tier": "mundane",
+   "tags": [
+    "salvage"
+   ],
+   "desc": "A clay pipe, a whittling knife, a copper or two and a heel of bread.",
+   "perish": "stable",
+   "value": 0.2,
+   "recipe": null
+  },
+  {
+   "id": "guard-watch-insignia",
+   "name": "Watch Insignia",
+   "tier": "mundane",
+   "tags": [
+    "salvage",
+    "metal"
+   ],
+   "desc": "A stamped brass badge of a city watch. Useful for forgers and disguises.",
+   "perish": "stable",
+   "value": 4,
+   "recipe": null
+  },
+  {
+   "id": "thug-knuckle-duster",
+   "name": "Knuckle-Duster",
+   "tier": "mundane",
+   "tags": [
+    "salvage",
+    "metal",
+    "strength"
+   ],
+   "desc": "Brass knuckles worn smooth by use.",
+   "perish": "stable",
+   "value": 2,
+   "recipe": null
+  },
+  {
+   "id": "tribal-bone-spearhead",
+   "name": "Bone Spearhead",
+   "tier": "mundane",
+   "tags": [
+    "salvage",
+    "bone"
+   ],
+   "desc": "A spearhead knapped from beast bone and lashed with sinew.",
+   "perish": "stable",
+   "value": 1,
+   "recipe": null
+  },
+  {
+   "id": "lizardfolk-bone-club",
+   "name": "Lizardfolk Bone Club",
+   "tier": "mundane",
+   "tags": [
+    "salvage",
+    "bone"
+   ],
+   "desc": "A heavy club of fused bone, studded with teeth from lizardfolk kills.",
+   "perish": "stable",
+   "value": 1,
+   "recipe": null
+  },
+  {
+   "id": "grimlock-spiked-bone-club",
+   "name": "Grimlock Spiked Club",
+   "tier": "mundane",
+   "tags": [
+    "salvage",
+    "bone",
+    "stone"
+   ],
+   "desc": "A club of bone set with jagged stone spikes, shaped entirely by touch.",
+   "perish": "stable",
+   "value": 0.3,
+   "recipe": null
+  },
+  {
+   "id": "goblin-scrap-trinkets",
+   "name": "Goblin Scrap-Trinkets",
+   "tier": "mundane",
+   "tags": [
+    "salvage",
+    "luck"
+   ],
+   "desc": "Shiny junk: bottle caps, a cracked mirror, a lucky rat skull on a string.",
+   "perish": "stable",
+   "value": 1,
+   "recipe": null
+  },
+  {
+   "id": "holy-symbol-fragment",
+   "name": "Holy Symbol Fragment",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "relic",
+    "radiant",
+    "blessing"
+   ],
+   "desc": "A worn amulet or broken emblem of a god, still faintly warm with devotion. Used as a focus in blessing and warding crafts.",
+   "perish": "stable",
+   "value": 45,
+   "recipe": null
+  },
+  {
+   "id": "acolyte-prayer-beads",
+   "name": "Acolyte's Prayer Beads",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "relic",
+    "blessing"
+   ],
+   "desc": "A string of wooden beads rubbed smooth by countless prayers.",
+   "perish": "stable",
+   "value": 11,
+   "recipe": null
+  },
+  {
+   "id": "priest-blessed-holy-water",
+   "name": "Blessed Holy Water",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "liquid",
+    "radiant",
+    "blessing"
+   ],
+   "desc": "A flask of water consecrated by a priest, cool and clear. A binding agent for holy crafts.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "priest-reliquary-relic",
+   "name": "Reliquary Relic",
+   "tier": "uncommon",
+   "tags": [
+    "salvage",
+    "relic",
+    "radiant",
+    "healing"
+   ],
+   "desc": "A saint's knucklebone or scrap of vestment sealed in a silver case, humming with quiet grace. A strong focus for healing and protection items.",
+   "perish": "stable",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "spellbook-pages",
+   "name": "Spellbook Pages",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "ink",
+    "arcane",
+    "knowledge"
+   ],
+   "desc": "Loose pages of arcane notation, some still legible. Scribes mine them for inks and formulae.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "arcane-focus-shard",
+   "name": "Arcane Focus Shard",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "crystal",
+    "arcane"
+   ],
+   "desc": "A chip of a crystal orb or wand tip that still gathers a trickle of power.",
+   "perish": "stable",
+   "value": 34,
+   "recipe": null
+  },
+  {
+   "id": "mage-spell-component-pouch",
+   "name": "Spell Component Pouch",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "reagent",
+    "arcane"
+   ],
+   "desc": "A belt pouch of compartments stuffed with bat guano, sulfur, powdered iron and stranger things.",
+   "perish": "stable",
+   "value": 38,
+   "recipe": null
+  },
+  {
+   "id": "mage-spellbook-folio",
+   "name": "Mage's Spellbook Folio",
+   "tier": "uncommon",
+   "tags": [
+    "salvage",
+    "ink",
+    "arcane",
+    "knowledge"
+   ],
+   "desc": "A bound section of a working wizard's spellbook, with several mid-level spells intact.",
+   "perish": "stable",
+   "value": 120,
+   "recipe": null
+  },
+  {
+   "id": "archmage-annotated-spellbook-folio",
+   "name": "Archmage's Annotated Folio",
+   "tier": "rare",
+   "tags": [
+    "salvage",
+    "ink",
+    "arcane",
+    "knowledge"
+   ],
+   "desc": "A dense folio covered in margin notes, counter-theories and warded pages. Invaluable to scribes of powerful scrolls and tomes.",
+   "perish": "stable",
+   "value": 3500,
+   "recipe": null
+  },
+  {
+   "id": "archmage-arcane-focus",
+   "name": "Archmage's Focus",
+   "tier": "rare",
+   "tags": [
+    "salvage",
+    "crystal",
+    "arcane",
+    "protection"
+   ],
+   "desc": "A staff-crowning crystal or rune-carved orb, attuned for decades to a master's will. It still wards against hostile magic.",
+   "perish": "stable",
+   "value": 2000,
+   "recipe": null
+  },
+  {
+   "id": "druidic-mistletoe",
+   "name": "Druidic Mistletoe",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "herb",
+    "primal",
+    "healing"
+   ],
+   "desc": "A sprig of mistletoe cut by golden sickle and bound with bark twine. Still green long after cutting.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "druid-living-wood-focus",
+   "name": "Living-Wood Focus",
+   "tier": "uncommon",
+   "tags": [
+    "salvage",
+    "wood",
+    "primal",
+    "growth"
+   ],
+   "desc": "A staff or totem of wood that still puts out leaves in spring. Used for growth and nature-bond items.",
+   "perish": "stable",
+   "value": 80,
+   "recipe": null
+  },
+  {
+   "id": "cult-idol",
+   "name": "Cult Idol",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "relic",
+    "fiendish",
+    "curse"
+   ],
+   "desc": "A crude, disturbing idol of a forbidden power. Unsettling to hold; useful for curses and dark rites.",
+   "perish": "stable",
+   "value": 28,
+   "recipe": null
+  },
+  {
+   "id": "cultist-ritual-dagger",
+   "name": "Ritual Dagger",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "metal",
+    "fiendish"
+   ],
+   "desc": "A black-handled knife etched with sigils and stained from use in rites.",
+   "perish": "stable",
+   "value": 8,
+   "recipe": null
+  },
+  {
+   "id": "cult-fanatic-dark-pact-page",
+   "name": "Dark Pact Page",
+   "tier": "uncommon",
+   "tags": [
+    "salvage",
+    "ink",
+    "fiendish",
+    "curse"
+   ],
+   "desc": "A page of a pact tome written in something that isn't ink, bearing a signature that twitches. Keystone fodder for curses and fiendish scrolls.",
+   "perish": "stable",
+   "value": 100,
+   "recipe": null
+  },
+  {
+   "id": "noble-signet",
+   "name": "Noble Signet",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "metal",
+    "relic",
+    "charm"
+   ],
+   "desc": "A gold signet ring with a house crest. Worth more to forgers or the family than to jewellers.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "fine-silk-scraps",
+   "name": "Fine Silk Scraps",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "cloth",
+    "charm"
+   ],
+   "desc": "Embroidered silk and lace from courtly clothes, perfumed and bright.",
+   "perish": "stable",
+   "value": 24,
+   "recipe": null
+  },
+  {
+   "id": "thieves-tools-picks",
+   "name": "Thieves' Picks",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "metal",
+    "cunning",
+    "stealth"
+   ],
+   "desc": "A roll of lockpicks, tension wires and a tiny mirror.",
+   "perish": "stable",
+   "value": 45,
+   "recipe": null
+  },
+  {
+   "id": "spy-cipher-notes",
+   "name": "Cipher Notes",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "ink",
+    "knowledge",
+    "cunning"
+   ],
+   "desc": "Coded notes and a cipher key sewn into a coat lining.",
+   "perish": "stable",
+   "value": 30,
+   "recipe": null
+  },
+  {
+   "id": "scouts-spyglass-lens",
+   "name": "Spyglass Lens",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "glass",
+    "senses"
+   ],
+   "desc": "A ground lens from a scout's spyglass, flawless and clear.",
+   "perish": "stable",
+   "value": 30,
+   "recipe": null
+  },
+  {
+   "id": "scout-trail-map",
+   "name": "Trail Map",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "ink",
+    "knowledge"
+   ],
+   "desc": "A hand-drawn map of local trails, springs and ambush points.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "bandit-hideout-map",
+   "name": "Bandit Hideout Map",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "ink",
+    "knowledge"
+   ],
+   "desc": "A crumpled map marking caches, lookouts and a hideout or two.",
+   "perish": "stable",
+   "value": 20,
+   "recipe": null
+  },
+  {
+   "id": "assassins-poison-residue",
+   "name": "Assassin's Poison Residue",
+   "tier": "uncommon",
+   "tags": [
+    "salvage",
+    "venom",
+    "poison",
+    "death"
+   ],
+   "desc": "Crusted vials and a stained applicator from a professional poisoner's kit. Poisoners can reconstitute a dose or two.",
+   "perish": "1 week",
+   "value": 60,
+   "recipe": null
+  },
+  {
+   "id": "assassins-garrote-wire",
+   "name": "Garrote Wire",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "metal",
+    "stealth"
+   ],
+   "desc": "A thin, blackened wire between two wooden grips. Silent, and very final.",
+   "perish": "stable",
+   "value": 10,
+   "recipe": null
+  },
+  {
+   "id": "berserker-trophy-necklace",
+   "name": "Berserker Trophy Necklace",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "tooth",
+    "relic",
+    "fear"
+   ],
+   "desc": "Beast fangs and a few less comfortable trophies strung on sinew.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "gladiator-champions-shield-boss",
+   "name": "Champion's Shield Boss",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "metal",
+    "protection"
+   ],
+   "desc": "A polished steel boss from an arena shield, dented by many crowd-pleasing blocks.",
+   "perish": "stable",
+   "value": 28,
+   "recipe": null
+  },
+  {
+   "id": "veteran-campaign-medal",
+   "name": "Campaign Medal",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "metal",
+    "relic",
+    "protection"
+   ],
+   "desc": "A tarnished medal from a long-past war. Soldiers regard them as lucky.",
+   "perish": "stable",
+   "value": 28,
+   "recipe": null
+  },
+  {
+   "id": "knight-heraldic-plate",
+   "name": "Heraldic Plate",
+   "tier": "uncommon",
+   "tags": [
+    "salvage",
+    "metal",
+    "protection"
+   ],
+   "desc": "Pieces of fine plate enamelled with a knight's heraldry. A smith can rework it into quality armour.",
+   "perish": "stable",
+   "value": 42,
+   "recipe": null
+  },
+  {
+   "id": "half-red-dragon-veteran-scale-studded-armor-scrap",
+   "name": "Scale-Studded Armour Scraps",
+   "tier": "uncommon",
+   "tags": [
+    "salvage",
+    "metal",
+    "leather",
+    "fire",
+    "resistance"
+   ],
+   "desc": "Armour panels studded with shed red scales and heat-blackened rivets, never scorched by flame. Armourers use it for fire-resistant work.",
+   "perish": "stable",
+   "value": 140,
+   "recipe": null
+  },
+  {
+   "id": "kobold-trap-springs",
+   "name": "Kobold Trap Springs",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "metal",
+    "cunning"
+   ],
+   "desc": "Tightly wound springs, tripwires and hooks from kobold snares.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "kobold-dragon-idol",
+   "name": "Kobold Dragon Idol",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "relic",
+    "fire"
+   ],
+   "desc": "A lovingly carved little dragon idol, blackened by offerings.",
+   "perish": "stable",
+   "value": 20,
+   "recipe": null
+  },
+  {
+   "id": "hobgoblin-military-kit",
+   "name": "Hobgoblin Military Kit",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "metal",
+    "protection"
+   ],
+   "desc": "Well-kept armour, a whetstone and regimented gear stamped with a legion mark.",
+   "perish": "stable",
+   "value": 22,
+   "recipe": null
+  },
+  {
+   "id": "hobgoblin-war-banner",
+   "name": "Hobgoblin War Banner",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "cloth",
+    "fear"
+   ],
+   "desc": "A disciplined legion's standard; seeing it lost unnerves its soldiers.",
+   "perish": "stable",
+   "value": 30,
+   "recipe": null
+  },
+  {
+   "id": "bugbear-ambush-sack",
+   "name": "Bugbear Ambush Sack",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "cloth",
+    "stealth"
+   ],
+   "desc": "A huge, muffled sack for bagging victims silently. Good lining for quiet cloaks.",
+   "perish": "stable",
+   "value": 6,
+   "recipe": null
+  },
+  {
+   "id": "gnoll-bone-fetish",
+   "name": "Gnoll Bone Fetish",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "bone",
+    "relic",
+    "abyssal",
+    "fiendish"
+   ],
+   "desc": "A charm of gnawed bones and hyena teeth, dedicated to a demon of slaughter.",
+   "perish": "stable",
+   "value": 26,
+   "recipe": null
+  },
+  {
+   "id": "orc-war-totem",
+   "name": "Orc War Totem",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "bone",
+    "relic",
+    "strength"
+   ],
+   "desc": "A totem of beast skulls and red-daubed wood, carried to honour a war god.",
+   "perish": "stable",
+   "value": 20,
+   "recipe": null
+  },
+  {
+   "id": "sahuagin-shark-tooth-trident-tip",
+   "name": "Shark-Tooth Trident Tip",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "tooth",
+    "water"
+   ],
+   "desc": "A trident head barbed with rows of shark teeth. Hard to pull out of anything.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "sahuagin-shark-call-shell",
+   "name": "Shark-Call Shell",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "shell",
+    "water",
+    "telepathy"
+   ],
+   "desc": "A spiral shell sahuagin priestesses use to call their sharks; its hum carries far underwater.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "merfolk-coral-charm",
+   "name": "Merfolk Coral Charm",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "coral",
+    "water",
+    "swimming"
+   ],
+   "desc": "A bright coral pendant on kelp cord, worn for safe tides.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "duergar-ironforged-plate",
+   "name": "Duergar Ironforged Plate",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "metal",
+    "toughness"
+   ],
+   "desc": "Dark, heavy armour plates forged in the deep with grim precision.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "deep-gnome-stonecamouflage-cloak-scrap",
+   "name": "Stone-Camouflage Cloak Scrap",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "cloth",
+    "stealth",
+    "earth"
+   ],
+   "desc": "A patch of mottled grey cloth that blends into rock. Weavers use it in cloaks for hiding underground.",
+   "perish": "stable",
+   "value": 14,
+   "recipe": null
+  },
+  {
+   "id": "deep-gnome-gem-pouch",
+   "name": "Deep Gnome Gem Pouch",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "gem",
+    "earth"
+   ],
+   "desc": "A small pouch of rough-cut gems a svirfneblin was saving to trade.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "werewolf-blood",
+   "name": "Werewolf Blood",
+   "tier": "uncommon",
+   "tags": [
+    "blood",
+    "curse",
+    "shapechange",
+    "regeneration",
+    "humanoid"
+   ],
+   "desc": "Iron-dark blood that turns briefly silver in moonlight, carrying the wolf's curse. Alchemists use it (carefully) for shapechanging and regenerative draughts.",
+   "perish": "1 hour",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "werewolf-moon-touched-claw",
+   "name": "Moon-Touched Werewolf Claw",
+   "tier": "uncommon",
+   "tags": [
+    "claw",
+    "shapechange",
+    "primal",
+    "humanoid"
+   ],
+   "desc": "A hooked grey claw that stays wolfish when the body reverts. Faintly silvered under moonlight; carved into talismans of the hunt.",
+   "perish": "stable",
+   "value": 140,
+   "recipe": null
+  },
+  {
+   "id": "wererat-blood",
+   "name": "Wererat Blood",
+   "tier": "common",
+   "tags": [
+    "blood",
+    "curse",
+    "shapechange",
+    "regeneration",
+    "humanoid"
+   ],
+   "desc": "Thin, fast-clotting blood that smells of sewers and carries the rat's curse. Alchemists use it (carefully) for shapechanging and regenerative draughts.",
+   "perish": "1 hour",
+   "value": 22,
+   "recipe": null
+  },
+  {
+   "id": "wererat-moon-touched-tooth",
+   "name": "Moon-Touched Wererat Incisor",
+   "tier": "common",
+   "tags": [
+    "tooth",
+    "shapechange",
+    "stealth",
+    "humanoid"
+   ],
+   "desc": "A long yellow incisor shed during the final reversion. Thieves wear them as charms for slipping through tight places.",
+   "perish": "stable",
+   "value": 30,
+   "recipe": null
+  },
+  {
+   "id": "wereboar-blood",
+   "name": "Wereboar Blood",
+   "tier": "uncommon",
+   "tags": [
+    "blood",
+    "curse",
+    "shapechange",
+    "regeneration",
+    "humanoid"
+   ],
+   "desc": "Hot, heavy blood that foams when shaken, carrying the boar's curse. Alchemists use it (carefully) for shapechanging and regenerative draughts.",
+   "perish": "1 hour",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "wereboar-moon-touched-tusk",
+   "name": "Moon-Touched Wereboar Tusk",
+   "tier": "uncommon",
+   "tags": [
+    "tooth",
+    "shapechange",
+    "toughness",
+    "humanoid"
+   ],
+   "desc": "A curved, ivory tusk left behind when the boar-form fades. Prized for stubborn, relentless charms.",
+   "perish": "stable",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "weretiger-blood",
+   "name": "Weretiger Blood",
+   "tier": "uncommon",
+   "tags": [
+    "blood",
+    "curse",
+    "shapechange",
+    "regeneration",
+    "humanoid"
+   ],
+   "desc": "Rich, amber-tinted blood that carries the tiger's curse. Alchemists use it (carefully) for shapechanging and regenerative draughts.",
+   "perish": "1 hour",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "weretiger-moon-touched-claw",
+   "name": "Moon-Touched Weretiger Claw",
+   "tier": "uncommon",
+   "tags": [
+    "claw",
+    "shapechange",
+    "stealth",
+    "humanoid"
+   ],
+   "desc": "A sickle-curved, striped-sheath claw shed in the moment of reversion. Used in charms of grace and ambush.",
+   "perish": "stable",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "werebear-blood",
+   "name": "Werebear Blood",
+   "tier": "uncommon",
+   "tags": [
+    "blood",
+    "curse",
+    "shapechange",
+    "regeneration",
+    "humanoid"
+   ],
+   "desc": "Dark, slow blood that carries the bear's curse, gentler than most but no less binding. Alchemists use it (carefully) for shapechanging and regenerative draughts.",
+   "perish": "1 hour",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "werebear-moon-touched-claw",
+   "name": "Moon-Touched Werebear Claw",
+   "tier": "uncommon",
+   "tags": [
+    "claw",
+    "shapechange",
+    "strength",
+    "humanoid"
+   ],
+   "desc": "A broad, blunt claw shed as the bear-form falls away. Druids treasure them for charms of protective strength.",
+   "perish": "stable",
+   "value": 160,
+   "recipe": null
+  }
+ ],
+ "monsters": [
+  {
+   "id": "hill-giant",
+   "name": "Hill Giant",
+   "type": "giant",
+   "size": "Huge",
+   "cr": "5",
+   "env": [
+    "hill",
+    "grassland",
+    "forest"
+   ],
+   "blurb": "A gluttonous brute who carries a club and a sack of stolen oddities; its blood is the humblest giant-strength reagent.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "hill-giant-blood",
+     "q": 1,
+     "dc": 13,
+     "skill": "Medicine",
+     "note": "Draw it from a major vein within the hour into stoppered vials; a giant yields enough for one vial of reagent-grade blood."
+    },
+    {
+     "m": "hill-giant-club-iron",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation",
+     "note": "Pry the bands off the club; they are riveted with giant-sized nails."
+    },
+    {
+     "m": "hill-giant-sack-trinkets",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation",
+     "note": "Mostly junk; roll on your DM's trinket table for anything worth keeping."
+    },
+    {
+     "m": "hill-giant-essence",
+     "q": 1,
+     "dc": 13,
+     "skill": "Arcana",
+     "note": "It escapes with the last breath: hold an Essence Vessel ready and stopper it within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "stone-giant",
+   "name": "Stone Giant",
+   "type": "giant",
+   "size": "Huge",
+   "cr": "7",
+   "env": [
+    "mountain",
+    "hill",
+    "underdark"
+   ],
+   "blurb": "A reclusive, artistic giant of the deep crags whose lifelong throwing stone and gritty blood are earth-magic treasures.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "stone-giant-blood",
+     "q": 1,
+     "dc": 16,
+     "skill": "Medicine",
+     "note": "Draw it from a major vein within the hour into stoppered vials; a giant yields enough for one vial of reagent-grade blood."
+    },
+    {
+     "m": "stone-giant-heartstone",
+     "q": 1,
+     "dc": 16,
+     "skill": "Investigation",
+     "note": "Kept in a belt pouch or bound in the giant's hair. Fail by 5+ and you chip its dream-carvings, halving its value. Other stone giants may track down whoever carries it."
+    },
+    {
+     "m": "stone-giant-throwing-boulder-shard",
+     "q": 1,
+     "dc": 13,
+     "skill": "Nature",
+     "dice": "1d4",
+     "note": "Gather from boulders the giant threw; a successful check finds shards with a clean grain."
+    },
+    {
+     "m": "stone-giant-dream-carving",
+     "q": 1,
+     "dc": 16,
+     "skill": "Investigation",
+     "note": "Usually kept in the giant's lair rather than carried; too heavy for one person (200 lb)."
+    },
+    {
+     "m": "stone-giant-essence",
+     "q": 1,
+     "dc": 16,
+     "skill": "Arcana",
+     "note": "A faint shimmer over the body marks it. Catch it in an Essence Vessel within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "frost-giant",
+   "name": "Frost Giant",
+   "type": "giant",
+   "size": "Huge",
+   "cr": "8",
+   "env": [
+    "arctic",
+    "mountain"
+   ],
+   "blurb": "A reaver of the frozen north whose rime-crusted blood, trophy braids and ice-bound gear all hold the bite of winter.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "frost-giant-blood",
+     "q": 1,
+     "dc": 16,
+     "skill": "Medicine",
+     "note": "Draw it from a major vein within the hour into stoppered vials; a giant yields enough for one vial of reagent-grade blood."
+    },
+    {
+     "m": "frost-giant-glacial-ice-shard",
+     "q": 1,
+     "dc": 13,
+     "skill": "Nature",
+     "dice": "1d3",
+     "note": "Chip it from armour plates and packs; it must be packed in snow to last beyond a week."
+    },
+    {
+     "m": "frost-giant-braid",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival",
+     "note": "Cut at the root; the rings and trophies woven in are worth a few gp to collectors."
+    },
+    {
+     "m": "frost-giant-axe-iron",
+     "q": 1,
+     "dc": 13,
+     "skill": "Investigation",
+     "note": "The axe head is too big to carry whole; it must be broken down cold, or it shatters."
+    },
+    {
+     "m": "frost-giant-mammoth-fur-cloak",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "frost-giant-essence",
+     "q": 1,
+     "dc": 16,
+     "skill": "Arcana",
+     "note": "A faint shimmer over the body marks it. Catch it in an Essence Vessel within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "fire-giant",
+   "name": "Fire Giant",
+   "type": "giant",
+   "size": "Huge",
+   "cr": "9",
+   "env": [
+    "mountain",
+    "elemental-fire",
+    "underdark"
+   ],
+   "blurb": "A master smith of volcanic halls whose molten blood, forge-iron and cinder braids carry living flame.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "fire-giant-blood",
+     "q": 1,
+     "dc": 16,
+     "skill": "Medicine",
+     "note": "Too hot for glass: catch it in a stone or crystal vial within the hour. Without fire resistance or heavy gloves you take 1d6 fire damage."
+    },
+    {
+     "m": "fire-giant-forge-ash",
+     "q": 1,
+     "dc": 13,
+     "skill": "Nature",
+     "dice": "1d6",
+     "note": "Scraped from its apron and soot-pouches."
+    },
+    {
+     "m": "fire-giant-forge-hammer-iron",
+     "q": 1,
+     "dc": 16,
+     "skill": "Investigation",
+     "note": "The hammer must be broken down at a forge; carrying it whole needs a cart."
+    },
+    {
+     "m": "fire-giant-cinder-braid",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival",
+     "note": "Still smoulders when cut; douse it in sand, not water, or it cracks."
+    },
+    {
+     "m": "fire-giant-obsidian-blade-shard",
+     "q": 1,
+     "dc": 13,
+     "skill": "Investigation",
+     "note": "Let the blade cool an hour before breaking it down, or it scorches your tools."
+    },
+    {
+     "m": "fire-giant-essence",
+     "q": 1,
+     "dc": 16,
+     "skill": "Arcana",
+     "note": "It escapes with the last breath: hold an Essence Vessel ready and stopper it within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "cloud-giant",
+   "name": "Cloud Giant",
+   "type": "giant",
+   "size": "Huge",
+   "cr": "9",
+   "env": [
+    "mountain",
+    "elemental-air"
+   ],
+   "blurb": "A proud, gambling sky-noble whose silvery blood, sky-silver finery and cloudstuff hem are the stuff of flight magic.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "cloud-giant-blood",
+     "q": 1,
+     "dc": 21,
+     "skill": "Medicine",
+     "note": "The blood drifts upward as it leaves the wound; catch it from above, or it floats away. Draw it from a major vein within the hour into stoppered vials; a giant yields enough for one vial of reagent-grade blood."
+    },
+    {
+     "m": "cloud-giant-cloudstuff",
+     "q": 1,
+     "dc": 16,
+     "skill": "Arcana",
+     "dice": "1d3",
+     "note": "Gather it into a sealed jar before it disperses; unsealed it thins to mist in a week."
+    },
+    {
+     "m": "cloud-giant-sky-silver",
+     "q": 1,
+     "dc": 16,
+     "skill": "Investigation",
+     "dice": "1d2",
+     "note": "Rings, torcs and brooches; weigh them down, as they tend to drift off in a breeze."
+    },
+    {
+     "m": "cloud-giant-essence",
+     "q": 1,
+     "dc": 16,
+     "skill": "Arcana",
+     "note": "Seal it in an Essence Vessel within a minute of death, or it's gone."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "storm-giant",
+   "name": "Storm Giant",
+   "type": "giant",
+   "size": "Huge",
+   "cr": "13",
+   "env": [
+    "coast",
+    "underwater",
+    "mountain"
+   ],
+   "blurb": "A solitary oracle-king of the sea and sky whose ozone-sharp blood, storm pearls and lightning-veined hair are among the rarest giant relics.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "storm-giant-blood",
+     "q": 1,
+     "dc": 19,
+     "skill": "Medicine",
+     "note": "Each vial sparks as it fills; touching the blood bare-handed deals 1d6 lightning damage. Draw it from a major vein within the hour into stoppered vials; a giant yields enough for one vial of reagent-grade blood."
+    },
+    {
+     "m": "storm-giant-sea-storm-pearl",
+     "q": 1,
+     "dc": 19,
+     "skill": "Investigation",
+     "note": "Worn as a talisman or set in a crown; not every storm giant carries one (DM's choice)."
+    },
+    {
+     "m": "storm-giant-lightning-veined-hair",
+     "q": 3,
+     "dc": 16,
+     "skill": "Survival",
+     "note": "Cut with a non-metal blade, or each stroke discharges a painful shock.",
+     "dice": "2d4"
+    },
+    {
+     "m": "storm-giant-oracle-shell",
+     "q": 1,
+     "dc": 16,
+     "skill": "Investigation",
+     "note": "Found in its sea-lair or satchel; it goes silent if cracked."
+    },
+    {
+     "m": "storm-giant-essence",
+     "q": 1,
+     "dc": 19,
+     "skill": "Arcana",
+     "note": "It escapes with the last breath: hold an Essence Vessel ready and stopper it within a minute."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "ettin",
+   "name": "Ettin",
+   "type": "giant",
+   "size": "Large",
+   "cr": "4",
+   "env": [
+    "hill",
+    "mountain",
+    "underdark",
+    "ruins"
+   ],
+   "blurb": "A bickering two-headed brute, one head always awake; its eyes are a folk remedy against sleep.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "ettin-blood",
+     "q": 1,
+     "dc": 13,
+     "skill": "Medicine",
+     "note": "Draw it from a major vein within the hour into stoppered vials; a giant yields enough for one vial of reagent-grade blood."
+    },
+    {
+     "m": "ettin-wakeful-eye",
+     "q": 1,
+     "dc": 13,
+     "skill": "Medicine",
+     "note": "Only the head that was 'on watch' at death yields a usable eye; the other is dull and useless."
+    },
+    {
+     "m": "ettin-crude-morningstar-iron",
+     "q": 2,
+     "dc": 10,
+     "skill": "Investigation"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "ogre",
+   "name": "Ogre",
+   "type": "giant",
+   "size": "Large",
+   "cr": "2",
+   "env": [
+    "hill",
+    "forest",
+    "swamp",
+    "mountain",
+    "grassland"
+   ],
+   "blurb": "A dim, hungry bully with more muscle than sense; it yields cheap brawn tonics and a club that could stop a door.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "ogre-blood",
+     "q": 1,
+     "dc": 10,
+     "skill": "Medicine",
+     "note": "Draw it from a major vein within the hour into stoppered vials; a giant yields enough for one vial of reagent-grade blood."
+    },
+    {
+     "m": "ogre-greatclub-knot",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "ogre-hide-loincloth",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "ogre-sack-trophies",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation",
+     "note": "Hold your nose; there is usually 2d6 sp at the bottom."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "oni",
+   "name": "Oni",
+   "type": "giant",
+   "size": "Large",
+   "cr": "7",
+   "env": [
+    "forest",
+    "urban",
+    "mountain"
+   ],
+   "blurb": "A fiendish ogre-mage that wears stolen faces and turns invisible; its horns and self-mending blood are prized by illusionists and healers.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "oni-horn",
+     "q": 2,
+     "dc": 16,
+     "skill": "Survival",
+     "note": "Saw at the base while the body is still warm; once cold the horn hardens like iron (+2 DC)."
+    },
+    {
+     "m": "oni-blood",
+     "q": 1,
+     "dc": 16,
+     "skill": "Medicine",
+     "note": "Stir with silver while collecting, or the blood crawls back into the corpse."
+    },
+    {
+     "m": "oni-glaive-edge",
+     "q": 1,
+     "dc": 13,
+     "skill": "Investigation"
+    },
+    {
+     "m": "oni-essence",
+     "q": 1,
+     "dc": 16,
+     "skill": "Arcana",
+     "note": "Seal it in an Essence Vessel within a minute of death, or it's gone."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "troll",
+   "name": "Troll",
+   "type": "giant",
+   "size": "Large",
+   "cr": "5",
+   "env": [
+    "forest",
+    "swamp",
+    "hill",
+    "mountain",
+    "arctic",
+    "underdark"
+   ],
+   "blurb": "A ravenous regenerator that only fire or acid will finish; everything taken from it tries to heal.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "troll-blood",
+     "q": 1,
+     "dc": 13,
+     "skill": "Medicine",
+     "note": "Must be kept well away from fire and acid: a single spark curdles it to worthless sludge."
+    },
+    {
+     "m": "troll-hide",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival",
+     "note": "Only possible once the troll is dead by fire or acid; sear each cut edge or it knits back together."
+    },
+    {
+     "m": "troll-claw",
+     "q": 2,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "1d4+1"
+    },
+    {
+     "m": "troll-regenerating-heart",
+     "q": 1,
+     "dc": 16,
+     "skill": "Medicine",
+     "note": "Fail by 5+ and the heart squirms free and must be recaptured (DC 12 Dexterity). Store in a lightless jar and feed it nothing."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "werewolf",
+   "name": "Werewolf",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "3",
+   "env": [
+    "forest",
+    "hill"
+   ],
+   "blurb": "A cursed hunter who reverts to human form in death, leaving curse-laden blood and a single claw that never changed back.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "werewolf-blood",
+     "q": 1,
+     "dc": 13,
+     "skill": "Medicine",
+     "note": "Wear gloves: fail the check by 5+ bare-handed and you risk contracting the lycanthropy (DC 12 Constitution save). Silver implements keep the blood from clotting; it is most potent collected under moonlight."
+    },
+    {
+     "m": "werewolf-moon-touched-claw",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival",
+     "note": "Only this one beast-part keeps its shape when the body reverts; search within the hour, before the moonlight fades from it."
+    },
+    {
+     "m": "coin-purse",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation",
+     "note": "They were people too; their belongings deserve respect, or at least a proper burial."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "wererat",
+   "name": "Wererat",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "2",
+   "env": [
+    "urban",
+    "underdark"
+   ],
+   "blurb": "A cursed schemer of the sewers whose blood carries the rat's curse and whose last shed tooth is a thief's charm.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "wererat-blood",
+     "q": 1,
+     "dc": 10,
+     "skill": "Medicine",
+     "note": "Wear gloves: fail the check by 5+ bare-handed and you risk contracting the lycanthropy (DC 12 Constitution save). Silver implements keep the blood from clotting; it is most potent collected under moonlight."
+    },
+    {
+     "m": "wererat-moon-touched-tooth",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "note": "Only this one beast-part keeps its shape when the body reverts; search within the hour, before the moonlight fades from it."
+    },
+    {
+     "m": "coin-purse",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation",
+     "note": "They were people too; their belongings deserve respect, or at least a proper burial."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "wereboar",
+   "name": "Wereboar",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "4",
+   "env": [
+    "forest",
+    "grassland"
+   ],
+   "blurb": "A cursed, short-tempered brute whose blood and shed tusk carry the boar's stubborn rage.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "wereboar-blood",
+     "q": 1,
+     "dc": 13,
+     "skill": "Medicine",
+     "note": "Wear gloves: fail the check by 5+ bare-handed and you risk contracting the lycanthropy (DC 12 Constitution save). Silver implements keep the blood from clotting; it is most potent collected under moonlight."
+    },
+    {
+     "m": "wereboar-moon-touched-tusk",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival",
+     "note": "Only this one beast-part keeps its shape when the body reverts; search within the hour, before the moonlight fades from it."
+    },
+    {
+     "m": "coin-purse",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation",
+     "note": "They were people too; their belongings deserve respect, or at least a proper burial."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "weretiger",
+   "name": "Weretiger",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "4",
+   "env": [
+    "forest",
+    "grassland"
+   ],
+   "blurb": "A proud, solitary cursed hunter whose blood and final shed claw carry feline grace.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "weretiger-blood",
+     "q": 1,
+     "dc": 13,
+     "skill": "Medicine",
+     "note": "Wear gloves: fail the check by 5+ bare-handed and you risk contracting the lycanthropy (DC 12 Constitution save). Silver implements keep the blood from clotting; it is most potent collected under moonlight."
+    },
+    {
+     "m": "weretiger-moon-touched-claw",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival",
+     "note": "Only this one beast-part keeps its shape when the body reverts; search within the hour, before the moonlight fades from it."
+    },
+    {
+     "m": "coin-purse",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation",
+     "note": "They were people too; their belongings deserve respect, or at least a proper burial."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "werebear",
+   "name": "Werebear",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "5",
+   "env": [
+    "forest",
+    "arctic"
+   ],
+   "blurb": "A reclusive, often good-hearted cursed guardian whose blood and shed claw carry protective strength.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "werebear-blood",
+     "q": 1,
+     "dc": 13,
+     "skill": "Medicine",
+     "note": "Wear gloves: fail the check by 5+ bare-handed and you risk contracting the lycanthropy (DC 12 Constitution save). Silver implements keep the blood from clotting; it is most potent collected under moonlight."
+    },
+    {
+     "m": "werebear-moon-touched-claw",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival",
+     "note": "Only this one beast-part keeps its shape when the body reverts; search within the hour, before the moonlight fades from it."
+    },
+    {
+     "m": "coin-purse",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation",
+     "note": "They were people too; their belongings deserve respect, or at least a proper burial."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "acolyte",
+   "name": "Acolyte",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "1/4",
+   "env": [
+    "urban"
+   ],
+   "blurb": "A junior temple servant; carries little but devotions.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "holy-symbol-fragment",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "acolyte-prayer-beads",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "tattered-cloth",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "coin-purse",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation",
+     "note": "Usually only a few copper."
+    }
+   ],
+   "aka": [
+    "Priest Acolyte"
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "archmage",
+   "name": "Archmage",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "12",
+   "env": [
+    "urban",
+    "ruins"
+   ],
+   "blurb": "A master of the arcane whose study-worn belongings are worth a small fortune to scribes and enchanters.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "archmage-annotated-spellbook-folio",
+     "q": 1,
+     "dc": 16,
+     "skill": "Investigation",
+     "note": "The folio is warded: fail by 5+ and a glyph flares, burning half the pages (value halved)."
+    },
+    {
+     "m": "archmage-arcane-focus",
+     "q": 1,
+     "dc": 16,
+     "skill": "Investigation",
+     "note": "Found on its staff or in a warded pouch."
+    },
+    {
+     "m": "spellbook-pages",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation",
+     "dice": "1d6"
+    },
+    {
+     "m": "mage-spell-component-pouch",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "coin-purse",
+     "q": 3,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "assassin",
+   "name": "Assassin",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "8",
+   "env": [
+    "urban"
+   ],
+   "blurb": "A paid killer whose kit is a poisoner's treasure, and a danger to careless looters.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "assassins-poison-residue",
+     "q": 1,
+     "dc": 13,
+     "skill": "Investigation",
+     "note": "Fail by 5+ and you are nicked by a coated blade (DC 13 Constitution save or 2d6 poison damage)."
+    },
+    {
+     "m": "thieves-tools-picks",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "assassins-garrote-wire",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "scrap-leather",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "coin-purse",
+     "q": 2,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "bandit",
+   "name": "Bandit",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "1/8",
+   "env": [
+    "forest",
+    "grassland",
+    "hill",
+    "desert",
+    "urban"
+   ],
+   "blurb": "A cutthroat of the road; their pockets hold whatever the last victim had.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "coin-purse",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "scrap-leather",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "scrap-steel",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "salvaged-arrowheads",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation",
+     "dice": "1d6"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "bandit-captain",
+   "name": "Bandit Captain",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "2",
+   "env": [
+    "forest",
+    "grassland",
+    "hill",
+    "desert",
+    "urban"
+   ],
+   "blurb": "A bandit leader with better gear, a fatter purse and a map to the gang's caches.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "bandit-hideout-map",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "coin-purse",
+     "q": 3,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "scrap-chain-links",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "scrap-steel",
+     "q": 2,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "berserker",
+   "name": "Berserker",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "2",
+   "env": [
+    "arctic",
+    "hill",
+    "forest",
+    "mountain"
+   ],
+   "blurb": "A raider who fights in a frenzy; their trophies are worn with pride.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "berserker-trophy-necklace",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "scrap-steel",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "scrap-leather",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "bugbear",
+   "name": "Bugbear",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "1",
+   "env": [
+    "forest",
+    "underdark",
+    "hill"
+   ],
+   "blurb": "A hulking goblinoid ambusher that carries a victim-sized sack and a heavy morningstar.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "bugbear-ambush-sack",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "scrap-steel",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "scrap-leather",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "coin-purse",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ],
+   "aka": [
+    "Bugbear Warrior"
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "commoner",
+   "name": "Commoner",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "0",
+   "env": [
+    "urban",
+    "grassland"
+   ],
+   "blurb": "An ordinary villager; loot them and you'll find only a life's small comforts.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "commoners-sundries",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "tattered-cloth",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "cult-fanatic",
+   "name": "Cult Fanatic",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "2",
+   "env": [
+    "urban",
+    "ruins",
+    "underdark"
+   ],
+   "blurb": "A zealous cult leader who carries fragments of the pact that empowers them.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "cult-fanatic-dark-pact-page",
+     "q": 1,
+     "dc": 13,
+     "skill": "Investigation",
+     "note": "Fail by 5+ and the page's whispered name lingers: disadvantage on your next Wisdom save within 24 hours."
+    },
+    {
+     "m": "cult-idol",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "cultist-ritual-dagger",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "coin-purse",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ],
+   "aka": [
+    "Cultist Fanatic"
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "cultist",
+   "name": "Cultist",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "1/8",
+   "env": [
+    "urban",
+    "ruins",
+    "underdark"
+   ],
+   "blurb": "A robed devotee of dark powers; their trinkets are crude but tainted.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "cult-idol",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation",
+     "note": "Not every cultist carries one; on a fail it's just a painted stone."
+    },
+    {
+     "m": "cultist-ritual-dagger",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "tattered-cloth",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "deep-gnome",
+   "name": "Deep Gnome (Svirfneblin)",
+   "type": "humanoid",
+   "size": "Small",
+   "cr": "1/2",
+   "env": [
+    "underdark"
+   ],
+   "blurb": "A wary gnome of the deep roads, cloaked to vanish against stone and usually carrying gems to trade.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "deep-gnome-stonecamouflage-cloak-scrap",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "deep-gnome-gem-pouch",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation",
+     "note": "Svirfneblin hide their gems well; look inside boot heels."
+    },
+    {
+     "m": "scrap-leather",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "druid",
+   "name": "Druid",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "2",
+   "env": [
+    "forest",
+    "grassland",
+    "swamp"
+   ],
+   "blurb": "A keeper of the wilds whose focus and herbs still hum with primal life.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "druid-living-wood-focus",
+     "q": 1,
+     "dc": 13,
+     "skill": "Investigation",
+     "note": "It wilts within a day if cut or split; keep it whole."
+    },
+    {
+     "m": "druidic-mistletoe",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation",
+     "dice": "1d3"
+    },
+    {
+     "m": "scrap-leather",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "duergar",
+   "name": "Duergar",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "1",
+   "env": [
+    "underdark"
+   ],
+   "blurb": "A grim dwarf of the deep who works iron like a curse; its plate is dark and dense.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "duergar-ironforged-plate",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "scrap-steel",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "coin-purse",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "gladiator",
+   "name": "Gladiator",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "5",
+   "env": [
+    "urban"
+   ],
+   "blurb": "An arena champion kitted out for show and slaughter alike.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "gladiator-champions-shield-boss",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "scrap-steel",
+     "q": 2,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "scrap-leather",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "coin-purse",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "gnoll",
+   "name": "Gnoll",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "1/2",
+   "env": [
+    "grassland",
+    "desert",
+    "forest",
+    "hill"
+   ],
+   "blurb": "A hyena-headed raider devoted to a demon of slaughter; its fetishes reek of the Abyss.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "gnoll-bone-fetish",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "scrap-steel",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "salvaged-arrowheads",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation",
+     "dice": "1d4"
+    }
+   ],
+   "aka": [
+    "Gnoll Warrior"
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "goblin",
+   "name": "Goblin",
+   "type": "humanoid",
+   "size": "Small",
+   "cr": "1/4",
+   "env": [
+    "forest",
+    "hill",
+    "underdark",
+    "ruins"
+   ],
+   "blurb": "A sneaky little raider with pockets full of junk and the odd genuine find.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "goblin-scrap-trinkets",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "scrap-leather",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "salvaged-arrowheads",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation",
+     "dice": "1d4"
+    }
+   ],
+   "aka": [
+    "Goblin Warrior"
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "grimlock",
+   "name": "Grimlock",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "1/4",
+   "env": [
+    "underdark",
+    "mountain"
+   ],
+   "blurb": "A blind cave-dweller with keen senses and crude, touch-shaped weapons.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "grimlock-spiked-bone-club",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "tattered-cloth",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "guard",
+   "name": "Guard",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "1/8",
+   "env": [
+    "urban"
+   ],
+   "blurb": "A town watchman in patched mail with a badge and a few coins.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "guard-watch-insignia",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "scrap-chain-links",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "scrap-steel",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "coin-purse",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation",
+     "note": "Looting a watchman may draw more watchmen."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "half-red-dragon-veteran",
+   "name": "Half-Red Dragon Veteran",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "5",
+   "env": [
+    "mountain",
+    "hill",
+    "urban"
+   ],
+   "blurb": "A seasoned warrior with a red dragon's blood and fiery breath, armoured in scale-studded plate that no flame has marked.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "half-red-dragon-veteran-scale-studded-armor-scrap",
+     "q": 1,
+     "dc": 13,
+     "skill": "Investigation",
+     "note": "Only the armour; the veteran is a person, not a quarry."
+    },
+    {
+     "m": "scrap-steel",
+     "q": 2,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "veteran-campaign-medal",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "coin-purse",
+     "q": 2,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ],
+   "aka": [
+    "Half-Dragon"
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "hobgoblin",
+   "name": "Hobgoblin",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "1/2",
+   "env": [
+    "forest",
+    "hill",
+    "grassland",
+    "underdark"
+   ],
+   "blurb": "A disciplined goblinoid legionary with well-maintained military gear.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "hobgoblin-military-kit",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "hobgoblin-war-banner",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation",
+     "note": "Only one per unit, usually carried by the sergeant."
+    },
+    {
+     "m": "coin-purse",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ],
+   "aka": [
+    "Hobgoblin Warrior"
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "knight",
+   "name": "Knight",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "3",
+   "env": [
+    "urban",
+    "grassland"
+   ],
+   "blurb": "A sworn warrior in heraldic plate; plundering one invites the ire of their order.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "knight-heraldic-plate",
+     "q": 1,
+     "dc": 13,
+     "skill": "Investigation",
+     "note": "Must be unbuckled piece by piece; hacking it off ruins the enamel (value halved)."
+    },
+    {
+     "m": "noble-signet",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation",
+     "note": "Only knights of noble birth."
+    },
+    {
+     "m": "coin-purse",
+     "q": 2,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "kobold",
+   "name": "Kobold",
+   "type": "humanoid",
+   "size": "Small",
+   "cr": "1/8",
+   "env": [
+    "underdark",
+    "mountain",
+    "forest",
+    "ruins"
+   ],
+   "blurb": "A small, trap-loving dragon-worshipper; its snares are worth more than its purse.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "kobold-trap-springs",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation",
+     "dice": "1d4"
+    },
+    {
+     "m": "kobold-dragon-idol",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation",
+     "note": "Kobolds guard these fiercely; one per warren."
+    },
+    {
+     "m": "scrap-leather",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ],
+   "aka": [
+    "Kobold Warrior"
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "lizardfolk",
+   "name": "Lizardfolk",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "1/2",
+   "env": [
+    "swamp",
+    "coast"
+   ],
+   "blurb": "A pragmatic reptilian hunter armed with bone clubs and hide shields.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "lizardfolk-bone-club",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "battered-shield-planks",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "tribal-bone-spearhead",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation",
+     "dice": "1d3"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "mage",
+   "name": "Mage",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "6",
+   "env": [
+    "urban"
+   ],
+   "blurb": "A capable wizard whose component pouch and spellbook are the real prize.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "mage-spellbook-folio",
+     "q": 1,
+     "dc": 13,
+     "skill": "Investigation",
+     "note": "Fail by 5+ and a protective rune erases the best spell."
+    },
+    {
+     "m": "mage-spell-component-pouch",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "arcane-focus-shard",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "spellbook-pages",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation",
+     "dice": "1d4"
+    },
+    {
+     "m": "coin-purse",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "merfolk",
+   "name": "Merfolk",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "1/8",
+   "env": [
+    "underwater",
+    "coast"
+   ],
+   "blurb": "A sea-dweller with coral charms and a spear; little else survives the tides.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "merfolk-coral-charm",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "tribal-bone-spearhead",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ],
+   "aka": [
+    "Merfolk Skirmisher"
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "noble",
+   "name": "Noble",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "1/8",
+   "env": [
+    "urban"
+   ],
+   "blurb": "A pampered aristocrat dripping in finery and entitlement.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "noble-signet",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "fine-silk-scraps",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation",
+     "dice": "1d4"
+    },
+    {
+     "m": "coin-purse",
+     "q": 5,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "orc",
+   "name": "Orc",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "1/2",
+   "env": [
+    "hill",
+    "mountain",
+    "forest",
+    "grassland",
+    "underdark"
+   ],
+   "blurb": "A fierce raider devoted to a war god; its totems and heavy weapons are crude but sturdy.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "orc-war-totem",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation",
+     "note": "Carried by one warrior in five."
+    },
+    {
+     "m": "scrap-steel",
+     "q": 2,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "scrap-leather",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "priest",
+   "name": "Priest",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "2",
+   "env": [
+    "urban"
+   ],
+   "blurb": "An ordained cleric carrying blessed water and a sacred relic.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "holy-symbol-fragment",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "priest-blessed-holy-water",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation",
+     "dice": "1d2"
+    },
+    {
+     "m": "priest-reliquary-relic",
+     "q": 1,
+     "dc": 13,
+     "skill": "Investigation",
+     "note": "Looting a relic from a temple priest is sacrilege to their faith; expect consequences."
+    },
+    {
+     "m": "coin-purse",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "sahuagin",
+   "name": "Sahuagin",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "1/2",
+   "env": [
+    "underwater",
+    "coast"
+   ],
+   "blurb": "A shark-toothed raider of the deep whose tridents and calling shells are cruelly practical.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "sahuagin-shark-tooth-trident-tip",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "sahuagin-shark-call-shell",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation",
+     "note": "Carried by priestesses and chieftains."
+    },
+    {
+     "m": "scrap-leather",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ],
+   "aka": [
+    "Sahuagin Warrior"
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "scout",
+   "name": "Scout",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "1/2",
+   "env": [
+    "forest",
+    "grassland",
+    "hill"
+   ],
+   "blurb": "A keen-eyed ranger with a spyglass and hand-drawn maps.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "scouts-spyglass-lens",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "scout-trail-map",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "salvaged-arrowheads",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation",
+     "dice": "1d6"
+    },
+    {
+     "m": "scrap-leather",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "spy",
+   "name": "Spy",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "1",
+   "env": [
+    "urban"
+   ],
+   "blurb": "A professional informant with picks, ciphers and secrets sewn into their clothes.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "spy-cipher-notes",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation",
+     "note": "Hidden in a coat lining; fail and you miss it entirely."
+    },
+    {
+     "m": "thieves-tools-picks",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "coin-purse",
+     "q": 2,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "thug",
+   "name": "Thug",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "1/2",
+   "env": [
+    "urban"
+   ],
+   "blurb": "A hired bruiser with brass knuckles and a heavy cudgel.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "thug-knuckle-duster",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "scrap-leather",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "coin-purse",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ],
+   "aka": [
+    "Tough"
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "tribal-warrior",
+   "name": "Tribal Warrior",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "1/8",
+   "env": [
+    "grassland",
+    "forest",
+    "desert",
+    "arctic",
+    "hill"
+   ],
+   "blurb": "A hunter-warrior of a wilderness people, armed with hand-made bone and hide gear.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "tribal-bone-spearhead",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation",
+     "dice": "1d2"
+    },
+    {
+     "m": "scrap-leather",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "worn-rope-coil",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ],
+   "aka": [
+    "Warrior Infantry"
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "veteran",
+   "name": "Veteran",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "3",
+   "env": [
+    "urban",
+    "grassland"
+   ],
+   "blurb": "A grizzled soldier with well-kept arms and a medal or two.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "veteran-campaign-medal",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "scrap-chain-links",
+     "q": 2,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "scrap-steel",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    },
+    {
+     "m": "coin-purse",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ],
+   "aka": [
+    "Warrior Veteran"
+   ],
+   "srd": "5.1"
+  }
+ ]
+}

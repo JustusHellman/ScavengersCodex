@@ -1,0 +1,6646 @@
+{
+ "materials": [
+  {
+   "id": "distilled-hill-giant-might",
+   "name": "Distilled Hill Giant Might",
+   "tier": "rare",
+   "tags": [
+    "essence",
+    "blood",
+    "strength",
+    "earth",
+    "giant"
+   ],
+   "desc": "A muddy brown syrup that smells of wet turf and sweat; a single drop on the tongue makes your jaw ache with borrowed strength.",
+   "perish": "1 week",
+   "value": 1800,
+   "recipe": {
+    "components": [
+     {
+      "m": "hill-giant-blood",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "hill-giant-essence",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "giants-knuckle-root",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "crystal-vial",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 16,
+    "time": "3 days",
+    "gp": 187,
+    "level": 6,
+    "spells": [
+     "enlarge/reduce"
+    ],
+    "yields": 1,
+    "lore": "Three measures of hill giant blood are reduced over a slow flame with the giant's captured essence until only the stubborn, bone-deep might of the bloodline remains."
+   }
+  },
+  {
+   "id": "distilled-stone-giant-might",
+   "name": "Distilled Stone Giant Might",
+   "tier": "very-rare",
+   "tags": [
+    "essence",
+    "blood",
+    "strength",
+    "earth",
+    "giant"
+   ],
+   "desc": "Grey, gritty and heavy as mercury, it settles in the vial like silt and never quite stops grinding.",
+   "perish": "1 week",
+   "value": 6000,
+   "recipe": {
+    "components": [
+     {
+      "m": "stone-giant-blood",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "stone-giant-essence",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "stone-giant-heartstone",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "crystal-vial",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 19,
+    "time": "3 days",
+    "gp": 1000,
+    "level": 11,
+    "spells": [
+     "enlarge/reduce"
+    ],
+    "yields": 1,
+    "lore": "Three measures of stone giant blood are reduced over a slow flame with the giant's captured essence until only the stubborn, bone-deep might of the bloodline remains."
+   }
+  },
+  {
+   "id": "distilled-frost-giant-might",
+   "name": "Distilled Frost Giant Might",
+   "tier": "very-rare",
+   "tags": [
+    "essence",
+    "blood",
+    "strength",
+    "cold",
+    "giant"
+   ],
+   "desc": "Pale blue and slushy, it frosts the glass from the inside and hums with the patience of glaciers.",
+   "perish": "1 week",
+   "value": 6000,
+   "recipe": {
+    "components": [
+     {
+      "m": "frost-giant-blood",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "frost-giant-essence",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "frost-giant-glacial-ice-shard",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "crystal-vial",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 19,
+    "time": "3 days",
+    "gp": 1000,
+    "level": 11,
+    "spells": [
+     "enlarge/reduce"
+    ],
+    "yields": 1,
+    "lore": "Three measures of frost giant blood are reduced over a slow flame with the giant's captured essence until only the stubborn, bone-deep might of the bloodline remains."
+   }
+  },
+  {
+   "id": "distilled-fire-giant-might",
+   "name": "Distilled Fire Giant Might",
+   "tier": "very-rare",
+   "tags": [
+    "essence",
+    "blood",
+    "strength",
+    "fire",
+    "giant"
+   ],
+   "desc": "A glowing orange draught that ticks like cooling iron and warms the hand through a thick glove.",
+   "perish": "1 week",
+   "value": 8000,
+   "recipe": {
+    "components": [
+     {
+      "m": "fire-giant-blood",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "fire-giant-essence",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "fire-giant-forge-ash",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "crystal-vial",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 19,
+    "time": "3 days",
+    "gp": 1000,
+    "level": 11,
+    "spells": [
+     "enlarge/reduce"
+    ],
+    "yields": 1,
+    "lore": "Three measures of fire giant blood are reduced over a slow flame with the giant's captured essence until only the stubborn, bone-deep might of the bloodline remains."
+   }
+  },
+  {
+   "id": "distilled-cloud-giant-might",
+   "name": "Distilled Cloud Giant Might",
+   "tier": "legendary",
+   "tags": [
+    "essence",
+    "blood",
+    "strength",
+    "air",
+    "giant"
+   ],
+   "desc": "Opalescent vapour that is somehow also a liquid; the vial tries to float out of your grip.",
+   "perish": "1 week",
+   "value": 24000,
+   "recipe": {
+    "components": [
+     {
+      "m": "cloud-giant-blood",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "cloud-giant-essence",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "cloud-giant-sky-silver",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "crystal-vial",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 23,
+    "time": "3 days",
+    "gp": 5000,
+    "level": 17,
+    "spells": [
+     "enlarge/reduce"
+    ],
+    "yields": 1,
+    "lore": "Three measures of cloud giant blood are reduced over a slow flame with the giant's captured essence until only the stubborn, bone-deep might of the bloodline remains."
+   }
+  },
+  {
+   "id": "distilled-storm-giant-might",
+   "name": "Distilled Storm Giant Might",
+   "tier": "legendary",
+   "tags": [
+    "essence",
+    "blood",
+    "strength",
+    "lightning",
+    "giant"
+   ],
+   "desc": "Sea-green and crackling, it smells of ozone and brine, and tiny sparks leap between the bubbles.",
+   "perish": "1 week",
+   "value": 32000,
+   "recipe": {
+    "components": [
+     {
+      "m": "storm-giant-blood",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "storm-giant-essence",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "storm-giant-sea-storm-pearl",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "crystal-vial",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 23,
+    "time": "3 days",
+    "gp": 5000,
+    "level": 17,
+    "spells": [
+     "enlarge/reduce"
+    ],
+    "yields": 1,
+    "lore": "Three measures of storm giant blood are reduced over a slow flame with the giant's captured essence until only the stubborn, bone-deep might of the bloodline remains."
+   }
+  },
+  {
+   "id": "quickening-tincture",
+   "name": "Quickening Tincture",
+   "tier": "rare",
+   "tags": [
+    "liquid",
+    "reagent",
+    "speed",
+    "arcane"
+   ],
+   "desc": "A jittery, amber-bright tincture that sloshes a heartbeat ahead of the vial. Cobblers and farriers soak leather and iron in it to make them hurry.",
+   "perish": "1 week",
+   "value": 1600,
+   "recipe": {
+    "components": [
+     {
+      "m": "quickthorn-berry",
+      "q": 6,
+      "role": "supporting"
+     },
+     {
+      "m": "air-elemental-core",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "blink-dog-essence",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "quicksilver",
+      "q": 1,
+      "role": "binding"
+     },
+     {
+      "m": "crystal-vial",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies",
+     "herbalism-kit"
+    ],
+    "station": "alchemy-lab",
+    "dc": 16,
+    "time": "4 days",
+    "gp": 200,
+    "level": 6,
+    "spells": [
+     "haste"
+    ],
+    "yields": 1,
+    "lore": "Quickthorn gives the rush, the air core gives the lightness, and the blink dog's essence teaches the mixture to be somewhere else a moment early."
+   }
+  },
+  {
+   "id": "matriarch-spider-silk",
+   "name": "Matriarch Spider Silk",
+   "tier": "very-rare",
+   "tags": [
+    "silk",
+    "thread",
+    "climbing",
+    "poison",
+    "resistance"
+   ],
+   "desc": "Silvery-black thread that clings to anything and drips faintly with a venom it can no longer use. Spun only when a drider's silk is fed through a phase spider's spinnerets.",
+   "perish": "stable",
+   "value": 6000,
+   "recipe": {
+    "components": [
+     {
+      "m": "drider-silk-gland",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "drider-essence",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "phase-spider-silk",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "giant-spider-silk",
+      "q": 6,
+      "role": "supporting"
+     },
+     {
+      "m": "spider-silk-thread",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "weavers-tools",
+     "alchemists-supplies"
+    ],
+    "station": "loom",
+    "dc": 19,
+    "time": "10 days",
+    "gp": 1500,
+    "level": 11,
+    "spells": [
+     "web",
+     "spider climb"
+    ],
+    "yields": 1,
+    "lore": "Spider-crafters say every web remembers its mother: bind the silks of three spider kinds around a drider's cursed essence and the thread takes on the authority of a queen."
+   }
+  }
+ ],
+ "items": [
+  {
+   "id": "alchemy-jug",
+   "name": "Alchemy Jug",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "container",
+    "water"
+   ],
+   "effect": "A heavy ceramic jug that, on command, fills with one chosen liquid - fresh or salt water, beer, wine, honey, oil, vinegar, even acid - in set daily amounts.",
+   "value": 450,
+   "recipe": {
+    "components": [
+     {
+      "m": "jug",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "primordial-brine",
+       "water-elemental-core",
+       "doppelganger-blood"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Mutable liquid source (uncommon+)"
+     },
+     {
+      "m": "vinegar",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "honey",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "spirits",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "quicksilver",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "potters-tools",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "create or destroy water"
+    ],
+    "yields": 1,
+    "lore": "A potter fires the keystone into the jug's glaze; a doppelganger's blood will imitate any liquid it has tasted, which is why a drop of each common brew is swirled inside before the final firing."
+   }
+  },
+  {
+   "id": "amulet-of-health",
+   "name": "Amulet of Health",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "jewelry",
+    "toughness",
+    "healing"
+   ],
+   "effect": "While worn, your Constitution becomes 19 unless it is already higher, as if your blood had been replaced with something far hardier.",
+   "value": 4000,
+   "recipe": {
+    "components": [
+     {
+      "m": "amulet-setting",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "troll-regenerating-heart",
+       "hydra-heart",
+       "tyrannosaurus-rex-heart"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Indomitable heart (rare)"
+     },
+     {
+      "m": "bloodstone",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "giant-boar-heart",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "gold-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools",
+     "alchemists-supplies"
+    ],
+    "station": "jewelers-bench",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "lesser restoration",
+     "aid"
+    ],
+    "yields": 1,
+    "lore": "A sliver of a heart that refused to stop beating is sealed behind bloodstone, and a boar's heart is rendered into the setting's lacquer so the vigour has something warm to cling to."
+   }
+  },
+  {
+   "id": "amulet-of-proof-against-detection-and-location",
+   "name": "Amulet of Proof against Detection and Location",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "jewelry",
+    "antimagic",
+    "stealth"
+   ],
+   "effect": "While worn, divination magic cannot find you or perceive you through magical scrying sensors.",
+   "value": 440,
+   "recipe": {
+    "components": [
+     {
+      "m": "amulet-setting",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "nullthorn",
+       "green-hag-essence",
+       "invisible-stalker-core",
+       "cloaker-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Warding or concealing essence (uncommon+)"
+     },
+     {
+      "m": "pseudodragon-scales",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "lead-ingot",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "smoky-quartz",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools",
+     "smiths-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "nondetection"
+    ],
+    "yields": 1,
+    "lore": "Old spies swear by a lead backing - scrying eyes slide off it - and pseudodragon scales, which shrug off spells in life, are laid beneath the keystone like roof tiles."
+   }
+  },
+  {
+   "id": "amulet-of-the-planes",
+   "name": "Amulet of the Planes",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "jewelry",
+    "planar",
+    "teleport"
+   ],
+   "effect": "Lets you attempt to cast plane shift; a mistake can fling you and your companions onto a random plane instead of your destination.",
+   "value": 25000,
+   "recipe": {
+    "components": [
+     {
+      "m": "amulet-setting",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "nalfeshnee-essence",
+       "dead-god-stone"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Plane-walking keystone (very rare+)"
+     },
+     {
+      "m": "astral-silver-thread",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "color-pool-glass",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "phase-spider-eye",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "quicksilver",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "plane shift"
+    ],
+    "requires": "The crafter must have travelled to at least one other plane.",
+    "yields": 1,
+    "lore": "The keystone is ringed by chips of colour-pool glass, one per plane the jeweller has personally visited; the more chips, crafters say, the fewer wrong turns."
+   }
+  },
+  {
+   "id": "apparatus-of-the-crab",
+   "name": "Apparatus of the Crab",
+   "cat": "wondrous",
+   "tier": "legendary",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "water",
+    "swimming"
+   ],
+   "effect": "A sealed iron barrel that unfolds into a huge mechanical crab, crewed from inside by levers; it walks the seabed, swims, grips with pincers and lights the depths with its eyes.",
+   "value": 90000,
+   "recipe": {
+    "components": [
+     {
+      "m": "steel-plates",
+      "q": 30,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "kraken-essence",
+       "dragon-turtle-heart",
+       "tideheart-pearl"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Heart of the deep sea (legendary)"
+     },
+     {
+      "m": "giant-crab-shell",
+      "q": 6,
+      "role": "supporting"
+     },
+     {
+      "m": "giant-crab-pincer",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "chuul-carapace",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "pitch",
+      "q": 10,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "tinkers-tools"
+    ],
+    "station": "workshop",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "water breathing",
+     "animate objects"
+    ],
+    "yields": 1,
+    "lore": "Tinkers copy the joints of a giant crab plate for plate, then trust a heart that commanded the ocean to make the whole contraption believe it belongs underwater."
+   }
+  },
+  {
+   "id": "bag-of-beans",
+   "name": "Bag of Beans",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "container",
+    "growth",
+    "luck"
+   ],
+   "effect": "A cloth bag of dry beans; tip them out and they scatter harmlessly, but plant one and something unpredictable sprouts - a feast, a geyser, a monster, a castle in the clouds.",
+   "value": 2100,
+   "recipe": {
+    "components": [
+     {
+      "m": "bag",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "dreamfruit",
+       "everbloom-heartroot",
+       "treant-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Wild-growth keystone (rare+)"
+     },
+     {
+      "m": "giantcap-mushroom",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "grain",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "four-leaf-clover",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "herbalism-kit",
+     "weavers-tools"
+    ],
+    "station": "none",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "plant growth"
+    ],
+    "yields": 1,
+    "lore": "Ordinary beans are soaked for a month in water steeped with the keystone; they come out dreaming of what they might become, and nobody - least of all the herbalist - can say which dream wins."
+   }
+  },
+  {
+   "id": "bag-of-devouring",
+   "name": "Bag of Devouring",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "container",
+    "planar",
+    "acid"
+   ],
+   "effect": "Looks like a bag of holding, but it is the mouth of an extradimensional beast: anything living that reaches inside may be dragged in and swallowed for good.",
+   "value": 11000,
+   "recipe": {
+    "components": [
+     {
+      "m": "bag",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "purple-worm-gullet",
+       "purple-worm-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Purple worm gullet or essence (very rare)"
+     },
+     {
+      "m": "gelatinous-cube-nucleus",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "phase-spider-silk",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "mimic-adhesive",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "weavers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "banishment"
+    ],
+    "yields": 1,
+    "lore": "Usually made by accident: a crafter lines a holding-bag with purple worm gullet to save on astral thread, and the gullet remembers that it was once a stomach."
+   }
+  },
+  {
+   "id": "bag-of-holding",
+   "name": "Bag of Holding",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "container",
+    "planar"
+   ],
+   "effect": "A plain sack whose inside is far larger than its outside, holding up to 500 pounds while weighing only 15; pierce it or cram it into another extradimensional space and it ruptures.",
+   "value": 500,
+   "recipe": {
+    "components": [
+     {
+      "m": "bag",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "phase-spider-silk",
+       "phase-spider-essence",
+       "astral-silver-thread",
+       "purple-worm-gullet"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Space-folding keystone (uncommon+)"
+     },
+     {
+      "m": "silk-cloth",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "giant-spider-silk",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "spider-silk-thread",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "weavers-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "loom",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "rope trick"
+    ],
+    "yields": 1,
+    "lore": "The lining is woven from silk that already knows how to slip between planes; tailors stitch the seams inside-out so the extra room folds away instead of spilling out."
+   }
+  },
+  {
+   "id": "bag-of-tricks-gray",
+   "name": "Bag of Tricks (Gray)",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "container",
+    "shapechange",
+    "beast"
+   ],
+   "effect": "A gray bag holding small fuzzy balls; pull one out and throw it, and it becomes a random beast that obeys you until the next dawn. Its roster of animals depends on the bag's colour.",
+   "value": 400,
+   "recipe": {
+    "components": [
+     {
+      "m": "pouch",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "werewolf-blood",
+       "doppelganger-blood"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Shapeshifter's blood (uncommon+)"
+     },
+     {
+      "oneOf": [
+       "wolf-pelt",
+       "giant-badger-pelt",
+       "weasel-pelt"
+      ],
+      "q": 3,
+      "role": "supporting",
+      "label": "Fur from a gray-bag beast"
+     },
+     {
+      "m": "wool-cloth",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "horsehair",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "weavers-tools"
+    ],
+    "station": "tannery",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "conjure animals"
+    ],
+    "yields": 1,
+    "lore": "Scraps of fur are felted into little balls around a drop of shapeshifter's blood; each ball remembers the shape of the pelt it came from and longs to be it again."
+   }
+  },
+  {
+   "id": "bag-of-tricks-rust",
+   "name": "Bag of Tricks (Rust)",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "container",
+    "shapechange",
+    "beast"
+   ],
+   "effect": "A rust bag holding small fuzzy balls; pull one out and throw it, and it becomes a random beast that obeys you until the next dawn. Its roster of animals depends on the bag's colour.",
+   "value": 400,
+   "recipe": {
+    "components": [
+     {
+      "m": "pouch",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "wereboar-blood",
+       "werebear-blood",
+       "doppelganger-blood"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Shapeshifter's blood (uncommon+)"
+     },
+     {
+      "oneOf": [
+       "giant-rat-pelt",
+       "giant-goat-fleece",
+       "lion-pelt"
+      ],
+      "q": 3,
+      "role": "supporting",
+      "label": "Fur from a rust-bag beast"
+     },
+     {
+      "m": "wool-cloth",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "horsehair",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "weavers-tools"
+    ],
+    "station": "tannery",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "conjure animals"
+    ],
+    "yields": 1,
+    "lore": "Scraps of fur are felted into little balls around a drop of shapeshifter's blood; each ball remembers the shape of the pelt it came from and longs to be it again."
+   }
+  },
+  {
+   "id": "bag-of-tricks-tan",
+   "name": "Bag of Tricks (Tan)",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "container",
+    "shapechange",
+    "beast"
+   ],
+   "effect": "A tan bag holding small fuzzy balls; pull one out and throw it, and it becomes a random beast that obeys you until the next dawn. Its roster of animals depends on the bag's colour.",
+   "value": 400,
+   "recipe": {
+    "components": [
+     {
+      "m": "pouch",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "weretiger-blood",
+       "werebear-blood",
+       "doppelganger-blood"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Shapeshifter's blood (uncommon+)"
+     },
+     {
+      "oneOf": [
+       "jackal-pelt",
+       "ape-hide",
+       "giant-hyena-pelt"
+      ],
+      "q": 3,
+      "role": "supporting",
+      "label": "Fur from a tan-bag beast"
+     },
+     {
+      "m": "wool-cloth",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "horsehair",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "weavers-tools"
+    ],
+    "station": "tannery",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "conjure animals"
+    ],
+    "yields": 1,
+    "lore": "Scraps of fur are felted into little balls around a drop of shapeshifter's blood; each ball remembers the shape of the pelt it came from and longs to be it again."
+   }
+  },
+  {
+   "id": "belt-of-dwarvenkind",
+   "name": "Belt of Dwarvenkind",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "toughness",
+    "darkvision",
+    "earth"
+   ],
+   "effect": "Makes you hardier and better liked by dwarves, grants darkvision, resistance to poison and the dwarvish tongue; worn long enough, it may even grow you a beard.",
+   "value": 4500,
+   "recipe": {
+    "components": [
+     {
+      "m": "belt",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "stone-giant-heartstone",
+       "living-stone",
+       "earthheart-geode"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Living stone of the deep (rare+)"
+     },
+     {
+      "m": "adamantine-ingot",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "duergar-ironforged-plate",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "stoneroot",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "leather-strips",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "darkvision",
+     "protection from poison"
+    ],
+    "yields": 1,
+    "lore": "Dwarven smiths set a pulse of living stone into an adamantine buckle; stoneroot tanned into the leather teaches the wearer's stomach to be as unbothered as bedrock."
+   }
+  },
+  {
+   "id": "belt-of-giant-strength-hill",
+   "name": "Belt of Hill Giant Strength",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "strength",
+    "giant"
+   ],
+   "effect": "While worn, your Strength score becomes that of a hill giant, unless yours is already greater.",
+   "value": 4500,
+   "recipe": {
+    "components": [
+     {
+      "m": "belt",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "distilled-hill-giant-might",
+       "giant-ape-heart"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Hill giant might (rare)"
+     },
+     {
+      "m": "hill-giant-club-iron",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "giants-knuckle-root",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "giant-constrictor-snake-coil-muscle",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "smiths-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "enlarge/reduce",
+     "enhance ability"
+    ],
+    "requires": "If a distillate is used, it must come from a hill giant the crafter or their companions defeated.",
+    "yields": 1,
+    "lore": "The leather is soaked in distilled hill giant might until it will not bend for a human hand; a trophy from the same giant is worked into the buckle so the strength knows whose it is."
+   }
+  },
+  {
+   "id": "belt-of-giant-strength-stone",
+   "name": "Belt of Stone Giant Strength",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "strength",
+    "giant"
+   ],
+   "effect": "While worn, your Strength score becomes that of a stone giant, unless yours is already greater.",
+   "value": 15000,
+   "recipe": {
+    "components": [
+     {
+      "m": "belt",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "distilled-stone-giant-might",
+       "earthheart-geode"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Stone giant might (very-rare)"
+     },
+     {
+      "m": "stone-giant-throwing-boulder-shard",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "giants-knuckle-root",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "giant-constrictor-snake-coil-muscle",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "smiths-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "enlarge/reduce",
+     "stoneskin"
+    ],
+    "requires": "If a distillate is used, it must come from a stone giant the crafter or their companions defeated.",
+    "yields": 1,
+    "lore": "The leather is soaked in distilled stone giant might until it will not bend for a human hand; a trophy from the same giant is worked into the buckle so the strength knows whose it is."
+   }
+  },
+  {
+   "id": "belt-of-giant-strength-frost",
+   "name": "Belt of Frost Giant Strength",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "strength",
+    "giant"
+   ],
+   "effect": "While worn, your Strength score becomes that of a frost giant, unless yours is already greater.",
+   "value": 16300,
+   "recipe": {
+    "components": [
+     {
+      "m": "belt",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "distilled-frost-giant-might",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "frost-giant-braid",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "giants-knuckle-root",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "giant-constrictor-snake-coil-muscle",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "smiths-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "enlarge/reduce",
+     "protection from energy"
+    ],
+    "requires": "The distillate must come from a frost giant the crafter or their companions defeated.",
+    "yields": 1,
+    "lore": "The leather is soaked in distilled frost giant might until it will not bend for a human hand; a trophy from the same giant is worked into the buckle so the strength knows whose it is."
+   }
+  },
+  {
+   "id": "belt-of-giant-strength-fire",
+   "name": "Belt of Fire Giant Strength",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "strength",
+    "giant"
+   ],
+   "effect": "While worn, your Strength score becomes that of a fire giant, unless yours is already greater.",
+   "value": 20000,
+   "recipe": {
+    "components": [
+     {
+      "m": "belt",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "distilled-fire-giant-might",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "fire-giant-cinder-braid",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "giants-knuckle-root",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "giant-constrictor-snake-coil-muscle",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "smiths-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "enlarge/reduce",
+     "protection from energy"
+    ],
+    "requires": "The distillate must come from a fire giant the crafter or their companions defeated.",
+    "yields": 1,
+    "lore": "The leather is soaked in distilled fire giant might until it will not bend for a human hand; a trophy from the same giant is worked into the buckle so the strength knows whose it is."
+   }
+  },
+  {
+   "id": "belt-of-giant-strength-cloud",
+   "name": "Belt of Cloud Giant Strength",
+   "cat": "wondrous",
+   "tier": "legendary",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "strength",
+    "giant"
+   ],
+   "effect": "While worn, your Strength score becomes that of a cloud giant, unless yours is already greater.",
+   "value": 72200,
+   "recipe": {
+    "components": [
+     {
+      "m": "belt",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "distilled-cloud-giant-might",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "cloud-giant-sky-silver",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "giants-knuckle-root",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "giant-constrictor-snake-coil-muscle",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "smiths-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "enlarge/reduce",
+     "fly"
+    ],
+    "requires": "The distillate must come from a cloud giant the crafter or their companions defeated.",
+    "yields": 1,
+    "lore": "The leather is soaked in distilled cloud giant might until it will not bend for a human hand; a trophy from the same giant is worked into the buckle so the strength knows whose it is."
+   }
+  },
+  {
+   "id": "belt-of-giant-strength-storm",
+   "name": "Belt of Storm Giant Strength",
+   "cat": "wondrous",
+   "tier": "legendary",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "strength",
+    "giant"
+   ],
+   "effect": "While worn, your Strength score becomes that of a storm giant, unless yours is already greater.",
+   "value": 81000,
+   "recipe": {
+    "components": [
+     {
+      "m": "belt",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "distilled-storm-giant-might",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "storm-giant-lightning-veined-hair",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "giants-knuckle-root",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "giant-constrictor-snake-coil-muscle",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "smiths-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "enlarge/reduce",
+     "control weather"
+    ],
+    "requires": "The distillate must come from a storm giant the crafter or their companions defeated.",
+    "yields": 1,
+    "lore": "The leather is soaked in distilled storm giant might until it will not bend for a human hand; a trophy from the same giant is worked into the buckle so the strength knows whose it is."
+   }
+  },
+  {
+   "id": "boots-of-elvenkind",
+   "name": "Boots of Elvenkind",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "stealth",
+    "sound"
+   ],
+   "effect": "Soft boots that make no sound at all, whatever you walk on; you have advantage on Stealth checks that rely on moving quietly.",
+   "value": 430,
+   "recipe": {
+    "components": [
+     {
+      "m": "boots",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "green-hag-essence",
+       "invisible-stalker-core",
+       "glasswing-orchid"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Unseen, unheard essence (uncommon+)"
+     },
+     {
+      "m": "owl-feather",
+      "q": 4,
+      "role": "supporting"
+     },
+     {
+      "m": "hushmoss",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "cat-whiskers",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "cobblers-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "workshop",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "pass without trace"
+    ],
+    "yields": 1,
+    "lore": "Owl down is quilted into the soles and hushmoss packed into the heels; cobblers stitch in a cat's whisker so the boots know where not to step."
+   }
+  },
+  {
+   "id": "boots-of-levitation",
+   "name": "Boots of Levitation",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "flight",
+    "air"
+   ],
+   "effect": "While wearing them, you can cast levitate on yourself at will.",
+   "value": 4000,
+   "recipe": {
+    "components": [
+     {
+      "m": "boots",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "skyfloat-thistle",
+       "cloud-giant-cloudstuff",
+       "djinni-cloudsilk-hair"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Buoyant keystone (rare+)"
+     },
+     {
+      "m": "solid-cloud",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "earthmote-stone",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "feather-fern",
+      "q": 3,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "cobblers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "levitate"
+    ],
+    "yields": 1,
+    "lore": "Chips of earthmote stone are hammered into the heels - they hover of their own accord - and the keystone is sewn into the tongue so the boots rise when their wearer wills it."
+   }
+  },
+  {
+   "id": "boots-of-speed",
+   "name": "Boots of Speed",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "speed"
+   ],
+   "effect": "Click the heels and your walking speed doubles and attacks of opportunity against you falter; the effect lasts up to 10 minutes a day.",
+   "value": 4000,
+   "recipe": {
+    "components": [
+     {
+      "m": "boots",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "quickening-tincture",
+       "marilith-scales"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Quickening keystone (rare+)"
+     },
+     {
+      "m": "quickthorn-berry",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "blink-dog-pelt",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "oneOf": [
+       "tiger-sinew",
+       "riding-horse-sinew",
+       "panther-hamstring"
+      ],
+      "q": 2,
+      "role": "supporting",
+      "label": "Sprinter's sinew"
+     }
+    ],
+    "tools": [
+     "cobblers-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "workshop",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "haste"
+    ],
+    "yields": 1,
+    "lore": "Cobblers soak the uppers in quickening tincture and lace them with a sprinter's sinew; a blink dog's pelt lines the heel, so every click lands a moment before it should."
+   }
+  },
+  {
+   "id": "boots-of-striding-and-springing",
+   "name": "Boots of Striding and Springing",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "speed"
+   ],
+   "effect": "Your walking speed becomes 30 feet no matter how laden you are, and you can leap three times as far as normal.",
+   "value": 500,
+   "recipe": {
+    "components": [
+     {
+      "m": "boots",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "unicorn-hooves",
+       "nightmare-hooves",
+       "pegasus-flight-feather"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Swift-hoof or wing keystone (uncommon+)"
+     },
+     {
+      "m": "axe-beak-leg-sinew",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "giant-goat-hooves",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "giant-frog-skin",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "cobblers-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "workshop",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "jump",
+     "longstrider"
+    ],
+    "yields": 1,
+    "lore": "Axe beak tendons form the springs in the sole, goat hoof plates the toe caps, and frog skin the inner lining - every creature in the boot is a born jumper."
+   }
+  },
+  {
+   "id": "boots-of-the-winterlands",
+   "name": "Boots of the Winterlands",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "cold",
+    "resistance"
+   ],
+   "effect": "Fur-lined boots that grant resistance to cold, let you cross ice and snow without slowing, and keep you comfortable in bitter cold.",
+   "value": 500,
+   "recipe": {
+    "components": [
+     {
+      "m": "boots",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "winter-wolf-essence",
+       "young-white-dragon-essence",
+       "frost-giant-braid"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Arctic keystone (uncommon+)"
+     },
+     {
+      "m": "polar-bear-pelt",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "polar-bear-fat",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "frost-lichen",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "cobblers-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "tannery",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "protection from energy"
+    ],
+    "yields": 1,
+    "lore": "Polar bear hide wraps the outside and its rendered fat waterproofs the seams; frost lichen is ground into the tanning brine, because a plant that thrives on glaciers knows how to keep a foot alive there."
+   }
+  },
+  {
+   "id": "bowl-of-commanding-water-elementals",
+   "name": "Bowl of Commanding Water Elementals",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "water",
+    "elemental",
+    "domination"
+   ],
+   "effect": "Fill it with water and speak the word, and a water elemental rises from it to serve you for up to an hour. Usable once per day.",
+   "value": 4000,
+   "recipe": {
+    "components": [
+     {
+      "m": "bowl",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "pure-water-pearl",
+       "dragon-turtle-essence",
+       "aboleth-mucus",
+       "young-bronze-dragon-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Greater water source (rare+): pure-water pearl, dragon turtle essence, aboleth mucus or young bronze dragon essence"
+     },
+     {
+      "m": "water-elemental-core",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "primordial-brine",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "aquamarine",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "potters-tools",
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "conjure elemental"
+    ],
+    "yields": 1,
+    "lore": "A lesser water elemental's core is sealed into the bowl as a lure; the rarer keystone is the leash - elementals answer to anything that holds a purer piece of their home plane than they do. Aboleth mucus, which lets air-breathers live under water, or a sea-loving bronze dragon's essence carry the deep ocean's authority."
+   }
+  },
+  {
+   "id": "brazier-of-commanding-fire-elementals",
+   "name": "Brazier of Commanding Fire Elementals",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "fire",
+    "elemental",
+    "domination"
+   ],
+   "effect": "Light a fire in it and speak the word, and a fire elemental steps out of the flames to serve you for up to an hour. Usable once per day.",
+   "value": 4000,
+   "recipe": {
+    "components": [
+     {
+      "m": "brazier",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "eternal-coal",
+       "efreeti-brazier-core",
+       "living-flame-ember",
+       "fire-giant-essence",
+       "young-red-dragon-breath-gland"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Greater fire source (rare+): eternal coal, efreeti core, living flame, fire giant essence or a young red dragon's breath gland"
+     },
+     {
+      "m": "fire-elemental-core",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "fire-elemental-everburning-cinder",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "brimstone",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "conjure elemental"
+    ],
+    "yields": 1,
+    "lore": "A lesser fire elemental's core is sealed into the brazier as a lure; the rarer keystone is the leash - elementals answer to anything that holds a purer piece of their home plane than they do. Fire elementals also answer to the essence of a fire giant, whose clans have bound them to their forges for ages, or to a red dragon's breath gland."
+   }
+  },
+  {
+   "id": "censer-of-controlling-air-elementals",
+   "name": "Censer of Controlling Air Elementals",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "air",
+    "elemental",
+    "domination"
+   ],
+   "effect": "Swing it while incense burns and speak the word, and an air elemental coalesces from the smoke to serve you for up to an hour. Usable once per day.",
+   "value": 4000,
+   "recipe": {
+    "components": [
+     {
+      "m": "censer",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "stormglass",
+       "djinni-tempest-core",
+       "roc-essence",
+       "cloud-giant-essence",
+       "young-blue-dragon-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Greater air source (rare+): stormglass, djinni core, roc essence, cloud giant essence or young blue dragon essence"
+     },
+     {
+      "m": "air-elemental-core",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "turquoise",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "frankincense",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "conjure elemental"
+    ],
+    "yields": 1,
+    "lore": "A lesser air elemental's core is sealed into the censer as a lure; the rarer keystone is the leash - elementals answer to anything that holds a purer piece of their home plane than they do. A cloud giant's essence, born of the high winds, or a young blue dragon's storm-charged essence can stand in for a genie's core."
+   }
+  },
+  {
+   "id": "bracers-of-archery",
+   "name": "Bracers of Archery",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "bow",
+    "senses"
+   ],
+   "effect": "While worn, you are proficient with longbows and shortbows and deal extra damage with arrows fired from them.",
+   "value": 440,
+   "recipe": {
+    "components": [
+     {
+      "m": "bracers",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "manticore-tail-spike",
+       "hell-hound-essence",
+       "erinyes-eye"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Unerring hunter keystone (uncommon+)"
+     },
+     {
+      "m": "giant-eagle-eye",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "hawk-talon",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "bowstring",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "hunter's mark"
+    ],
+    "yields": 1,
+    "lore": "Fletchers stitch a bowstring along the inner seam so the wrist learns its tension, and a hawk's talon is set over the pulse point - the bird never misses what it dives on."
+   }
+  },
+  {
+   "id": "bracers-of-defense",
+   "name": "Bracers of Defense",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "protection"
+   ],
+   "effect": "While you wear no armor and carry no shield, these bracers improve your Armor Class by 2.",
+   "value": 5000,
+   "recipe": {
+    "components": [
+     {
+      "m": "bracers",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "shield-guardian-core",
+       "guardian-naga-scale",
+       "ice-devil-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Guardian keystone (rare+)"
+     },
+     {
+      "m": "jade",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "ironbark",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "giant-scorpion-carapace",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "mage armor",
+     "shield of faith"
+    ],
+    "yields": 1,
+    "lore": "Ironbark splints are sandwiched with scorpion carapace, then inlaid with jade; the keystone, taken from a thing that existed only to protect, spreads its vigilance across the unarmoured body."
+   }
+  },
+  {
+   "id": "brooch-of-shielding",
+   "name": "Brooch of Shielding",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "jewelry",
+    "force",
+    "protection"
+   ],
+   "effect": "Grants resistance to force damage and complete immunity to the magic missile spell.",
+   "value": 350,
+   "recipe": {
+    "components": [
+     {
+      "m": "brooch",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "meteoric-iron",
+       "halo-quartz",
+       "barbed-devil-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Warding keystone (uncommon+)"
+     },
+     {
+      "m": "silver-wire",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "amethyst",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "shield"
+    ],
+    "yields": 1,
+    "lore": "Star-fallen iron has already survived the greatest force there is; jewellers say a brooch of it simply refuses to be struck twice."
+   }
+  },
+  {
+   "id": "broom-of-flying",
+   "name": "Broom of Flying",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "flight",
+    "air"
+   ],
+   "effect": "Speak its command word and the broom floats; you can ride it through the air, and it will fly alone to a spot you name within a mile.",
+   "value": 500,
+   "recipe": {
+    "components": [
+     {
+      "m": "broom",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "air-elemental-core",
+       "pegasus-flight-feather",
+       "solid-cloud"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Airborne keystone (uncommon+)"
+     },
+     {
+      "m": "feather-fern",
+      "q": 4,
+      "role": "supporting"
+     },
+     {
+      "m": "hippogriff-feather",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "elder-wood",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "weavers-tools"
+    ],
+    "station": "workshop",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "fly"
+    ],
+    "yields": 1,
+    "lore": "Hedge-witches bind feather-fern into the bristles and hippogriff quills into the collar; the elder-wood handle is cut on a windy night so it already knows the way up."
+   }
+  },
+  {
+   "id": "candle-of-invocation",
+   "name": "Candle of Invocation",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "light",
+    "celestial",
+    "blessing",
+    "planar"
+   ],
+   "effect": "A slender taper tied to one alignment; while it burns, worshippers of that outlook fight and cast better, clerics recover spell power, and burning it out entirely can open a gate to its god's realm.",
+   "value": 20000,
+   "recipe": {
+    "components": [
+     {
+      "m": "candle",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "planetar-essence",
+       "androsphinx-essence",
+       "nalfeshnee-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Divine or infernal messenger essence (very rare)"
+     },
+     {
+      "m": "beeswax",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "frankincense",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "holy-spring-water",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "shrine",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "commune",
+     "planar ally"
+    ],
+    "requires": "Crafted on consecrated ground of the candle's alignment.",
+    "yields": 1,
+    "lore": "The wick is steeped in the essence of an outsider who served the chosen alignment; its light is literally a prayer that has not finished being answered."
+   }
+  },
+  {
+   "id": "cap-of-water-breathing",
+   "name": "Cap of Water Breathing",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "breathing",
+    "water"
+   ],
+   "effect": "Speak the word underwater and a bubble of breathable air forms around your head until you speak it again.",
+   "value": 350,
+   "recipe": {
+    "components": [
+     {
+      "m": "cap",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "gillweed-kelp",
+       "water-elemental-core",
+       "aboleth-mucus"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Water-breath keystone (uncommon+)"
+     },
+     {
+      "oneOf": [
+       "giant-sea-horse-swim-bladder",
+       "killer-whale-lungs",
+       "plesiosaurus-lung"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Air bladder or lung"
+     },
+     {
+      "m": "bladderwrack",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "loom",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "water breathing"
+    ],
+    "yields": 1,
+    "lore": "A sea creature's swim bladder is sewn into the crown and inflated with the keystone's breath; knitters say the cap is simply a lung that learned to stay on the outside."
+   }
+  },
+  {
+   "id": "cape-of-the-mountebank",
+   "name": "Cape of the Mountebank",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "teleport"
+   ],
+   "effect": "Smells faintly of brimstone; once a day you can cast dimension door, vanishing and reappearing in puffs of smoke.",
+   "value": 3500,
+   "recipe": {
+    "components": [
+     {
+      "m": "cloak",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "astral-silver-thread",
+       "efreeti-brass-cinders",
+       "nalfeshnee-wing"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Planar step keystone (rare+)"
+     },
+     {
+      "m": "blink-dog-pelt",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "sulfur",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "dye-purple",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "loom",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "dimension door"
+    ],
+    "yields": 1,
+    "lore": "Stage magicians insisted on the sulphur for effect; the dimension door works without it, but no one has ever dared to leave the smoke out."
+   }
+  },
+  {
+   "id": "carpet-of-flying",
+   "name": "Carpet of Flying",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "flight"
+   ],
+   "effect": "A rug that flies on command; the bigger the carpet, the more it carries and the slower it goes.",
+   "value": 25000,
+   "recipe": {
+    "components": [
+     {
+      "m": "carpet",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "planetar-feather",
+       "solar-feather",
+       "cloud-giant-blood"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Sky-sovereign keystone (very rare)"
+     },
+     {
+      "m": "djinni-cloudsilk-hair",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "solid-cloud",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "silk-cloth",
+      "q": 10,
+      "role": "supporting"
+     },
+     {
+      "m": "silk-thread",
+      "q": 4,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "loom",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "fly"
+    ],
+    "yields": 1,
+    "lore": "Weavers knot djinni hair into the warp and a celestial feather into the centre medallion; they say the pattern must be a map of wind, or the carpet sulks and stays on the floor."
+   }
+  },
+  {
+   "id": "chime-of-opening",
+   "name": "Chime of Opening",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "sound",
+    "gear"
+   ],
+   "effect": "A hollow metal tube; strike it toward a door, lock, lid or shackle up to 120 feet away and one lock or bar opens with its ringing tone. It cracks after ten uses.",
+   "value": 2200,
+   "recipe": {
+    "components": [
+     {
+      "m": "silver-ingot",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "djinni-tempest-core",
+       "stormglass",
+       "androsphinx-roar-larynx",
+       "cloaker-moan-sac"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Resonant keystone (rare+): djinni core, stormglass, androsphinx larynx or a cloaker's moan sac"
+     },
+     {
+      "m": "resonant-crystal",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "thieves-tools-picks",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "kobold-trap-springs",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "tinkers-tools"
+    ],
+    "station": "forge",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "knock"
+    ],
+    "yields": 1,
+    "lore": "A set of a thief's picks is melted into the silver so the tube remembers every tumbler it ever lifted; the keystone gives it a voice loud enough for locks to hear. A cloaker's moan sac resonates at pitches that loosen more than nerves; tuned into the chime, it shakes bolts free."
+   }
+  },
+  {
+   "id": "circlet-of-blasting",
+   "name": "Circlet of Blasting",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "jewelry",
+    "fire"
+   ],
+   "effect": "Once per day, you can loose scorching rays of fire from the circlet.",
+   "value": 500,
+   "recipe": {
+    "components": [
+     {
+      "m": "circlet",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "fire-elemental-core",
+       "chimera-fire-gland",
+       "hell-hound-fire-gland",
+       "red-dragon-wyrmling-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Fire-breather keystone (uncommon+)"
+     },
+     {
+      "m": "garnet",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "gold-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "scorching ray"
+    ],
+    "yields": 1,
+    "lore": "The fire gland is dried to a brittle red crystal and set over the brow; garnets flank it to hold the heat until the wearer glares."
+   }
+  },
+  {
+   "id": "cloak-of-arachnida",
+   "name": "Cloak of Arachnida",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "climbing",
+    "poison",
+    "resistance"
+   ],
+   "effect": "Grants poison resistance, a climbing speed equal to your walking speed, the ability to cling upside down, immunity to webs, and once a day lets you conjure a vast sticky web.",
+   "value": 16400,
+   "recipe": {
+    "components": [
+     {
+      "m": "cloak",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "matriarch-spider-silk",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "phase-spider-silk",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "giant-spider-eyes",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "oneOf": [
+       "giant-spider-venom",
+       "phase-spider-venom",
+       "drider-venom"
+      ],
+      "q": 2,
+      "role": "supporting",
+      "label": "Spider venom"
+     }
+    ],
+    "tools": [
+     "weavers-tools",
+     "alchemists-supplies"
+    ],
+    "station": "loom",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "web",
+     "spider climb"
+    ],
+    "yields": 1,
+    "lore": "Spider venom is worked into the dye so the wearer's blood grows used to it; the eyes are sewn along the hem, because a spider never climbs anywhere it cannot see."
+   }
+  },
+  {
+   "id": "cloak-of-displacement",
+   "name": "Cloak of Displacement",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "illusion"
+   ],
+   "effect": "Projects an illusion that you stand slightly away from where you are, so attacks against you have disadvantage until you are hit; it resets each turn.",
+   "value": 5000,
+   "recipe": {
+    "components": [
+     {
+      "m": "cloak",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "cloaker-essence",
+       "oni-essence",
+       "mirage-lotus"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Illusion keystone (rare+)"
+     },
+     {
+      "m": "blink-dog-pelt",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "prism-crystal",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "octopus-skin",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "weavers-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "loom",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "blur"
+    ],
+    "yields": 1,
+    "lore": "Blink dog pelts are cut in strips and woven crosswise so the cloak is never quite sure where it is; octopus skin adds the knack of looking like somewhere else."
+   }
+  },
+  {
+   "id": "cloak-of-elvenkind",
+   "name": "Cloak of Elvenkind",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "stealth",
+    "fey"
+   ],
+   "effect": "With the hood up, observers have a hard time spotting you, and you have advantage on Stealth checks to hide as the cloak shifts to match your surroundings.",
+   "value": 500,
+   "recipe": {
+    "components": [
+     {
+      "m": "cloak",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "dire-wolf-pelt",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "whisperleaf-vine",
+      "q": 3,
+      "role": "keystone"
+     },
+     {
+      "oneOf": [
+       "sprite-essence",
+       "dryad-essence",
+       "blink-dog-essence"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Minor fey essence"
+     },
+     {
+      "m": "spider-silk-thread",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "weavers-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "loom",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "pass without trace"
+    ],
+    "yields": 1,
+    "lore": "Skin a dire wolf — the smoke-grey pelt of a hunter that moves without sound — and weave three lengths of whisperleaf vine through it, gathered at dusk where the Feywild seeps into old forests. The vine carries the magic: it borrows the colours of whatever is around it. A breath of minor fey essence reminds the cloak it would rather not be seen."
+   }
+  },
+  {
+   "id": "cloak-of-protection",
+   "name": "Cloak of Protection",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "protection"
+   ],
+   "effect": "A simple cloak that grants a +1 bonus to your Armor Class and saving throws.",
+   "value": 450,
+   "recipe": {
+    "components": [
+     {
+      "m": "cloak",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "halo-quartz",
+       "unicorn-mane",
+       "couatl-scale"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Protective keystone (uncommon+)"
+     },
+     {
+      "m": "lionsmane-thistle",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "rowan-wood",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "shrine",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "shield of faith"
+    ],
+    "yields": 1,
+    "lore": "A rowan-wood toggle, silver-thread embroidery and a keystone from a guardian creature: three old wards stacked into one garment, so harm must get past all of them."
+   }
+  },
+  {
+   "id": "cloak-of-the-bat",
+   "name": "Cloak of the Bat",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "flight",
+    "darkvision",
+    "stealth"
+   ],
+   "effect": "Improves your stealth; in darkness you can fly by gripping its edges, and once a day you can turn into a bat.",
+   "value": 4500,
+   "recipe": {
+    "components": [
+     {
+      "m": "cloak",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "cloaker-hide",
+       "cloaker-essence",
+       "vampire-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Night-flyer keystone (rare+)"
+     },
+     {
+      "m": "giant-bat-wing",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "giant-bat-ear",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "swarm-of-bats-wing-membranes",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "weavers-tools"
+    ],
+    "station": "tannery",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "fly",
+     "polymorph"
+    ],
+    "yields": 1,
+    "lore": "Giant bat membranes are stretched between leather ribs like a second wing; a vampire's essence, or a cloaker's hide, teaches the cloak that true flight only happens after sunset."
+   }
+  },
+  {
+   "id": "cloak-of-the-manta-ray",
+   "name": "Cloak of the Manta Ray",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "swimming",
+    "breathing",
+    "water"
+   ],
+   "effect": "With the hood up you can breathe underwater and swim as fast as you walk.",
+   "value": 400,
+   "recipe": {
+    "components": [
+     {
+      "m": "cloak",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "aboleth-mucus",
+       "water-elemental-core",
+       "gillweed-kelp"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Water-breathing keystone (uncommon+)"
+     },
+     {
+      "oneOf": [
+       "giant-shark-skin",
+       "hunter-shark-skin",
+       "reef-shark-skin"
+      ],
+      "q": 2,
+      "role": "supporting",
+      "label": "Shark skin"
+     },
+     {
+      "m": "plesiosaurus-flipper",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "tannery",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "water breathing"
+    ],
+    "yields": 1,
+    "lore": "Shark skin is tanned rough-side out so water flows over it without drag; the keystone is rubbed into the hood, where it keeps the gills-that-aren't wet."
+   }
+  },
+  {
+   "id": "crystal-ball",
+   "name": "Crystal Ball",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "focus",
+    "senses",
+    "knowledge"
+   ],
+   "effect": "A fist-sized crystal sphere that lets you cast scrying through it.",
+   "value": 30000,
+   "recipe": {
+    "components": [
+     {
+      "m": "crystal-ball-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "planetar-eye",
+       "androsphinx-tear",
+       "star-sapphire"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Far-seeing keystone (very rare)"
+     },
+     {
+      "m": "gynosphinx-eye",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "quartz",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "quicksilver",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "glassblowers-tools"
+    ],
+    "station": "glassworks",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "scrying"
+    ],
+    "yields": 1,
+    "lore": "The keystone is ground and folded into molten crystal; a sphinx's eye is suspended inside while it cools, so the ball has something to look out through."
+   }
+  },
+  {
+   "id": "crystal-ball-of-mind-reading",
+   "name": "Crystal Ball of Mind Reading",
+   "cat": "wondrous",
+   "tier": "legendary",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "focus",
+    "senses",
+    "psychic"
+   ],
+   "effect": "Works as a crystal ball, and you can also read the surface thoughts of creatures you watch through it.",
+   "value": 91600,
+   "recipe": {
+    "components": [
+     {
+      "m": "crystal-ball",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "kraken-essence",
+       "dead-god-stone",
+       "lich-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Legendary mind or sight keystone"
+     },
+     {
+      "m": "aboleth-brain",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "quicksilver",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "glassblowers-tools"
+    ],
+    "station": "glassworks",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "scrying",
+     "detect thoughts"
+    ],
+    "yields": 1,
+    "lore": "Made by re-melting a finished crystal ball. An ordinary one only looks; to make it hear, speak or see truly, the glassblower must melt in something that once did those things on a scale no mortal can match."
+   }
+  },
+  {
+   "id": "crystal-ball-of-telepathy",
+   "name": "Crystal Ball of Telepathy",
+   "cat": "wondrous",
+   "tier": "legendary",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "focus",
+    "senses",
+    "psychic"
+   ],
+   "effect": "Works as a crystal ball, and you can speak mind to mind with creatures you watch - even plant a suggestion in them.",
+   "value": 91700,
+   "recipe": {
+    "components": [
+     {
+      "m": "crystal-ball",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "kraken-essence",
+       "dead-god-stone"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Legendary mind or sight keystone"
+     },
+     {
+      "m": "thought-crystal",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "quicksilver",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "glassblowers-tools"
+    ],
+    "station": "glassworks",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "scrying",
+     "telepathy"
+    ],
+    "yields": 1,
+    "lore": "Made by re-melting a finished crystal ball. An ordinary one only looks; to make it hear, speak or see truly, the glassblower must melt in something that once did those things on a scale no mortal can match."
+   }
+  },
+  {
+   "id": "crystal-ball-of-true-seeing",
+   "name": "Crystal Ball of True Seeing",
+   "cat": "wondrous",
+   "tier": "legendary",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "focus",
+    "senses",
+    "truesight"
+   ],
+   "effect": "Works as a crystal ball, and you see through illusions, darkness and disguises everywhere you scry.",
+   "value": 91900,
+   "recipe": {
+    "components": [
+     {
+      "m": "crystal-ball",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "solar-light-mote",
+       "solar-essence",
+       "dead-god-stone"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Legendary mind or sight keystone"
+     },
+     {
+      "m": "veilpierce-eyebright",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "quicksilver",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "glassblowers-tools"
+    ],
+    "station": "glassworks",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "scrying",
+     "true seeing"
+    ],
+    "yields": 1,
+    "lore": "Made by re-melting a finished crystal ball. An ordinary one only looks; to make it hear, speak or see truly, the glassblower must melt in something that once did those things on a scale no mortal can match."
+   }
+  },
+  {
+   "id": "cube-of-force",
+   "name": "Cube of Force",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "force",
+    "protection"
+   ],
+   "effect": "An inch-wide cube with faces that each raise a different invisible barrier of force around you, powered by charges that recover each dawn.",
+   "value": 5000,
+   "recipe": {
+    "components": [
+     {
+      "m": "cube-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "meteoric-iron",
+       "shield-guardian-core",
+       "arcane-crystal"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Force keystone (rare+)"
+     },
+     {
+      "m": "jade",
+      "q": 6,
+      "role": "supporting"
+     },
+     {
+      "m": "quartz",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools",
+     "tinkers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "wall of force",
+     "shield"
+    ],
+    "yields": 1,
+    "lore": "Six jade pips, one per face, each ground to a different thickness; the keystone at the centre pushes outward and the jade decides what may come back in."
+   }
+  },
+  {
+   "id": "cubic-gate",
+   "name": "Cubic Gate",
+   "cat": "wondrous",
+   "tier": "legendary",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "planar",
+    "teleport"
+   ],
+   "effect": "A cube whose six sides are each keyed to a different plane; press a side to open a gate there or shift yourself and a companion through.",
+   "value": 100000,
+   "recipe": {
+    "components": [
+     {
+      "m": "cube-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "dead-god-stone",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "color-pool-glass",
+      "q": 6,
+      "role": "supporting"
+     },
+     {
+      "m": "nalfeshnee-wing",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "astral-silver-thread",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools",
+     "masons-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "gate",
+     "plane shift"
+    ],
+    "requires": "The crafter must have personally stood on each of the six planes keyed into the cube.",
+    "yields": 1,
+    "lore": "The dead-god stone is carved into a cube that remembers every plane its god walked; one pane of colour-pool glass on each face gives the memory a door."
+   }
+  },
+  {
+   "id": "decanter-of-endless-water",
+   "name": "Decanter of Endless Water",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "container",
+    "water"
+   ],
+   "effect": "A stoppered flask that pours fresh or salt water on command, from a trickle to a geyser strong enough to knock a person flat.",
+   "value": 350,
+   "recipe": {
+    "components": [
+     {
+      "m": "flask",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "water-elemental-core",
+       "water-elemental-tidewater-pearl",
+       "primordial-brine"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Endless water source (uncommon+)"
+     },
+     {
+      "m": "sea-glass",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "pearl",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "glassblowers-tools"
+    ],
+    "station": "glassworks",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "create or destroy water"
+    ],
+    "yields": 1,
+    "lore": "The keystone is dropped into the flask before the neck is sealed shut; it will spend eternity trying to return home, and water leaks out every time it tries."
+   }
+  },
+  {
+   "id": "deck-of-illusions",
+   "name": "Deck of Illusions",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "illusion"
+   ],
+   "effect": "A box of cards; draw one and throw it, and it becomes a convincing illusion of a creature or thing that lasts until touched or dispelled.",
+   "value": 470,
+   "recipe": {
+    "components": [
+     {
+      "m": "deck-of-cards",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "green-hag-essence",
+       "lamia-essence",
+       "glamour-pollen"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Illusion keystone (uncommon+)"
+     },
+     {
+      "m": "mistcap",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "opal",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "arcane-ink",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "painters-supplies",
+     "calligraphers-supplies"
+    ],
+    "station": "scriptorium",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "major image"
+    ],
+    "yields": 1,
+    "lore": "Each face is painted in pigment laced with the keystone and mistcap spores; the illusion is simply the painting stepping off the card for a while."
+   }
+  },
+  {
+   "id": "deck-of-many-things",
+   "name": "Deck of Many Things",
+   "cat": "wondrous",
+   "tier": "legendary",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "luck",
+    "time",
+    "curse",
+    "blessing"
+   ],
+   "effect": "A deck of ivory or vellum cards; declare how many you will draw and each one unleashes an immediate twist of fate - wealth, power, ruin, imprisonment, a wish, or oblivion - and then the deck may vanish.",
+   "value": 150000,
+   "recipe": {
+    "components": [
+     {
+      "m": "vellum",
+      "q": 22,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "wishbloom",
+       "dead-god-stone"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Fate-woven keystone (legendary)"
+     },
+     {
+      "m": "djinni-wishglass-bead",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "star-ruby",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "fey-clover",
+      "q": 5,
+      "role": "supporting"
+     },
+     {
+      "m": "primordial-arcane-ink",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies",
+     "painters-supplies"
+    ],
+    "station": "scriptorium",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "divination",
+     "legend lore"
+    ],
+    "requires": "Each card must be painted on a different night, beginning and ending on a new moon; if the crafter draws from the deck before it is finished, the work is ruined.",
+    "yields": 1,
+    "lore": "No crafter alive claims to have made one: the pattern is said to be copied from a deck painted by a god who lost a bet. Folk wisdom says the wishglass gives the cards their gifts, the fey clover their luck, and the wishbloom decides - on its own whim - which is which."
+   }
+  },
+  {
+   "id": "dimensional-shackles",
+   "name": "Dimensional Shackles",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "binding",
+    "planar",
+    "antimagic"
+   ],
+   "effect": "Manacles that fit Small to Large creatures and stop the prisoner from teleporting or travelling between planes while locked on.",
+   "value": 3000,
+   "recipe": {
+    "components": [
+     {
+      "m": "manacles",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "chain-devil-chains",
+       "chain-devil-essence",
+       "erinyes-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Infernal jailer keystone (rare+)"
+     },
+     {
+      "m": "adamantine-ingot",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "lodestone",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "phase-spider-silk",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "forbiddance"
+    ],
+    "yields": 1,
+    "lore": "Devils bind souls for a living; a link of their chain in the manacle, anchored with lodestone, pulls a prisoner back to the here-and-now whenever they try to step elsewhere. The phase silk is wound tight, so the shackles know the path they are blocking."
+   }
+  },
+  {
+   "id": "driftglobe",
+   "name": "Driftglobe",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "light",
+    "air"
+   ],
+   "effect": "A small glass sphere that sheds magical light or daylight and can float after you at head height.",
+   "value": 370,
+   "recipe": {
+    "components": [
+     {
+      "m": "orb",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "moonstone",
+       "halo-quartz",
+       "deepglow-lichen"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Everlight keystone (uncommon+)"
+     },
+     {
+      "m": "earthmote-stone",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "will-o-wisp-lantern-core",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "glassblowers-tools"
+    ],
+    "station": "glassworks",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "light",
+     "daylight"
+    ],
+    "yields": 1,
+    "lore": "A will-o'-wisp core is the classic trick: it already wants to float at head height and lead you somewhere. Earthmote dust keeps it aloft; the keystone keeps it honest."
+   }
+  },
+  {
+   "id": "efficient-quiver",
+   "name": "Efficient Quiver",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "container",
+    "ammunition",
+    "planar"
+   ],
+   "effect": "A quiver with three compartments that hold far more arrows, javelins and staves than it should, and always offers the one you reach for.",
+   "value": 360,
+   "recipe": {
+    "components": [
+     {
+      "m": "quiver",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "color-pool-glass",
+       "phase-spider-essence",
+       "faerie-ring-mushroom"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Space-folding keystone (uncommon+)"
+     },
+     {
+      "m": "centaur-quiver",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "phase-spider-leg",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "spider-silk-thread",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "tannery",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "rope trick"
+    ],
+    "yields": 1,
+    "lore": "A centaur's own quiver is taken apart and re-stitched as the inner lining - their quivers never run dry, they claim - and phase spider legs make the stays."
+   }
+  },
+  {
+   "id": "efreeti-bottle",
+   "name": "Efreeti Bottle",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "container",
+    "fire",
+    "planar",
+    "binding"
+   ],
+   "effect": "A sealed brass bottle; open it and an efreeti bursts out in smoke, and depending on its mood it may serve you, grant wishes or attack.",
+   "value": 20000,
+   "recipe": {
+    "components": [
+     {
+      "m": "bottle",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "living-flame-ember",
+       "balor-death-cinder",
+       "primordial-flame"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Undying flame keystone (very rare+)"
+     },
+     {
+      "m": "efreeti-brass-cinders",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "efreeti-brazier-core",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "copper-ingot",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "brimstone",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "glassblowers-tools"
+    ],
+    "station": "forge",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "planar binding"
+    ],
+    "yields": 1,
+    "lore": "The bottle is cast from brass sweated with efreeti cinders, which remember the brass cities of the Plane of Fire; the undying ember is the bait, the brimstone seal is the lock."
+   }
+  },
+  {
+   "id": "elemental-gem-air",
+   "name": "Elemental Gem (Air)",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gem",
+    "air",
+    "elemental"
+   ],
+   "effect": "A gem holding a trapped mote of elemental air; shatter it and an air elemental appears and serves as if summoned. The gem is spent.",
+   "value": 500,
+   "recipe": {
+    "components": [
+     {
+      "m": "turquoise",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "air-elemental-core",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "air-elemental-skygrit",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "conjure elemental"
+    ],
+    "yields": 1,
+    "lore": "The air elemental's core is coaxed into the turquoise on a still day; it curls up inside like a sleeper in a shell, and the skygrit packed around it hums faintly whenever a wind rises."
+   }
+  },
+  {
+   "id": "elemental-gem-earth",
+   "name": "Elemental Gem (Earth)",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gem",
+    "earth",
+    "elemental"
+   ],
+   "effect": "A gem holding a trapped mote of elemental earth; shatter it and an earth elemental appears and serves as if summoned. The gem is spent.",
+   "value": 500,
+   "recipe": {
+    "components": [
+     {
+      "m": "deep-gem-cluster",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "earth-elemental-core",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "earth-elemental-tremor-gravel",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "conjure elemental"
+    ],
+    "yields": 1,
+    "lore": "Earth elemental cores settle into a cluster of deep gems as if into their own bedrock; tremor-gravel is pressed into the setting, and the gem grows heavier the longer it waits to be broken."
+   }
+  },
+  {
+   "id": "elemental-gem-fire",
+   "name": "Elemental Gem (Fire)",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gem",
+    "fire",
+    "elemental"
+   ],
+   "effect": "A gem holding a trapped mote of elemental fire; shatter it and a fire elemental appears and serves as if summoned. The gem is spent.",
+   "value": 500,
+   "recipe": {
+    "components": [
+     {
+      "m": "garnet",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "fire-elemental-core",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "fire-elemental-flame-ash",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "conjure elemental"
+    ],
+    "yields": 1,
+    "lore": "A fire elemental's core sinks into the garnet like a coal into embers; flame-walker ash seals the facets, and the stone is always warm to the touch until the day it shatters."
+   }
+  },
+  {
+   "id": "elemental-gem-water",
+   "name": "Elemental Gem (Water)",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gem",
+    "water",
+    "elemental"
+   ],
+   "effect": "A gem holding a trapped mote of elemental water; shatter it and a water elemental appears and serves as if summoned. The gem is spent.",
+   "value": 490,
+   "recipe": {
+    "components": [
+     {
+      "m": "aquamarine",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "water-elemental-core",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "water-elemental-undertow-brine",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "conjure elemental"
+    ],
+    "yields": 1,
+    "lore": "The water elemental's core is poured into the aquamarine while both are wet with undertow brine; the gem looks like a drop of sea and, held to the ear, sounds like one."
+   }
+  },
+  {
+   "id": "eversmoking-bottle",
+   "name": "Eversmoking Bottle",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "container",
+    "stealth"
+   ],
+   "effect": "Uncork it and thick smoke pours out, spreading every minute until a large area is heavily obscured; cork it again and the smoke slowly clears.",
+   "value": 300,
+   "recipe": {
+    "components": [
+     {
+      "m": "bottle",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "brimstone",
+       "fire-elemental-core",
+       "nightmare-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Smouldering keystone (uncommon+)"
+     },
+     {
+      "m": "chimney-soot",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "pine-resin",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "darkmantle-darkness-gland",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "glassblowers-tools",
+     "alchemists-supplies"
+    ],
+    "station": "glassworks",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "fog cloud"
+    ],
+    "yields": 1,
+    "lore": "The keystone smoulders forever in a nest of soot and resin; a darkmantle's gland keeps the smoke thick and dark, and the stopper is all that keeps the room breathable."
+   }
+  },
+  {
+   "id": "eyes-of-charming",
+   "name": "Eyes of Charming",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "jewelry",
+    "charm"
+   ],
+   "effect": "Crystal lenses worn over the eyes; they hold three charges of charm person, recharging each dawn.",
+   "value": 370,
+   "recipe": {
+    "components": [
+     {
+      "m": "lens",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "succubus-incubus-essence",
+       "lamia-essence",
+       "lovers-rose"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Beguiling keystone (uncommon+)"
+     },
+     {
+      "m": "rose-quartz",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "dryad-sap",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "glassblowers-tools",
+     "jewelers-tools"
+    ],
+    "station": "glassworks",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "charm person"
+    ],
+    "yields": 1,
+    "lore": "The lenses are ground from rose quartz and polished with dryad sap; the keystone is dissolved into the polishing paste so every glance carries a little of its allure."
+   }
+  },
+  {
+   "id": "eyes-of-minute-seeing",
+   "name": "Eyes of Minute Seeing",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "senses",
+    "gear"
+   ],
+   "effect": "Crystal lenses that let you see tiny details up close, giving advantage on Investigation checks within a foot.",
+   "value": 390,
+   "recipe": {
+    "components": [
+     {
+      "m": "lens",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "chuul-antennae",
+       "night-hag-eye",
+       "aboleth-eye"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Uncanny eye or antennae (uncommon+)"
+     },
+     {
+      "m": "giant-spider-eyes",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "quartz",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "glassblowers-tools"
+    ],
+    "station": "glassworks",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "identify"
+    ],
+    "yields": 1,
+    "lore": "A giant spider's many eyes are rendered into the grinding compound; lens-makers joke that the result can count the legs on a flea before the flea knows it's being watched."
+   }
+  },
+  {
+   "id": "eyes-of-the-eagle",
+   "name": "Eyes of the Eagle",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "senses",
+    "gear"
+   ],
+   "effect": "Crystal lenses that give advantage on sight-based Perception and let you pick out fine details at a distance.",
+   "value": 390,
+   "recipe": {
+    "components": [
+     {
+      "m": "lens",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "any": [
+       "eye",
+       "senses"
+      ],
+      "min": "uncommon",
+      "q": 1,
+      "role": "keystone",
+      "label": "Supernatural eye (uncommon+)"
+     },
+     {
+      "m": "giant-eagle-eye",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "hawk-eye",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "glassblowers-tools"
+    ],
+    "station": "glassworks",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "clairvoyance"
+    ],
+    "yields": 1,
+    "lore": "Giant eagle eyes are dried, powdered and fused into the glass; the keystone eye is there so the lenses see what the eagle's eyes never had the wit to notice."
+   }
+  },
+  {
+   "id": "feather-token-anchor",
+   "name": "Feather Token (Anchor)",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "feather"
+   ],
+   "effect": "Touch it to a boat or ship and the vessel is held fast in place, as if anchored, for a day or until you touch it again. The token is used up.",
+   "value": 2500,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "feather"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Flawless feather"
+     },
+     {
+      "oneOf": [
+       "living-stone",
+       "stone-giant-heartstone",
+       "chain-devil-chains"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Keystone (rare+)"
+     },
+     {
+      "m": "lodestone",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies",
+     "alchemists-supplies"
+    ],
+    "station": "enchanting-circle",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "enlarge/reduce"
+    ],
+    "yields": 1,
+    "lore": "A feather that weighs as much as a ship's anchor sounds like a joke until you try to lift it; the living stone makes it heavy in the world's opinion, not the scale's."
+   }
+  },
+  {
+   "id": "feather-token-bird",
+   "name": "Feather Token (Bird)",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "feather"
+   ],
+   "effect": "Toss it and it becomes a roc-sized bird that carries riders through the air for a day, then turns back into a feather. The token is used up.",
+   "value": 2000,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "feather"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Flawless feather"
+     },
+     {
+      "oneOf": [
+       "roc-feather",
+       "roc-essence",
+       "deva-feather"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Great-bird feather (rare+): roc feather or essence, or a deva's feather"
+     },
+     {
+      "m": "giant-eagle-pinion",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "griffon-feather",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies",
+     "alchemists-supplies"
+    ],
+    "station": "enchanting-circle",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "fly"
+    ],
+    "yields": 1,
+    "lore": "A roc's pinion is trimmed down to a quill and sheathed in lesser feathers; the magic is less making a bird than letting a roc remember it once was one. A deva's feather, shed in flight, can call up a bird of equal size and far better temper."
+   }
+  },
+  {
+   "id": "feather-token-fan",
+   "name": "Feather Token (Fan)",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "feather"
+   ],
+   "effect": "Aboard a ship, toss it and it becomes a huge fan that fills the sails with wind for a few hours. The token is used up.",
+   "value": 2900,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "feather"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Flawless feather"
+     },
+     {
+      "oneOf": [
+       "djinni-tempest-core",
+       "stormglass",
+       "cloud-giant-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Keystone (rare+)"
+     },
+     {
+      "m": "air-elemental-skygrit",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "wind-seed",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies",
+     "alchemists-supplies"
+    ],
+    "station": "enchanting-circle",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "gust of wind"
+    ],
+    "yields": 1,
+    "lore": "Wind-seed pods are split and packed into the quill; the storm keystone gives them somewhere to blow from."
+   }
+  },
+  {
+   "id": "feather-token-swan-boat",
+   "name": "Feather Token (Swan Boat)",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "feather"
+   ],
+   "effect": "Touch it to water and it becomes a great swan-shaped boat that carries passengers across lakes and seas for a day. The token is used up.",
+   "value": 2300,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "feather"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Flawless feather"
+     },
+     {
+      "oneOf": [
+       "young-bronze-dragon-essence",
+       "storm-giant-oracle-shell",
+       "pure-water-pearl"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Keystone (rare+)"
+     },
+     {
+      "m": "driftwood",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "current-kelp",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies",
+     "alchemists-supplies"
+    ],
+    "station": "enchanting-circle",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "water walk"
+    ],
+    "yields": 1,
+    "lore": "Driftwood ash and current-kelp teach the feather the shape of a hull and the pull of a current; a bronze dragon's goodwill toward sailors does the rest."
+   }
+  },
+  {
+   "id": "feather-token-tree",
+   "name": "Feather Token (Tree)",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "feather"
+   ],
+   "effect": "Toss it onto open ground and it sprouts instantly into a sixty-foot oak. The token is used up.",
+   "value": 2000,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "feather"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Flawless feather"
+     },
+     {
+      "oneOf": [
+       "ancient-oak-heartwood",
+       "treant-seed-acorn"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Keystone (rare+)"
+     },
+     {
+      "m": "awakened-tree-sap",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "oak-gall",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies",
+     "alchemists-supplies"
+    ],
+    "station": "enchanting-circle",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "plant growth"
+    ],
+    "yields": 1,
+    "lore": "The feather's shaft is split and a sliver of ancient heartwood is slid inside like a seed into soil; planted, the oak simply stops waiting."
+   }
+  },
+  {
+   "id": "feather-token-whip",
+   "name": "Feather Token (Whip)",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "feather"
+   ],
+   "effect": "Throw it and it becomes a floating whip of force that lashes at your foes on command for an hour. The token is used up.",
+   "value": 1900,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "feather"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Flawless feather"
+     },
+     {
+      "oneOf": [
+       "meteoric-iron",
+       "arcane-crystal",
+       "horned-devil-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Keystone (rare+)"
+     },
+     {
+      "m": "leather-strips",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "bowstring",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies",
+     "alchemists-supplies"
+    ],
+    "station": "enchanting-circle",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "spiritual weapon"
+    ],
+    "yields": 1,
+    "lore": "A force-bearing keystone is ground into the barbs and bound with a bowstring; when released, the feather's spine unrolls into a lash that remembers every snap."
+   }
+  },
+  {
+   "id": "figurine-of-wondrous-power-bronze-griffon",
+   "name": "Figurine of Wondrous Power (Bronze Griffon)",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "beast",
+    "shapechange"
+   ],
+   "effect": "A small statuette; speak the word and throw it, and it becomes a griffon that obeys you and can serve as a mount for up to six hours, then must rest for five days.",
+   "value": 3500,
+   "recipe": {
+    "components": [
+     {
+      "m": "figurine-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "bronze-ingot",
+      "q": 4,
+      "role": "supporting"
+     },
+     {
+      "oneOf": [
+       "roc-essence",
+       "djinni-tempest-core",
+       "cloud-giant-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Sky-hunter essence (rare+)"
+     },
+     {
+      "m": "griffon-feather",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "griffon-talon",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "animate objects"
+    ],
+    "yields": 1,
+    "lore": "The wings are cast around real griffon feathers that burn away in the pour, leaving their shape in bronze; the talons are set in whole."
+   }
+  },
+  {
+   "id": "figurine-of-wondrous-power-ebony-fly",
+   "name": "Figurine of Wondrous Power (Ebony Fly)",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "beast",
+    "shapechange"
+   ],
+   "effect": "A small statuette; speak the word and throw it, and it becomes a horse-sized giant fly that can be ridden through the air for up to twelve hours, then rests for two days.",
+   "value": 3500,
+   "recipe": {
+    "components": [
+     {
+      "m": "figurine-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "gloomwood",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "oneOf": [
+       "erinyes-essence",
+       "bone-devil-wing",
+       "horned-devil-wing"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Buzzing flight keystone (rare+)"
+     },
+     {
+      "oneOf": [
+       "giant-wasp-wings",
+       "swarm-of-insects-wings"
+      ],
+      "q": 2,
+      "role": "supporting",
+      "label": "Insect wings"
+     },
+     {
+      "m": "dye-black",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "animate objects"
+    ],
+    "yields": 1,
+    "lore": "Carved from gloomwood and fitted with real insect wings; a devil's flight-gift is sealed inside because only a devil would want to ride something so foul."
+   }
+  },
+  {
+   "id": "figurine-of-wondrous-power-golden-lions",
+   "name": "Figurine of Wondrous Power (Golden Lions)",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "beast",
+    "shapechange"
+   ],
+   "effect": "A small statuette; speak the word and throw it, and it becomes a pair of real lions that fight for you for up to an hour, then must rest for a week.",
+   "value": 4000,
+   "recipe": {
+    "components": [
+     {
+      "m": "figurine-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "gold-ingot",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "oneOf": [
+       "gynosphinx-essence",
+       "androsphinx-mane-hair"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Sphinx keystone (rare+)"
+     },
+     {
+      "m": "lion-mane",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "lion-heart",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools",
+     "smiths-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "animate objects"
+    ],
+    "yields": 1,
+    "lore": "Each lion is cast around a dried lion heart and trimmed with real mane; the sphinx keystone, divided between them, lends both lions a sense of duty."
+   }
+  },
+  {
+   "id": "figurine-of-wondrous-power-ivory-goats",
+   "name": "Figurine of Wondrous Power (Ivory Goats)",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "beast",
+    "shapechange"
+   ],
+   "effect": "A small statuette; speak the word and throw it, and it becomes one of three magical goats - of travelling, travail or terror, depending on which figurine you throw - that carries you, fights for you or panics your foes.",
+   "value": 4500,
+   "recipe": {
+    "components": [
+     {
+      "m": "figurine-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "mammoth-ivory",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "oneOf": [
+       "hydra-essence",
+       "stone-giant-essence",
+       "horned-devil-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Keystone of many terrors (rare+)"
+     },
+     {
+      "m": "giant-goat-horns",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "chimera-goat-horn",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "goat-hide",
+      "q": 3,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "jewelers-tools"
+    ],
+    "station": "workshop",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "animate objects",
+     "fear"
+    ],
+    "yields": 1,
+    "lore": "Three goats from one ivory: the keystone is split in thirds, and the carver swears the goats argue about who got the largest piece."
+   }
+  },
+  {
+   "id": "figurine-of-wondrous-power-marble-elephant",
+   "name": "Figurine of Wondrous Power (Marble Elephant)",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "beast",
+    "shapechange"
+   ],
+   "effect": "A small statuette; speak the word and throw it, and it becomes an elephant that obeys you for up to a day, then must rest for a week.",
+   "value": 4000,
+   "recipe": {
+    "components": [
+     {
+      "m": "figurine-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "marble",
+      "q": 10,
+      "role": "supporting"
+     },
+     {
+      "oneOf": [
+       "stone-giant-essence",
+       "earthheart-geode"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Living-stone keystone (rare+)"
+     },
+     {
+      "m": "elephant-heart",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "elephant-tusk",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "masons-tools"
+    ],
+    "station": "workshop",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "animate objects"
+    ],
+    "yields": 1,
+    "lore": "Masons carve the elephant around an elephant's heart sealed in wax; a stone giant's essence convinces the marble it has always been alive, only very patient."
+   }
+  },
+  {
+   "id": "figurine-of-wondrous-power-obsidian-steed",
+   "name": "Figurine of Wondrous Power (Obsidian Steed)",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "beast",
+    "shapechange"
+   ],
+   "effect": "A small statuette; speak the word and throw it, and it becomes a nightmare that can carry you through the planes for up to a day; if your heart is good, it may try to throw you.",
+   "value": 20000,
+   "recipe": {
+    "components": [
+     {
+      "m": "figurine-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "obsidian",
+      "q": 6,
+      "role": "supporting"
+     },
+     {
+      "oneOf": [
+       "nalfeshnee-essence",
+       "nalfeshnee-wing"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Plane-riding keystone (very rare)"
+     },
+     {
+      "m": "nightmare-essence",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "nightmare-hooves",
+      "q": 4,
+      "role": "supporting"
+     },
+     {
+      "m": "nightmare-mane",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "masons-tools",
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "phantom steed",
+     "plane shift"
+    ],
+    "yields": 1,
+    "lore": "The obsidian is knapped into the shape of a horse and fitted with nightmare hooves; the planar keystone gives it the road, and the nightmare's essence gives it the temper."
+   }
+  },
+  {
+   "id": "figurine-of-wondrous-power-onyx-dog",
+   "name": "Figurine of Wondrous Power (Onyx Dog)",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "beast",
+    "shapechange"
+   ],
+   "effect": "A small statuette; speak the word and throw it, and it becomes a mastiff that speaks, sees in the dark, and spots invisible things for up to six hours, then rests for a week.",
+   "value": 3000,
+   "recipe": {
+    "components": [
+     {
+      "m": "figurine-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "onyx",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "oneOf": [
+       "gynosphinx-eye",
+       "veilpierce-eyebright",
+       "erinyes-eye"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "True-seeing keystone (rare+)"
+     },
+     {
+      "m": "mastiff-nose",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "mastiff-fang",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "animate objects",
+     "see invisibility"
+    ],
+    "yields": 1,
+    "lore": "Mastiff noses are the old hunter's secret for the scent; the true-seeing keystone is set as the eyes, so the dog finds what hides behind magic."
+   }
+  },
+  {
+   "id": "figurine-of-wondrous-power-serpentine-owl",
+   "name": "Figurine of Wondrous Power (Serpentine Owl)",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "beast",
+    "shapechange"
+   ],
+   "effect": "A small statuette; speak the word and throw it, and it becomes a giant owl that scouts for you and speaks into your mind over great distances for up to eight hours, then rests for two days.",
+   "value": 3000,
+   "recipe": {
+    "components": [
+     {
+      "m": "figurine-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "malachite",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "oneOf": [
+       "thought-crystal",
+       "aboleth-brain",
+       "mindbloom-orchid"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Telepathic keystone (rare+)"
+     },
+     {
+      "m": "giant-owl-feathers",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "giant-owl-eyes",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools",
+     "masons-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "animate objects",
+     "telepathy"
+    ],
+    "yields": 1,
+    "lore": "Carved in green serpentine and fletched with giant owl feathers; a telepathic keystone lets the owl tell you what it sees, even from miles away."
+   }
+  },
+  {
+   "id": "figurine-of-wondrous-power-silver-raven",
+   "name": "Figurine of Wondrous Power (Silver Raven)",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "beast",
+    "shapechange"
+   ],
+   "effect": "A small statuette; speak the word and throw it, and it becomes a raven for up to twelve hours and can carry a spoken message to a person you describe.",
+   "value": 440,
+   "recipe": {
+    "components": [
+     {
+      "m": "figurine-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "silver-ingot",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "oneOf": [
+       "couatl-essence",
+       "mind-mote-dust",
+       "doppelganger-brain"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Messenger keystone (uncommon+)"
+     },
+     {
+      "m": "raven-feather",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "raven-tongue",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "animal messenger"
+    ],
+    "yields": 1,
+    "lore": "The raven's tongue is set in silver so the bird can repeat what it hears; the keystone gives it the sense to find the right ear."
+   }
+  },
+  {
+   "id": "folding-boat",
+   "name": "Folding Boat",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "container",
+    "water",
+    "size"
+   ],
+   "effect": "A wooden box that unfolds on command into a rowboat or a full sailing ship with oars and sails, then folds back down again.",
+   "value": 4000,
+   "recipe": {
+    "components": [
+     {
+      "m": "box",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "pure-water-pearl",
+       "black-pearl",
+       "roc-egg"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Unfolding keystone (rare+)"
+     },
+     {
+      "m": "giantcap-mushroom",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "shrinking-violet",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "fine-hardwood",
+      "q": 6,
+      "role": "supporting"
+     },
+     {
+      "m": "driftwood",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "carpenters-tools"
+    ],
+    "station": "workshop",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "enlarge/reduce"
+    ],
+    "yields": 1,
+    "lore": "Carpenters rub giantcap and shrinking-violet oils into opposite faces of every plank, so each board is always arguing about its size; the keystone settles the argument on command."
+   }
+  },
+  {
+   "id": "gauntlets-of-ogre-power",
+   "name": "Gauntlets of Ogre Power",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "strength",
+    "giant"
+   ],
+   "effect": "While worn, your Strength score becomes 19 unless it is already higher.",
+   "value": 450,
+   "recipe": {
+    "components": [
+     {
+      "m": "gauntlets",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "hill-giant-essence",
+       "hill-giant-blood",
+       "ettin-blood",
+       "minotaur-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Brute-strength keystone (uncommon+)"
+     },
+     {
+      "m": "ogre-blood",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "ogre-greatclub-knot",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "giants-knuckle-root",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "forge",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "enhance ability"
+    ],
+    "yields": 1,
+    "lore": "Ogre blood is quenched into the plates while they are still red hot; a knot of the ogre's own club is fixed in each palm, so the wearer grips like the brute did."
+   }
+  },
+  {
+   "id": "gem-of-brightness",
+   "name": "Gem of Brightness",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gem",
+    "light",
+    "radiant"
+   ],
+   "effect": "A prism with charges: it can glow, flash a blinding beam at one creature, or burst in a blinding cone; when its charges run out it is just a gem.",
+   "value": 400,
+   "recipe": {
+    "components": [
+     {
+      "m": "rock-crystal",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "sunstone",
+       "sun-sand",
+       "gold-dragon-wyrmling-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Sunlight keystone (uncommon+)"
+     },
+     {
+      "m": "prism-crystal",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "mica",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "daylight"
+    ],
+    "yields": 1,
+    "lore": "The keystone is fused into the crystal's heart and the facets cut to focus it; prism chips make the light bend, and mica flecks stop it from leaking between blasts."
+   }
+  },
+  {
+   "id": "gem-of-seeing",
+   "name": "Gem of Seeing",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gem",
+    "truesight"
+   ],
+   "effect": "Look through it and you see through illusions, into the Ethereal and past invisibility for a short time; its charges recover each dawn.",
+   "value": 4000,
+   "recipe": {
+    "components": [
+     {
+      "m": "rock-crystal",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "erinyes-eye",
+       "gynosphinx-eye",
+       "planetar-eye",
+       "veilpierce-eyebright"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "True-seeing keystone (rare+)"
+     },
+     {
+      "m": "diamond-dust",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "quartz",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "eyebright",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "true seeing"
+    ],
+    "yields": 1,
+    "lore": "A true-seeing eye is dried and set into the crystal like a pupil; diamond dust in the polish clears the gem of every lie ever told about it."
+   }
+  },
+  {
+   "id": "gloves-of-missile-snaring",
+   "name": "Gloves of Missile Snaring",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "speed",
+    "protection"
+   ],
+   "effect": "When a ranged weapon hits you, you can use your reaction to lessen the blow, and if you cut it to nothing and have a free hand, you catch the missile.",
+   "value": 350,
+   "recipe": {
+    "components": [
+     {
+      "m": "gloves",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "air-elemental-core",
+       "quickthorn-berry",
+       "marilith-hand"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Lightning-reflex keystone (uncommon+)"
+     },
+     {
+      "m": "mimic-adhesive",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "oneOf": [
+       "giant-frog-tongue",
+       "giant-toad-tongue"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Snatching tongue"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "tannery",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "shield"
+    ],
+    "yields": 1,
+    "lore": "The palms are lined with a sliver of frog tongue and a smear of mimic glue - anything that touches them sticks - and the keystone makes the hand move before the eye decides to."
+   }
+  },
+  {
+   "id": "gloves-of-swimming-and-climbing",
+   "name": "Gloves of Swimming and Climbing",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "swimming",
+    "climbing"
+   ],
+   "effect": "You climb and swim without slowing down and gain a bonus to Athletics checks for both.",
+   "value": 390,
+   "recipe": {
+    "components": [
+     {
+      "m": "gloves",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "vampire-spawn-blood",
+       "spidergrip-moss",
+       "giant-crocodile-tail-sinew"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Climbing or swimming keystone (uncommon+)"
+     },
+     {
+      "m": "giant-lizard-toe-pads",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "giant-frog-skin",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "tannery",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "spider climb"
+    ],
+    "yields": 1,
+    "lore": "Lizard toe pads are sewn onto the fingertips and webbed frog skin between the fingers; the keystone makes both work whether the wall is wet or the water is steep."
+   }
+  },
+  {
+   "id": "goggles-of-night",
+   "name": "Goggles of Night",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "darkvision",
+    "senses"
+   ],
+   "effect": "While worn, you gain darkvision out to 60 feet, or extend the darkvision you already have.",
+   "value": 390,
+   "recipe": {
+    "components": [
+     {
+      "m": "goggles",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "wight-ember-eyes",
+       "barbed-devil-eye",
+       "cloaker-eye",
+       "umbral-crystal"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Night-sight keystone (uncommon+)"
+     },
+     {
+      "m": "giant-owl-eyes",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "gloomsight-fungus",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "glassblowers-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "glassworks",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "darkvision"
+    ],
+    "yields": 1,
+    "lore": "The lenses are tinted with giant owl eyes and gloomsight spores; the keystone came from something that hunted in the pitch black and never needed a lamp."
+   }
+  },
+  {
+   "id": "handy-haversack",
+   "name": "Handy Haversack",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "container",
+    "planar"
+   ],
+   "effect": "A backpack with extradimensional pouches; whatever you want from it is always on top, and it weighs the same however full.",
+   "value": 2300,
+   "recipe": {
+    "components": [
+     {
+      "m": "backpack",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "astral-silver-thread",
+       "djinni-wishglass-bead"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Planar keystone (rare+)"
+     },
+     {
+      "m": "phase-spider-silk",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "oneOf": [
+       "color-pool-glass",
+       "blink-dog-fang",
+       "faerie-ring-mushroom"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Plane-slipping reagent (colour-pool glass, blink dog fang or faerie-ring mushroom)"
+     },
+     {
+      "m": "spider-silk-thread",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "weavers-tools"
+    ],
+    "station": "loom",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "rope trick"
+    ],
+    "yields": 1,
+    "lore": "Three pouches each lined with phase silk, stitched together with a single thread of astral silver: the silk makes the room, the thread makes sure you can find it. A blink dog's fang or a faerie-ring mushroom, both at home halfway elsewhere, can open the inner pockets instead of colour-pool glass."
+   }
+  },
+  {
+   "id": "hat-of-disguise",
+   "name": "Hat of Disguise",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "illusion",
+    "shapechange"
+   ],
+   "effect": "While wearing it, you can cast disguise self at will; the illusion ends if the hat is removed.",
+   "value": 430,
+   "recipe": {
+    "components": [
+     {
+      "m": "hat",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "doppelganger-skin",
+       "doppelganger-essence",
+       "succubus-incubus-hair"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Many-faced keystone (uncommon+)"
+     },
+     {
+      "m": "octopus-skin",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "mimic-pseudopod",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "weavers-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "workshop",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "disguise self"
+    ],
+    "yields": 1,
+    "lore": "A strip of doppelganger skin forms the hatband; octopus skin lines the brim, and tailors warn that the hat will occasionally show you a face you did not choose."
+   }
+  },
+  {
+   "id": "headband-of-intellect",
+   "name": "Headband of Intellect",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "knowledge",
+    "psychic"
+   ],
+   "effect": "While worn, your Intelligence score becomes 19 unless it is already higher.",
+   "value": 450,
+   "recipe": {
+    "components": [
+     {
+      "m": "circlet",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "aboleth-brain",
+       "mind-mote-dust",
+       "rememberwort"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Keystone of the mind (uncommon+)"
+     },
+     {
+      "m": "lapis-lazuli",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "raven-feather",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools",
+     "alchemists-supplies"
+    ],
+    "station": "jewelers-bench",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "enhance ability"
+    ],
+    "yields": 1,
+    "lore": "Sages prefer a dried sliver of aboleth brain, whose memories go back to the dawn of the world; the thrifty make do with mind-mote dust or rememberwort, sealed behind lapis for clarity."
+   }
+  },
+  {
+   "id": "helm-of-brilliance",
+   "name": "Helm of Brilliance",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "fire",
+    "radiant",
+    "light"
+   ],
+   "effect": "A helm studded with diamonds, rubies, fire opals and opals, each able to release a spell of light or flame; it wreathes you in fire and harms undead with its radiance.",
+   "value": 40000,
+   "recipe": {
+    "components": [
+     {
+      "m": "helm",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "living-flame-ember",
+       "star-ruby",
+       "planetar-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Radiant flame keystone (very rare)"
+     },
+     {
+      "m": "raw-diamond",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "ruby",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "fire-opal",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "opal",
+      "q": 4,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools",
+     "smiths-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "fireball",
+     "daylight"
+    ],
+    "yields": 1,
+    "lore": "Each gem stores a single spell, and the keystone is the flame that keeps them all lit; jewellers say the helm is less a crown than a lantern with ambitions."
+   }
+  },
+  {
+   "id": "helm-of-comprehending-languages",
+   "name": "Helm of Comprehending Languages",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "knowledge"
+   ],
+   "effect": "While wearing it, you can cast comprehend languages at will.",
+   "value": 370,
+   "recipe": {
+    "components": [
+     {
+      "m": "helm",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "runestone-fragment",
+       "seers-leaf",
+       "mage-spellbook-folio"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Lore keystone (uncommon+)"
+     },
+     {
+      "m": "raven-tongue",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "lapis-lazuli",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "calligraphers-supplies"
+    ],
+    "station": "scriptorium",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "comprehend languages"
+    ],
+    "yields": 1,
+    "lore": "Scribes engrave every alphabet they know inside the crown; a raven's tongue, which mimics any voice, is set above the ear so the helm can mimic any meaning."
+   }
+  },
+  {
+   "id": "helm-of-telepathy",
+   "name": "Helm of Telepathy",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "telepathy",
+    "psychic"
+   ],
+   "effect": "You can read the surface thoughts of those nearby and speak into their minds; once a day, you can plant a suggestion as well.",
+   "value": 450,
+   "recipe": {
+    "components": [
+     {
+      "m": "helm",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "couatl-essence",
+       "doppelganger-brain",
+       "thought-crystal"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Telepathic keystone (uncommon+)"
+     },
+     {
+      "m": "homunculus-blood-drop",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "amethyst",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "detect thoughts",
+     "suggestion"
+    ],
+    "yields": 1,
+    "lore": "A homunculus shares its master's mind through a single drop of blood; bound under amethyst in the helm's brow, that drop lets you share anyone's."
+   }
+  },
+  {
+   "id": "helm-of-teleportation",
+   "name": "Helm of Teleportation",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "teleport"
+   ],
+   "effect": "Holds charges of the teleport spell that recover each dawn.",
+   "value": 4500,
+   "recipe": {
+    "components": [
+     {
+      "m": "helm",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "astral-silver-thread",
+       "nalfeshnee-wing",
+       "nalfeshnee-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Teleport keystone (rare+)"
+     },
+     {
+      "m": "blink-dog-essence",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "faerie-ring-mushroom",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "scout-trail-map",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "cartographers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "teleport"
+    ],
+    "yields": 1,
+    "lore": "A scout's map is folded into the lining so the helm knows where places are; faerie-ring spores and a blink dog's essence teach it how to skip the distance between them."
+   }
+  },
+  {
+   "id": "horn-of-blasting",
+   "name": "Horn of Blasting",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "instrument",
+    "thunder",
+    "sound"
+   ],
+   "effect": "Blow it and a deafening cone of thunder bursts out, damaging and deafening creatures and shattering glass; each blast risks cracking the horn itself.",
+   "value": 2500,
+   "recipe": {
+    "components": [
+     {
+      "m": "horn",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "androsphinx-roar-larynx",
+       "thunderhead-shard",
+       "djinni-tempest-core",
+       "cloaker-moan-sac",
+       "young-blue-dragon-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Thunderous keystone (rare+): androsphinx larynx, thunderhead shard, djinni core, cloaker moan sac or young blue dragon essence"
+     },
+     {
+      "m": "tyrannosaurus-rex-roar-sac",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "vrock-screech-organ",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "resonant-crystal",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "thunderwave",
+     "shatter"
+    ],
+    "yields": 1,
+    "lore": "A tyrannosaur's roar sac lines the bell and a vrock's screech organ the mouthpiece; the keystone is so loud the horn is always a little afraid of itself - hence the cracks. Lesser horns are voiced with a cloaker's moan sac or a young blue dragon's storm essence; they blast just as hard."
+   }
+  },
+  {
+   "id": "horn-of-valhalla-silver",
+   "name": "Horn of Valhalla (Silver)",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "instrument",
+    "celestial",
+    "sound"
+   ],
+   "effect": "Once a week, sound it to summon a number of spectral berserker warriors from a hall of heroes; they fight for you for an hour, and the larger the horn's metal worth, the more of them come.",
+   "value": 3000,
+   "recipe": {
+    "components": [
+     {
+      "m": "horn",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "deva-essence",
+       "frost-giant-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Warrior-spirit keystone (rare+)"
+     },
+     {
+      "m": "silver-ingot",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "berserker-trophy-necklace",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "mammoth-ivory",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "spiritual weapon",
+     "bless"
+    ],
+    "yields": 1,
+    "lore": "The horn is cast in its metal around a berserker's trophy necklace; the keystone, taken from a being who marshals fallen warriors, is what makes the dead answer the call."
+   }
+  },
+  {
+   "id": "horn-of-valhalla-brass",
+   "name": "Horn of Valhalla (Brass)",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "instrument",
+    "celestial",
+    "sound"
+   ],
+   "effect": "Once a week, sound it to summon a number of spectral berserker warriors from a hall of heroes; they fight for you for an hour, and the larger the horn's metal worth, the more of them come.",
+   "value": 4500,
+   "recipe": {
+    "components": [
+     {
+      "m": "horn",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "deva-essence",
+       "fire-giant-essence",
+       "horned-devil-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Warrior-spirit keystone (rare+)"
+     },
+     {
+      "m": "copper-ingot",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "berserker-trophy-necklace",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "mammoth-ivory",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "spiritual weapon",
+     "bless"
+    ],
+    "requires": "Wielders must be proficient with simple weapons or the spirits turn on them.",
+    "yields": 1,
+    "lore": "The horn is cast in its metal around a berserker's trophy necklace; the keystone, taken from a being who marshals fallen warriors, is what makes the dead answer the call."
+   }
+  },
+  {
+   "id": "horn-of-valhalla-bronze",
+   "name": "Horn of Valhalla (Bronze)",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "instrument",
+    "celestial",
+    "sound"
+   ],
+   "effect": "Once a week, sound it to summon a number of spectral berserker warriors from a hall of heroes; they fight for you for an hour, and the larger the horn's metal worth, the more of them come.",
+   "value": 17600,
+   "recipe": {
+    "components": [
+     {
+      "m": "horn",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "planetar-essence",
+       "storm-giant-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Warrior-spirit keystone (very rare)"
+     },
+     {
+      "m": "bronze-ingot",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "berserker-trophy-necklace",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "mammoth-ivory",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "spiritual weapon",
+     "conjure celestial"
+    ],
+    "requires": "Wielders must be proficient with medium armor or the spirits turn on them.",
+    "yields": 1,
+    "lore": "The horn is cast in its metal around a berserker's trophy necklace; the keystone, taken from a being who marshals fallen warriors, is what makes the dead answer the call."
+   }
+  },
+  {
+   "id": "horn-of-valhalla-iron",
+   "name": "Horn of Valhalla (Iron)",
+   "cat": "wondrous",
+   "tier": "legendary",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "instrument",
+    "celestial",
+    "sound"
+   ],
+   "effect": "Once a week, sound it to summon a number of spectral berserker warriors from a hall of heroes; they fight for you for an hour, and the larger the horn's metal worth, the more of them come.",
+   "value": 62500,
+   "recipe": {
+    "components": [
+     {
+      "m": "horn",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "solar-essence",
+       "tarrasque-horn"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Legendary warrior keystone"
+     },
+     {
+      "m": "meteoric-iron",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "berserker-trophy-necklace",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "mammoth-ivory",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "conjure celestial"
+    ],
+    "requires": "Wielders must be proficient with all martial weapons or the spirits turn on them.",
+    "yields": 1,
+    "lore": "The horn is cast in its metal around a berserker's trophy necklace; the keystone, taken from a being who marshals fallen warriors, is what makes the dead answer the call."
+   }
+  },
+  {
+   "id": "horseshoes-of-a-zephyr",
+   "name": "Horseshoes of a Zephyr",
+   "cat": "wondrous",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "flight",
+    "air",
+    "speed"
+   ],
+   "effect": "Fitted to a horse or similar creature, they let it gallop a few inches above the ground - over water, sand or snow without a track - and never tire from ordinary travel.",
+   "value": 15000,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 4,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "cloud-giant-blood",
+       "planetar-feather",
+       "solar-feather"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Weightless keystone (very rare)"
+     },
+     {
+      "m": "pegasus-flight-feather",
+      "q": 4,
+      "role": "supporting"
+     },
+     {
+      "m": "solid-cloud",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "levitate",
+     "pass without trace"
+    ],
+    "yields": 1,
+    "lore": "A farrier quenches each shoe in cloud giant blood or wraps it around a celestial quill; the pegasus feathers are nailed in under the hoof, where they carry the horse like a breeze."
+   }
+  },
+  {
+   "id": "horseshoes-of-speed",
+   "name": "Horseshoes of Speed",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wondrous",
+    "gear",
+    "speed"
+   ],
+   "effect": "Fitted to a horse or similar creature, they increase its walking speed by 30 feet.",
+   "value": 4000,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 4,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "quickening-tincture",
+       "marilith-scales"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Quickening keystone (rare+)"
+     },
+     {
+      "m": "warhorse-hoof",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "riding-horse-sinew",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "unicorn-hooves",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "haste"
+    ],
+    "yields": 1,
+    "lore": "The shoes are quenched in quickening tincture and filed to the shape of a unicorn's hoof; the sinew wrapping keeps the horse's legs from arguing with its new pace."
+   }
+  }
+ ]
+}

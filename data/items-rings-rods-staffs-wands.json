@@ -1,0 +1,4490 @@
+{
+ "items": [
+  {
+   "id": "ring-of-animal-influence",
+   "name": "Ring of Animal Influence",
+   "cat": "ring",
+   "tier": "rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "primal",
+    "charm",
+    "fear"
+   ],
+   "effect": "Holds 3 charges, regained at dawn. Spend one to befriend a beast, to frighten beasts before you, or to talk with animals for a while.",
+   "value": 4000,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "giant-ape-heart",
+       "tyrannosaurus-rex-heart",
+       "emerald"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Heart of a great beast, or a primal emerald (rare+)"
+     },
+     {
+      "m": "raven-tongue",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "lion-mane",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "druidic-mistletoe",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "animal friendship",
+     "speak with animals"
+    ],
+    "yields": 1,
+    "lore": "Beasts defer to the heart of whatever ruled their forest; the raven's tongue gives the ring words and the lion's mane gives it teeth."
+   }
+  },
+  {
+   "id": "ring-of-djinni-summoning",
+   "name": "Ring of Djinni Summoning",
+   "cat": "ring",
+   "tier": "legendary",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "air",
+    "elemental",
+    "planar"
+   ],
+   "effect": "Speak its command word to call forth the djinni bound within, who serves you for up to an hour a day. If the djinni is ever slain the ring goes dead.",
+   "value": 70000,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "eye-of-storm-glass",
+       "wishbloom"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Eye-of-the-storm glass or a wishbloom (legendary)"
+     },
+     {
+      "m": "djinni-tempest-core",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "djinni-cloudsilk-hair",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "turquoise",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "gold-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "conjure elemental",
+     "plane shift"
+    ],
+    "requires": "The djinni-tempest-core must come from a djinni that was defeated or bound, not bargained with; the ring summons that same djinni.",
+    "yields": 1,
+    "lore": "The tempest core is the djinni's own name in solid form; set beneath storm-glass it becomes a door the spirit must answer."
+   }
+  },
+  {
+   "id": "ring-of-elemental-command-air",
+   "name": "Ring of Elemental Command (Air)",
+   "cat": "ring",
+   "tier": "legendary",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "elemental",
+    "air"
+   ],
+   "effect": "You can speak Auran, air elementals find it hard to strike you, falls barely hurt, and you can spend charges on winds, lightning and chains of storm. While worn it also lets you command a single bound elemental of its kind. Its 5 charges return in part each dawn.",
+   "value": 69400,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "eye-of-storm-glass",
+       "ancient-blue-dragon-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Legendary heart of the storm"
+     },
+     {
+      "m": "air-elemental-core",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "djinni-cloudsilk-hair",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "turquoise",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "conjure elemental",
+     "wind wall"
+    ],
+    "requires": "The crafter must defeat an elemental of the ring's element during the crafting month; its core is one of the two required.",
+    "yields": 1,
+    "lore": "Air elemental cores spin inside the setting like trapped weather; the storm-glass tells them who is master."
+   }
+  },
+  {
+   "id": "ring-of-elemental-command-earth",
+   "name": "Ring of Elemental Command (Earth)",
+   "cat": "ring",
+   "tier": "legendary",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "elemental",
+    "earth"
+   ],
+   "effect": "You can speak Terran, earth elementals falter against you, rubble and mud slow you not at all, and you can spend charges to shape stone, shake the ground or walk through rock. While worn it also lets you command a single bound elemental of its kind. Its 5 charges return in part each dawn.",
+   "value": 60000,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "worldheart-diamond"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Worldheart diamond (legendary)"
+     },
+     {
+      "m": "earth-elemental-core",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "xorn-gut-stones",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "malachite",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "conjure elemental",
+     "wall of stone"
+    ],
+    "requires": "The crafter must defeat an elemental of the ring's element during the crafting month; its core is one of the two required.",
+    "yields": 1,
+    "lore": "Xorn gut-stones have been through the world's belly and back; a worldheart diamond gives the band the weight of a mountain."
+   }
+  },
+  {
+   "id": "ring-of-elemental-command-fire",
+   "name": "Ring of Elemental Command (Fire)",
+   "cat": "ring",
+   "tier": "legendary",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "elemental",
+    "fire"
+   ],
+   "effect": "You can speak Ignan, fire elementals struggle to harm you, you shrug off fire, and you can spend charges to hurl flame, raise walls of fire and call fire elementals. While worn it also lets you command a single bound elemental of its kind. Its 5 charges return in part each dawn.",
+   "value": 60000,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "primordial-flame",
+       "ancient-red-dragon-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Legendary living fire"
+     },
+     {
+      "m": "fire-elemental-core",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "efreeti-brass-cinders",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "ruby",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "conjure elemental",
+     "wall of fire"
+    ],
+    "requires": "The crafter must defeat an elemental of the ring's element during the crafting month; its core is one of the two required.",
+    "yields": 1,
+    "lore": "Brass cinders from an efreeti's city chain the flame, and the ruby is a window it can look out of but never escape."
+   }
+  },
+  {
+   "id": "ring-of-elemental-command-water",
+   "name": "Ring of Elemental Command (Water)",
+   "cat": "ring",
+   "tier": "legendary",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "elemental",
+    "water"
+   ],
+   "effect": "You can speak Aquan, water elementals have trouble striking you, you swim and breathe underwater, and you can spend charges to part seas, freeze waves and summon water elementals. While worn it also lets you command a single bound elemental of its kind. Its 5 charges return in part each dawn.",
+   "value": 69800,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "tideheart-pearl",
+       "kraken-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Legendary heart of the deep"
+     },
+     {
+      "m": "water-elemental-core",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "water-elemental-tidewater-pearl",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "aquamarine",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "conjure elemental",
+     "control water"
+    ],
+    "requires": "The crafter must defeat an elemental of the ring's element during the crafting month; its core is one of the two required.",
+    "yields": 1,
+    "lore": "Pearls grow around irritation in the sea; the tideheart grew around a storm, and it keeps the ring's waters obedient."
+   }
+  },
+  {
+   "id": "ring-of-evasion",
+   "name": "Ring of Evasion",
+   "cat": "ring",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "speed",
+    "teleport",
+    "protection"
+   ],
+   "effect": "Holds 3 charges, regained at dawn. When you fail a Dexterity save you can spend a charge as a reaction to succeed instead.",
+   "value": 4500,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "astral-silver-thread",
+       "marilith-hand",
+       "oni-essence",
+       "young-copper-dragon-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Slippery, elusive keystone (astral silver thread, marilith hand, oni essence or young copper dragon essence)"
+     },
+     {
+      "m": "blink-dog-fang",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "panther-hamstring",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "quicksilver",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "blur"
+    ],
+    "yields": 1,
+    "lore": "Blink dog teeth are never quite where you bit them; wound with astral thread they teach the wearer the same half-step aside. An oni's essence, which knows how to turn to mist, or a young copper dragon's, a born dodger, also teach the ring to slip aside."
+   }
+  },
+  {
+   "id": "ring-of-feather-falling",
+   "name": "Ring of Feather Falling",
+   "cat": "ring",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "air",
+    "flight"
+   ],
+   "effect": "Whenever you fall, you drift down gently at a leisurely pace and land without harm.",
+   "value": 2500,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "skyfloat-thistle",
+       "roc-feather",
+       "deva-feather",
+       "cloud-giant-cloudstuff"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Something that refuses to fall (rare flight)"
+     },
+     {
+      "m": "wind-seed",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "feather-fern",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "owl-feather",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "feather fall"
+    ],
+    "yields": 1,
+    "lore": "Wind-seeds and feather-fern are packed under the setting so the ring always has a little breeze to lean on; the keystone remembers the sky."
+   }
+  },
+  {
+   "id": "ring-of-free-action",
+   "name": "Ring of Free Action",
+   "cat": "ring",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "antimagic",
+    "speed"
+   ],
+   "effect": "Difficult terrain costs you nothing extra, and magic can neither slow you nor leave you paralyzed or restrained.",
+   "value": 5000,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "aboleth-mucus",
+       "nullthorn"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Slick aboleth mucus or spell-shedding nullthorn (rare)"
+     },
+     {
+      "m": "giant-toad-skin",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "ochre-jelly-acid",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "quicksilver",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "freedom of movement"
+    ],
+    "yields": 1,
+    "lore": "Nothing gets a grip on aboleth slime; sealed under quicksilver it keeps every snare, glue and spell sliding off the wearer."
+   }
+  },
+  {
+   "id": "ring-of-invisibility",
+   "name": "Ring of Invisibility",
+   "cat": "ring",
+   "tier": "legendary",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "invisibility",
+    "stealth"
+   ],
+   "effect": "Turn invisible at will, along with everything you wear and carry, until you attack, cast a spell or choose to reappear.",
+   "value": 80000,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "ancient-black-dragon-gloom-gland",
+       "kraken-ink"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Gloom-gland of an ancient black dragon or kraken ink"
+     },
+     {
+      "m": "invisible-stalker-core",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "gelatinous-cube-gel",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "ghostpetal",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "shadowsilk-thistle",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "invisibility",
+     "greater invisibility"
+    ],
+    "yields": 1,
+    "lore": "A stalker's core is clear as breath and a cube's gel swallows light; bound with shadowsilk around the gloom-gland, the wearer simply stops being noticed by the world."
+   }
+  },
+  {
+   "id": "ring-of-jumping",
+   "name": "Ring of Jumping",
+   "cat": "ring",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "speed",
+    "strength"
+   ],
+   "effect": "Lets you cast jump on yourself at will as a bonus action.",
+   "value": 350,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "air-elemental-core",
+       "pegasus-flight-feather",
+       "earthmote-stone"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Buoyant keystone (uncommon+)"
+     },
+     {
+      "m": "giant-frog-legs",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "axe-beak-leg-sinew",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "giant-goat-hooves",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "jump"
+    ],
+    "yields": 1,
+    "lore": "Frog legs and goat hooves give the spring; the floating keystone makes sure you do not come down too soon."
+   }
+  },
+  {
+   "id": "ring-of-mind-shielding",
+   "name": "Ring of Mind Shielding",
+   "cat": "ring",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "psychic",
+    "protection"
+   ],
+   "effect": "Your thoughts, lies and nature are hidden from magic that would read them, and telepathy only reaches you if you allow it. When you die your soul may shelter in the ring.",
+   "value": 450,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "doppelganger-brain",
+       "halo-quartz",
+       "mind-mote-dust"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Mind-guarding keystone (uncommon+)"
+     },
+     {
+      "m": "amethyst",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "lead-ingot",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "smoky-quartz",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "detect thoughts"
+    ],
+    "yields": 1,
+    "lore": "A doppelganger's brain spends its life hiding what it truly is; lined with lead, which no prying sense can see through, the ring keeps your mind just as closed."
+   }
+  },
+  {
+   "id": "ring-of-protection",
+   "name": "Ring of Protection",
+   "cat": "ring",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "protection"
+   ],
+   "effect": "Grants a +1 bonus to AC and to all saving throws.",
+   "value": 3500,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "raw-diamond",
+       "guardian-naga-scale",
+       "shield-guardian-amulet-shard"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Warding keystone (rare)"
+     },
+     {
+      "m": "jade",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "lionsmane-thistle",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "shield of faith",
+     "warding bond"
+    ],
+    "yields": 1,
+    "lore": "Old smiths say jade 'drinks the blow'; set around a guardian's scale or a warded diamond, it spreads that drinking over the whole body."
+   }
+  },
+  {
+   "id": "ring-of-regeneration",
+   "name": "Ring of Regeneration",
+   "cat": "ring",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "regeneration",
+    "healing"
+   ],
+   "effect": "While you have at least 1 hit point you steadily recover hit points every 10 minutes, and lost limbs or organs slowly grow back.",
+   "value": 15000,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "everbloom-heartroot",
+       "vampire-blood",
+       "tarrasque-blood"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Undying keystone (very-rare+)"
+     },
+     {
+      "oneOf": [
+       "troll-regenerating-heart",
+       "hydra-heart"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Troll or hydra heart"
+     },
+     {
+      "m": "bloodstone",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "mendwort",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "gold-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "mass cure wounds",
+     "lesser restoration"
+    ],
+    "yields": 1,
+    "lore": "A troll heart kept in a jar keeps beating; crushed into the setting with everbloom root, it lends that stubbornness to whoever wears the ring."
+   }
+  },
+  {
+   "id": "ring-of-resistance-acid",
+   "name": "Ring of Resistance (Acid)",
+   "cat": "ring",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "resistance",
+    "acid"
+   ],
+   "effect": "You have resistance to acid damage while you wear it.",
+   "value": 3500,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "young-black-dragon-scales",
+       "young-copper-dragon-scales",
+       "clay-golem-clay"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Acid-proof keystone (rare+)"
+     },
+     {
+      "m": "pearl",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "cleansing-sage",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "protection from energy"
+    ],
+    "yields": 1,
+    "lore": "Pearls are the one treasure a black dragon's swamp cannot dissolve."
+   }
+  },
+  {
+   "id": "ring-of-resistance-cold",
+   "name": "Ring of Resistance (Cold)",
+   "cat": "ring",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "resistance",
+    "cold"
+   ],
+   "effect": "You have resistance to cold damage while you wear it.",
+   "value": 3500,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "young-silver-dragon-scales",
+       "frost-giant-essence",
+       "frost-giant-blood"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Cold-proof keystone (rare+)"
+     },
+     {
+      "m": "rime-crystal",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "frost-lichen",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "protection from energy"
+    ],
+    "yields": 1,
+    "lore": "Frost lichen thrives where nothing else can, and rime crystal turns the chill aside like water off glass."
+   }
+  },
+  {
+   "id": "ring-of-resistance-fire",
+   "name": "Ring of Resistance (Fire)",
+   "cat": "ring",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "resistance",
+    "fire"
+   ],
+   "effect": "You have resistance to fire damage while you wear it.",
+   "value": 3500,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "young-red-dragon-scales",
+       "young-gold-dragon-scales",
+       "efreeti-ember-blood",
+       "fire-giant-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Fire-proof keystone (rare+)"
+     },
+     {
+      "m": "garnet",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "emberbloom",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "protection from energy"
+    ],
+    "yields": 1,
+    "lore": "What was born in flame does not fear it; emberbloom petals under a garnet teach the wearer's skin the same indifference."
+   }
+  },
+  {
+   "id": "ring-of-resistance-force",
+   "name": "Ring of Resistance (Force)",
+   "cat": "ring",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "resistance",
+    "force"
+   ],
+   "effect": "You have resistance to force damage while you wear it.",
+   "value": 3500,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "meteoric-iron",
+       "arcane-crystal"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Force-proof keystone (rare+)"
+     },
+     {
+      "m": "sapphire",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "ironbark",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "shield"
+    ],
+    "yields": 1,
+    "lore": "Star-iron survived falling through the sky; its stubbornness, set beneath sapphire, turns raw magical force aside."
+   }
+  },
+  {
+   "id": "ring-of-resistance-lightning",
+   "name": "Ring of Resistance (Lightning)",
+   "cat": "ring",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "resistance",
+    "lightning"
+   ],
+   "effect": "You have resistance to lightning damage while you wear it.",
+   "value": 3500,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "young-blue-dragon-scales",
+       "young-bronze-dragon-scales",
+       "behir-scale"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Lightning-proof keystone (rare+)"
+     },
+     {
+      "m": "topaz",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "fulgurite",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "protection from energy"
+    ],
+    "yields": 1,
+    "lore": "Fulgurite is lightning's footprint in sand; bound with a storm-born scale it gives the bolt somewhere else to go."
+   }
+  },
+  {
+   "id": "ring-of-resistance-necrotic",
+   "name": "Ring of Resistance (Necrotic)",
+   "cat": "ring",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "resistance",
+    "necrotic"
+   ],
+   "effect": "You have resistance to necrotic damage while you wear it.",
+   "value": 3500,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "spirit-naga-scale",
+       "black-pearl"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Necrotic-proof keystone (rare+)"
+     },
+     {
+      "m": "jet",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "garlic-bulb",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "death ward"
+    ],
+    "yields": 1,
+    "lore": "Jet has been mourning stone since before memory; paired with a scale or pearl that has already tasted death, it keeps death's touch shallow."
+   }
+  },
+  {
+   "id": "ring-of-resistance-poison",
+   "name": "Ring of Resistance (Poison)",
+   "cat": "ring",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "resistance",
+    "poison"
+   ],
+   "effect": "You have resistance to poison damage while you wear it.",
+   "value": 3500,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "young-green-dragon-scales",
+       "purity-lotus",
+       "hezrou-hide"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Poison-proof keystone (rare+)"
+     },
+     {
+      "m": "amethyst",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "wyrmbane-thistle",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "protection from poison"
+    ],
+    "yields": 1,
+    "lore": "Amethyst has always been the drinker's charm against being overcome; wyrmbane thistle makes it work against venom too."
+   }
+  },
+  {
+   "id": "ring-of-resistance-psychic",
+   "name": "Ring of Resistance (Psychic)",
+   "cat": "ring",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "resistance",
+    "psychic"
+   ],
+   "effect": "You have resistance to psychic damage while you wear it.",
+   "value": 3500,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "thought-crystal",
+       "aboleth-brain",
+       "mindbloom-orchid"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Psychic-proof keystone (rare+)"
+     },
+     {
+      "m": "jade",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "rememberwort",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "calm emotions"
+    ],
+    "yields": 1,
+    "lore": "A thought crystal already carries a mind's pressure; set in calming jade it bleeds off any assault on the wearer's thoughts."
+   }
+  },
+  {
+   "id": "ring-of-resistance-radiant",
+   "name": "Ring of Resistance (Radiant)",
+   "cat": "ring",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "resistance",
+    "radiant"
+   ],
+   "effect": "You have resistance to radiant damage while you wear it.",
+   "value": 3500,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "sun-amber",
+       "guardian-naga-scale",
+       "raw-diamond"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Radiant-proof keystone (rare+)"
+     },
+     {
+      "m": "sunstone",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-birch-bark",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "warding bond"
+    ],
+    "yields": 1,
+    "lore": "Sun-amber has held a sunbeam for an age without burning; it teaches the wearer to hold holy light the same way."
+   }
+  },
+  {
+   "id": "ring-of-resistance-thunder",
+   "name": "Ring of Resistance (Thunder)",
+   "cat": "ring",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "resistance",
+    "thunder"
+   ],
+   "effect": "You have resistance to thunder damage while you wear it.",
+   "value": 3500,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "djinni-tempest-core",
+       "thunderhead-shard",
+       "androsphinx-roar-larynx",
+       "young-blue-dragon-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Thunder-proof keystone (rare+): djinni core, thunderhead shard, androsphinx larynx or young blue dragon essence"
+     },
+     {
+      "m": "resonant-crystal",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "hushmoss",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "protection from energy"
+    ],
+    "yields": 1,
+    "lore": "Hushmoss swallows sound; wrapped around a storm-heart and a ringing crystal, it drinks the shockwave before it reaches bone. A young blue dragon's storm-steeped essence serves the same purpose."
+   }
+  },
+  {
+   "id": "ring-of-shooting-stars",
+   "name": "Ring of Shooting Stars",
+   "cat": "ring",
+   "tier": "very-rare",
+   "attune": "outdoors at night",
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "light",
+    "lightning",
+    "fire"
+   ],
+   "effect": "Works only outdoors at night. Conjure dancing lights or light at will, and spend charges on faerie fire, crackling orbs of lightning, or a hail of tiny burning stars. Its 6 charges return in part each dawn.",
+   "value": 14000,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "star-sapphire",
+       "thunderhead-shard"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Star sapphire or thunderhead shard (very-rare)"
+     },
+     {
+      "m": "meteoric-iron",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "will-o-wisp-lantern-core",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "moonpetal",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "faerie fire",
+     "lightning bolt"
+    ],
+    "requires": "The final setting must be done under a clear night sky.",
+    "yields": 1,
+    "lore": "Meteoric iron already fell from the sky once; a will-o'-wisp's lantern and a star sapphire teach it to call its siblings down."
+   }
+  },
+  {
+   "id": "ring-of-spell-storing",
+   "name": "Ring of Spell Storing",
+   "cat": "ring",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "arcane",
+    "knowledge"
+   ],
+   "effect": "Holds up to 5 levels' worth of spells cast into it by anyone. The wearer can release any stored spell as if they had cast it.",
+   "value": 5000,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "shield-guardian-spell-cavity",
+       "arcane-crystal",
+       "archmage-arcane-focus"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Spell vessel (rare arcane)"
+     },
+     {
+      "m": "arcane-residue",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "spellbook-pages",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "gold-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "glyph of warding"
+    ],
+    "yields": 1,
+    "lore": "A shield guardian's spell cavity was grown to hold one spell for its master; cut down and set in gold, it holds several for you."
+   }
+  },
+  {
+   "id": "ring-of-spell-turning",
+   "name": "Ring of Spell Turning",
+   "cat": "ring",
+   "tier": "legendary",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "antimagic",
+    "protection"
+   ],
+   "effect": "You have advantage on saves against spells that target only you, and on a natural high roll you can bounce a single-target spell back at its caster.",
+   "value": 90000,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "tarrasque-carapace",
+       "lich-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Tarrasque carapace or lich essence (legendary)"
+     },
+     {
+      "m": "prism-crystal",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "nullthorn",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "quicksilver",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "counterspell",
+     "globe of invulnerability"
+    ],
+    "yields": 1,
+    "lore": "The tarrasque's shell throws spells back at the fool who cast them; a sliver polished behind quicksilver, like the back of a mirror, still does."
+   }
+  },
+  {
+   "id": "ring-of-swimming",
+   "name": "Ring of Swimming",
+   "cat": "ring",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "water",
+    "swimming"
+   ],
+   "effect": "Grants a swimming speed of 40 feet.",
+   "value": 280,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "aquamarine",
+       "giant-crocodile-tail-sinew",
+       "current-kelp"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Water-born keystone (uncommon+)"
+     },
+     {
+      "m": "giant-sea-horse-dorsal-fin",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "bladderwrack",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "alter self"
+    ],
+    "yields": 1,
+    "lore": "Sailors wear aquamarine against drowning; a sea-horse fin and a twist of kelp teach the hand to push water like a fish's tail."
+   }
+  },
+  {
+   "id": "ring-of-telekinesis",
+   "name": "Ring of Telekinesis",
+   "cat": "ring",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "force",
+    "psychic"
+   ],
+   "effect": "Lets you cast telekinesis at will, but only on objects nobody is wearing or carrying.",
+   "value": 16000,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "adult-bronze-dragon-repulsion-gland",
+       "ancient-bronze-dragon-repulsion-gland"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Bronze dragon repulsion gland (very-rare+)"
+     },
+     {
+      "m": "drifting-ioun-shard",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "lodestone",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "mind-mote-dust",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "telekinesis",
+     "mage hand"
+    ],
+    "yields": 1,
+    "lore": "A bronze dragon's repulsion gland shoves without touching; paired with lodestone, which pulls iron, and an ioun shard that floats of its own will, it teaches the mind to push and pull at a distance."
+   }
+  },
+  {
+   "id": "ring-of-the-ram",
+   "name": "Ring of the Ram",
+   "cat": "ring",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "force",
+    "strength"
+   ],
+   "effect": "Holds 3 charges. Spend one or more to hurl a spectral ram's head at a creature, dealing force damage and shoving it away, or to smash an object open. It regains 1d3 charges each dawn.",
+   "value": 5000,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "young-bronze-dragon-repulsion-gland",
+       "stone-giant-heartstone"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Force or giant-strength keystone (rare)"
+     },
+     {
+      "m": "gorgon-horn",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "minotaur-horn",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "giant-goat-horns",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "jewelers-solder",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "thunderwave"
+    ],
+    "yields": 1,
+    "lore": "Three horns from three chargers, ground and fused; the bronze dragon's repulsion gland supplies the shove that sends the ram's ghost flying."
+   }
+  },
+  {
+   "id": "ring-of-three-wishes",
+   "name": "Ring of Three Wishes",
+   "cat": "ring",
+   "tier": "legendary",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "luck",
+    "time"
+   ],
+   "effect": "Holds 3 charges; each lets you cast wish. Once the last charge is spent the ring is only a trinket.",
+   "value": 150000,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "wishbloom",
+       "dead-god-stone"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Wishbloom or dead-god stone"
+     },
+     {
+      "m": "djinni-wishglass-bead",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "fey-clover",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "gold-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "wish"
+    ],
+    "requires": "A wish must be cast into the ring on the final day; the beads are consumed as the charges are spent.",
+    "yields": 1,
+    "lore": "Three wishglass beads, one for each wish, strung around the only flower that grants them; crafters say every clover in the band is one bad outcome averted."
+   }
+  },
+  {
+   "id": "ring-of-warmth",
+   "name": "Ring of Warmth",
+   "cat": "ring",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "fire",
+    "cold",
+    "resistance"
+   ],
+   "effect": "You resist cold damage, and you and your gear stay comfortable in bitter cold far below freezing.",
+   "value": 400,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "salamander-heart",
+       "fire-elemental-everburning-cinder",
+       "emberbloom"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Ever-warm keystone (uncommon+)"
+     },
+     {
+      "m": "garnet",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "azer-flame-hair",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "gold-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "produce flame"
+    ],
+    "yields": 1,
+    "lore": "A cinder that never goes out, cradled in garnet: arctic traders swear the ring is warmer than their own blood."
+   }
+  },
+  {
+   "id": "ring-of-water-walking",
+   "name": "Ring of Water Walking",
+   "cat": "ring",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "water"
+   ],
+   "effect": "Lets you stand on and walk across any liquid as though it were solid ground.",
+   "value": 330,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "ambergris",
+       "primordial-brine",
+       "water-elemental-tidewater-pearl"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Buoyant water keystone (uncommon+)"
+     },
+     {
+      "m": "driftwood",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "reef-shark-oil",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "water walk"
+    ],
+    "yields": 1,
+    "lore": "Ambergris and shark oil float on any sea; a sliver of driftwood reminds the ring that the water is a floor, not a door."
+   }
+  },
+  {
+   "id": "ring-of-x-ray-vision",
+   "name": "Ring of X-ray Vision",
+   "cat": "ring",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "ring",
+    "jewelry",
+    "senses",
+    "truesight"
+   ],
+   "effect": "Speak a command word to see through solid matter within 30 feet for a minute; thin lead or thicker stone and metal still block it. Using it again the same day can exhaust you.",
+   "value": 5000,
+   "recipe": {
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "veilpierce-eyebright",
+       "gynosphinx-eye"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Veil-piercing keystone (rare)"
+     },
+     {
+      "m": "invisible-stalker-clearglass",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "xorn-gut-stones",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "clairvoyance"
+    ],
+    "yields": 1,
+    "lore": "A xorn sees gems through solid rock; its gut-stones behind stalker clearglass lend that sight to the wearer - but never through lead, which it cannot eat."
+   }
+  },
+  {
+   "id": "rod-of-absorption",
+   "name": "Rod of Absorption",
+   "cat": "rod",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "rod",
+    "focus",
+    "antimagic",
+    "arcane"
+   ],
+   "effect": "As a reaction, soak up a spell aimed only at you, storing its levels in the rod. You can later spend stored levels to fuel your own spells, up to a lifetime limit.",
+   "value": 25000,
+   "recipe": {
+    "components": [
+     {
+      "m": "rod-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "rakshasa-hide",
+       "iron-golem-core"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Spell-eating keystone (very-rare)"
+     },
+     {
+      "m": "adamantine-ingot",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "nullthorn",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "arcane-crystal",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "quicksilver",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "counterspell",
+     "dispel magic"
+    ],
+    "yields": 1,
+    "lore": "Spells slide off a rakshasa's hide and vanish; wrapped around an adamantine core with an arcane crystal at the tip, the rod catches them instead."
+   }
+  },
+  {
+   "id": "rod-of-alertness",
+   "name": "Rod of Alertness",
+   "cat": "rod",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "rod",
+    "senses",
+    "protection",
+    "truesight"
+   ],
+   "effect": "Keeps you sharp: advantage on Perception and initiative, and it can detect hidden foes and magic. Once a day, plant it to shed light and ward allies nearby with a small bonus to AC.",
+   "value": 20000,
+   "recipe": {
+    "components": [
+     {
+      "m": "rod-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "planetar-eye",
+       "androsphinx-tear"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Planetar eye or androsphinx tear (very-rare)"
+     },
+     {
+      "m": "ettin-wakeful-eye",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "giant-owl-eyes",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "wakeberry",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "gold-leaf",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "jewelers-tools"
+    ],
+    "station": "forge",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "detect magic",
+     "see invisibility"
+    ],
+    "yields": 1,
+    "lore": "An ettin always keeps one head awake; its eye set at the rod's crown beside an angel's never-closing gaze means the bearer is never truly caught napping."
+   }
+  },
+  {
+   "id": "immovable-rod",
+   "name": "Immovable Rod",
+   "cat": "rod",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "rod",
+    "earth",
+    "binding",
+    "strength"
+   ],
+   "effect": "Press its button and the rod locks in place, defying gravity and holding up to several tons until pushed with tremendous force. Press again to release it.",
+   "value": 450,
+   "recipe": {
+    "components": [
+     {
+      "m": "rod-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "earth-elemental-core",
+       "stone-golem-lethargy-stone",
+       "basilisk-gizzard-stone"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Anchoring stone (uncommon+)"
+     },
+     {
+      "m": "iron-ingot",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "lodestone",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "kobold-trap-springs",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "jewelers-solder",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "tinkers-tools"
+    ],
+    "station": "forge",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "hold person"
+    ],
+    "yields": 1,
+    "lore": "An earth elemental core wants nothing more than to stay put; the button just tells it when."
+   }
+  },
+  {
+   "id": "rod-of-lordly-might",
+   "name": "Rod of Lordly Might",
+   "cat": "rod",
+   "tier": "legendary",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "rod",
+    "weapon",
+    "bludgeon",
+    "fear",
+    "domination"
+   ],
+   "effect": "A +3 mace whose studs transform it into a flaming blade, a battleaxe, a spear, a climbing pole, a battering ram or a compass. Once a day each, it can drain a foe's life, paralyze a creature or terrify everyone nearby.",
+   "value": 125000,
+   "recipe": {
+    "components": [
+     {
+      "m": "mace",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "ancient-red-dragon-dread-gland",
+       "pit-fiend-essence",
+       "ancient-gold-dragon-heart"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Sovereign keystone (legendary)"
+     },
+     {
+      "m": "adamantine-ingot",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "fire-giant-forge-hammer-iron",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "kobold-trap-springs",
+      "q": 6,
+      "role": "supporting"
+     },
+     {
+      "m": "gold-leaf",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "tinkers-tools"
+    ],
+    "station": "forge",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "fear",
+     "hold monster"
+    ],
+    "yields": 1,
+    "lore": "Forge-iron from a fire giant's hammer for the head, kobold spring-work for the studs, and at its heart the dread of something that ruled a mountain."
+   }
+  },
+  {
+   "id": "rod-of-rulership",
+   "name": "Rod of Rulership",
+   "cat": "rod",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "rod",
+    "charm",
+    "domination"
+   ],
+   "effect": "Once a day, hold it aloft to command the obedience of creatures of your choice within sight, charming them for up to 8 hours unless they resist.",
+   "value": 5000,
+   "recipe": {
+    "components": [
+     {
+      "m": "rod-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "aboleth-brain",
+       "glabrezu-tongue",
+       "mirage-lotus"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Mind-bending keystone (rare)"
+     },
+     {
+      "m": "gold-ingot",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "noble-signet",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "lion-mane",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "gold-leaf",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "jewelers-tools"
+    ],
+    "station": "forge",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "suggestion",
+     "enthrall"
+    ],
+    "yields": 1,
+    "lore": "An aboleth made slaves of whole cities with its mind; a sliver of that will, dressed in gold and a noble's signet, makes people want to kneel."
+   }
+  },
+  {
+   "id": "rod-of-resurrection",
+   "name": "Rod of Resurrection",
+   "cat": "rod",
+   "tier": "legendary",
+   "attune": "by a cleric, druid, or paladin",
+   "src": "SRD 5.1",
+   "tags": [
+    "rod",
+    "celestial",
+    "healing",
+    "radiant"
+   ],
+   "effect": "Holds 5 charges. Spend them to cast heal or even to return the dead to life; if the last charge is spent, the rod may crumble. It regains 1 charge each dawn.",
+   "value": 100000,
+   "recipe": {
+    "components": [
+     {
+      "m": "rod-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "solar-tears",
+       "celestial-lifesap",
+       "solar-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Tears or lifesap of the heavens (legendary)"
+     },
+     {
+      "m": "unicorn-horn",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "kingsbalm-lily",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "gold-ingot",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "holy-water",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "jewelers-tools"
+    ],
+    "station": "shrine",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "resurrection",
+     "heal"
+    ],
+    "yields": 1,
+    "lore": "A solar weeps only for the worthy dead, and its tears remember how to call them back; the unicorn horn keeps the returning soul untainted."
+   }
+  },
+  {
+   "id": "rod-of-security",
+   "name": "Rod of Security",
+   "cat": "rod",
+   "tier": "very-rare",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "rod",
+    "planar",
+    "teleport",
+    "healing"
+   ],
+   "effect": "Carry up to 199 willing creatures into a pocket paradise where they need no food, heal quickly and do not age, for a total of up to 200 days split among them.",
+   "value": 25000,
+   "recipe": {
+    "components": [
+     {
+      "m": "rod-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "golden-bough",
+       "ageless-lotus"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Golden bough or ageless lotus (very-rare)"
+     },
+     {
+      "m": "color-pool-glass",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "manna",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "faerie-ring-mushroom",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "gold-leaf",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "teleportation circle",
+     "heroes' feast"
+    ],
+    "yields": 1,
+    "lore": "The golden bough grows only in gardens where no one is ever hungry; the rod carries a seed of that garden, and manna keeps it fed."
+   }
+  },
+  {
+   "id": "staff-of-charming",
+   "name": "Staff of Charming",
+   "cat": "staff",
+   "tier": "rare",
+   "attune": "by a bard, cleric, druid, sorcerer, warlock, or wizard",
+   "src": "SRD 5.1",
+   "tags": [
+    "staff",
+    "focus",
+    "charm",
+    "fey"
+   ],
+   "effect": "Holds 10 charges for charm person, command or comprehend languages. Once a day it can turn a charm spell you resisted back on its caster. Spent charges return in part each dawn.",
+   "value": 5000,
+   "recipe": {
+    "components": [
+     {
+      "m": "staff-focus",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "mirage-lotus",
+       "vampire-essence",
+       "glabrezu-tongue",
+       "young-green-dragon-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Beguiling keystone (rare+): mirage lotus, vampire essence, glabrezu tongue or young green dragon essence"
+     },
+     {
+      "m": "feywood",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "harpy-vocal-cords",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "dryad-hair",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "amberpine-sap",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "charm person",
+     "command"
+    ],
+    "yields": 1,
+    "lore": "Feywood and a harpy's voice-box sing softly in the grain; a mirage lotus at the crown makes whatever you say sound like the best idea anyone ever had. A glabrezu's honeyed tongue or a young green dragon's persuasive essence charms as reliably as the lotus."
+   }
+  },
+  {
+   "id": "staff-of-fire",
+   "name": "Staff of Fire",
+   "cat": "staff",
+   "tier": "very-rare",
+   "attune": "by a druid, sorcerer, warlock, or wizard",
+   "src": "SRD 5.1",
+   "tags": [
+    "staff",
+    "focus",
+    "fire",
+    "resistance"
+   ],
+   "effect": "Grants fire resistance and holds 10 charges for burning hands, fireball or wall of fire. Spend the last charge and it may burn to ash. Spent charges return in part each dawn.",
+   "value": 20000,
+   "recipe": {
+    "components": [
+     {
+      "m": "staff-focus",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "living-flame-ember",
+       "adult-red-dragon-heart",
+       "balor-death-cinder"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Heart of undying flame (very-rare)"
+     },
+     {
+      "m": "salamander-scales",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "fire-giant-forge-ash",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "ruby",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "dragons-blood-resin",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "fireball",
+     "wall of fire"
+    ],
+    "yields": 1,
+    "lore": "The staff is quenched in fire-giant forge ash so it will not char, then sheathed in salamander scales; the living ember at its heart does the rest."
+   }
+  },
+  {
+   "id": "staff-of-frost",
+   "name": "Staff of Frost",
+   "cat": "staff",
+   "tier": "very-rare",
+   "attune": "by a druid, sorcerer, warlock, or wizard",
+   "src": "SRD 5.1",
+   "tags": [
+    "staff",
+    "focus",
+    "cold",
+    "ice",
+    "resistance"
+   ],
+   "effect": "Grants cold resistance and holds 10 charges for fog cloud, ice storm, wall of ice or cone of cold. Spend the last charge and it may melt away. Spent charges return in part each dawn.",
+   "value": 20000,
+   "recipe": {
+    "components": [
+     {
+      "m": "staff-focus",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "eternal-ice",
+       "adult-white-dragon-heart",
+       "ice-devil-frost-ichor"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Never-thawing keystone (very-rare)"
+     },
+     {
+      "m": "frost-giant-glacial-ice-shard",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "winter-wolf-frost-gland",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "rime-crystal",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "cone of cold",
+     "ice storm"
+    ],
+    "yields": 1,
+    "lore": "Carved from wood left to freeze for a winter, capped with ice that has never once melted; a winter wolf's frost gland gives the staff its breath."
+   }
+  },
+  {
+   "id": "staff-of-healing",
+   "name": "Staff of Healing",
+   "cat": "staff",
+   "tier": "rare",
+   "attune": "by a bard, cleric, or druid",
+   "src": "SRD 5.1",
+   "tags": [
+    "staff",
+    "focus",
+    "healing",
+    "celestial"
+   ],
+   "effect": "Holds 10 charges for cure wounds, lesser restoration or mass cure wounds, cast with your own spellcasting ability. Spent charges return in part each dawn.",
+   "value": 5000,
+   "recipe": {
+    "components": [
+     {
+      "m": "staff-focus",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "unicorn-horn",
+       "deva-tears",
+       "celestial-dew"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Celestial remedy (rare)"
+     },
+     {
+      "m": "healers-moss",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "bloodstone",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "rowan-wood",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "priest-blessed-holy-water",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "shrine",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "cure wounds",
+     "lesser restoration"
+    ],
+    "yields": 1,
+    "lore": "A unicorn's horn cures any poison it touches; bound into rowan with healer's moss and bloodstone, it lends that mercy to every tap of the staff."
+   }
+  },
+  {
+   "id": "staff-of-power",
+   "name": "Staff of Power",
+   "cat": "staff",
+   "tier": "very-rare",
+   "attune": "by a sorcerer, warlock, or wizard",
+   "src": "SRD 5.1",
+   "tags": [
+    "staff",
+    "weapon",
+    "bludgeon",
+    "focus",
+    "arcane",
+    "force",
+    "protection"
+   ],
+   "effect": "A +2 quarterstaff that also boosts your AC, saving throws and spell attacks. Its 20 charges fuel a battery of spells from magic missile to wall of force, and it can be broken in a devastating final blast. Spent charges return in part each dawn.",
+   "value": 45000,
+   "recipe": {
+    "components": [
+     {
+      "m": "quarterstaff",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "star-sapphire"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Star sapphire (very-rare)"
+     },
+     {
+      "m": "arcane-crystal",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "meteoric-iron",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "archmage-annotated-spellbook-folio",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "sublime-arcane-ink",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "wall of force",
+     "globe of invulnerability"
+    ],
+    "yields": 1,
+    "lore": "An archmage's notes are inked down the shaft in sublime ink, star-iron shods its foot, and the star sapphire at its head stores the power they describe."
+   }
+  },
+  {
+   "id": "staff-of-striking",
+   "name": "Staff of Striking",
+   "cat": "staff",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "staff",
+    "weapon",
+    "bludgeon",
+    "force",
+    "strength"
+   ],
+   "effect": "A +3 quarterstaff with 10 charges; on a hit you can spend up to 3 charges to add a burst of force damage. Spent charges return in part each dawn.",
+   "value": 25000,
+   "recipe": {
+    "components": [
+     {
+      "m": "quarterstaff",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "storm-giant-blood",
+       "marilith-tail-sinew",
+       "androsphinx-claw"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Mighty keystone (very-rare)"
+     },
+     {
+      "m": "ironwood",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "adamantine-ingot",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "amberpine-sap",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "smiths-tools"
+    ],
+    "station": "workshop",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "magic weapon"
+    ],
+    "yields": 1,
+    "lore": "Ironwood capped with adamantine takes any blow; soaked in a storm giant's blood, it gives them back harder."
+   }
+  },
+  {
+   "id": "staff-of-swarming-insects",
+   "name": "Staff of Swarming Insects",
+   "cat": "staff",
+   "tier": "rare",
+   "attune": "by a bard, cleric, druid, sorcerer, warlock, or wizard",
+   "src": "SRD 5.1",
+   "tags": [
+    "staff",
+    "focus",
+    "primal",
+    "flight"
+   ],
+   "effect": "Holds 10 charges for giant insect or insect plague, and can wrap you in a buzzing cloud that hides you from sight. Spent charges return in part each dawn.",
+   "value": 5000,
+   "recipe": {
+    "components": [
+     {
+      "m": "staff-focus",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "emerald",
+       "treant-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Emerald or treant essence (rare primal)"
+     },
+     {
+      "m": "swarm-of-insects-wings",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "swarm-of-insects-chitin-dust",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "swarm-of-wasps-paper-nest",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "beeswax",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "giant insect"
+    ],
+    "yields": 1,
+    "lore": "A hollowed staff lined with wasp-paper becomes a hive; chitin dust and wings call the swarm, and a primal heart tells it whom to obey."
+   }
+  },
+  {
+   "id": "staff-of-the-magi",
+   "name": "Staff of the Magi",
+   "cat": "staff",
+   "tier": "legendary",
+   "attune": "by a sorcerer, warlock, or wizard",
+   "src": "SRD 5.1",
+   "tags": [
+    "staff",
+    "weapon",
+    "bludgeon",
+    "focus",
+    "arcane",
+    "antimagic"
+   ],
+   "effect": "A +2 quarterstaff that sharpens your spell attacks, drinks spells cast at you to recharge itself, and holds 50 charges for a vast list of spells. Breaking it unleashes a cataclysmic blast. Spent charges also return in part each dawn.",
+   "value": 250000,
+   "recipe": {
+    "components": [
+     {
+      "m": "quarterstaff",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "lich-essence",
+       "dead-god-stone",
+       "tarrasque-essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Keystone of undying magic (legendary)"
+     },
+     {
+      "m": "star-sapphire",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "rakshasa-hide",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "archmage-arcane-focus",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "primordial-arcane-ink",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 25,
+    "time": "60 days",
+    "gp": 20000,
+    "level": 17,
+    "spells": [
+     "antimagic field",
+     "plane shift"
+    ],
+    "requires": "Traditionally the crafter must be an archmage in their own right, with a spellbook of at least 7th-level spells.",
+    "yields": 1,
+    "lore": "Rakshasa hide lets it swallow spells, the star sapphire hoards them, and whatever keystone sits at its core has outlived the magic of entire ages."
+   }
+  },
+  {
+   "id": "staff-of-the-python",
+   "name": "Staff of the Python",
+   "cat": "staff",
+   "tier": "uncommon",
+   "attune": "by a cleric, druid, or warlock",
+   "src": "SRD 5.1",
+   "tags": [
+    "staff",
+    "focus",
+    "shapechange",
+    "binding"
+   ],
+   "effect": "Throw it down and it becomes a giant constrictor snake under your command until you call it back. If the snake is killed, the staff is destroyed.",
+   "value": 450,
+   "recipe": {
+    "components": [
+     {
+      "m": "staff-focus",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "doppelganger-blood",
+       "medusa-snake-hair",
+       "roper-strand"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Shape-shifting or snake-born keystone (uncommon+)"
+     },
+     {
+      "m": "giant-constrictor-snake-skin",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "giant-constrictor-snake-coil-muscle",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "amberpine-sap",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "workshop",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "alter self"
+    ],
+    "yields": 1,
+    "lore": "The staff is wrapped in a constrictor's shed skin and cords of its coil muscle; doppelganger blood reminds the wood that it can become what it wears."
+   }
+  },
+  {
+   "id": "staff-of-the-woodlands",
+   "name": "Staff of the Woodlands",
+   "cat": "staff",
+   "tier": "rare",
+   "attune": "by a druid",
+   "src": "SRD 5.1",
+   "tags": [
+    "staff",
+    "weapon",
+    "bludgeon",
+    "focus",
+    "primal",
+    "growth",
+    "plant"
+   ],
+   "effect": "A +2 quarterstaff that boosts spell attacks, with charges for nature spells such as barkskin, awaken and wall of thorns. It can also be planted to grow into a great tree and later return. It holds 10 charges, which return in part each dawn.",
+   "value": 5000,
+   "recipe": {
+    "components": [
+     {
+      "m": "quarterstaff",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "treant-heartwood",
+       "ancient-oak-heartwood"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Living heartwood (rare)"
+     },
+     {
+      "m": "dryad-heartwood",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "awakened-tree-sap",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "druidic-mistletoe",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "clingvine",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "herbalism-kit"
+    ],
+    "station": "workshop",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "barkskin",
+     "speak with plants"
+    ],
+    "yields": 1,
+    "lore": "Carve from the heartwood of a willing treant and it never stops being a tree; dryad wood and mistletoe keep it on speaking terms with the forest."
+   }
+  },
+  {
+   "id": "staff-of-thunder-and-lightning",
+   "name": "Staff of Thunder and Lightning",
+   "cat": "staff",
+   "tier": "very-rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "staff",
+    "weapon",
+    "bludgeon",
+    "lightning",
+    "thunder",
+    "storm"
+   ],
+   "effect": "A +2 quarterstaff that can, once a day each, add lightning or thunder to a hit, loose a lightning bolt, clap a deafening boom, or unleash both at once.",
+   "value": 20000,
+   "recipe": {
+    "components": [
+     {
+      "m": "quarterstaff",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "thunderhead-shard",
+       "storm-giant-essence",
+       "adult-blue-dragon-heart"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Storm-heart keystone (very-rare)"
+     },
+     {
+      "m": "lightning-struck-wood",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "stormbloom",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "resonant-crystal",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "copper-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "smiths-tools"
+    ],
+    "station": "workshop",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "lightning bolt",
+     "call lightning"
+    ],
+    "yields": 1,
+    "lore": "Wood from a tree struck twice gives the lightning its path, and a resonant crystal gives the thunder its voice; the thunderhead shard is the storm itself."
+   }
+  },
+  {
+   "id": "staff-of-withering",
+   "name": "Staff of Withering",
+   "cat": "staff",
+   "tier": "rare",
+   "attune": "by a cleric, druid, or warlock",
+   "src": "SRD 5.1",
+   "tags": [
+    "staff",
+    "weapon",
+    "bludgeon",
+    "focus",
+    "necrotic",
+    "death"
+   ],
+   "effect": "Holds 3 charges. On a hit you can spend one to add necrotic damage and leave the target's body aching and weakened for an hour. It regains 1d3 charges each dawn.",
+   "value": 4000,
+   "recipe": {
+    "components": [
+     {
+      "m": "quarterstaff",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "black-lotus",
+       "night-hag-soul-bag",
+       "spirit-naga-venom"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Death-touched keystone (rare)"
+     },
+     {
+      "m": "gloomwood",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "soulless-ash",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "grave-lily",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "mourning-salt",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "ray of enfeeblement",
+     "vampiric touch"
+    ],
+    "yields": 1,
+    "lore": "Gloomwood soaked in mourning salt draws the life out of what it touches; black lotus in the grain makes sure the wound never feels quite healed."
+   }
+  },
+  {
+   "id": "wand-of-binding",
+   "name": "Wand of Binding",
+   "cat": "wand",
+   "tier": "rare",
+   "attune": "by a spellcaster",
+   "src": "SRD 5.1",
+   "tags": [
+    "wand",
+    "focus",
+    "binding",
+    "paralysis"
+   ],
+   "effect": "Holds 7 charges for hold monster or hold person, and can spend a charge to help you slip free of grapples or resist being paralyzed. Spent charges return in part each dawn.",
+   "value": 5000,
+   "recipe": {
+    "components": [
+     {
+      "m": "wand-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "chain-devil-chains",
+       "erinyes-essence",
+       "clay-golem-shem-tablet"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Binding keystone (rare)"
+     },
+     {
+      "m": "roper-strand",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "mimic-adhesive",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "greater-arcane-ink",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "hold person"
+    ],
+    "yields": 1,
+    "lore": "A link of a chain devil's chain is filed thin and coiled around the wand; roper strand and mimic glue ensure whatever it points at stays put."
+   }
+  },
+  {
+   "id": "wand-of-enemy-detection",
+   "name": "Wand of Enemy Detection",
+   "cat": "wand",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wand",
+    "senses",
+    "truesight"
+   ],
+   "effect": "Holds 7 charges, which return in part each dawn. Spend one to sense, for a minute, the direction of the nearest creature within 60 feet that is hostile to you, even through invisibility or illusion.",
+   "value": 4000,
+   "recipe": {
+    "components": [
+     {
+      "m": "wand-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "aboleth-eye",
+       "erinyes-eye"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Aboleth or erinyes eye (rare)"
+     },
+     {
+      "m": "hell-hound-nose",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "bat-ear",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "greater-arcane-ink",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "detect evil and good",
+     "locate creature"
+    ],
+    "yields": 1,
+    "lore": "An erinyes hunts oath-breakers across planes; her eye in the wand's tip swivels toward anyone who wishes you harm."
+   }
+  },
+  {
+   "id": "wand-of-fear",
+   "name": "Wand of Fear",
+   "cat": "wand",
+   "tier": "rare",
+   "attune": true,
+   "src": "SRD 5.1",
+   "tags": [
+    "wand",
+    "fear"
+   ],
+   "effect": "Holds 7 charges: command a creature to flee, or blast a cone of terror that sends those who fail to resist running. Spent charges return in part each dawn.",
+   "value": 4000,
+   "recipe": {
+    "components": [
+     {
+      "m": "wand-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "cloaker-moan-sac",
+       "bone-devil-essence",
+       "tyrannosaurus-rex-tooth",
+       "chain-devil-visage"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Terror keystone (rare)"
+     },
+     {
+      "m": "dread-nettle",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "quasit-horn",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "greater-arcane-ink",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "fear",
+     "command"
+    ],
+    "yields": 1,
+    "lore": "A cloaker's moan makes grown warriors weep; its sac, dried in dread nettle, gives the wand a whisper nobody wants to hear twice."
+   }
+  },
+  {
+   "id": "wand-of-fireballs",
+   "name": "Wand of Fireballs",
+   "cat": "wand",
+   "tier": "rare",
+   "attune": "by a spellcaster",
+   "src": "SRD 5.1",
+   "tags": [
+    "wand",
+    "focus",
+    "fire"
+   ],
+   "effect": "Holds 7 charges to cast fireball, with more charges for a hotter blast. Draining it fully may destroy it. Spent charges return in part each dawn.",
+   "value": 5000,
+   "recipe": {
+    "components": [
+     {
+      "m": "wand-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "young-red-dragon-breath-gland",
+       "remorhaz-heat-gland",
+       "hellfire-ember"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Fire-breathing keystone (rare)"
+     },
+     {
+      "m": "chimera-fire-gland",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "sulfur",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "saltpeter",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "greater-arcane-ink",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "fireball"
+    ],
+    "yields": 1,
+    "lore": "Sulfur and saltpeter for the bang, a chimera's fire gland for the spark, and a dragon's breath gland to throw it all at your enemies."
+   }
+  },
+  {
+   "id": "wand-of-lightning-bolts",
+   "name": "Wand of Lightning Bolts",
+   "cat": "wand",
+   "tier": "rare",
+   "attune": "by a spellcaster",
+   "src": "SRD 5.1",
+   "tags": [
+    "wand",
+    "focus",
+    "lightning"
+   ],
+   "effect": "Holds 7 charges to cast lightning bolt, with extra charges for a more powerful strike. Draining it fully may destroy it. Spent charges return in part each dawn.",
+   "value": 5000,
+   "recipe": {
+    "components": [
+     {
+      "m": "wand-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "behir-lightning-gland",
+       "young-blue-dragon-breath-gland",
+       "stormglass"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Lightning keystone (rare)"
+     },
+     {
+      "m": "lightning-struck-wood",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "copper-wire",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "greater-arcane-ink",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "lightning bolt"
+    ],
+    "yields": 1,
+    "lore": "The blank is replaced by a sliver of lightning-struck wood, wound with copper so the behir's charge knows which way to run."
+   }
+  },
+  {
+   "id": "wand-of-magic-detection",
+   "name": "Wand of Magic Detection",
+   "cat": "wand",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wand",
+    "arcane",
+    "senses"
+   ],
+   "effect": "Holds 3 charges; spend one to cast detect magic. It regains 1d3 charges each dawn.",
+   "value": 360,
+   "recipe": {
+    "components": [
+     {
+      "m": "wand-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "chuul-antennae",
+       "deepglow-lichen"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Magic-sensing keystone (uncommon)"
+     },
+     {
+      "m": "eyebright",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "quartz",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "arcane-ink",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "detect magic"
+    ],
+    "yields": 1,
+    "lore": "A chuul's antennae twitch toward enchantment the way a hound's nose finds blood; mounted on a wand they still do."
+   }
+  },
+  {
+   "id": "wand-of-magic-missiles",
+   "name": "Wand of Magic Missiles",
+   "cat": "wand",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wand",
+    "arcane",
+    "force"
+   ],
+   "effect": "Holds 7 charges to cast magic missile, adding a dart for each extra charge spent. Spent charges return in part each dawn.",
+   "value": 360,
+   "recipe": {
+    "components": [
+     {
+      "m": "wand-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "arcane-residue",
+       "runestone-fragment",
+       "mage-spellbook-folio"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Arcane keystone (uncommon)"
+     },
+     {
+      "m": "quartz",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-dust",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "arcane-ink",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "magic missile"
+    ],
+    "yields": 1,
+    "lore": "The first spell every apprentice learns, captured in residue scraped from a wizard's workbench; the quartz tip splits it into darts."
+   }
+  },
+  {
+   "id": "wand-of-paralysis",
+   "name": "Wand of Paralysis",
+   "cat": "wand",
+   "tier": "rare",
+   "attune": "by a spellcaster",
+   "src": "SRD 5.1",
+   "tags": [
+    "wand",
+    "focus",
+    "paralysis"
+   ],
+   "effect": "Holds 7 charges. Spend one to fire a pale ray that can leave a creature paralyzed for a minute unless it shakes off the effect. Spent charges return in part each dawn.",
+   "value": 5000,
+   "recipe": {
+    "components": [
+     {
+      "m": "wand-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "young-silver-dragon-paralyzing-gland",
+       "lich-finger-bones",
+       "ice-devil-tail"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Paralyzing keystone (rare+)"
+     },
+     {
+      "m": "ghoul-claw",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "chuul-tentacle",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "greater-arcane-ink",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "hold person"
+    ],
+    "yields": 1,
+    "lore": "Ghoul claws and chuul tentacles numb the flesh they touch; the silver dragon's gland lets that numbness leap across a room."
+   }
+  },
+  {
+   "id": "wand-of-polymorph",
+   "name": "Wand of Polymorph",
+   "cat": "wand",
+   "tier": "very-rare",
+   "attune": "by a spellcaster",
+   "src": "SRD 5.1",
+   "tags": [
+    "wand",
+    "focus",
+    "shapechange"
+   ],
+   "effect": "Holds 7 charges; spend one to cast polymorph. Draining it fully may destroy it. Spent charges return in part each dawn.",
+   "value": 20000,
+   "recipe": {
+    "components": [
+     {
+      "m": "wand-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "rakshasa-essence",
+       "vampire-heart-ash",
+       "adult-silver-dragon-heart"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Shapeshifter's keystone (very-rare)"
+     },
+     {
+      "m": "doppelganger-skin",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "mimic-pseudopod",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "sublime-arcane-ink",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "polymorph"
+    ],
+    "yields": 1,
+    "lore": "Doppelganger skin forgets what it looked like; a rakshasa never had one true shape. Between them, the wand makes flesh just as forgetful."
+   }
+  },
+  {
+   "id": "wand-of-secrets",
+   "name": "Wand of Secrets",
+   "cat": "wand",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "SRD 5.1",
+   "tags": [
+    "wand",
+    "senses",
+    "knowledge"
+   ],
+   "effect": "Holds 3 charges; spend one and it twitches toward the nearest secret door or trap nearby. It regains 1d3 charges each dawn.",
+   "value": 390,
+   "recipe": {
+    "components": [
+     {
+      "m": "wand-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "xorn-essence",
+       "seers-leaf",
+       "lodestone"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Seeking keystone (uncommon)"
+     },
+     {
+      "m": "thieves-tools-picks",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "spy-cipher-notes",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "arcane-ink",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "find traps"
+    ],
+    "yields": 1,
+    "lore": "A xorn can taste hollow spaces in solid rock; tie its essence to a thief's picks and the wand points to every hidden seam."
+   }
+  },
+  {
+   "id": "wand-of-the-war-mage-plus-1",
+   "name": "Wand of the War Mage +1",
+   "cat": "wand",
+   "tier": "uncommon",
+   "attune": "by a spellcaster",
+   "src": "SRD 5.1",
+   "tags": [
+    "wand",
+    "focus",
+    "arcane",
+    "senses"
+   ],
+   "effect": "Grants a +1 bonus to your spell attack rolls and lets your spell attacks ignore half cover.",
+   "value": 450,
+   "recipe": {
+    "components": [
+     {
+      "m": "wand-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "any": [
+       "arcane"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Arcane keystone (uncommon+)",
+      "min": "uncommon"
+     },
+     {
+      "m": "hawk-eye",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "quartz",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "potent-arcane-ink",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "true strike"
+    ],
+    "yields": 1,
+    "lore": "The hawk's eye never misses a mouse; a little of its focus in the wand keeps your spells on target."
+   }
+  },
+  {
+   "id": "wand-of-the-war-mage-plus-2",
+   "name": "Wand of the War Mage +2",
+   "cat": "wand",
+   "tier": "rare",
+   "attune": "by a spellcaster",
+   "src": "SRD 5.1",
+   "tags": [
+    "wand",
+    "focus",
+    "arcane",
+    "senses"
+   ],
+   "effect": "Grants a +2 bonus to your spell attack rolls and lets your spell attacks ignore half cover.",
+   "value": 4500,
+   "recipe": {
+    "components": [
+     {
+      "m": "wand-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "archmage-arcane-focus",
+       "arcane-crystal",
+       "meteoric-iron"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Battle-mage keystone (rare)"
+     },
+     {
+      "m": "giant-eagle-eye",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "quartz",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "greater-arcane-ink",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "true strike",
+     "shield"
+    ],
+    "yields": 1,
+    "lore": "Battle-mages set a giant eagle's eye in the pommel so the wand looks around cover for them."
+   }
+  },
+  {
+   "id": "wand-of-the-war-mage-plus-3",
+   "name": "Wand of the War Mage +3",
+   "cat": "wand",
+   "tier": "very-rare",
+   "attune": "by a spellcaster",
+   "src": "SRD 5.1",
+   "tags": [
+    "wand",
+    "focus",
+    "arcane",
+    "senses"
+   ],
+   "effect": "Grants a +3 bonus to your spell attack rolls and lets your spell attacks ignore half cover.",
+   "value": 20000,
+   "recipe": {
+    "components": [
+     {
+      "m": "wand-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "star-sapphire"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Star sapphire (very-rare)"
+     },
+     {
+      "m": "eagle-eye",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "quartz",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "sublime-arcane-ink",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 21,
+    "time": "30 days",
+    "gp": 4000,
+    "level": 11,
+    "spells": [
+     "true strike",
+     "arcane eye"
+    ],
+    "yields": 1,
+    "lore": "Only a star sapphire holds enough focus for the finest war wands; the eagle's eye beside it seems to see the target before you do."
+   }
+  },
+  {
+   "id": "wand-of-web",
+   "name": "Wand of Web",
+   "cat": "wand",
+   "tier": "uncommon",
+   "attune": "by a spellcaster",
+   "src": "SRD 5.1",
+   "tags": [
+    "wand",
+    "focus",
+    "binding",
+    "silk"
+   ],
+   "effect": "Holds 7 charges; spend one to cast web. Spent charges return in part each dawn.",
+   "value": 470,
+   "recipe": {
+    "components": [
+     {
+      "m": "wand-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "drider-silk-gland",
+       "phase-spider-silk"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Drider silk gland or phase spider silk (uncommon)"
+     },
+     {
+      "m": "giant-spider-silk",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "ettercap-web-silk",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "arcane-ink",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "weavers-tools"
+    ],
+    "station": "workshop",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "web"
+    ],
+    "yields": 1,
+    "lore": "The wand is wound like a spindle with giant spider silk; the drider's gland keeps it producing more whenever you flick your wrist."
+   }
+  },
+  {
+   "id": "wand-of-wonder",
+   "name": "Wand of Wonder",
+   "cat": "wand",
+   "tier": "rare",
+   "attune": "by a spellcaster",
+   "src": "SRD 5.1",
+   "tags": [
+    "wand",
+    "focus",
+    "luck",
+    "madness",
+    "illusion"
+   ],
+   "effect": "Holds 7 charges. Each use produces a random magical effect, from a hail of butterflies to a fireball or turning the target into something else entirely. Spent charges return in part each dawn.",
+   "value": 5000,
+   "recipe": {
+    "components": [
+     {
+      "m": "wand-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "dreamfruit",
+       "djinni-wishglass-bead",
+       "moonwillow-branch"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Capricious keystone (rare)"
+     },
+     {
+      "m": "glamour-pollen",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "fey-clover",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "gibbering-mouther-eye",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "greater-arcane-ink",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "color spray"
+    ],
+    "yields": 1,
+    "lore": "Fey pollen, a lucky clover and the eye of something that never stops gibbering: no two crafters agree on the recipe, which crafters say is rather the point."
+   }
+  }
+ ]
+}

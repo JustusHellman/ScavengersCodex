@@ -1,0 +1,4066 @@
+{
+ "materials": [
+  {
+   "id": "air-elemental-core",
+   "name": "Air Elemental Core",
+   "tier": "uncommon",
+   "tags": [
+    "core",
+    "essence",
+    "air",
+    "elemental",
+    "flight",
+    "speed",
+    "storm"
+   ],
+   "desc": "A fist-sized knot of screaming wind that tugs at the vessel walls. The standard keystone for flight, speed and storm enchantments.",
+   "perish": "1 minute",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "air-elemental-stormglass",
+   "name": "Stormglass Shard",
+   "tier": "uncommon",
+   "tags": [
+    "glass",
+    "crystal",
+    "air",
+    "lightning",
+    "storm",
+    "elemental"
+   ],
+   "desc": "Sand fused into clouded glass by the vortex's dying lightning; tiny clouds drift inside it. Used to predict and bottle weather.",
+   "perish": "stable",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "air-elemental-skygrit",
+   "name": "Skyborne Grit",
+   "tier": "common",
+   "tags": [
+    "dust",
+    "air",
+    "speed",
+    "elemental"
+   ],
+   "desc": "Fine grey dust that refuses to settle and drifts upward if poured. Alchemists fold it into draughts of haste and lightness.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "earth-elemental-core",
+   "name": "Earth Elemental Core",
+   "tier": "uncommon",
+   "tags": [
+    "core",
+    "essence",
+    "earth",
+    "elemental",
+    "burrowing",
+    "toughness",
+    "strength"
+   ],
+   "desc": "A dense, warm lodestone that grinds softly against itself, like a heartbeat in rock. Keystone for earthen, burrowing and stoneskin magic.",
+   "perish": "1 minute",
+   "value": 240,
+   "recipe": null
+  },
+  {
+   "id": "earth-elemental-living-stone",
+   "name": "Earth Elemental Living Stone",
+   "tier": "uncommon",
+   "tags": [
+    "stone",
+    "earth",
+    "toughness",
+    "burrowing",
+    "elemental"
+   ],
+   "desc": "Grey rock veined with slowly shifting mineral threads; it knits cracks in itself over days. Masons prize it for wards and indestructible foundations.",
+   "perish": "stable",
+   "value": 110,
+   "recipe": null
+  },
+  {
+   "id": "earth-elemental-tremor-gravel",
+   "name": "Tremor Gravel",
+   "tier": "common",
+   "tags": [
+    "sand",
+    "earth",
+    "senses",
+    "elemental"
+   ],
+   "desc": "Coarse gravel that shivers at the faintest footfall. Scattered in trays, it serves as a tremor-sensing alarm.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "fire-elemental-core",
+   "name": "Fire Elemental Core",
+   "tier": "uncommon",
+   "tags": [
+    "core",
+    "essence",
+    "fire",
+    "elemental",
+    "light"
+   ],
+   "desc": "A white-hot ember that never dims, straining to leap free and ignite everything. The classic keystone for flame weapons and the only fuel that melts adamantine.",
+   "perish": "1 minute",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "fire-elemental-everburning-cinder",
+   "name": "Everburning Cinder",
+   "tier": "uncommon",
+   "tags": [
+    "stone",
+    "fire",
+    "light",
+    "elemental"
+   ],
+   "desc": "A coal-black lump that glows red along its cracks and burns for a year without being consumed. Smiths and lamp-makers pay well.",
+   "perish": "stable",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "fire-elemental-flame-ash",
+   "name": "Flame-Walker Ash",
+   "tier": "common",
+   "tags": [
+    "ash",
+    "fire",
+    "resistance",
+    "elemental"
+   ],
+   "desc": "Feather-light ash that stays warm to the touch. Rubbed into leathers and salves, it wards off burns.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "water-elemental-core",
+   "name": "Water Elemental Core",
+   "tier": "uncommon",
+   "tags": [
+    "core",
+    "essence",
+    "water",
+    "elemental",
+    "swimming",
+    "breathing"
+   ],
+   "desc": "A sphere of impossibly clear water that holds its shape and sloshes with tides of its own. Keystone for water-breathing, swimming and tidal magic.",
+   "perish": "1 minute",
+   "value": 120,
+   "recipe": null
+  },
+  {
+   "id": "water-elemental-tidewater-pearl",
+   "name": "Tidewater Pearl",
+   "tier": "uncommon",
+   "tags": [
+    "pearl",
+    "water",
+    "breathing",
+    "swimming",
+    "elemental"
+   ],
+   "desc": "A blue-green pearl that is always damp and smells of the open sea. Held under the tongue it eases breath in water; jewellers set them into diving charms.",
+   "perish": "stable",
+   "value": 110,
+   "recipe": null
+  },
+  {
+   "id": "water-elemental-undertow-brine",
+   "name": "Undertow Brine",
+   "tier": "common",
+   "tags": [
+    "salt",
+    "liquid",
+    "water",
+    "elemental"
+   ],
+   "desc": "Heavy, dark saltwater that swirls against the direction you pour it. A base for potions of swimming and brine-curing sea-leathers.",
+   "perish": "1 week",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "azer-forge-core",
+   "name": "Azer Forge-Core",
+   "tier": "common",
+   "tags": [
+    "core",
+    "essence",
+    "fire",
+    "strength",
+    "elemental"
+   ],
+   "desc": "A small bronze-cased ember from an azer's chest, hot enough to soften steel. A cheap substitute for a greater fire core in a forge.",
+   "perish": "1 minute",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "azer-bronze-flesh",
+   "name": "Azer Bronze Flesh",
+   "tier": "common",
+   "tags": [
+    "metal",
+    "fire",
+    "toughness",
+    "elemental"
+   ],
+   "desc": "Warm, bronze-like skin plates that cool into a naturally tempered alloy. Smiths hammer it into heat-proof fittings.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "azer-flame-hair",
+   "name": "Azer Flame-Hair",
+   "tier": "common",
+   "tags": [
+    "hair",
+    "fire",
+    "light",
+    "elemental"
+   ],
+   "desc": "Strands that still flicker with little flames. Woven into wicks, they burn for weeks without smoke.",
+   "perish": "1 day",
+   "value": 45,
+   "recipe": null
+  },
+  {
+   "id": "djinni-tempest-core",
+   "name": "Djinni Tempest Core",
+   "tier": "rare",
+   "tags": [
+    "core",
+    "essence",
+    "air",
+    "thunder",
+    "storm",
+    "flight",
+    "luck",
+    "elemental"
+   ],
+   "desc": "A crackling sphere of storm-cloud that murmurs in a proud, ancient tongue. The keystone for true flight, storm-calling and fortune-bending magic.",
+   "perish": "1 minute",
+   "value": 750,
+   "recipe": null
+  },
+  {
+   "id": "djinni-wishglass-bead",
+   "name": "Djinni Wishglass Bead",
+   "tier": "rare",
+   "tags": [
+    "glass",
+    "gem",
+    "air",
+    "luck",
+    "planar",
+    "elemental"
+   ],
+   "desc": "A tear-shaped bead of sky-blue glass, formed from the genie's last exhalation. Said to hold the faint echo of an ungranted wish.",
+   "perish": "stable",
+   "value": 270,
+   "recipe": null
+  },
+  {
+   "id": "djinni-cloudsilk-hair",
+   "name": "Djinni Cloudsilk Hair",
+   "tier": "rare",
+   "tags": [
+    "hair",
+    "silk",
+    "air",
+    "flight",
+    "elemental"
+   ],
+   "desc": "Long, nearly weightless strands that drift upward like smoke. Weavers spin them into carpets and cloaks that ride the wind.",
+   "perish": "1 week",
+   "value": 750,
+   "recipe": null
+  },
+  {
+   "id": "efreeti-brazier-core",
+   "name": "Efreeti Brazier-Core",
+   "tier": "rare",
+   "tags": [
+    "core",
+    "essence",
+    "fire",
+    "strength",
+    "planar",
+    "elemental"
+   ],
+   "desc": "A coal the size of a heart, wrapped in a lattice of molten brass. The keystone for mighty flame, plane-walking and forge-magic of the efreet's brass cities.",
+   "perish": "1 minute",
+   "value": 1800,
+   "recipe": null
+  },
+  {
+   "id": "efreeti-brass-cinders",
+   "name": "Efreeti Brass Cinders",
+   "tier": "rare",
+   "tags": [
+    "ash",
+    "metal",
+    "fire",
+    "binding",
+    "planar",
+    "elemental"
+   ],
+   "desc": "Glittering brass-flecked ash that clings together like iron filings near a lodestone. The traditional binder for bottles and rings that imprison spirits.",
+   "perish": "stable",
+   "value": 1500,
+   "recipe": null
+  },
+  {
+   "id": "efreeti-ember-blood",
+   "name": "Efreeti Ember-Blood",
+   "tier": "rare",
+   "tags": [
+    "blood",
+    "fire",
+    "resistance",
+    "strength",
+    "elemental"
+   ],
+   "desc": "Blood like liquid magma, cooling to a glossy black crust at the edges. Drunk in tiny doses, it wards the body against flame.",
+   "perish": "1 hour",
+   "value": 1100,
+   "recipe": null
+  },
+  {
+   "id": "dust-mephit-core",
+   "name": "Dust Mephit Core",
+   "tier": "common",
+   "tags": [
+    "core",
+    "essence",
+    "earth",
+    "air",
+    "sleep",
+    "elemental"
+   ],
+   "desc": "A tiny whirl of grit that makes anyone who stares at it yawn. Used in sleep-draughts and blinding powders.",
+   "perish": "1 minute",
+   "value": 28,
+   "recipe": null
+  },
+  {
+   "id": "dust-mephit-grit",
+   "name": "Dust Mephit Grit",
+   "tier": "common",
+   "tags": [
+    "dust",
+    "sand",
+    "earth",
+    "elemental"
+   ],
+   "desc": "Stinging, bone-dry dust that clogs eyes instantly. Thieves pack it into eggshell blinding bombs.",
+   "perish": "stable",
+   "value": 9,
+   "recipe": null
+  },
+  {
+   "id": "ice-mephit-core",
+   "name": "Ice Mephit Core",
+   "tier": "common",
+   "tags": [
+    "core",
+    "essence",
+    "cold",
+    "water",
+    "stealth",
+    "elemental"
+   ],
+   "desc": "A snowflake-shaped mote that frosts the inside of its vessel. Keystone for small frost charms and fog-making trinkets.",
+   "perish": "1 minute",
+   "value": 24,
+   "recipe": null
+  },
+  {
+   "id": "ice-mephit-frost-shard",
+   "name": "Ice Mephit Frost Shard",
+   "tier": "common",
+   "tags": [
+    "ice",
+    "cold",
+    "elemental"
+   ],
+   "desc": "Jagged slivers of blue ice that melt only very slowly. Packed into cold boxes and chilling salves.",
+   "perish": "1 day",
+   "value": 27,
+   "recipe": null
+  },
+  {
+   "id": "magma-mephit-core",
+   "name": "Magma Mephit Core",
+   "tier": "common",
+   "tags": [
+    "core",
+    "essence",
+    "fire",
+    "earth",
+    "elemental"
+   ],
+   "desc": "A dribbling drop of lava that never cools. A common, cheap fire core that bigger forges burn through by the dozen.",
+   "perish": "1 minute",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "magma-mephit-slag",
+   "name": "Magma Mephit Slag",
+   "tier": "common",
+   "tags": [
+    "stone",
+    "fire",
+    "earth",
+    "elemental"
+   ],
+   "desc": "Glassy black lava rock that stays warm for weeks. Used as a slow-heat stone for crucibles and bedwarmers.",
+   "perish": "stable",
+   "value": 30,
+   "recipe": null
+  },
+  {
+   "id": "steam-mephit-core",
+   "name": "Steam Mephit Core",
+   "tier": "common",
+   "tags": [
+    "core",
+    "essence",
+    "fire",
+    "water",
+    "illusion",
+    "elemental"
+   ],
+   "desc": "A bead of shimmering vapour that blurs the air around it. Illusionists use it for blur and obscuring charms.",
+   "perish": "1 minute",
+   "value": 34,
+   "recipe": null
+  },
+  {
+   "id": "steam-mephit-scald-drops",
+   "name": "Steam Mephit Scald-Drops",
+   "tier": "common",
+   "tags": [
+    "liquid",
+    "fire",
+    "water",
+    "elemental"
+   ],
+   "desc": "Water that keeps boiling in a sealed flask without any heat. A quick way to brew tea, sterilise tools, or scald a foe.",
+   "perish": "1 hour",
+   "value": 26,
+   "recipe": null
+  },
+  {
+   "id": "gargoyle-stoneskin",
+   "name": "Gargoyle Stoneskin",
+   "tier": "common",
+   "tags": [
+    "stone",
+    "hide",
+    "toughness",
+    "petrification",
+    "resistance",
+    "elemental"
+   ],
+   "desc": "Flexible slate-grey plates that feel like stone but bend like thick leather. Armourers use it for petrification-proof linings and tough bucklers.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "gargoyle-talon",
+   "name": "Gargoyle Talon",
+   "tier": "common",
+   "tags": [
+    "claw",
+    "stone",
+    "strength",
+    "elemental"
+   ],
+   "desc": "A chipped, granite-hard claw. Ground down it makes a potent abrasive; whole, a vicious dagger-point.",
+   "perish": "stable",
+   "value": 2,
+   "recipe": null
+  },
+  {
+   "id": "gargoyle-heartstone",
+   "name": "Gargoyle Heartstone",
+   "tier": "common",
+   "tags": [
+    "stone",
+    "heart",
+    "earth",
+    "stealth",
+    "petrification",
+    "elemental"
+   ],
+   "desc": "A cold, egg-shaped stone that looks exactly like ordinary rubble. Enchanters prize it for camouflage and stone-to-flesh work.",
+   "perish": "stable",
+   "value": 36,
+   "recipe": null
+  },
+  {
+   "id": "invisible-stalker-core",
+   "name": "Invisible Stalker Core",
+   "tier": "uncommon",
+   "tags": [
+    "core",
+    "essence",
+    "air",
+    "invisibility",
+    "senses",
+    "stealth",
+    "elemental"
+   ],
+   "desc": "An unseen, cold pressure trapped in the vessel; you only know it is there by the frost on the glass. Keystone for invisibility and unerring tracking magic.",
+   "perish": "1 minute",
+   "value": 150,
+   "recipe": null
+  },
+  {
+   "id": "invisible-stalker-clearglass",
+   "name": "Invisible Stalker Clearglass",
+   "tier": "uncommon",
+   "tags": [
+    "glass",
+    "crystal",
+    "invisibility",
+    "stealth",
+    "elemental"
+   ],
+   "desc": "A pane of utterly transparent crystal that casts no reflection. Lens-makers and illusionists use it for see-through gear and vanishing wards.",
+   "perish": "stable",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "magmin-core",
+   "name": "Magmin Core",
+   "tier": "common",
+   "tags": [
+    "core",
+    "essence",
+    "fire",
+    "light",
+    "elemental"
+   ],
+   "desc": "A cheerful, sputtering spark that tries to light anything nearby. Cheap forge fuel and the heart of everburning torches.",
+   "perish": "1 minute",
+   "value": 32,
+   "recipe": null
+  },
+  {
+   "id": "magmin-lava-crust",
+   "name": "Magmin Lava Crust",
+   "tier": "common",
+   "tags": [
+    "stone",
+    "fire",
+    "elemental"
+   ],
+   "desc": "Brittle red-black flakes of cooled magma skin. Crushed into tinder powders that ignite at a spark.",
+   "perish": "stable",
+   "value": 16,
+   "recipe": null
+  },
+  {
+   "id": "salamander-heart",
+   "name": "Salamander Heart",
+   "tier": "uncommon",
+   "tags": [
+    "heart",
+    "core",
+    "fire",
+    "strength",
+    "elemental"
+   ],
+   "desc": "A glowing, fist-sized heart that keeps pumping molten blood long after death. Smiths burn it to reach temperatures that melt adamantine.",
+   "perish": "1 day",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "salamander-tail",
+   "name": "Salamander Tail",
+   "tier": "uncommon",
+   "tags": [
+    "sinew",
+    "scale",
+    "fire",
+    "binding",
+    "elemental"
+   ],
+   "desc": "A long coil of heat-scaled muscle that tightens around anything it touches. Rope-makers weave it into fiery bindings and whips.",
+   "perish": "1 day",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "salamander-scales",
+   "name": "Salamander Scales",
+   "tier": "uncommon",
+   "tags": [
+    "scale",
+    "fire",
+    "resistance",
+    "elemental"
+   ],
+   "desc": "Overlapping red-bronze scales that radiate heat. Laid into armour, they turn aside flame.",
+   "perish": "stable",
+   "value": 80,
+   "recipe": null
+  },
+  {
+   "id": "xorn-gut-stones",
+   "name": "Xorn Gut-Stones",
+   "tier": "uncommon",
+   "tags": [
+    "gem",
+    "stone",
+    "earth",
+    "elemental"
+   ],
+   "desc": "Half-digested gemstones polished smooth inside a xorn's gizzard, each glowing faintly with earth-magic. Jewellers value them as much as the raw gems.",
+   "perish": "stable",
+   "value": 400,
+   "recipe": null
+  },
+  {
+   "id": "xorn-gizzard",
+   "name": "Xorn Gizzard",
+   "tier": "uncommon",
+   "tags": [
+    "organ",
+    "earth",
+    "burrowing",
+    "elemental"
+   ],
+   "desc": "A thick, gravel-lined stomach that phases partly through stone when squeezed. Keystone material for earth-gliding and burrowing magic.",
+   "perish": "1 day",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "xorn-jaw-teeth",
+   "name": "Xorn Jaw-Teeth",
+   "tier": "uncommon",
+   "tags": [
+    "tooth",
+    "earth",
+    "strength",
+    "elemental"
+   ],
+   "desc": "Blunt, diamond-hard grinding teeth from the crown mouth. Set into picks and drills they chew through rock.",
+   "perish": "stable",
+   "value": 26,
+   "recipe": null
+  },
+  {
+   "id": "xorn-essence",
+   "name": "Xorn Essence",
+   "tier": "uncommon",
+   "tags": [
+    "essence",
+    "earth",
+    "burrowing",
+    "senses",
+    "elemental"
+   ],
+   "desc": "A slow-turning mote of gravel-light that can sense metal through walls. Used for treasure-finding and stone-passing enchantments.",
+   "perish": "1 minute",
+   "value": 110,
+   "recipe": null
+  },
+  {
+   "id": "ghast-stench-gland",
+   "name": "Ghast Stench Gland",
+   "tier": "common",
+   "tags": [
+    "gland",
+    "poison",
+    "disease",
+    "undead"
+   ],
+   "desc": "A swollen, grey sac that reeks of an opened crypt. Rendered into nauseating smoke bombs and poison bases.",
+   "perish": "1 day",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "ghast-claw",
+   "name": "Ghast Claw",
+   "tier": "common",
+   "tags": [
+    "claw",
+    "necrotic",
+    "paralysis",
+    "undead"
+   ],
+   "desc": "A yellowed talon slick with a paralytic film strong enough to stiffen even an elf. The poisoner's favourite paralysis source.",
+   "perish": "stable",
+   "value": 28,
+   "recipe": null
+  },
+  {
+   "id": "ghast-grave-dust",
+   "name": "Ghast Grave-Dust",
+   "tier": "common",
+   "tags": [
+    "dust",
+    "necrotic",
+    "undeath",
+    "undead"
+   ],
+   "desc": "Grey dust scraped from a ghast's marrow, cold and faintly greasy. A standard reagent for necromantic inks.",
+   "perish": "stable",
+   "value": 36,
+   "recipe": null
+  },
+  {
+   "id": "ghost-ectoplasm",
+   "name": "Ghost Ectoplasm",
+   "tier": "uncommon",
+   "tags": [
+    "ectoplasm",
+    "necrotic",
+    "planar",
+    "invisibility",
+    "undead"
+   ],
+   "desc": "Pale, glistening mist that half-exists; it slides through the fingers and into the Ethereal if not sealed. Used for etherealness and phasing magic.",
+   "perish": "1 hour",
+   "value": 210,
+   "recipe": null
+  },
+  {
+   "id": "ghost-essence",
+   "name": "Ghost Essence",
+   "tier": "uncommon",
+   "tags": [
+    "essence",
+    "necrotic",
+    "fear",
+    "domination",
+    "planar",
+    "undead"
+   ],
+   "desc": "A mournful wisp that shows a fleeting face when it presses against the glass. Keystone for possession, fear and spirit-walking enchantments.",
+   "perish": "1 minute",
+   "value": 140,
+   "recipe": null
+  },
+  {
+   "id": "ghost-anchor-keepsake",
+   "name": "Ghost Anchor Keepsake",
+   "tier": "uncommon",
+   "tags": [
+    "relic",
+    "necrotic",
+    "curse",
+    "fear",
+    "undead"
+   ],
+   "desc": "The small object — a locket, a ring, a letter — that tied the ghost to this world, now cold and heavy with sorrow.",
+   "perish": "stable",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "ghoul-claw",
+   "name": "Ghoul Claw",
+   "tier": "common",
+   "tags": [
+    "claw",
+    "necrotic",
+    "paralysis",
+    "undead"
+   ],
+   "desc": "A blackened, jagged claw crusted with grave filth and a numbing residue. A standard paralysis ingredient.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "ghoul-saliva",
+   "name": "Ghoul Saliva",
+   "tier": "common",
+   "tags": [
+    "venom",
+    "liquid",
+    "paralysis",
+    "disease",
+    "undead"
+   ],
+   "desc": "Stringy grey drool that numbs the tongue at a touch. Poisoners concentrate it; healers boil it into anaesthetics.",
+   "perish": "1 hour",
+   "value": 30,
+   "recipe": null
+  },
+  {
+   "id": "lich-phylactery-shard",
+   "name": "Lich Phylactery Shard",
+   "tier": "legendary",
+   "tags": [
+    "relic",
+    "crystal",
+    "necrotic",
+    "undeath",
+    "binding",
+    "death",
+    "undead"
+   ],
+   "desc": "A splinter of the vessel that once held a lich's soul, still cold enough to burn. The supreme keystone for soul-binding, deathlessness and necromancy.",
+   "perish": "stable",
+   "value": 33000,
+   "recipe": null
+  },
+  {
+   "id": "lich-essence",
+   "name": "Lich Essence",
+   "tier": "legendary",
+   "tags": [
+    "essence",
+    "necrotic",
+    "arcane",
+    "undeath",
+    "knowledge",
+    "antimagic",
+    "undead"
+   ],
+   "desc": "A whirling, violet-black spark that whispers formulae in a dead tongue. Keystone for archmage-grade necromancy and counter-magic.",
+   "perish": "1 minute",
+   "value": 36000,
+   "recipe": null
+  },
+  {
+   "id": "lich-dust",
+   "name": "Lich Dust",
+   "tier": "very-rare",
+   "tags": [
+    "dust",
+    "necrotic",
+    "death",
+    "undeath",
+    "undead"
+   ],
+   "desc": "The fine, grey-violet dust a lich's body crumbles into. A potent necromantic reagent that chills the air it is poured through.",
+   "perish": "stable",
+   "value": 10000,
+   "recipe": null
+  },
+  {
+   "id": "lich-finger-bones",
+   "name": "Lich Finger-Bones",
+   "tier": "very-rare",
+   "tags": [
+    "bone",
+    "cold",
+    "necrotic",
+    "paralysis",
+    "undead"
+   ],
+   "desc": "Blackened finger bones rimed with a frost that never melts; a touch leaves skin numb and rigid.",
+   "perish": "stable",
+   "value": 2500,
+   "recipe": null
+  },
+  {
+   "id": "skeleton-bone-dust",
+   "name": "Skeleton Bone-Dust",
+   "tier": "common",
+   "tags": [
+    "dust",
+    "bone",
+    "necrotic",
+    "undeath",
+    "undead"
+   ],
+   "desc": "Chalky white powder ground from reanimated bone, still humming faintly with necromantic will. The cheapest undead reagent on any necromancer's shelf.",
+   "perish": "stable",
+   "value": 26,
+   "recipe": null
+  },
+  {
+   "id": "skeleton-grave-gear",
+   "name": "Skeleton Grave-Gear",
+   "tier": "mundane",
+   "tags": [
+    "salvage",
+    "metal",
+    "undead"
+   ],
+   "desc": "Corroded weapons and scraps of old armour. Mostly scrap, occasionally something worth cleaning up.",
+   "perish": "stable",
+   "value": 2,
+   "recipe": null
+  },
+  {
+   "id": "minotaur-skeleton-horn",
+   "name": "Minotaur Skeleton Horn",
+   "tier": "common",
+   "tags": [
+    "horn",
+    "bone",
+    "strength",
+    "speed",
+    "undead"
+   ],
+   "desc": "A massive curved horn, bleached and cracked, still fused with the momentum of a thousand charges. Carved into battering rams and charging charms.",
+   "perish": "stable",
+   "value": 12,
+   "recipe": null
+  },
+  {
+   "id": "minotaur-skeleton-skull",
+   "name": "Minotaur Skeleton Skull",
+   "tier": "common",
+   "tags": [
+    "skull",
+    "bone",
+    "senses",
+    "cunning",
+    "undead"
+   ],
+   "desc": "A bull's skull that seems always to face the nearest exit. Maze-runners hang fragments of it as path-finding talismans.",
+   "perish": "stable",
+   "value": 32,
+   "recipe": null
+  },
+  {
+   "id": "warhorse-skeleton-hoof",
+   "name": "Warhorse Skeleton Hoof",
+   "tier": "common",
+   "tags": [
+    "bone",
+    "speed",
+    "undeath",
+    "undead"
+   ],
+   "desc": "A heavy bone hoof that clatters on its own if dropped. Used in charms of tireless riding and phantom steeds.",
+   "perish": "stable",
+   "value": 32,
+   "recipe": null
+  },
+  {
+   "id": "warhorse-skeleton-barding",
+   "name": "Warhorse Skeleton Barding",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "metal",
+    "protection",
+    "undead"
+   ],
+   "desc": "Rusted scraps of cavalry barding that can be restored into decent plates.",
+   "perish": "stable",
+   "value": 13,
+   "recipe": null
+  },
+  {
+   "id": "mummy-wrappings",
+   "name": "Mummy Wrappings",
+   "tier": "uncommon",
+   "tags": [
+    "cloth",
+    "necrotic",
+    "curse",
+    "disease",
+    "undead"
+   ],
+   "desc": "Resin-stiff linen bands inked with faded funerary glyphs. Carriers of mummy rot — and prized for curses, wards and preservation magic.",
+   "perish": "stable",
+   "value": 110,
+   "recipe": null
+  },
+  {
+   "id": "mummy-glare-eye",
+   "name": "Mummy Glare-Eye",
+   "tier": "uncommon",
+   "tags": [
+    "eye",
+    "fear",
+    "paralysis",
+    "undead"
+   ],
+   "desc": "A shrivelled eye behind a dried lid that still fixes you with an unsettling stare. Keystone for paralysing fear effects.",
+   "perish": "1 week",
+   "value": 400,
+   "recipe": null
+  },
+  {
+   "id": "mummy-embalming-resin",
+   "name": "Mummy Embalming Resin",
+   "tier": "uncommon",
+   "tags": [
+    "resin",
+    "necrotic",
+    "undeath",
+    "resistance",
+    "undead"
+   ],
+   "desc": "Dark, aromatic resin that preserves anything it coats against decay. Burns fiercely, like the mummy itself.",
+   "perish": "stable",
+   "value": 67,
+   "recipe": null
+  },
+  {
+   "id": "mummy-lord-heart",
+   "name": "Mummy Lord Heart",
+   "tier": "very-rare",
+   "tags": [
+    "heart",
+    "necrotic",
+    "undeath",
+    "regeneration",
+    "undead"
+   ],
+   "desc": "A black, dried heart taken from its canopic jar, beating once a day. The keystone for rejuvenation and deathless magic.",
+   "perish": "stable",
+   "value": 16000,
+   "recipe": null
+  },
+  {
+   "id": "mummy-lord-royal-wrappings",
+   "name": "Mummy Lord Royal Wrappings",
+   "tier": "very-rare",
+   "tags": [
+    "cloth",
+    "necrotic",
+    "curse",
+    "disease",
+    "fear",
+    "undead"
+   ],
+   "desc": "Gold-threaded burial linen dense with priestly curses. Wrapped around a weapon or ward, it carries a pharaoh's doom.",
+   "perish": "stable",
+   "value": 6000,
+   "recipe": null
+  },
+  {
+   "id": "mummy-lord-essence",
+   "name": "Mummy Lord Essence",
+   "tier": "very-rare",
+   "tags": [
+    "essence",
+    "necrotic",
+    "curse",
+    "domination",
+    "undeath",
+    "undead"
+   ],
+   "desc": "A dry, spice-scented swirl of dark gold light that commands the dead to kneel. Keystone for great curses and command of undead.",
+   "perish": "1 minute",
+   "value": 9000,
+   "recipe": null
+  },
+  {
+   "id": "zombie-grave-flesh",
+   "name": "Zombie Grave-Flesh",
+   "tier": "common",
+   "tags": [
+    "meat",
+    "necrotic",
+    "undeath",
+    "undead"
+   ],
+   "desc": "Grey, rubbery dead flesh that twitches when prodded. Revolting but reliable necromantic filler for animation rituals.",
+   "perish": "1 day",
+   "value": 11,
+   "recipe": null
+  },
+  {
+   "id": "zombie-undying-sinew",
+   "name": "Zombie Undying Sinew",
+   "tier": "common",
+   "tags": [
+    "sinew",
+    "undeath",
+    "toughness",
+    "resistance",
+    "undead"
+   ],
+   "desc": "Tough, cord-like tendons that refuse to stay severed. Stitched into armour straps and charms against being dropped.",
+   "perish": "1 day",
+   "value": 22,
+   "recipe": null
+  },
+  {
+   "id": "ogre-zombie-sinew",
+   "name": "Ogre Zombie Sinew",
+   "tier": "common",
+   "tags": [
+    "sinew",
+    "strength",
+    "undeath",
+    "toughness",
+    "undead"
+   ],
+   "desc": "Thick, rope-strong tendons from an undead ogre. Bowyers and necromancers both value their brute pull.",
+   "perish": "1 day",
+   "value": 48,
+   "recipe": null
+  },
+  {
+   "id": "shadow-essence",
+   "name": "Shadow Essence",
+   "tier": "common",
+   "tags": [
+    "essence",
+    "shadow",
+    "necrotic",
+    "stealth",
+    "darkvision",
+    "undead"
+   ],
+   "desc": "A chill smudge of living darkness that avoids the light inside its vessel. Keystone for stealth, shadow-hiding and darkvision.",
+   "perish": "1 minute",
+   "value": 36,
+   "recipe": null
+  },
+  {
+   "id": "shadow-umbral-residue",
+   "name": "Umbral Residue",
+   "tier": "common",
+   "tags": [
+    "dust",
+    "shadow",
+    "stealth",
+    "undead"
+   ],
+   "desc": "A fine black soot left where a shadow was unmade; it drinks light around it. Rubbed on blades and leathers to kill their gleam.",
+   "perish": "stable",
+   "value": 20,
+   "recipe": null
+  },
+  {
+   "id": "specter-ectoplasm",
+   "name": "Specter Ectoplasm",
+   "tier": "common",
+   "tags": [
+    "ectoplasm",
+    "necrotic",
+    "planar",
+    "invisibility",
+    "undead"
+   ],
+   "desc": "Thin, cold vapour that drifts through the walls of an unwarded jar. A weaker cousin of ghost ectoplasm, used for incorporeal charms.",
+   "perish": "1 hour",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "specter-essence",
+   "name": "Specter Essence",
+   "tier": "common",
+   "tags": [
+    "essence",
+    "necrotic",
+    "death",
+    "undeath",
+    "undead"
+   ],
+   "desc": "A hollow, hungry wisp that dims any flame near it. Keystone for life-drain and deathly enchantments.",
+   "perish": "1 minute",
+   "value": 24,
+   "recipe": null
+  },
+  {
+   "id": "vampire-fang",
+   "name": "Vampire Fang",
+   "tier": "very-rare",
+   "tags": [
+    "tooth",
+    "necrotic",
+    "regeneration",
+    "charm",
+    "undead"
+   ],
+   "desc": "A long, ivory-white canine that still draws blood toward it. Keystone for life-stealing weapons and hypnotic charms.",
+   "perish": "stable",
+   "value": 6000,
+   "recipe": null
+  },
+  {
+   "id": "vampire-heart-ash",
+   "name": "Vampire Heart-Ash",
+   "tier": "very-rare",
+   "tags": [
+    "ash",
+    "necrotic",
+    "undeath",
+    "regeneration",
+    "shapechange",
+    "undead"
+   ],
+   "desc": "Silver-grey ash from a staked and burned vampire heart, faintly warm despite the fire being long cold. One of the most potent necromantic reagents known.",
+   "perish": "stable",
+   "value": 1200,
+   "recipe": null
+  },
+  {
+   "id": "vampire-blood",
+   "name": "Vampire Blood",
+   "tier": "very-rare",
+   "tags": [
+    "blood",
+    "necrotic",
+    "regeneration",
+    "charm",
+    "undead"
+   ],
+   "desc": "Dark, slow blood that crawls up the inside of the vial toward any living warmth. A dangerous restorative and charm base.",
+   "perish": "1 hour",
+   "value": 9000,
+   "recipe": null
+  },
+  {
+   "id": "vampire-essence",
+   "name": "Vampire Essence",
+   "tier": "very-rare",
+   "tags": [
+    "essence",
+    "necrotic",
+    "charm",
+    "shapechange",
+    "domination",
+    "undead"
+   ],
+   "desc": "A crimson mote that shifts between the shapes of bat, wolf and mist. Keystone for domination, charm and shapechanging magic.",
+   "perish": "1 minute",
+   "value": 2000,
+   "recipe": null
+  },
+  {
+   "id": "vampire-coffin-earth",
+   "name": "Vampire Coffin-Earth",
+   "tier": "uncommon",
+   "tags": [
+    "sand",
+    "necrotic",
+    "undeath",
+    "undead"
+   ],
+   "desc": "Dark soil from a vampire's resting place, cold and faintly damp. Necromancers use it to anchor undead to a place.",
+   "perish": "stable",
+   "value": 80,
+   "recipe": null
+  },
+  {
+   "id": "vampire-spawn-fang",
+   "name": "Vampire Spawn Fang",
+   "tier": "uncommon",
+   "tags": [
+    "tooth",
+    "necrotic",
+    "regeneration",
+    "undead"
+   ],
+   "desc": "A sharp, slightly translucent fang from a lesser vampire. Set into daggers that sip blood.",
+   "perish": "stable",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "vampire-spawn-blood",
+   "name": "Vampire Spawn Blood",
+   "tier": "uncommon",
+   "tags": [
+    "blood",
+    "necrotic",
+    "regeneration",
+    "climbing",
+    "undead"
+   ],
+   "desc": "Thick, chill blood that clings to walls like the spawn did. A base for regeneration tonics and spider-climb oils.",
+   "perish": "1 hour",
+   "value": 210,
+   "recipe": null
+  },
+  {
+   "id": "wight-essence",
+   "name": "Wight Essence",
+   "tier": "uncommon",
+   "tags": [
+    "essence",
+    "necrotic",
+    "undeath",
+    "domination",
+    "undead"
+   ],
+   "desc": "A cold, spiteful ember of stolen life that makes nearby corpses twitch. Keystone for raising and commanding lesser undead.",
+   "perish": "1 minute",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "wight-barrow-dust",
+   "name": "Wight Barrow-Dust",
+   "tier": "uncommon",
+   "tags": [
+    "dust",
+    "necrotic",
+    "death",
+    "undeath",
+    "undead"
+   ],
+   "desc": "Heavy grey dust from a wight's crumbling body, smelling of old barrows. A strong life-draining reagent.",
+   "perish": "stable",
+   "value": 120,
+   "recipe": null
+  },
+  {
+   "id": "wight-ember-eyes",
+   "name": "Wight Ember-Eyes",
+   "tier": "uncommon",
+   "tags": [
+    "eye",
+    "necrotic",
+    "darkvision",
+    "undead"
+   ],
+   "desc": "Withered eyes with a pinprick of cold red light at their centre. They see in utter darkness.",
+   "perish": "1 hour",
+   "value": 120,
+   "recipe": null
+  },
+  {
+   "id": "wight-barrow-blade",
+   "name": "Wight Barrow-Blade",
+   "tier": "uncommon",
+   "tags": [
+    "salvage",
+    "metal",
+    "necrotic",
+    "undead"
+   ],
+   "desc": "An old barrow-king's sword, pitted and cold to hold. Reforged, it takes necrotic enchantments readily.",
+   "perish": "stable",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "will-o-wisp-lantern-core",
+   "name": "Will-o'-Wisp Lantern-Core",
+   "tier": "common",
+   "tags": [
+    "core",
+    "essence",
+    "lightning",
+    "light",
+    "invisibility",
+    "undead"
+   ],
+   "desc": "A flickering blue-white spark that winks in and out of sight. Keystone for light, lightning and vanishing-lantern magic.",
+   "perish": "1 minute",
+   "value": 36,
+   "recipe": null
+  },
+  {
+   "id": "will-o-wisp-marsh-glow",
+   "name": "Will-o'-Wisp Marsh-Glow",
+   "tier": "common",
+   "tags": [
+    "oil",
+    "lightning",
+    "light",
+    "undead"
+   ],
+   "desc": "Pale luminous oil that condenses where a wisp dies; it glows for days and stings with static.",
+   "perish": "1 week",
+   "value": 9,
+   "recipe": null
+  },
+  {
+   "id": "wraith-ectoplasm",
+   "name": "Wraith Ectoplasm",
+   "tier": "uncommon",
+   "tags": [
+    "ectoplasm",
+    "necrotic",
+    "planar",
+    "stealth",
+    "undead"
+   ],
+   "desc": "Inky, smoke-like ectoplasm that deadens sound around it. Used for incorporeal and wall-passing magic.",
+   "perish": "1 hour",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "wraith-essence",
+   "name": "Wraith Essence",
+   "tier": "uncommon",
+   "tags": [
+    "essence",
+    "necrotic",
+    "death",
+    "undeath",
+    "domination",
+    "undead"
+   ],
+   "desc": "A hateful black flame that pulls at the soul of whoever holds its vessel. Keystone for life-drain weapons and creating spectral servants.",
+   "perish": "1 minute",
+   "value": 140,
+   "recipe": null
+  },
+  {
+   "id": "animated-armor-plate",
+   "name": "Animated Armor Plate",
+   "tier": "common",
+   "tags": [
+    "metal",
+    "salvage",
+    "protection",
+    "toughness",
+    "construct"
+   ],
+   "desc": "Dented steel plates that still flinch toward blows aimed at the wearer. Armourers rivet them into self-guarding armour.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "animated-armor-animus-rune",
+   "name": "Animated Armor Animus Rune",
+   "tier": "common",
+   "tags": [
+    "core",
+    "arcane",
+    "binding",
+    "construct"
+   ],
+   "desc": "A small plate etched with a glowing binding rune — the spark that made the suit move. Keystone for minor animation magic.",
+   "perish": "stable",
+   "value": 35,
+   "recipe": null
+  },
+  {
+   "id": "clay-golem-shem-tablet",
+   "name": "Clay Golem Shem Tablet",
+   "tier": "rare",
+   "tags": [
+    "core",
+    "relic",
+    "binding",
+    "antimagic",
+    "construct"
+   ],
+   "desc": "A clay tablet stamped with a holy name, the animating word placed in the golem's mouth. Keystone for binding constructs and resisting magic.",
+   "perish": "stable",
+   "value": 760,
+   "recipe": null
+  },
+  {
+   "id": "clay-golem-clay",
+   "name": "Clay Golem Clay",
+   "tier": "rare",
+   "tags": [
+    "stone",
+    "acid",
+    "curse",
+    "regeneration",
+    "construct"
+   ],
+   "desc": "Damp, dark clay that swells when it touches acid and leaves wounds that refuse to close. Potters and poisoners both prize it.",
+   "perish": "stable",
+   "value": 1200,
+   "recipe": null
+  },
+  {
+   "id": "flesh-golem-galvanic-core",
+   "name": "Flesh Golem Galvanic Core",
+   "tier": "uncommon",
+   "tags": [
+    "core",
+    "lightning",
+    "binding",
+    "regeneration",
+    "construct"
+   ],
+   "desc": "A jar-like organ of wires and sinew still crackling with the storm that raised it. Keystone for lightning-fed animation and restoration.",
+   "perish": "stable",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "flesh-golem-stitched-hide",
+   "name": "Flesh Golem Stitched Hide",
+   "tier": "uncommon",
+   "tags": [
+    "hide",
+    "leather",
+    "toughness",
+    "resistance",
+    "construct"
+   ],
+   "desc": "A patchwork of skins sewn with heavy thread, strangely resistant to blades. Unpleasant but tough leather.",
+   "perish": "1 day",
+   "value": 400,
+   "recipe": null
+  },
+  {
+   "id": "flesh-golem-mismatched-organs",
+   "name": "Flesh Golem Mismatched Organs",
+   "tier": "uncommon",
+   "tags": [
+    "organ",
+    "lightning",
+    "construct"
+   ],
+   "desc": "Organs from half a dozen bodies, fused together and faintly humming with current. Alchemists render them into galvanic tonics.",
+   "perish": "1 hour",
+   "value": 52,
+   "recipe": null
+  },
+  {
+   "id": "flying-sword-blade",
+   "name": "Flying Sword Blade",
+   "tier": "common",
+   "tags": [
+    "metal",
+    "salvage",
+    "flight",
+    "construct"
+   ],
+   "desc": "A fine blade that still twitches upward in the hand. Re-hilted, it balances unnaturally well.",
+   "perish": "stable",
+   "value": 30,
+   "recipe": null
+  },
+  {
+   "id": "flying-sword-hover-rune",
+   "name": "Flying Sword Hover-Rune",
+   "tier": "common",
+   "tags": [
+    "core",
+    "arcane",
+    "flight",
+    "construct"
+   ],
+   "desc": "A tiny rune set into the pommel that makes whatever it touches weightless. Used for levitating and returning charms.",
+   "perish": "stable",
+   "value": 30,
+   "recipe": null
+  },
+  {
+   "id": "homunculus-blood-drop",
+   "name": "Homunculus Blood-Drop",
+   "tier": "common",
+   "tags": [
+    "blood",
+    "arcane",
+    "telepathy",
+    "construct"
+   ],
+   "desc": "A bead of its creator's blood that animated the creature; it still vibrates when its maker is near. Keystone for telepathic links.",
+   "perish": "1 hour",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "homunculus-venom",
+   "name": "Homunculus Venom",
+   "tier": "common",
+   "tags": [
+    "venom",
+    "poison",
+    "sleep",
+    "construct"
+   ],
+   "desc": "A drop of clear venom that sends the bitten into a deep, dreamless sleep.",
+   "perish": "1 day",
+   "value": 30,
+   "recipe": null
+  },
+  {
+   "id": "homunculus-wing",
+   "name": "Homunculus Wing",
+   "tier": "common",
+   "tags": [
+    "wing",
+    "flight",
+    "construct"
+   ],
+   "desc": "A small leathery wing, like a bat's. Used in minor levitation charms.",
+   "perish": "1 day",
+   "value": 18,
+   "recipe": null
+  },
+  {
+   "id": "iron-golem-core",
+   "name": "Iron Golem Core",
+   "tier": "very-rare",
+   "tags": [
+    "core",
+    "fire",
+    "binding",
+    "antimagic",
+    "construct"
+   ],
+   "desc": "A heavy iron heart inscribed with interlocking wards, glowing like a banked furnace. Keystone for mighty constructs and magic-resistant armour.",
+   "perish": "stable",
+   "value": 7200,
+   "recipe": null
+  },
+  {
+   "id": "iron-golem-vent-slag",
+   "name": "Iron Golem Vent Slag",
+   "tier": "very-rare",
+   "tags": [
+    "metal",
+    "poison",
+    "fire",
+    "construct"
+   ],
+   "desc": "Greenish, bubbling slag from the golem's breath-vent; it still weeps toxic vapour. Poisoners and siege-engineers covet it.",
+   "perish": "stable",
+   "value": 1200,
+   "recipe": null
+  },
+  {
+   "id": "iron-golem-plating",
+   "name": "Iron Golem Plating",
+   "tier": "very-rare",
+   "tags": [
+    "metal",
+    "salvage",
+    "fire",
+    "toughness",
+    "antimagic",
+    "construct"
+   ],
+   "desc": "Hand-thick iron plates that drink in flame and turn spells aside. Smiths forge them into nearly impervious armour.",
+   "perish": "stable",
+   "value": 3000,
+   "recipe": null
+  },
+  {
+   "id": "rug-of-smothering-fibres",
+   "name": "Rug of Smothering Fibres",
+   "tier": "common",
+   "tags": [
+    "thread",
+    "cloth",
+    "binding",
+    "stealth",
+    "construct"
+   ],
+   "desc": "Thick, patterned yarn that tightens around anything wrapped in it. Weavers use it for grasping nets and ordinary-looking snares.",
+   "perish": "stable",
+   "value": 10,
+   "recipe": null
+  },
+  {
+   "id": "rug-of-smothering-animus",
+   "name": "Rug of Smothering Animus",
+   "tier": "common",
+   "tags": [
+    "core",
+    "arcane",
+    "binding",
+    "construct"
+   ],
+   "desc": "A knotted sigil woven into the rug's back, the binding that made it strangle. A minor animation keystone.",
+   "perish": "stable",
+   "value": 28,
+   "recipe": null
+  },
+  {
+   "id": "shield-guardian-amulet-shard",
+   "name": "Shield Guardian Amulet Shard",
+   "tier": "rare",
+   "tags": [
+    "relic",
+    "gem",
+    "protection",
+    "binding",
+    "construct"
+   ],
+   "desc": "A fragment of the control amulet, still resonating with the guardian's protective bond. Keystone for warding, shielding and bond-magic.",
+   "perish": "stable",
+   "value": 790,
+   "recipe": null
+  },
+  {
+   "id": "shield-guardian-core",
+   "name": "Shield Guardian Core",
+   "tier": "rare",
+   "tags": [
+    "core",
+    "arcane",
+    "protection",
+    "regeneration",
+    "construct"
+   ],
+   "desc": "A slowly pulsing stone-and-metal heart that repairs itself in a day. Used in self-repairing wards and guardian constructs.",
+   "perish": "stable",
+   "value": 1800,
+   "recipe": null
+  },
+  {
+   "id": "shield-guardian-spell-cavity",
+   "name": "Shield Guardian Spell Cavity",
+   "tier": "rare",
+   "tags": [
+    "vessel",
+    "arcane",
+    "knowledge",
+    "construct"
+   ],
+   "desc": "A rune-lined hollow built to hold a single spell until triggered. Crafters use it for spell-storing items.",
+   "perish": "stable",
+   "value": 1700,
+   "recipe": null
+  },
+  {
+   "id": "stone-golem-core",
+   "name": "Stone Golem Core",
+   "tier": "rare",
+   "tags": [
+    "core",
+    "earth",
+    "binding",
+    "antimagic",
+    "construct"
+   ],
+   "desc": "A heavy, rune-cut stone heart that feels magic slide off it. Keystone for stone constructs and spell-resistant wards.",
+   "perish": "stable",
+   "value": 1800,
+   "recipe": null
+  },
+  {
+   "id": "stone-golem-lethargy-stone",
+   "name": "Stone Golem Lethargy Stone",
+   "tier": "rare",
+   "tags": [
+    "stone",
+    "earth",
+    "time",
+    "construct"
+   ],
+   "desc": "Grey stone that makes anyone holding it feel sluggish. Used in enchantments that slow time and foes.",
+   "perish": "stable",
+   "value": 190,
+   "recipe": null
+  },
+  {
+   "id": "black-pudding-acid",
+   "name": "Black Pudding Acid",
+   "tier": "uncommon",
+   "tags": [
+    "slime",
+    "liquid",
+    "acid",
+    "ooze"
+   ],
+   "desc": "A tar-black, stinking acid that eats metal and wood alike. Alchemists concentrate it into corrosive flasks.",
+   "perish": "1 day",
+   "value": 400,
+   "recipe": null
+  },
+  {
+   "id": "black-pudding-split-jelly",
+   "name": "Black Pudding Split-Jelly",
+   "tier": "uncommon",
+   "tags": [
+    "slime",
+    "acid",
+    "regeneration",
+    "growth",
+    "ooze"
+   ],
+   "desc": "A still-dividing lump of pudding that swells if fed. Used for regeneration and growth reagents.",
+   "perish": "1 hour",
+   "value": 100,
+   "recipe": null
+  },
+  {
+   "id": "gelatinous-cube-gel",
+   "name": "Gelatinous Cube Gel",
+   "tier": "common",
+   "tags": [
+    "slime",
+    "acid",
+    "invisibility",
+    "paralysis",
+    "ooze"
+   ],
+   "desc": "Perfectly clear, slightly acidic gel that nearly vanishes in its jar. Base for invisibility and numbing salves.",
+   "perish": "1 day",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "gelatinous-cube-nucleus",
+   "name": "Gelatinous Cube Nucleus",
+   "tier": "common",
+   "tags": [
+    "organ",
+    "slime",
+    "acid",
+    "ooze"
+   ],
+   "desc": "A dense, cloudy lump that coordinates the cube's digestion. Rendered into potent digestive acids.",
+   "perish": "1 hour",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "gelatinous-cube-undigested-hoard",
+   "name": "Gelatinous Cube Undigested Hoard",
+   "tier": "mundane",
+   "tags": [
+    "salvage",
+    "metal",
+    "ooze"
+   ],
+   "desc": "Coins, buckles, bones and weapons suspended in the cube, slowly etching. What's left is often worth a look.",
+   "perish": "stable",
+   "value": 0.3,
+   "recipe": null
+  },
+  {
+   "id": "gray-ooze-slime",
+   "name": "Gray Ooze Slime",
+   "tier": "common",
+   "tags": [
+    "slime",
+    "acid",
+    "stealth",
+    "ooze"
+   ],
+   "desc": "Wet, stone-coloured slime that corrodes metal. Thieves use it to eat through locks and chains.",
+   "perish": "1 day",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "gray-ooze-corrosion-salt",
+   "name": "Gray Ooze Corrosion Salt",
+   "tier": "common",
+   "tags": [
+    "salt",
+    "acid",
+    "ooze"
+   ],
+   "desc": "A brittle white crust left when the ooze dries. Dissolved in water, it pits metal overnight.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "ochre-jelly-acid",
+   "name": "Ochre Jelly Acid",
+   "tier": "common",
+   "tags": [
+    "slime",
+    "acid",
+    "climbing",
+    "ooze"
+   ],
+   "desc": "Yellow, sticky acid that clings to ceilings. Used in climbing gels and corrosive coatings.",
+   "perish": "1 day",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "ochre-jelly-budding-mass",
+   "name": "Ochre Jelly Budding Mass",
+   "tier": "common",
+   "tags": [
+    "slime",
+    "acid",
+    "regeneration",
+    "ooze"
+   ],
+   "desc": "A fist-sized lump that tries to split again. Used in minor regeneration and growth reagents.",
+   "perish": "1 hour",
+   "value": 22,
+   "recipe": null
+  },
+  {
+   "id": "awakened-shrub-twigs",
+   "name": "Awakened Shrub Twigs",
+   "tier": "common",
+   "tags": [
+    "wood",
+    "bark",
+    "primal",
+    "stealth",
+    "plant"
+   ],
+   "desc": "Springy twigs that rustle when no wind blows. Used in camouflage charms.",
+   "perish": "stable",
+   "value": 8,
+   "recipe": null
+  },
+  {
+   "id": "awakened-shrub-wakeful-leaf",
+   "name": "Awakened Shrub Wakeful Leaf",
+   "tier": "common",
+   "tags": [
+    "leaf",
+    "herb",
+    "primal",
+    "knowledge",
+    "plant"
+   ],
+   "desc": "A leaf that murmurs faintly when held to the ear. Brewed into tea that helps speak with plants.",
+   "perish": "1 week",
+   "value": 26,
+   "recipe": null
+  },
+  {
+   "id": "awakened-tree-sap",
+   "name": "Awakened Tree Sap",
+   "tier": "common",
+   "tags": [
+    "sap",
+    "primal",
+    "growth",
+    "healing",
+    "plant"
+   ],
+   "desc": "Amber sap that warms in the hand and smells of spring. A popular base for healing and growth tonics.",
+   "perish": "1 week",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "awakened-tree-heartwood",
+   "name": "Awakened Tree Heartwood",
+   "tier": "common",
+   "tags": [
+    "wood",
+    "primal",
+    "toughness",
+    "knowledge",
+    "plant"
+   ],
+   "desc": "Dense, dark heartwood with faint rings of memory. Carved into staves and druidic foci.",
+   "perish": "stable",
+   "value": 36,
+   "recipe": null
+  },
+  {
+   "id": "awakened-tree-bark",
+   "name": "Awakened Tree Bark",
+   "tier": "common",
+   "tags": [
+    "bark",
+    "primal",
+    "toughness",
+    "plant"
+   ],
+   "desc": "Thick, gnarled bark; tough but vulnerable to fire. Used in druidic armour.",
+   "perish": "stable",
+   "value": 50,
+   "recipe": null
+  },
+  {
+   "id": "shambling-mound-vines",
+   "name": "Shambling Mound Vines",
+   "tier": "uncommon",
+   "tags": [
+    "vine",
+    "lightning",
+    "storm",
+    "regeneration",
+    "plant"
+   ],
+   "desc": "Slimy, rope-thick vines that still crackle with absorbed lightning. Woven into storm-charged nets and lightning-feeding charms.",
+   "perish": "1 day",
+   "value": 180,
+   "recipe": null
+  },
+  {
+   "id": "shambling-mound-rot-heart",
+   "name": "Shambling Mound Rot-Heart",
+   "tier": "uncommon",
+   "tags": [
+    "root",
+    "lightning",
+    "growth",
+    "plant"
+   ],
+   "desc": "A knot of rotting roots at the mound's core, humming with current. Keystone for lightning-fed growth magic.",
+   "perish": "1 day",
+   "value": 160,
+   "recipe": null
+  },
+  {
+   "id": "shrieker-cap",
+   "name": "Shrieker Cap",
+   "tier": "common",
+   "tags": [
+    "fungus",
+    "thunder",
+    "sound",
+    "plant"
+   ],
+   "desc": "A pale mushroom cap that shrieks when disturbed, even after picking. Used for alarm charms and sonic weapons.",
+   "perish": "stable",
+   "value": 20,
+   "recipe": null
+  },
+  {
+   "id": "shrieker-spores",
+   "name": "Shrieker Spores",
+   "tier": "common",
+   "tags": [
+    "dust",
+    "fungus",
+    "sound",
+    "senses",
+    "plant"
+   ],
+   "desc": "Fine spores that hum when they settle. Scattered as alarms around a camp.",
+   "perish": "1 week",
+   "value": 25,
+   "recipe": null
+  },
+  {
+   "id": "treant-heartwood",
+   "name": "Treant Heartwood",
+   "tier": "rare",
+   "tags": [
+    "wood",
+    "primal",
+    "growth",
+    "toughness",
+    "plant"
+   ],
+   "desc": "Ancient, iron-hard heartwood that still slowly grows. The finest staff and bow wood in existence.",
+   "perish": "stable",
+   "value": 2000,
+   "recipe": null
+  },
+  {
+   "id": "treant-sap",
+   "name": "Treant Sap",
+   "tier": "rare",
+   "tags": [
+    "sap",
+    "primal",
+    "healing",
+    "growth",
+    "plant"
+   ],
+   "desc": "Golden, life-giving sap that makes seeds sprout on contact. Potent healing base.",
+   "perish": "1 week",
+   "value": 1000,
+   "recipe": null
+  },
+  {
+   "id": "treant-bark",
+   "name": "Treant Bark",
+   "tier": "rare",
+   "tags": [
+    "bark",
+    "primal",
+    "toughness",
+    "resistance",
+    "plant"
+   ],
+   "desc": "Thick plates of weathered bark tough as stone. Druids craft it into protective armour.",
+   "perish": "stable",
+   "value": 1600,
+   "recipe": null
+  },
+  {
+   "id": "treant-essence",
+   "name": "Treant Essence",
+   "tier": "rare",
+   "tags": [
+    "essence",
+    "primal",
+    "growth",
+    "domination",
+    "plant"
+   ],
+   "desc": "A green, slow-pulsing mote that makes nearby trees sway toward it. Keystone for animating plants and great nature magic.",
+   "perish": "1 minute",
+   "value": 900,
+   "recipe": null
+  },
+  {
+   "id": "treant-seed-acorn",
+   "name": "Treant Seed-Acorn",
+   "tier": "rare",
+   "tags": [
+    "seed",
+    "primal",
+    "growth",
+    "fey",
+    "plant"
+   ],
+   "desc": "A giant acorn containing the seed of a new treant. Planted in a sacred grove, it may one day awaken.",
+   "perish": "stable",
+   "value": 270,
+   "recipe": null
+  },
+  {
+   "id": "violet-fungus-tendril",
+   "name": "Violet Fungus Tendril",
+   "tier": "common",
+   "tags": [
+    "fungus",
+    "tentacle",
+    "necrotic",
+    "plant"
+   ],
+   "desc": "A rubbery purple tendril that rots flesh on contact. Used in necrotic poisons.",
+   "perish": "1 day",
+   "value": 24,
+   "recipe": null
+  },
+  {
+   "id": "violet-fungus-spores",
+   "name": "Violet Fungus Spores",
+   "tier": "common",
+   "tags": [
+    "dust",
+    "fungus",
+    "necrotic",
+    "disease",
+    "plant"
+   ],
+   "desc": "Fine purple spores that cause rotting sores. Used in disease-based curses and poisons.",
+   "perish": "1 week",
+   "value": 25,
+   "recipe": null
+  }
+ ],
+ "monsters": [
+  {
+   "id": "air-elemental",
+   "name": "Air Elemental",
+   "type": "elemental",
+   "size": "Large",
+   "cr": "5",
+   "env": [
+    "elemental-air",
+    "mountain",
+    "desert",
+    "coast"
+   ],
+   "blurb": "A howling column of wind; when it breaks apart, the calm eye at its centre can be caught if you are quick.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "air-elemental-core",
+     "q": 1,
+     "dc": 13,
+     "skill": "Arcana",
+     "note": "The mote unravels back into its element within 1 minute; seal it in an Essence Vessel before then. The core bucks violently: on a failed check it escapes as a gust that knocks you prone."
+    },
+    {
+     "m": "air-elemental-stormglass",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 13,
+     "skill": "Nature",
+     "note": "Scattered where the funnel collapsed; sift the debris before the next wind buries it."
+    },
+    {
+     "m": "air-elemental-skygrit",
+     "q": 1,
+     "dice": "1d6",
+     "dc": 10,
+     "skill": "Nature",
+     "note": "Must be collected with a lidded jar held upside down."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "earth-elemental",
+   "name": "Earth Elemental",
+   "type": "elemental",
+   "size": "Large",
+   "cr": "5",
+   "env": [
+    "elemental-earth",
+    "mountain",
+    "underdark",
+    "hill"
+   ],
+   "blurb": "A hulking mass of animated bedrock; when it falls, its heart sinks toward the ground unless someone digs it out fast.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "earth-elemental-core",
+     "q": 1,
+     "dc": 13,
+     "skill": "Arcana",
+     "note": "The mote unravels back into its element within 1 minute; seal it in an Essence Vessel before then. It tries to sink into the floor; stand on stone and you must dig for it."
+    },
+    {
+     "m": "earth-elemental-living-stone",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 13,
+     "skill": "Nature",
+     "note": "Only the few chunks still twitching are true living stone; the rest is common rubble."
+    },
+    {
+     "m": "earth-elemental-tremor-gravel",
+     "q": 1,
+     "dice": "2d4",
+     "dc": 10,
+     "skill": "Nature"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "fire-elemental",
+   "name": "Fire Elemental",
+   "type": "elemental",
+   "size": "Large",
+   "cr": "5",
+   "env": [
+    "elemental-fire",
+    "desert",
+    "mountain"
+   ],
+   "blurb": "A roaring shape of living flame; as it gutters out, the seed that fed it flares one last time.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "fire-elemental-core",
+     "q": 1,
+     "dc": 13,
+     "skill": "Arcana",
+     "note": "The mote unravels back into its element within 1 minute; seal it in an Essence Vessel before then. Handling it bare-handed deals 2d6 fire damage; tongs or fireproof gloves required."
+    },
+    {
+     "m": "fire-elemental-everburning-cinder",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 13,
+     "skill": "Nature",
+     "note": "Pick them from the scorch mark while they still glow; soaked cinders go dead."
+    },
+    {
+     "m": "fire-elemental-flame-ash",
+     "q": 1,
+     "dice": "2d4",
+     "dc": 10,
+     "skill": "Nature"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "water-elemental",
+   "name": "Water Elemental",
+   "type": "elemental",
+   "size": "Large",
+   "cr": "5",
+   "env": [
+    "elemental-water",
+    "coast",
+    "underwater",
+    "swamp"
+   ],
+   "blurb": "A crashing wave with a will; when it bursts, a single lucid droplet and a few pearls remain in the puddle.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "water-elemental-core",
+     "q": 1,
+     "dc": 13,
+     "skill": "Arcana",
+     "note": "The mote unravels back into its element within 1 minute; seal it in an Essence Vessel before then. It flows toward the nearest body of water; on dry land you have a chance."
+    },
+    {
+     "m": "water-elemental-tidewater-pearl",
+     "q": 1,
+     "dice": "1d3",
+     "dc": 13,
+     "skill": "Nature",
+     "note": "Sift the spreading puddle before it soaks into the ground."
+    },
+    {
+     "m": "water-elemental-undertow-brine",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 10,
+     "skill": "Nature"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "azer",
+   "name": "Azer",
+   "type": "elemental",
+   "size": "Medium",
+   "cr": "2",
+   "env": [
+    "elemental-fire",
+    "mountain",
+    "underdark"
+   ],
+   "blurb": "Bronze-skinned dwarf-like smiths of the fire plane whose bodies are literally forges.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "azer-forge-core",
+     "q": 1,
+     "dc": 10,
+     "skill": "Arcana",
+     "note": "The mote unravels back into its element within 1 minute; seal it in an Essence Vessel before then. Pry the chest plates apart carefully: a spilled core scorches for 1d6 fire."
+    },
+    {
+     "m": "azer-bronze-flesh",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 10,
+     "skill": "Survival",
+     "note": "Let it cool for an hour first, or it deforms under the knife."
+    },
+    {
+     "m": "azer-flame-hair",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "note": "Store in a metal tin; it sets cloth pouches alight."
+    }
+   ],
+   "aka": [
+    "Azer Sentinel"
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "djinni",
+   "name": "Djinni",
+   "type": "elemental",
+   "size": "Large",
+   "cr": "11",
+   "env": [
+    "elemental-air",
+    "desert"
+   ],
+   "blurb": "A towering, blue-skinned noble of the wind; its body dissolves into a warm breeze moments after death.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "djinni-tempest-core",
+     "q": 1,
+     "dc": 16,
+     "skill": "Arcana",
+     "note": "The mote unravels back into its element within 1 minute; seal it in an Essence Vessel before then. Fail by 5 or more and the core bursts in a thunderclap (3d6 thunder)."
+    },
+    {
+     "m": "djinni-wishglass-bead",
+     "q": 3,
+     "dc": 16,
+     "skill": "Arcana",
+     "note": "Forms where the last breath left the body; search the air itself — it may be drifting.",
+     "dice": "1d4+1"
+    },
+    {
+     "m": "djinni-cloudsilk-hair",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 16,
+     "skill": "Survival",
+     "note": "Cut before the body dissolves (within 1 minute) and bind immediately or it floats away."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "efreeti",
+   "name": "Efreeti",
+   "type": "elemental",
+   "size": "Large",
+   "cr": "11",
+   "env": [
+    "elemental-fire",
+    "desert"
+   ],
+   "blurb": "A cruel fire genie of brass and smoke; its corpse collapses into cinders and a single blazing heart-coal.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "efreeti-brazier-core",
+     "q": 1,
+     "dc": 16,
+     "skill": "Arcana",
+     "note": "The mote unravels back into its element within 1 minute; seal it in an Essence Vessel before then. The core is hot enough to melt steel tongs (2d6 fire on a failed check)."
+    },
+    {
+     "m": "efreeti-brass-cinders",
+     "q": 3,
+     "dice": "1d4+1",
+     "dc": 16,
+     "skill": "Nature",
+     "note": "Sweep with a brass or stone tool; iron scoops fuse to the cinders."
+    },
+    {
+     "m": "efreeti-ember-blood",
+     "q": 1,
+     "dc": 16,
+     "skill": "Medicine",
+     "note": "Collect in crystal or clay; glass vials crack from the heat."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "dust-mephit",
+   "name": "Dust Mephit",
+   "type": "elemental",
+   "size": "Small",
+   "cr": "1/2",
+   "env": [
+    "elemental-air",
+    "elemental-earth",
+    "desert",
+    "ruins"
+   ],
+   "blurb": "A sneezing, spiteful little imp of grit that explodes into a blinding cloud when killed.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "dust-mephit-core",
+     "q": 1,
+     "dc": 10,
+     "skill": "Arcana",
+     "note": "The mote unravels back into its element within 1 minute; seal it in an Essence Vessel before then. Its death-burst blinds whoever is closest; harvest with eyes shut and a steady hand (disadvantage unless blindfolded)."
+    },
+    {
+     "m": "dust-mephit-grit",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 10,
+     "skill": "Nature"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "ice-mephit",
+   "name": "Ice Mephit",
+   "type": "elemental",
+   "size": "Small",
+   "cr": "1/2",
+   "env": [
+    "elemental-water",
+    "arctic",
+    "mountain"
+   ],
+   "blurb": "A cold, cruel little flier that shatters into shards when it dies.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "ice-mephit-core",
+     "q": 1,
+     "dc": 10,
+     "skill": "Arcana",
+     "note": "The mote unravels back into its element within 1 minute; seal it in an Essence Vessel before then. The shatter can cut you (1d4 slashing on a failed check)."
+    },
+    {
+     "m": "ice-mephit-frost-shard",
+     "q": 1,
+     "dice": "1d6",
+     "dc": 10,
+     "skill": "Nature",
+     "note": "Pack in snow or salt; they melt away in warm weather."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "magma-mephit",
+   "name": "Magma Mephit",
+   "type": "elemental",
+   "size": "Small",
+   "cr": "1/2",
+   "env": [
+    "elemental-fire",
+    "mountain",
+    "underdark"
+   ],
+   "blurb": "A lazy, dripping sprite of lava that bursts in a spatter of molten rock on death.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "magma-mephit-core",
+     "q": 1,
+     "dc": 10,
+     "skill": "Arcana",
+     "note": "The mote unravels back into its element within 1 minute; seal it in an Essence Vessel before then. Its death-burst sprays lava (1d6 fire to whoever reaches in first)."
+    },
+    {
+     "m": "magma-mephit-slag",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 10,
+     "skill": "Nature"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "steam-mephit",
+   "name": "Steam Mephit",
+   "type": "elemental",
+   "size": "Small",
+   "cr": "1/4",
+   "env": [
+    "elemental-fire",
+    "elemental-water",
+    "swamp",
+    "coast"
+   ],
+   "blurb": "A hissing, sarcastic puff of steam that dies in a scalding burst.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "steam-mephit-core",
+     "q": 1,
+     "dc": 10,
+     "skill": "Arcana",
+     "note": "The mote unravels back into its element within 1 minute; seal it in an Essence Vessel before then. The burst scalds (1d4 fire) anyone harvesting without gloves."
+    },
+    {
+     "m": "steam-mephit-scald-drops",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 10,
+     "skill": "Nature",
+     "note": "Condense the dissipating steam on a cold blade."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "gargoyle",
+   "name": "Gargoyle",
+   "type": "elemental",
+   "size": "Medium",
+   "cr": "2",
+   "env": [
+    "mountain",
+    "ruins",
+    "urban",
+    "elemental-earth"
+   ],
+   "blurb": "A spiteful, winged stone predator that poses as a carving until prey walks beneath it.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "gargoyle-stoneskin",
+     "q": 1,
+     "dc": 12,
+     "skill": "Survival",
+     "note": "Requires a mason's chisel as well as a knife; hacking it apart leaves only gravel."
+    },
+    {
+     "m": "gargoyle-talon",
+     "q": 2,
+     "dice": "1d4",
+     "dc": 10,
+     "skill": "Survival"
+    },
+    {
+     "m": "gargoyle-heartstone",
+     "q": 1,
+     "dc": 10,
+     "skill": "Arcana",
+     "note": "It looks like the rest of the rubble — detect magic or a DC 12 Investigation check helps find it."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "invisible-stalker",
+   "name": "Invisible Stalker",
+   "type": "elemental",
+   "size": "Medium",
+   "cr": "6",
+   "env": [
+    "elemental-air",
+    "urban",
+    "ruins"
+   ],
+   "blurb": "A bound air spirit that hunts a single target relentlessly and cannot be seen even in death.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "invisible-stalker-core",
+     "q": 1,
+     "dc": 13,
+     "skill": "Arcana",
+     "note": "The mote unravels back into its element within 1 minute; seal it in an Essence Vessel before then. You cannot see it: work by touch and cold spots (disadvantage without see invisibility)."
+    },
+    {
+     "m": "invisible-stalker-clearglass",
+     "q": 1,
+     "dice": "1d2",
+     "dc": 15,
+     "skill": "Nature",
+     "note": "Found only by touch where the body collapsed; drop it and you may never find it again."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "magmin",
+   "name": "Magmin",
+   "type": "elemental",
+   "size": "Small",
+   "cr": "1/2",
+   "env": [
+    "elemental-fire",
+    "mountain",
+    "underdark"
+   ],
+   "blurb": "A giggling little lump of living magma that detonates in flame when slain.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "magmin-core",
+     "q": 1,
+     "dc": 10,
+     "skill": "Arcana",
+     "note": "The mote unravels back into its element within 1 minute; seal it in an Essence Vessel before then. It explodes as it dies (1d6 fire in 10 feet); only the core survives the blast."
+    },
+    {
+     "m": "magmin-lava-crust",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 10,
+     "skill": "Nature"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "salamander",
+   "name": "Salamander",
+   "type": "elemental",
+   "size": "Large",
+   "cr": "5",
+   "env": [
+    "elemental-fire",
+    "desert",
+    "mountain"
+   ],
+   "blurb": "A serpentine fire-noble whose body is so hot that metal glows near it.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "salamander-heart",
+     "q": 1,
+     "dc": 13,
+     "skill": "Medicine",
+     "note": "Wait for the body to stop glowing or suffer 2d6 fire; carry it in a clay crucible."
+    },
+    {
+     "m": "salamander-tail",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival",
+     "note": "Cut the tail in one sweep; it keeps constricting for an hour afterward."
+    },
+    {
+     "m": "salamander-scales",
+     "q": 1,
+     "dice": "2d6",
+     "dc": 13,
+     "skill": "Survival"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "xorn",
+   "name": "Xorn",
+   "type": "elemental",
+   "size": "Medium",
+   "cr": "5",
+   "env": [
+    "elemental-earth",
+    "underdark",
+    "mountain"
+   ],
+   "blurb": "A three-armed, three-eyed mouth on legs that swims through rock and eats precious metals and gems.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "xorn-gut-stones",
+     "q": 1,
+     "dice": "2d4",
+     "dc": 13,
+     "skill": "Medicine",
+     "note": "Open the gizzard carefully; its grinding muscles keep working and can crush fingers."
+    },
+    {
+     "m": "xorn-gizzard",
+     "q": 1,
+     "dc": 13,
+     "skill": "Medicine",
+     "note": "If it is damaged, the phasing effect fails and it is just tripe."
+    },
+    {
+     "m": "xorn-jaw-teeth",
+     "q": 1,
+     "dice": "1d6",
+     "dc": 13,
+     "skill": "Survival"
+    },
+    {
+     "m": "xorn-essence",
+     "q": 1,
+     "dc": 13,
+     "skill": "Arcana",
+     "note": "It unravels back into its element within a minute. Seal it in an Essence Vessel before then."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "ghast",
+   "name": "Ghast",
+   "type": "undead",
+   "size": "Medium",
+   "cr": "2",
+   "env": [
+    "ruins",
+    "swamp",
+    "underdark",
+    "shadowfell"
+   ],
+   "blurb": "A ghoul-lord whose stench alone buckles the knees; its gear is ruin but its glands are prized.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "ghast-stench-gland",
+     "q": 1,
+     "dc": 10,
+     "skill": "Medicine",
+     "note": "Rupture it (fail by 5+) and you are poisoned for 1 hour."
+    },
+    {
+     "m": "ghast-claw",
+     "q": 2,
+     "dice": "1d4",
+     "dc": 10,
+     "skill": "Survival",
+     "note": "Nick yourself (fail by 5+) and make a Con save or be paralysed for 1 minute."
+    },
+    {
+     "m": "ghast-grave-dust",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 10,
+     "skill": "Religion"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "ghost",
+   "name": "Ghost",
+   "type": "undead",
+   "size": "Medium",
+   "cr": "4",
+   "env": [
+    "ruins",
+    "urban",
+    "shadowfell"
+   ],
+   "blurb": "A lingering spirit bound to unfinished business; its ectoplasm must be caught as it discorporates.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "ghost-ectoplasm",
+     "q": 1,
+     "dice": "1d3",
+     "dc": 13,
+     "skill": "Religion",
+     "note": "Draw it into a silver-lined jar; ordinary glass lets it slip into the Ethereal."
+    },
+    {
+     "m": "ghost-essence",
+     "q": 1,
+     "dc": 13,
+     "skill": "Religion",
+     "note": "It clings to the remains as a chill mist. Seal it in an Essence Vessel within a minute, before it seeps into the ground. A ghost that was merely 'destroyed' without being laid to rest yields a weaker, flickering essence (halve the value)."
+    },
+    {
+     "m": "ghost-anchor-keepsake",
+     "q": 1,
+     "dc": 13,
+     "skill": "Investigation",
+     "note": "Found only by researching the ghost's life; taking it without resolving its business may invite a haunting."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "ghoul",
+   "name": "Ghoul",
+   "type": "undead",
+   "size": "Medium",
+   "cr": "1",
+   "env": [
+    "ruins",
+    "swamp",
+    "underdark",
+    "shadowfell"
+   ],
+   "blurb": "A starving corpse-eater that paralyses its prey with filthy claws.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "ghoul-claw",
+     "q": 2,
+     "dice": "1d4",
+     "dc": 10,
+     "skill": "Survival",
+     "note": "Scratch yourself (fail by 5+) and make a Con save or be paralysed for 1 minute."
+    },
+    {
+     "m": "ghoul-saliva",
+     "q": 1,
+     "dc": 10,
+     "skill": "Medicine",
+     "note": "Collect from the gums before it dries into useless crust."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "lich",
+   "name": "Lich",
+   "type": "undead",
+   "size": "Medium",
+   "cr": "21",
+   "env": [
+    "ruins",
+    "shadowfell",
+    "underdark"
+   ],
+   "blurb": "An undying archmage who hid its soul in a phylactery; true harvest is only possible once that vessel is broken.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "lich-phylactery-shard",
+     "q": 1,
+     "dice": "1d3",
+     "dc": 22,
+     "skill": "Arcana",
+     "note": "Only obtainable if the phylactery itself is destroyed; while it survives, shards are inert glass and the lich re-forms in days."
+    },
+    {
+     "m": "lich-essence",
+     "q": 1,
+     "dc": 22,
+     "skill": "Arcana",
+     "note": "It clings to the remains as a chill mist. Seal it in an Essence Vessel within a minute, before it seeps into the ground. Only if the phylactery is gone; otherwise the essence flees to it."
+    },
+    {
+     "m": "lich-dust",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 19,
+     "skill": "Religion",
+     "note": "Collect with a silver spoon; bare skin contact deals 2d6 necrotic."
+    },
+    {
+     "m": "lich-finger-bones",
+     "q": 1,
+     "dice": "1d6",
+     "dc": 19,
+     "skill": "Survival",
+     "note": "Cold enough to cause frostbite (Con save or 1 level of exhaustion) without warded gloves."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "skeleton",
+   "name": "Skeleton",
+   "type": "undead",
+   "size": "Medium",
+   "cr": "1/4",
+   "env": [
+    "ruins",
+    "underdark",
+    "shadowfell"
+   ],
+   "blurb": "Animated bones held together by necromancy; when it falls, the binding magic lingers in the marrow.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "skeleton-bone-dust",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 10,
+     "skill": "Religion",
+     "note": "Grind it within a day of the skeleton's destruction or the necromantic charge fades."
+    },
+    {
+     "m": "skeleton-grave-gear",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "minotaur-skeleton",
+   "name": "Minotaur Skeleton",
+   "type": "undead",
+   "size": "Large",
+   "cr": "2",
+   "env": [
+    "ruins",
+    "underdark"
+   ],
+   "blurb": "The reanimated bones of a minotaur, still charging mindlessly through old labyrinths.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "minotaur-skeleton-horn",
+     "q": 2,
+     "dc": 10,
+     "skill": "Survival"
+    },
+    {
+     "m": "minotaur-skeleton-skull",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "note": "Most skulls crack in the fight; only an intact one keeps its sense of direction."
+    },
+    {
+     "m": "skeleton-bone-dust",
+     "q": 1,
+     "dice": "2d4",
+     "dc": 10,
+     "skill": "Religion"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "warhorse-skeleton",
+   "name": "Warhorse Skeleton",
+   "type": "undead",
+   "size": "Large",
+   "cr": "1/2",
+   "env": [
+    "ruins",
+    "grassland",
+    "shadowfell"
+   ],
+   "blurb": "The bones of a fallen war mount, still charging for a long-dead rider.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "warhorse-skeleton-hoof",
+     "q": 4,
+     "dice": "1d4",
+     "dc": 10,
+     "skill": "Survival"
+    },
+    {
+     "m": "warhorse-skeleton-barding",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "skeleton-bone-dust",
+     "q": 1,
+     "dice": "1d6",
+     "dc": 10,
+     "skill": "Religion"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "mummy",
+   "name": "Mummy",
+   "type": "undead",
+   "size": "Medium",
+   "cr": "3",
+   "env": [
+    "desert",
+    "ruins"
+   ],
+   "blurb": "A preserved corpse animated by dark funerary rites, whose touch rots the flesh.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "mummy-wrappings",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 13,
+     "skill": "Religion",
+     "note": "Touching bare skin risks mummy rot (DC 12 Con save). Keep away from flame — they burn like tinder."
+    },
+    {
+     "m": "mummy-glare-eye",
+     "q": 2,
+     "dc": 13,
+     "skill": "Medicine",
+     "note": "Blindfold it the moment it is out; meeting its gaze can still frighten."
+    },
+    {
+     "m": "mummy-embalming-resin",
+     "q": 1,
+     "dice": "1d3",
+     "dc": 13,
+     "skill": "Nature"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "mummy-lord",
+   "name": "Mummy Lord",
+   "type": "undead",
+   "size": "Medium",
+   "cr": "15",
+   "env": [
+    "desert",
+    "ruins"
+   ],
+   "blurb": "A god-blessed ruler raised by dark priests; destroy its heart or it will rise again.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "mummy-lord-heart",
+     "q": 1,
+     "dc": 19,
+     "skill": "Religion",
+     "note": "The heart lies in a canopic jar in the tomb, not in the body. Taking it intact prevents the lord's return — as long as it is never 'fed'."
+    },
+    {
+     "m": "mummy-lord-royal-wrappings",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 19,
+     "skill": "Religion",
+     "note": "Mummy rot is far worse here (DC 16 Con save on contact)."
+    },
+    {
+     "m": "mummy-lord-essence",
+     "q": 1,
+     "dc": 19,
+     "skill": "Religion",
+     "note": "Work fast and in darkness: light scatters it. An Essence Vessel holds it once sealed. Only possible if the heart has been taken or destroyed first."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "zombie",
+   "name": "Zombie",
+   "type": "undead",
+   "size": "Medium",
+   "cr": "1/4",
+   "env": [
+    "ruins",
+    "swamp",
+    "urban",
+    "shadowfell"
+   ],
+   "blurb": "A shambling corpse that keeps standing up long after it should stay down.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "zombie-grave-flesh",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 10,
+     "skill": "Medicine",
+     "note": "Salt it heavily or it rots to slurry overnight."
+    },
+    {
+     "m": "zombie-undying-sinew",
+     "q": 1,
+     "dc": 10,
+     "skill": "Medicine",
+     "note": "Cut the sinews only after the head is destroyed, or the corpse may lurch back up."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "ogre-zombie",
+   "name": "Ogre Zombie",
+   "type": "undead",
+   "size": "Large",
+   "cr": "2",
+   "env": [
+    "ruins",
+    "hill",
+    "swamp"
+   ],
+   "blurb": "A rotting ogre corpse swinging a club with undead persistence.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "ogre-zombie-sinew",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 10,
+     "skill": "Medicine"
+    },
+    {
+     "m": "ogre-greatclub-knot",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation",
+     "note": "Pry the club from the dead fingers; the grip is locked tight even after the zombie falls."
+    },
+    {
+     "m": "zombie-grave-flesh",
+     "q": 1,
+     "dice": "2d4",
+     "dc": 10,
+     "skill": "Medicine"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "shadow",
+   "name": "Shadow",
+   "type": "undead",
+   "size": "Medium",
+   "cr": "1/2",
+   "env": [
+    "shadowfell",
+    "ruins",
+    "underdark"
+   ],
+   "blurb": "A hungry scrap of darkness that saps strength with its touch.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "shadow-essence",
+     "q": 1,
+     "dc": 10,
+     "skill": "Religion",
+     "note": "Requires an Essence Vessel within 1 minute of death. It vanishes instantly in bright light; harvest in dim light only."
+    },
+    {
+     "m": "shadow-umbral-residue",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 10,
+     "skill": "Religion",
+     "note": "Scrape it up before dawn; sunlight burns it away."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "specter",
+   "name": "Specter",
+   "type": "undead",
+   "size": "Medium",
+   "cr": "1",
+   "env": [
+    "ruins",
+    "shadowfell",
+    "urban"
+   ],
+   "blurb": "A spiteful spirit that drains the life of anything warm.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "specter-ectoplasm",
+     "q": 1,
+     "dice": "1d2",
+     "dc": 10,
+     "skill": "Religion",
+     "note": "Seal in a silver-lined vessel or it seeps away."
+    },
+    {
+     "m": "specter-essence",
+     "q": 1,
+     "dc": 10,
+     "skill": "Religion",
+     "note": "It clings to the remains as a chill mist. Seal it in an Essence Vessel within a minute, before it seeps into the ground."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "vampire",
+   "name": "Vampire",
+   "type": "undead",
+   "size": "Medium",
+   "cr": "13",
+   "env": [
+    "urban",
+    "ruins",
+    "shadowfell"
+   ],
+   "blurb": "An ancient, aristocratic predator of blood; unless its heart is staked and burned, it simply rises in its coffin again.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "vampire-fang",
+     "q": 2,
+     "dc": 19,
+     "skill": "Survival",
+     "note": "Pull them from the skull within an hour of final death, before they crumble."
+    },
+    {
+     "m": "vampire-heart-ash",
+     "q": 1,
+     "dc": 19,
+     "skill": "Religion",
+     "note": "The vampire must be reduced to its coffin, its heart staked, and then burned in fire or sunlight. Without all three steps there is no ash — only a vampire that returns."
+    },
+    {
+     "m": "vampire-blood",
+     "q": 1,
+     "dc": 19,
+     "skill": "Medicine",
+     "note": "Collect before sunlight touches the body; exposure boils it away."
+    },
+    {
+     "m": "vampire-essence",
+     "q": 1,
+     "dc": 19,
+     "skill": "Religion",
+     "note": "It clings to the remains as a chill mist. Seal it in an Essence Vessel within a minute, before it seeps into the ground. Only possible during the final destruction in the coffin."
+    },
+    {
+     "m": "vampire-coffin-earth",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 13,
+     "skill": "Investigation",
+     "note": "Requires finding the resting place; the soil loses its potency once the vampire is truly dead for a week."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "vampire-spawn",
+   "name": "Vampire Spawn",
+   "type": "undead",
+   "size": "Medium",
+   "cr": "5",
+   "env": [
+    "urban",
+    "ruins",
+    "shadowfell"
+   ],
+   "blurb": "A lesser vampire enslaved to its maker, hungry and wall-crawling.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "vampire-spawn-fang",
+     "q": 2,
+     "dc": 13,
+     "skill": "Survival"
+    },
+    {
+     "m": "vampire-spawn-blood",
+     "q": 1,
+     "dc": 13,
+     "skill": "Medicine",
+     "note": "Drain it in darkness; daylight boils it away."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "wight",
+   "name": "Wight",
+   "type": "undead",
+   "size": "Medium",
+   "cr": "3",
+   "env": [
+    "ruins",
+    "shadowfell",
+    "hill",
+    "arctic"
+   ],
+   "blurb": "A malevolent barrow-lord that drains life and raises its victims as zombies.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "wight-essence",
+     "q": 1,
+     "dc": 13,
+     "skill": "Religion",
+     "note": "It clings to the remains as a chill mist. Seal it in an Essence Vessel within a minute, before it seeps into the ground."
+    },
+    {
+     "m": "wight-barrow-dust",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 13,
+     "skill": "Religion"
+    },
+    {
+     "m": "wight-ember-eyes",
+     "q": 2,
+     "dc": 13,
+     "skill": "Medicine"
+    },
+    {
+     "m": "wight-barrow-blade",
+     "q": 1,
+     "dc": 13,
+     "skill": "Investigation",
+     "note": "Handling it bare-handed deals 1 necrotic damage per hour."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "will-o-wisp",
+   "name": "Will-o'-Wisp",
+   "type": "undead",
+   "size": "Tiny",
+   "cr": "2",
+   "env": [
+    "swamp",
+    "forest",
+    "ruins"
+   ],
+   "blurb": "A malicious ball of light that lures travellers into bogs and feeds on their final breaths.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "will-o-wisp-lantern-core",
+     "q": 1,
+     "dc": 12,
+     "skill": "Arcana",
+     "note": "It clings to the remains as a chill mist. Seal it in an Essence Vessel within a minute, before it seeps into the ground. It turns invisible as it fades; a failed check costs 1d8 lightning damage."
+    },
+    {
+     "m": "will-o-wisp-marsh-glow",
+     "q": 1,
+     "dice": "1d3",
+     "dc": 10,
+     "skill": "Nature",
+     "note": "Skim it off the water's surface with a flat blade."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "wraith",
+   "name": "Wraith",
+   "type": "undead",
+   "size": "Medium",
+   "cr": "5",
+   "env": [
+    "shadowfell",
+    "ruins"
+   ],
+   "blurb": "A hateful spirit of darkness that drains life and turns its victims into specters.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "wraith-ectoplasm",
+     "q": 1,
+     "dice": "1d3",
+     "dc": 13,
+     "skill": "Religion",
+     "note": "Seal in silver; it drifts through lead and glass alike."
+    },
+    {
+     "m": "wraith-essence",
+     "q": 1,
+     "dc": 13,
+     "skill": "Religion",
+     "note": "Work fast and in darkness: light scatters it. An Essence Vessel holds it once sealed. A failed check drains 1d8 from your hit point maximum until a long rest."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "animated-armor",
+   "name": "Animated Armor",
+   "type": "construct",
+   "size": "Medium",
+   "cr": "1",
+   "env": [
+    "ruins",
+    "urban"
+   ],
+   "blurb": "An empty suit of plate that guards a vault or hall until knocked apart.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "animated-armor-plate",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 10,
+     "skill": "Investigation"
+    },
+    {
+     "m": "animated-armor-animus-rune",
+     "q": 1,
+     "dc": 10,
+     "skill": "Arcana",
+     "note": "Usually inside the breastplate; pry it out gently or the rune cracks and goes dark."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "clay-golem",
+   "name": "Clay Golem",
+   "type": "construct",
+   "size": "Large",
+   "cr": "9",
+   "env": [
+    "ruins",
+    "urban"
+   ],
+   "blurb": "A holy guardian sculpted from clay; its blows leave wounds that magic can barely heal.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "clay-golem-shem-tablet",
+     "q": 1,
+     "dc": 16,
+     "skill": "Arcana",
+     "note": "Must be removed intact from inside the head; breaking it destroys the binding script."
+    },
+    {
+     "m": "clay-golem-clay",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 16,
+     "skill": "Nature",
+     "note": "Keep it wet; clay that dries out loses its curse."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "flesh-golem",
+   "name": "Flesh Golem",
+   "type": "construct",
+   "size": "Medium",
+   "cr": "5",
+   "env": [
+    "ruins",
+    "urban"
+   ],
+   "blurb": "A stitched-together giant of corpse-parts driven by a bound spirit and bottled lightning.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "flesh-golem-galvanic-core",
+     "q": 1,
+     "dc": 13,
+     "skill": "Arcana",
+     "note": "Still charged: fail and take 2d6 lightning damage."
+    },
+    {
+     "m": "flesh-golem-stitched-hide",
+     "q": 1,
+     "dc": 13,
+     "skill": "Survival",
+     "note": "Cut along the seams, never across them."
+    },
+    {
+     "m": "flesh-golem-mismatched-organs",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 13,
+     "skill": "Medicine"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "flying-sword",
+   "name": "Flying Sword",
+   "type": "construct",
+   "size": "Small",
+   "cr": "1/4",
+   "env": [
+    "ruins",
+    "urban"
+   ],
+   "blurb": "A longsword animated to dance through the air and guard its master's halls.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "flying-sword-blade",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation",
+     "note": "Knocked-apart swords are often bent; roll to see if the blade is salvageable."
+    },
+    {
+     "m": "flying-sword-hover-rune",
+     "q": 1,
+     "dc": 10,
+     "skill": "Arcana"
+    }
+   ],
+   "aka": [
+    "Animated Flying Sword"
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "homunculus",
+   "name": "Homunculus",
+   "type": "construct",
+   "size": "Tiny",
+   "cr": "0",
+   "env": [
+    "urban",
+    "ruins"
+   ],
+   "blurb": "A tiny winged servant grown from clay, ash and a wizard's blood, bound telepathically to its maker.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "homunculus-blood-drop",
+     "q": 1,
+     "dc": 10,
+     "skill": "Medicine",
+     "note": "Killing a homunculus alerts its creator, who feels the link break."
+    },
+    {
+     "m": "homunculus-venom",
+     "q": 1,
+     "dc": 10,
+     "skill": "Medicine",
+     "note": "Prick yourself (fail by 5+) and make a Con save or fall unconscious for 1 hour."
+    },
+    {
+     "m": "homunculus-wing",
+     "q": 2,
+     "dc": 10,
+     "skill": "Survival"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "iron-golem",
+   "name": "Iron Golem",
+   "type": "construct",
+   "size": "Large",
+   "cr": "16",
+   "env": [
+    "ruins",
+    "urban"
+   ],
+   "blurb": "A colossal iron guardian that breathes poison and heals in fire.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "iron-golem-core",
+     "q": 1,
+     "dc": 19,
+     "skill": "Arcana",
+     "note": "Buried behind the chest plates; cutting through takes 8 hours with smith's tools."
+    },
+    {
+     "m": "iron-golem-vent-slag",
+     "q": 1,
+     "dice": "1d3",
+     "dc": 19,
+     "skill": "Nature",
+     "note": "Opening the vent releases a last puff of poison (DC 15 Con save or 4d8 poison)."
+    },
+    {
+     "m": "iron-golem-plating",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 19,
+     "skill": "Investigation",
+     "note": "Needs a forge on site or heavy transport; each plate weighs 100 lb."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "rug-of-smothering",
+   "name": "Rug of Smothering",
+   "type": "construct",
+   "size": "Large",
+   "cr": "2",
+   "env": [
+    "ruins",
+    "urban"
+   ],
+   "blurb": "A fine carpet that lies in wait, then wraps and suffocates intruders.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "rug-of-smothering-fibres",
+     "q": 1,
+     "dice": "2d4",
+     "dc": 10,
+     "skill": "Investigation",
+     "note": "Unpick the intact portion; slashed sections lose their grip."
+    },
+    {
+     "m": "rug-of-smothering-animus",
+     "q": 1,
+     "dc": 10,
+     "skill": "Arcana"
+    }
+   ],
+   "aka": [
+    "Animated Rug of Smothering"
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "shield-guardian",
+   "name": "Shield Guardian",
+   "type": "construct",
+   "size": "Large",
+   "cr": "7",
+   "env": [
+    "ruins",
+    "urban"
+   ],
+   "blurb": "A bodyguard construct bound to an amulet; it shields its master and can store a spell.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "shield-guardian-amulet-shard",
+     "q": 1,
+     "dice": "1d2",
+     "dc": 16,
+     "skill": "Arcana",
+     "note": "Only if the control amulet is captured or broken; the shard is taken from it, not the body."
+    },
+    {
+     "m": "shield-guardian-core",
+     "q": 1,
+     "dc": 16,
+     "skill": "Arcana"
+    },
+    {
+     "m": "shield-guardian-spell-cavity",
+     "q": 1,
+     "dc": 16,
+     "skill": "Investigation",
+     "note": "If a spell is still stored, it may trigger when the cavity is cut free."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "stone-golem",
+   "name": "Stone Golem",
+   "type": "construct",
+   "size": "Large",
+   "cr": "10",
+   "env": [
+    "ruins",
+    "mountain",
+    "urban"
+   ],
+   "blurb": "A massive carved guardian that can make intruders slow and sluggish.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "stone-golem-core",
+     "q": 1,
+     "dc": 16,
+     "skill": "Arcana",
+     "note": "Requires masons' tools; 4 hours of chiselling to reach the core."
+    },
+    {
+     "m": "stone-golem-lethargy-stone",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 16,
+     "skill": "Nature",
+     "note": "Only the stones around the carved eyes carry the slowing power."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "black-pudding",
+   "name": "Black Pudding",
+   "type": "ooze",
+   "size": "Large",
+   "cr": "4",
+   "env": [
+    "underdark",
+    "ruins"
+   ],
+   "blurb": "A heaving mass of black acid that splits in two when cut and dissolves weapons that strike it.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "black-pudding-acid",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 13,
+     "skill": "Nature",
+     "note": "Only glass, stone or crystal vials hold it; metal tools dissolve (lose any metal implement on a fail)."
+    },
+    {
+     "m": "black-pudding-split-jelly",
+     "q": 1,
+     "dc": 13,
+     "skill": "Nature",
+     "note": "Must be cut while the ooze still quivers."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "gelatinous-cube",
+   "name": "Gelatinous Cube",
+   "type": "ooze",
+   "size": "Large",
+   "cr": "2",
+   "env": [
+    "underdark",
+    "ruins"
+   ],
+   "blurb": "A nearly invisible dungeon-cleaning cube that engulfs everything it rolls over.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "gelatinous-cube-gel",
+     "q": 1,
+     "dice": "2d4",
+     "dc": 10,
+     "skill": "Nature",
+     "note": "Gloves required; bare skin takes 1d6 acid per minute of contact."
+    },
+    {
+     "m": "gelatinous-cube-nucleus",
+     "q": 1,
+     "dc": 10,
+     "skill": "Medicine"
+    },
+    {
+     "m": "gelatinous-cube-undigested-hoard",
+     "q": 1,
+     "dice": "1d6",
+     "dc": 8,
+     "skill": "Investigation",
+     "note": "Roll on your GM's treasure table; organics are usually half-digested."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "gray-ooze",
+   "name": "Gray Ooze",
+   "type": "ooze",
+   "size": "Medium",
+   "cr": "1/2",
+   "env": [
+    "underdark",
+    "ruins",
+    "swamp"
+   ],
+   "blurb": "A puddle of slime that looks like wet stone and eats metal.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "gray-ooze-slime",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 10,
+     "skill": "Nature",
+     "note": "Metal tools corrode; use wood or bone scrapers."
+    },
+    {
+     "m": "gray-ooze-corrosion-salt",
+     "q": 1,
+     "dc": 10,
+     "skill": "Nature",
+     "note": "Only forms if you let a sample dry in the sun for a day."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "ochre-jelly",
+   "name": "Ochre Jelly",
+   "type": "ooze",
+   "size": "Large",
+   "cr": "2",
+   "env": [
+    "underdark",
+    "ruins"
+   ],
+   "blurb": "A yellow, acidic blob that splits when struck with lightning or blades.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "ochre-jelly-acid",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 10,
+     "skill": "Nature"
+    },
+    {
+     "m": "ochre-jelly-budding-mass",
+     "q": 1,
+     "dc": 10,
+     "skill": "Nature",
+     "note": "Must be cut while it still quivers."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "awakened-shrub",
+   "name": "Awakened Shrub",
+   "type": "plant",
+   "size": "Small",
+   "cr": "0",
+   "env": [
+    "forest",
+    "feywild",
+    "grassland"
+   ],
+   "blurb": "A bush granted awareness by druidic magic.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "awakened-shrub-twigs",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 10,
+     "skill": "Nature"
+    },
+    {
+     "m": "awakened-shrub-wakeful-leaf",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 10,
+     "skill": "Nature",
+     "note": "Pluck from living branches; leaves from a burned shrub are silent."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "awakened-tree",
+   "name": "Awakened Tree",
+   "type": "plant",
+   "size": "Huge",
+   "cr": "2",
+   "env": [
+    "forest",
+    "feywild"
+   ],
+   "blurb": "A tree granted speech and movement by druidic magic.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "awakened-tree-sap",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 10,
+     "skill": "Nature",
+     "note": "Tap it within a day of the tree's death."
+    },
+    {
+     "m": "awakened-tree-heartwood",
+     "q": 1,
+     "dc": 10,
+     "skill": "Nature",
+     "note": "Requires an axe and 2 hours of work."
+    },
+    {
+     "m": "awakened-tree-bark",
+     "q": 1,
+     "dice": "2d4",
+     "dc": 10,
+     "skill": "Nature"
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "shambling-mound",
+   "name": "Shambling Mound",
+   "type": "plant",
+   "size": "Large",
+   "cr": "5",
+   "env": [
+    "swamp",
+    "forest"
+   ],
+   "blurb": "A heap of rotting vegetation that engulfs prey and grows stronger when struck by lightning.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "shambling-mound-vines",
+     "q": 1,
+     "dice": "2d4",
+     "dc": 13,
+     "skill": "Nature",
+     "note": "Still carry charge: fail by 5+ and take 2d6 lightning."
+    },
+    {
+     "m": "shambling-mound-rot-heart",
+     "q": 1,
+     "dc": 13,
+     "skill": "Nature",
+     "note": "Dig through the engulfing muck to find it; smells horrendous."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "shrieker",
+   "name": "Shrieker",
+   "type": "plant",
+   "size": "Medium",
+   "cr": "0",
+   "env": [
+    "underdark",
+    "ruins"
+   ],
+   "blurb": "A giant mushroom that screams when light or movement disturbs it.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "shrieker-cap",
+     "q": 1,
+     "dc": 10,
+     "skill": "Nature",
+     "note": "Picking it sets off one final shriek — nearby creatures will come to investigate."
+    },
+    {
+     "m": "shrieker-spores",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 10,
+     "skill": "Nature"
+    }
+   ],
+   "aka": [
+    "Shrieker Fungus"
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "treant",
+   "name": "Treant",
+   "type": "plant",
+   "size": "Huge",
+   "cr": "9",
+   "env": [
+    "forest",
+    "feywild"
+   ],
+   "blurb": "An ancient guardian of the forest that can awaken trees to fight beside it.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "treant-heartwood",
+     "q": 1,
+     "dc": 18,
+     "skill": "Nature",
+     "note": "Harvesting heartwood from a treant draws the ire of the forest's guardians unless a druid performs a rite."
+    },
+    {
+     "m": "treant-sap",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 16,
+     "skill": "Nature"
+    },
+    {
+     "m": "treant-bark",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 16,
+     "skill": "Nature"
+    },
+    {
+     "m": "treant-essence",
+     "q": 1,
+     "dc": 16,
+     "skill": "Arcana",
+     "note": "A faint shimmer over the body marks it. Catch it in an Essence Vessel within a minute."
+    },
+    {
+     "m": "treant-seed-acorn",
+     "q": 1,
+     "dc": 16,
+     "skill": "Nature",
+     "note": "Only 1 in 4 treants carries a seed-acorn."
+    }
+   ],
+   "srd": "5.1"
+  },
+  {
+   "id": "violet-fungus",
+   "name": "Violet Fungus",
+   "type": "plant",
+   "size": "Medium",
+   "cr": "1/4",
+   "env": [
+    "underdark",
+    "ruins"
+   ],
+   "blurb": "A purple mushroom that lashes with rotting tendrils.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "violet-fungus-tendril",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 10,
+     "skill": "Nature",
+     "note": "Contact causes 1d4 necrotic damage without gloves."
+    },
+    {
+     "m": "violet-fungus-spores",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 10,
+     "skill": "Nature"
+    }
+   ],
+   "srd": "5.1"
+  }
+ ]
+}

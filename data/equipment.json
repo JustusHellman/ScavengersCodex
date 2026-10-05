@@ -1,0 +1,9565 @@
+{
+ "materials": [
+  {
+   "id": "horsehair",
+   "name": "Horsehair",
+   "tier": "mundane",
+   "tags": [
+    "beast",
+    "hair",
+    "thread"
+   ],
+   "desc": "Coarse, springy tail-hair sold by the hank. Bow-makers string fiddles with it and weavers use it to stiffen hats and brushes.",
+   "perish": "stable",
+   "value": 1,
+   "recipe": null
+  },
+  {
+   "id": "honey",
+   "name": "Honey",
+   "tier": "mundane",
+   "tags": [
+    "food",
+    "liquid",
+    "healing"
+   ],
+   "desc": "Thick amber honey that never spoils. Healers dress wounds with it; brewers turn it into mead.",
+   "perish": "stable",
+   "value": 0.06,
+   "recipe": null
+  },
+  {
+   "id": "grain",
+   "name": "Grain",
+   "tier": "mundane",
+   "tags": [
+    "seed",
+    "food"
+   ],
+   "desc": "A sack of barley or wheat. Food for people and horses, and the starting point for every still.",
+   "perish": "stable",
+   "value": 0.22,
+   "recipe": null
+  },
+  {
+   "id": "salt",
+   "name": "Cooking Salt",
+   "tier": "mundane",
+   "tags": [
+    "salt",
+    "food"
+   ],
+   "desc": "Coarse grey sea salt. Keeps meat, seasons stew and scours pots.",
+   "perish": "stable",
+   "value": 0.07,
+   "recipe": null
+  },
+  {
+   "id": "clay",
+   "name": "Clay (bulk)",
+   "tier": "mundane",
+   "tags": [
+    "earth",
+    "reagent"
+   ],
+   "desc": "Slick grey riverbank clay that holds a shape once fired. Used for moulds, jugs and crucibles.",
+   "perish": "stable",
+   "value": 0.05,
+   "recipe": null
+  },
+  {
+   "id": "fine-sand",
+   "name": "Fine White Sand",
+   "tier": "mundane",
+   "tags": [
+    "sand"
+   ],
+   "desc": "Pale, sifted sand, almost pure quartz. Glassmakers pay for it by the barrow.",
+   "perish": "stable",
+   "value": 0.05,
+   "recipe": null
+  },
+  {
+   "id": "limestone",
+   "name": "Limestone",
+   "tier": "mundane",
+   "tags": [
+    "stone"
+   ],
+   "desc": "Soft, chalky rock that crumbles white on the fingers. Burned for lime, carved for markers or cut into chalk sticks.",
+   "perish": "stable",
+   "value": 5,
+   "recipe": null
+  },
+  {
+   "id": "cut-stone",
+   "name": "Dressed Stone",
+   "tier": "mundane",
+   "tags": [
+    "stone",
+    "earth"
+   ],
+   "desc": "A squared block of good building stone, chisel marks still sharp.",
+   "perish": "stable",
+   "value": 1,
+   "recipe": null
+  },
+  {
+   "id": "tin-ore",
+   "name": "Tin Ore",
+   "tier": "mundane",
+   "tags": [
+    "ore",
+    "metal"
+   ],
+   "desc": "Dark, heavy pebbles of cassiterite. Worthless alone, priceless to a bronze-smith.",
+   "perish": "stable",
+   "value": 0.5,
+   "recipe": null
+  },
+  {
+   "id": "lead-ore",
+   "name": "Lead Ore",
+   "tier": "mundane",
+   "tags": [
+    "ore",
+    "metal"
+   ],
+   "desc": "Dull blue-grey galena that leaves grey smears on the skin. Soft, heavy and faintly toxic.",
+   "perish": "stable",
+   "value": 0.2,
+   "recipe": null
+  },
+  {
+   "id": "hemp-fiber",
+   "name": "Hemp Fibre",
+   "tier": "mundane",
+   "tags": [
+    "thread",
+    "herb"
+   ],
+   "desc": "Retted hemp stalks combed into long, tough, straw-coloured strands.",
+   "perish": "stable",
+   "value": 0.05,
+   "recipe": null
+  },
+  {
+   "id": "medicinal-herbs",
+   "name": "Medicinal Herbs",
+   "tier": "mundane",
+   "tags": [
+    "herb",
+    "healing"
+   ],
+   "desc": "A bundle of yarrow, comfrey and willow bark. Staunches bleeding, eases fever and fills every healer's satchel.",
+   "perish": "stable",
+   "value": 0.07,
+   "recipe": null
+  },
+  {
+   "id": "toxic-herbs",
+   "name": "Toxic Herbs",
+   "tier": "mundane",
+   "tags": [
+    "herb",
+    "poison"
+   ],
+   "desc": "Dried nightshade, hemlock and foxglove, wrapped in waxed cloth. Handled with gloves by those who know better.",
+   "perish": "stable",
+   "value": 5,
+   "recipe": null
+  },
+  {
+   "id": "fragrant-flowers",
+   "name": "Fragrant Flowers",
+   "tier": "mundane",
+   "tags": [
+    "flower",
+    "charm"
+   ],
+   "desc": "Rose petals, lavender and orange blossom, dried or fresh. Perfumers steep them by the basketful.",
+   "perish": "stable",
+   "value": 0.75,
+   "recipe": null
+  },
+  {
+   "id": "fine-hardwood",
+   "name": "Fine Heartwood",
+   "tier": "common",
+   "tags": [
+    "wood"
+   ],
+   "desc": "A billet cut from the dense heart of an old yew, ash or rowan — tight-grained, flawless and springy. The only wood a wandwright will touch.",
+   "perish": "stable",
+   "value": 4,
+   "recipe": null
+  },
+  {
+   "id": "rock-crystal",
+   "name": "Rock Crystal",
+   "tier": "common",
+   "tags": [
+    "crystal",
+    "stone"
+   ],
+   "desc": "A flawless lump of clear quartz, cold to the touch. Ground into lenses, cut into foci or polished into scrying spheres.",
+   "perish": "stable",
+   "value": 15,
+   "recipe": null
+  },
+  {
+   "id": "vinegar",
+   "name": "Vinegar",
+   "tier": "mundane",
+   "tags": [
+    "liquid",
+    "acid"
+   ],
+   "desc": "Sharp, sour wine gone deliberately bad. Pickles food, cleans wounds and etches metal.",
+   "perish": "stable",
+   "value": 0.05,
+   "recipe": {
+    "components": [
+     {
+      "m": "grain",
+      "q": 2,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "brewers-supplies"
+    ],
+    "station": "kitchen",
+    "dc": 8,
+    "time": "1 week",
+    "gp": 0,
+    "yields": 2,
+    "lore": "A mash is left open to the air until it sours past ale and into vinegar."
+   }
+  },
+  {
+   "id": "dye-red",
+   "name": "Madder Red Dye",
+   "tier": "mundane",
+   "tags": [
+    "reagent",
+    "liquid",
+    "fire"
+   ],
+   "desc": "Brick-red dye from madder root. Soldiers' coats and bridal veils alike.",
+   "perish": "stable",
+   "value": 0.22,
+   "recipe": null
+  },
+  {
+   "id": "dye-blue",
+   "name": "Woad Blue Dye",
+   "tier": "mundane",
+   "tags": [
+    "reagent",
+    "liquid",
+    "water"
+   ],
+   "desc": "Foul-smelling vats of fermented woad that turn cloth a deep, lasting blue.",
+   "perish": "stable",
+   "value": 2,
+   "recipe": null
+  },
+  {
+   "id": "dye-black",
+   "name": "Oak-Gall Black Dye",
+   "tier": "mundane",
+   "tags": [
+    "reagent",
+    "liquid",
+    "shadow"
+   ],
+   "desc": "An iron-and-gall black that fades to a sober charcoal. Favoured by clerks, mourners and thieves.",
+   "perish": "stable",
+   "value": 4,
+   "recipe": null
+  },
+  {
+   "id": "dye-yellow",
+   "name": "Weld Yellow Dye",
+   "tier": "mundane",
+   "tags": [
+    "reagent",
+    "liquid",
+    "light"
+   ],
+   "desc": "A bright, sunny dye steeped from flowers.",
+   "perish": "stable",
+   "value": 0.22,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "flower"
+      ],
+      "q": 2,
+      "role": "base",
+      "label": "Any flowers"
+     },
+     {
+      "m": "vinegar",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "herbalism-kit"
+    ],
+    "station": "kitchen",
+    "dc": 8,
+    "time": "4 hours",
+    "gp": 0,
+    "yields": 2
+   }
+  },
+  {
+   "id": "dye-green",
+   "name": "Forest Green Dye",
+   "tier": "mundane",
+   "tags": [
+    "reagent",
+    "liquid",
+    "primal"
+   ],
+   "desc": "A rich woodland green, the colour of hunters and druids.",
+   "perish": "stable",
+   "value": 5,
+   "recipe": {
+    "components": [
+     {
+      "m": "dye-blue",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "dye-yellow",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "none",
+    "dc": 8,
+    "time": "1 hour",
+    "gp": 0,
+    "yields": 2,
+    "lore": "Cloth is dipped first in woad, then in weld."
+   }
+  },
+  {
+   "id": "dye-purple",
+   "name": "Shell Purple Dye",
+   "tier": "common",
+   "tags": [
+    "reagent",
+    "liquid",
+    "charm"
+   ],
+   "desc": "The royal purple, milked drop by drop from crushed sea snails. A bolt dyed with it is a statement of rank.",
+   "perish": "stable",
+   "value": 7,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "shell"
+      ],
+      "q": 3,
+      "role": "base",
+      "label": "Any sea shells (murex snails)"
+     },
+     {
+      "m": "vinegar",
+      "q": 1,
+      "role": "binding"
+     },
+     {
+      "m": "salt",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 10,
+    "time": "1 day",
+    "gp": 0,
+    "lore": "Thousands of snails for a single vat — the stench of a dye-works carries for miles."
+   }
+  },
+  {
+   "id": "pigment",
+   "name": "Painter's Pigment",
+   "tier": "mundane",
+   "tags": [
+    "dust",
+    "reagent"
+   ],
+   "desc": "Ground ochre, malachite, soot and lapis bound in little pots of oil. For illumination, heraldry and portraiture.",
+   "perish": "stable",
+   "value": 0.22,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "stone"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any coloured stone or mineral"
+     },
+     {
+      "m": "lamp-oil",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "painters-supplies"
+    ],
+    "station": "workshop",
+    "dc": 8,
+    "time": "2 hours",
+    "gp": 0,
+    "yields": 2
+   }
+  },
+  {
+   "id": "tallow",
+   "name": "Tallow",
+   "tier": "mundane",
+   "tags": [
+    "fat",
+    "wax"
+   ],
+   "desc": "Rendered animal fat, white and greasy. Cheap candles, soap, and grease for boots and axles.",
+   "perish": "stable",
+   "value": 0.06,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "fat"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any animal fat"
+     }
+    ],
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "campfire",
+    "dc": 8,
+    "time": "2 hours",
+    "gp": 0,
+    "yields": 4
+   }
+  },
+  {
+   "id": "bone-glue",
+   "name": "Bone Glue",
+   "tier": "mundane",
+   "tags": [
+    "reagent"
+   ],
+   "desc": "Amber glue boiled from bones and hide scraps. Sets hard and holds a bow's laminations together.",
+   "perish": "stable",
+   "value": 0.06,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "bone"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any bones"
+     }
+    ],
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "campfire",
+    "dc": 8,
+    "time": "8 hours",
+    "gp": 0,
+    "yields": 3,
+    "lore": "Bones are simmered for a day until the pot holds a thick, sticky jelly."
+   }
+  },
+  {
+   "id": "pitch",
+   "name": "Pine Pitch",
+   "tier": "mundane",
+   "tags": [
+    "resin",
+    "fire"
+   ],
+   "desc": "Black, sticky resin cooked from pine. Waterproofs seams, seals barrels and makes torches burn.",
+   "perish": "stable",
+   "value": 0.05,
+   "recipe": {
+    "components": [
+     {
+      "m": "timber",
+      "q": 2,
+      "role": "base"
+     }
+    ],
+    "tools": [],
+    "station": "campfire",
+    "dc": 8,
+    "time": "4 hours",
+    "gp": 0,
+    "yields": 5,
+    "lore": "Resinous pine is baked in a covered pit until the pitch runs out."
+   }
+  },
+  {
+   "id": "wood-ash",
+   "name": "Wood Ash",
+   "tier": "mundane",
+   "tags": [
+    "ash"
+   ],
+   "desc": "Fine grey ash from a hardwood fire. Leached for lye or mixed into glaze.",
+   "perish": "stable",
+   "value": 0.06,
+   "recipe": {
+    "components": [
+     {
+      "m": "timber",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [],
+    "station": "campfire",
+    "dc": 8,
+    "time": "1 hour",
+    "gp": 0,
+    "yields": 5
+   }
+  },
+  {
+   "id": "lye",
+   "name": "Lye",
+   "tier": "mundane",
+   "tags": [
+    "reagent",
+    "acid"
+   ],
+   "desc": "A caustic liquor leached from ash. Eats skin, cuts grease, and is the heart of soap and glass.",
+   "perish": "stable",
+   "value": 0.05,
+   "recipe": {
+    "components": [
+     {
+      "m": "wood-ash",
+      "q": 3,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "none",
+    "dc": 8,
+    "time": "2 hours",
+    "gp": 0,
+    "lore": "Water is dripped slowly through a barrel of ash; the brown runoff is lye."
+   }
+  },
+  {
+   "id": "spirits",
+   "name": "Distilled Spirits",
+   "tier": "mundane",
+   "tags": [
+    "liquid",
+    "fire"
+   ],
+   "desc": "Clear, fiery liquor, strong enough to burn. Alchemists use it to draw out and carry volatile essences.",
+   "perish": "stable",
+   "value": 0.3,
+   "recipe": {
+    "components": [
+     {
+      "m": "grain",
+      "q": 5,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "brewers-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 8,
+    "time": "1 day",
+    "gp": 0,
+    "lore": "A fermented mash is boiled through a copper still, keeping only the heart of the run."
+   }
+  },
+  {
+   "id": "vitriol",
+   "name": "Oil of Vitriol",
+   "tier": "mundane",
+   "tags": [
+    "acid",
+    "reagent",
+    "liquid"
+   ],
+   "desc": "A heavy, oily acid that chars wood and bites through cloth. Stored only in glass or wax-sealed clay.",
+   "perish": "stable",
+   "value": 4,
+   "recipe": {
+    "components": [
+     {
+      "m": "sulfur",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "saltpeter",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 10,
+    "time": "4 hours",
+    "gp": 0,
+    "lore": "Sulfur is burned with saltpeter over water; the fumes condense into acid."
+   }
+  },
+  {
+   "id": "raw-glass",
+   "name": "Glass Frit",
+   "tier": "mundane",
+   "tags": [
+    "glass"
+   ],
+   "desc": "Lumps of clear green-tinted glass, ready to be remelted and blown or ground.",
+   "perish": "stable",
+   "value": 1,
+   "recipe": {
+    "components": [
+     {
+      "m": "fine-sand",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "lye",
+      "q": 1,
+      "role": "binding"
+     },
+     {
+      "m": "coal",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "glassblowers-tools"
+    ],
+    "station": "glassworks",
+    "dc": 8,
+    "time": "4 hours",
+    "gp": 0,
+    "yields": 2
+   }
+  },
+  {
+   "id": "hemp-cord",
+   "name": "Hemp Cord",
+   "tier": "mundane",
+   "tags": [
+    "thread"
+   ],
+   "desc": "Tough, twisted cord. The basic stuff of rope, nets and sacks.",
+   "perish": "stable",
+   "value": 0.05,
+   "recipe": {
+    "components": [
+     {
+      "m": "hemp-fiber",
+      "q": 3,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "none",
+    "dc": 8,
+    "time": "2 hours",
+    "gp": 0
+   }
+  },
+  {
+   "id": "canvas",
+   "name": "Canvas",
+   "tier": "mundane",
+   "tags": [
+    "cloth"
+   ],
+   "desc": "Heavy hemp canvas, oiled or waxed against the rain. Tents, sails and packs.",
+   "perish": "stable",
+   "value": 0.45,
+   "recipe": {
+    "components": [
+     {
+      "m": "hemp-cord",
+      "q": 4,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "loom",
+    "dc": 8,
+    "time": "4 hours",
+    "gp": 0
+   }
+  },
+  {
+   "id": "silk-thread",
+   "name": "Silk Thread",
+   "tier": "common",
+   "tags": [
+    "thread",
+    "silk"
+   ],
+   "desc": "Lustrous, strong, almost weightless thread. Holds embroidery and enchantment alike.",
+   "perish": "stable",
+   "value": 1,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "silk"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any silk (cocoons, spider silk or silk cloth)"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "none",
+    "dc": 8,
+    "time": "4 hours",
+    "gp": 0,
+    "yields": 3,
+    "lore": "Silk from any source — silkworm, giant spider, or unpicked cloth — is reeled and twisted. Monster silk keeps its tags only if left unspun."
+   }
+  },
+  {
+   "id": "bowstring",
+   "name": "Bowstring",
+   "tier": "mundane",
+   "tags": [
+    "thread",
+    "sinew"
+   ],
+   "desc": "A waxed, loop-ended string of twisted linen or sinew. Every archer carries a spare.",
+   "perish": "stable",
+   "value": 2,
+   "recipe": {
+    "components": [
+     {
+      "m": "thread",
+      "q": 3,
+      "role": "base"
+     },
+     {
+      "m": "beeswax",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "none",
+    "dc": 8,
+    "time": "1 hour",
+    "gp": 0,
+    "yields": 2
+   }
+  },
+  {
+   "id": "instrument-strings",
+   "name": "Gut Strings",
+   "tier": "mundane",
+   "tags": [
+    "sinew",
+    "thread"
+   ],
+   "desc": "A coil of dried, twisted gut strings for lutes, viols and harps. Sings bright when new.",
+   "perish": "stable",
+   "value": 0.6,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "sinew"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any sinew or gut"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "none",
+    "dc": 8,
+    "time": "4 hours",
+    "gp": 0,
+    "yields": 4
+   }
+  },
+  {
+   "id": "feather-fletching",
+   "name": "Fletching Feathers",
+   "tier": "mundane",
+   "tags": [
+    "feather"
+   ],
+   "desc": "Trimmed, matched flight feathers ready to glue to arrow shafts.",
+   "perish": "stable",
+   "value": 0.05,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "feather"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any feathers"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "none",
+    "dc": 8,
+    "time": "1 hour",
+    "gp": 0,
+    "yields": 5
+   }
+  },
+  {
+   "id": "leather-strips",
+   "name": "Leather Strips",
+   "tier": "mundane",
+   "tags": [
+    "leather"
+   ],
+   "desc": "Thongs and strapping cut from cured leather. For grips, lacing, buckles and bindings.",
+   "perish": "stable",
+   "value": 0.06,
+   "recipe": {
+    "components": [
+     {
+      "m": "cured-leather",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "none",
+    "dc": 8,
+    "time": "1 hour",
+    "gp": 0,
+    "yields": 10
+   }
+  },
+  {
+   "id": "hardened-leather",
+   "name": "Hardened Leather",
+   "tier": "mundane",
+   "tags": [
+    "leather",
+    "toughness"
+   ],
+   "desc": "Leather boiled in wax and moulded while hot; it dries stiff as horn. The stuff of breastplates for those who can't afford steel.",
+   "perish": "stable",
+   "value": 5,
+   "recipe": {
+    "components": [
+     {
+      "m": "cured-leather",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "beeswax",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "tannery",
+    "dc": 8,
+    "time": "8 hours",
+    "gp": 0
+   }
+  },
+  {
+   "id": "cured-fur",
+   "name": "Cured Fur",
+   "tier": "mundane",
+   "tags": [
+    "fur",
+    "leather",
+    "cold"
+   ],
+   "desc": "A tanned pelt with the fur still on, soft on one side and supple on the other. Warm, but any magic the beast had is gone.",
+   "perish": "stable",
+   "value": 1,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "fur"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any fur or pelt"
+     },
+     {
+      "m": "tanning-salts",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "tannery",
+    "dc": 8,
+    "time": "1 day",
+    "gp": 0,
+    "lore": "Like all tanning, curing a pelt strips its magic; use the raw pelt for enchanted work."
+   }
+  },
+  {
+   "id": "wooden-haft",
+   "name": "Wooden Haft",
+   "tier": "mundane",
+   "tags": [
+    "wood"
+   ],
+   "desc": "A shaped, sanded ash or hickory handle, ready for an axe-head, spear-point or hammer.",
+   "perish": "stable",
+   "value": 0.45,
+   "recipe": {
+    "components": [
+     {
+      "m": "timber",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 8,
+    "time": "1 hour",
+    "gp": 0,
+    "yields": 3
+   }
+  },
+  {
+   "id": "bow-stave",
+   "name": "Bow Stave",
+   "tier": "mundane",
+   "tags": [
+    "wood"
+   ],
+   "desc": "A split and seasoned length of yew or elm, heartwood on the belly and sapwood on the back.",
+   "perish": "stable",
+   "value": 2,
+   "recipe": {
+    "components": [
+     {
+      "m": "timber",
+      "q": 2,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 8,
+    "time": "1 week",
+    "gp": 0,
+    "lore": "Most of the time is simply drying; a green stave will crack at the first draw."
+   }
+  },
+  {
+   "id": "tin-ingot",
+   "name": "Tin Ingot",
+   "tier": "mundane",
+   "tags": [
+    "ingot",
+    "metal"
+   ],
+   "desc": "A soft, silvery bar that crackles when bent.",
+   "perish": "stable",
+   "value": 0.9,
+   "recipe": {
+    "components": [
+     {
+      "m": "tin-ore",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "coal",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 8,
+    "time": "2 hours",
+    "gp": 0
+   }
+  },
+  {
+   "id": "lead-ingot",
+   "name": "Lead Ingot",
+   "tier": "mundane",
+   "tags": [
+    "ingot",
+    "metal"
+   ],
+   "desc": "A dull, surprisingly heavy bar. Sling bullets, seals, pipe and solder.",
+   "perish": "stable",
+   "value": 0.45,
+   "recipe": {
+    "components": [
+     {
+      "m": "lead-ore",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "coal",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 8,
+    "time": "2 hours",
+    "gp": 0
+   }
+  },
+  {
+   "id": "bronze-ingot",
+   "name": "Bronze Ingot",
+   "tier": "mundane",
+   "tags": [
+    "ingot",
+    "metal",
+    "sound"
+   ],
+   "desc": "Warm golden bronze that rings like a bell when struck. Cast into horns, bells, censers and holy symbols.",
+   "perish": "stable",
+   "value": 1,
+   "recipe": {
+    "components": [
+     {
+      "m": "copper-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "tin-ingot",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "coal",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 8,
+    "time": "4 hours",
+    "gp": 0
+   }
+  },
+  {
+   "id": "chain-links",
+   "name": "Chain Links",
+   "tier": "mundane",
+   "tags": [
+    "metal"
+   ],
+   "desc": "A coil of small riveted iron rings, the building block of mail.",
+   "perish": "stable",
+   "value": 0.9,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "coal",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 8,
+    "time": "8 hours",
+    "gp": 0,
+    "lore": "Wire is drawn, wound round a mandrel, cut into rings and each one riveted shut."
+   }
+  },
+  {
+   "id": "steel-plates",
+   "name": "Steel Plates",
+   "tier": "mundane",
+   "tags": [
+    "metal",
+    "toughness"
+   ],
+   "desc": "Hammered and tempered steel plates, curved to fit a limb or torso.",
+   "perish": "stable",
+   "value": 5,
+   "recipe": {
+    "components": [
+     {
+      "m": "steel-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "coal",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "8 hours",
+    "gp": 0
+   }
+  },
+  {
+   "id": "copper-wire",
+   "name": "Copper Wire",
+   "tier": "mundane",
+   "tags": [
+    "metal",
+    "lightning"
+   ],
+   "desc": "A spool of fine drawn copper wire. Jewellers wrap settings with it; artificers swear it carries a spark.",
+   "perish": "stable",
+   "value": 0.5,
+   "recipe": {
+    "components": [
+     {
+      "m": "copper-ingot",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 8,
+    "time": "2 hours",
+    "gp": 0,
+    "yields": 3
+   }
+  },
+  {
+   "id": "silver-wire",
+   "name": "Silver Wire",
+   "tier": "common",
+   "tags": [
+    "metal",
+    "radiant"
+   ],
+   "desc": "Bright drawn silver wire for filigree, rings and circlets.",
+   "perish": "stable",
+   "value": 4,
+   "recipe": {
+    "components": [
+     {
+      "m": "silver-ingot",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 8,
+    "time": "4 hours",
+    "gp": 0,
+    "yields": 3
+   }
+  },
+  {
+   "id": "gold-wire",
+   "name": "Gold Wire",
+   "tier": "common",
+   "tags": [
+    "metal",
+    "radiant"
+   ],
+   "desc": "Soft, gleaming gold wire that bends without breaking — the finest jewellery starts here.",
+   "perish": "stable",
+   "value": 18,
+   "recipe": {
+    "components": [
+     {
+      "m": "gold-ingot",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 8,
+    "time": "4 hours",
+    "gp": 0,
+    "yields": 3
+   }
+  },
+  {
+   "id": "jewelers-solder",
+   "name": "Jeweller's Solder",
+   "tier": "mundane",
+   "tags": [
+    "metal"
+   ],
+   "desc": "Thin rods of low-melting tin-lead alloy for joining settings and clasps.",
+   "perish": "stable",
+   "value": 0.2,
+   "recipe": {
+    "components": [
+     {
+      "m": "tin-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "lead-ingot",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "forge",
+    "dc": 8,
+    "time": "1 hour",
+    "gp": 0,
+    "yields": 4
+   }
+  },
+  {
+   "id": "gold-leaf",
+   "name": "Gold Leaf",
+   "tier": "common",
+   "tags": [
+    "metal",
+    "radiant"
+   ],
+   "desc": "Gold beaten so thin it trembles in a breath. Gilds holy icons, book spines and the letters of spell scrolls.",
+   "perish": "stable",
+   "value": 2,
+   "recipe": {
+    "components": [
+     {
+      "m": "gold-ingot",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 8,
+    "time": "1 day",
+    "gp": 0,
+    "yields": 6,
+    "lore": "An ingot is beaten between sheets of vellum for a day until it covers a table."
+   }
+  },
+  {
+   "id": "silver-dust",
+   "name": "Powdered Silver",
+   "tier": "common",
+   "tags": [
+    "dust",
+    "metal",
+    "radiant"
+   ],
+   "desc": "Silver filed and ground to a glittering powder. Blessed into holy water, painted into wards, or fused onto blades to bite lycanthropes and fiends.",
+   "perish": "stable",
+   "value": 15,
+   "recipe": {
+    "components": [
+     {
+      "m": "silver-ingot",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 8,
+    "time": "4 hours",
+    "gp": 0,
+    "yields": 3
+   }
+  },
+  {
+   "id": "paper",
+   "name": "Rag Paper",
+   "tier": "mundane",
+   "tags": [
+    "reagent"
+   ],
+   "desc": "Thick, creamy sheets pressed from pulped linen rags. Cheaper than parchment, fine for playing cards and books.",
+   "perish": "stable",
+   "value": 0.2,
+   "recipe": {
+    "components": [
+     {
+      "m": "linen-cloth",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies"
+    ],
+    "station": "workshop",
+    "dc": 8,
+    "time": "4 hours",
+    "gp": 0,
+    "yields": 10
+   }
+  },
+  {
+   "id": "potent-arcane-ink",
+   "name": "Potent Arcane Ink",
+   "tier": "uncommon",
+   "tags": [
+    "ink",
+    "arcane"
+   ],
+   "desc": "Ink that shimmers like oil on water and refuses to dry until it is shaped into a sigil. Required to scribe spell scrolls of 2nd and 3rd level.",
+   "perish": "stable",
+   "value": 18,
+   "recipe": {
+    "components": [
+     {
+      "m": "common-ink",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "any": [
+       "essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Any essence of uncommon or better",
+      "min": "uncommon"
+     },
+     {
+      "m": "quicksilver",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies",
+     "calligraphers-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "1 day",
+    "gp": 20,
+    "lore": "A captured essence is bled into ink through a thread of quicksilver, which keeps the magic from boiling off."
+   }
+  },
+  {
+   "id": "greater-arcane-ink",
+   "name": "Greater Arcane Ink",
+   "tier": "rare",
+   "tags": [
+    "ink",
+    "arcane"
+   ],
+   "desc": "Heavy, mercury-bright ink that hums faintly in its bottle. Required to scribe spell scrolls of 4th and 5th level.",
+   "perish": "stable",
+   "value": 180,
+   "recipe": {
+    "components": [
+     {
+      "m": "common-ink",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "any": [
+       "essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Any essence of rare or better",
+      "min": "rare"
+     },
+     {
+      "m": "quicksilver",
+      "q": 2,
+      "role": "binding"
+     },
+     {
+      "m": "silver-dust",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies",
+     "calligraphers-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 18,
+    "time": "3 days",
+    "gp": 150,
+    "lore": "Powdered silver steadies the ink so a longer, stronger formula doesn't smear itself apart mid-casting."
+   }
+  },
+  {
+   "id": "sublime-arcane-ink",
+   "name": "Sublime Arcane Ink",
+   "tier": "very-rare",
+   "tags": [
+    "ink",
+    "arcane"
+   ],
+   "desc": "An ink that seems to have depth, like looking into a well at night. Required to scribe spell scrolls of 6th to 8th level.",
+   "perish": "stable",
+   "value": 1200,
+   "recipe": {
+    "components": [
+     {
+      "m": "common-ink",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "any": [
+       "essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Any essence of very rare or better",
+      "min": "very-rare"
+     },
+     {
+      "m": "quicksilver",
+      "q": 3,
+      "role": "binding"
+     },
+     {
+      "m": "gold-leaf",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "diamond-dust",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies",
+     "calligraphers-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 21,
+    "time": "7 days",
+    "gp": 1000,
+    "lore": "Gold and diamond anchor a very-rare essence; without them the ink eats through the vellum."
+   }
+  },
+  {
+   "id": "primordial-arcane-ink",
+   "name": "Primordial Arcane Ink",
+   "tier": "legendary",
+   "tags": [
+    "ink",
+    "arcane"
+   ],
+   "desc": "Ink that moves when unobserved and shows every colour at once. Only it can hold a 9th-level spell on a scroll.",
+   "perish": "stable",
+   "value": 8000,
+   "recipe": {
+    "components": [
+     {
+      "m": "common-ink",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "any": [
+       "essence"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Any legendary essence",
+      "min": "legendary"
+     },
+     {
+      "m": "quicksilver",
+      "q": 4,
+      "role": "binding"
+     },
+     {
+      "m": "diamond-dust",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "gold-leaf",
+      "q": 3,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies",
+     "calligraphers-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 25,
+    "time": "15 days",
+    "gp": 5000,
+    "lore": "The distillation must run unbroken for fifteen days; a single lapse and the essence tears free."
+   }
+  }
+ ],
+ "items": [
+  {
+   "id": "club",
+   "name": "Club",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon",
+    "bludgeon"
+   ],
+   "effect": "Simple melee. 1d4 bludgeoning, light.",
+   "value": 0.1,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "wood"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any timber"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1,
+    "lore": "A knotted branch, trimmed and weighted at the business end."
+   }
+  },
+  {
+   "id": "dagger",
+   "name": "Dagger",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon",
+    "dagger"
+   ],
+   "effect": "Simple melee. 1d4 piercing; finesse, light, thrown (20/60).",
+   "value": 2,
+   "recipe": {
+    "components": [
+     {
+      "m": "steel-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "leather-strips",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "5 hours",
+    "gp": 0,
+    "level": 1,
+    "yields": 3,
+    "lore": "One steel bar is drawn into three slim blades."
+   }
+  },
+  {
+   "id": "greatclub",
+   "name": "Greatclub",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon",
+    "bludgeon"
+   ],
+   "effect": "Simple melee. 1d8 bludgeoning, two-handed.",
+   "value": 0.2,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "wood"
+      ],
+      "q": 2,
+      "role": "base",
+      "label": "Any timber"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "handaxe",
+   "name": "Handaxe",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon",
+    "axe"
+   ],
+   "effect": "Simple melee. 1d6 slashing; light, thrown (20/60).",
+   "value": 5,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "wooden-haft",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "woodcarvers-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "4 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "javelin",
+   "name": "Javelin",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon",
+    "spear"
+   ],
+   "effect": "Simple melee. 1d6 piercing; thrown (30/120).",
+   "value": 0.5,
+   "recipe": {
+    "components": [
+     {
+      "m": "wooden-haft",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "woodcarvers-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0,
+    "level": 1,
+    "yields": 5,
+    "lore": "A bundle of ash shafts tipped with iron from a single bar."
+   }
+  },
+  {
+   "id": "light-hammer",
+   "name": "Light Hammer",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon",
+    "hammer",
+    "bludgeon"
+   ],
+   "effect": "Simple melee. 1d4 bludgeoning; light, thrown (20/60).",
+   "value": 2,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "wooden-haft",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "3 hours",
+    "gp": 0,
+    "level": 1,
+    "yields": 2
+   }
+  },
+  {
+   "id": "mace",
+   "name": "Mace",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon",
+    "bludgeon"
+   ],
+   "effect": "Simple melee. 1d6 bludgeoning.",
+   "value": 5,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "wooden-haft",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "leather-strips",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "4 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "quarterstaff",
+   "name": "Quarterstaff",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon",
+    "bludgeon",
+    "staff"
+   ],
+   "effect": "Simple melee. 1d6 bludgeoning, versatile (1d8). Doubles as a druidic or arcane focus if the wielder wishes.",
+   "value": 0.2,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "wood"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any timber"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1,
+    "lore": "A straight sapling, peeled, fire-hardened and shod at both ends."
+   }
+  },
+  {
+   "id": "sickle",
+   "name": "Sickle",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon"
+   ],
+   "effect": "Simple melee. 1d4 slashing, light.",
+   "value": 1,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "wooden-haft",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0,
+    "level": 1,
+    "yields": 2
+   }
+  },
+  {
+   "id": "spear",
+   "name": "Spear",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon",
+    "spear",
+    "polearm"
+   ],
+   "effect": "Simple melee. 1d6 piercing; thrown (20/60), versatile (1d8).",
+   "value": 1,
+   "recipe": {
+    "components": [
+     {
+      "m": "wooden-haft",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "woodcarvers-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0,
+    "level": 1,
+    "yields": 2
+   }
+  },
+  {
+   "id": "light-crossbow",
+   "name": "Light Crossbow",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon",
+    "crossbow"
+   ],
+   "effect": "Simple ranged. 1d8 piercing; ammunition (80/320), loading, two-handed.",
+   "value": 25,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "wood"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any timber"
+     },
+     {
+      "m": "steel-ingot",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "bowstring",
+      "q": 1,
+      "role": "binding"
+     },
+     {
+      "m": "bone-glue",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "tinkers-tools"
+    ],
+    "station": "workshop",
+    "dc": 10,
+    "time": "2 days",
+    "gp": 2.6,
+    "level": 1,
+    "lore": "A steel prod lashed to a carved stock, with a simple nut-and-trigger lock."
+   }
+  },
+  {
+   "id": "dart",
+   "name": "Dart",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon"
+   ],
+   "effect": "Simple ranged. 1d4 piercing; finesse, thrown (20/60).",
+   "value": 0.05,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "feather-fletching",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1,
+    "yields": 20
+   }
+  },
+  {
+   "id": "shortbow",
+   "name": "Shortbow",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon",
+    "bow"
+   ],
+   "effect": "Simple ranged. 1d6 piercing; ammunition (80/320), two-handed.",
+   "value": 25,
+   "recipe": {
+    "components": [
+     {
+      "m": "bow-stave",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "bowstring",
+      "q": 1,
+      "role": "binding"
+     },
+     {
+      "m": "bone-glue",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "leather-strips",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 10,
+    "time": "2 days",
+    "gp": 5.4,
+    "level": 1
+   }
+  },
+  {
+   "id": "sling",
+   "name": "Sling",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon"
+   ],
+   "effect": "Simple ranged. 1d4 bludgeoning; ammunition (30/120).",
+   "value": 0.1,
+   "recipe": {
+    "components": [
+     {
+      "m": "leather-strips",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "hemp-cord",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "battleaxe",
+   "name": "Battleaxe",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon",
+    "axe"
+   ],
+   "effect": "Martial melee. 1d8 slashing, versatile (1d10).",
+   "value": 10,
+   "recipe": {
+    "components": [
+     {
+      "m": "steel-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "wooden-haft",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "leather-strips",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "woodcarvers-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "1 day",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "flail",
+   "name": "Flail",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon",
+    "bludgeon"
+   ],
+   "effect": "Martial melee. 1d8 bludgeoning.",
+   "value": 10,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "chain-links",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "wooden-haft",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "1 day",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "glaive",
+   "name": "Glaive",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon",
+    "polearm"
+   ],
+   "effect": "Martial melee. 1d10 slashing; heavy, reach, two-handed.",
+   "value": 20,
+   "recipe": {
+    "components": [
+     {
+      "m": "steel-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "wooden-haft",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "leather-strips",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "woodcarvers-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "2 days",
+    "gp": 1.1,
+    "level": 1
+   }
+  },
+  {
+   "id": "greataxe",
+   "name": "Greataxe",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon",
+    "axe"
+   ],
+   "effect": "Martial melee. 1d12 slashing; heavy, two-handed.",
+   "value": 30,
+   "recipe": {
+    "components": [
+     {
+      "m": "steel-ingot",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "wooden-haft",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "leather-strips",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "woodcarvers-tools"
+    ],
+    "station": "forge",
+    "dc": 11,
+    "time": "3 days",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "greatsword",
+   "name": "Greatsword",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon",
+    "sword"
+   ],
+   "effect": "Martial melee. 2d6 slashing; heavy, two-handed.",
+   "value": 50,
+   "recipe": {
+    "components": [
+     {
+      "m": "steel-ingot",
+      "q": 3,
+      "role": "base"
+     },
+     {
+      "m": "leather-strips",
+      "q": 2,
+      "role": "binding"
+     },
+     {
+      "m": "wooden-haft",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 12,
+    "time": "5 days",
+    "gp": 1.1,
+    "level": 1,
+    "lore": "The long blade must be quenched evenly along its whole length or it warps like a snake."
+   }
+  },
+  {
+   "id": "halberd",
+   "name": "Halberd",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon",
+    "polearm",
+    "axe"
+   ],
+   "effect": "Martial melee. 1d10 slashing; heavy, reach, two-handed.",
+   "value": 20,
+   "recipe": {
+    "components": [
+     {
+      "m": "steel-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "wooden-haft",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "woodcarvers-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "2 days",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "lance",
+   "name": "Lance",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon",
+    "spear",
+    "polearm"
+   ],
+   "effect": "Martial melee. 1d12 piercing; reach, disadvantage within 5 ft, two-handed unless mounted.",
+   "value": 10,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "wood"
+      ],
+      "q": 2,
+      "role": "base",
+      "label": "Any timber"
+     },
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "leather-strips",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "smiths-tools"
+    ],
+    "station": "workshop",
+    "dc": 10,
+    "time": "1 day",
+    "gp": 1.1,
+    "level": 1
+   }
+  },
+  {
+   "id": "longsword",
+   "name": "Longsword",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon",
+    "sword"
+   ],
+   "effect": "Martial melee. 1d8 slashing, versatile (1d10).",
+   "value": 15,
+   "recipe": {
+    "components": [
+     {
+      "m": "steel-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "leather-strips",
+      "q": 1,
+      "role": "binding"
+     },
+     {
+      "m": "wooden-haft",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 11,
+    "time": "2 days",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "maul",
+   "name": "Maul",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon",
+    "hammer",
+    "bludgeon"
+   ],
+   "effect": "Martial melee. 2d6 bludgeoning; heavy, two-handed.",
+   "value": 10,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "wooden-haft",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "woodcarvers-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "1 day",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "morningstar",
+   "name": "Morningstar",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon",
+    "bludgeon"
+   ],
+   "effect": "Martial melee. 1d8 piercing.",
+   "value": 15,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "steel-ingot",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "wooden-haft",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "2 days",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "pike",
+   "name": "Pike",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon",
+    "polearm",
+    "spear"
+   ],
+   "effect": "Martial melee. 1d10 piercing; heavy, reach, two-handed.",
+   "value": 5,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "wood"
+      ],
+      "q": 2,
+      "role": "base",
+      "label": "Any timber"
+     },
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "woodcarvers-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "4 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "rapier",
+   "name": "Rapier",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon",
+    "sword"
+   ],
+   "effect": "Martial melee. 1d8 piercing, finesse.",
+   "value": 25,
+   "recipe": {
+    "components": [
+     {
+      "m": "steel-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "leather-strips",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 12,
+    "time": "2 days",
+    "gp": 1.1,
+    "level": 1,
+    "lore": "The swept guard is the hard part — a cage of bent iron bars riveted around the grip."
+   }
+  },
+  {
+   "id": "scimitar",
+   "name": "Scimitar",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon",
+    "sword"
+   ],
+   "effect": "Martial melee. 1d6 slashing; finesse, light.",
+   "value": 25,
+   "recipe": {
+    "components": [
+     {
+      "m": "steel-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "leather-strips",
+      "q": 1,
+      "role": "binding"
+     },
+     {
+      "m": "wooden-haft",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 11,
+    "time": "2 days",
+    "gp": 2.9,
+    "level": 1
+   }
+  },
+  {
+   "id": "shortsword",
+   "name": "Shortsword",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon",
+    "sword"
+   ],
+   "effect": "Martial melee. 1d6 piercing; finesse, light.",
+   "value": 10,
+   "recipe": {
+    "components": [
+     {
+      "m": "steel-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "leather-strips",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "1 day",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "trident",
+   "name": "Trident",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon",
+    "spear",
+    "polearm"
+   ],
+   "effect": "Martial melee. 1d6 piercing; thrown (20/60), versatile (1d8).",
+   "value": 5,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "wooden-haft",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "4 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "war-pick",
+   "name": "War Pick",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon",
+    "hammer"
+   ],
+   "effect": "Martial melee. 1d8 piercing.",
+   "value": 5,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "wooden-haft",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "4 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "warhammer",
+   "name": "Warhammer",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon",
+    "hammer",
+    "bludgeon"
+   ],
+   "effect": "Martial melee. 1d8 bludgeoning, versatile (1d10).",
+   "value": 15,
+   "recipe": {
+    "components": [
+     {
+      "m": "steel-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "wooden-haft",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "leather-strips",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "2 days",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "whip",
+   "name": "Whip",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon"
+   ],
+   "effect": "Martial melee. 1d4 slashing; finesse, reach.",
+   "value": 2,
+   "recipe": {
+    "components": [
+     {
+      "m": "leather-strips",
+      "q": 4,
+      "role": "base"
+     },
+     {
+      "m": "wooden-haft",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0,
+    "level": 1,
+    "lore": "Thongs are plaited tightly over a short wooden core, tapering to a knotted cracker."
+   }
+  },
+  {
+   "id": "blowgun",
+   "name": "Blowgun",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon"
+   ],
+   "effect": "Martial ranged. 1 piercing; ammunition (25/100), loading.",
+   "value": 10,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "wood"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any timber"
+     },
+     {
+      "m": "beeswax",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 10,
+    "time": "1 day",
+    "gp": 3.1,
+    "level": 1,
+    "lore": "A long cane or bored rod, its bore waxed smooth."
+   }
+  },
+  {
+   "id": "hand-crossbow",
+   "name": "Hand Crossbow",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon",
+    "crossbow"
+   ],
+   "effect": "Martial ranged. 1d6 piercing; ammunition (30/120), light, loading.",
+   "value": 75,
+   "recipe": {
+    "components": [
+     {
+      "m": "steel-ingot",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "fine-hardwood",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "bowstring",
+      "q": 1,
+      "role": "binding"
+     },
+     {
+      "m": "bone-glue",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "tinkers-tools",
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 13,
+    "time": "8 days",
+    "gp": 9.3,
+    "level": 1,
+    "lore": "A tiny steel prod and a trigger lock no bigger than a thumbnail; one slipped file and the whole thing jams."
+   }
+  },
+  {
+   "id": "heavy-crossbow",
+   "name": "Heavy Crossbow",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon",
+    "crossbow"
+   ],
+   "effect": "Martial ranged. 1d10 piercing; ammunition (100/400), heavy, loading, two-handed.",
+   "value": 50,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "wood"
+      ],
+      "q": 2,
+      "role": "base",
+      "label": "Any timber"
+     },
+     {
+      "m": "steel-ingot",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "bowstring",
+      "q": 1,
+      "role": "binding"
+     },
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "tinkers-tools",
+     "smiths-tools"
+    ],
+    "station": "workshop",
+    "dc": 11,
+    "time": "5 days",
+    "gp": 4.2,
+    "level": 1
+   }
+  },
+  {
+   "id": "longbow",
+   "name": "Longbow",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon",
+    "bow"
+   ],
+   "effect": "Martial ranged. 1d8 piercing; ammunition (150/600), heavy, two-handed.",
+   "value": 50,
+   "recipe": {
+    "components": [
+     {
+      "m": "bow-stave",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "bowstring",
+      "q": 1,
+      "role": "binding"
+     },
+     {
+      "m": "beeswax",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "leather-strips",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 12,
+    "time": "5 days",
+    "gp": 12,
+    "level": 1,
+    "lore": "A whole stave is tillered by hand, shaving a hair at a time until it bends in a perfect arc."
+   }
+  },
+  {
+   "id": "net",
+   "name": "Net",
+   "cat": "weapon",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "weapon"
+   ],
+   "effect": "Martial ranged. Thrown (5/15); a Large or smaller target hit is restrained until it breaks or cuts free.",
+   "value": 1,
+   "recipe": {
+    "components": [
+     {
+      "m": "hemp-cord",
+      "q": 3,
+      "role": "base"
+     },
+     {
+      "m": "lead-ingot",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1,
+    "lore": "Knotted hemp mesh with lead weights sewn into the rim."
+   }
+  },
+  {
+   "id": "arrows",
+   "name": "Arrows (20)",
+   "cat": "ammunition",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "ammunition"
+   ],
+   "effect": "Twenty arrows for a shortbow or longbow.",
+   "value": 1,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "wood"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any timber"
+     },
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "feather-fletching",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "bone-glue",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1,
+    "lore": "Shafts are split and planed, fletched with glued feathers, and tipped with heads forged from a single iron bar."
+   }
+  },
+  {
+   "id": "crossbow-bolts",
+   "name": "Crossbow Bolts (20)",
+   "cat": "ammunition",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "ammunition"
+   ],
+   "effect": "Twenty stubby bolts for any crossbow.",
+   "value": 1,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "wood"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any timber"
+     },
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "feather-fletching",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "bone-glue",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1,
+    "lore": "Shafts are split and planed, fletched with glued feathers, and tipped with heads forged from a single iron bar."
+   }
+  },
+  {
+   "id": "sling-bullets",
+   "name": "Sling Bullets (20)",
+   "cat": "ammunition",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "ammunition"
+   ],
+   "effect": "Twenty cast lead bullets for a sling.",
+   "value": 0.04,
+   "recipe": {
+    "components": [
+     {
+      "m": "lead-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "clay",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "campfire",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1,
+    "yields": 10,
+    "lore": "Lead is poured into a clay mould, twenty bullets at a time."
+   }
+  },
+  {
+   "id": "blowgun-needles",
+   "name": "Blowgun Needles (50)",
+   "cat": "ammunition",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "ammunition"
+   ],
+   "effect": "Fifty slim darts for a blowgun, each with a tuft of down to seal the bore.",
+   "value": 1,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "feather-fletching",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "tinkers-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1,
+    "yields": 2
+   }
+  },
+  {
+   "id": "padded-armor",
+   "name": "Padded Armor",
+   "cat": "armor",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "armor",
+    "light-armor"
+   ],
+   "effect": "Light armor. AC 11 + Dex; disadvantage on Stealth.",
+   "value": 5,
+   "recipe": {
+    "components": [
+     {
+      "m": "linen-cloth",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "wool-cloth",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "thread",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "loom",
+    "dc": 10,
+    "time": "4 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "leather-armor",
+   "name": "Leather Armor",
+   "cat": "armor",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "armor",
+    "light-armor"
+   ],
+   "effect": "Light armor. AC 11 + Dex.",
+   "value": 10,
+   "recipe": {
+    "components": [
+     {
+      "m": "hardened-leather",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "cured-leather",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "thread",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "tannery",
+    "dc": 10,
+    "time": "1 day",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "studded-leather-armor",
+   "name": "Studded Leather Armor",
+   "cat": "armor",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "armor",
+    "light-armor"
+   ],
+   "effect": "Light armor. AC 12 + Dex.",
+   "value": 45,
+   "recipe": {
+    "components": [
+     {
+      "m": "hardened-leather",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "cured-leather",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "iron-ingot",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "thread",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "smiths-tools"
+    ],
+    "station": "tannery",
+    "dc": 11,
+    "time": "4 days",
+    "gp": 4.9,
+    "level": 1
+   }
+  },
+  {
+   "id": "hide-armor",
+   "name": "Hide Armor",
+   "cat": "armor",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "armor",
+    "medium-armor"
+   ],
+   "effect": "Medium armor. AC 12 + Dex (max 2).",
+   "value": 10,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "hide"
+      ],
+      "q": 2,
+      "role": "base",
+      "label": "Any hide"
+     },
+     {
+      "any": [
+       "fur"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Any fur"
+     },
+     {
+      "m": "leather-strips",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "tannery",
+    "dc": 10,
+    "time": "1 day",
+    "gp": 2.9,
+    "level": 1,
+    "lore": "Thick hides and furs, layered and laced, barely tanned — crude but warm."
+   }
+  },
+  {
+   "id": "chain-shirt",
+   "name": "Chain Shirt",
+   "cat": "armor",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "armor",
+    "medium-armor"
+   ],
+   "effect": "Medium armor. AC 13 + Dex (max 2).",
+   "value": 50,
+   "recipe": {
+    "components": [
+     {
+      "m": "chain-links",
+      "q": 4,
+      "role": "base"
+     },
+     {
+      "m": "linen-cloth",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "leather-strips",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 11,
+    "time": "5 days",
+    "gp": 3.5,
+    "level": 1
+   }
+  },
+  {
+   "id": "scale-mail",
+   "name": "Scale Mail",
+   "cat": "armor",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "armor",
+    "medium-armor"
+   ],
+   "effect": "Medium armor. AC 14 + Dex (max 2); disadvantage on Stealth.",
+   "value": 50,
+   "recipe": {
+    "components": [
+     {
+      "m": "cured-leather",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "steel-ingot",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "leather-strips",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "forge",
+    "dc": 11,
+    "time": "5 days",
+    "gp": 2.3,
+    "level": 1,
+    "lore": "Hundreds of overlapping metal scales are laced to a leather coat like the skin of a fish."
+   }
+  },
+  {
+   "id": "breastplate",
+   "name": "Breastplate",
+   "cat": "armor",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "armor",
+    "medium-armor"
+   ],
+   "effect": "Medium armor. AC 14 + Dex (max 2).",
+   "value": 400,
+   "recipe": {
+    "components": [
+     {
+      "m": "steel-plates",
+      "q": 4,
+      "role": "base"
+     },
+     {
+      "m": "leather-strips",
+      "q": 2,
+      "role": "binding"
+     },
+     {
+      "m": "padded-armor",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 13,
+    "time": "40 days",
+    "gp": 96,
+    "level": 1
+   }
+  },
+  {
+   "id": "half-plate",
+   "name": "Half Plate",
+   "cat": "armor",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "armor",
+    "medium-armor"
+   ],
+   "effect": "Medium armor. AC 15 + Dex (max 2); disadvantage on Stealth.",
+   "value": 750,
+   "recipe": {
+    "components": [
+     {
+      "m": "steel-plates",
+      "q": 8,
+      "role": "base"
+     },
+     {
+      "m": "chain-links",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "leather-strips",
+      "q": 4,
+      "role": "binding"
+     },
+     {
+      "m": "padded-armor",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 13,
+    "time": "75 days",
+    "gp": 174,
+    "level": 1
+   }
+  },
+  {
+   "id": "ring-mail",
+   "name": "Ring Mail",
+   "cat": "armor",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "armor",
+    "heavy-armor"
+   ],
+   "effect": "Heavy armor. AC 14; disadvantage on Stealth.",
+   "value": 30,
+   "recipe": {
+    "components": [
+     {
+      "m": "cured-leather",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "iron-ingot",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "thread",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "3 days",
+    "gp": 1.8,
+    "level": 1
+   }
+  },
+  {
+   "id": "chain-mail",
+   "name": "Chain Mail",
+   "cat": "armor",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "armor",
+    "heavy-armor"
+   ],
+   "effect": "Heavy armor. AC 16; Str 13 required; disadvantage on Stealth.",
+   "value": 75,
+   "recipe": {
+    "components": [
+     {
+      "m": "chain-links",
+      "q": 6,
+      "role": "base"
+     },
+     {
+      "m": "padded-armor",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "leather-strips",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 12,
+    "time": "8 days",
+    "gp": 1.6,
+    "level": 1
+   }
+  },
+  {
+   "id": "splint-armor",
+   "name": "Splint Armor",
+   "cat": "armor",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "armor",
+    "heavy-armor"
+   ],
+   "effect": "Heavy armor. AC 17; Str 15 required; disadvantage on Stealth.",
+   "value": 200,
+   "recipe": {
+    "components": [
+     {
+      "m": "steel-plates",
+      "q": 4,
+      "role": "base"
+     },
+     {
+      "m": "chain-links",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "cured-leather",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "leather-strips",
+      "q": 4,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "forge",
+    "dc": 13,
+    "time": "20 days",
+    "gp": 24,
+    "level": 1
+   }
+  },
+  {
+   "id": "plate-armor",
+   "name": "Plate Armor",
+   "cat": "armor",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "armor",
+    "heavy-armor"
+   ],
+   "effect": "Heavy armor. AC 18; Str 15 required; disadvantage on Stealth.",
+   "value": 1500,
+   "recipe": {
+    "components": [
+     {
+      "m": "steel-plates",
+      "q": 20,
+      "role": "base"
+     },
+     {
+      "m": "chain-links",
+      "q": 4,
+      "role": "supporting"
+     },
+     {
+      "m": "leather-strips",
+      "q": 6,
+      "role": "binding"
+     },
+     {
+      "m": "padded-armor",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 15,
+    "time": "150 days",
+    "gp": 322,
+    "level": 1,
+    "lore": "Every plate is fitted to the wearer's own body; a suit made for someone else rubs and pinches."
+   }
+  },
+  {
+   "id": "shield",
+   "name": "Shield",
+   "cat": "armor",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "armor",
+    "shield"
+   ],
+   "effect": "+2 AC while carried in one hand.",
+   "value": 10,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "wood"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any timber"
+     },
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "leather-strips",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "carpenters-tools",
+     "smiths-tools"
+    ],
+    "station": "workshop",
+    "dc": 10,
+    "time": "1 day",
+    "gp": 0.9,
+    "level": 1
+   }
+  },
+  {
+   "id": "cloak",
+   "name": "Cloak",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "clothing"
+   ],
+   "effect": "A hooded, knee-length traveller's cloak. The classic base for magical cloaks.",
+   "value": 1,
+   "recipe": {
+    "components": [
+     {
+      "m": "wool-cloth",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "thread",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "loom",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "robe",
+   "name": "Robe",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "clothing"
+   ],
+   "effect": "A long, loose, belted robe of plain cloth, favoured by mages and monks.",
+   "value": 1,
+   "recipe": {
+    "components": [
+     {
+      "m": "linen-cloth",
+      "q": 3,
+      "role": "base"
+     },
+     {
+      "m": "thread",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "loom",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "hat",
+   "name": "Hat",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "clothing"
+   ],
+   "effect": "A broad-brimmed felt or straw hat.",
+   "value": 0.5,
+   "recipe": {
+    "components": [
+     {
+      "m": "wool-cloth",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "thread",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1,
+    "yields": 2
+   }
+  },
+  {
+   "id": "cap",
+   "name": "Cap",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "clothing"
+   ],
+   "effect": "A close-fitting knitted or cloth cap.",
+   "value": 0.2,
+   "recipe": {
+    "components": [
+     {
+      "m": "wool-cloth",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1,
+    "yields": 4
+   }
+  },
+  {
+   "id": "boots",
+   "name": "Boots",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "clothing"
+   ],
+   "effect": "Sturdy calf-high leather boots with thick, double-stitched soles.",
+   "value": 2,
+   "recipe": {
+    "components": [
+     {
+      "m": "cured-leather",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "thread",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "cobblers-tools"
+    ],
+    "station": "workshop",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "sandals",
+   "name": "Sandals",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "clothing"
+   ],
+   "effect": "Simple strapped leather sandals.",
+   "value": 0.2,
+   "recipe": {
+    "components": [
+     {
+      "m": "leather-strips",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "cobblers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "slippers",
+   "name": "Slippers",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "clothing"
+   ],
+   "effect": "Soft, silent cloth-and-leather slippers.",
+   "value": 0.5,
+   "recipe": {
+    "components": [
+     {
+      "m": "wool-cloth",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "leather-strips",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "cobblers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1,
+    "yields": 2
+   }
+  },
+  {
+   "id": "gloves",
+   "name": "Gloves",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "clothing"
+   ],
+   "effect": "A pair of supple leather gloves.",
+   "value": 1,
+   "recipe": {
+    "components": [
+     {
+      "m": "cured-leather",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "thread",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0,
+    "level": 1,
+    "yields": 2
+   }
+  },
+  {
+   "id": "gauntlets",
+   "name": "Gauntlets",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "clothing"
+   ],
+   "effect": "Heavy leather gloves backed with riveted iron plates.",
+   "value": 2,
+   "recipe": {
+    "components": [
+     {
+      "m": "cured-leather",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "thread",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "3 hours",
+    "gp": 0,
+    "level": 1,
+    "yields": 2
+   }
+  },
+  {
+   "id": "belt",
+   "name": "Belt",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "clothing"
+   ],
+   "effect": "A wide leather belt with an iron buckle.",
+   "value": 0.5,
+   "recipe": {
+    "components": [
+     {
+      "m": "leather-strips",
+      "q": 2,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "bracers",
+   "name": "Bracers",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "clothing"
+   ],
+   "effect": "A pair of stiff leather forearm guards.",
+   "value": 2,
+   "recipe": {
+    "components": [
+     {
+      "m": "hardened-leather",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "leather-strips",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "tannery",
+    "dc": 10,
+    "time": "3 hours",
+    "gp": 0,
+    "level": 1,
+    "yields": 2
+   }
+  },
+  {
+   "id": "helm",
+   "name": "Helm",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "clothing"
+   ],
+   "effect": "An open-faced iron helmet with a leather liner. (No AC bonus by itself.)",
+   "value": 5,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "leather-strips",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "4 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "clothes-common",
+   "name": "Common Clothes",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "clothing"
+   ],
+   "effect": "Plain shirt, trousers or skirt, and a smock.",
+   "value": 0.5,
+   "recipe": {
+    "components": [
+     {
+      "m": "linen-cloth",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "thread",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "clothes-travelers",
+   "name": "Traveler's Clothes",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "clothing"
+   ],
+   "effect": "Hard-wearing clothes cut for the road, with deep pockets and a wool overshirt.",
+   "value": 2,
+   "recipe": {
+    "components": [
+     {
+      "m": "wool-cloth",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "linen-cloth",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "thread",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "loom",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "clothes-fine",
+   "name": "Fine Clothes",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "clothing"
+   ],
+   "effect": "Tailored, dyed, embroidered clothes suitable for court.",
+   "value": 15,
+   "recipe": {
+    "components": [
+     {
+      "m": "silk-cloth",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "dye-purple",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silk-thread",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "loom",
+    "dc": 12,
+    "time": "2 days",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "costume",
+   "name": "Costume",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "clothing",
+    "illusion"
+   ],
+   "effect": "A convincing outfit for playing a role — a guard, a priest, a noble.",
+   "value": 5,
+   "recipe": {
+    "components": [
+     {
+      "m": "linen-cloth",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "dye-red",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "thread",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "loom",
+    "dc": 10,
+    "time": "4 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "ring-band",
+   "name": "Ring Band",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "jewelry",
+    "ring"
+   ],
+   "effect": "A plain, unadorned band of silver or gold — the blank from which every magic ring is made.",
+   "value": 5,
+   "recipe": {
+    "components": [
+     {
+      "oneOf": [
+       "silver-wire",
+       "gold-wire"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Silver or gold wire"
+     },
+     {
+      "m": "jewelers-solder",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 10,
+    "time": "4 hours",
+    "gp": 0.7,
+    "level": 1
+   }
+  },
+  {
+   "id": "amulet-setting",
+   "name": "Amulet Setting",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "jewelry"
+   ],
+   "effect": "An empty pendant mount on a fine chain, ready to cradle a gem or charm.",
+   "value": 5,
+   "recipe": {
+    "components": [
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "jewelers-solder",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 10,
+    "time": "4 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "periapt-blank",
+   "name": "Periapt Blank",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "jewelry"
+   ],
+   "effect": "A small hollow pendant with claws to hold a single stone against the wearer's chest.",
+   "value": 5,
+   "recipe": {
+    "components": [
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "jewelers-solder",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 10,
+    "time": "4 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "medallion",
+   "name": "Medallion",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "jewelry"
+   ],
+   "effect": "A heavy bronze disc on a chain, its face left blank for engraving.",
+   "value": 5,
+   "recipe": {
+    "components": [
+     {
+      "m": "bronze-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "chain-links",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools",
+     "smiths-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 10,
+    "time": "4 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "necklace",
+   "name": "Necklace",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "jewelry"
+   ],
+   "effect": "A fine silver chain with a sturdy clasp, suitable for stringing beads or charms.",
+   "value": 5,
+   "recipe": {
+    "components": [
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "jewelers-solder",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 10,
+    "time": "4 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "brooch",
+   "name": "Brooch",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "jewelry"
+   ],
+   "effect": "A pin-backed cloak brooch of bronze or silver.",
+   "value": 3,
+   "recipe": {
+    "components": [
+     {
+      "m": "bronze-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "copper-wire",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "circlet",
+   "name": "Circlet",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "jewelry",
+    "clothing"
+   ],
+   "effect": "A slim silver headband, open at the brow for a stone.",
+   "value": 5,
+   "recipe": {
+    "components": [
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "jewelers-solder",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 10,
+    "time": "4 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "talisman-blank",
+   "name": "Talisman Blank",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "jewelry"
+   ],
+   "effect": "A thumb-sized carved token of wood, bone or stone on a leather thong.",
+   "value": 1,
+   "recipe": {
+    "components": [
+     {
+      "oneOf": [
+       "timber",
+       "cut-stone"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Timber or stone"
+     },
+     {
+      "m": "leather-strips",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "scarab-blank",
+   "name": "Scarab Blank",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "jewelry"
+   ],
+   "effect": "A beetle-shaped carved stone, flat underneath for an inscription.",
+   "value": 2,
+   "recipe": {
+    "components": [
+     {
+      "m": "cut-stone",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "pigment",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "masons-tools",
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "bead-string",
+   "name": "Prayer Bead String (blank)",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "jewelry",
+    "focus"
+   ],
+   "effect": "A loop of wooden beads, counted through the fingers during meditation or prayer.",
+   "value": 1,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "wood"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any timber"
+     },
+     {
+      "m": "hemp-cord",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0.2,
+    "level": 1
+   }
+  },
+  {
+   "id": "bag",
+   "name": "Sturdy Bag",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "container"
+   ],
+   "effect": "A heavy canvas sack with a drawstring; holds about a cubic foot.",
+   "value": 0.5,
+   "recipe": {
+    "components": [
+     {
+      "m": "canvas",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "hemp-cord",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "pouch",
+   "name": "Pouch",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "container"
+   ],
+   "effect": "A small leather belt pouch that closes with a thong.",
+   "value": 0.5,
+   "recipe": {
+    "components": [
+     {
+      "m": "leather-strips",
+      "q": 2,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "backpack",
+   "name": "Backpack",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "container"
+   ],
+   "effect": "A leather-framed pack with straps and side pockets.",
+   "value": 2,
+   "recipe": {
+    "components": [
+     {
+      "m": "cured-leather",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "canvas",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "thread",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "workshop",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "quiver",
+   "name": "Quiver",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "container"
+   ],
+   "effect": "A stiff leather case holding twenty arrows.",
+   "value": 1,
+   "recipe": {
+    "components": [
+     {
+      "m": "hardened-leather",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "3 hours",
+    "gp": 0,
+    "level": 1,
+    "yields": 4
+   }
+  },
+  {
+   "id": "component-pouch",
+   "name": "Component Pouch",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "container",
+    "focus"
+   ],
+   "effect": "A watertight belt pouch divided into many small compartments for spell components; replaces material components with no listed cost.",
+   "value": 25,
+   "recipe": {
+    "components": [
+     {
+      "m": "cured-leather",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "leather-strips",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "thread",
+      "q": 1,
+      "role": "binding"
+     },
+     {
+      "m": "glass-vial",
+      "q": 3,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "workshop",
+    "dc": 11,
+    "time": "2 days",
+    "gp": 2.8,
+    "level": 1
+   }
+  },
+  {
+   "id": "scroll-case",
+   "name": "Scroll Case",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "container"
+   ],
+   "effect": "A capped leather tube that keeps maps and scrolls dry.",
+   "value": 1,
+   "recipe": {
+    "components": [
+     {
+      "m": "hardened-leather",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "3 hours",
+    "gp": 0,
+    "level": 1,
+    "yields": 4
+   }
+  },
+  {
+   "id": "chest",
+   "name": "Chest",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "container"
+   ],
+   "effect": "An iron-banded wooden chest with a hasp for a lock.",
+   "value": 5,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "wood"
+      ],
+      "q": 3,
+      "role": "base",
+      "label": "Any timber"
+     },
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "carpenters-tools",
+     "smiths-tools"
+    ],
+    "station": "workshop",
+    "dc": 10,
+    "time": "4 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "box",
+   "name": "Wooden Box",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "container"
+   ],
+   "effect": "A small hinged box of fitted wood, about the size of a spellbook.",
+   "value": 1,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "wood"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any timber"
+     }
+    ],
+    "tools": [
+     "carpenters-tools"
+    ],
+    "station": "workshop",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0.3,
+    "level": 1
+   }
+  },
+  {
+   "id": "bottle",
+   "name": "Glass Bottle",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "container"
+   ],
+   "effect": "A stoppered glass bottle holding about a pint and a half.",
+   "value": 2,
+   "recipe": {
+    "components": [
+     {
+      "m": "raw-glass",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "glassblowers-tools"
+    ],
+    "station": "glassworks",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0.2,
+    "level": 1
+   }
+  },
+  {
+   "id": "flask",
+   "name": "Flask",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "container"
+   ],
+   "effect": "A small clay or tin flask that holds a pint.",
+   "value": 0.02,
+   "recipe": {
+    "components": [
+     {
+      "m": "clay",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "potters-tools"
+    ],
+    "station": "campfire",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1,
+    "yields": 10
+   }
+  },
+  {
+   "id": "jug",
+   "name": "Jug",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "container"
+   ],
+   "effect": "A fired clay jug with a handle; holds a gallon.",
+   "value": 0.02,
+   "recipe": {
+    "components": [
+     {
+      "m": "clay",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "potters-tools"
+    ],
+    "station": "campfire",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1,
+    "yields": 5
+   }
+  },
+  {
+   "id": "bowl",
+   "name": "Bowl",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "container"
+   ],
+   "effect": "A shallow bowl turned from a single block of wood.",
+   "value": 0.1,
+   "recipe": {
+    "components": [
+     {
+      "m": "timber",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1,
+    "yields": 4
+   }
+  },
+  {
+   "id": "barrel",
+   "name": "Barrel",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "container"
+   ],
+   "effect": "An iron-hooped oak barrel holding 40 gallons.",
+   "value": 2,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "wood"
+      ],
+      "q": 3,
+      "role": "base",
+      "label": "Any timber"
+     },
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "carpenters-tools"
+    ],
+    "station": "workshop",
+    "dc": 10,
+    "time": "3 hours",
+    "gp": 0,
+    "level": 1,
+    "yields": 2
+   }
+  },
+  {
+   "id": "bucket",
+   "name": "Bucket",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "container"
+   ],
+   "effect": "A staved wooden bucket with a rope handle.",
+   "value": 0.05,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "wood"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any timber"
+     },
+     {
+      "m": "hemp-cord",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "carpenters-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1,
+    "yields": 4
+   }
+  },
+  {
+   "id": "waterskin",
+   "name": "Waterskin",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "container"
+   ],
+   "effect": "A stitched leather bladder holding half a gallon.",
+   "value": 0.2,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "hide"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any hide"
+     },
+     {
+      "m": "beeswax",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0.1,
+    "level": 1,
+    "yields": 5
+   }
+  },
+  {
+   "id": "oil-flask",
+   "name": "Flask of Oil",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "fire"
+   ],
+   "effect": "A pint of lamp oil. Can be thrown to douse a creature or poured to cover a small area; burns for 2 rounds if ignited (5 fire damage).",
+   "value": 0.1,
+   "recipe": {
+    "components": [
+     {
+      "m": "flask",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "lamp-oil",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "candle",
+   "name": "Candle",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "light"
+   ],
+   "effect": "Burns for an hour, shedding dim light in a small circle.",
+   "value": 0.01,
+   "recipe": {
+    "components": [
+     {
+      "oneOf": [
+       "beeswax",
+       "tallow"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Beeswax or tallow"
+     },
+     {
+      "m": "thread",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [],
+    "station": "kitchen",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1,
+    "yields": 10
+   }
+  },
+  {
+   "id": "torch",
+   "name": "Torch",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "light",
+    "fire"
+   ],
+   "effect": "Burns for an hour with bright light to 20 ft; can be swung as a club for 1 fire damage.",
+   "value": 0.01,
+   "recipe": {
+    "components": [
+     {
+      "m": "timber",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "pitch",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [],
+    "station": "campfire",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1,
+    "yields": 10
+   }
+  },
+  {
+   "id": "lantern",
+   "name": "Hooded Lantern",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "light"
+   ],
+   "effect": "A tin lantern with glass panes and a shutter; bright light to 30 ft for 6 hours on a pint of oil.",
+   "value": 5,
+   "recipe": {
+    "components": [
+     {
+      "m": "tin-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "raw-glass",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "tinkers-tools",
+     "glassblowers-tools"
+    ],
+    "station": "workshop",
+    "dc": 10,
+    "time": "4 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "bullseye-lantern",
+   "name": "Bullseye Lantern",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "light"
+   ],
+   "effect": "A lantern with a polished reflector that throws a 60-ft cone of bright light.",
+   "value": 10,
+   "recipe": {
+    "components": [
+     {
+      "m": "tin-ingot",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "raw-glass",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "tinkers-tools",
+     "glassblowers-tools"
+    ],
+    "station": "workshop",
+    "dc": 10,
+    "time": "1 day",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "lamp",
+   "name": "Lamp",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "light"
+   ],
+   "effect": "A clay oil lamp; bright light to 15 ft for 6 hours on a pint of oil.",
+   "value": 0.5,
+   "recipe": {
+    "components": [
+     {
+      "m": "clay",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "thread",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "potters-tools"
+    ],
+    "station": "campfire",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0.2,
+    "level": 1,
+    "yields": 2
+   }
+  },
+  {
+   "id": "brazier",
+   "name": "Brazier",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "fire",
+    "light"
+   ],
+   "effect": "A three-legged iron fire-bowl for coals, ritual fires or incense.",
+   "value": 5,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 2,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "4 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "censer",
+   "name": "Censer",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "focus"
+   ],
+   "effect": "A pierced bronze incense burner on a chain, swung in temple processions.",
+   "value": 5,
+   "recipe": {
+    "components": [
+     {
+      "m": "bronze-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "chain-links",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "jewelers-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "4 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "wand-blank",
+   "name": "Wand Blank",
+   "cat": "gear",
+   "tier": "common",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "wand",
+    "focus"
+   ],
+   "effect": "A flawless, hand-shaped length of fine heartwood — usable as an arcane focus, and the base for any magic wand.",
+   "value": 50,
+   "recipe": {
+    "components": [
+     {
+      "m": "fine-hardwood",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "beeswax",
+      "q": 1,
+      "role": "binding"
+     },
+     {
+      "m": "fine-sand",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 12,
+    "time": "1 day",
+    "gp": 0,
+    "level": 1,
+    "lore": "Only heartwood without a single knot or crack will carry a charge; most billets are rejected."
+   }
+  },
+  {
+   "id": "rod-blank",
+   "name": "Rod Blank",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "rod",
+    "focus"
+   ],
+   "effect": "A heavy iron-capped rod about two feet long. Works as an arcane focus and as the base for magic rods.",
+   "value": 10,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "fine-hardwood",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "woodcarvers-tools"
+    ],
+    "station": "forge",
+    "dc": 11,
+    "time": "1 day",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "staff-focus",
+   "name": "Staff Focus",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "staff",
+    "focus"
+   ],
+   "effect": "A carved walking staff, balanced for a spellcaster's hand. Usable as a quarterstaff and as an arcane or druidic focus.",
+   "value": 5,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "wood"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any timber"
+     },
+     {
+      "m": "bronze-ingot",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 10,
+    "time": "4 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "orb",
+   "name": "Orb",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "focus"
+   ],
+   "effect": "A polished crystal or stone sphere about the size of a fist; an arcane focus.",
+   "value": 20,
+   "recipe": {
+    "components": [
+     {
+      "m": "rock-crystal",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "jewelers-tools",
+     "masons-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 11,
+    "time": "2 days",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "crystal",
+   "name": "Crystal Focus",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "focus"
+   ],
+   "effect": "A clear, faceted shard of quartz, cut to catch light; an arcane focus.",
+   "value": 10,
+   "recipe": {
+    "components": [
+     {
+      "m": "rock-crystal",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 10,
+    "time": "2 days",
+    "gp": 0,
+    "level": 1,
+    "yields": 2
+   }
+  },
+  {
+   "id": "crystal-ball-blank",
+   "name": "Clear Crystal Sphere",
+   "cat": "gear",
+   "tier": "common",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "focus"
+   ],
+   "effect": "A flawless, perfectly round sphere of clear crystal on a small stand. Beautiful, and the only base a scrying ball can be made from.",
+   "value": 94,
+   "recipe": {
+    "components": [
+     {
+      "m": "rock-crystal",
+      "q": 2,
+      "role": "keystone"
+     },
+     {
+      "m": "fine-sand",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "timber",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "jewelers-tools",
+     "masons-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 12,
+    "time": "2 days",
+    "gp": 0,
+    "level": 1,
+    "lore": "Days of grinding with ever-finer sand; a single hairline flaw and the sphere is useless for scrying."
+   }
+  },
+  {
+   "id": "holy-symbol",
+   "name": "Holy Symbol",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "focus",
+    "jewelry"
+   ],
+   "effect": "A deity's sign cast in bronze or silver and worn as an amulet or on a shield; a divine focus.",
+   "value": 5,
+   "recipe": {
+    "components": [
+     {
+      "m": "bronze-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "leather-strips",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 10,
+    "time": "4 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "druidic-totem",
+   "name": "Druidic Totem",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "focus"
+   ],
+   "effect": "A sprig of mistletoe bound to a carved yew twig with feathers and bone; a druidic focus.",
+   "value": 1,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "wood"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any timber"
+     },
+     {
+      "any": [
+       "feather"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Any feather"
+     },
+     {
+      "m": "hemp-cord",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0.2,
+    "level": 1
+   }
+  },
+  {
+   "id": "figurine-blank",
+   "name": "Carved Figurine",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "wondrous"
+   ],
+   "effect": "A palm-sized carved figure of an animal, in wood, bone or stone.",
+   "value": 2,
+   "recipe": {
+    "components": [
+     {
+      "oneOf": [
+       "timber",
+       "cut-stone"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Timber or stone"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0.7,
+    "level": 1
+   }
+  },
+  {
+   "id": "cube-blank",
+   "name": "Small Cube",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear"
+   ],
+   "effect": "A precisely squared wooden or stone cube, an inch or two on a side.",
+   "value": 0.5,
+   "recipe": {
+    "components": [
+     {
+      "oneOf": [
+       "timber",
+       "cut-stone"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Timber or stone"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1,
+    "yields": 2
+   }
+  },
+  {
+   "id": "polished-stone",
+   "name": "Polished River Stone",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear"
+   ],
+   "effect": "A smooth, palm-sized river stone, tumbled until it gleams.",
+   "value": 0.1,
+   "recipe": {
+    "components": [
+     {
+      "m": "cut-stone",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "fine-sand",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "masons-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "spellbook",
+   "name": "Spellbook",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "focus"
+   ],
+   "effect": "A blank leather-bound book of 100 vellum pages, sturdy enough to hold a wizard's spells.",
+   "value": 50,
+   "recipe": {
+    "components": [
+     {
+      "m": "vellum",
+      "q": 10,
+      "role": "base"
+     },
+     {
+      "m": "cured-leather",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "bone-glue",
+      "q": 1,
+      "role": "binding"
+     },
+     {
+      "m": "thread",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies",
+     "leatherworkers-tools"
+    ],
+    "station": "scriptorium",
+    "dc": 11,
+    "time": "5 days",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "tome",
+   "name": "Blank Tome",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear"
+   ],
+   "effect": "A heavy, blank bound book with brass corners, awaiting a scholar's hand.",
+   "value": 25,
+   "recipe": {
+    "components": [
+     {
+      "m": "paper",
+      "q": 20,
+      "role": "base"
+     },
+     {
+      "m": "cured-leather",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "bronze-ingot",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "bone-glue",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies",
+     "leatherworkers-tools"
+    ],
+    "station": "scriptorium",
+    "dc": 10,
+    "time": "2 days",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "deck-of-cards",
+   "name": "Deck of Cards",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear"
+   ],
+   "effect": "A hand-painted deck of playing cards on stiff paper.",
+   "value": 0.5,
+   "recipe": {
+    "components": [
+     {
+      "m": "paper",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "pigment",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "painters-supplies"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "dice-set",
+   "name": "Dice Set",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear"
+   ],
+   "effect": "A set of bone or wooden dice with pips burnt in.",
+   "value": 0.1,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "bone"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any bone or wood offcut"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1,
+    "yields": 5
+   }
+  },
+  {
+   "id": "carpet",
+   "name": "Carpet",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear"
+   ],
+   "effect": "A knotted wool rug about six feet by nine, dyed in bold patterns.",
+   "value": 10,
+   "recipe": {
+    "components": [
+     {
+      "m": "wool-cloth",
+      "q": 4,
+      "role": "base"
+     },
+     {
+      "m": "dye-red",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "dye-blue",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "loom",
+    "dc": 10,
+    "time": "1 day",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "mirror",
+   "name": "Steel Mirror",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear"
+   ],
+   "effect": "A small hand mirror of polished steel.",
+   "value": 5,
+   "recipe": {
+    "components": [
+     {
+      "m": "steel-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "fine-sand",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "jewelers-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "4 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "fan",
+   "name": "Folding Fan",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear"
+   ],
+   "effect": "A painted paper fan on carved wooden ribs.",
+   "value": 1,
+   "recipe": {
+    "components": [
+     {
+      "m": "paper",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "any": [
+       "wood"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Any timber"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "painters-supplies"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "broom",
+   "name": "Broom",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear"
+   ],
+   "effect": "A bundle of stiff straw bound to a wooden handle.",
+   "value": 0.1,
+   "recipe": {
+    "components": [
+     {
+      "m": "wooden-haft",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "hemp-fiber",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "pipe",
+   "name": "Smoking Pipe",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear"
+   ],
+   "effect": "A carved briarwood pipe.",
+   "value": 0.5,
+   "recipe": {
+    "components": [
+     {
+      "m": "timber",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0.3,
+    "level": 1,
+    "yields": 2
+   }
+  },
+  {
+   "id": "goggles",
+   "name": "Lens Goggles",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "senses"
+   ],
+   "effect": "Leather-strapped goggles with ground-glass lenses that keep grit and glare out of the eyes.",
+   "value": 10,
+   "recipe": {
+    "components": [
+     {
+      "m": "raw-glass",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "leather-strips",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "copper-wire",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "glassblowers-tools",
+     "tinkers-tools"
+    ],
+    "station": "glassworks",
+    "dc": 11,
+    "time": "1 day",
+    "gp": 1.6,
+    "level": 1
+   }
+  },
+  {
+   "id": "lens",
+   "name": "Ground Lens",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "senses"
+   ],
+   "effect": "A carefully ground disc of clear glass that magnifies what lies beneath it.",
+   "value": 5,
+   "recipe": {
+    "components": [
+     {
+      "m": "raw-glass",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "fine-sand",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "glassblowers-tools"
+    ],
+    "station": "glassworks",
+    "dc": 11,
+    "time": "4 hours",
+    "gp": 1.1,
+    "level": 1
+   }
+  },
+  {
+   "id": "magnifying-glass",
+   "name": "Magnifying Glass",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "senses"
+   ],
+   "effect": "A large ground lens in a bronze frame. Grants advantage on checks to appraise or inspect fine detail, and can start fires in sunlight.",
+   "value": 100,
+   "recipe": {
+    "components": [
+     {
+      "m": "lens",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "rock-crystal",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "bronze-ingot",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "glassblowers-tools",
+     "tinkers-tools"
+    ],
+    "station": "glassworks",
+    "dc": 13,
+    "time": "10 days",
+    "gp": 15,
+    "level": 1
+   }
+  },
+  {
+   "id": "spyglass",
+   "name": "Spyglass",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "senses"
+   ],
+   "effect": "A brass-bound telescope; distant objects seem twice as close.",
+   "value": 1000,
+   "recipe": {
+    "components": [
+     {
+      "m": "lens",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "rock-crystal",
+      "q": 4,
+      "role": "supporting"
+     },
+     {
+      "m": "bronze-ingot",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "gold-leaf",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "glassblowers-tools",
+     "tinkers-tools"
+    ],
+    "station": "glassworks",
+    "dc": 15,
+    "time": "100 days",
+    "gp": 257,
+    "level": 1,
+    "lore": "Matching two lenses so their focus aligns takes months of patient grinding."
+   }
+  },
+  {
+   "id": "hourglass",
+   "name": "Hourglass",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "time"
+   ],
+   "effect": "Two glass bulbs and a pinch of sand that measure an hour.",
+   "value": 25,
+   "recipe": {
+    "components": [
+     {
+      "m": "raw-glass",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "fine-sand",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "any": [
+       "wood"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Any timber"
+     }
+    ],
+    "tools": [
+     "glassblowers-tools"
+    ],
+    "station": "glassworks",
+    "dc": 11,
+    "time": "2 days",
+    "gp": 7.8,
+    "level": 1
+   }
+  },
+  {
+   "id": "whetstone",
+   "name": "Whetstone",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear"
+   ],
+   "effect": "A flat, fine-grained stone for honing blades.",
+   "value": 0.01,
+   "recipe": {
+    "components": [
+     {
+      "m": "cut-stone",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "masons-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1,
+    "yields": 10
+   }
+  },
+  {
+   "id": "rope",
+   "name": "Hempen Rope (50 ft)",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear"
+   ],
+   "effect": "Fifty feet of stout hemp rope; burst with a DC 17 Strength check.",
+   "value": 1,
+   "recipe": {
+    "components": [
+     {
+      "m": "hemp-cord",
+      "q": 5,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "silk-rope",
+   "name": "Silk Rope (50 ft)",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear"
+   ],
+   "effect": "Fifty feet of light, strong silk rope — half the weight of hemp.",
+   "value": 10,
+   "recipe": {
+    "components": [
+     {
+      "m": "silk-thread",
+      "q": 2,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "none",
+    "dc": 11,
+    "time": "1 day",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "tent",
+   "name": "Two-Person Tent",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear"
+   ],
+   "effect": "A simple canvas shelter that sleeps two.",
+   "value": 2,
+   "recipe": {
+    "components": [
+     {
+      "m": "canvas",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "hemp-cord",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "wooden-haft",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "bedroll",
+   "name": "Bedroll",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear"
+   ],
+   "effect": "A rolled wool blanket with a waxed canvas groundsheet.",
+   "value": 1,
+   "recipe": {
+    "components": [
+     {
+      "m": "wool-cloth",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "canvas",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "blanket",
+   "name": "Blanket",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear"
+   ],
+   "effect": "A thick wool blanket.",
+   "value": 0.5,
+   "recipe": {
+    "components": [
+     {
+      "m": "wool-cloth",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "caltrops",
+   "name": "Caltrops (bag of 20)",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear"
+   ],
+   "effect": "Four-pointed iron spikes; scattered over a 5-ft square, they wound and slow anyone who walks through carelessly.",
+   "value": 1,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0,
+    "level": 1,
+    "yields": 2
+   }
+  },
+  {
+   "id": "ball-bearings",
+   "name": "Ball Bearings (bag of 1,000)",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear"
+   ],
+   "effect": "Tiny metal balls that can be spilled across a 10-ft square to trip anyone crossing it.",
+   "value": 1,
+   "recipe": {
+    "components": [
+     {
+      "m": "lead-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "clay",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "crowbar",
+   "name": "Crowbar",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear"
+   ],
+   "effect": "An iron pry bar; grants advantage on Strength checks where leverage helps.",
+   "value": 2,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "grappling-hook",
+   "name": "Grappling Hook",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear"
+   ],
+   "effect": "A three-pronged iron hook with an eye for a rope.",
+   "value": 2,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "iron-spikes",
+   "name": "Iron Spikes (10)",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear"
+   ],
+   "effect": "Ten long iron spikes for wedging doors or anchoring ropes.",
+   "value": 1,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0,
+    "level": 1,
+    "yields": 2
+   }
+  },
+  {
+   "id": "piton",
+   "name": "Pitons (10)",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "climbing"
+   ],
+   "effect": "Ten iron climbing pegs with rope eyes.",
+   "value": 0.5,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0,
+    "level": 1,
+    "yields": 4
+   }
+  },
+  {
+   "id": "chain",
+   "name": "Chain (10 ft)",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "binding"
+   ],
+   "effect": "Ten feet of heavy iron chain.",
+   "value": 5,
+   "recipe": {
+    "components": [
+     {
+      "m": "chain-links",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "4 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "manacles",
+   "name": "Manacles",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "binding"
+   ],
+   "effect": "Iron shackles with a lock, sized for Small or Medium wrists.",
+   "value": 2,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "chain-links",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "tinkers-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "lock",
+   "name": "Lock",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear"
+   ],
+   "effect": "A sturdy iron padlock with a key.",
+   "value": 10,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "steel-ingot",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "tinkers-tools"
+    ],
+    "station": "workshop",
+    "dc": 12,
+    "time": "1 day",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "hunting-trap",
+   "name": "Hunting Trap",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear"
+   ],
+   "effect": "A toothed steel jaw trap on a chain; snaps shut on anything that steps in it.",
+   "value": 5,
+   "recipe": {
+    "components": [
+     {
+      "m": "steel-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "chain-links",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "tinkers-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "4 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "shovel",
+   "name": "Shovel",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear"
+   ],
+   "effect": "An iron-bladed spade on a wooden handle.",
+   "value": 2,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "wooden-haft",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "miners-pick",
+   "name": "Miner's Pick",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear"
+   ],
+   "effect": "A heavy iron pick for breaking rock and ore.",
+   "value": 2,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "wooden-haft",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "tinderbox",
+   "name": "Tinderbox",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "fire"
+   ],
+   "effect": "Flint, steel and tinder in a small tin; lights a fire in about a minute.",
+   "value": 0.5,
+   "recipe": {
+    "components": [
+     {
+      "m": "tin-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "steel-ingot",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "tinkers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "4 hours",
+    "gp": 0,
+    "level": 1,
+    "yields": 10
+   }
+  },
+  {
+   "id": "signal-whistle",
+   "name": "Signal Whistle",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "sound"
+   ],
+   "effect": "A shrill bone or tin whistle.",
+   "value": 0.05,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "bone"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any bone"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1,
+    "yields": 10
+   }
+  },
+  {
+   "id": "horn",
+   "name": "Signal Horn",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "sound",
+    "instrument"
+   ],
+   "effect": "A curved horn that sounds a long, carrying note.",
+   "value": 3,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "horn"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any animal horn"
+     },
+     {
+      "m": "bronze-ingot",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "smiths-tools"
+    ],
+    "station": "workshop",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "bell",
+   "name": "Bell",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "sound"
+   ],
+   "effect": "A small bronze bell with an iron clapper.",
+   "value": 1,
+   "recipe": {
+    "components": [
+     {
+      "m": "bronze-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "clay",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0,
+    "level": 1,
+    "yields": 3
+   }
+  },
+  {
+   "id": "mess-kit",
+   "name": "Mess Kit",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear"
+   ],
+   "effect": "A tin box that unfolds into a cup and plate.",
+   "value": 0.2,
+   "recipe": {
+    "components": [
+     {
+      "m": "tin-ingot",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "tinkers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1,
+    "yields": 5
+   }
+  },
+  {
+   "id": "iron-pot",
+   "name": "Iron Pot",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "container"
+   ],
+   "effect": "A heavy cast-iron cooking pot holding a gallon.",
+   "value": 2,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "clay",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "sealing-wax",
+   "name": "Sealing Wax",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear"
+   ],
+   "effect": "A stick of red wax for sealing letters.",
+   "value": 0.5,
+   "recipe": {
+    "components": [
+     {
+      "m": "beeswax",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "dye-red",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [],
+    "station": "kitchen",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0,
+    "level": 1,
+    "yields": 4
+   }
+  },
+  {
+   "id": "ink-bottle",
+   "name": "Ink (1 ounce bottle)",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear"
+   ],
+   "effect": "A small corked bottle of good black writing ink.",
+   "value": 10,
+   "recipe": {
+    "components": [
+     {
+      "m": "common-ink",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies"
+    ],
+    "station": "scriptorium",
+    "dc": 10,
+    "time": "1 day",
+    "gp": 0.3,
+    "level": 1
+   }
+  },
+  {
+   "id": "ink-pen",
+   "name": "Ink Pen",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear"
+   ],
+   "effect": "A trimmed quill with a split nib.",
+   "value": 0.02,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "feather"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any large feather"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1,
+    "yields": 10
+   }
+  },
+  {
+   "id": "rations",
+   "name": "Rations (1 day)",
+   "cat": "provision",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "food"
+   ],
+   "effect": "Hard biscuit, dried fruit, jerky and nuts — a day's food for one traveller.",
+   "value": 0.5,
+   "recipe": {
+    "components": [
+     {
+      "m": "grain",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "salt",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "any": [
+       "meat"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Any meat"
+     }
+    ],
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "kitchen",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0.3,
+    "level": 1,
+    "yields": 5
+   }
+  },
+  {
+   "id": "lute",
+   "name": "Lute",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool",
+    "instrument"
+   ],
+   "effect": "A round-backed, many-stringed instrument; a bard's classic companion and spellcasting focus.",
+   "value": 35,
+   "recipe": {
+    "components": [
+     {
+      "m": "fine-hardwood",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "any": [
+       "wood"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Any timber"
+     },
+     {
+      "m": "instrument-strings",
+      "q": 2,
+      "role": "binding"
+     },
+     {
+      "m": "bone-glue",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 12,
+    "time": "4 days",
+    "gp": 4.5,
+    "level": 1
+   }
+  },
+  {
+   "id": "lyre",
+   "name": "Lyre",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool",
+    "instrument"
+   ],
+   "effect": "A U-shaped hand harp strung across a wooden yoke.",
+   "value": 30,
+   "recipe": {
+    "components": [
+     {
+      "m": "fine-hardwood",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "instrument-strings",
+      "q": 2,
+      "role": "binding"
+     },
+     {
+      "m": "bone-glue",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 12,
+    "time": "3 days",
+    "gp": 2.8,
+    "level": 1
+   }
+  },
+  {
+   "id": "harp",
+   "name": "Harp",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool",
+    "instrument"
+   ],
+   "effect": "A triangular frame harp that sits on the knee.",
+   "value": 30,
+   "recipe": {
+    "components": [
+     {
+      "m": "fine-hardwood",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "any": [
+       "wood"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Any timber"
+     },
+     {
+      "m": "instrument-strings",
+      "q": 3,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 12,
+    "time": "3 days",
+    "gp": 2.0,
+    "level": 1
+   }
+  },
+  {
+   "id": "mandolin",
+   "name": "Mandolin",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool",
+    "instrument"
+   ],
+   "effect": "A small, bright-voiced lute with paired strings.",
+   "value": 30,
+   "recipe": {
+    "components": [
+     {
+      "m": "fine-hardwood",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "instrument-strings",
+      "q": 2,
+      "role": "binding"
+     },
+     {
+      "m": "bone-glue",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 12,
+    "time": "3 days",
+    "gp": 2.8,
+    "level": 1
+   }
+  },
+  {
+   "id": "cittern",
+   "name": "Cittern",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool",
+    "instrument"
+   ],
+   "effect": "A flat-backed, wire-strung tavern instrument.",
+   "value": 25,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "wood"
+      ],
+      "q": 2,
+      "role": "base",
+      "label": "Any timber"
+     },
+     {
+      "m": "copper-wire",
+      "q": 2,
+      "role": "binding"
+     },
+     {
+      "m": "bone-glue",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 11,
+    "time": "2 days",
+    "gp": 6.1,
+    "level": 1
+   }
+  },
+  {
+   "id": "viol",
+   "name": "Viol",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool",
+    "instrument"
+   ],
+   "effect": "A bowed string instrument played upright between the knees.",
+   "value": 30,
+   "recipe": {
+    "components": [
+     {
+      "m": "fine-hardwood",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "instrument-strings",
+      "q": 2,
+      "role": "binding"
+     },
+     {
+      "m": "horsehair",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 12,
+    "time": "3 days",
+    "gp": 2.9,
+    "level": 1
+   }
+  },
+  {
+   "id": "dulcimer",
+   "name": "Dulcimer",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool",
+    "instrument"
+   ],
+   "effect": "A trapezoid box strung with wires and struck with little hammers.",
+   "value": 25,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "wood"
+      ],
+      "q": 2,
+      "role": "base",
+      "label": "Any timber"
+     },
+     {
+      "m": "copper-wire",
+      "q": 3,
+      "role": "binding"
+     },
+     {
+      "m": "bone-glue",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 11,
+    "time": "2 days",
+    "gp": 5.1,
+    "level": 1
+   }
+  },
+  {
+   "id": "flute",
+   "name": "Flute",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool",
+    "instrument"
+   ],
+   "effect": "A simple wooden transverse flute.",
+   "value": 2,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "wood"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any timber"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0.7,
+    "level": 1
+   }
+  },
+  {
+   "id": "pan-flute",
+   "name": "Pan Flute",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool",
+    "instrument"
+   ],
+   "effect": "A row of reed or cane pipes lashed together, played by blowing across their tops.",
+   "value": 12,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "wood"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any timber"
+     },
+     {
+      "m": "hemp-cord",
+      "q": 1,
+      "role": "binding"
+     },
+     {
+      "m": "beeswax",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 day",
+    "gp": 3.7,
+    "level": 1
+   }
+  },
+  {
+   "id": "shawm",
+   "name": "Shawm",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool",
+    "instrument"
+   ],
+   "effect": "A loud, double-reeded wooden pipe.",
+   "value": 2,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "wood"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any timber"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0.7,
+    "level": 1
+   }
+  },
+  {
+   "id": "drum",
+   "name": "Drum",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool",
+    "instrument"
+   ],
+   "effect": "A wooden drum with a stretched hide head.",
+   "value": 6,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "wood"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any timber"
+     },
+     {
+      "any": [
+       "hide"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Any hide"
+     },
+     {
+      "m": "leather-strips",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "workshop",
+    "dc": 10,
+    "time": "5 hours",
+    "gp": 1.6,
+    "level": 1
+   }
+  },
+  {
+   "id": "bagpipes",
+   "name": "Bagpipes",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool",
+    "instrument"
+   ],
+   "effect": "A leather bag with chanter and drones; audible for miles.",
+   "value": 30,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "hide"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any hide"
+     },
+     {
+      "any": [
+       "wood"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Any timber"
+     },
+     {
+      "m": "fine-hardwood",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "leather-strips",
+      "q": 2,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "workshop",
+    "dc": 12,
+    "time": "3 days",
+    "gp": 4.6,
+    "level": 1
+   }
+  },
+  {
+   "id": "alchemists-supplies",
+   "name": "Alchemist's Supplies",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool"
+   ],
+   "effect": "Glass alembics, a mortar and pestle, a burner and many small jars. Proficiency covers identifying and brewing alchemical substances.",
+   "value": 50,
+   "recipe": {
+    "components": [
+     {
+      "m": "raw-glass",
+      "q": 4,
+      "role": "base"
+     },
+     {
+      "m": "copper-ingot",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "glass-vial",
+      "q": 4,
+      "role": "supporting"
+     },
+     {
+      "m": "clay",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "glassblowers-tools",
+     "tinkers-tools"
+    ],
+    "station": "glassworks",
+    "dc": 11,
+    "time": "5 days",
+    "gp": 6.6,
+    "level": 1
+   }
+  },
+  {
+   "id": "brewers-supplies",
+   "name": "Brewer's Supplies",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool"
+   ],
+   "effect": "A copper kettle, tubing, siphon and hops-sack for brewing ale and spirits.",
+   "value": 20,
+   "recipe": {
+    "components": [
+     {
+      "m": "copper-ingot",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "any": [
+       "wood"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Any timber"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "carpenters-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "2 days",
+    "gp": 2.7,
+    "level": 1
+   }
+  },
+  {
+   "id": "calligraphers-supplies",
+   "name": "Calligrapher's Supplies",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool"
+   ],
+   "effect": "Quills, fine inks, a pen-knife and practice parchment for beautiful and precise lettering.",
+   "value": 10,
+   "recipe": {
+    "components": [
+     {
+      "m": "common-ink",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "any": [
+       "feather"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Any feathers"
+     },
+     {
+      "m": "parchment",
+      "q": 5,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies"
+    ],
+    "station": "scriptorium",
+    "dc": 10,
+    "time": "1 day",
+    "gp": 0.8,
+    "level": 1
+   }
+  },
+  {
+   "id": "carpenters-tools",
+   "name": "Carpenter's Tools",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool"
+   ],
+   "effect": "Saw, hammer, nails, plane, square and chisels.",
+   "value": 8,
+   "recipe": {
+    "components": [
+     {
+      "m": "steel-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "wooden-haft",
+      "q": 3,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "6 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "cartographers-tools",
+   "name": "Cartographer's Tools",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool"
+   ],
+   "effect": "Quills, ink, compass, calipers and a ruler for drawing maps.",
+   "value": 15,
+   "recipe": {
+    "components": [
+     {
+      "m": "bronze-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "common-ink",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "parchment",
+      "q": 5,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "tinkers-tools",
+     "calligraphers-supplies"
+    ],
+    "station": "workshop",
+    "dc": 10,
+    "time": "2 days",
+    "gp": 0.5,
+    "level": 1
+   }
+  },
+  {
+   "id": "cobblers-tools",
+   "name": "Cobbler's Tools",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool"
+   ],
+   "effect": "Awls, a last, a hammer and waxed thread for making and mending shoes.",
+   "value": 5,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "thread",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "any": [
+       "wood"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Any timber"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "4 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "cooks-utensils",
+   "name": "Cook's Utensils",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool"
+   ],
+   "effect": "A pot, knives, a ladle and a spoon.",
+   "value": 1,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "glassblowers-tools",
+   "name": "Glassblower's Tools",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool"
+   ],
+   "effect": "Blowpipe, marver, tongs and jacks for shaping molten glass.",
+   "value": 30,
+   "recipe": {
+    "components": [
+     {
+      "m": "steel-ingot",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "wooden-haft",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "3 days",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "herbalism-kit",
+   "name": "Herbalism Kit",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool"
+   ],
+   "effect": "Clippers, a mortar and pestle, pouches and vials. Required to craft antitoxin and potions of healing.",
+   "value": 5,
+   "recipe": {
+    "components": [
+     {
+      "m": "cured-leather",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "glass-vial",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "cut-stone",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "4 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "jewelers-tools",
+   "name": "Jeweler's Tools",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool"
+   ],
+   "effect": "Tiny saws, files, pliers, tweezers and a loupe for fine metalwork and gem-setting.",
+   "value": 25,
+   "recipe": {
+    "components": [
+     {
+      "m": "steel-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "lens",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "leather-strips",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "tinkers-tools"
+    ],
+    "station": "forge",
+    "dc": 12,
+    "time": "2 days",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "leatherworkers-tools",
+   "name": "Leatherworker's Tools",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool"
+   ],
+   "effect": "Knives, awls, a mallet, an edger and thread.",
+   "value": 5,
+   "recipe": {
+    "components": [
+     {
+      "m": "steel-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "thread",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "4 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "masons-tools",
+   "name": "Mason's Tools",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool"
+   ],
+   "effect": "A trowel, hammer, chisels, brushes and a square.",
+   "value": 10,
+   "recipe": {
+    "components": [
+     {
+      "m": "steel-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "wooden-haft",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "1 day",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "painters-supplies",
+   "name": "Painter's Supplies",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool"
+   ],
+   "effect": "An easel, canvas, brushes, charcoal sticks and pots of paint.",
+   "value": 10,
+   "recipe": {
+    "components": [
+     {
+      "m": "pigment",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "canvas",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "horsehair",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "any": [
+       "wood"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Any timber"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 10,
+    "time": "1 day",
+    "gp": 0.7,
+    "level": 1
+   }
+  },
+  {
+   "id": "potters-tools",
+   "name": "Potter's Tools",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool"
+   ],
+   "effect": "Wire cutters, ribs, scrapers, knives and calipers.",
+   "value": 10,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "wooden-haft",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "copper-wire",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "1 day",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "smiths-tools",
+   "name": "Smith's Tools",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool"
+   ],
+   "effect": "Hammers, tongs, a small anvil, punches and files.",
+   "value": 20,
+   "recipe": {
+    "components": [
+     {
+      "m": "steel-ingot",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "wooden-haft",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "2 days",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "tinkers-tools",
+   "name": "Tinker's Tools",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool"
+   ],
+   "effect": "A kit of small hand tools, thread, needles, a whetstone, cloth and glue for mending and inventing.",
+   "value": 50,
+   "recipe": {
+    "components": [
+     {
+      "m": "steel-ingot",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "copper-wire",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "bone-glue",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "whetstone",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "leather-strips",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 11,
+    "time": "5 days",
+    "gp": 4.1,
+    "level": 1
+   }
+  },
+  {
+   "id": "weavers-tools",
+   "name": "Weaver's Tools",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool"
+   ],
+   "effect": "Thread, needles and scraps of cloth for weaving and mending.",
+   "value": 1,
+   "recipe": {
+    "components": [
+     {
+      "m": "thread",
+      "q": 3,
+      "role": "base"
+     },
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "woodcarvers-tools",
+   "name": "Woodcarver's Tools",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool"
+   ],
+   "effect": "A knife, gouge and small saw.",
+   "value": 1,
+   "recipe": {
+    "components": [
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "wooden-haft",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "poisoners-kit",
+   "name": "Poisoner's Kit",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool",
+    "poison"
+   ],
+   "effect": "Vials, chemicals, gloves and a mortar for creating and applying poisons.",
+   "value": 50,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 6,
+      "role": "base"
+     },
+     {
+      "m": "cured-leather",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "vitriol",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "raw-glass",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "glassblowers-tools",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 11,
+    "time": "5 days",
+    "gp": 5.7,
+    "level": 1
+   }
+  },
+  {
+   "id": "thieves-tools",
+   "name": "Thieves' Tools",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool"
+   ],
+   "effect": "Picks, a tension wrench, a small mirror, narrow scissors and pliers. Proficiency lets you pick locks and disarm traps.",
+   "value": 25,
+   "recipe": {
+    "components": [
+     {
+      "m": "steel-ingot",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "mirror",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "leather-strips",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "tinkers-tools"
+    ],
+    "station": "workshop",
+    "dc": 12,
+    "time": "2 days",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "disguise-kit",
+   "name": "Disguise Kit",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool"
+   ],
+   "effect": "Cosmetics, hair dye and small props to change your appearance.",
+   "value": 25,
+   "recipe": {
+    "components": [
+     {
+      "m": "pigment",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "horsehair",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "dye-black",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "box",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "painters-supplies"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "2 days",
+    "gp": 4.6,
+    "level": 1
+   }
+  },
+  {
+   "id": "forgery-kit",
+   "name": "Forgery Kit",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool"
+   ],
+   "effect": "Papers, inks, seals, wax and gold and silver leaf for faking documents.",
+   "value": 15,
+   "recipe": {
+    "components": [
+     {
+      "m": "common-ink",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "parchment",
+      "q": 5,
+      "role": "supporting"
+     },
+     {
+      "m": "sealing-wax",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "gold-leaf",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "calligraphers-supplies"
+    ],
+    "station": "scriptorium",
+    "dc": 11,
+    "time": "2 days",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "navigators-tools",
+   "name": "Navigator's Tools",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool"
+   ],
+   "effect": "A sextant, compass, calipers, ruler and charts for plotting a course.",
+   "value": 25,
+   "recipe": {
+    "components": [
+     {
+      "m": "bronze-ingot",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "lens",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "parchment",
+      "q": 2,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "tinkers-tools"
+    ],
+    "station": "workshop",
+    "dc": 12,
+    "time": "2 days",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "healers-kit",
+   "name": "Healer's Kit",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool",
+    "healing"
+   ],
+   "effect": "A leather satchel of bandages, salves and splints. Ten uses; each stabilizes a dying creature with no check.",
+   "value": 5,
+   "recipe": {
+    "components": [
+     {
+      "m": "linen-cloth",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "medicinal-herbs",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "honey",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "cured-leather",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "herbalism-kit"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "4 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "climbers-kit",
+   "name": "Climber's Kit",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool",
+    "climbing"
+   ],
+   "effect": "Pitons, boot tips, gloves and a harness. Anchored in, you can't fall more than 25 ft.",
+   "value": 25,
+   "recipe": {
+    "components": [
+     {
+      "m": "piton",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "rope",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "gloves",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "leather-strips",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "iron-ingot",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "smiths-tools"
+    ],
+    "station": "workshop",
+    "dc": 10,
+    "time": "2 days",
+    "gp": 3.4,
+    "level": 1
+   }
+  },
+  {
+   "id": "harvesting-kit",
+   "name": "Harvesting Kit",
+   "cat": "tool",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "tool"
+   ],
+   "effect": "Skinning knives, a bone saw, cleavers, hooks, stoppered vials, sealing jars and a pouch of preserving salts in a rolled leather case. Proficiency adds to harvest checks; without one, harvesting counts as using improvised tools (disadvantage).",
+   "value": 25,
+   "recipe": {
+    "components": [
+     {
+      "m": "steel-ingot",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "glass-vial",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "preserving-salts",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "cured-leather",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "smiths-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "forge",
+    "dc": 10,
+    "time": "2 days",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "alchemists-fire",
+   "name": "Alchemist's Fire",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "fire"
+   ],
+   "effect": "A flask of sticky liquid that bursts into flame on contact with air. Thrown (20 ft); on a hit the target burns for 1d4 fire damage each turn until it or someone spends an action to put it out (DC 10 Dex).",
+   "value": 50,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "lamp-oil",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "sulfur",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "saltpeter",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "pitch",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 12,
+    "time": "2 days",
+    "gp": 4.9,
+    "level": 1,
+    "lore": "Sulfur, saltpeter and pitch dissolved in oil — sealed airtight, since a cracked stopper means a burning workbench."
+   }
+  },
+  {
+   "id": "acid-vial",
+   "name": "Acid (vial)",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "acid"
+   ],
+   "effect": "A glass vial of acid, thrown (20 ft) or splashed on a creature within 5 ft: 2d6 acid damage on a hit.",
+   "value": 25,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "vitriol",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "beeswax",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 11,
+    "time": "1 day",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "antitoxin",
+   "name": "Antitoxin",
+   "cat": "potion",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "potion",
+    "healing",
+    "poison"
+   ],
+   "effect": "Drink it to gain advantage on saving throws against poison for 1 hour. Does nothing for undead or constructs.",
+   "value": 50,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "medicinal-herbs",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "honey",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "alchemical-base",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "any": [
+       "venom"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Any venom (a tiny dose, for the body to learn from)"
+     }
+    ],
+    "tools": [
+     "herbalism-kit",
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 12,
+    "time": "2 days",
+    "gp": 4.8,
+    "level": 1,
+    "lore": "A trace of true venom, cut with herbs and honey, teaches the body to fight the rest."
+   }
+  },
+  {
+   "id": "holy-water",
+   "name": "Holy Water",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "radiant",
+    "blessing"
+   ],
+   "effect": "Thrown (20 ft) or splashed on a creature: a fiend or undead takes 2d6 radiant damage on a hit.",
+   "value": 25,
+   "recipe": {
+    "components": [
+     {
+      "m": "flask",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "silver-dust",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "alchemical-base",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "shrine",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1,
+    "lore": "Powdered silver is stirred into pure water and prayed over until the silver vanishes, leaving the water faintly luminous.",
+    "spells": [
+     "bless"
+    ],
+    "requires": "Must be blessed by a cleric or paladin at a shrine; the traditional rite takes an hour and expends a 1st-level spell slot."
+   }
+  },
+  {
+   "id": "basic-poison",
+   "name": "Basic Poison (vial)",
+   "cat": "poison",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "poison"
+   ],
+   "effect": "Coat a weapon or up to three pieces of ammunition (1 action). For 1 minute, a creature hit must make a DC 10 Con save or take 1d4 poison damage; the coating dries after that.",
+   "value": 100,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "toxic-herbs",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "any": [
+       "venom"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Any venom (optional substitute for 2 herbs)"
+     },
+     {
+      "m": "alchemical-base",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "poisoners-kit"
+    ],
+    "station": "alchemy-lab",
+    "dc": 12,
+    "time": "5 days",
+    "gp": 12,
+    "level": 1
+   }
+  },
+  {
+   "id": "perfume",
+   "name": "Perfume (vial)",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "charm"
+   ],
+   "effect": "A small vial of scent that lingers for hours; helpful in polite society.",
+   "value": 5,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "fragrant-flowers",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "spirits",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "alchemists-supplies"
+    ],
+    "station": "alchemy-lab",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0,
+    "level": 1
+   }
+  },
+  {
+   "id": "soap",
+   "name": "Soap",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear"
+   ],
+   "effect": "A cake of hard lye soap.",
+   "value": 0.02,
+   "recipe": {
+    "components": [
+     {
+      "m": "tallow",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "lye",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [],
+    "station": "kitchen",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1,
+    "yields": 10
+   }
+  },
+  {
+   "id": "chalk",
+   "name": "Chalk (1 piece)",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear"
+   ],
+   "effect": "A stick of white chalk for marking walls and floors.",
+   "value": 0.01,
+   "recipe": {
+    "components": [
+     {
+      "m": "limestone",
+      "q": 1,
+      "role": "base"
+     }
+    ],
+    "tools": [
+     "masons-tools"
+    ],
+    "station": "none",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1,
+    "yields": 10
+   }
+  },
+  {
+   "id": "hunting-lure",
+   "name": "Scent Lure",
+   "cat": "gear",
+   "tier": "mundane",
+   "attune": false,
+   "src": "PHB/SRD basic",
+   "tags": [
+    "gear",
+    "senses"
+   ],
+   "effect": "A stoppered pot of musk and rendered fat; smeared on a trap or post, it draws beasts from a mile downwind.",
+   "value": 1,
+   "recipe": {
+    "components": [
+     {
+      "any": [
+       "gland"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Any musk or scent gland"
+     },
+     {
+      "m": "tallow",
+      "q": 1,
+      "role": "binding"
+     },
+     {
+      "m": "clay",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "tools": [
+     "herbalism-kit"
+    ],
+    "station": "campfire",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0,
+    "level": 1
+   }
+  }
+ ]
+}
