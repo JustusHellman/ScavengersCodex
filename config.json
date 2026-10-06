@@ -1,11 +1,12 @@
 {
-  "dmPin": null,
-  "startInPlayerView": false,
-  "spoilage": true,
+  "dmPin": "60845f49",
+  "siteUrl": null,
+  "startInPlayerView": true,
+  "spoilage": false,
   "player": {
     "places": "all",
     "creatures": "beasts",
-    "materials": "common",
+    "materials": "mundane",
     "items": "mundane",
     "threat": "vague"
   }
