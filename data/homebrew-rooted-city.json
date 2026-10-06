@@ -3,7 +3,7 @@
   "name": "rooted-city",
   "title": "The Rooted City",
   "credit": "Original homebrew for a D&D 5e campaign.",
-  "version": 1
+  "version": 2
  },
  "materials": [
   {
@@ -323,6 +323,109 @@
    "desc": "A pale, knotted root found where old cellars and graves have been split open by growth. Chewed, it brings back things you thought you had forgotten.",
    "perish": "1 week",
    "value": 25,
+   "recipe": null
+  },
+  {
+   "id": "threadwalker-silk",
+   "name": "Threadwalker Silk",
+   "tier": "uncommon",
+   "tags": [
+    "silk",
+    "thread",
+    "fey",
+    "climbing"
+   ],
+   "desc": "Pale, fine silk spun by something that walks along the seams between places. It is surprisingly strong and never quite lies where you left it.",
+   "perish": "stable",
+   "value": 45,
+   "recipe": null
+  },
+  {
+   "id": "seamstress-thread-strand",
+   "name": "Seamstress's Thread",
+   "tier": "rare",
+   "tags": [
+    "thread",
+    "planar",
+    "teleport",
+    "silk"
+   ],
+   "desc": "A single strand, longer than it looks and thinner than hair, that does not tear. Pulled taut, it hums like a held breath.",
+   "perish": "stable",
+   "value": 500,
+   "recipe": null
+  },
+  {
+   "id": "seamstress-bone-needle",
+   "name": "Seamstress's Bone Needle",
+   "tier": "rare",
+   "tags": [
+    "bone",
+    "planar",
+    "healing",
+    "binding"
+   ],
+   "desc": "A hand-long needle of pale bone with a sliver of silk in its eye. It can close a wound, and it can close a thin place between worlds.",
+   "perish": "stable",
+   "value": 600,
+   "recipe": null
+  },
+  {
+   "id": "drowned-legion-plate",
+   "name": "Drowned Legion Plate",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "metal",
+    "protection"
+   ],
+   "desc": "Corroded plate from a drowned Hollowcrown legionary. Pitted, green and heavy, but the steel beneath is sound and still stamped with a unit number.",
+   "perish": "stable",
+   "value": 20,
+   "recipe": null
+  },
+  {
+   "id": "tribune-seal",
+   "name": "Tribune's Seal",
+   "tier": "uncommon",
+   "tags": [
+    "relic",
+    "necrotic",
+    "binding"
+   ],
+   "desc": "A bronze signet ring-seal from a drowned Hollowcrown officer, rimed with river-silt. It carries the weight of an order never rescinded.",
+   "perish": "stable",
+   "value": 150,
+   "recipe": null
+  },
+  {
+   "id": "thorn-knight-briarplate",
+   "name": "Thorn-Knight Briar-Plate",
+   "tier": "uncommon",
+   "tags": [
+    "wood",
+    "fey",
+    "protection",
+    "toughness"
+   ],
+   "desc": "Overlapping plates of living thorn-wood that turn aside a blade and bristle at a grasp. They fade to grey in a week if cut from the wearer's armour.",
+   "perish": "1 week",
+   "value": 70,
+   "recipe": null
+  },
+  {
+   "id": "frost-silk-glove",
+   "name": "Frost-Silk Glove",
+   "tier": "rare",
+   "tags": [
+    "cloth",
+    "fey",
+    "cold",
+    "binding"
+   ],
+   "desc": "A glove of cold-stitched frost-silk that never warms. Used once, it seals a bargain so that it cannot be broken without the breaker paying.",
+   "perish": "stable",
+   "value": 320,
    "recipe": null
   }
  ],
@@ -698,6 +801,253 @@
      "plant growth"
     ],
     "lore": "A heartseed holds a forest in a shell; the plank frames it, the glass lets the light out, and the sap keeps it from sprouting through the lantern."
+   }
+  },
+  {
+   "id": "loamborn-poultice",
+   "name": "Loamborn Clay Poultice",
+   "cat": "potion",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "potion",
+    "healing",
+    "growth"
+   ],
+   "effect": "A jar of cool, fertile clay wrapped in a leaf. Applied over 1 minute it restores 2d4+2 hit points and ends one poison condition. It spoils after 3 days.",
+   "value": 50,
+   "recipe": {
+    "components": [
+     {
+      "m": "flask",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "loamborn-clay",
+      "q": 2,
+      "role": "keystone"
+     },
+     {
+      "m": "fringe-nettle",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "beeswax",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "herbalism-kit"
+    ],
+    "station": "kitchen",
+    "dc": 12,
+    "time": "1 day",
+    "gp": 5,
+    "level": 1,
+    "lore": "Clay draws out poison, nettle knits the wound and wax keeps the clay from drying in the jar."
+   }
+  },
+  {
+   "id": "alder-bark-tea",
+   "name": "Alder-Bark Tea",
+   "cat": "potion",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "potion",
+    "sound",
+    "stealth"
+   ],
+   "effect": "A pouch of brewed grey bark. For 1 hour you have advantage on saving throws against being frightened and on Wisdom (Insight) checks.",
+   "value": 60,
+   "recipe": {
+    "components": [
+     {
+      "m": "waterskin",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "hushed-alder-bark",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "honey",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "medicinal-herbs",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "kitchen",
+    "dc": 12,
+    "time": "1 day",
+    "gp": 5,
+    "level": 1,
+    "lore": "The bark quiets the mind, honey carries the flavour and herbs keep the quiet from turning bitter."
+   }
+  },
+  {
+   "id": "briar-lance-of-the-court",
+   "name": "Briar-Lance of the Court",
+   "cat": "weapon",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "weapon",
+    "fey",
+    "wood"
+   ],
+   "effect": "A +1 lance of dark wood wrapped in living briar. Once per day when you hit, the target must succeed on a DC 14 Strength save or be pulled 10 feet toward you.",
+   "value": 900,
+   "recipe": {
+    "components": [
+     {
+      "m": "lance",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "thorn-knight-briarplate",
+      "q": 2,
+      "role": "keystone"
+     },
+     {
+      "m": "thornling-spine",
+      "q": 4,
+      "role": "supporting"
+     },
+     {
+      "m": "silk-thread",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "lore": "The knight's living briar grips the wood, the spines remember their prey and the thread binds it all."
+   }
+  },
+  {
+   "id": "seam-stitch-cloak",
+   "name": "Cloak of Thin Places",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "planar"
+   ],
+   "effect": "A cloak stitched with seamstress-thread. Once per day, as a bonus action, you can step through a seam: teleport up to 30 feet to an unoccupied space you can see that is in shadow or among roots, webs or hollow trunks.",
+   "value": 2600,
+   "recipe": {
+    "components": [
+     {
+      "m": "cloak",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "seamstress-thread-strand",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "threadwalker-silk",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "weavers-tools"
+    ],
+    "station": "loom",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "misty step"
+    ],
+    "lore": "A single strand of the Seamstress's thread knows where every seam is; the silk gives it grip, and silver wire holds the stitch."
+   }
+  },
+  {
+   "id": "frost-bargain-glove",
+   "name": "Glove of the Sealed Word",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "fey",
+    "binding"
+   ],
+   "effect": "A cold-stitched glove. Once per day, as an action, you can seal an agreement with a willing creature by clasping hands: until the agreement is fulfilled, either party that knowingly breaks it takes 4d6 psychic damage and has disadvantage on Charisma checks for 24 hours.",
+   "value": 2200,
+   "recipe": {
+    "components": [
+     {
+      "m": "gloves",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "frost-silk-glove",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silk-thread",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools",
+     "weavers-tools"
+    ],
+    "station": "loom",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "zone of truth"
+    ],
+    "lore": "The frost-silk remembers the cold of a bargain, silver wire keeps the clasp honest and thread ties the terms to the wearer."
    }
   }
  ],
@@ -1084,6 +1434,183 @@
     }
    ],
    "src": "Homebrew"
+  },
+  {
+   "id": "threadwalker",
+   "name": "Threadwalker",
+   "type": "monstrosity",
+   "size": "Medium",
+   "cr": "3",
+   "env": [
+    "forest",
+    "feywild",
+    "urban"
+   ],
+   "blurb": "A spindly, many-legged spider that walks along seams and tears between places, trailing fine pale silk.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "threadwalker-silk",
+     "q": 2,
+     "dc": 13,
+     "skill": "Nature",
+     "dice": "1d4",
+     "note": "Cut the strands while the creature is still, or the silk slips away along the seam."
+    }
+   ],
+   "src": "Homebrew"
+  },
+  {
+   "id": "the-seamstress",
+   "name": "The Seamstress of Thin Places",
+   "type": "monstrosity",
+   "size": "Huge",
+   "cr": "9",
+   "env": [
+    "forest",
+    "feywild"
+   ],
+   "blurb": "A spider as large as a cottage, pale as chitin and dark as thread, that stitches the seam between this world and the Feywild shut.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "seamstress-thread-strand",
+     "q": 1,
+     "dc": 17,
+     "skill": "Arcana",
+     "note": "Only given, never taken. A strand cut from an unwilling Seamstress comes away dull."
+    },
+    {
+     "m": "seamstress-bone-needle",
+     "q": 1,
+     "dc": 18,
+     "skill": "Nature",
+     "note": "Lies in her foreleg's joint. Remove it with care; she will not forgive a careless hand."
+    }
+   ],
+   "src": "Homebrew"
+  },
+  {
+   "id": "drowned-legionary",
+   "name": "Drowned Legionary",
+   "type": "undead",
+   "size": "Medium",
+   "cr": "4",
+   "env": [
+    "ruins",
+    "swamp"
+   ],
+   "blurb": "A drowned soldier in corroded Hollowcrown plate, weed hanging from every strap, still holding the ground it was ordered to hold.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "drowned-legion-plate",
+     "q": 2,
+     "dc": 12,
+     "skill": "Investigation",
+     "dice": "1d3",
+     "note": "A unit tag is stamped on the inside of the breastplate."
+    }
+   ],
+   "src": "Homebrew"
+  },
+  {
+   "id": "drowned-tribune",
+   "name": "Drowned Tribune",
+   "type": "undead",
+   "size": "Medium",
+   "cr": "8",
+   "env": [
+    "ruins",
+    "swamp"
+   ],
+   "blurb": "A drowned Hollowcrown officer with a crest of waterweed and a cloak of silt, still asking for the relief column that never came.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "tribune-seal",
+     "q": 1,
+     "dc": 15,
+     "skill": "Investigation",
+     "note": "It can be used to lay one drowned legionary to rest."
+    },
+    {
+     "m": "drowned-legion-plate",
+     "q": 2,
+     "dc": 12,
+     "skill": "Investigation"
+    }
+   ],
+   "src": "Homebrew"
+  },
+  {
+   "id": "dawnbriar-thorn-knight",
+   "name": "Dawnbriar Thorn-Knight",
+   "type": "fey",
+   "size": "Medium",
+   "cr": "6",
+   "env": [
+    "forest",
+    "feywild"
+   ],
+   "blurb": "A fey knight in plate of living briar, guarding a lord's word as closely as its own armour.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "thorn-knight-briarplate",
+     "q": 2,
+     "dc": 14,
+     "skill": "Nature",
+     "dice": "1d3",
+     "note": "Cut while the armour still flowers; dead briar is brittle."
+    }
+   ],
+   "src": "Homebrew"
+  },
+  {
+   "id": "evergreen-castellan",
+   "name": "Castellan Ravel Evergreen",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "10",
+   "env": [
+    "urban"
+   ],
+   "blurb": "A silver-haired duellist in Tithe-silvered plate, the Houses' sworn sword. Not harvestable beyond belongings.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "evergreen-signet",
+     "q": 1,
+     "dc": 9,
+     "skill": "Investigation",
+     "note": "His signet and a few buckles of fine silver. His body is not harvestable."
+    }
+   ],
+   "src": "Homebrew"
+  },
+  {
+   "id": "iseldes-herald",
+   "name": "Herald of Mab-Iselde",
+   "type": "fey",
+   "size": "Medium",
+   "cr": "11",
+   "env": [
+    "feywild",
+    "urban"
+   ],
+   "blurb": "A tall, gloved fey in frost-silk who arrives politely in a crisis with a bargain already drawn up.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "frost-silk-glove",
+     "q": 1,
+     "dc": 16,
+     "skill": "Arcana",
+     "note": "A herald that leaves in a hurry leaves a glove behind; one that is slain leaves only frost."
+    }
+   ],
+   "src": "Homebrew"
   }
  ],
  "environments": [
@@ -1159,6 +1686,26 @@
       "hushed-alder",
       "canopy-lurker",
       "rootwolf"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "swamp",
+   "extend": true,
+   "gather": [
+    {
+     "m": "drowned-legion-plate",
+     "q": 1,
+     "dice": "1d3",
+     "dc": 12,
+     "skill": "Investigation",
+     "cond": "In the shallows of the Drowned Cities, where legion plate lies under the silt.",
+     "risk": 3,
+     "riskWhy": "The dead hold the ground they were told to hold.",
+     "foes": [
+      "drowned-legionary",
+      "drowned-tribune"
      ]
     }
    ]
