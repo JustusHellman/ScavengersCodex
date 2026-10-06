@@ -1,0 +1,6 @@
+Upload everything in this folder to the root of your Scavenger's Codex repo, keeping the folder structure
+(data/ and tools/ stay as folders). Replace the files that already exist.
+
+index.html, app.js, homebrew.js, codex-standalone.html, README.md, SCHEMA.md  -> repo root
+data/manifest.json, data/homebrew-rooted-city.json                              -> data/
+tools/*.py, tools/test_homebrew.js                                              -> tools/
