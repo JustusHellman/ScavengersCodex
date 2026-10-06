@@ -107,8 +107,18 @@ def main():
         for h in m.get("harvest", []):
             if h.get("m") not in things: err(f, f"{i}: harvest unknown material '{h.get('m')}'")
             if h.get("skill") not in SKILLS: err(f, f"{i}: bad skill '{h.get('skill')}'")
+            if "dice" in h and not re.match(r"^(\d*d\d+([+-]\d+)?|\d+)$", str(h["dice"])): err(f, f"{i}: harvest '{h.get('m')}' has a bad dice value '{h['dice']}'")
+    # An environment id may appear in more than one file only if the later entries say "extend": true.
+    # Extensions add finds to an existing place; they never replace it.
+    base_env = {}
     for f, d in data.items():
         for e in d.get("environments", []):
+            if e.get("extend"): continue
+            if e.get("id") in base_env: err(f, f"environment '{e.get('id')}' is already defined in {os.path.basename(base_env[e.get('id')])}; add \"extend\": true to add finds to it")
+            base_env.setdefault(e.get("id"), f)
+    for f, d in data.items():
+        for e in d.get("environments", []):
+            if e.get("extend") and e.get("id") not in base_env: err(f, f"environment '{e.get('id')}' extends a place that doesn't exist")
             if e.get("id") not in ENVS: err(f, f"unknown environment id {e.get('id')}")
             for g in e.get("gather", []):
                 if g.get("m") not in things: err(f, f"env {e.get('id')}: unknown material '{g.get('m')}'")
@@ -128,7 +138,7 @@ def main():
         h = 0x811c9dc5
         for ch in prefix + i: h = ((h ^ ord(ch)) * 0x01000193) & 0xffffffff
         return h & 0x1fffffff
-    envs_ids = [e.get("id") for d in data.values() for e in d.get("environments", [])]
+    envs_ids = list(dict.fromkeys(e.get("id") for d in data.values() for e in d.get("environments", [])))
     for prefix, ids in (("t:", list(things)), ("c:", list(monsters)), ("p:", envs_ids)):
         seen = {}
         for i in ids:

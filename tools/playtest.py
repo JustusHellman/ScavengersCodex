@@ -34,13 +34,17 @@ def avg_dice(e):
     return int(m.group(1) or 1) * (int(m.group(2)) + 1) / 2 + (int(m.group(3).replace(" ", "")) if m.group(3) else 0)
 
 def load():
-    things, mons, envs, owner = {}, {}, {}, {}
+    things, mons, envs, owner, ext = {}, {}, {}, {}, []
     for f in sorted(glob.glob(os.path.join(ROOT, "data", "*.json"))):
         d = json.load(open(f)); fn = os.path.basename(f)
         for k in ("materials", "items"):
             for t in d.get(k, []): t["_k"] = k; t["_f"] = fn; things[t["id"]] = t
         for m in d.get("monsters", []): m["_f"] = fn; mons[m["id"]] = m
-        for e in d.get("environments", []): envs[e["id"]] = e
+        for e in d.get("environments", []):
+            if e.get("extend"): ext.append(e)
+            else: envs[e["id"]] = e
+    for e in ext:   # homebrew adds finds to an existing place (applied after every base place is loaded)
+        if e["id"] in envs: envs[e["id"]] = {**envs[e["id"]], "gather": envs[e["id"]].get("gather", []) + e.get("gather", [])}
     return things, mons, envs
 
 def main():

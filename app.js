@@ -123,6 +123,9 @@ const store = {
 
 /* ================================================================ data */
 let D = null;
+const HB_KEY = 'scavengers-codex.homebrew';
+let hbLoadError = '';
+function localPacks() { const l = store.get(HB_KEY, []); return Array.isArray(l) ? l.filter(p => p && p.name && p.data && typeof p.data === 'object') : []; }
 async function loadRaw() {
   if (window.CODEX_DATA) return window.CODEX_DATA;
   const man = await (await fetch('data/manifest.json')).json();
@@ -138,8 +141,13 @@ function buildIndex(parts) {
       things.set(t.id, t);
     }
     for (const m of p.monsters || []) { m.kind = 'monster'; monsters.set(m.id, m); }
-    for (const e of p.environments || []) { e.kind = 'place'; envs.set(e.id, e); }
+    for (const e of p.environments || []) if (!e.extend) { e.kind = 'place'; envs.set(e.id, e); }
     for (const c of p.cultivation || []) grow.set(c.m, c);
+  }
+  // A homebrew pack can add finds to an existing place ("extend": true). Applied after every base place exists.
+  for (const p of parts) for (const e of p.environments || []) if (e.extend) {
+    const prev = envs.get(e.id); if (!prev) continue;
+    envs.set(e.id, { ...prev, gather: [...(prev.gather || []), ...(e.gather || [])] });
   }
   const src = new Map(), gat = new Map(), usedIn = new Map(), anySlots = [], envMon = new Map();
   const push = (map, k, v) => { if (!map.has(k)) map.set(k, []); map.get(k).push(v); };
@@ -1449,10 +1457,65 @@ function pPrint() {
     <div class="frow"><span class="small muted">Print layout:</span>${mbtn('duplex', 'Double-sided')}${mbtn('fold', 'Fold-over')}${mbtn('fronts', 'Fronts only')}<span class="small muted">${mode === 'duplex' ? 'Print on both sides, flipping on the long edge. Backs are mirrored so they line up.' : mode === 'fold' ? 'Front and back side by side: cut out the pair and fold it down the middle.' : 'Fronts only, with the code in the corner.'}${window.CODEX_ARTIFACT ? ' Printing may be blocked in this preview: print from the GitHub Pages site.' : ''}</span></div></div>
     ${sheet.length ? `<div class="cards-screen noprint">${screen}</div><div class="print-only">${pages}</div>` : '<div class="empty">No cards yet. Press <b>Make a card</b> on any handout.</div>'}</div>`;
 }
+
+/* ---- homebrew packs (DM tools > Homebrew) ---- */
+const HB = { text: '', fileName: '', res: null, pack: null, name: '' };
+function hbOwn(name) {
+  const old = localPacks().find(p => p.name === name), own = { things: new Set(), monsters: new Set() };
+  if (old) { for (const k of ['materials', 'items']) for (const t of old.data[k] || []) own.things.add(t.id); for (const m of old.data.monsters || []) own.monsters.add(m.id); }
+  return own;
+}
+function hbCheck(text) {
+  HB.text = text; HB.res = null; HB.pack = null; HB.name = '';
+  if (!text.trim()) return;
+  let pack; try { pack = JSON.parse(text); } catch (e) { HB.res = { errors: ['That isn’t valid JSON: ' + e.message], warnings: [], counts: {} }; return; }
+  const meta = pack && typeof pack.homebrew === 'object' && pack.homebrew ? pack.homebrew : {};
+  HB.name = window.CodexHomebrew.slug(meta.name || HB.fileName.replace(/\.json$/i, '').replace(/\.homebrew$/i, '')) || 'my-homebrew';
+  if (pack && typeof pack === 'object') for (const it of pack.items || []) if (it && typeof it === 'object' && !it.src) it.src = 'Homebrew';
+  HB.res = window.CodexHomebrew.validate(pack, { things: D.things, monsters: D.monsters, envs: D.envs }, hbOwn(HB.name));
+  if (!HB.res.errors.length) HB.pack = pack;
+}
+function hbTab() {
+  const list = localPacks(), r = HB.res, c = (r && r.counts) || {};
+  const sum = ['materials', 'items', 'monsters', 'environments', 'cultivation'].filter(k => c[k]).map(k => `${c[k]} ${k === 'monsters' ? 'creatures' : k === 'environments' ? 'place extensions' : k === 'cultivation' ? 'garden plants' : k}`).join(', ');
+  const exists = HB.pack && list.some(p => p.name === HB.name);
+  return `<div class="card pad"><h2>Homebrew packs</h2>
+    <p class="small muted">Add your own materials, items and creatures from a pack file. A pack is checked against the codex first and nothing is added if it has problems. A pack added here lives <b>on this device only</b>. To share it with your players, use “Download as repo file” and put it in the codex repo (see the README, “Adding your own homebrew”).</p>
+    ${hbLoadError ? `<div class="empty">A saved pack could not be loaded and was skipped: ${esc(hbLoadError)}. Remove it below.</div>` : ''}
+    ${list.length ? `<div class="sat-list">${list.map(p => `<div class="sat-row"><div class="txt"><span class="name">${esc((p.data.homebrew && p.data.homebrew.title) || p.name)}</span><span class="small muted">Added ${esc(String(p.addedAt || '').slice(0, 10))} · on this device</span></div><button class="btn sm" type="button" data-act="hbdl" data-name="${esc(p.name)}">Download</button><button class="btn sm" type="button" data-act="hbrm" data-name="${esc(p.name)}">Remove</button></div>`).join('')}</div>` : '<p class="small muted">No packs added on this device yet.</p>'}
+    <h3>Add a pack</h3>
+    <div class="frow"><input type="file" id="hbFile" accept=".json,application/json" aria-label="Pack file"></div>
+    <textarea class="textin mono" id="hbText" rows="5" placeholder="…or paste the pack JSON here" aria-label="Pack JSON">${esc(HB.text)}</textarea>
+    <div class="frow"><button class="btn sm primary" type="button" data-act="hbcheck">Check pack</button></div>
+    ${r ? (r.errors.length
+      ? `<div class="empty"><b>Not added: ${plural(r.errors.length, 'problem')}</b><ul class="small">${r.errors.slice(0, 40).map(e => `<li>${esc(e)}</li>`).join('')}</ul>${r.errors.length > 40 ? `<p class="small">…and ${r.errors.length - 40} more.</p>` : ''}</div>`
+      : `<div class="card pad"><b>Looks good: ${esc(sum || 'nothing')}.</b>${r.warnings.length ? `<ul class="small">${r.warnings.slice(0, 20).map(w => `<li>${esc(w)}</li>`).join('')}</ul>` : ''}
+        <div class="frow"><button class="btn sm primary" type="button" data-act="hbuse">${exists ? 'Replace' : 'Add'} “${esc(HB.name)}” on this device</button><button class="btn sm" type="button" data-act="hbdl" data-name="">Download as repo file</button></div></div>`) : ''}</div>`;
+}
+function hbDownload(obj, name) {
+  try { const blob = new Blob([JSON.stringify(obj, null, 1) + '\n'], { type: 'application/json' }); const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = `homebrew-${name}.json`; document.body.appendChild(a); a.click(); a.remove(); toast('Saved. Put it in the repo’s data folder, or run tools/add_homebrew.py'); }
+  catch (e) { toast('Download blocked here'); }
+}
+function hbAct(act, el) {
+  if (act === 'hbcheck') { const t = $('#hbText'); hbCheck(t ? t.value : HB.text); rerender(); return; }
+  if (act === 'hbuse') {
+    if (!HB.pack) return;
+    const next = localPacks().filter(p => p.name !== HB.name), entry = { name: HB.name, addedAt: new Date().toISOString(), data: HB.pack };
+    store.set(HB_KEY, next.concat([entry]));
+    toast(`“${HB.name}” added. Reloading…`); setTimeout(() => location.reload(), 500); return;
+  }
+  if (act === 'hbdl') { const n = el.dataset.name; const p = n ? localPacks().find(x => x.name === n) : null; hbDownload(p ? p.data : HB.pack, p ? p.name : HB.name); return; }
+  if (act === 'hbrm') {
+    if (!el.dataset.confirm) { el.dataset.confirm = '1'; el.textContent = 'Tap again to remove'; return; }
+    store.set(HB_KEY, localPacks().filter(p => p.name !== el.dataset.name));
+    toast('Removed. Reloading…'); setTimeout(() => location.reload(), 500);
+  }
+}
 function pDM() {
   const envOpts = [...D.envs.values()].map(e => `<option value="${e.id}"${DMS.env === e.id ? ' selected' : ''}>${esc(e.name)}</option>`).join('');
   if (!isDM()) return `<div class="page"><h1>DM tools</h1><div class="empty">These tools are for the DM. ${pinSet() ? 'Switch to DM view with the PIN to use them.' : 'Switch to DM view at the top to use them.'}</div></div>`;
   const tabs = [['forage', 'Forage expedition'], ['trader', 'Wandering trader'], ['drops', 'After the fight'], ['session', 'Session'], ['handouts', 'Handouts'], ['settings', 'Player setup & PIN']];
+  if (window.CodexHomebrew) tabs.splice(5, 0, ['homebrew', 'Homebrew']);
   let body = '';
   if (DMS.tab === 'forage') {
     const F = DMS.forage, saved = store.get(SKILL_KEY, {});
@@ -1558,6 +1621,7 @@ function pDM() {
         <div class="frow"><button class="btn primary sm" type="button" data-act="fightadd" data-to="party" id="fightParty" disabled>${svg('plus')}Add to the party satchel</button><button class="btn sm" type="button" data-act="fightadd" data-to="mine" id="fightMine" disabled>…to my satchel</button><span class="small muted" id="fightSum"></span></div>
         <div class="frow" style="margin-top:8px"><button class="btn sm" type="button" data-act="fightcards">${svg('scroll')}Make creature cards</button><button class="btn sm" type="button" data-act="fightbundle">Share these creatures as one handout</button><button class="btn sm" type="button" data-act="fightclear">Clear the fight</button></div></div>` : ''}`;
   }
+  if (DMS.tab === 'homebrew' && window.CodexHomebrew) body = hbTab();
   return `<div class="page"><div class="section-head"><h1>DM tools</h1></div>
     <p class="lede">Quick tools for the table: what a foraging trip turns up, what a passing trader sells, harvesting a whole fight at once, and a recap of the session.</p>
     <div class="tabs" role="tablist">${tabs.map(([k, l]) => `<button class="tab${DMS.tab === k ? ' on' : ''}" type="button" role="tab" aria-selected="${DMS.tab === k}" data-act="dmtab" data-tab="${k}">${l}</button>`).join('')}</div>
@@ -1569,6 +1633,8 @@ document.addEventListener('input', ev => { const el = ev.target; if (!el.dataset
 function wireDM() {
   if (DMS.tab === 'drops') setTimeout(evalFight, 0);
   if (DMS.tab === 'forage') setTimeout(evalForage, 0);
+  const hf = $('#hbFile');
+  if (hf) hf.addEventListener('change', () => { const file = hf.files[0]; if (!file) return; HB.fileName = file.name; const rd = new FileReader(); rd.onload = () => { hbCheck(String(rd.result)); rerender(); }; rd.readAsText(file); });
   const ho = $('#hoAdd');
   if (ho) wireTypeahead(ho, $('#hoSug'), e => { if (!e) { const r = doSearch(ho.value, 1); e = r[0]; } if (!e) return; const [entry] = defaultShare(e.o); if (!DMS.bundle.some(x => x[1] === entry[1] && x[0] === entry[0])) DMS.bundle.push(entry); rerender(); setTimeout(() => { const i = $('#hoAdd'); if (i) i.focus(); }, 0); });
   const inp = $('#dropAdd'); if (!inp) return;
@@ -2231,6 +2297,7 @@ document.addEventListener('click', ev => {
     case 'lockdm': store.set('scavengers-codex.dmUnlocked', null); dmSession = false; setMode('player'); toast('Locked. Switching back needs the PIN'); location.hash = '#/'; break;
     case 'rollyield': { const inp = document.querySelector(`[data-hman="yield"][data-i="${el.dataset.i}"]`); if (inp) { inp.value = rollDice(el.dataset.dice); inp.classList.add('flash'); setTimeout(() => inp.classList.remove('flash'), 500); evalHarvest(); } break; }
     case 'dmtab': DMS.tab = el.dataset.tab; rerender(); break;
+    case 'hbcheck': case 'hbuse': case 'hbdl': case 'hbrm': hbAct(el.dataset.act, el); break;
     case 'dmforage': rollForage(); rerender(); break;
     case 'dmtrader': rollTrader(); rerender(); break;
     case 'dmdrops': rollDrops(); rerender(); break;
@@ -2422,7 +2489,10 @@ function initTheme() {
 async function boot() {
   initTheme();
   try {
-    await loadConfig(); buildIndex(await loadRaw());
+    await loadConfig();
+    const raw = await loadRaw();
+    try { buildIndex(raw.concat(localPacks().map(p => p.data))); }
+    catch (e) { hbLoadError = e.message || String(e); buildIndex(raw); }
     mode = pinSet() && !dmUnlocked() ? 'player' : (store.get('scavengers-codex.mode', null) || (CFG.startInPlayerView ? 'player' : 'dm'));
   }
   catch (e) {

@@ -215,6 +215,16 @@ A gatherable material may appear in several environments. Optional danger fields
 marks a guardian that must be dealt with first; required for rare+ gatherables (guard CR: rare 6–13, very-rare 12–19,
 legendary 18–30).
 
+#### Extending a place (homebrew packs)
+A later file can add finds to an environment that already exists instead of replacing it:
+```json
+{ "id": "urban", "extend": true, "gather": [ { "m": "my-material", "q": 1, "dice": "1d4", "dc": 12, "skill": "Investigation" } ] }
+```
+An entry with `"extend": true` carries only `id` and `gather`; its finds are appended to the base place. Without `extend`, a repeated environment id is an error. Files load in `manifest.json` order, so list the pack after the file that defines the place.
+
+### Homebrew pack (`data/homebrew-<name>.json`)
+Same sections as any data file, plus optional `"homebrew": {"name", "title", "credit", "version"}`. Items without a `src` get `"src": "Homebrew"` when added. Install with `tools/add_homebrew.py` (see README).
+
 ---------------------------------------------------------------------------------------------------
 ## 7. Tone & immersion checklist
 - Every material description says what it *looks/feels/smells like* AND what crafters value it for.

@@ -70,6 +70,27 @@ To use an image hosted elsewhere, or to credit an artist, add `"img": "https://â
 - Check your edits with `python3 tools/validate.py`, which reports broken ids, unknown tags and missing keystones.
 - `codex-standalone.html` is not updated automatically. Rebuild it with the project's build script, or just use the GitHub Pages version.
 
+## Adding your own homebrew
+A **pack** is one JSON file shaped like the files in `data/` (`materials`, `items`, `monsters`, `environments`, `cultivation`), plus an optional `"homebrew": {"name": "my-pack", "title": "My Pack", "credit": "you"}` block. Every pack is checked against the whole codex before it is accepted, and nothing is added if it has problems.
+
+**For everyone at the table (recommended).** Put the pack in the repo:
+
+```
+python3 tools/add_homebrew.py my-pack.json --dry-run   # check only, changes nothing
+python3 tools/add_homebrew.py my-pack.json             # saves data/homebrew-my-pack.json and lists it in data/manifest.json
+python3 tools/validate.py                              # the same check the deploy runs
+```
+
+Commit the two changed files (`data/homebrew-my-pack.json` and `data/manifest.json`) and push. Use `--replace` to overwrite an older version of the same pack, `python3 tools/add_homebrew.py --remove my-pack` to take it back out (it refuses if something else uses it) and `--list` to see what is installed. `python3 tools/playtest.py` shows how new recipes fit the balance table.
+
+**Just for you, with no repo.** DM tools, Homebrew tab: choose or paste the pack, press *Check pack*, then *Add*. The pack is stored in this browser only. Use *Download as repo file* when you want to move it into the repo later. Clearing site data removes local packs.
+
+**Places.** A pack can add finds to an existing place without copying it: `{"id": "forest", "extend": true, "gather": [ ... ]}`. The place must already exist.
+
+**Spoilers.** The repo is public, so anything you add is readable by anyone, including players who look at the data files. Keep secrets out of names and descriptions or use the device-only route.
+
+`node tools/test_homebrew.js` checks that the in-browser checker and `tools/validate.py` agree.
+
 ## Balance and playtesting
 See `PLAYTEST.md`. Run `python3 tools/playtest.py` after editing data to catch unreachable items, dead-end materials, grind and mis-tiered keystones. It also simulates 3,000 growing seasons for every plant in `data/cultivation.json` and flags any bed that earns more than a skilled worker's wage.
 
