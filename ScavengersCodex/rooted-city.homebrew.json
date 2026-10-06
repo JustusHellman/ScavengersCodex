@@ -1,0 +1,1167 @@
+{
+ "homebrew": {
+  "name": "rooted-city",
+  "title": "The Rooted City",
+  "credit": "Original homebrew for a D&D 5e campaign.",
+  "version": 1
+ },
+ "materials": [
+  {
+   "id": "thornling-spine",
+   "name": "Thornling Spine",
+   "tier": "common",
+   "tags": [
+    "stinger",
+    "wood",
+    "growth"
+   ],
+   "desc": "A needle-sharp, hand-length thorn, dark as old iron at the tip and green at the root. Fletchers prize it: the tip barbs backward and lodges in a wound.",
+   "perish": "stable",
+   "value": 2,
+   "recipe": null
+  },
+  {
+   "id": "loamborn-clay",
+   "name": "Loamborn Clay",
+   "tier": "common",
+   "tags": [
+    "sand",
+    "earth",
+    "growth"
+   ],
+   "desc": "A scoop of fine, dark, fertile clay that smells of rain and still holds the shape of whatever pressed it last. Potters and herbalists pay extra for a lump with something embedded in it: a button, a bead, a bone-chip.",
+   "perish": "stable",
+   "value": 3,
+   "recipe": null
+  },
+  {
+   "id": "rootwolf-pelt",
+   "name": "Rootwolf Pelt",
+   "tier": "common",
+   "tags": [
+    "hide",
+    "fur",
+    "stealth",
+    "primal"
+   ],
+   "desc": "A grey-green pelt that rustles like dry leaves and sheds a faint scent of cut grass. Rangers line cloaks with it because it muffles the wearer's tread.",
+   "perish": "1 day",
+   "value": 12,
+   "recipe": null
+  },
+  {
+   "id": "rootwolf-sinew",
+   "name": "Rootwolf Sinew",
+   "tier": "common",
+   "tags": [
+    "sinew",
+    "binding",
+    "toughness"
+   ],
+   "desc": "Long cords of wiry, bark-fibred tendon. They bind tighter as they dry and make excellent bowstrings and lashings.",
+   "perish": "1 week",
+   "value": 6,
+   "recipe": null
+  },
+  {
+   "id": "bramble-boar-tusk",
+   "name": "Bramble-Boar Tusk",
+   "tier": "common",
+   "tags": [
+    "tooth",
+    "horn",
+    "strength"
+   ],
+   "desc": "A curved, ridged tusk with a thorny knot at the base, as dense as seasoned oak and twice as heavy as ivory.",
+   "perish": "stable",
+   "value": 10,
+   "recipe": null
+  },
+  {
+   "id": "cobblevine-tendril",
+   "name": "Cobblevine Tendril",
+   "tier": "common",
+   "tags": [
+    "vine",
+    "binding",
+    "growth"
+   ],
+   "desc": "A silver-green vine as supple as rope and surprisingly strong. It grips whatever it is wound around, and remembers the shape of the last thing it held.",
+   "perish": "1 week",
+   "value": 5,
+   "recipe": null
+  },
+  {
+   "id": "charnel-loam",
+   "name": "Charnel Loam",
+   "tier": "uncommon",
+   "tags": [
+    "dust",
+    "necrotic",
+    "disease"
+   ],
+   "desc": "Black, greasy compost threaded with bone-dust and fine white roots. It carries rot and the memory of rot, and alchemists use it as a reagent for wards against sickness (and, less kindly, to spread it).",
+   "perish": "stable",
+   "value": 40,
+   "recipe": null
+  },
+  {
+   "id": "hushed-alder-bark",
+   "name": "Hushed-Alder Bark",
+   "tier": "uncommon",
+   "tags": [
+    "bark",
+    "wood",
+    "sound",
+    "stealth"
+   ],
+   "desc": "Silver-grey bark, cool to the touch, which swallows sound. A strip held to the ear mutes the world, and a sheet of it laid under a floor stops footsteps carrying.",
+   "perish": "stable",
+   "value": 45,
+   "recipe": null
+  },
+  {
+   "id": "canopy-lurker-pelt",
+   "name": "Canopy-Lurker Pelt",
+   "tier": "common",
+   "tags": [
+    "hide",
+    "fur",
+    "stealth",
+    "climbing"
+   ],
+   "desc": "A tawny pelt patterned like moss on bark, stiff along the spine. It hardly reflects light and sheds rain, which is why scouts and burglars covet it.",
+   "perish": "1 day",
+   "value": 20,
+   "recipe": null
+  },
+  {
+   "id": "alder-dryad-sap",
+   "name": "Alder-Dryad Sap",
+   "tier": "uncommon",
+   "tags": [
+    "sap",
+    "fey",
+    "healing",
+    "charm"
+   ],
+   "desc": "A thin, amber sap that smells of green apples and warm bread. It heals gently and makes the drinker feel unreasonably fond of the nearest tree.",
+   "perish": "1 week",
+   "value": 60,
+   "recipe": null
+  },
+  {
+   "id": "mourning-elk-antler",
+   "name": "Mourning-Elk Antler",
+   "tier": "uncommon",
+   "tags": [
+    "horn",
+    "bone",
+    "psychic",
+    "knowledge"
+   ],
+   "desc": "A branch of white antler wound with pale roots. Hold it to the ear and you will hear a name, someone's, called softly and often. It is cold in the hand even in summer.",
+   "perish": "stable",
+   "value": 120,
+   "recipe": null
+  },
+  {
+   "id": "elk-memory-bloom",
+   "name": "Elk Memory-Bloom",
+   "tier": "uncommon",
+   "tags": [
+    "flower",
+    "psychic",
+    "knowledge"
+   ],
+   "desc": "A small pale flower that grows from the crown of the antlers. It wilts within a day but, while fresh, it lets the holder recall a single lost thing with perfect clarity.",
+   "perish": "1 day",
+   "value": 90,
+   "recipe": null
+  },
+  {
+   "id": "evergreen-signet",
+   "name": "Evergreen Signet",
+   "tier": "common",
+   "tags": [
+    "salvage",
+    "metal",
+    "jewelry"
+   ],
+   "desc": "A small silver livery-pin stamped with an oak leaf and apple. Pawnbrokers pay modestly. Anyone who recognises the crest will pay in other ways.",
+   "perish": "stable",
+   "value": 15,
+   "recipe": null
+  },
+  {
+   "id": "dawnbriar-arrowhead",
+   "name": "Dawnbriar Arrowhead",
+   "tier": "uncommon",
+   "tags": [
+    "wood",
+    "fey",
+    "poison"
+   ],
+   "desc": "A thorn grown into the shape of an arrowhead and hardened by spring-light, its tip beaded with a pale green venom that burns slowly.",
+   "perish": "stable",
+   "value": 30,
+   "recipe": null
+  },
+  {
+   "id": "huntsman-horn-reed",
+   "name": "Huntsman's Horn-Reed",
+   "tier": "uncommon",
+   "tags": [
+    "horn",
+    "fey",
+    "fear",
+    "sound"
+   ],
+   "desc": "The reed from a fey hunting horn: long, pale, humming faintly, and faintly distasteful to anything with prey instincts.",
+   "perish": "stable",
+   "value": 80,
+   "recipe": null
+  },
+  {
+   "id": "ward-iron-ingot",
+   "name": "Ward-Iron Ingot",
+   "tier": "rare",
+   "tags": [
+    "ingot",
+    "metal",
+    "protection",
+    "binding"
+   ],
+   "desc": "A dense, green-streaked bar of founders' iron-bark alloy. It is cold, heavy, and rings a half-note lower than steel. Anything made from it resists being undone.",
+   "perish": "stable",
+   "value": 400,
+   "recipe": null
+  },
+  {
+   "id": "ward-core",
+   "name": "Ward Core",
+   "tier": "rare",
+   "tags": [
+    "core",
+    "arcane",
+    "binding",
+    "protection"
+   ],
+   "desc": "A fist-sized knot of bronze and living-grain wood that hums with an old, patient purpose. It was made to hold something in, and holds it still.",
+   "perish": "stable",
+   "value": 600,
+   "recipe": null
+  },
+  {
+   "id": "sentinel-heartwood",
+   "name": "Sentinel Heartwood",
+   "tier": "rare",
+   "tags": [
+    "wood",
+    "primal",
+    "toughness",
+    "growth"
+   ],
+   "desc": "Dark red heartwood, dense as stone and warm as skin, with a grain that moves slowly if you watch it long enough.",
+   "perish": "stable",
+   "value": 350,
+   "recipe": null
+  },
+  {
+   "id": "greenmothers-heartseed",
+   "name": "Greenmother's Heartseed",
+   "tier": "rare",
+   "tags": [
+    "seed",
+    "primal",
+    "growth",
+    "regeneration"
+   ],
+   "desc": "A fat, golden seed the size of a plum, warm and faintly pulsing. Planted in sound earth, it will become something that does not stop growing.",
+   "perish": "1 week",
+   "value": 800,
+   "recipe": null
+  },
+  {
+   "id": "living-heartwood-plank",
+   "name": "Living Heartwood Plank",
+   "tier": "rare",
+   "tags": [
+    "wood",
+    "primal",
+    "toughness",
+    "regeneration"
+   ],
+   "desc": "A plank of heartwood that has not entirely forgotten it is alive. It mends small cracks overnight and refuses to rot.",
+   "perish": "stable",
+   "value": 450,
+   "recipe": null
+  },
+  {
+   "id": "fringe-nettle",
+   "name": "Fringe Nettle",
+   "tier": "common",
+   "tags": [
+    "herb",
+    "leaf",
+    "growth"
+   ],
+   "desc": "A broad, dark-veined nettle that springs from cracked cobbles in the overgrown streets. Its sting is mild and its sap knits flesh surprisingly fast.",
+   "perish": "1 week",
+   "value": 2,
+   "recipe": null
+  },
+  {
+   "id": "memory-root",
+   "name": "Memory Root",
+   "tier": "uncommon",
+   "tags": [
+    "root",
+    "psychic",
+    "knowledge"
+   ],
+   "desc": "A pale, knotted root found where old cellars and graves have been split open by growth. Chewed, it brings back things you thought you had forgotten.",
+   "perish": "1 week",
+   "value": 25,
+   "recipe": null
+  }
+ ],
+ "items": [
+  {
+   "id": "salve-of-rootknit",
+   "name": "Salve of Rootknit",
+   "cat": "potion",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "potion",
+    "healing",
+    "growth"
+   ],
+   "effect": "A green, grassy-smelling salve spread over a wound. It knits skin in moments, restoring 2d4+2 hit points and closing one bleeding or lingering cut.",
+   "value": 50,
+   "recipe": {
+    "components": [
+     {
+      "m": "flask",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "fringe-nettle",
+      "q": 3,
+      "role": "keystone"
+     },
+     {
+      "m": "healers-moss",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "beeswax",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "herbalism-kit"
+    ],
+    "station": "kitchen",
+    "dc": 12,
+    "time": "1 day",
+    "gp": 5,
+    "level": 1,
+    "lore": "Nettle sap is a sharp knitting agent; moss softens it and beeswax holds it as a salve that clings to a wound."
+   }
+  },
+  {
+   "id": "briarbarb-arrows",
+   "name": "Briarbarb Arrows",
+   "cat": "ammunition",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "ammunition",
+    "poison"
+   ],
+   "effect": "Arrows tipped with thornling spines. A hit leaves a barb in the wound: the target takes an extra 1d4 poison damage at the start of its next turn unless it spends an action pulling the barb out.",
+   "value": 20,
+   "recipe": {
+    "components": [
+     {
+      "m": "arrows",
+      "q": 10,
+      "role": "base"
+     },
+     {
+      "m": "thornling-spine",
+      "q": 5,
+      "role": "keystone"
+     },
+     {
+      "m": "feather-fletching",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "beeswax",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 12,
+    "time": "1 day",
+    "gp": 5,
+    "level": 1,
+    "yields": 10,
+    "lore": "The spine's backward barb does the work; wax holds the head so that it does not simply fall out in flight."
+   }
+  },
+  {
+   "id": "thornguard-cloak",
+   "name": "Thornguard Cloak",
+   "cat": "wondrous",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "stealth"
+   ],
+   "effect": "A cloak lined with rootwolf pelt and sewn through with thorns. While wearing it you have advantage on Stealth checks in wooded or overgrown places, and a creature that hits you with a melee attack takes 1d4 piercing damage.",
+   "value": 600,
+   "recipe": {
+    "components": [
+     {
+      "m": "cloak",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "hushed-alder-bark",
+       "alder-dryad-sap"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Alder essence (bark or sap)"
+     },
+     {
+      "m": "rootwolf-pelt",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "thornling-spine",
+      "q": 6,
+      "role": "supporting"
+     },
+     {
+      "m": "silk-thread",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "weavers-tools",
+     "leatherworkers-tools"
+    ],
+    "station": "loom",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "pass without trace"
+    ],
+    "lore": "Rootwolf fur hides the wearer; the alder essence hushes the step; the thorns remember which hand reached for the cloak."
+   }
+  },
+  {
+   "id": "staff-of-the-hush",
+   "name": "Staff of the Hush",
+   "cat": "staff",
+   "tier": "uncommon",
+   "attune": "by a druid, ranger or spellcaster",
+   "src": "Homebrew",
+   "tags": [
+    "staff",
+    "sound",
+    "stealth"
+   ],
+   "effect": "A pale quarterstaff of alder wood. It has 3 charges and regains 1d3 at dawn. As an action, spend 1 charge to cast silence (no concentration needed for the first minute). On a roll of 1 after spending the last charge, the staff turns to grey ash.",
+   "value": 700,
+   "recipe": {
+    "components": [
+     {
+      "m": "quarterstaff",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "hushed-alder-bark",
+      "q": 2,
+      "role": "keystone"
+     },
+     {
+      "m": "hushmoss",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "beeswax",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "silence"
+    ],
+    "lore": "The bark already swallows sound; the moss deepens it; the wax seals the quiet into the staff."
+   }
+  },
+  {
+   "id": "wand-of-grieving-echoes",
+   "name": "Wand of Grieving Echoes",
+   "cat": "wand",
+   "tier": "uncommon",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wand",
+    "psychic",
+    "fear"
+   ],
+   "effect": "A wand of white antler. It has 3 charges and regains 1d3 at dawn. Spend 1 charge as an action: a creature within 30 feet must succeed on a DC 13 Wisdom save or hear a dead loved one calling it by name, taking 2d6 psychic damage and having disadvantage on attack rolls until the end of its next turn.",
+   "value": 800,
+   "recipe": {
+    "components": [
+     {
+      "m": "wand-blank",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "mourning-elk-antler",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "elk-memory-bloom",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-ingot",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "woodcarvers-tools",
+     "jewelers-tools"
+    ],
+    "station": "enchanting-circle",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "phantasmal force"
+    ],
+    "lore": "The antler remembers the voices it carried, the bloom lets the holder choose which one to call, and silver gives it a clear tone."
+   }
+  },
+  {
+   "id": "ward-iron-shield",
+   "name": "Ward-Iron Shield",
+   "cat": "armor",
+   "tier": "rare",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "armor",
+    "shield",
+    "protection"
+   ],
+   "effect": "A heavy shield of green-streaked iron. It grants +1 AC like a +1 shield, and you have advantage on saving throws against spells and effects from fey. A fey or plant creature that hits you with a melee attack takes 1d6 force damage.",
+   "value": 2400,
+   "recipe": {
+    "components": [
+     {
+      "m": "shield",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "ward-core",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "ward-iron-ingot",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "steel-ingot",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-ingot",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "smiths-tools"
+    ],
+    "station": "forge",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "protection from evil and good"
+    ],
+    "lore": "The core was made to hold something in; reforged into a shield it holds things out, and the ward-iron carries the old Founders' purpose."
+   }
+  },
+  {
+   "id": "heartseed-lantern",
+   "name": "Heartseed Lantern",
+   "cat": "wondrous",
+   "tier": "rare",
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "gear",
+    "light"
+   ],
+   "effect": "A lantern holding a living seed that glows a soft green. It sheds light in a 30-foot radius; nonmagical difficult terrain made of plants doesn't slow you or allies in the light. Once per day, as an action, you can cast plant growth from it.",
+   "value": 2800,
+   "recipe": {
+    "components": [
+     {
+      "m": "lantern",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "greenmothers-heartseed",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "living-heartwood-plank",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "glass-vial",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "amberpine-sap",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "carpenters-tools",
+     "glassblowers-tools"
+    ],
+    "station": "workshop",
+    "dc": 18,
+    "time": "15 days",
+    "gp": 750,
+    "level": 6,
+    "spells": [
+     "plant growth"
+    ],
+    "lore": "A heartseed holds a forest in a shell; the plank frames it, the glass lets the light out, and the sap keeps it from sprouting through the lantern."
+   }
+  }
+ ],
+ "monsters": [
+  {
+   "id": "thornling",
+   "name": "Thornling",
+   "type": "plant",
+   "size": "Small",
+   "cr": "1/4",
+   "env": [
+    "urban",
+    "ruins"
+   ],
+   "blurb": "A knee-high, hunch-backed clump of briars that rolls out of broken hedges in clutches to snag ankles and spit thorns.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "thornling-spine",
+     "q": 1,
+     "dc": 10,
+     "skill": "Survival",
+     "dice": "1d4",
+     "note": "Cut at the root while the thorn is still green, or it snaps."
+    }
+   ],
+   "src": "Homebrew"
+  },
+  {
+   "id": "loamborn-drudge",
+   "name": "Loamborn Drudge",
+   "type": "plant",
+   "size": "Medium",
+   "cr": "1/2",
+   "env": [
+    "urban",
+    "ruins"
+   ],
+   "blurb": "A barrel-chested figure of packed soil with roots for sinews, shaped from the forest's surplus power.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "loamborn-clay",
+     "q": 1,
+     "dc": 10,
+     "skill": "Nature",
+     "dice": "1d4",
+     "note": "A DC 14 Nature check notices a bead, button or bone-chip embedded in the clay."
+    }
+   ],
+   "src": "Homebrew"
+  },
+  {
+   "id": "rootwolf",
+   "name": "Rootwolf",
+   "type": "monstrosity",
+   "size": "Medium",
+   "cr": "1",
+   "env": [
+    "urban",
+    "ruins",
+    "forest"
+   ],
+   "blurb": "A lean, grey-green hound with bark-flecked flanks and a coat that rustles like leaves.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "rootwolf-pelt",
+     "q": 1,
+     "dc": 11,
+     "skill": "Survival",
+     "note": "Skin in one piece, before the shoots in the fur wilt."
+    },
+    {
+     "m": "rootwolf-sinew",
+     "q": 2,
+     "dc": 12,
+     "skill": "Survival"
+    }
+   ],
+   "src": "Homebrew"
+  },
+  {
+   "id": "bramble-boar",
+   "name": "Bramble Boar",
+   "type": "monstrosity",
+   "size": "Large",
+   "cr": "2",
+   "env": [
+    "urban",
+    "ruins",
+    "forest"
+   ],
+   "blurb": "A pony-sized tusked boar whose back is sheathed in barbed briars instead of bristles.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "bramble-boar-tusk",
+     "q": 2,
+     "dc": 11,
+     "skill": "Survival",
+     "note": "Handle with gloves; the thorn-knot at the base punctures a careless hand."
+    }
+   ],
+   "src": "Homebrew"
+  },
+  {
+   "id": "strangling-cobblevine",
+   "name": "Strangling Cobblevine",
+   "type": "plant",
+   "size": "Large",
+   "cr": "1",
+   "env": [
+    "urban",
+    "ruins"
+   ],
+   "blurb": "A silver-green vine hidden beneath paving that grips whatever steps within reach.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "cobblevine-tendril",
+     "q": 3,
+     "dc": 10,
+     "skill": "Nature",
+     "dice": "1d4+1"
+    }
+   ],
+   "src": "Homebrew"
+  },
+  {
+   "id": "charnel-mound",
+   "name": "Charnel Mound",
+   "type": "plant",
+   "size": "Large",
+   "cr": "3",
+   "env": [
+    "ruins",
+    "urban"
+   ],
+   "blurb": "A shambling heap of compost, ribs and rotting leaf-mould that drags itself from old graveyards.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "charnel-loam",
+     "q": 1,
+     "dc": 13,
+     "skill": "Nature",
+     "dice": "1d4",
+     "note": "Gloves and a cloth over the face. Untreated exposure risks disease."
+    }
+   ],
+   "src": "Homebrew"
+  },
+  {
+   "id": "hushed-alder",
+   "name": "Hushed Alder",
+   "type": "plant",
+   "size": "Large",
+   "cr": "3",
+   "env": [
+    "forest",
+    "urban"
+   ],
+   "blurb": "A tall, slender, grey-barked tree with a face of knots that always looks about to speak, and the air around it is thick with silence.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "hushed-alder-bark",
+     "q": 1,
+     "dc": 13,
+     "skill": "Nature",
+     "dice": "1d4",
+     "note": "Strip the bark only after a spoken apology; strips taken in anger are brittle."
+    }
+   ],
+   "src": "Homebrew"
+  },
+  {
+   "id": "canopy-lurker",
+   "name": "Canopy Lurker",
+   "type": "monstrosity",
+   "size": "Medium",
+   "cr": "2",
+   "env": [
+    "forest",
+    "ruins",
+    "urban"
+   ],
+   "blurb": "A lean cat the size of a leopard with a pelt that has turned to bark and moss, waiting on high branches.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "canopy-lurker-pelt",
+     "q": 1,
+     "dc": 12,
+     "skill": "Survival",
+     "note": "The pelt loses its camouflage if cut across the spine."
+    }
+   ],
+   "src": "Homebrew"
+  },
+  {
+   "id": "alder-dryad",
+   "name": "Alder Dryad",
+   "type": "fey",
+   "size": "Medium",
+   "cr": "1",
+   "env": [
+    "forest",
+    "feywild"
+   ],
+   "blurb": "A tree-nymph in a gown of leaf and white bark who guards her alder with cool courtesy.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "alder-dryad-sap",
+     "q": 1,
+     "dc": 13,
+     "skill": "Nature",
+     "note": "Given freely or not at all. Sap taken from a slain dryad is spoiled and worth nothing."
+    }
+   ],
+   "src": "Homebrew"
+  },
+  {
+   "id": "mourning-elk",
+   "name": "The Mourning Elk",
+   "type": "monstrosity",
+   "size": "Large",
+   "cr": "4",
+   "env": [
+    "forest",
+    "ruins"
+   ],
+   "blurb": "A towering stag with bone-white antlers wound with dead-leaf crowns, whispering the names of the dead.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "mourning-elk-antler",
+     "q": 1,
+     "dc": 14,
+     "skill": "Survival",
+     "note": "Cut at the base while the voices are quiet."
+    },
+    {
+     "m": "elk-memory-bloom",
+     "q": 1,
+     "dc": 13,
+     "skill": "Nature",
+     "note": "Wilts within a day. Pluck it before the antler is cut."
+    }
+   ],
+   "src": "Homebrew"
+  },
+  {
+   "id": "drained-retainer",
+   "name": "Drained Retainer",
+   "type": "humanoid",
+   "size": "Medium",
+   "cr": "1/4",
+   "env": [
+    "urban"
+   ],
+   "blurb": "A servant in a noble house's livery, drained of years and kept on as a guard. Not harvestable beyond belongings.",
+   "salvage": true,
+   "harvest": [
+    {
+     "m": "evergreen-signet",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation",
+     "note": "A livery-pin. Their bodies are not harvestable."
+    }
+   ],
+   "src": "Homebrew"
+  },
+  {
+   "id": "dawnbriar-huntsman",
+   "name": "Dawnbriar Huntsman",
+   "type": "fey",
+   "size": "Medium",
+   "cr": "5",
+   "env": [
+    "feywild",
+    "forest"
+   ],
+   "blurb": "A lean, watchful fey in antler-mail with a willow bow and a horn that sounds like a dying stag.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "dawnbriar-arrowhead",
+     "q": 3,
+     "dc": 13,
+     "skill": "Survival",
+     "dice": "1d4+1"
+    },
+    {
+     "m": "huntsman-horn-reed",
+     "q": 1,
+     "dc": 14,
+     "skill": "Arcana",
+     "note": "The horn only yields its reed if the huntsman has not blown it in the last hour."
+    }
+   ],
+   "src": "Homebrew"
+  },
+  {
+   "id": "iron-ward-warden",
+   "name": "Iron Ward-Warden",
+   "type": "construct",
+   "size": "Large",
+   "cr": "8",
+   "env": [
+    "ruins"
+   ],
+   "blurb": "A seven-foot suit of iron-bark plate with a hollow helm glowing faintly green, built to protect old chains.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "ward-iron-ingot",
+     "q": 2,
+     "dc": 16,
+     "skill": "Investigation",
+     "note": "Salvaging the plate without breaking it takes a day."
+    },
+    {
+     "m": "ward-core",
+     "q": 1,
+     "dc": 18,
+     "skill": "Arcana",
+     "note": "Pry it out before the glow fades, or it goes dull and inert."
+    }
+   ],
+   "src": "Homebrew"
+  },
+  {
+   "id": "heartwood-sentinel",
+   "name": "Heartwood Sentinel",
+   "type": "plant",
+   "size": "Huge",
+   "cr": "7",
+   "env": [
+    "forest",
+    "feywild"
+   ],
+   "blurb": "A colossal walking tree of dark red heartwood with a silver crown, standing guard at the centre of an old wood.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "sentinel-heartwood",
+     "q": 2,
+     "dc": 16,
+     "skill": "Nature",
+     "note": "Needs a saw and a day; the grain fights the blade."
+    }
+   ],
+   "src": "Homebrew"
+  },
+  {
+   "id": "greenmothers-hand",
+   "name": "Greenmother's Hand",
+   "type": "plant",
+   "size": "Huge",
+   "cr": "9",
+   "env": [
+    "forest",
+    "feywild"
+   ],
+   "blurb": "An impossible, colossal hand of living wood and moss rising from the earth, guarding rather than killing.",
+   "salvage": false,
+   "harvest": [
+    {
+     "m": "greenmothers-heartseed",
+     "q": 1,
+     "dc": 18,
+     "skill": "Nature",
+     "note": "Only lies in the palm once the Hand has gone still. Plant it in good earth."
+    },
+    {
+     "m": "living-heartwood-plank",
+     "q": 2,
+     "dc": 16,
+     "skill": "Survival"
+    }
+   ],
+   "src": "Homebrew"
+  }
+ ],
+ "environments": [
+  {
+   "id": "urban",
+   "extend": true,
+   "gather": [
+    {
+     "m": "fringe-nettle",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 10,
+     "skill": "Nature",
+     "cond": "Only in streets split open by roots and brambles.",
+     "risk": 1,
+     "riskWhy": "Thornlings nest in the same briar patches.",
+     "foes": [
+      "thornling",
+      "loamborn-drudge"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ruins",
+   "extend": true,
+   "gather": [
+    {
+     "m": "fringe-nettle",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 10,
+     "skill": "Nature",
+     "cond": "Where roots have lifted old paving.",
+     "risk": 1,
+     "riskWhy": "Overgrown ruins attract thornlings and rootwolves.",
+     "foes": [
+      "thornling",
+      "rootwolf"
+     ]
+    },
+    {
+     "m": "memory-root",
+     "q": 1,
+     "dice": "1d3",
+     "dc": 13,
+     "skill": "Nature",
+     "cond": "Where old cellars and graves have been split open by growth; best at dawn.",
+     "risk": 2,
+     "riskWhy": "Cellars and graves hold loamborn and the odd charnel mound.",
+     "foes": [
+      "loamborn-drudge",
+      "charnel-mound",
+      "rootwolf"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "forest",
+   "extend": true,
+   "gather": [
+    {
+     "m": "memory-root",
+     "q": 1,
+     "dice": "1d3",
+     "dc": 13,
+     "skill": "Nature",
+     "cond": "Under old alders where roots tangle over buried stone.",
+     "risk": 2,
+     "riskWhy": "Old alders are watched by their guardians.",
+     "foes": [
+      "hushed-alder",
+      "canopy-lurker",
+      "rootwolf"
+     ]
+    }
+   ]
+  }
+ ]
+}
