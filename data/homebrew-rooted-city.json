@@ -1304,14 +1304,14 @@
   },
   {
    "id": "drained-retainer",
-   "name": "Drained Retainer",
+   "name": "Leashed Retainer",
    "type": "humanoid",
    "size": "Medium",
    "cr": "1/4",
    "env": [
     "urban"
    ],
-   "blurb": "A servant in a noble house's livery, drained of years and kept on as a guard. Not harvestable beyond belongings.",
+   "blurb": "A servant in a noble house's livery, kept in service by a lesser Tithe and set to guard. Not harvestable beyond belongings.",
    "salvage": true,
    "harvest": [
     {
