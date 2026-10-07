@@ -5,6 +5,8 @@
   python3 tools/build_standalone.py --check    rebuilds in memory and says whether the file on disk is up to date
 """
 import json, os, re, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import codexdata
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -19,7 +21,10 @@ def build():
     html = html.replace('<link rel="stylesheet" href="styles.css">', "<style>" + read("styles.css").rstrip("\n") + "\n</style>")
     man = json.loads(read("data/manifest.json"))
     parts = [json.loads(read("data/" + f)) for f in man["files"]]
-    data = "<script>window.CODEX_DATA=" + json.dumps(parts, ensure_ascii=False, separators=(",", ":")) + ";window.CODEX_CONFIG=" + read("config.json").strip() + ";</script>\n"
+    packs = [{**codexdata.index_entry(f, d), "data": d} for f, d in ((f, codexdata.read(f)) for f in codexdata.pack_files(ROOT))]
+    packs.sort(key=lambda e: (not e["default"], e["title"].lower()))
+    js = lambda o: json.dumps(o, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+    data = "<script>window.CODEX_DATA=" + js(parts) + ";window.CODEX_PACKS=" + js([{k: v for k, v in p.items()} for p in packs]) + ";window.CODEX_CONFIG=" + read("config.json").strip() + ";</script>\n"
     first = True
 
     def inline(m):

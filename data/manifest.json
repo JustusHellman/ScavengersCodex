@@ -6,10 +6,6 @@
   "cultivation.json",
   "items-arms.json",
   "items-consumables.json",
-  "items-homebrew.json",
-  "items-hunters-1.json",
-  "items-hunters-2.json",
-  "items-meals.json",
   "items-rings-rods-staffs-wands.json",
   "items-wondrous-1.json",
   "items-wondrous-2.json",
@@ -20,7 +16,6 @@
   "monsters-giants-humanoids.json",
   "monsters-monstrosities.json",
   "monsters-planar.json",
-  "monsters-srd52.json",
-  "homebrew-rooted-city.json"
+  "monsters-srd52.json"
  ]
 }

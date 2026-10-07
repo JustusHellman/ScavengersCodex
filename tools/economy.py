@@ -8,11 +8,10 @@ BAND = {"mundane": (0, 10**9), "common": (50, 100), "uncommon": (101, 500), "rar
 WAGE = {"mundane": 2, "common": 10, "uncommon": 20, "rare": 50, "very-rare": 150, "legendary": 300}  # gp per workday of skilled crafting
 LEVEL = {"mundane": None, "common": 1, "uncommon": 3, "rare": 6, "very-rare": 11, "legendary": 17}
 CONSUMABLE = {"potion", "oil", "poison", "scroll", "ammunition", "provision", "meal"}
-files = {f: json.load(open(f)) for f in glob.glob(os.path.join(ROOT, "data", "*.json"))}
-things = {}
-for d in files.values():
-    for k in ("materials", "items"):
-        for t in d.get(k, []): t["_k"] = k; things[t["id"]] = t
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import codexdata
+PACKS = next((a.split("=", 1)[1] for a in sys.argv if a.startswith("--packs=")), "all")
+things = codexdata.merged(codexdata.load(PACKS if PACKS in ("all", "none", "default") else PACKS.split(",")))[0]
 def match(t, c): return all(x in t["tags"] for x in c["any"]) and ti(t["tier"]) >= ti(c.get("min", "mundane"))
 def opts(c):
     if "m" in c: return [things[c["m"]]]

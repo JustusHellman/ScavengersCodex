@@ -1,6 +1,6 @@
 # The Scavenger's Codex
 
-A harvesting and crafting handbook for D&D 5e. You skin, harvest and forage components from 338 SRD creatures and 21 environments, then craft every SRD magic item, the basic equipment, and ~390 original items.
+A harvesting and crafting handbook for D&D 5e. You skin, harvest and forage components from 338 SRD creatures and 21 environments, then craft every SRD magic item, the basic equipment, and, with the Core+ homebrew packs, about 370 original items and meals.
 
 - **Cross-linked:** every item shows its recipe and what it is used in. Every material shows where it comes from and what it makes, and every creature shows its parts and everything craftable from them.
 - **Satchel:** add what your party carries (or "add all parts" from a slain creature) to see what you can craft now and what you're 1–2 parts away from. The satchel is saved in your browser, with export and import.
@@ -21,6 +21,7 @@ A harvesting and crafting handbook for D&D 5e. You skin, harvest and forage comp
 - **Backup and restore:** one file (or a block of text) holds everything a device keeps: satchels, journal, garden, workbench, cards and settings. Find it in the Journal and in DM tools → Player setup.
 - **Handout cards:** every handout entry becomes a collectible card, with a picture and details on the front and the in-world note plus a short unlock code (`SC-XXXX-XXXX`) on the back. Flip them on screen, or print them double-sided (backs line up), as fold-overs, or fronts only.
 - **Collapsible sections:** every section on an entry page folds away. Sensible ones start open, and the codex remembers your choice for each kind of section.
+- **Homebrew packs:** original content comes in packs ("Core+: Hunter's Gear", "Core+: The Cookbook", and campaign packs like "The Rooted City"). The DM ticks which ones a campaign uses and the choice travels to players with the party link. Adding a pack is one file in `homebrew/`.
 - **The Web:** a map of how everything connects, from places and creatures to the parts they give and the things those parts make. Every entry page has a small *Connections* map, and the Web page can centre on anything. Hover or tap a bubble to light up its whole chain. Players see only what their journal holds, and every lead they haven't followed shows as a "?" with no name, so the map grows as they discover things. The DM can focus on a homebrew pack or a place, or preview exactly what the players see.
 - **Meals and cooking:** a chef can cook 50 dishes, from campfire fry-ups to uncommon feasts, out of harvested and foraged ingredients. The meal's page rolls the cooking check (superb, success, flawed or ruined), puts the servings in a satchel, and the satchel can show only the meals you can cook. Servings spoil like other fresh parts, and a creature enjoys one meal's effect at a time.
 - **Final check:** roll any recipe's crafting check or type in your own total, with the failure rules, quirks (d20) and masterwork boons (d10).
@@ -67,29 +68,44 @@ If a name exists in more than one list, add `creature-`, `item-`, `material-` or
 To use an image hosted elsewhere, or to credit an artist, add `"img": "https://…"` and `"imgCredit": "Art by …"` to that entry in its `data/*.json` file. Use only art you have the rights to: your own, commissioned, public-domain or suitably licensed work, and never official D&D artwork.
 
 ## Adding or changing content
-- All content is in `data/*.json`. `SCHEMA.md` documents the format, tags, tiers and balance table.
-- New files must be listed in `data/manifest.json`.
-- Check your edits with `python3 tools/validate.py`, which reports broken ids, unknown tags and missing keystones.
-- `codex-standalone.html` is not updated automatically. Rebuild it with the project's build script, or just use the GitHub Pages version.
+- The base codex is in `data/*.json`: the SRD creatures and items, the harvesting and foraging tables, and places. `SCHEMA.md` documents the format, tags, tiers and balance table.
+- Original items and other homebrew live in **packs** in `homebrew/` (see below).
+- Check your edits with `python3 tools/validate.py`. It checks the base on its own, the base with each pack, and everything together, and reports broken ids, unknown tags and missing keystones.
+- `codex-standalone.html` is not updated automatically. Rebuild it with `python3 tools/build_standalone.py`, or just use the GitHub Pages version.
 
-## Adding your own homebrew
-A **pack** is one JSON file shaped like the files in `data/` (`materials`, `items`, `monsters`, `environments`, `cultivation`), plus an optional `"homebrew": {"name": "my-pack", "title": "My Pack", "credit": "you"}` block. Every pack is checked against the whole codex before it is accepted, and nothing is added if it has problems.
+## Homebrew packs
+Every homebrew set is one JSON file in the `homebrew/` folder. The codex ships with three:
 
-**For everyone at the table (recommended).** Put the pack in the repo:
+| Pack | File | On for new visitors |
+|---|---|---|
+| Core+: Hunter's Gear (about 320 original items) | `homebrew/core-hunters-gear.json` | yes |
+| Core+: The Cookbook (42 meals) | `homebrew/core-cookbook.json` | yes |
+| The Rooted City (a campaign pack) | `homebrew/rooted-city.json` | no |
+
+**Choosing packs for a campaign.** Everyone sees the list in the left-hand column and on the *Homebrew* page (on phones, via the Journal). In DM view the packs have tick boxes. The DM's choice is saved with the party and travels to the players with the party link (Satchel → Party satchel → Share), so every player's codex matches. Players can't change it. Content from a pack in use works like the rest of the codex and still follows the discovery rules. Switching a pack off hides its content but never deletes anything: satchel contents, learned formulas and journal entries come back when it's switched on again. To make a choice the default for everyone who opens the site, copy the settings from DM tools → Player setup into `config.json` (the `"packs"` list). Without that, each pack's own `"default"` decides.
+
+**Adding a pack.** Drop the file into `homebrew/` and push. The deploy workflow rebuilds `homebrew/index.json` (the list the site reads) and checks the pack. Locally, `python3 tools/pack_index.py` rebuilds the index, or use the helper, which checks first and changes nothing if the pack has problems:
 
 ```
 python3 tools/add_homebrew.py my-pack.json --dry-run   # check only, changes nothing
-python3 tools/add_homebrew.py my-pack.json             # saves data/homebrew-my-pack.json and lists it in data/manifest.json
+python3 tools/add_homebrew.py my-pack.json             # saves homebrew/my-pack.json and updates homebrew/index.json
 python3 tools/validate.py                              # the same check the deploy runs
 ```
 
-Commit the two changed files (`data/homebrew-my-pack.json` and `data/manifest.json`) and push. Use `--replace` to overwrite an older version of the same pack, `python3 tools/add_homebrew.py --remove my-pack` to take it back out (it refuses if something else uses it) and `--list` to see what is installed. `python3 tools/playtest.py` shows how new recipes fit the balance table.
+Use `--replace` to overwrite an older version, `--remove my-pack` to take one out (it refuses if another pack needs it) and `--list` to see what is installed. `python3 tools/playtest.py` shows how new recipes fit the balance table (`--packs=none` checks the base on its own).
 
-**Just for you, with no repo.** DM tools, Homebrew tab: choose or paste the pack, press *Check pack*, then *Add*. The pack is stored in this browser only. Use *Download as repo file* when you want to move it into the repo later. Clearing site data removes local packs.
+A pack starts with a header, then any of the usual sections (`materials`, `items`, `monsters`, `environments`, `cultivation`):
 
-**Places.** A pack can add finds to an existing place without copying it: `{"id": "forest", "extend": true, "gather": [ ... ]}`. The place must already exist.
+```json
+{"homebrew": {"name": "my-pack", "title": "My Pack", "desc": "One line shown to everyone.", "default": false, "requires": [], "credit": "you", "version": 1},
+ "items": [ ... ]}
+```
 
-**Spoilers.** The repo is public, so anything you add is readable by anyone, including players who look at the data files. Keep secrets out of names and descriptions or use the device-only route.
+A pack may use anything in the base codex. If it uses another pack's content, list that pack in `"requires"`; it is then switched on together with it. A pack can add finds to an existing place, or parts to an existing creature, without copying it: `{"id": "forest", "extend": true, "gather": [ ... ]}` or `{"id": "wolf", "extend": true, "harvest": [ ... ]}`.
+
+**Just for you, with no repo.** DM tools → Homebrew tab: choose or paste the pack, press *Check pack*, then *Add*. The pack is stored in this browser only and is always on there. Use *Download as repo file* to move it into `homebrew/` later.
+
+**Spoilers.** The repo is public, so anything in a pack, and every pack's title and description, is readable by anyone, including players. Keep secrets out of names and descriptions or use the device-only route.
 
 `node tools/test_homebrew.js` checks that the in-browser checker and `tools/validate.py` agree.
 

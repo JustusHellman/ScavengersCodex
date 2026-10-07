@@ -133,7 +133,7 @@ window.CODEX_RULES = `
 <p>Growing is slow on purpose. A bed produces roughly what a skilled worker earns in the same time, so it's a steady supply of reagents, not a gold mine. Keystones for rare items still have to be hunted.</p>
 
 <h2 id="r-cook">10. Cooking</h2>
-<p>Meals are crafted like any other item, but faster: a cook with <b>cook's utensils</b> spends a few hours at a kitchen or campfire and makes one cooking check (Wisdom, adding proficiency with the utensils) against the meal's DC. The meal's page has a cooking panel that rolls the check and puts the servings in a satchel.</p>
+<p>Meals come in the <a href="#/homebrew">Core+: The Cookbook</a> pack. Meals are crafted like any other item, but faster: a cook with <b>cook's utensils</b> spends a few hours at a kitchen or campfire and makes one cooking check (Wisdom, adding proficiency with the utensils) against the meal's DC. The meal's page has a cooking panel that rolls the check and puts the servings in a satchel.</p>
 <table><thead><tr><th>Tier</th><th>DC</th><th>Time</th><th>Reagents</th><th>Effect</th></tr></thead><tbody>
 <tr><td>Mundane</td><td>10</td><td>1–2 hours (smoking or drying up to 8)</td><td>under 1 gp</td><td>Flavour and a small perk; counts as a day's food</td></tr>
 <tr><td>Common</td><td>12</td><td>2–4 hours</td><td>5 gp</td><td>One small boon, usually for 8 hours</td></tr>

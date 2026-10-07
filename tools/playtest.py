@@ -4,6 +4,10 @@ Plays the system as a party would: can every item actually be reached, how many 
 forage trips does it take, how hard are the checks at the level you'd meet each source,
 and is the difficulty in line with the item's rarity?  Writes playtest-report.json and prints a summary."""
 import json, glob, os, math, re, collections, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import codexdata
+PACKS = next((a.split("=", 1)[1] for a in sys.argv if a.startswith("--packs=")), "all")
+if PACKS not in ("all", "none", "default"): PACKS = PACKS.split(",")
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 T = ["mundane", "common", "uncommon", "rare", "very-rare", "legendary"]
@@ -34,17 +38,8 @@ def avg_dice(e):
     return int(m.group(1) or 1) * (int(m.group(2)) + 1) / 2 + (int(m.group(3).replace(" ", "")) if m.group(3) else 0)
 
 def load():
-    things, mons, envs, owner, ext = {}, {}, {}, {}, []
-    for f in sorted(glob.glob(os.path.join(ROOT, "data", "*.json"))):
-        d = json.load(open(f)); fn = os.path.basename(f)
-        for k in ("materials", "items"):
-            for t in d.get(k, []): t["_k"] = k; t["_f"] = fn; things[t["id"]] = t
-        for m in d.get("monsters", []): m["_f"] = fn; mons[m["id"]] = m
-        for e in d.get("environments", []):
-            if e.get("extend"): ext.append(e)
-            else: envs[e["id"]] = e
-    for e in ext:   # homebrew adds finds to an existing place (applied after every base place is loaded)
-        if e["id"] in envs: envs[e["id"]] = {**envs[e["id"]], "gather": envs[e["id"]].get("gather", []) + e.get("gather", [])}
+    things, mons, envs, grow = codexdata.merged(codexdata.load(PACKS))
+    load.grow = grow
     return things, mons, envs
 
 def main():
@@ -199,8 +194,7 @@ def main():
                 if o.get("perish") in ("1 hour",) and "salt" not in " ".join(o["tags"]):
                     pass  # preserving salts handle 1-hour parts; noted in rules
     # ---------- cultivation: can every plant be started, fits its bed, and does a bed pay about a wage?
-    grow = []
-    for f in sorted(glob.glob(os.path.join(ROOT, "data", "*.json"))): grow += json.load(open(f)).get("cultivation", [])
+    grow = load.grow
     SITE_MAX = {"plot": "common", "greenhouse": "uncommon", "cellar": "uncommon", "grove": "rare"}
     WAGE = {"mundane": 2, "common": 10, "uncommon": 20, "rare": 50}
     keystones = collections.defaultdict(list)

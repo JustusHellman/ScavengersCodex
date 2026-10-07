@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Validate Scavenger's Codex data. Usage: python3 tools/validate.py [file ...]
-With no args validates everything in data/. With args, only reports problems in those files,
-but resolves references against all files in data/."""
+Checks the base codex (data/) on its own, then the base with each homebrew pack (homebrew/) and
+the packs it requires, then everything together. With args, only reports problems in those files."""
 import json, sys, glob, os, re
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import codexdata
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TIERS = ["mundane", "common", "uncommon", "rare", "very-rare", "legendary"]
@@ -21,21 +23,10 @@ SIZES = set("Tiny Small Medium Large Huge Gargantuan".split())
 ROLES = set("base keystone supporting binding".split())
 ID_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 
-def load_all():
-    out = {}
-    for f in sorted(glob.glob(os.path.join(ROOT, "data", "*.json"))):
-        try:
-            with open(f) as fh:
-                out[f] = json.load(fh)
-        except Exception as e:
-            print(f"FATAL {os.path.basename(f)}: invalid JSON: {e}")
-            out[f] = {}
-    return out
-
-def main():
-    data = load_all()
-    only = set(os.path.abspath(a) for a in sys.argv[1:]) or set(data)
-    things, owner, monsters, mowner = {}, {}, {}, {}
+def check(parts, only):
+    data = dict(parts)
+    only = only or set(data)
+    things, owner, monsters, mowner, mext = {}, {}, {}, {}, []
     errs = []
     def err(f, msg):
         if f in only: errs.append(f"{os.path.basename(f)}: {msg}")
@@ -45,8 +36,15 @@ def main():
                 i = t.get("id")
                 if i in things: err(f, f"duplicate id '{i}' (also in {os.path.basename(owner[i])})")
                 things[i] = t; owner[i] = f; t["_kind"] = key
+        h = d.get("homebrew")
+        if h is not None:
+            if not ID_RE.match(str(h.get("name", ""))): err(f, f"pack name '{h.get('name')}' must be lowercase-with-dashes")
+            if not h.get("title"): err(f, "pack has no title")
+            for r in h.get("requires", []) or []:
+                if r not in ALLPACKS: err(f, f"pack requires '{r}', which isn't in homebrew/")
         for m in d.get("monsters", []):
             i = m.get("id")
+            if m.get("extend"): mext.append((f, m)); continue
             if i in monsters: err(f, f"duplicate monster id '{i}'")
             monsters[i] = m; mowner[i] = f
     def tier_ok(t): return t in TIERS
@@ -108,6 +106,11 @@ def main():
             if h.get("m") not in things: err(f, f"{i}: harvest unknown material '{h.get('m')}'")
             if h.get("skill") not in SKILLS: err(f, f"{i}: bad skill '{h.get('skill')}'")
             if "dice" in h and not re.match(r"^(\d*d\d+([+-]\d+)?|\d+)$", str(h["dice"])): err(f, f"{i}: harvest '{h.get('m')}' has a bad dice value '{h['dice']}'")
+    for f, m in mext:
+        if m.get("id") not in monsters: err(f, f"'{m.get('id')}' adds parts to a creature that doesn't exist"); continue
+        for h in m.get("harvest", []):
+            if h.get("m") not in things: err(f, f"{m['id']}: harvest unknown material '{h.get('m')}'")
+            if h.get("skill") not in SKILLS: err(f, f"{m['id']}: bad skill '{h.get('skill')}'")
     # An environment id may appear in more than one file only if the later entries say "extend": true.
     # Extensions add finds to an existing place; they never replace it.
     base_env = {}
@@ -145,8 +148,20 @@ def main():
             h = id_hash(prefix, i)
             if h in seen and seen[h] != i: errs.append(f"code hash collision: '{seen[h]}' and '{i}' (rename one)")
             seen[h] = i
+    return errs, len(things), len(monsters)
+
+ALLPACKS = {}
+def main():
+    ALLPACKS.update(codexdata.packs())
+    only = set(os.path.abspath(a) for a in sys.argv[1:])
+    combos = [("base", "none")] + [(n, [n]) for n in ALLPACKS] + [("all packs", "all")]
+    errs, seen = [], set()
+    for label, which in combos:
+        e, nt, nm = check(codexdata.load(which), only)
+        for x in e:
+            if x not in seen: seen.add(x); errs.append(f"[{label}] {x}")
     for e in errs: print(e)
-    print(f"--- {len(errs)} problems | {len(things)} things, {len(monsters)} monsters")
+    print(f"--- {len(errs)} problems | {nt} things, {nm} monsters (base + {len(ALLPACKS)} packs: {', '.join(ALLPACKS)})")
     return 1 if errs else 0
 
 if __name__ == "__main__":

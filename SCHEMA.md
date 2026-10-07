@@ -236,8 +236,12 @@ A later file can add finds to an environment that already exists instead of repl
 ```
 An entry with `"extend": true` carries only `id` and `gather`; its finds are appended to the base place. Without `extend`, a repeated environment id is an error. Files load in `manifest.json` order, so list the pack after the file that defines the place.
 
-### Homebrew pack (`data/homebrew-<name>.json`)
-Same sections as any data file, plus optional `"homebrew": {"name", "title", "credit", "version"}`. Items without a `src` get `"src": "Homebrew"` when added. Install with `tools/add_homebrew.py` (see README).
+### Homebrew pack (`homebrew/<name>.json`)
+Same sections as any data file, plus a header:
+`"homebrew": {"name": "kebab-id", "title": "Shown to everyone", "desc": "one line", "default": true|false, "requires": ["other-pack"], "credit": "...", "version": 1}`.
+Items without a `src` get `"src": "Homebrew"` when added. A pack may reference the base codex and the packs it `requires`, never other packs.
+`"extend": true` entries add to existing things instead of defining new ones: an environment entry adds `gather` finds, a monster entry adds `harvest` parts (duplicates of a part already there are skipped).
+`homebrew/index.json` is generated (`python3 tools/pack_index.py`); don't edit it by hand.
 
 ---------------------------------------------------------------------------------------------------
 ## 7. Tone & immersion checklist

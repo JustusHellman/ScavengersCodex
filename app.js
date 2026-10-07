@@ -126,6 +126,34 @@ let D = null;
 const HB_KEY = 'scavengers-codex.homebrew';
 let hbLoadError = '';
 function localPacks() { const l = store.get(HB_KEY, []); return Array.isArray(l) ? l.filter(p => p && p.name && p.data && typeof p.data === 'object') : []; }
+// Homebrew packs: homebrew/index.json lists them, one .json file each. All are fetched once;
+// only the chosen ones are indexed, so switching packs never needs a reload.
+let PACKS = [], RAW = [], ACTIVE = [];
+async function loadPacks() {
+  if (window.CODEX_PACKS) return window.CODEX_PACKS;
+  let idx;
+  try { const r = await fetch('homebrew/index.json', { cache: 'no-cache' }); if (!r.ok) return []; idx = await r.json(); } catch (e) { return []; }
+  const list = await Promise.all((idx.packs || []).map(p => fetch('homebrew/' + p.file).then(r => r.ok ? r.json() : null).then(data => data && { ...p, data }).catch(() => null)));
+  return list.filter(Boolean);
+}
+function packChoice() { const v = Party.localData().packs; return Array.isArray(v) ? v : Array.isArray(CFG.packs) ? CFG.packs : null; }
+function wantPacks() {
+  const by = new Map(PACKS.map(p => [p.name, p])), out = [];
+  const visit = n => { const p = by.get(n); if (!p || out.includes(n)) return; (p.requires || []).forEach(visit); out.push(n); };
+  (packChoice() || PACKS.filter(p => p.default).map(p => p.name)).forEach(visit);
+  return out;
+}
+function indexAll() {
+  ACTIVE = wantPacks();
+  const by = new Map(PACKS.map(p => [p.name, p])), chosen = RAW.concat(ACTIVE.map(n => by.get(n).data));
+  hbLoadError = '';
+  try { buildIndex(chosen.concat(localPacks().map(p => p.data))); }
+  catch (e) { hbLoadError = e.message || String(e); buildIndex(chosen); }
+}
+// switch packs: re-index, bring back anything that was put aside, redraw
+function reindex() { indexAll(); saveSat(); Party.load(); rerender(); }
+function checkPacks() { const w = wantPacks(); if (w.join('|') !== ACTIVE.join('|')) reindex(); }
+function setPacks(names) { Party.packs = names; Party.save(); reindex(); Party.note(`Homebrew in use: ${ACTIVE.map(n => (PACKS.find(p => p.name === n) || {}).title || n).join(', ') || 'none'}`); }
 async function loadRaw() {
   if (window.CODEX_DATA) return window.CODEX_DATA;
   const man = await (await fetch('data/manifest.json')).json();
@@ -142,14 +170,21 @@ function buildIndex(parts) {
       t.tags = t.tags || [];
       things.set(t.id, t);
     }
-    for (const m of p.monsters || []) { m.kind = 'monster'; if (pk) m.pack = pk; monsters.set(m.id, m); }
+    for (const m of p.monsters || []) if (!m.extend) { m.kind = 'monster'; if (pk) m.pack = pk; monsters.set(m.id, m); }
     for (const e of p.environments || []) if (!e.extend) { e.kind = 'place'; if (pk) e.pack = pk; envs.set(e.id, e); }
     for (const c of p.cultivation || []) grow.set(c.m, c);
   }
   // A homebrew pack can add finds to an existing place ("extend": true). Applied after every base place exists.
   for (const p of parts) for (const e of p.environments || []) if (e.extend) {
     const prev = envs.get(e.id); if (!prev) continue;
-    envs.set(e.id, { ...prev, gather: [...(prev.gather || []), ...(e.gather || [])] });
+    const have = new Set((prev.gather || []).map(g => g.m));
+    envs.set(e.id, { ...prev, gather: [...(prev.gather || []), ...(e.gather || []).filter(g => !have.has(g.m))] });
+  }
+  // ...and add parts to an existing creature the same way
+  for (const p of parts) for (const m of p.monsters || []) if (m.extend) {
+    const prev = monsters.get(m.id); if (!prev) continue;
+    const have = new Set((prev.harvest || []).map(h => h.m));
+    monsters.set(m.id, { ...prev, harvest: [...(prev.harvest || []), ...(m.harvest || []).filter(h => !have.has(h.m))] });
   }
   const src = new Map(), gat = new Map(), usedIn = new Map(), anySlots = [], envMon = new Map();
   const push = (map, k, v) => { if (!map.has(k)) map.set(k, []); map.get(k).push(v); };
@@ -309,7 +344,12 @@ document.addEventListener('click', ev => {
 
 /* ================================================================ satchel */
 let sat = store.get(LS_KEY, {});
-function saveSat() { for (const k of Object.keys(sat)) if (!(sat[k] > 0) || !D.things.has(k)) delete sat[k]; store.set(LS_KEY, sat); if (typeof Party !== 'undefined' && Party.known) { learnOwned(); syncStamps(); } renderNav(); }
+// Things from a homebrew pack that is switched off are put aside, not deleted, and come back when it's on again.
+let satParked = {};
+function saveSat() {
+  for (const k of Object.keys(satParked)) if (D.things.has(k)) { sat[k] = (sat[k] || 0) + satParked[k]; delete satParked[k]; }
+  for (const k of Object.keys(sat)) { if (!(sat[k] > 0)) delete sat[k]; else if (!D.things.has(k)) { satParked[k] = sat[k]; delete sat[k]; } }
+  store.set(LS_KEY, { ...satParked, ...sat }); if (typeof Party !== 'undefined' && Party.known) { learnOwned(); syncStamps(); } renderNav(); }
 function addSat(id, q = 1) { sat[id] = (sat[id] || 0) + q; saveSat(); }
 /* ---- spoilage: one stamp per part (its oldest batch), on the party's clock ---- */
 const PERISH_H = { '1 minute': 1 / 60, '1 hour': 1, '1 day': 24, '1 week': 168 };
@@ -332,7 +372,7 @@ function syncStamps() {
   if (typeof Party === 'undefined' || !Party.stamps) return;
   let ch = false;
   if (!spoilOn()) { if (Object.keys(Party.stamps).length) { Party.stamps = {}; Party.save(); } return; }
-  const have = new Set([...Object.keys(sat).filter(k => sat[k] > 0), ...Object.keys(Party.items)]);
+  const have = new Set([...Object.keys(sat).filter(k => sat[k] > 0), ...Object.keys(Party.items), ...Object.keys(satParked), ...Object.keys(Party.parked.items)]);
   for (const id of have) {
     const t = D.things.get(id); if (!t || !PERISH_H[t.perish]) continue;
     const bs = Party.stamps[id] ? batchesOf(id) : (Party.stamps[id] = []), total = (sat[id] || 0) + Party.qty(id), sum = bs.reduce((a, x) => a + x.q, 0);
@@ -498,7 +538,7 @@ function craftables() {
 
 
 /* ================================================================ config (site-wide, from config.json) */
-const CFG_DEFAULT = { dmPin: null, startInPlayerView: false, spoilage: true, player: { places: 'all', creatures: 'beasts', materials: 'common', items: 'mundane', threat: 'vague' } };
+const CFG_DEFAULT = { dmPin: null, startInPlayerView: false, spoilage: true, packs: null, player: { places: 'all', creatures: 'beasts', materials: 'common', items: 'mundane', threat: 'vague' } };
 let CFG = CFG_DEFAULT;
 async function loadConfig() {
   let c = window.CODEX_CONFIG || null;
@@ -517,19 +557,25 @@ const PARTY_KEY = 'scavengers-codex.party.v1';
 const slugify = c => String(c || '').toLowerCase().replace(/[^a-z0-9-]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 40) || 'my-party';
 const Party = {
   code: slugify(store.get(PARTY_KEY + '.code', 'my-party')),
-  items: {}, learned: new Set(), known: new Set(), research: {}, log: [], clock: 8, stamps: {}, projects: [], beds: [], spoil: null, session: null,
+  items: {}, learned: new Set(), known: new Set(), research: {}, log: [], clock: 8, stamps: {}, projects: [], beds: [], spoil: null, session: null, packs: null,
+  parked: { items: {}, learned: [], projects: [] },
   localData() { return store.get(PARTY_KEY + '.data.' + this.code, {}); },
-  save() { store.set(PARTY_KEY + '.data.' + this.code, { items: this.items, learned: [...this.learned], known: [...this.known], research: this.research, log: this.log.slice(0, 300), session: this.session, clock: this.clock, stamps: this.stamps, projects: this.projects, beds: this.beds, spoil: this.spoil }); },
+  save() { const a = this.all(); store.set(PARTY_KEY + '.data.' + this.code, { items: a.items, learned: a.learned, known: [...this.known], research: this.research, log: this.log.slice(0, 300), session: this.session, clock: this.clock, stamps: this.stamps, projects: a.projects, beds: this.beds, spoil: this.spoil, packs: this.packs }); },
+  // everything, including what belongs to homebrew packs that are switched off right now
+  all() { return { items: { ...this.parked.items, ...this.items }, learned: [...this.learned, ...this.parked.learned.filter(id => !this.learned.has(id))], projects: [...this.projects, ...this.parked.projects] }; },
   init() { this.load(); },
   load() {
     const d = this.localData();
-    this.items = {}; for (const [k, v] of Object.entries(d.items || {})) if (D.things.has(k) && +v > 0) this.items[k] = Math.floor(+v);
-    this.learned = new Set((d.learned || []).filter(id => D.things.has(id)));
+    this.parked = { items: {}, learned: [], projects: [] };
+    this.items = {}; for (const [k, v] of Object.entries(d.items || {})) if (+v > 0) { if (D.things.has(k)) this.items[k] = Math.floor(+v); else this.parked.items[k] = Math.floor(+v); }
+    this.learned = new Set((d.learned || []).filter(id => D.things.has(id))); this.parked.learned = (d.learned || []).filter(id => !D.things.has(id));
+    this.packs = Array.isArray(d.packs) ? d.packs : null;
+    this.parked.projects = (d.projects || []).filter(p => !D.things.has(p.id));
     this.known = new Set(d.known || []); this.research = d.research || {}; this.log = d.log || [];
     this.clock = +d.clock || 8; this.stamps = d.stamps || {}; this.projects = (d.projects || []).filter(p => D.things.has(p.id)); this.beds = (d.beds || []).filter(b => SITES[b.site]); this.spoil = d.spoil ?? null; this.session = d.session || null;
     partyChanged();
   },
-  setCode(c) { this.code = slugify(c); store.set(PARTY_KEY + '.code', this.code); this.load(); },
+  setCode(c) { this.code = slugify(c); store.set(PARTY_KEY + '.code', this.code); this.load(); checkPacks(); },
   qty(id) { return this.items[id] || 0; },
   set(id, q) { q = Math.max(0, Math.floor(q || 0)); if (q) { this.items[id] = q; this.known.add('t:' + id); } else delete this.items[id]; this.save(); syncStamps(); partyChanged(); },
   add(id, q) { this.set(id, this.qty(id) + q); },
@@ -540,16 +586,19 @@ const Party = {
     this.save(); partyChanged();
   },
   shareCode() {
-    const json = JSON.stringify({ c: this.code, i: this.items, l: [...this.learned], k: [...this.known], r: this.research, h: this.clock, s: this.stamps, j: this.projects, b: this.beds, sp: this.spoil });
+    const a = this.all();
+    const json = JSON.stringify({ c: this.code, i: a.items, l: a.learned, k: [...this.known], r: this.research, h: this.clock, s: this.stamps, j: a.projects, b: this.beds, sp: this.spoil, ...(this.packs ? { pk: this.packs } : {}) });
     return btoa(unescape(encodeURIComponent(json))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
   },
   parseShare(code) {
     try { const b = code.replace(/-/g, '+').replace(/_/g, '/'); const o = JSON.parse(decodeURIComponent(escape(atob(b + '==='.slice((b.length + 3) % 4))))); return o && typeof o === 'object' ? o : null; } catch (e) { return null; }
   },
   applyShare(o, replace) {
-    const items = {}; for (const [k, v] of Object.entries(o.i || {})) if (D.things.has(k) && +v > 0) items[k] = Math.floor(+v);
-    if (replace) this.items = items; else for (const [k, v] of Object.entries(items)) this.items[k] = Math.max(this.qty(k), v);
-    for (const id of (o.l || [])) if (D.things.has(id)) this.learned.add(id);
+    // the DM's homebrew choice travels with the party link
+    if (Array.isArray(o.pk)) this.packs = o.pk.filter(x => typeof x === 'string');
+    const items = {}, away = {}; for (const [k, v] of Object.entries(o.i || {})) if (+v > 0) (D.things.has(k) ? items : away)[k] = Math.floor(+v);
+    if (replace) { this.items = items; this.parked.items = away; } else { for (const [k, v] of Object.entries(items)) this.items[k] = Math.max(this.qty(k), v); for (const [k, v] of Object.entries(away)) this.parked.items[k] = Math.max(this.parked.items[k] || 0, v); }
+    for (const id of (o.l || [])) if (D.things.has(id)) this.learned.add(id); else if (!this.parked.learned.includes(id)) this.parked.learned.push(id);
     for (const k of (o.k || [])) if (typeof k === 'string') this.known.add(k);
     for (const [k, v] of Object.entries(o.r || {})) if (D.things.has(k)) this.research[k] = Math.max(this.research[k] || 0, +v || 0);
     if (+o.h) this.clock = replace ? +o.h : Math.max(this.clock, +o.h);
@@ -557,7 +606,7 @@ const Party = {
     if (o.sp != null) this.spoil = o.sp;
     if (replace) this.projects = []; for (const p of o.j || []) if (D.things.has(p.id) && !this.projects.some(x => x.uid === p.uid)) this.projects.push(p);
     if (replace) this.beds = []; for (const b of o.b || []) if (SITES[b.site] && !this.beds.some(x => x.uid === b.uid)) this.beds.push(b);
-    this.save(); partyChanged();
+    this.save(); partyChanged(); checkPacks();
   }
 };
 let partyTimer;
@@ -785,15 +834,54 @@ function consume(pid, q) {
 const NAV = [
   ['home', '#/', 'Home', 'home', 'desk'], ['items', '#/items', 'Items', 'star'], ['monsters', '#/monsters', 'Creatures', 'beast'],
   ['materials', '#/materials', 'Materials', 'leaf'], ['places', '#/places', 'Places', 'map'], ['satchel', '#/satchel', 'Satchel', 'pack'], ['garden', '#/garden', 'Garden', 'plant'], ['journal', '#/journal', 'Journal', 'book'], ['web', '#/web', 'The Web', 'web'],
-  ['sep'], ['dm', '#/dm', 'DM tools', 'dust', 'desk'], ['rules', '#/rules', 'Rules', 'book', 'desk'], ['about', '#/about', 'About', 'info', 'desk']
+  ['sep'], ['homebrew', '#/homebrew', 'Homebrew', 'pot', 'desk'], ['dm', '#/dm', 'DM tools', 'dust', 'desk'], ['rules', '#/rules', 'Rules', 'book', 'desk'], ['about', '#/about', 'About', 'info', 'desk']
 ];
 function renderNav(active) {
   if (active !== undefined) renderNav.a = active;
   const a = renderNav.a;
   $('#nav').innerHTML = NAV.map(n => n[0] === 'sep' ? '<div class="nav-sep"></div>' :
     `<a class="navlink${a === n[0] ? ' on' : ''}${n[4] ? ' ' + n[4] : ''}" href="${n[1]}"${a === n[0] ? ' aria-current="page"' : ''}>${svg(n[3])}<span class="lbl">${n[2]}</span>${n[0] === 'satchel' && (satCount() || Object.keys(Party.items).length) ? `<span class="badge">${satCount() + Object.keys(Party.items).length}</span>` : ''}</a>`).join('')
+    + navPacks()
     + `<div class="nav-foot">SRD 5.1 &amp; 5.2.1 content under CC-BY-4.0. Unofficial fan content.</div>`;
 }
+
+/* ---- homebrew packs: the DM ticks them, players see which are in play */
+P.pot = '<path d="M9 3h6M10 3v5.2L5.6 17a2.4 2.4 0 0 0 2.1 3.5h8.6a2.4 2.4 0 0 0 2.1-3.5L14 8.2V3"/><path d="M7.6 14h8.8"/>';
+function packList() {
+  const dev = localPacks().map(p => ({ name: 'device:' + p.name, title: (p.data.homebrew && p.data.homebrew.title) || p.name, desc: (p.data.homebrew && p.data.homebrew.desc) || 'Added on this device.', device: true, on: true }));
+  return PACKS.map(p => ({ ...p, on: ACTIVE.includes(p.name) })).concat(dev);
+}
+function navPacks() {
+  if (!D || !PACKS.length && !localPacks().length) return '';
+  return `<div class="nav-packs desk"><a class="nav-h" href="#/homebrew">Homebrew</a>${packList().map(p => isDM() && !p.device
+    ? `<label class="np" title="${esc(p.desc || '')}"><input type="checkbox" data-act="packtoggle" data-pack="${esc(p.name)}"${p.on ? ' checked' : ''}><span>${esc(p.title)}</span></label>`
+    : `<a class="np${p.on ? ' on' : ''}" href="#/homebrew" title="${esc(p.on ? 'In use' : 'Not in use')}"><span class="dot" aria-hidden="true"></span><span>${esc(p.title)}</span><span class="sr-only">${p.on ? ' (in use)' : ' (not in use)'}</span></a>`).join('')}</div>`;
+}
+function pHomebrew() {
+  const list = packList(), dm = isDM(), choice = packChoice();
+  const by = new Map(PACKS.map(p => [p.name, p]));
+  const row = p => {
+    const c = p.counts || {}, bits = [c.items && plural(c.items, 'item'), c.materials && plural(c.materials, 'material'), c.monsters && plural(c.monsters, 'creature')].filter(Boolean).join(' · ');
+    const needs = (p.requires || []).map(n => (by.get(n) || {}).title || n);
+    const ctl = dm && !p.device ? `<label class="switch"><input type="checkbox" data-act="packtoggle" data-pack="${esc(p.name)}"${p.on ? ' checked' : ''}><span>${p.on ? 'In use' : 'Off'}</span></label>` : `<span class="pill ${p.on ? 't-uncommon' : 't-mundane'}">${p.on ? 'In use' : 'Not in use'}</span>`;
+    return `<div class="card pad pack${p.on ? ' on' : ''}"><div class="pack-h"><div><h3>${esc(p.title)}</h3><p class="small muted">${esc([bits, p.device ? 'on this device only' : '', needs.length ? 'needs ' + needs.join(', ') : ''].filter(Boolean).join(' · '))}</p></div>${ctl}</div>${p.desc ? `<p>${esc(p.desc)}</p>` : ''}</div>`;
+  };
+  return `<div class="page"><div class="section-head"><h1>Homebrew</h1></div>
+    <p class="lede">${dm ? 'Pick the homebrew for this campaign. Ticked packs work like the rest of the codex, and players still only see what they discover.' : 'The homebrew your DM has chosen for this campaign. Packs in use work like the rest of the codex: you find their creatures, parts and recipes in play.'}</p>
+    ${dm ? `<p class="small muted">Your choice is saved with the party “${esc(Party.code)}” and goes to players with the party link (Satchel → Party satchel → Share). ${choice ? `<button class="btn sm" type="button" data-act="packreset">Use the site default</button>` : 'You are using the site default.'} To make your choice the default for everyone who opens the site, copy the settings from <a href="#/dm">DM tools → Player setup</a> into <span class="mono">config.json</span>.</p>`
+      : `<p class="small muted">Only the DM can change this. Opening your DM's party link brings their choice to this device.</p>`}
+    <div class="packs">${list.map(row).join('') || '<div class="empty">No homebrew packs are installed.</div>'}</div>
+    <p class="small muted">Switching a pack off hides its content but never deletes anything: satchel contents, learned formulas and journal entries come back when it's switched on again. ${dm ? 'New packs go in the repo’s <span class="mono">homebrew</span> folder, one file each (see the README).' : ''}</p></div>`;
+}
+document.addEventListener('change', ev => {
+  const el = ev.target; if (!el.dataset || el.dataset.act !== 'packtoggle' || !isDM()) return;
+  const set = new Set(ACTIVE); if (el.checked) set.add(el.dataset.pack); else set.delete(el.dataset.pack);
+  // a pack another one needs can't be switched off while the other is on
+  if (!el.checked) for (const p of PACKS) if (set.has(p.name) && (p.requires || []).includes(el.dataset.pack)) { toast(`${p.title} needs it`); el.checked = true; return; }
+  setPacks(PACKS.map(p => p.name).filter(n => set.has(n)));
+  toast(`${(PACKS.find(p => p.name === el.dataset.pack) || {}).title} ${el.checked ? 'switched on' : 'switched off'}`);
+});
+document.addEventListener('click', ev => { const b = ev.target.closest && ev.target.closest('[data-act=packreset]'); if (!b || !isDM()) return; Party.packs = null; Party.save(); reindex(); toast('Using the site default'); });
 
 /* ================================================================ render helpers */
 // Collapsible sections. Defaults are set per section; once someone opens or closes one,
@@ -1507,7 +1595,7 @@ function hbTab() {
   const sum = ['materials', 'items', 'monsters', 'environments', 'cultivation'].filter(k => c[k]).map(k => `${c[k]} ${k === 'monsters' ? 'creatures' : k === 'environments' ? 'place extensions' : k === 'cultivation' ? 'garden plants' : k}`).join(', ');
   const exists = HB.pack && list.some(p => p.name === HB.name);
   return `<div class="card pad"><h2>Homebrew packs</h2>
-    <p class="small muted">Add your own materials, items and creatures from a pack file. A pack is checked against the codex first and nothing is added if it has problems. A pack added here lives <b>on this device only</b>. To share it with your players, use “Download as repo file” and put it in the codex repo (see the README, “Adding your own homebrew”).</p>
+    <p class="small muted">Add your own materials, items and creatures from a pack file. A pack is checked against the codex first and nothing is added if it has problems. A pack added here lives <b>on this device only</b>. To share it with your players, use “Download as repo file” and drop it into the repo’s <span class="mono">homebrew</span> folder. It then shows up on the <a href="#/homebrew">Homebrew</a> page for everyone.</p>
     ${hbLoadError ? `<div class="empty">A saved pack could not be loaded and was skipped: ${esc(hbLoadError)}. Remove it below.</div>` : ''}
     ${list.length ? `<div class="sat-list">${list.map(p => `<div class="sat-row"><div class="txt"><span class="name">${esc((p.data.homebrew && p.data.homebrew.title) || p.name)}</span><span class="small muted">Added ${esc(String(p.addedAt || '').slice(0, 10))} · on this device</span></div><button class="btn sm" type="button" data-act="hbdl" data-name="${esc(p.name)}">Download</button><button class="btn sm" type="button" data-act="hbrm" data-name="${esc(p.name)}">Remove</button></div>`).join('')}</div>` : '<p class="small muted">No packs added on this device yet.</p>'}
     <h3>Add a pack</h3>
@@ -1520,7 +1608,7 @@ function hbTab() {
         <div class="frow"><button class="btn sm primary" type="button" data-act="hbuse">${exists ? 'Replace' : 'Add'} “${esc(HB.name)}” on this device</button><button class="btn sm" type="button" data-act="hbdl" data-name="">Download as repo file</button></div></div>`) : ''}</div>`;
 }
 function hbDownload(obj, name) {
-  try { const blob = new Blob([JSON.stringify(obj, null, 1) + '\n'], { type: 'application/json' }); const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = `homebrew-${name}.json`; document.body.appendChild(a); a.click(); a.remove(); toast('Saved. Put it in the repo’s data folder, or run tools/add_homebrew.py'); }
+  try { const blob = new Blob([JSON.stringify(obj, null, 1) + '\n'], { type: 'application/json' }); const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = `${name}.json`; document.body.appendChild(a); a.click(); a.remove(); toast('Saved. Put it in the repo’s homebrew folder'); }
   catch (e) { toast('Download blocked here'); }
 }
 function hbAct(act, el) {
@@ -1529,13 +1617,13 @@ function hbAct(act, el) {
     if (!HB.pack) return;
     const next = localPacks().filter(p => p.name !== HB.name), entry = { name: HB.name, addedAt: new Date().toISOString(), data: HB.pack };
     store.set(HB_KEY, next.concat([entry]));
-    toast(`“${HB.name}” added. Reloading…`); setTimeout(() => location.reload(), 500); return;
+    HB.text = ''; HB.res = null; HB.pack = null; reindex(); toast(`“${HB.name}” added on this device`); return;
   }
   if (act === 'hbdl') { const n = el.dataset.name; const p = n ? localPacks().find(x => x.name === n) : null; hbDownload(p ? p.data : HB.pack, p ? p.name : HB.name); return; }
   if (act === 'hbrm') {
     if (!el.dataset.confirm) { el.dataset.confirm = '1'; el.textContent = 'Tap again to remove'; return; }
     store.set(HB_KEY, localPacks().filter(p => p.name !== el.dataset.name));
-    toast('Removed. Reloading…'); setTimeout(() => location.reload(), 500);
+    reindex(); toast('Removed from this device');
   }
 }
 function pDM() {
@@ -1602,7 +1690,7 @@ function pDM() {
   } else if (DMS.tab === 'session') {
     body = sessionPanel(true);
   } else if (DMS.tab === 'settings') {
-    const P = CFG.player, cfgText = JSON.stringify({ dmPin: DMS.newPin ? pinHash(DMS.newPin) : (CFG.dmPin || store.get('scavengers-codex.localPin', null) || null), siteUrl: (DMS.siteUrl ?? CFG.siteUrl) || null, startInPlayerView: DMS.startPlayer ?? CFG.startInPlayerView, spoilage: DMS.spoilage ?? CFG.spoilage !== false, player: DMS.player || P }, null, 2);
+    const P = CFG.player, cfgText = JSON.stringify({ dmPin: DMS.newPin ? pinHash(DMS.newPin) : (CFG.dmPin || store.get('scavengers-codex.localPin', null) || null), siteUrl: (DMS.siteUrl ?? CFG.siteUrl) || null, startInPlayerView: DMS.startPlayer ?? CFG.startInPlayerView, spoilage: DMS.spoilage ?? CFG.spoilage !== false, player: DMS.player || P, packs: Party.packs || CFG.packs || null }, null, 2);
     const sel2 = (k, opts) => `<select class="select" data-pl="${k}">${opts.map(([v, l]) => `<option value="${v}"${(DMS.player || P)[k] === v ? ' selected' : ''}>${l}</option>`).join('')}</select>`;
     body = `<div class="card roller"><h2>What players know by default</h2>
         <p class="small muted">Everything else stays hidden in player view until it's discovered through a handout code, research, or by owning it.</p>
@@ -2106,6 +2194,7 @@ function pJournal(prefill) {
   return `<div class="page"><div class="section-head"><h1>Journal</h1><span class="count">party “${esc(Party.code)}”</span></div>
     <p class="lede">What your party has learned: formulas, creatures, places and finds. Your DM hands out notes, maps and recipes with codes on them. Enter one here to add it to the journal.</p>
     <form class="card roller codebox" id="codeForm"><label class="eyebrow" for="codeIn">Enter a code</label><div class="frow"><input class="textin mono" id="codeIn" autocomplete="off" spellcheck="false" placeholder="SC-XXXX-XXXX-…" value="${esc(prefill || '')}" style="height:44px;font-size:1.05rem;letter-spacing:.06em"><button class="btn primary" type="submit">Unlock</button></div><p class="small muted" id="codeErr" hidden></p></form>
+    ${PACKS.length ? `<p class="small muted">Homebrew in use: ${esc(ACTIVE.map(n => (PACKS.find(p => p.name === n) || {}).title || n).join(', ') || 'none')}. <a href="#/homebrew">See all packs →</a></p>` : ''}
     ${research.length ? `<section class="section"><div class="section-head"><h2>Research in progress</h2></div>${research.map(({ t, n }) => `<a class="craft-row" href="${linkOf(t)}" style="color:inherit;text-decoration:none"><div class="top">${ico(t)}<span class="txt"><b>${esc(t.name)}</b><br><span class="small muted">${n} of ${researchNeed(t)} weeks of study</span></span>${pill(t.tier)}</div><div class="boxes">${Array.from({ length: researchNeed(t) }, (_, i) => `<span class="box${i < n ? ' on' : ''}"></span>`).join('')}</div></a>`).join('')}</section>` : ''}
     ${fold('j.f', 'Formulas learned', chips(formulas, 'jf'), { count: formulas.length })}
     ${fold('j.m', 'Creatures', `${chips(mons, 'jm')}${mons.some(o => monLevel(o) === 1) ? '<p class="small muted">Dashed ones you know only by reputation: a name, a look, and the parts your notes mention.</p>' : ''}${CFG.player.creatures !== 'none' ? `<p class="small muted">Plus ${CFG.player.creatures === 'all' ? 'every creature' : 'ordinary beasts and people'}, which everyone knows.</p>` : ''}`, { count: mons.length })}
@@ -2204,6 +2293,7 @@ function route() {
     case 'rules': pRules.open = b; html = pRules(); break;
     case 'about': html = pAbout(); break;
     case 'garden': html = pGarden(); break;
+    case 'homebrew': html = pHomebrew(); break;
     case 'web': html = pWeb(b, parts[2]); nav = 'web'; break;
     case 'print': html = pPrint(); nav = 'dm'; break;
     default: html = notFound();
@@ -2832,9 +2922,9 @@ async function boot() {
   initTheme();
   try {
     await loadConfig();
-    const raw = await loadRaw();
-    try { buildIndex(raw.concat(localPacks().map(p => p.data))); }
-    catch (e) { hbLoadError = e.message || String(e); buildIndex(raw); }
+    RAW = await loadRaw();
+    PACKS = await loadPacks();
+    indexAll();
     mode = pinSet() && !dmUnlocked() ? 'player' : (store.get('scavengers-codex.mode', null) || (CFG.startInPlayerView ? 'player' : 'dm'));
   }
   catch (e) {

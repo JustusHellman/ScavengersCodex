@@ -1,0 +1,43 @@
+{
+ "packs": [
+  {
+   "file": "core-hunters-gear.json",
+   "name": "core-hunters-gear",
+   "title": "Core+: Hunter's Gear",
+   "desc": "About 320 original magic items, trinkets, charms and monster-hunter gear, all made from harvested parts.",
+   "default": true,
+   "requires": [],
+   "version": 1,
+   "counts": {
+    "items": 324,
+    "materials": 6
+   }
+  },
+  {
+   "file": "core-cookbook.json",
+   "name": "core-cookbook",
+   "title": "Core+: The Cookbook",
+   "desc": "42 meals for a cook with cook's utensils, from campfire fry-ups and trail food to uncommon feasts.",
+   "default": true,
+   "requires": [],
+   "version": 1,
+   "counts": {
+    "items": 42
+   }
+  },
+  {
+   "file": "rooted-city.json",
+   "name": "rooted-city",
+   "title": "The Rooted City",
+   "desc": "A campaign pack: creatures, finds and dishes for an overgrown city.",
+   "default": false,
+   "requires": [],
+   "version": 3,
+   "counts": {
+    "items": 24,
+    "materials": 54,
+    "monsters": 22
+   }
+  }
+ ]
+}

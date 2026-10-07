@@ -280,80 +280,6 @@
    "recipe": null
   },
   {
-   "id": "dye-yellow",
-   "name": "Weld Yellow Dye",
-   "tier": "mundane",
-   "tags": [
-    "reagent",
-    "liquid",
-    "light"
-   ],
-   "desc": "A bright, sunny dye steeped from flowers.",
-   "perish": "stable",
-   "value": 0.22,
-   "recipe": {
-    "components": [
-     {
-      "any": [
-       "flower"
-      ],
-      "q": 2,
-      "role": "base",
-      "label": "Any flowers"
-     },
-     {
-      "m": "vinegar",
-      "q": 1,
-      "role": "binding"
-     }
-    ],
-    "tools": [
-     "herbalism-kit"
-    ],
-    "station": "kitchen",
-    "dc": 8,
-    "time": "4 hours",
-    "gp": 0,
-    "yields": 2
-   }
-  },
-  {
-   "id": "dye-green",
-   "name": "Forest Green Dye",
-   "tier": "mundane",
-   "tags": [
-    "reagent",
-    "liquid",
-    "primal"
-   ],
-   "desc": "A rich woodland green, the colour of hunters and druids.",
-   "perish": "stable",
-   "value": 5,
-   "recipe": {
-    "components": [
-     {
-      "m": "dye-blue",
-      "q": 1,
-      "role": "base"
-     },
-     {
-      "m": "dye-yellow",
-      "q": 1,
-      "role": "supporting"
-     }
-    ],
-    "tools": [
-     "weavers-tools"
-    ],
-    "station": "none",
-    "dc": 8,
-    "time": "1 hour",
-    "gp": 0,
-    "yields": 2,
-    "lore": "Cloth is dipped first in woad, then in weld."
-   }
-  },
-  {
    "id": "dye-purple",
    "name": "Shell Purple Dye",
    "tier": "common",
@@ -925,44 +851,6 @@
     "dc": 8,
     "time": "8 hours",
     "gp": 0
-   }
-  },
-  {
-   "id": "cured-fur",
-   "name": "Cured Fur",
-   "tier": "mundane",
-   "tags": [
-    "fur",
-    "leather",
-    "cold"
-   ],
-   "desc": "A tanned pelt with the fur still on, soft on one side and supple on the other. Warm, but any magic the beast had is gone.",
-   "perish": "stable",
-   "value": 1,
-   "recipe": {
-    "components": [
-     {
-      "any": [
-       "fur"
-      ],
-      "q": 1,
-      "role": "base",
-      "label": "Any fur or pelt"
-     },
-     {
-      "m": "tanning-salts",
-      "q": 1,
-      "role": "binding"
-     }
-    ],
-    "tools": [
-     "leatherworkers-tools"
-    ],
-    "station": "tannery",
-    "dc": 8,
-    "time": "1 day",
-    "gp": 0,
-    "lore": "Like all tanning, curing a pelt strips its magic; use the raw pelt for enchanted work."
    }
   },
   {

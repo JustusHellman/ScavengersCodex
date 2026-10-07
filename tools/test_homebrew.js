@@ -3,7 +3,7 @@ const fs = require('fs'), path = require('path'), cp = require('child_process');
 const HB = require('../homebrew.js');
 const ROOT = path.join(__dirname, '..'), DATA = path.join(ROOT, 'data');
 const man = JSON.parse(fs.readFileSync(path.join(DATA, 'manifest.json'), 'utf8'));
-const base = man.files.filter(f => !f.startsWith('homebrew-')).map(f => JSON.parse(fs.readFileSync(path.join(DATA, f), 'utf8')));
+const base = man.files.map(f => JSON.parse(fs.readFileSync(path.join(DATA, f), 'utf8')));
 const ctx = { things: new Map(), monsters: new Map(), envs: new Map() };
 for (const p of base) {
   for (const k of ['materials', 'items']) for (const t of p[k] || []) ctx.things.set(t.id, t);
@@ -14,7 +14,7 @@ let fail = 0;
 const ok = (c, msg) => { if (!c) { fail++; console.log('FAIL', msg); } else console.log('ok  ', msg); };
 const clone = o => JSON.parse(JSON.stringify(o));
 const own = { things: new Set(), monsters: new Set() };
-const real = JSON.parse(fs.readFileSync(path.join(DATA, 'homebrew-rooted-city.json'), 'utf8'));
+const real = JSON.parse(fs.readFileSync(path.join(ROOT, 'homebrew', 'rooted-city.json'), 'utf8'));
 const v = (p, o = own) => HB.validate(p, ctx, o);
 
 ok(v(real).errors.length === 0, 'the shipped pack passes');
@@ -40,7 +40,7 @@ for (const [name, f] of mut) {
 }
 
 // Parity: same mutations through validate.py via add_homebrew.py --dry-run
-const man0 = fs.readFileSync(path.join(DATA, 'manifest.json'), 'utf8');
+const IDX = path.join(ROOT, 'homebrew', 'index.json'), man0 = fs.readFileSync(IDX, 'utf8');
 const tmp = fs.mkdtempSync(path.join(require('os').tmpdir(), 'hb-'));
 for (const [name, f] of mut.slice(0, -1)) {
   const p = clone(real); f(p);
@@ -48,7 +48,7 @@ for (const [name, f] of mut.slice(0, -1)) {
   const py = cp.spawnSync('python3', [path.join(ROOT, 'tools', 'add_homebrew.py'), file, '--name', 'rooted-city', '--replace', '--dry-run'], { cwd: ROOT, encoding: 'utf8' });
   ok(py.status !== 0, `validate.py also rejects: ${name}`);
 }
-const after = fs.readFileSync(path.join(DATA, 'manifest.json'), 'utf8');
-ok(after === man0 && JSON.stringify(JSON.parse(fs.readFileSync(path.join(DATA, 'homebrew-rooted-city.json'), 'utf8'))) === JSON.stringify(real), 'dry runs left the data folder untouched');
+const after = fs.readFileSync(IDX, 'utf8');
+ok(after === man0 && JSON.stringify(JSON.parse(fs.readFileSync(path.join(ROOT, 'homebrew', 'rooted-city.json'), 'utf8'))) === JSON.stringify(real), 'dry runs left the homebrew folder untouched');
 console.log(fail ? `\n${fail} FAILED` : '\nall good');
 process.exit(fail ? 1 : 0);

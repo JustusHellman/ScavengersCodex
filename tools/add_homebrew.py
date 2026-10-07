@@ -5,21 +5,24 @@
   python3 tools/add_homebrew.py my-pack.json --dry-run    check it and show what would happen
   python3 tools/add_homebrew.py my-pack.json --replace    overwrite an earlier version of the same pack
   python3 tools/add_homebrew.py --remove my-pack          take a pack back out (refuses if something else uses it)
-  python3 tools/add_homebrew.py --list                    show the homebrew packs in data/
+  python3 tools/add_homebrew.py --list                    show the homebrew packs in homebrew/
 
 A pack is a JSON file shaped like the files in data/ (materials, items, monsters, environments,
-cultivation), with an optional "homebrew": {"name": "...", "title": "...", "credit": "..."} block.
-The pack is saved as data/homebrew-<name>.json and listed in data/manifest.json.
-Afterwards commit those two files. Nothing is left behind if the checks fail.
+cultivation), with a "homebrew": {"name", "title", "desc", "default", "requires", "credit"} block.
+The pack is saved as homebrew/<name>.json and homebrew/index.json is rebuilt. Commit both.
+(Dropping the file into homebrew/ by hand works too: the deploy workflow rebuilds the index.)
+Nothing is left behind if the checks fail.
 See README.md ("Adding your own homebrew") and SCHEMA.md for the format.
 """
 import argparse, json, os, re, shutil, subprocess, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import codexdata
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA = os.path.join(ROOT, "data")
-MANIFEST = os.path.join(DATA, "manifest.json")
+DATA = os.path.join(ROOT, "homebrew")
+MANIFEST = os.path.join(DATA, "index.json")
 SECTIONS = ("materials", "items", "monsters", "environments", "cultivation")
-PREFIX = "homebrew-"
+PREFIX = ""
 
 
 def slug(s):
@@ -27,14 +30,11 @@ def slug(s):
 
 
 def read_manifest():
-    with open(MANIFEST, encoding="utf-8") as f:
-        return json.load(f)
+    return {"files": [os.path.basename(f) for f in codexdata.pack_files(ROOT)]}
 
 
-def write_manifest(m):
-    with open(MANIFEST, "w", encoding="utf-8") as f:
-        json.dump(m, f, indent=1)
-        f.write("\n")
+def write_manifest(m=None):
+    codexdata.write_index(ROOT)
 
 
 def run_validate(only):
@@ -49,7 +49,8 @@ class Snapshot:
 
     def __init__(self, path):
         self.path = path
-        self.manifest = open(MANIFEST, "rb").read()
+        os.makedirs(DATA, exist_ok=True)
+        self.manifest = open(MANIFEST, "rb").read() if os.path.exists(MANIFEST) else b'{"packs": []}\n'
         self.file = open(path, "rb").read() if os.path.exists(path) else None
 
     def restore(self):
@@ -73,7 +74,7 @@ def summarize(pack):
 def cmd_list():
     names = [f for f in read_manifest()["files"] if f.startswith(PREFIX)]
     if not names:
-        print("No homebrew packs in data/.")
+        print("No homebrew packs in homebrew/.")
     for f in names:
         with open(os.path.join(DATA, f), encoding="utf-8") as fh:
             pack = json.load(fh)
@@ -87,20 +88,19 @@ def cmd_remove(name):
     path = os.path.join(DATA, fn)
     man = read_manifest()
     if not os.path.exists(path) and fn not in man["files"]:
-        print(f"No homebrew pack called '{name}' (looked for data/{fn}). Try --list.")
+        print(f"No homebrew pack called '{name}' (looked for homebrew/{fn}). Try --list.")
         return 1
     snap = Snapshot(path)
-    man["files"] = [f for f in man["files"] if f != fn]
-    write_manifest(man)
     if os.path.exists(path):
         os.remove(path)
+    write_manifest()
     ok, out = run_validate(None)
     if not ok:
         snap.restore()
         print(out)
         print(f"\nNot removed: something else in the codex uses what '{name}' adds (see above). Nothing was changed.")
         return 1
-    print(f"Removed data/{fn} and its manifest entry. Commit data/manifest.json and the deleted file.")
+    print(f"Removed homebrew/{fn}. Commit homebrew/index.json and the deleted file.")
     return 0
 
 
@@ -116,6 +116,8 @@ def cmd_add(src, name, dry, replace):
         return 1
     meta = pack.get("homebrew") if isinstance(pack.get("homebrew"), dict) else {}
     name = slug(name or meta.get("name") or os.path.splitext(os.path.basename(src))[0].replace(".homebrew", ""))
+    meta = {**meta, "name": name, "title": meta.get("title") or name.replace("-", " ").title()}
+    pack = {"homebrew": meta, **{k: v for k, v in pack.items() if k != "homebrew"}}
     if not name:
         print("Couldn't work out a name for the pack. Pass --name.")
         return 1
@@ -132,7 +134,7 @@ def cmd_add(src, name, dry, replace):
     fn = f"{PREFIX}{name}.json"
     path = os.path.join(DATA, fn)
     if os.path.exists(path) and not replace and not dry:
-        print(f"data/{fn} already exists. Use --replace to overwrite it (or --name to pick a different name).")
+        print(f"homebrew/{fn} already exists. Use --replace to overwrite it (or --name to pick a different name).")
         return 1
     snap = Snapshot(path)
     man = read_manifest()
@@ -140,9 +142,7 @@ def cmd_add(src, name, dry, replace):
         with open(path, "w", encoding="utf-8") as f:
             json.dump(pack, f, ensure_ascii=False, indent=1)
             f.write("\n")
-        if fn not in man["files"]:
-            man["files"].append(fn)  # last, so places it extends are already loaded
-            write_manifest(man)
+        write_manifest()
         ok, out = run_validate(path)
         if not ok:
             print(out)
@@ -150,11 +150,12 @@ def cmd_add(src, name, dry, replace):
             return 1
         print(out.splitlines()[-1] if out else "")
         if dry:
-            print(f"Dry run: '{name}' would add {summarize(pack)} as data/{fn}. Nothing was changed.")
+            print(f"Dry run: '{name}' would add {summarize(pack)} as homebrew/{fn}. Nothing was changed.")
             return 0
         snap = None
         print(f"Added '{name}': {summarize(pack)}.")
-        print(f"Saved data/{fn} and listed it in data/manifest.json. Commit both files to publish.")
+        print(f"Saved homebrew/{fn} and updated homebrew/index.json. Commit both files to publish.")
+        print("It starts switched " + ("on" if meta.get("default") else "off") + " for new visitors; the DM ticks it on the Homebrew page.")
         print("Tip: run  python3 tools/playtest.py  to see how the new recipes fit the balance table.")
         return 0
     finally:
