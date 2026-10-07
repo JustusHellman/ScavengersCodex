@@ -49,7 +49,7 @@ for k in T:
     prof = med(lambda x: (x[0]["value"] - x[1] - x[2]) / max(days(x[0]["recipe"].get("time")), 0.125))
     print(f"{k:10} {len(v):4} {med(lambda x: x[0]['value']):>12,.0f} {med(lambda x: x[1]):>13,.0f} {med(lambda x: x[2]):>9,.0f} {med(lambda x: x[3]):>7,.0f} {prof:>11,.0f}")
 for k, v in issues.items():
-    print(f"\n## {k}: {len(v)}"); [print("  ", x) for x in v[:12]]
+    print(f"\n## {k}: {len(v)}"); [print("  ", x) for x in v[:12 if "--all" not in sys.argv else 999]]
 if "--fix" in sys.argv:
     n = 0
     for t, p, g, l, tot in rows:

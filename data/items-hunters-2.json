@@ -600,11 +600,6 @@
       "role": "supporting"
      },
      {
-      "m": "selenite",
-      "q": 1,
-      "role": "supporting"
-     },
-     {
       "m": "silver-wire",
       "q": 1,
       "role": "binding"
@@ -634,7 +629,7 @@
     "luck"
    ],
    "effect": "A grinning rat skull on a string of bottle caps and a pressed four-leaf clover. Once per dawn, when you roll a 1 on an ability check, you can reroll the die and must use the new roll.",
-   "value": 55,
+   "value": 65,
    "recipe": {
     "components": [
      {
@@ -1788,7 +1783,7 @@
     ],
     "station": "workshop",
     "dc": 12,
-    "time": "2 days",
+    "time": "1 day",
     "gp": 10,
     "level": 1,
     "yields": 1,
@@ -2268,7 +2263,7 @@
     "knowledge"
    ],
    "effect": "A thick primer of salvaged folios, vermilion rubrics and pressed spell components. A wizard may copy two 1st-level spells from it. Anyone can read one page as an action to cast prestidigitation, once per dawn.",
-   "value": 100,
+   "value": 125,
    "recipe": {
     "components": [
      {

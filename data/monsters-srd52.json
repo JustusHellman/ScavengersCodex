@@ -1165,7 +1165,7 @@
      },
      {
       "m": "bulette-armor-plate",
-      "q": 2,
+      "q": 1,
       "role": "keystone"
      },
      {
@@ -1587,7 +1587,7 @@
     ],
     "station": "shrine",
     "dc": 12,
-    "time": "2 days",
+    "time": "1 day",
     "gp": 10,
     "level": 1,
     "yields": 1,

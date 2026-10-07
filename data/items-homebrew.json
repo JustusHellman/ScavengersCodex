@@ -344,7 +344,7 @@
     ],
     "station": "workshop",
     "dc": 12,
-    "time": "2 days",
+    "time": "1 day",
     "gp": 10,
     "level": 1,
     "lore": "Mimic glue is the one adhesive that lets go when told to, because it was always obeying a will; lizard toe-pads give the palm the grip, the glue gives it the stubbornness."
@@ -684,9 +684,12 @@
       "role": "keystone"
      },
      {
-      "m": "blink-dog-pelt",
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "any": [
+       "fur"
+      ],
+      "label": "Any soft fur for the lining"
      },
      {
       "m": "silk-thread",
@@ -1139,7 +1142,7 @@
       "label": "Plane-slipping reagent (colour-pool glass, blink dog fang or faerie-ring mushroom)"
      },
      {
-      "m": "spider-silk-thread",
+      "m": "silk-thread",
       "q": 1,
       "role": "binding"
      }
@@ -1348,7 +1351,7 @@
      },
      {
       "m": "minotaur-horn",
-      "q": 2,
+      "q": 1,
       "role": "keystone"
      },
      {
@@ -1621,7 +1624,7 @@
      },
      {
       "m": "salamander-scales",
-      "q": 3,
+      "q": 2,
       "role": "keystone"
      },
      {

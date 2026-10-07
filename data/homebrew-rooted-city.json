@@ -822,7 +822,7 @@
     "poison"
    ],
    "effect": "Arrows tipped with thornling spines. A hit leaves a barb in the wound: the target takes an extra 1d4 poison damage at the start of its next turn unless it spends an action pulling the barb out.",
-   "value": 20,
+   "value": 50,
    "recipe": {
     "components": [
      {
@@ -871,7 +871,7 @@
     "stealth"
    ],
    "effect": "A cloak lined with rootwolf pelt and sewn through with thorns. While wearing it you have advantage on Stealth checks in wooded or overgrown places, and a creature that hits you with a melee attack takes 1d4 piercing damage.",
-   "value": 600,
+   "value": 500,
    "recipe": {
     "components": [
      {
@@ -932,7 +932,7 @@
     "stealth"
    ],
    "effect": "A pale quarterstaff of alder wood. It has 3 charges and regains 1d3 at dawn. As an action, spend 1 charge to cast silence (no concentration needed for the first minute). On a roll of 1 after spending the last charge, the staff turns to grey ash.",
-   "value": 700,
+   "value": 450,
    "recipe": {
     "components": [
      {
@@ -983,7 +983,7 @@
     "fear"
    ],
    "effect": "A wand of white antler. It has 3 charges and regains 1d3 at dawn. Spend 1 charge as an action: a creature within 30 feet must succeed on a DC 13 Wisdom save or hear a dead loved one calling it by name, taking 2d6 psychic damage and having disadvantage on attack rolls until the end of its next turn.",
-   "value": 800,
+   "value": 450,
    "recipe": {
     "components": [
      {
@@ -1002,9 +1002,13 @@
       "role": "supporting"
      },
      {
-      "m": "silver-ingot",
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "oneOf": [
+       "silver-ingot",
+       "evergreen-signet"
+      ],
+      "label": "Silver (an ingot, or a melted-down livery pin)"
      }
     ],
     "tools": [
@@ -1035,7 +1039,7 @@
     "protection"
    ],
    "effect": "A heavy shield of green-streaked iron. It grants +1 AC like a +1 shield, and you have advantage on saving throws against spells and effects from fey. A fey or plant creature that hits you with a melee attack takes 1d6 force damage.",
-   "value": 2400,
+   "value": 3000,
    "recipe": {
     "components": [
      {
@@ -1054,9 +1058,13 @@
       "role": "supporting"
      },
      {
-      "m": "steel-ingot",
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "oneOf": [
+       "steel-ingot",
+       "drowned-legion-plate"
+      ],
+      "label": "Steel (an ingot, or salvaged legion plate)"
      },
      {
       "m": "silver-ingot",
@@ -1186,16 +1194,16 @@
   {
    "id": "alder-bark-tea",
    "name": "Alder-Bark Tea",
-   "cat": "potion",
+   "cat": "meal",
    "tier": "common",
    "attune": false,
    "src": "Homebrew",
    "tags": [
-    "potion",
-    "sound",
-    "stealth"
+    "food",
+    "fear",
+    "senses"
    ],
-   "effect": "A pouch of brewed grey bark. For 1 hour you have advantage on saving throws against being frightened and on Wisdom (Insight) checks.",
+   "effect": "A cup of brewed grey bark. For 1 hour you have advantage on saving throws against being frightened and on Wisdom (Insight) checks.",
    "value": 60,
    "recipe": {
     "components": [
@@ -1225,10 +1233,15 @@
     ],
     "station": "kitchen",
     "dc": 12,
-    "time": "1 day",
+    "time": "2 hours",
     "gp": 5,
     "level": 1,
-    "lore": "The bark quiets the mind, honey carries the flavour and herbs keep the quiet from turning bitter."
+    "lore": "The bark quiets the mind, honey carries the flavour and herbs keep the quiet from turning bitter.",
+    "yields": 4
+   },
+   "perish": "1 day",
+   "meal": {
+    "lasts": "1 hour"
    }
   },
   {
@@ -1244,7 +1257,7 @@
     "wood"
    ],
    "effect": "A +1 lance of dark wood wrapped in living briar. Once per day when you hit, the target must succeed on a DC 14 Strength save or be pulled 10 feet toward you.",
-   "value": 900,
+   "value": 500,
    "recipe": {
     "components": [
      {
@@ -1894,6 +1907,163 @@
     "gp": 10,
     "level": 1,
     "lore": "Each claw is sinew-lashed over a knuckle and set in vine-sap; the gloves grip bark the way the cat did, and they are miserable for buttoning a coat."
+   }
+  },
+  {
+   "id": "quarry-horn",
+   "name": "Quarry Horn",
+   "tier": "uncommon",
+   "cat": "wondrous",
+   "value": 350,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "instrument",
+    "fear",
+    "sound"
+   ],
+   "effect": "As an action, blow the horn. Each creature of your choice within 30 feet that can hear it must succeed on a DC 13 Wisdom saving throw or be frightened of you until the end of your next turn. Beasts have disadvantage on the save. Once used, the horn can't be used this way again until the next dawn.",
+   "recipe": {
+    "tools": [
+     "woodcarvers-tools"
+    ],
+    "station": "workshop",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "cause fear"
+    ],
+    "components": [
+     {
+      "m": "horn",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "huntsman-horn-reed",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "bramble-boar-tusk",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "beeswax",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "lore": "The tusk is carved into a new bell and the reed set in the mouthpiece; anything that has ever been hunted knows the note at once."
+   }
+  },
+  {
+   "id": "charnel-pomander",
+   "name": "Charnel Pomander",
+   "tier": "uncommon",
+   "cat": "wondrous",
+   "value": 300,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "jewelry",
+    "disease",
+    "protection"
+   ],
+   "effect": "A pierced silver ball worn on a chain. While you wear it, you have advantage on saving throws against disease and against being poisoned. Once per dawn, as an action, you can hold it to a creature's face to end one disease affecting it.",
+   "recipe": {
+    "tools": [
+     "herbalism-kit",
+     "jewelers-tools"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "lesser restoration"
+    ],
+    "components": [
+     {
+      "m": "amulet-setting",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "charnel-loam",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "chapel-mint",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "lore": "Rot fights rot: a pinch of the loam, cured under mint, teaches the body what to refuse."
+   }
+  },
+  {
+   "id": "signet-of-the-standing-order",
+   "name": "Signet of the Standing Order",
+   "tier": "uncommon",
+   "cat": "ring",
+   "value": 400,
+   "attune": true,
+   "src": "Homebrew",
+   "tags": [
+    "ring",
+    "jewelry",
+    "domination",
+    "necrotic"
+   ],
+   "effect": "The ring has 3 charges and regains 1d3 expended charges at dawn. While wearing it, you can spend 1 charge to cast command (save DC 13). Undead have disadvantage on the save.",
+   "recipe": {
+    "tools": [
+     "jewelers-tools"
+    ],
+    "station": "jewelers-bench",
+    "dc": 15,
+    "time": "5 days",
+    "gp": 50,
+    "level": 3,
+    "spells": [
+     "command"
+    ],
+    "components": [
+     {
+      "m": "ring-band",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "tribune-seal",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "silver-wire",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "beeswax",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "lore": "The old seal is set face-inward against the skin, so the order it carries is given again each time the wearer speaks."
    }
   }
  ],
