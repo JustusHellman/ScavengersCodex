@@ -3,7 +3,7 @@
   {
    "id": "smokehouse-hunters-jerky",
    "name": "Smokehouse Hunter's Jerky",
-   "cat": "provision",
+   "cat": "meal",
    "tier": "mundane",
    "attune": false,
    "src": "Homebrew",
@@ -51,17 +51,18 @@
     ],
     "station": "campfire",
     "dc": 10,
-    "time": "1 day",
+    "time": "8 hours",
     "gp": 0.3,
     "level": 1,
     "yields": 5,
     "lore": "Every hunting lodge has a smoke-rack and an argument about which meat jerks best; the answer is always whatever you killed yesterday, cut thin and salted hard."
-   }
+   },
+   "meal": {}
   },
   {
    "id": "titanroast-feast",
    "name": "Titanroast Feast",
-   "cat": "provision",
+   "cat": "meal",
    "tier": "common",
    "attune": false,
    "src": "Homebrew",
@@ -112,17 +113,21 @@
     ],
     "station": "kitchen",
     "dc": 12,
-    "time": "1 day",
+    "time": "4 hours",
     "gp": 5,
     "level": 1,
     "yields": 6,
     "lore": "Frontier cooks swear the heart of an animal that ran until it dropped carries its stubbornness into the roast; the giant meat is simply there so everyone gets a slab."
+   },
+   "perish": "1 day",
+   "meal": {
+    "lasts": "8 hours"
    }
   },
   {
    "id": "brinepot-chowder",
    "name": "Brinepot Chowder",
-   "cat": "provision",
+   "cat": "meal",
    "tier": "mundane",
    "attune": false,
    "src": "Homebrew",
@@ -164,17 +169,21 @@
     ],
     "station": "campfire",
     "dc": 10,
-    "time": "4 hours",
+    "time": "2 hours",
     "gp": 0.2,
     "level": 1,
     "yields": 4,
     "lore": "Tentacle meat is too tough to eat on its own, so harbour cooks boil it with shark and crab until the whole pot turns gluey and warming."
+   },
+   "perish": "1 day",
+   "meal": {
+    "lasts": "8 hours"
    }
   },
   {
    "id": "bogmans-pepperpot",
    "name": "Bogman's Pepperpot",
-   "cat": "provision",
+   "cat": "meal",
    "tier": "mundane",
    "attune": false,
    "src": "Homebrew",
@@ -215,17 +224,21 @@
     ],
     "station": "campfire",
     "dc": 10,
-    "time": "4 hours",
+    "time": "2 hours",
     "gp": 0.3,
     "level": 1,
     "yields": 4,
     "lore": "Swamp folk learned long ago that anything scaly or slimy is safe to eat once it's drowned in pepper and vinegar, and that the same brew keeps bog-fever away."
+   },
+   "perish": "1 day",
+   "meal": {
+    "lasts": "8 hours"
    }
   },
   {
    "id": "crawlers-protein-cake",
    "name": "Crawler's Protein Cake",
-   "cat": "provision",
+   "cat": "meal",
    "tier": "mundane",
    "attune": false,
    "src": "Homebrew",
@@ -262,17 +275,19 @@
     ],
     "station": "kitchen",
     "dc": 10,
-    "time": "1 day",
+    "time": "4 hours",
     "gp": 0.3,
     "level": 1,
     "yields": 6,
     "lore": "Underdark traders and desert caravans both prize bug-meal for its weight; honey binds the crumbly paste into cakes that survive a month in a saddlebag."
-   }
+   },
+   "perish": "1 week",
+   "meal": {}
   },
   {
    "id": "frostmarch-pemmican",
    "name": "Frostmarch Pemmican",
-   "cat": "provision",
+   "cat": "meal",
    "tier": "mundane",
    "attune": false,
    "src": "Homebrew",
@@ -316,17 +331,18 @@
     ],
     "station": "campfire",
     "dc": 10,
-    "time": "1 day",
+    "time": "8 hours",
     "gp": 0.7,
     "level": 1,
     "yields": 5,
     "lore": "Beasts that survive the tundra carry their warmth as fat; pound that fat into lean meat and a traveller carries a little of the beast's winter coat in their belly."
-   }
+   },
+   "meal": {}
   },
   {
    "id": "warheart-oat-mash",
    "name": "Warheart Oat-Mash",
-   "cat": "provision",
+   "cat": "meal",
    "tier": "common",
    "attune": false,
    "src": "Homebrew",
@@ -370,11 +386,15 @@
     ],
     "station": "campfire",
     "dc": 12,
-    "time": "1 day",
+    "time": "1 hour",
     "gp": 5,
     "level": 1,
     "yields": 4,
     "lore": "Cavalry grooms dry the heart of a warhorse that died charging and grate a pinch into each feed; horses, they say, remember the courage of their own kind."
+   },
+   "perish": "1 day",
+   "meal": {
+    "lasts": "8 hours"
    }
   },
   {

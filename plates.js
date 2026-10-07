@@ -404,7 +404,7 @@
     if (c === 'scroll') return ['scroll', IT.scroll(X)];
     if (c === 'ring') return ['ring', IT.ring(X)];
     if (c === 'rod' || c === 'staff' || c === 'wand') return [c, IT.staff(X, c)];
-    if (c === 'provision') return ['bowl', IT.bowl(X)];
+    if (c === 'provision' || c === 'meal') return ['bowl', IT.bowl(X)];
     if (c === 'wondrous' || c === 'gear' || c === 'tool') {
       if (/boot|slipper|shoe|sandal/.test(nm)) return ['boots', IT.boots(X)];
       if (/\b(manual|tome|book|ledger|primer|libram|grimoire|codex|folio)\b/.test(nm)) return ['book', IT.book(X)];

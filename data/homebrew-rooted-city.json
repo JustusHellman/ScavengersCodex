@@ -3,7 +3,7 @@
   "name": "rooted-city",
   "title": "The Rooted City",
   "credit": "Original homebrew for a D&D 5e campaign.",
-  "version": 2
+  "version": 3
  },
  "materials": [
   {
@@ -427,6 +427,338 @@
    "perish": "stable",
    "value": 320,
    "recipe": null
+  },
+  {
+   "id": "thornling-heart-bud",
+   "name": "Thornling Heart-Bud",
+   "tier": "common",
+   "tags": [
+    "seed",
+    "growth",
+    "healing",
+    "plant"
+   ],
+   "desc": "A tight green knot from the core of a thornling, sticky and smelling of crushed rose-leaf. Cooks stuff roasts with it to keep them moist, and herbalists say it settles a weary body.",
+   "perish": "1 week",
+   "value": 8
+  },
+  {
+   "id": "drudge-rootlets",
+   "name": "Drudge Rootlets",
+   "tier": "mundane",
+   "tags": [
+    "root",
+    "food",
+    "plant"
+   ],
+   "desc": "Pale, finger-thick roots that served a loamborn drudge as sinews. Scrubbed of clay they cook like sweet parsnips and thicken any pottage.",
+   "perish": "1 week",
+   "value": 0.1
+  },
+  {
+   "id": "rootwolf-meat",
+   "name": "Rootwolf Meat",
+   "tier": "mundane",
+   "tags": [
+    "meat",
+    "food",
+    "monstrosity"
+   ],
+   "desc": "Lean, dark meat with a faint taste of resin and cut grass. Hung for a night it loses its sappiness and makes a fine pie or stew.",
+   "perish": "1 day",
+   "value": 0.1
+  },
+  {
+   "id": "rootwolf-heart",
+   "name": "Rootwolf Heart",
+   "tier": "common",
+   "tags": [
+    "heart",
+    "stealth",
+    "speed",
+    "monstrosity"
+   ],
+   "desc": "A small, hard heart threaded with fine rootlets, which beats slowly for a minute after the kill. Poachers' cooks bake it into pies said to lighten the step.",
+   "perish": "1 hour",
+   "value": 20
+  },
+  {
+   "id": "bramble-boar-haunch",
+   "name": "Bramble-Boar Haunch",
+   "tier": "mundane",
+   "tags": [
+    "meat",
+    "food",
+    "monstrosity"
+   ],
+   "desc": "A heavy hindquarter of marbled pork with a green tinge to the fat. Roasted slow under its own peeled briars, it feeds a whole street.",
+   "perish": "1 day",
+   "value": 0.2
+  },
+  {
+   "id": "bramble-boar-heart",
+   "name": "Bramble-Boar Heart",
+   "tier": "common",
+   "tags": [
+    "heart",
+    "toughness",
+    "strength",
+    "monstrosity"
+   ],
+   "desc": "A fist-and-a-half of dense, dark muscle with thorn-like ridges on its outer wall. Roasted inside the joint, it is believed to lend the boar's stubborn hide to whoever eats it.",
+   "perish": "1 hour",
+   "value": 28
+  },
+  {
+   "id": "cobblevine-sap",
+   "name": "Cobblevine Sap",
+   "tier": "common",
+   "tags": [
+    "sap",
+    "binding",
+    "climbing",
+    "plant"
+   ],
+   "desc": "A slow, honey-coloured sap tapped from the thick stem of a cobblevine. It sets tacky as it cools, and cooks use it as a sticky, faintly sweet glaze.",
+   "perish": "1 week",
+   "value": 6
+  },
+  {
+   "id": "hushed-alder-catkins",
+   "name": "Hushed Alder Catkins",
+   "tier": "common",
+   "tags": [
+    "flower",
+    "sound",
+    "stealth",
+    "plant"
+   ],
+   "desc": "Long grey catkins shaken from a hushed alder; they fall without a sound. Baked into pastry or steeped, they make the eater's movements oddly quiet.",
+   "perish": "1 week",
+   "value": 12
+  },
+  {
+   "id": "canopy-lurker-claws",
+   "name": "Canopy Lurker Claws",
+   "tier": "common",
+   "tags": [
+    "claw",
+    "climbing",
+    "monstrosity"
+   ],
+   "desc": "Hooked, bark-brown claws that bite into timber and stone alike. Leatherworkers set them into climbing gloves and boot-spurs.",
+   "perish": "stable",
+   "value": 5
+  },
+  {
+   "id": "mourning-elk-venison",
+   "name": "Mourning-Elk Venison",
+   "tier": "common",
+   "tags": [
+    "meat",
+    "food",
+    "knowledge",
+    "monstrosity"
+   ],
+   "desc": "Dark, fine-grained venison that smells faintly of autumn leaves. Those who eat it often dream of people they have lost, clearly and without pain.",
+   "perish": "1 day",
+   "value": 5
+  },
+  {
+   "id": "mourning-elk-heart",
+   "name": "Mourning-Elk Heart",
+   "tier": "uncommon",
+   "tags": [
+    "heart",
+    "psychic",
+    "resistance",
+    "knowledge",
+    "monstrosity"
+   ],
+   "desc": "A great, heavy heart, cold to the touch and utterly silent. Cooked at wakes, it is said to steady the mind against grief and things that would break it.",
+   "perish": "1 hour",
+   "value": 110
+  },
+  {
+   "id": "threadwalker-legs",
+   "name": "Threadwalker Legs",
+   "tier": "common",
+   "tags": [
+    "meat",
+    "food",
+    "climbing",
+    "monstrosity"
+   ],
+   "desc": "The long, jointed walking-legs of a threadwalker. Cracked like crab, the pale meat inside is sweet and sticky, and rooftop foragers swear it steadies a climbing hand.",
+   "perish": "1 day",
+   "value": 4
+  },
+  {
+   "id": "pantry-preserves",
+   "name": "Pantry Preserves",
+   "tier": "mundane",
+   "tags": [
+    "fruit",
+    "food",
+    "salvage"
+   ],
+   "desc": "A stoppered jar of fruit preserves from an old larder, carried in an apron pocket. Still sweet; cooks stretch it into tarts and glazes.",
+   "perish": "stable",
+   "value": 0.5
+  },
+  {
+   "id": "legion-hardtack",
+   "name": "Legion Hardtack",
+   "tier": "mundane",
+   "tags": [
+    "food",
+    "salvage"
+   ],
+   "desc": "A wax-sealed ration tin of hard soldier's biscuit. About half the tins are still dry inside; soaked and broken into a pot, it makes a filling pottage.",
+   "perish": "stable",
+   "value": 0.1
+  },
+  {
+   "id": "sentinel-acorn",
+   "name": "Sentinel Acorn",
+   "tier": "uncommon",
+   "tags": [
+    "seed",
+    "food",
+    "toughness",
+    "primal",
+    "plant"
+   ],
+   "desc": "An acorn the size of a fist, red-brown and warm, dropped from a walking heartwood tree. Leached and roasted, its meat is dense, rich and famously fortifying.",
+   "perish": "1 week",
+   "value": 80
+  },
+  {
+   "id": "cobble-berries",
+   "name": "Cobble-Berries",
+   "tier": "mundane",
+   "tags": [
+    "fruit",
+    "food"
+   ],
+   "desc": "Small, dark, tart berries on low brambles that fruit along kerbs and between paving stones. Bakers stretch them into tarts and jams; children eat them by the fistful.",
+   "perish": "1 week",
+   "value": 0.1
+  },
+  {
+   "id": "gutter-chanterelles",
+   "name": "Gutter Chanterelles",
+   "tier": "mundane",
+   "tags": [
+    "fungus",
+    "food"
+   ],
+   "desc": "Golden, apricot-scented mushrooms that crowd leaf-choked gutters and drains after rain. Good fried in fat; easily confused with the far less pleasant gutter cap.",
+   "perish": "1 day",
+   "value": 0.2
+  },
+  {
+   "id": "windowsill-sorrel",
+   "name": "Windowsill Sorrel",
+   "tier": "mundane",
+   "tags": [
+    "herb",
+    "leaf",
+    "food"
+   ],
+   "desc": "A sour, lemony leaf that has spread from old window boxes across sills, ledges and balconies. Wilted into a pan it brightens any dish.",
+   "perish": "1 week",
+   "value": 0.1
+  },
+  {
+   "id": "belltower-moss",
+   "name": "Belltower Moss",
+   "tier": "common",
+   "tags": [
+    "moss",
+    "herb",
+    "senses",
+    "sound"
+   ],
+   "desc": "A soft, grey-gold moss that grows only on bell-frames and louvres where bells rang for generations; it trembles at the faintest sound. Brewed into broth, it sharpens the ear.",
+   "perish": "1 week",
+   "value": 15
+  },
+  {
+   "id": "rafter-honeycomb",
+   "name": "Rafter Honeycomb",
+   "tier": "mundane",
+   "tags": [
+    "food",
+    "wax",
+    "healing"
+   ],
+   "desc": "Dark, flower-heavy comb from wild bees nesting in the rafters of roofless houses. The honey is thick and bitter-sweet; the wax is good for sealing jars.",
+   "perish": "1 week",
+   "value": 0.3
+  },
+  {
+   "id": "paving-acorns",
+   "name": "Paving-Crack Acorns",
+   "tier": "mundane",
+   "tags": [
+    "seed",
+    "food"
+   ],
+   "desc": "Acorns from the young oaks that have heaved up the city's paving. Leached in running water and ground, they make a coarse, nutty flour for crusts and flatbreads.",
+   "perish": "stable",
+   "value": 0.05
+  },
+  {
+   "id": "chapel-mint",
+   "name": "Chapel Mint",
+   "tier": "mundane",
+   "tags": [
+    "herb",
+    "leaf",
+    "food"
+   ],
+   "desc": "A tall, purple-stemmed mint run wild from old cloister and chapel herb-beds. Cooks use it to lift fatty meat and to make stale water drinkable.",
+   "perish": "1 week",
+   "value": 0.1
+  },
+  {
+   "id": "cellar-morels",
+   "name": "Cellar Morels",
+   "tier": "mundane",
+   "tags": [
+    "fungus",
+    "food"
+   ],
+   "desc": "Honeycomb-capped mushrooms that sprout on old barrels and beams in root-split cellars. Earthy and meaty, they fry well and dry better.",
+   "perish": "1 week",
+   "value": 0.3
+  },
+  {
+   "id": "fountain-cress",
+   "name": "Fountain Cress",
+   "tier": "mundane",
+   "tags": [
+    "herb",
+    "leaf",
+    "food",
+    "water"
+   ],
+   "desc": "A peppery watercress choking the basins of silted fountains and horse-troughs. Eaten raw or wilted; wash it well.",
+   "perish": "1 day",
+   "value": 0.1
+  },
+  {
+   "id": "briar-hips",
+   "name": "Briar Hips",
+   "tier": "mundane",
+   "tags": [
+    "fruit",
+    "food"
+   ],
+   "desc": "The fat red hips of wild briars that have swallowed the city's hedges and railings. Sweetest after the first frost, they make glazes, syrups and a warming tea.",
+   "perish": "1 week",
+   "value": 0.1
   }
  ],
  "items": [
@@ -1049,6 +1381,520 @@
     ],
     "lore": "The frost-silk remembers the cold of a bargain, silver wire keeps the clasp honest and thread ties the terms to the wearer."
    }
+  },
+  {
+   "id": "cobble-berry-tart",
+   "name": "Cobble-Berry Tart",
+   "tier": "mundane",
+   "cat": "meal",
+   "value": 0.5,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food"
+   ],
+   "perish": "1 week",
+   "meal": {},
+   "effect": "A dark, tart-sweet pie in a ground-acorn crust. A slice counts as a meal, and sharing it softens people: for 1 hour you gain a +1 bonus to Charisma (Persuasion) checks against a creature that ate a slice with you.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "kitchen",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0.3,
+    "level": 1,
+    "yields": 4,
+    "components": [
+     {
+      "m": "grain",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "cobble-berries",
+      "q": 3,
+      "role": "supporting"
+     },
+     {
+      "m": "paving-acorns",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "oneOf": [
+       "rafter-honeycomb",
+       "pantry-preserves",
+       "honey"
+      ],
+      "q": 1,
+      "role": "binding",
+      "label": "Something sweet (honeycomb, preserves or honey)"
+     }
+    ],
+    "lore": "Every street with a working oven bakes these by late summer; the acorn crust is gritty, the berries stain everything, and nobody ever turns a slice down."
+   }
+  },
+  {
+   "id": "gutter-and-sill-fry",
+   "name": "Gutter-and-Sill Fry",
+   "tier": "mundane",
+   "cat": "meal",
+   "value": 0.3,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food"
+   ],
+   "perish": "1 day",
+   "meal": {},
+   "effect": "A sizzling pan of street mushrooms wilted with sorrel and cress. A plate counts as a meal, and the sour greens sharpen you: you gain a +1 bonus to the next Wisdom (Perception) check you make within 1 hour.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "campfire",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0.2,
+    "level": 1,
+    "yields": 4,
+    "components": [
+     {
+      "oneOf": [
+       "gutter-chanterelles",
+       "cellar-morels"
+      ],
+      "q": 2,
+      "role": "supporting",
+      "label": "City mushrooms"
+     },
+     {
+      "m": "windowsill-sorrel",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "fountain-cress",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "oneOf": [
+       "tallow",
+       "black-bear-fat",
+       "brown-bear-fat"
+      ],
+      "q": 1,
+      "role": "binding",
+      "label": "Cooking fat"
+     }
+    ],
+    "lore": "Picked from the drain, the sill and the fountain on the walk home; the only real skill is knowing a chanterelle from a gutter cap."
+   }
+  },
+  {
+   "id": "drowned-ration-pottage",
+   "name": "Drowned-Ration Pottage",
+   "tier": "mundane",
+   "cat": "meal",
+   "value": 0.5,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food"
+   ],
+   "perish": "1 day",
+   "meal": {},
+   "effect": "A thick soldier's pottage of soaked hardtack, roots and whatever meat the street gave up. A bowl counts as a day's food and warms you through: you have advantage on the next Constitution saving throw you make against cold weather before your next long rest.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "campfire",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0.2,
+    "level": 1,
+    "yields": 5,
+    "components": [
+     {
+      "oneOf": [
+       "legion-hardtack",
+       "rations",
+       "grain"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Hardtack or old rations"
+     },
+     {
+      "oneOf": [
+       "rootwolf-meat",
+       "bramble-boar-haunch",
+       "boar-meat",
+       "deer-venison"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Any street-hunted meat"
+     },
+     {
+      "m": "drudge-rootlets",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "chapel-mint",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "salt",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "lore": "The biscuit comes out of a dead soldier's tin as often as not; soak it an hour, boil it with roots and mint, and it is as good as the day it was baked."
+   }
+  },
+  {
+   "id": "rootwolf-pie",
+   "name": "Rootwolf Pie",
+   "tier": "common",
+   "cat": "meal",
+   "value": 60,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food",
+    "stealth"
+   ],
+   "perish": "1 week",
+   "meal": {
+    "lasts": "8 hours"
+   },
+   "effect": "A dense, peppery pie of rootwolf meat with the heart baked into the middle. For 8 hours you have advantage on Dexterity (Stealth) checks made to move quietly through overgrown streets, woods or rubble.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "kitchen",
+    "dc": 12,
+    "time": "3 hours",
+    "gp": 5,
+    "level": 1,
+    "yields": 4,
+    "components": [
+     {
+      "m": "rootwolf-meat",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "rootwolf-heart",
+       "hushed-alder-catkins"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Quiet-footed ingredient (rootwolf heart or hushed alder catkins)"
+     },
+     {
+      "m": "drudge-rootlets",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "grain",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "lore": "Poachers' wives bake the heart whole in the centre so whoever cuts the pie gets the quiet first; catkins do the same job when the wolf got away."
+   }
+  },
+  {
+   "id": "bramble-boar-briar-roast",
+   "name": "Bramble-Boar Briar Roast",
+   "tier": "common",
+   "cat": "meal",
+   "value": 65,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food",
+    "toughness"
+   ],
+   "perish": "1 day",
+   "meal": {
+    "lasts": "8 hours"
+   },
+   "effect": "A haunch roasted under its own peeled briars and glazed with vine-sap, enough for a street. Up to six creatures who share it within an hour gain this benefit for 8 hours: the first time you are reduced to half your hit point maximum or fewer, you gain temporary hit points equal to 1d4 + your proficiency bonus.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "kitchen",
+    "dc": 12,
+    "time": "4 hours",
+    "gp": 5,
+    "level": 1,
+    "yields": 6,
+    "components": [
+     {
+      "m": "bramble-boar-haunch",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "bramble-boar-heart",
+       "sentinel-acorn"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Stubborn heart (bramble-boar heart or sentinel acorn)"
+     },
+     {
+      "m": "thornling-heart-bud",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "briar-hips",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "cobblevine-sap",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "lore": "The heart goes in the belly of the joint with a thornling bud for moisture; hunters say you shrug off the first bad blow the morning after, the way the boar shrugs off the briars."
+   }
+  },
+  {
+   "id": "belltower-broth",
+   "name": "Belltower Broth",
+   "tier": "common",
+   "cat": "meal",
+   "value": 55,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food",
+    "senses",
+    "sound"
+   ],
+   "perish": "1 day",
+   "meal": {
+    "lasts": "8 hours"
+   },
+   "effect": "A thin, grey-gold broth that leaves a faint ringing in the ears. For 8 hours you have advantage on Wisdom (Perception) checks that rely on hearing.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "campfire",
+    "dc": 12,
+    "time": "2 hours",
+    "gp": 5,
+    "level": 1,
+    "yields": 4,
+    "components": [
+     {
+      "m": "belltower-moss",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "oneOf": [
+       "gutter-chanterelles",
+       "cellar-morels"
+      ],
+      "q": 2,
+      "role": "supporting",
+      "label": "City mushrooms"
+     },
+     {
+      "m": "windowsill-sorrel",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "salt",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "lore": "Night watchers climb for the moss because it still shivers at a bell rung streets away; simmered gently, it hands that shiver on to whoever drinks it."
+   }
+  },
+  {
+   "id": "rooftop-threadwalker-skewers",
+   "name": "Rooftop Threadwalker Skewers",
+   "tier": "common",
+   "cat": "meal",
+   "value": 55,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food",
+    "climbing"
+   ],
+   "perish": "1 day",
+   "meal": {
+    "lasts": "8 hours"
+   },
+   "effect": "Cracked threadwalker legs grilled with a sticky vine-sap glaze. For 8 hours you have advantage on Strength (Athletics) checks made to climb.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "campfire",
+    "dc": 12,
+    "time": "2 hours",
+    "gp": 5,
+    "level": 1,
+    "yields": 4,
+    "components": [
+     {
+      "m": "threadwalker-legs",
+      "q": 2,
+      "role": "keystone"
+     },
+     {
+      "m": "chapel-mint",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "briar-hips",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "cobblevine-sap",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "lore": "Rooftop foragers grill the legs over a chimney-pot fire; the meat is sweet as crab and leaves your fingers tacky long after you have licked them clean."
+   }
+  },
+  {
+   "id": "elk-wake-remembrance-stew",
+   "name": "Elk-Wake Remembrance Stew",
+   "tier": "uncommon",
+   "cat": "meal",
+   "value": 250,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food",
+    "psychic",
+    "resistance",
+    "knowledge"
+   ],
+   "perish": "1 day",
+   "meal": {
+    "lasts": "8 hours"
+   },
+   "effect": "A dark, quiet stew served at wakes. For 8 hours you have resistance to psychic damage, and you have advantage on Intelligence checks made to recall something you have seen, heard or read.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "kitchen",
+    "dc": 15,
+    "time": "6 hours",
+    "gp": 25,
+    "level": 3,
+    "yields": 4,
+    "components": [
+     {
+      "m": "mourning-elk-venison",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "mourning-elk-heart",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "memory-root",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "chapel-mint",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "rafter-honeycomb",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "lore": "The heart is simmered whole and in silence alongside memory-root; mourners say the stew lets you remember the dead clearly without the remembering hurting."
+   }
+  },
+  {
+   "id": "lurker-claw-climbing-gloves",
+   "name": "Lurker-Claw Climbing Gloves",
+   "cat": "wondrous",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "gear",
+    "climbing"
+   ],
+   "effect": "Leather gloves set with hooked canopy lurker claws. While wearing them you have advantage on Strength (Athletics) checks made to climb trees, timber and crumbling masonry, but you have disadvantage on checks that need fine finger-work.",
+   "value": 75,
+   "recipe": {
+    "components": [
+     {
+      "m": "gloves",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "canopy-lurker-claws",
+      "q": 4,
+      "role": "keystone"
+     },
+     {
+      "m": "rootwolf-sinew",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "q": 1,
+      "role": "binding",
+      "oneOf": [
+       "cobblevine-sap",
+       "cobblevine-tendril"
+      ],
+      "label": "Cobblevine sap or a tendril"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "workshop",
+    "dc": 12,
+    "time": "2 days",
+    "gp": 10,
+    "level": 1,
+    "lore": "Each claw is sinew-lashed over a knuckle and set in vine-sap; the gloves grip bark the way the cat did, and they are miserable for buttoning a coat."
+   }
   }
  ],
  "monsters": [
@@ -1072,6 +1918,13 @@
      "skill": "Survival",
      "dice": "1d4",
      "note": "Cut at the root while the thorn is still green, or it snaps."
+    },
+    {
+     "m": "thornling-heart-bud",
+     "q": 1,
+     "dc": 11,
+     "skill": "Nature",
+     "note": "A green knot at the core; split the clump with a knife before the thorns brown."
     }
    ],
    "src": "Homebrew"
@@ -1096,6 +1949,14 @@
      "skill": "Nature",
      "dice": "1d4",
      "note": "A DC 14 Nature check notices a bead, button or bone-chip embedded in the clay."
+    },
+    {
+     "m": "drudge-rootlets",
+     "q": 2,
+     "dc": 8,
+     "skill": "Nature",
+     "dice": "1d4+1",
+     "note": "The pale roots that served as its sinews. Scrub off the clay before cooking."
     }
    ],
    "src": "Homebrew"
@@ -1126,6 +1987,21 @@
      "q": 2,
      "dc": 12,
      "skill": "Survival"
+    },
+    {
+     "m": "rootwolf-meat",
+     "q": 3,
+     "dc": 9,
+     "skill": "Survival",
+     "dice": "2d4",
+     "note": "Lean and resinous; hang it overnight or it tastes of sap."
+    },
+    {
+     "m": "rootwolf-heart",
+     "q": 1,
+     "dc": 12,
+     "skill": "Medicine",
+     "note": "Take it quickly; it stops beating within the minute and spoils within the hour."
     }
    ],
    "src": "Homebrew"
@@ -1150,6 +2026,21 @@
      "dc": 11,
      "skill": "Survival",
      "note": "Handle with gloves; the thorn-knot at the base punctures a careless hand."
+    },
+    {
+     "m": "bramble-boar-haunch",
+     "q": 2,
+     "dc": 9,
+     "skill": "Survival",
+     "dice": "1d4+2",
+     "note": "Peel the briar-hide back first; the thorns run under the skin."
+    },
+    {
+     "m": "bramble-boar-heart",
+     "q": 1,
+     "dc": 12,
+     "skill": "Medicine",
+     "note": "Reach in under the ribs with gloved hands; the heart wall is ridged and sharp."
     }
    ],
    "src": "Homebrew"
@@ -1173,6 +2064,14 @@
      "dc": 10,
      "skill": "Nature",
      "dice": "1d4+1"
+    },
+    {
+     "m": "cobblevine-sap",
+     "q": 1,
+     "dc": 11,
+     "skill": "Nature",
+     "dice": "1d3",
+     "note": "Tap the thick stem where it dives under the paving; it bleeds slowly for an hour."
     }
    ],
    "src": "Homebrew"
@@ -1221,6 +2120,14 @@
      "skill": "Nature",
      "dice": "1d4",
      "note": "Strip the bark only after a spoken apology; strips taken in anger are brittle."
+    },
+    {
+     "m": "hushed-alder-catkins",
+     "q": 1,
+     "dc": 12,
+     "skill": "Nature",
+     "dice": "1d4",
+     "note": "Shake them down onto a cloth; catkins picked by hand turn brown and lose their quiet."
     }
    ],
    "src": "Homebrew"
@@ -1245,6 +2152,13 @@
      "dc": 12,
      "skill": "Survival",
      "note": "The pelt loses its camouflage if cut across the spine."
+    },
+    {
+     "m": "canopy-lurker-claws",
+     "q": 4,
+     "dc": 11,
+     "skill": "Survival",
+     "note": "Draw them out with the toe-pads attached; they keep once dried."
     }
    ],
    "src": "Homebrew"
@@ -1298,6 +2212,21 @@
      "dc": 13,
      "skill": "Nature",
      "note": "Wilts within a day. Pluck it before the antler is cut."
+    },
+    {
+     "m": "mourning-elk-venison",
+     "q": 4,
+     "dc": 12,
+     "skill": "Survival",
+     "dice": "2d4",
+     "note": "Butcher it where it fell, and quietly; the meat sours if the carcass is dragged."
+    },
+    {
+     "m": "mourning-elk-heart",
+     "q": 1,
+     "dc": 15,
+     "skill": "Medicine",
+     "note": "Take it within the hour. It is heavy as a stone and makes no sound when dropped."
     }
    ],
    "src": "Homebrew"
@@ -1320,6 +2249,13 @@
      "dc": 8,
      "skill": "Investigation",
      "note": "A livery-pin. Their bodies are not harvestable."
+    },
+    {
+     "m": "pantry-preserves",
+     "q": 1,
+     "dc": 8,
+     "skill": "Investigation",
+     "note": "A stoppered jar of preserves in an apron pocket. Their bodies are not harvestable."
     }
    ],
    "src": "Homebrew"
@@ -1402,6 +2338,14 @@
      "dc": 16,
      "skill": "Nature",
      "note": "Needs a saw and a day; the grain fights the blade."
+    },
+    {
+     "m": "sentinel-acorn",
+     "q": 1,
+     "dc": 15,
+     "skill": "Nature",
+     "dice": "1d3",
+     "note": "Gathered from the crown after it falls still; leach in running water before roasting."
     }
    ],
    "src": "Homebrew"
@@ -1456,6 +2400,14 @@
      "skill": "Nature",
      "dice": "1d4",
      "note": "Cut the strands while the creature is still, or the silk slips away along the seam."
+    },
+    {
+     "m": "threadwalker-legs",
+     "q": 2,
+     "dc": 12,
+     "skill": "Survival",
+     "dice": "1d4+1",
+     "note": "Only the long walking-legs are good; the body is bitter. Crack them like crab."
     }
    ],
    "src": "Homebrew"
@@ -1510,6 +2462,13 @@
      "skill": "Investigation",
      "dice": "1d3",
      "note": "A unit tag is stamped on the inside of the breastplate."
+    },
+    {
+     "m": "legion-hardtack",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation",
+     "note": "A wax-sealed ration tin in the belt-pouch; about half are still dry inside. The body is not food."
     }
    ],
    "src": "Homebrew"
@@ -1539,6 +2498,14 @@
      "q": 2,
      "dc": 12,
      "skill": "Investigation"
+    },
+    {
+     "m": "legion-hardtack",
+     "q": 1,
+     "dc": 10,
+     "skill": "Investigation",
+     "dice": "1d3",
+     "note": "An officer's ration tin, better sealed than most. The body is not food."
     }
    ],
    "src": "Homebrew"
@@ -1631,6 +2598,133 @@
       "thornling",
       "loamborn-drudge"
      ]
+    },
+    {
+     "m": "cobble-berries",
+     "q": 1,
+     "dice": "1d6",
+     "dc": 8,
+     "skill": "Nature",
+     "cond": "Low brambles fruiting along kerbs and between market paving, late summer to first frost.",
+     "risk": 1,
+     "riskWhy": "Thornlings shelter in the same brambles; otherwise the squares are quiet.",
+     "foes": [
+      "thornling",
+      "strangling-cobblevine"
+     ]
+    },
+    {
+     "m": "gutter-chanterelles",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 10,
+     "skill": "Nature",
+     "cond": "In leaf-choked gutters and drains after rain; a failed check by 5 picks gutter cap instead.",
+     "risk": 1,
+     "riskWhy": "Cobblevine lies under the paving beside the choked drains.",
+     "foes": [
+      "strangling-cobblevine",
+      "thornling",
+      "swarm-of-rats"
+     ]
+    },
+    {
+     "m": "windowsill-sorrel",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 8,
+     "skill": "Nature",
+     "cond": "Spreading from window boxes across sills, ledges and balconies in streets still half lived-in.",
+     "risk": 0,
+     "riskWhy": "Grows in plain sight on half-lived-in streets; a stray thornling at worst.",
+     "foes": [
+      "thornling",
+      "cat"
+     ]
+    },
+    {
+     "m": "belltower-moss",
+     "q": 1,
+     "dice": "1d3",
+     "dc": 13,
+     "skill": "Nature",
+     "cond": "On the bell-frames of standing belltowers the roots have reached; a 30-foot climb (DC 12 Athletics).",
+     "risk": 2,
+     "riskWhy": "Canopy lurkers and threadwalkers like a high, quiet belfry.",
+     "foes": [
+      "canopy-lurker",
+      "threadwalker"
+     ]
+    },
+    {
+     "m": "rafter-honeycomb",
+     "q": 1,
+     "dice": "1d3",
+     "dc": 11,
+     "skill": "Survival",
+     "cond": "Smoked out of bee colonies in the rafters of roofless houses; bring a smoking torch.",
+     "risk": 1,
+     "riskWhy": "Angry bees and rotten floorboards; a canopy lurker sometimes dens in the same loft.",
+     "foes": [
+      "swarm-of-insects",
+      "canopy-lurker"
+     ]
+    },
+    {
+     "m": "paving-acorns",
+     "q": 1,
+     "dice": "2d4",
+     "dc": 8,
+     "skill": "Nature",
+     "cond": "Under young oaks that have heaved up the paving; leach them in water before eating.",
+     "risk": 1,
+     "riskWhy": "Rootwolves and bramble boars root for the same acorns at dusk.",
+     "foes": [
+      "rootwolf",
+      "bramble-boar"
+     ]
+    },
+    {
+     "m": "chapel-mint",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 8,
+     "skill": "Nature",
+     "cond": "In churchyards and walled gardens gone to seed.",
+     "risk": 0,
+     "riskWhy": "Quiet walled gardens; a thornling in the hedge at worst.",
+     "foes": [
+      "thornling",
+      "cat"
+     ]
+    },
+    {
+     "m": "fountain-cress",
+     "q": 1,
+     "dice": "1d6",
+     "dc": 8,
+     "skill": "Nature",
+     "cond": "Choking the basins of silted fountains and horse-troughs.",
+     "risk": 1,
+     "riskWhy": "Cobblevines favour the damp stone around fountains.",
+     "foes": [
+      "strangling-cobblevine",
+      "thornling"
+     ]
+    },
+    {
+     "m": "briar-hips",
+     "q": 1,
+     "dice": "1d6",
+     "dc": 9,
+     "skill": "Nature",
+     "cond": "On the wild briars that have swallowed hedges and railings; sweetest after the first frost.",
+     "risk": 1,
+     "riskWhy": "Thornlings nest in the briars, and boars come for the fallen hips.",
+     "foes": [
+      "thornling",
+      "bramble-boar"
+     ]
     }
    ]
   },
@@ -1666,6 +2760,108 @@
       "charnel-mound",
       "rootwolf"
      ]
+    },
+    {
+     "m": "cobble-berries",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 9,
+     "skill": "Nature",
+     "cond": "On brambles spilling over fallen walls and courtyards.",
+     "risk": 1,
+     "riskWhy": "Thornlings roll out of the briars; a rootwolf may be nosing about.",
+     "foes": [
+      "thornling",
+      "rootwolf"
+     ]
+    },
+    {
+     "m": "gutter-chanterelles",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 10,
+     "skill": "Nature",
+     "cond": "Along collapsed drains and sunken lanes after rain.",
+     "risk": 1,
+     "riskWhy": "Loamborn rise from wet rubble; cobblevine waits in the drains.",
+     "foes": [
+      "loamborn-drudge",
+      "strangling-cobblevine"
+     ]
+    },
+    {
+     "m": "belltower-moss",
+     "q": 1,
+     "dice": "1d3",
+     "dc": 13,
+     "skill": "Nature",
+     "cond": "Scraped from the louvres of collapsed belltowers; the stairs are gone (DC 13 Athletics to climb).",
+     "risk": 3,
+     "riskWhy": "Canopy lurkers sleep in broken belfries, and a fall from the frame is a long one.",
+     "foes": [
+      "canopy-lurker",
+      "threadwalker",
+      "strangling-cobblevine"
+     ]
+    },
+    {
+     "m": "rafter-honeycomb",
+     "q": 1,
+     "dice": "1d3",
+     "dc": 11,
+     "skill": "Survival",
+     "cond": "In the roof-beams of gutted halls and chapels, where the bees have had years undisturbed.",
+     "risk": 2,
+     "riskWhy": "Old colonies are large and angry, and the beams are where canopy lurkers rest.",
+     "foes": [
+      "swarm-of-insects",
+      "canopy-lurker",
+      "threadwalker"
+     ]
+    },
+    {
+     "m": "chapel-mint",
+     "q": 1,
+     "dice": "1d6",
+     "dc": 8,
+     "skill": "Nature",
+     "cond": "Run wild from old cloister and chapel herb-beds.",
+     "risk": 1,
+     "riskWhy": "Thornlings and the odd loamborn haunt the old cloister gardens.",
+     "foes": [
+      "thornling",
+      "loamborn-drudge"
+     ]
+    },
+    {
+     "m": "cellar-morels",
+     "q": 1,
+     "dice": "1d4",
+     "dc": 11,
+     "skill": "Nature",
+     "cond": "On old barrels and beams in flooded or root-split cellars; bring a light.",
+     "risk": 2,
+     "riskWhy": "Root-split cellars are where loamborn rise and charnel mounds sleep.",
+     "foes": [
+      "loamborn-drudge",
+      "charnel-mound",
+      "threadwalker"
+     ]
+    },
+    {
+     "m": "legion-hardtack",
+     "q": 1,
+     "dice": "1d3",
+     "dc": 10,
+     "skill": "Investigation",
+     "cond": "In abandoned guard-posts and barracks stores; about half the tins are still dry.",
+     "risk": 2,
+     "riskWhy": "Old barracks draw rootwolves, and drowned legionaries walk the lower posts.",
+     "foes": [
+      "rootwolf",
+      "drowned-legionary",
+      "loamborn-drudge"
+     ]
     }
    ]
   },
@@ -1685,6 +2881,34 @@
      "foes": [
       "hushed-alder",
       "canopy-lurker",
+      "rootwolf"
+     ]
+    },
+    {
+     "m": "paving-acorns",
+     "q": 1,
+     "dice": "2d4",
+     "dc": 6,
+     "skill": "Nature",
+     "cond": "Under the oaks where the wood meets the old streets.",
+     "risk": 1,
+     "riskWhy": "Bramble boars and rootwolves forage the same mast.",
+     "foes": [
+      "bramble-boar",
+      "rootwolf"
+     ]
+    },
+    {
+     "m": "briar-hips",
+     "q": 1,
+     "dice": "1d6",
+     "dc": 8,
+     "skill": "Nature",
+     "cond": "In bramble thickets along the forest's edge.",
+     "risk": 1,
+     "riskWhy": "Bramble boars and rootwolves forage the thickets.",
+     "foes": [
+      "bramble-boar",
       "rootwolf"
      ]
     }
@@ -1707,8 +2931,64 @@
       "drowned-legionary",
       "drowned-tribune"
      ]
+    },
+    {
+     "m": "fountain-cress",
+     "q": 1,
+     "dice": "1d6",
+     "dc": 9,
+     "skill": "Nature",
+     "cond": "Along the edges of flooded squares, in still, shallow water.",
+     "risk": 2,
+     "riskWhy": "Drowned legionaries still hold the flooded streets; pick from the edges.",
+     "foes": [
+      "drowned-legionary",
+      "strangling-cobblevine"
+     ]
     }
    ]
+  }
+ ],
+ "cultivation": [
+  {
+   "m": "cobble-berries",
+   "site": "plot",
+   "days": 14,
+   "yield": "1d6",
+   "regrows": true,
+   "needs": "A bramble along a wall or kerb; it likes rubble in the soil."
+  },
+  {
+   "m": "windowsill-sorrel",
+   "site": "plot",
+   "days": 7,
+   "yield": "1d4",
+   "regrows": true,
+   "needs": "A window box or any sunny bed; cut leaves often and it keeps coming."
+  },
+  {
+   "m": "chapel-mint",
+   "site": "plot",
+   "days": 7,
+   "yield": "1d6",
+   "regrows": true,
+   "needs": "Any damp corner. Keep it in a pot or it takes the whole garden."
+  },
+  {
+   "m": "fountain-cress",
+   "site": "plot",
+   "days": 7,
+   "yield": "1d4",
+   "regrows": true,
+   "needs": "A trough or sunken bed kept running with clean water."
+  },
+  {
+   "m": "cellar-morels",
+   "site": "cellar",
+   "days": 14,
+   "yield": "1d4",
+   "regrows": true,
+   "needs": "Old damp timber and a bed of ash and leaf-mould, kept dark."
   }
  ]
 }

@@ -7,7 +7,7 @@ T = ["mundane", "common", "uncommon", "rare", "very-rare", "legendary"]; ti = T.
 BAND = {"mundane": (0, 10**9), "common": (50, 100), "uncommon": (101, 500), "rare": (501, 5000), "very-rare": (5001, 50000), "legendary": (50001, 500000)}
 WAGE = {"mundane": 2, "common": 10, "uncommon": 20, "rare": 50, "very-rare": 150, "legendary": 300}  # gp per workday of skilled crafting
 LEVEL = {"mundane": None, "common": 1, "uncommon": 3, "rare": 6, "very-rare": 11, "legendary": 17}
-CONSUMABLE = {"potion", "oil", "poison", "scroll", "ammunition", "provision"}
+CONSUMABLE = {"potion", "oil", "poison", "scroll", "ammunition", "provision", "meal"}
 files = {f: json.load(open(f)) for f in glob.glob(os.path.join(ROOT, "data", "*.json"))}
 things = {}
 for d in files.values():

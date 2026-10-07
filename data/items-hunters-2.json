@@ -3,7 +3,7 @@
   {
    "id": "heather-honey-hillside-tea",
    "name": "Heather-and-Honey Hillside Tea",
-   "cat": "provision",
+   "cat": "meal",
    "tier": "mundane",
    "attune": false,
    "src": "Homebrew",
@@ -36,17 +36,20 @@
     ],
     "station": "kitchen",
     "dc": 10,
-    "time": "2 hours",
+    "time": "1 hour",
     "gp": 0.7,
     "level": 1,
     "yields": 12,
     "lore": "Shepherds swear by it: heather for warmth, honey to carry it, and marshmallow root to coat a raw throat after a night on the fells."
+   },
+   "meal": {
+    "lasts": "1 hour"
    }
   },
   {
    "id": "samphire-sailors-pickle",
    "name": "Samphire Sailor's Pickle",
-   "cat": "provision",
+   "cat": "meal",
    "tier": "mundane",
    "attune": false,
    "src": "Homebrew",
@@ -88,7 +91,8 @@
     "level": 1,
     "yields": 5,
     "lore": "Tidal-flat greens are the old deckhand's cure; salt and vinegar keep them crisp long after the coast is out of sight."
-   }
+   },
+   "meal": {}
   },
   {
    "id": "woad-warrior-paint",

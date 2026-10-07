@@ -5,7 +5,7 @@ window.CODEX_RULES = `
 <div class="toc">
   <a class="chip" href="#/rules/harvest">Harvesting</a><a class="chip" href="#/rules/spoil">Spoilage</a><a class="chip" href="#/rules/forage">Foraging</a>
   <a class="chip" href="#/rules/refine">Refining</a><a class="chip" href="#/rules/craft">Crafting</a><a class="chip" href="#/rules/table">Crafting table</a>
-  <a class="chip" href="#/rules/formulas">Formulas</a><a class="chip" href="#/rules/fail">Success &amp; failure</a><a class="chip" href="#/rules/grow">Cultivation</a><a class="chip" href="#/rules/dm">DM guidance</a><a class="chip" href="#/rules/quirks">Quirks &amp; masterworks</a>
+  <a class="chip" href="#/rules/formulas">Formulas</a><a class="chip" href="#/rules/fail">Success &amp; failure</a><a class="chip" href="#/rules/grow">Cultivation</a><a class="chip" href="#/rules/cook">Cooking</a><a class="chip" href="#/rules/dm">DM guidance</a><a class="chip" href="#/rules/quirks">Quirks &amp; masterworks</a>
 </div>
 
 <h2 id="r-harvest">1. Harvesting creatures</h2>
@@ -132,7 +132,24 @@ window.CODEX_RULES = `
 </ul>
 <p>Growing is slow on purpose. A bed produces roughly what a skilled worker earns in the same time, so it's a steady supply of reagents, not a gold mine. Keystones for rare items still have to be hunted.</p>
 
-<h2 id="r-dm">10. Guidance for the DM</h2>
+<h2 id="r-cook">10. Cooking</h2>
+<p>Meals are crafted like any other item, but faster: a cook with <b>cook's utensils</b> spends a few hours at a kitchen or campfire and makes one cooking check (Wisdom, adding proficiency with the utensils) against the meal's DC. The meal's page has a cooking panel that rolls the check and puts the servings in a satchel.</p>
+<table><thead><tr><th>Tier</th><th>DC</th><th>Time</th><th>Reagents</th><th>Effect</th></tr></thead><tbody>
+<tr><td>Mundane</td><td>10</td><td>1–2 hours (smoking or drying up to 8)</td><td>under 1 gp</td><td>Flavour and a small perk; counts as a day's food</td></tr>
+<tr><td>Common</td><td>12</td><td>2–4 hours</td><td>5 gp</td><td>One small boon, usually for 8 hours</td></tr>
+<tr><td>Uncommon</td><td>15</td><td>4–8 hours</td><td>25 gp</td><td>One solid boon, like an uncommon potion. Needs a learned formula and level 3</td></tr>
+</tbody></table>
+<ul>
+<li><b>Superb</b> (beat the DC by 10, or a natural 20): one extra serving, and the effect lasts until the end of the eater's next long rest.</li>
+<li><b>Success:</b> the batch makes its listed servings.</li>
+<li><b>Flawed</b> (fail by 1–4): only half the servings (rounded up) turn out; the rest is scraped into the fire.</li>
+<li><b>Ruined</b> (fail by 5 or more, or a natural 1): the ingredients are lost. Fail by 10 or more and anyone who eats it anyway makes a DC 10 Constitution save or is poisoned for 1 hour.</li>
+<li><b>Servings.</b> A batch usually makes 4 servings (feasts 6–8). The listed value is per serving.</li>
+<li><b>Well fed.</b> A creature enjoys one meal's effect at a time. Eating another meal replaces the first. Eating a serving takes about a minute; a magical effect starts when the meal is finished.</li>
+<li><b>Keeping.</b> Stews and fresh dishes keep a day, baked or pickled food about a week, and dried or smoked trail food keeps indefinitely. With spoilage turned on, servings spoil like any other batch.</li>
+</ul>
+
+<h2 id="r-dm">11. Guidance for the DM</h2>
 <ul>
 <li><b>Keystones are the throttle.</b> Don't let shops sell keystones freely. Supporting parts and bindings can be bought in cities at their listed value.</li>
 <li><b>Selling parts:</b> specialists (alchemists, tanners, wizards) pay the listed value, and general merchants pay half.</li>

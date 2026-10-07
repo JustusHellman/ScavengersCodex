@@ -142,8 +142,22 @@ humanoids/NPCs. Optional `srd` ("5.1" or "5.2") and `aka` (array of alternative 
 }
 ```
 `cat` ∈ weapon, armor, ammunition, potion, oil, poison, scroll, ring, rod, staff, wand,
-wondrous, gear, tool, provision. `attune`: false | true | "by a spellcaster" etc.
+wondrous, gear, tool, provision, meal. `attune`: false | true | "by a spellcaster" etc.
 `src`: "SRD 5.1", "PHB/SRD basic" (mundane equipment) or "Homebrew".
+
+**Meals** (`"cat": "meal"`) are cooked with `cooks-utensils` at a `kitchen` or `campfire` in one
+check. Extra fields: `recipe.yields` (servings per batch, usually 4; feasts 6–8), `meal.lasts`
+(how long the effect lasts, e.g. "8 hours"), and `perish` ("1 day" for stews, "1 week" for baked or
+pickled food; omit for dried or smoked trail food). `value` is **per serving**. Always tag "food".
+
+| tier | DC | time | gp | min level | value / serving | effect |
+|---|---|---|---|---|---|---|
+| mundane | 10 | 1–2 hours (smoking up to 8) | 0.2–1 | 1 | 0.2–5 | flavour + a tiny perk |
+| common | 12 | 2–4 hours | 5 | 1 | 50–80 | one small boon for ~8 hours |
+| uncommon | 15 | 4–8 hours | 25 | 3 | 150–300 | one solid boon, like an uncommon potion |
+
+Magic meals need exactly one keystone, like other magic items. A creature has one meal's effect at
+a time ("well fed"), so a meal may be a touch better than a potion of the same rarity.
 
 ### Recipe
 ```json

@@ -18,7 +18,7 @@
   const TOOLS = new Set(words('alchemists-supplies brewers-supplies calligraphers-supplies carpenters-tools cartographers-tools cobblers-tools cooks-utensils glassblowers-tools herbalism-kit jewelers-tools leatherworkers-tools masons-tools painters-supplies potters-tools smiths-tools tinkers-tools weavers-tools woodcarvers-tools poisoners-kit harvesting-kit'));
   const STATIONS = new Set(words('none campfire forge alchemy-lab tannery workshop loom jewelers-bench scriptorium enchanting-circle shrine kitchen glassworks'));
   const ENVS = new Set(words('arctic coast desert forest grassland hill mountain swamp underdark underwater urban ruins feywild shadowfell elemental-fire elemental-water elemental-air elemental-earth lower-planes upper-planes astral'));
-  const CATS = new Set(words('weapon armor ammunition potion oil poison scroll ring rod staff wand wondrous gear tool provision'));
+  const CATS = new Set(words('weapon armor ammunition potion oil poison scroll ring rod staff wand wondrous gear tool provision meal'));
   const SKILLS = new Set(words('Survival Medicine Nature Arcana Religion Investigation'));
   const SIZES = new Set(words('Tiny Small Medium Large Huge Gargantuan'));
   const ROLES = new Set(words('base keystone supporting binding'));

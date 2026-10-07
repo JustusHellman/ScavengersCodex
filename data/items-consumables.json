@@ -4150,7 +4150,7 @@
   {
    "id": "giant-boar-roast",
    "name": "Giant Boar Roast",
-   "cat": "provision",
+   "cat": "meal",
    "tier": "common",
    "attune": false,
    "src": "Homebrew",
@@ -4188,17 +4188,21 @@
     ],
     "station": "kitchen",
     "dc": 12,
-    "time": "1 day",
+    "time": "3 hours",
     "gp": 5,
     "level": 1,
     "yields": 4,
     "lore": "The heart is slow-roasted in the belly of the joint so its stubborn vigour bastes the meat — boar hunters swear they can take a tusk to the ribs the morning after."
+   },
+   "perish": "1 day",
+   "meal": {
+    "lasts": "8 hours"
    }
   },
   {
    "id": "hunters-jerky",
    "name": "Hunter's Jerky",
-   "cat": "provision",
+   "cat": "meal",
    "tier": "common",
    "attune": false,
    "src": "Homebrew",
@@ -4243,11 +4247,14 @@
     ],
     "station": "campfire",
     "dc": 12,
-    "time": "1 day",
+    "time": "8 hours",
     "gp": 5,
     "level": 1,
     "yields": 4,
     "lore": "Dried strips of heart are layered among the ordinary meat — rangers say a beast's endurance lives in its heart, and a pinch of wakeberry keeps the eyelids up."
+   },
+   "meal": {
+    "lasts": "8 hours"
    }
   },
   {
@@ -4311,7 +4318,7 @@
   {
    "id": "rangers-trail-bread",
    "name": "Ranger's Trail Bread",
-   "cat": "provision",
+   "cat": "meal",
    "tier": "common",
    "attune": false,
    "src": "Homebrew",
@@ -4354,17 +4361,20 @@
     ],
     "station": "campfire",
     "dc": 12,
-    "time": "1 day",
+    "time": "2 hours",
     "gp": 5,
     "level": 1,
     "yields": 4,
     "lore": "Baked hard enough to break teeth, the bread is soaked in a stream before eating. Silverleaf or a crumb of manna in the dough is why it heals as it fills."
+   },
+   "meal": {
+    "lasts": "until your next short or long rest"
    }
   },
   {
    "id": "seafarers-chowder",
    "name": "Seafarer's Chowder",
-   "cat": "provision",
+   "cat": "meal",
    "tier": "common",
    "attune": false,
    "src": "Homebrew",
@@ -4408,17 +4418,21 @@
     ],
     "station": "kitchen",
     "dc": 12,
-    "time": "1 day",
+    "time": "2 hours",
     "gp": 5,
     "level": 1,
     "yields": 4,
     "lore": "Pearl divers' grandmothers simmer a dried sea horse or a swim bladder into the pot, and the kelp's air-pods make the broth fizz on the tongue."
+   },
+   "perish": "1 day",
+   "meal": {
+    "lasts": "8 hours"
    }
   },
   {
    "id": "nightwatch-broth",
    "name": "Nightwatch Broth",
-   "cat": "provision",
+   "cat": "meal",
    "tier": "common",
    "attune": false,
    "src": "Homebrew",
@@ -4462,17 +4476,21 @@
     ],
     "station": "campfire",
     "dc": 12,
-    "time": "1 day",
+    "time": "2 hours",
     "gp": 5,
     "level": 1,
     "yields": 4,
     "lore": "Soldiers of the night watch have always sworn by owl-eye broth. Gloomsight mushrooms do the same job for the squeamish."
+   },
+   "perish": "1 day",
+   "meal": {
+    "lasts": "8 hours"
    }
   },
   {
    "id": "lionsmane-honey-cakes",
    "name": "Lionsmane Honey Cakes",
-   "cat": "provision",
+   "cat": "meal",
    "tier": "common",
    "attune": false,
    "src": "Homebrew",
@@ -4515,17 +4533,21 @@
     ],
     "station": "kitchen",
     "dc": 12,
-    "time": "1 day",
+    "time": "2 hours",
     "gp": 5,
     "level": 1,
     "yields": 4,
     "lore": "Squires eat them before their first battle. The thistle version is golden and sweet; the lion's-heart version is darker and, reputedly, braver."
+   },
+   "perish": "1 week",
+   "meal": {
+    "lasts": "1 hour"
    }
   },
   {
    "id": "owlbear-stew",
    "name": "Owlbear Stew",
-   "cat": "provision",
+   "cat": "meal",
    "tier": "uncommon",
    "attune": false,
    "src": "Homebrew",
@@ -4570,11 +4592,15 @@
     ],
     "station": "kitchen",
     "dc": 15,
-    "time": "2.5 days",
+    "time": "6 hours",
     "gp": 25,
     "level": 3,
     "yields": 4,
     "lore": "Owlbear eggs are cracked into the stew at the last moment and stirred until they thicken it. Mothers are advised to be several miles away first."
+   },
+   "perish": "1 day",
+   "meal": {
+    "lasts": "8 hours"
    }
   }
  ]

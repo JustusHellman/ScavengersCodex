@@ -6,7 +6,7 @@
 const TIERS = ['mundane', 'common', 'uncommon', 'rare', 'very-rare', 'legendary'];
 const TIER_LABEL = { mundane: 'Mundane', common: 'Common', uncommon: 'Uncommon', rare: 'Rare', 'very-rare': 'Very rare', legendary: 'Legendary' };
 const ti = t => Math.max(0, TIERS.indexOf(t));
-const CAT_LABEL = { weapon: 'Weapon', armor: 'Armor', ammunition: 'Ammunition', potion: 'Potion', oil: 'Oil', poison: 'Poison', scroll: 'Scroll', ring: 'Ring', rod: 'Rod', staff: 'Staff', wand: 'Wand', wondrous: 'Wondrous item', gear: 'Gear', tool: 'Tool', provision: 'Provision' };
+const CAT_LABEL = { weapon: 'Weapon', armor: 'Armor', ammunition: 'Ammunition', potion: 'Potion', oil: 'Oil', poison: 'Poison', scroll: 'Scroll', ring: 'Ring', rod: 'Rod', staff: 'Staff', wand: 'Wand', wondrous: 'Wondrous item', gear: 'Gear', tool: 'Tool', provision: 'Provision', meal: 'Meal' };
 const TYPES = ['aberration', 'beast', 'celestial', 'construct', 'dragon', 'elemental', 'fey', 'fiend', 'giant', 'humanoid', 'monstrosity', 'ooze', 'plant', 'undead'];
 const SIZES = ['Tiny', 'Small', 'Medium', 'Large', 'Huge', 'Gargantuan'];
 const FORM_TAGS = 'hide fur scale carapace shell feather wing bone skull horn tooth claw stinger eye heart blood ichor venom gland organ brain tongue sinew meat fat hair tentacle silk slime core ash dust essence ectoplasm crystal stone metal ore ingot gem pearl coral salt sand ice oil resin sap wood bark leaf flower root fungus moss vine seed fruit herb ink wax thread cloth leather glass vessel salvage relic reagent food liquid'.split(' ');
@@ -77,7 +77,7 @@ function iconKey(t) {
   if (t.kind === 'place') return 'map';
   if (t.kind === 'monster') return { beast: 'beast', dragon: 'dragon', undead: 'skull', elemental: 'flame', aberration: 'tentacle', construct: 'golem', plant: 'plant', ooze: 'ooze', humanoid: 'person', celestial: 'halo', fiend: 'horns', giant: 'giant', fey: 'sparkle', monstrosity: 'fang' }[t.type] || 'beast';
   if (t.kind === 'item') {
-    const c = { weapon: 'sword', armor: 'shield', ammunition: 'arrow', potion: 'flask', oil: 'flask', poison: 'poison', scroll: 'scroll', ring: 'ring', rod: 'wand', staff: 'wand', wand: 'wand', wondrous: 'star', gear: 'tool', tool: 'tool', provision: 'bowl' }[t.cat];
+    const c = { weapon: 'sword', armor: 'shield', ammunition: 'arrow', potion: 'flask', oil: 'flask', poison: 'poison', scroll: 'scroll', ring: 'ring', rod: 'wand', staff: 'wand', wand: 'wand', wondrous: 'star', gear: 'tool', tool: 'tool', provision: 'bowl', meal: 'bowl' }[t.cat];
     if (t.tags.includes('shield')) return 'shield';
     if (t.tags.includes('clothing') && (t.cat === 'gear' || t.cat === 'wondrous')) return 'thread';
     if (t.tags.includes('jewelry')) return 'ring';
@@ -850,7 +850,7 @@ function recipeCard(owner, opts = {}) {
   const tools = (r.tools || []).map(tl => D.things.has(tl) ? `<a href="#/item/${tl}">${esc(TOOL_NAMES[tl] || tl)}</a>` : esc(TOOL_NAMES[tl] || tl)).join(', ') || '—';
   const proj = Party.projects.find(p => p.id === owner.id);
   const have = proj ? `<span class="have pill t-rare">On the workbench: ${Math.round(proj.done / proj.need * 100)}%</span>` : alloc ? `<span class="have pill ${alloc.ok ? 't-uncommon' : 't-common'}">${alloc.ok ? 'You can craft this' : `Satchel: ${Math.round(alloc.frac * 100)}% of parts`}</span>` : '';
-  const craftBtn = alloc && alloc.ok ? `<button class="btn primary sm" type="button" data-act="craft" data-id="${owner.id}">${svg('check')}Start crafting (uses the parts)</button>` : '';
+  const craftBtn = owner.cat === 'meal' ? '' : alloc && alloc.ok ? `<button class="btn primary sm" type="button" data-act="craft" data-id="${owner.id}">${svg('check')}Start crafting (uses the parts)</button>` : '';
   const open = 'thing.recipe' in folds ? folds['thing.recipe'] : true;
   return `<details class="recipe fold" data-fold="thing.recipe"${open ? ' open' : ''}>
     <summary class="recipe-top fold-sum"><span class="chev" aria-hidden="true"></span><h2>${opts.title || 'Recipe'}</h2>${have}</summary>
@@ -1119,6 +1119,31 @@ function showReveal(res, title) {
   $('#rvClose').onclick = close; wrap.addEventListener('click', e => { if (e.target === wrap || e.target.closest('a')) close(); });
   wrap.addEventListener('keydown', e => { if (e.key === 'Escape') close(); }); $('#rvClose').focus();
 }
+/* ---- cooking: meals get a cooking check with kitchen results instead of quirks and masterworks ---- */
+const COOK_OUT = {
+  Superb: ['Superb', 't-legendary', 'A dish to remember: one extra serving, and its effect lasts until the end of your next long rest instead of 8 hours.'],
+  Success: ['Success', 't-uncommon', 'Well made: every serving works as written.'],
+  Flawed: ['Flawed', 't-common', 'Edible, but off: half the servings (rounded up) turn out right; the rest are just food.'],
+  Ruined: ['Ruined', 't-mundane', 'Burnt, curdled or raw: inedible, and the ingredients are gone.']
+};
+let COOK = null;
+function cookResult(t, tot, nat) {
+  const dc = t.recipe.dc, n = t.recipe.yields || 1, d = tot - dc;
+  const k = nat === 1 ? 'Ruined' : d >= 10 || nat === 20 ? 'Superb' : d >= 0 ? 'Success' : d >= -4 ? 'Flawed' : 'Ruined';
+  const q = k === 'Superb' ? n + 1 : k === 'Success' ? n : k === 'Flawed' ? Math.ceil(n / 2) : 0;
+  return { id: t.id, k, q, tot, nat, sick: k === 'Ruined' && d <= -10 };
+}
+function cookPanel(t) {
+  const r = t.recipe, n = r.yields || 1, b = store.get('scavengers-codex.cookBonus', 4), a = allocate(r, usable());
+  const miss = r.components.map((c, i) => ({ c, s: a.slots[i] })).filter(x => x.s.missing).map(x => `${x.s.missing}× ${esc(slotLabel(x.c))}`);
+  const C = COOK && COOK.id === t.id ? COOK : null, O = C && COOK_OUT[C.k];
+  return fold('thing.cook', 'Cook it', `<p class="small muted">One ${esc((r.tools || []).map(x => TOOL_NAMES[x] || x).join(' or ') || "cook's utensils")} check${showDC() ? ` against DC ${esc(r.dc)}` : ''}, about ${esc(r.time)} at a ${esc((STATION_NAMES[r.station] || 'fire').toLowerCase())}. Makes ${plural(n, 'serving')}${t.perish ? `, which keep ${esc(t.perish)}` : ''}. See the <a href="#/rules/cook">cooking rules</a>.</p>
+    <div class="frow"><label class="skill-in" for="ckBonus">Cook's bonus <input class="textin mono" type="number" id="ckBonus" value="${esc(b)}"></label><button class="btn sm" type="button" data-act="ckroll" data-id="${t.id}">Roll for me</button>
+      <label class="skill-in" for="ckTotal">…or the total you rolled <input class="textin mono" type="number" inputmode="numeric" id="ckTotal" placeholder="—"></label><button class="btn sm" type="button" data-act="ckcheck" data-id="${t.id}">Check</button></div>
+    ${O ? `<div class="cook-out"><span class="pill ${O[1]}">${O[0]}</span> <b>${plural(C.q, 'serving')}</b> <span class="small muted">${C.nat != null ? `rolled ${C.nat} → ${C.tot}` : `total ${C.tot}`}</span><p class="small" style="margin:6px 0 0">${esc(O[2])}${C.sick ? ' Anyone who tastes it makes a DC 10 Constitution save or is poisoned for 1 hour.' : ''}</p>
+      <div class="frow" style="margin-top:8px">${miss.length ? `<span class="small" style="color:var(--danger)">Missing: ${miss.join(' · ')}</span>` : `<button class="btn sm primary" type="button" data-act="ckserve" data-id="${t.id}" data-to="mine">${svg('check')}${C.q ? `Serve: add ${plural(C.q, 'serving')} to my satchel` : 'Throw it out (the ingredients are used)'}</button>${C.q ? `<button class="btn sm" type="button" data-act="ckserve" data-id="${t.id}" data-to="party">…to the party satchel</button>` : ''}`}</div></div>` : (miss.length ? `<p class="small muted">Still missing: ${miss.join(' · ')}</p>` : '<p class="small" style="color:var(--ok)">Every ingredient is in hand.</p>')}
+    <p class="small muted">Well fed: a creature enjoys one meal's effect at a time. Eating another replaces it.</p>`, { cls: 'card roller', id: 'cook', h: 'h3' });
+}
 function finalCheck(t) {
   const b = store.get('scavengers-codex.craftBonus', 5);
   return fold('thing.final', 'Roll the final check', `<p class="small muted">One ${esc((t.recipe.tools || []).map(x => TOOL_NAMES[x] || x).join(' or ') || 'tool')} check${showDC() ? ` against DC ${esc(t.recipe.dc)}` : ''}, following the <a href="#/rules/fail">success &amp; failure rules</a>.</p>
@@ -1229,7 +1254,7 @@ function rollForage() {
 const THEMES = {
   general: [
     { id: 'outfitter', need: ['thread', 'oil', 'healing'],  name: 'Adventurer’s outfitter', blurb: 'Rope, rations and arrows for people who go into holes for a living. Knows every rumour about the local ruins.', cats: ['weapon', 'armor', 'ammunition', 'provision'], ids: ['backpack', 'bedroll', 'blanket', 'rope', 'silk-rope', 'torch', 'lantern', 'bullseye-lantern', 'tinderbox', 'waterskin', 'rations', 'tent', 'crowbar', 'grappling-hook', 'iron-spikes', 'piton', 'chain', 'caltrops', 'ball-bearings', 'shovel', 'miners-pick', 'signal-whistle', 'mess-kit', 'hunting-trap', 'quiver', 'oil-flask', 'chalk', 'clothes-travelers', 'boots', 'whetstone', 'healers-kit', 'climbers-kit', 'potion-of-healing'], tags: ['thread', 'oil', 'healing'] },
-    { id: 'market', need: ['food', 'cloth', 'herb', 'flower', 'fruit', 'hair', 'salt'],  name: 'Market-day stall', blurb: 'A farmer’s wife’s stall: honey, grain, wool, dyes and whatever the hedgerows gave this week.', tags: ['food', 'cloth', 'herb', 'flower', 'fruit', 'hair', 'salt', 'meat'], cats: ['provision'], ids: ['soap', 'candle', 'basket', 'jug', 'bowl', 'bucket', 'blanket', 'clothes-common'], env: ['grassland', 'forest'] },
+    { id: 'market', need: ['food', 'cloth', 'herb', 'flower', 'fruit', 'hair', 'salt'],  name: 'Market-day stall', blurb: 'A farmer’s wife’s stall: honey, grain, wool, dyes and whatever the hedgerows gave this week.', tags: ['food', 'cloth', 'herb', 'flower', 'fruit', 'hair', 'salt', 'meat'], cats: ['provision', 'meal'], ids: ['soap', 'candle', 'basket', 'jug', 'bowl', 'bucket', 'blanket', 'clothes-common'], env: ['grassland', 'forest'] },
     { id: 'salvage', made: ['metal', 'leather', 'hide', 'wood', 'bone'], need: ['salvage', 'metal', 'bone', 'leather'],  name: 'Battlefield scavenger', blurb: 'Picks over old battlefields and buys from anyone who does. Doesn’t ask where things came from.', tags: ['salvage', 'metal', 'bone', 'cloth', 'leather'], cats: ['weapon', 'armor'], salvage: true },
     { id: 'caravan', need: ['salt', 'resin', 'sand', 'cloth', 'silk', 'glass'],  name: 'Caravan trader', blurb: 'Just in from the far roads, with a wagon of desert salts, spices and goods from three countries.', tags: ['salt', 'resin', 'sand', 'cloth', 'silk', 'glass'], env: ['desert', 'coast', 'grassland'] }
   ],
@@ -1298,7 +1323,7 @@ function rollTrader() {
   const neutral = themes.filter(t => !(t.env || []).length);
   const pickFrom = fits.length ? fits : DMS.region && neutral.length ? neutral : themes;
   const th = themes.find(t => t.id === DMS.theme) || pickFrom[rnd(pickFrom.length)];
-  const sellable = x => x.value && !x.tags.includes('relic') && (x.kind === 'material' || (x.kind === 'item' && (x.tier === 'mundane' || ['potion', 'scroll', 'oil', 'ammunition', 'provision', 'poison'].includes(x.cat))));
+  const sellable = x => x.value && !x.tags.includes('relic') && (x.kind === 'material' || (x.kind === 'item' && (x.tier === 'mundane' || ['potion', 'scroll', 'oil', 'ammunition', 'provision', 'poison', 'meal'].includes(x.cat))));
   const all = [...D.things.values()].filter(x => sellable(x) && x.value <= (T.gp || Infinity) && (th.salvage || !x.tags.includes('salvage')));
   const inCap = x => ti(x.tier) <= capI, rareOk = x => ti(x.tier) === capI + 1;
   const okTag = x => !S.tags || S.tags.some(tg => x.tags.includes(tg)) || catFits(x, th);
@@ -1844,7 +1869,8 @@ function pThing(id) {
   const isItem = t.kind === 'item';
   const ext = isItem && t.src === 'SRD 5.1' ? `<a class="btn sm" href="https://www.dndbeyond.com/magic-items?filter-search=${encodeURIComponent(t.name.replace(/\s*\(.*\)|,.*$/g, ''))}" target="_blank" rel="noopener">${svg('ext')}D&amp;D Beyond</a>` : '';
   const facts = isItem
-    ? [['Type', CAT_LABEL[t.cat] || t.cat], ['Rarity', TIER_LABEL[t.tier]], ['Attunement', t.attune === true ? 'Required' : t.attune ? cap(String(t.attune)) : 'No'], ['Value', valueText(t)], ...(isDM() ? [['Craftable from', t.recipe && access(t.id) < 99 ? `party level ${access(t.id)}` : '—']] : []), ['Source', t.src || '—']]
+    ? t.cat === 'meal' ? [['Type', 'Meal'], ['Rarity', TIER_LABEL[t.tier]], ['Serves', t.recipe ? String(t.recipe.yields || 1) : '1'], ['Effect lasts', (t.meal && t.meal.lasts) || '8 hours'], ['Keeps', t.perish || 'stable'], ['Value', valueText(t) + ' a serving'], ['Source', t.src || '—']]
+    : [['Type', CAT_LABEL[t.cat] || t.cat], ['Rarity', TIER_LABEL[t.tier]], ['Attunement', t.attune === true ? 'Required' : t.attune ? cap(String(t.attune)) : 'No'], ['Value', valueText(t)], ...(isDM() ? [['Craftable from', t.recipe && access(t.id) < 99 ? `party level ${access(t.id)}` : '—']] : []), ['Source', t.src || '—']]
     : [['Tier', TIER_LABEL[t.tier]], ['Keeps', t.perish || 'stable'], ['Value', valueText(t)], ...(isDM() || src.length || gat.length || !(srcA.length || gatA.length) ? [['Found', { monster: 'On creatures', place: 'In the wild', refined: 'Refined / crafted', trade: 'Trade good' }[matFrom(t)]]] : [['Found', 'Unknown to you']])];
   const moreS = srcA.length - src.length, moreG = gatA.length - gat.length;
   const srcHtml = srcA.length ? fold('thing.src', 'Harvested from', `
@@ -1863,7 +1889,7 @@ function pThing(id) {
       <div class="dbody">${isItem ? `<p class="effect">${esc(t.effect)}</p>` : `<p class="lede">${esc(t.desc)}</p>`}</div>
       <div class="dfacts"><div class="facts">${facts.map(([k, v]) => `<div class="fact"><span class="k">${k}</span><span class="v">${esc(v)}</span></div>`).join('')}</div>${tags}</div></div>
     <div id="sharebox"></div>
-    ${t.recipe ? (known(t) ? recipeCard(t, { title: isItem ? 'How to craft it' : 'How to make it' }) + finalCheck(t) : lockedCard(t)) : ''}
+    ${t.recipe ? (known(t) ? recipeCard(t, { title: t.cat === 'meal' ? 'How to cook it' : isItem ? 'How to craft it' : 'How to make it' }) + (t.cat === 'meal' ? cookPanel(t) : finalCheck(t)) : lockedCard(t)) : ''}
     ${known(t) ? breakdown(t) : ''}
     ${srcHtml}${gatHtml}${growSection(t)}
     ${!t.recipe && !srcA.length && !gatA.length ? fold('thing.buy', 'Where to get it', `<p class="small">A trade good. ${{ mundane: 'Any village store, market or peddler sells it.', common: 'Towns and cities stock it; villages rarely do.', uncommon: 'Only city specialists (alchemists, jewellers, arcane suppliers) sell it, and not always.' }[t.tier] || 'Very hard to buy. Ask your DM where one might be found.'} The <a href="#/rules/dm">DM tools</a> wandering trader can roll up stock.</p>`) : ''}
@@ -1960,6 +1986,7 @@ function pSearch(q) {
 }
 /* ---- satchel ---- */
 let satTab = 'ready';
+let satMeals = store.get('scavengers-codex.satMeals', false);
 let satView = store.get('scavengers-codex.satView', 'mine') === 'party' ? 'party' : 'mine';
 function satRow(id, q, where) {
   const t = D.things.get(id);
@@ -1988,14 +2015,14 @@ function partyPanel() {
 }
 function pSatchel() {
   const ids = Object.keys(sat).filter(id => D.things.has(id)).sort((a, b) => byName(D.things.get(a), D.things.get(b)));
-  const cs = craftables();
+  const csAll = craftables(), cs = satMeals ? csAll.filter(x => x.t.cat === 'meal') : csAll;
   const ready = cs.filter(x => x.a.ok), close = cs.filter(x => !x.a.ok && x.a.missingSlots <= 2), rest = cs.filter(x => !x.a.ok && x.a.missingSlots > 2);
   const tabs = [['ready', 'Ready to craft', ready], ['close', '1–2 parts away', close], ['rest', 'Uses your parts', rest]];
   const curList = (tabs.find(t => t[0] === satTab) || tabs[0])[2];
   const key = 'sat-' + satTab, shown = listBlock.state[key] || 30;
   const craftRow = ({ t, a }) => {
     const miss = t.recipe.components.map((c, i) => ({ c, s: a.slots[i] })).filter(x => x.s.missing).map(x => `${x.s.missing}× ${esc(slotLabel(x.c))}`);
-    return `<div class="craft-row"><div class="top">${ico(t)}<a class="txt" href="${linkOf(t)}"><b>${esc(t.name)}</b><br><span class="small muted">${esc(CAT_LABEL[t.cat] || 'Material')}${showDC() ? ` · DC ${esc(t.recipe.dc)}` : ''} · ${esc(t.recipe.time)}</span></a>${pill(t.tier)}${a.ok ? `<button class="btn sm primary" type="button" data-act="craft" data-id="${t.id}">Start</button>` : ''}</div>
+    return `<div class="craft-row"><div class="top">${ico(t)}<a class="txt" href="${linkOf(t)}"><b>${esc(t.name)}</b><br><span class="small muted">${esc(CAT_LABEL[t.cat] || 'Material')}${showDC() ? ` · DC ${esc(t.recipe.dc)}` : ''} · ${esc(t.recipe.time)}</span></a>${pill(t.tier)}${a.ok ? `<button class="btn sm primary" type="button" data-act="craft" data-id="${t.id}">${t.cat === 'meal' ? 'Cook' : 'Start'}</button>` : ''}</div>
       <div class="meter${a.ok ? '' : ' part'}"><i style="width:${Math.round(a.frac * 100)}%"></i></div>
       ${miss.length ? `<div class="miss">Missing: ${miss.join(' · ')}</div>` : `<div class="small muted">Tools: ${esc((t.recipe.tools || []).map(x => TOOL_NAMES[x] || x).join(', ') || '—')} · ${fmtGp(t.recipe.gp)} in reagents</div>`}</div>`;
   };
@@ -2017,6 +2044,7 @@ function pSatchel() {
         ${workbench()}
         ${goalBlock()}
         <label class="small" style="display:flex;gap:8px;align-items:center"><input type="checkbox" data-act="useparty"${useParty ? ' checked' : ''}> Count the party satchel when working out what can be crafted</label>
+        <label class="small" style="display:flex;gap:8px;align-items:center"><input type="checkbox" data-act="satmeals"${satMeals ? ' checked' : ''}> Only meals (what can I cook?)</label>
         <div class="tabs" role="tablist">${tabs.map(([k, l, arr]) => `<button class="tab${satTab === k ? ' on' : ''}" type="button" role="tab" aria-selected="${satTab === k}" data-act="sattab" data-tab="${k}">${l} <span class="mono">${arr.length}</span></button>`).join('')}</div>
         ${curList.length ? curList.slice(0, shown).map(craftRow).join('') + (curList.length > shown ? `<button class="btn more" type="button" data-act="more" data-key="${key}" data-shown="${shown}" data-step="40">Show more (${curList.length - shown})</button>` : '') : `<div class="empty">${ids.length || pc ? (satTab === 'ready' ? 'Nothing is fully covered yet. Check “1–2 parts away”.' : 'Nothing in this list.') : 'Add a few parts to see what they make.'}</div>`}
         <p class="small muted">Tools, stations and reagent gold aren't tracked here, so check the recipe before you craft.${mode === 'player' ? ' Player view: only formulas your party has learned are listed.' : ''}</p>
@@ -2226,6 +2254,7 @@ function doImport() {
 document.addEventListener('click', ev => {
   const el = ev.target.closest('[data-act]'); if (!el) return;
   const act = el.dataset.act, id = el.dataset.id;
+  if (act === 'satmeals') { satMeals = el.checked; store.set('scavengers-codex.satMeals', satMeals); rerender(); return; }
   if (act === 'spoiltoggle') { Party.spoil = el.checked; Party.save(); syncStamps(); rerender(); return; }
   if (act === 'qty' || act === 'pqty' || act === 'bdbuy' || act === 'useparty') return;
   if (el.tagName === 'BUTTON' || el.tagName === 'A') ev.preventDefault();
@@ -2356,8 +2385,23 @@ document.addEventListener('click', ev => {
       toast(`Added ${plural(n, 'part')} to ${toParty ? 'the party satchel' : 'your satchel'}`);
       document.querySelectorAll('#addRollBtn,#addRollParty').forEach(b => { b.disabled = true; }); break;
     }
+    case 'ckroll': case 'ckcheck': {
+      const t = D.things.get(id); let tot, nat = null;
+      if (act === 'ckroll') { const b = parseInt(($('#ckBonus') || {}).value, 10) || 0; store.set('scavengers-codex.cookBonus', b); nat = d20(); tot = nat + b; }
+      else { const v = ($('#ckTotal') || {}).value; if (v === '' || v == null || isNaN(+v)) { toast('Type in the check total first'); break; } tot = +v; }
+      COOK = cookResult(t, tot, nat); rerender(); break;
+    }
+    case 'ckserve': {
+      const t = D.things.get(id); if (!COOK || COOK.id !== id) break;
+      const a = allocate(t.recipe, usable()); if (!a.ok) { toast('Some ingredients are missing'); break; }
+      for (const sl of a.slots) for (const [pid, q] of sl.used) consume(pid, q);
+      if (COOK.q) { if (el.dataset.to === 'party') Party.add(id, COOK.q); else sat[id] = (sat[id] || 0) + COOK.q; }
+      saveSat(); Party.note(`Cooked ${t.name} (${COOK.k.toLowerCase()}): ${plural(COOK.q, 'serving')}${el.dataset.to === 'party' && COOK.q ? ' for the party' : ''}`);
+      toast(COOK.q ? `${plural(COOK.q, 'serving')} of ${t.name} served` : `The ${t.name} went in the bin`); COOK = null; rerender(); break;
+    }
     case 'craft': {
       const t = D.things.get(id);
+      if (t && t.cat === 'meal') { location.hash = linkOf(t); setTimeout(() => { const c = document.getElementById('cook'); if (c) { c.open = true; c.scrollIntoView({ behavior: 'smooth', block: 'center' }); } }, 120); break; }
       if (!known(t)) { toast('Your party has not learned this formula yet'); break; }
       const a = allocate(t.recipe, usable());
       if (!a.ok) { toast('Some parts are missing'); break; }

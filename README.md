@@ -21,6 +21,7 @@ A harvesting and crafting handbook for D&D 5e. You skin, harvest and forage comp
 - **Backup and restore:** one file (or a block of text) holds everything a device keeps: satchels, journal, garden, workbench, cards and settings. Find it in the Journal and in DM tools → Player setup.
 - **Handout cards:** every handout entry becomes a collectible card, with a picture and details on the front and the in-world note plus a short unlock code (`SC-XXXX-XXXX`) on the back. Flip them on screen, or print them double-sided (backs line up), as fold-overs, or fronts only.
 - **Collapsible sections:** every section on an entry page folds away. Sensible ones start open, and the codex remembers your choice for each kind of section.
+- **Meals and cooking:** a chef can cook 50 dishes, from campfire fry-ups to uncommon feasts, out of harvested and foraged ingredients. The meal's page rolls the cooking check (superb, success, flawed or ruined), puts the servings in a satchel, and the satchel can show only the meals you can cook. Servings spoil like other fresh parts, and a creature enjoys one meal's effect at a time.
 - **Final check:** roll any recipe's crafting check or type in your own total, with the failure rules, quirks (d20) and masterwork boons (d10).
 - **SRD 5.1 + 5.2.1:** 338 creatures, including 18 added in SRD 5.2.1. 2024 creature names (e.g. "Sphinx of Lore") are searchable aliases.
 - **No backend:** plain HTML, CSS, JS and JSON.

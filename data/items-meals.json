@@ -1,0 +1,1562 @@
+{
+ "items": [
+  {
+   "id": "drovers-hand-pies",
+   "name": "Drover's Hand Pies",
+   "tier": "mundane",
+   "cat": "meal",
+   "value": 0.5,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food"
+   ],
+   "perish": "1 week",
+   "meal": {
+    "lasts": "1 hour"
+   },
+   "effect": "Crimped lard pastry around chopped, long-stewed meat and pot-herbs. A pie counts as a day's food and survives a week in a saddlebag; a traveller who shares a round of them by a strange inn's hearth gains +1 on Charisma (Persuasion) checks with the locals for the next hour.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "kitchen",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0.4,
+    "level": 1,
+    "yields": 6,
+    "components": [
+     {
+      "m": "grain",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "horse-meat",
+       "goat-meat",
+       "giant-goat-meat",
+       "elk-meat"
+      ],
+      "q": 2,
+      "role": "supporting",
+      "label": "Tough grazing-beast meat"
+     },
+     {
+      "m": "medicinal-herbs",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "tallow",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "lore": "Every market-town tavern has its own crimp on the pastry edge, and old drovers can name the inn from the first bite."
+   }
+  },
+  {
+   "id": "cattail-frog-leg-fritters",
+   "name": "Cattail Frog-Leg Fritters",
+   "tier": "mundane",
+   "cat": "meal",
+   "value": 0.4,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food"
+   ],
+   "perish": "1 day",
+   "meal": {
+    "lasts": "8 hours"
+   },
+   "effect": "Frog legs dredged in pounded cattail-root flour and fried crisp in fat steeped with bog myrtle. A plate counts as a meal, and for 8 hours the resinous myrtle sweating from your skin keeps midges, mosquitoes and leeches off you, so a night in a marsh camp costs you no rest to biting insects.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "campfire",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0.3,
+    "level": 1,
+    "yields": 4,
+    "components": [
+     {
+      "m": "cattail-root",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "frog-legs",
+       "giant-frog-legs",
+       "giant-toad-legs"
+      ],
+      "q": 2,
+      "role": "supporting",
+      "label": "Frog or toad legs"
+     },
+     {
+      "m": "bog-myrtle",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "oneOf": [
+       "tallow",
+       "black-bear-fat",
+       "brown-bear-fat",
+       "camel-hump-fat"
+      ],
+      "q": 1,
+      "role": "binding",
+      "label": "Any rendered cooking fat"
+     }
+    ],
+    "lore": "Marsh cooks dry the cattail roots on the boat's thwarts all morning, and the myrtle goes into the fat, never the batter, or the fritters taste of soap."
+   }
+  },
+  {
+   "id": "venison-wild-garlic-skewers",
+   "name": "Venison and Wild Garlic Skewers",
+   "tier": "mundane",
+   "cat": "meal",
+   "value": 0.3,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food"
+   ],
+   "perish": "1 day",
+   "meal": {
+    "lasts": "8 hours"
+   },
+   "effect": "Chunks of forest game threaded on green sticks between cloves of wild garlic and yarrow leaves, then charred over coals. A skewer counts as a meal, and if you eat it at breakfast you gain +1 on the next Constitution saving throw you make against disease before nightfall.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "campfire",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0.3,
+    "level": 1,
+    "yields": 4,
+    "components": [
+     {
+      "oneOf": [
+       "deer-venison",
+       "elk-meat",
+       "boar-meat",
+       "giant-elk-meat"
+      ],
+      "q": 2,
+      "role": "supporting",
+      "label": "Forest game"
+     },
+     {
+      "m": "garlic-bulb",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "yarrow-sprig",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "salt",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "lore": "Woodwardens leave the meat in a garlic-and-yarrow rub while camp is struck, and say no fever ever caught a man who smelled that strongly of breakfast."
+   }
+  },
+  {
+   "id": "caravan-ash-flatbread",
+   "name": "Caravan Ash-Flatbread",
+   "tier": "mundane",
+   "cat": "meal",
+   "value": 0.3,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food"
+   ],
+   "perish": "1 week",
+   "meal": {
+    "lasts": "until the end of the day"
+   },
+   "effect": "Unleavened rounds kneaded with camel-hump fat, buried in hot sand under the coals and brushed with aloe pulp. A round counts as a day's food and stays soft for a week; the first time you make a Constitution saving throw against extreme heat on the day you eat one, you have advantage on it.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "campfire",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0.2,
+    "level": 1,
+    "yields": 6,
+    "components": [
+     {
+      "m": "grain",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "aloe-leaf",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "salt",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "camel-hump-fat",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "lore": "Caravan masters judge a new cook by the flatbread alone: it should crack like a shell and steam like a kettle when torn."
+   }
+  },
+  {
+   "id": "deepway-tentacle-rings",
+   "name": "Deepway Tentacle Rings",
+   "tier": "mundane",
+   "cat": "meal",
+   "value": 0.4,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food"
+   ],
+   "perish": "1 week",
+   "meal": {
+    "lasts": "1 hour"
+   },
+   "effect": "Rubbery tentacle sliced into rings, crusted in salted grain-flour and fried hard, then strung on a cord. A string counts as a day's food and keeps for a week, and gnawing them through a long watch keeps you sharp: for 1 hour after eating you have +1 on Wisdom (Perception) checks.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "campfire",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0.3,
+    "level": 1,
+    "yields": 4,
+    "components": [
+     {
+      "m": "grain",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "darkmantle-tentacle",
+       "grick-tentacle",
+       "octopus-tentacle"
+      ],
+      "q": 2,
+      "role": "supporting",
+      "label": "Tentacle meat"
+     },
+     {
+      "m": "salt",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "oneOf": [
+       "tallow",
+       "black-bear-fat",
+       "brown-bear-fat",
+       "camel-hump-fat"
+      ],
+      "q": 1,
+      "role": "binding",
+      "label": "Any rendered cooking fat"
+     }
+    ],
+    "lore": "Underdark traders beat the tentacle against a flat stone until it stops twitching; skip that step and the rings curl back into hooks in the pan."
+   }
+  },
+  {
+   "id": "shepherds-willow-goat-stew",
+   "name": "Shepherd's Willow-Bark Goat Stew",
+   "tier": "mundane",
+   "cat": "meal",
+   "value": 0.4,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food"
+   ],
+   "perish": "1 day",
+   "meal": {
+    "lasts": "until your next long rest"
+   },
+   "effect": "A thin, bitter-sweet mountain stew of goat, heather tips and a strip of willow bark that eases knees after a day of climbing. A bowl counts as a meal, and before your next long rest, when you roll a 1 on a Hit Die during a short rest, you can reroll it once.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "campfire",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0.3,
+    "level": 1,
+    "yields": 4,
+    "components": [
+     {
+      "oneOf": [
+       "goat-meat",
+       "giant-goat-meat"
+      ],
+      "q": 2,
+      "role": "supporting",
+      "label": "Goat or mountain-goat meat"
+     },
+     {
+      "m": "heather",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "willow-bark",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "rock-salt",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "lore": "Highland shepherds fish the willow bark out before serving, and count it a poor stew if the bark comes out still curled."
+   }
+  },
+  {
+   "id": "saltmarsh-crab-cakes",
+   "name": "Saltmarsh Crab Cakes",
+   "tier": "mundane",
+   "cat": "meal",
+   "value": 0.5,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food"
+   ],
+   "perish": "1 day",
+   "meal": {
+    "lasts": "1 hour"
+   },
+   "effect": "Picked crab bound with meal and chopped samphire and fried in a hot skillet, a dockside breakfast. A cake counts as a meal, and for the next hour you gain +1 on Strength (Athletics) checks to row, haul nets or ropes, or swim.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "kitchen",
+    "dc": 10,
+    "time": "1 hour",
+    "gp": 0.3,
+    "level": 1,
+    "yields": 4,
+    "components": [
+     {
+      "m": "grain",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "crab-meat",
+       "giant-crab-meat"
+      ],
+      "q": 2,
+      "role": "supporting",
+      "label": "Crab meat"
+     },
+     {
+      "m": "samphire",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "oneOf": [
+       "tallow",
+       "black-bear-fat",
+       "brown-bear-fat",
+       "camel-hump-fat"
+      ],
+      "q": 1,
+      "role": "binding",
+      "label": "Any rendered cooking fat"
+     }
+    ],
+    "lore": "Fishwives on the strand keep the samphire raw and add it last, so each cake still squeaks of the sea when you bite it."
+   }
+  },
+  {
+   "id": "wakeberry-glazed-drumsticks",
+   "name": "Wakeberry-Glazed Drumsticks",
+   "tier": "mundane",
+   "cat": "meal",
+   "value": 0.5,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food"
+   ],
+   "perish": "1 day",
+   "meal": {
+    "lasts": "1 hour"
+   },
+   "effect": "Huge drumsticks from a big flightless or winged beast, glazed with crushed wakeberries and honey and roasted until the skin cracks. One feeds a hungry adult for the day, and the tart berries leave you twitchy-alert: for 1 hour you gain +1 on initiative rolls.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "campfire",
+    "dc": 10,
+    "time": "2 hours",
+    "gp": 0.4,
+    "level": 1,
+    "yields": 4,
+    "components": [
+     {
+      "oneOf": [
+       "axe-beak-drumstick",
+       "hippogriff-meat"
+      ],
+      "q": 2,
+      "role": "supporting",
+      "label": "Big-bird drumstick"
+     },
+     {
+      "m": "wakeberry",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "salt",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "honey",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "lore": "Plains riders baste the drumsticks with a feather from the same bird, which the superstitious say keeps the meat from running off the spit."
+   }
+  },
+  {
+   "id": "borderland-wolf-sausage",
+   "name": "Borderland Wolf Sausage",
+   "tier": "mundane",
+   "cat": "meal",
+   "value": 0.6,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food"
+   ],
+   "perish": "1 week",
+   "meal": {
+    "lasts": "1 hour"
+   },
+   "effect": "Lean wolf or worg meat ground with bear fat, salt and pot-herbs, stuffed and cold-smoked over hardwood. A link counts as a day's food and keeps for a week; for 1 hour after eating one you gain +1 on Wisdom (Survival) checks to follow tracks.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "campfire",
+    "dc": 10,
+    "time": "6 hours",
+    "gp": 0.5,
+    "level": 1,
+    "yields": 5,
+    "components": [
+     {
+      "oneOf": [
+       "wolf-meat",
+       "worg-meat",
+       "dire-wolf-meat"
+      ],
+      "q": 2,
+      "role": "supporting",
+      "label": "Wolf or worg meat"
+     },
+     {
+      "m": "medicinal-herbs",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "preserving-salts",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "oneOf": [
+       "black-bear-fat",
+       "brown-bear-fat",
+       "tallow"
+      ],
+      "q": 1,
+      "role": "binding",
+      "label": "Rendered fat"
+     }
+    ],
+    "lore": "Frontier folk swear the surest way to stop a wolf eating you is to eat it first, and hang the links where the pack can smell them."
+   }
+  },
+  {
+   "id": "whalers-blubber-broth",
+   "name": "Whaler's Blubber Broth",
+   "tier": "common",
+   "cat": "meal",
+   "value": 60,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food",
+    "cold",
+    "resistance"
+   ],
+   "perish": "1 day",
+   "meal": {
+    "lasts": "8 hours"
+   },
+   "effect": "A greasy, scalding broth of rendered blubber and northern meat that sits in the belly like a banked fire. For 8 hours you automatically succeed on saving throws against extreme cold, and a swim in freezing water doesn't cost you a level of exhaustion.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "campfire",
+    "dc": 12,
+    "time": "3 hours",
+    "gp": 5,
+    "level": 1,
+    "yields": 4,
+    "components": [
+     {
+      "oneOf": [
+       "polar-bear-meat",
+       "saber-toothed-tiger-meat",
+       "elk-meat"
+      ],
+      "q": 1,
+      "role": "base",
+      "label": "Cold-country meat"
+     },
+     {
+      "oneOf": [
+       "killer-whale-blubber",
+       "polar-bear-fat",
+       "mammoth-fat"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Blubber or polar fat"
+     },
+     {
+      "m": "snowcap-berry",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "rock-salt",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "lore": "The blubber is rendered over a slow flame until it stops spitting, and the snowcap berries go in last so their chill locks the warmth inside the belly."
+   }
+  },
+  {
+   "id": "echo-cave-bat-ear-crisps",
+   "name": "Echo-Cave Bat-Ear Crisps",
+   "tier": "common",
+   "cat": "meal",
+   "value": 55,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food",
+    "senses",
+    "sound"
+   ],
+   "perish": "1 week",
+   "meal": {
+    "lasts": "8 hours"
+   },
+   "effect": "Paper-thin fried bat ears dusted with shaved truffle and salt. For 8 hours you have advantage on Wisdom (Perception) checks that rely on hearing, and while you are blinded or in total darkness you still know the direction of any creature within 30 feet that isn't moving silently.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "campfire",
+    "dc": 12,
+    "time": "2 hours",
+    "gp": 5,
+    "level": 1,
+    "yields": 4,
+    "components": [
+     {
+      "oneOf": [
+       "bat-ear",
+       "giant-bat-ear",
+       "swarm-of-bats-ears"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Fresh bat ears (fry within the hour)"
+     },
+     {
+      "m": "cave-truffle",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "salt",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "oneOf": [
+       "tallow",
+       "black-bear-fat",
+       "brown-bear-fat",
+       "camel-hump-fat"
+      ],
+      "q": 1,
+      "role": "binding",
+      "label": "Any rendered cooking fat"
+     }
+    ],
+    "lore": "The ears must hit the fat within the hour they're taken, still twitching; fried late, they crisp up deaf."
+   }
+  },
+  {
+   "id": "deepdelvers-mushroom-bake",
+   "name": "Deepdelver's Mushroom Bake",
+   "tier": "common",
+   "cat": "meal",
+   "value": 65,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food",
+    "darkvision"
+   ],
+   "perish": "1 day",
+   "meal": {
+    "lasts": "8 hours"
+   },
+   "effect": "A dense, savoury bake of cave truffle and gloomsight caps set with stone milk. For 8 hours you gain darkvision out to 30 feet; if you already have darkvision, its range increases by 30 feet.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "campfire",
+    "dc": 12,
+    "time": "3 hours",
+    "gp": 5,
+    "level": 1,
+    "yields": 4,
+    "components": [
+     {
+      "m": "grain",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "gloomsight-fungus",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "cave-truffle",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "stone-milk",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "lore": "Deep gnome cooks bake it in a covered stone pot with no lantern lit, insisting the caps sulk and lose their virtue if they see light while cooking."
+   }
+  },
+  {
+   "id": "houndsnose-brawn",
+   "name": "Houndsnose Brawn",
+   "tier": "common",
+   "cat": "meal",
+   "value": 60,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food",
+    "senses"
+   ],
+   "perish": "1 week",
+   "meal": {
+    "lasts": "8 hours"
+   },
+   "effect": "A cold, peppery head-cheese of boiled meat and minced hound or wolf snout set in its own jelly, sold by the slice at butchers' stalls. For 8 hours you have advantage on Wisdom (Perception) and Wisdom (Survival) checks that rely on smell, and you can follow a scent trail up to a day old as a bloodhound would.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "kitchen",
+    "dc": 12,
+    "time": "4 hours",
+    "gp": 5,
+    "level": 1,
+    "yields": 4,
+    "components": [
+     {
+      "oneOf": [
+       "boar-meat",
+       "goat-meat",
+       "horse-meat"
+      ],
+      "q": 2,
+      "role": "base",
+      "label": "Head and trotters"
+     },
+     {
+      "oneOf": [
+       "mastiff-nose",
+       "wolf-nose",
+       "dire-wolf-snout"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Keen-nosed snout"
+     },
+     {
+      "m": "medicinal-herbs",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "vinegar",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "lore": "Town ratcatchers and thief-takers buy it by the pound; the trick is to mince the snout raw into the cooling jelly, never to boil it."
+   }
+  },
+  {
+   "id": "stonewarden-cockatrice-custard",
+   "name": "Stonewarden's Cockatrice Custard",
+   "tier": "common",
+   "cat": "meal",
+   "value": 60,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food",
+    "petrification"
+   ],
+   "perish": "1 day",
+   "meal": {
+    "lasts": "8 hours"
+   },
+   "effect": "A wobbling, faintly grey honey custard in a hard crust, baked from a cockatrice egg. For 8 hours you have advantage on saving throws against being petrified, and if you are restrained while turning to stone you may repeat the save at the start of each of your turns.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "kitchen",
+    "dc": 12,
+    "time": "2 hours",
+    "gp": 5,
+    "level": 1,
+    "yields": 4,
+    "components": [
+     {
+      "m": "grain",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "cockatrice-egg",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "honey",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "oneOf": [
+       "trailberries",
+       "wakeberry",
+       "snowcap-berry"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Any wild berries"
+     }
+    ],
+    "lore": "Hill-temple wardens eat a slice before descending into a basilisk's den, and swear the custard sets harder the closer you carry it to stone."
+   }
+  },
+  {
+   "id": "desert-gizzard-pottage",
+   "name": "Desert Gizzard Pottage",
+   "tier": "common",
+   "cat": "meal",
+   "value": 55,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food",
+    "disease",
+    "resistance"
+   ],
+   "perish": "1 day",
+   "meal": {
+    "lasts": "8 hours"
+   },
+   "effect": "A thick grain porridge simmered around a scavenger bird's gizzard and finished with camel fat. For 8 hours you have advantage on saving throws against disease, and you can eat spoiled or tainted (but nonmagical) food and drink without ill effect.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "campfire",
+    "dc": 12,
+    "time": "3 hours",
+    "gp": 5,
+    "level": 1,
+    "yields": 4,
+    "components": [
+     {
+      "m": "grain",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "vulture-gizzard",
+       "giant-vulture-stomach"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Vulture gizzard or stomach"
+     },
+     {
+      "m": "salt",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "camel-hump-fat",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "lore": "Desert guides say the vulture eats death and never sickens; the gizzard is scrubbed in salt three times and simmered whole, then sliced into the pot."
+   }
+  },
+  {
+   "id": "smugglers-inkpot-rice",
+   "name": "Smuggler's Inkpot Rice",
+   "tier": "common",
+   "cat": "meal",
+   "value": 60,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food",
+    "stealth"
+   ],
+   "perish": "1 day",
+   "meal": {
+    "lasts": "8 hours"
+   },
+   "effect": "Grain cooked black in octopus ink with diced tentacle and sea salt, a dish of harbour back-rooms. For 8 hours you have advantage on Dexterity (Stealth) checks made in dim light or darkness.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "kitchen",
+    "dc": 12,
+    "time": "2 hours",
+    "gp": 5,
+    "level": 1,
+    "yields": 4,
+    "components": [
+     {
+      "m": "grain",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "octopus-ink-sac",
+       "giant-octopus-ink-sac"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Fresh ink sac"
+     },
+     {
+      "m": "octopus-tentacle",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "sea-salt",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "lore": "Wharf cooks stir the ink in off the heat; boil it and the grain goes grey, and so, they say, does the eater's luck in the shadows."
+   }
+  },
+  {
+   "id": "wallcrawlers-clingvine-salad",
+   "name": "Wallcrawler's Clingvine Salad",
+   "tier": "common",
+   "cat": "meal",
+   "value": 55,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food",
+    "climbing"
+   ],
+   "perish": "1 day",
+   "meal": {
+    "lasts": "8 hours"
+   },
+   "effect": "Wilted clingvine tips and nettle tossed with ribbons of pickled frog tongue. For 8 hours you have advantage on Strength (Athletics) checks to climb and on checks to keep hold of a rope, ledge or handhold.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "kitchen",
+    "dc": 12,
+    "time": "2 hours",
+    "gp": 5,
+    "level": 1,
+    "yields": 4,
+    "components": [
+     {
+      "m": "clingvine",
+      "q": 2,
+      "role": "keystone"
+     },
+     {
+      "oneOf": [
+       "giant-frog-tongue",
+       "giant-toad-tongue"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Sticky tongue, sliced thin"
+     },
+     {
+      "m": "fringe-nettle",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "vinegar",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "lore": "Cat burglars and steeplejacks eat it standing up; the tongue is pickled overnight so it keeps its grip without gluing your teeth together."
+   }
+  },
+  {
+   "id": "hearthfest-clover-pie",
+   "name": "Hearthfest Clover Pie",
+   "tier": "common",
+   "cat": "meal",
+   "value": 55,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food",
+    "luck"
+   ],
+   "perish": "1 week",
+   "meal": {
+    "lasts": "8 hours"
+   },
+   "effect": "A broad harvest pie of berries and honeycomb with a single four-leaf clover baked into the filling, cut into eight slices. Up to eight creatures who each eat a slice within the same hour can each, once in the next 8 hours, roll a d4 and add it to one ability check they make.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "kitchen",
+    "dc": 12,
+    "time": "4 hours",
+    "gp": 5,
+    "level": 1,
+    "yields": 8,
+    "components": [
+     {
+      "m": "grain",
+      "q": 2,
+      "role": "base"
+     },
+     {
+      "m": "four-leaf-clover",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "trailberries",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "sweetgrass",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "honeycomb",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "lore": "Village bakers swear the luck spreads only if the pie is cut and shared at one table; whoever finds the clover in their slice pays for the next one."
+   }
+  },
+  {
+   "id": "knitbone-marrow-soup",
+   "name": "Knitbone Marrow Soup",
+   "tier": "common",
+   "cat": "meal",
+   "value": 75,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food",
+    "regeneration"
+   ],
+   "perish": "1 day",
+   "meal": {
+    "lasts": "8 hours"
+   },
+   "effect": "A glossy bone broth with a sliver of still-twitching regenerating flesh simmered in it. The first time in the next 8 hours that you are reduced to fewer than half your hit points, you regain hit points equal to 1d6 + your proficiency bonus.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "kitchen",
+    "dc": 12,
+    "time": "4 hours",
+    "gp": 5,
+    "level": 1,
+    "yields": 4,
+    "components": [
+     {
+      "oneOf": [
+       "elk-meat",
+       "horse-meat",
+       "boar-meat"
+      ],
+      "q": 2,
+      "role": "base",
+      "label": "Marrow bones and shin"
+     },
+     {
+      "oneOf": [
+       "troll-limb-knitting-flesh",
+       "lizard-tail"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Self-mending flesh"
+     },
+     {
+      "m": "healers-moss",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "salt",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "lore": "Camp surgeons keep a severed troll limb in a lidded crock and pare it nightly for the pot; it grows the slice back by morning, which nobody likes to think about."
+   }
+  },
+  {
+   "id": "goatherds-fernleaf-dumplings",
+   "name": "Goatherd's Fernleaf Dumplings",
+   "tier": "common",
+   "cat": "meal",
+   "value": 60,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food",
+    "air",
+    "flight"
+   ],
+   "perish": "1 day",
+   "meal": {
+    "lasts": "8 hours"
+   },
+   "effect": "Steamed goat-meat dumplings wrapped in featherfall fern fronds, so light they seem to lift off the plate. For 8 hours, when you fall you take damage as though the fall were 20 feet shorter, and you have advantage on Dexterity (Acrobatics) checks to keep your footing on narrow or windswept ledges.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "campfire",
+    "dc": 12,
+    "time": "3 hours",
+    "gp": 5,
+    "level": 1,
+    "yields": 4,
+    "components": [
+     {
+      "m": "grain",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "feather-fern",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "oneOf": [
+       "goat-meat",
+       "giant-goat-meat"
+      ],
+      "q": 2,
+      "role": "supporting",
+      "label": "Goat or mountain-goat meat"
+     },
+     {
+      "m": "rock-salt",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "lore": "Pass-guides steam them above a pot with the lid weighted down by a stone, because the first batch they ever made floated out into the snow."
+   }
+  },
+  {
+   "id": "hellfire-kettle-stew",
+   "name": "Hellfire Kettle Stew",
+   "tier": "uncommon",
+   "cat": "meal",
+   "value": 250,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food",
+    "fire",
+    "resistance"
+   ],
+   "perish": "1 day",
+   "meal": {
+    "lasts": "8 hours"
+   },
+   "effect": "A blistering red stew that makes eaters sweat smoke. For 8 hours you have resistance to fire damage and suffer no ill effects from extreme heat.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "kitchen",
+    "dc": 15,
+    "time": "6 hours",
+    "gp": 25,
+    "level": 3,
+    "yields": 4,
+    "components": [
+     {
+      "oneOf": [
+       "goat-meat",
+       "giant-goat-meat",
+       "boar-meat"
+      ],
+      "q": 2,
+      "role": "base",
+      "label": "Any hardy meat"
+     },
+     {
+      "oneOf": [
+       "hell-hound-fire-gland",
+       "red-dragon-wyrmling-breath-gland",
+       "gold-dragon-wyrmling-breath-gland",
+       "emberbloom"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Fire gland or emberbloom (uncommon)"
+     },
+     {
+      "m": "ashlily",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "garlic-bulb",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "lore": "The gland is lanced over the kettle and its oil cooked out for hours behind a wet curtain; cooks who taste too early lose their eyebrows and their sense of taste for a tenday."
+   }
+  },
+  {
+   "id": "frosthall-feast",
+   "name": "Frost-Hall Feast",
+   "tier": "uncommon",
+   "cat": "meal",
+   "value": 220,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food",
+    "cold",
+    "resistance"
+   ],
+   "perish": "1 day",
+   "meal": {
+    "lasts": "8 hours"
+   },
+   "effect": "A northern longhouse feast: a whole roasted haunch glazed with snowcap berries over a frost-lichen bed, carved for six. Up to six creatures who share it within the same hour each gain resistance to cold damage for 8 hours.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "kitchen",
+    "dc": 15,
+    "time": "8 hours",
+    "gp": 25,
+    "level": 3,
+    "yields": 6,
+    "components": [
+     {
+      "oneOf": [
+       "mammoth-meat",
+       "polar-bear-meat",
+       "saber-toothed-tiger-meat",
+       "giant-elk-meat"
+      ],
+      "q": 2,
+      "role": "base",
+      "label": "Haunch of cold-country game"
+     },
+     {
+      "oneOf": [
+       "winter-wolf-frost-gland",
+       "frost-lichen",
+       "icebloom-saxifrage",
+       "young-white-dragon-blood"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Frost-hardy ingredient (uncommon)"
+     },
+     {
+      "m": "snowcap-berry",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "oneOf": [
+       "killer-whale-blubber",
+       "polar-bear-fat",
+       "mammoth-fat"
+      ],
+      "q": 1,
+      "role": "binding",
+      "label": "Blubber or polar fat"
+     },
+     {
+      "m": "rock-salt",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "lore": "The haunch roasts all day while the hall's doors stand open to the blizzard, and it is carved only once the fire has burned to embers and nobody's breath steams any more."
+   }
+  },
+  {
+   "id": "pearl-divers-gillweed-soup",
+   "name": "Pearl-Diver's Gillweed Soup",
+   "tier": "uncommon",
+   "cat": "meal",
+   "value": 220,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food",
+    "breathing",
+    "swimming"
+   ],
+   "perish": "1 day",
+   "meal": {
+    "lasts": "4 hours"
+   },
+   "effect": "A cold green soup of gillweed or a great diver's lung, sea salt and shellfish, slurped on the boat before going over the side. For 4 hours you can breathe underwater as well as in air.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "kitchen",
+    "dc": 15,
+    "time": "4 hours",
+    "gp": 25,
+    "level": 3,
+    "yields": 4,
+    "components": [
+     {
+      "oneOf": [
+       "gillweed-kelp",
+       "killer-whale-lungs",
+       "giant-crocodile-heart"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Deep-breathing ingredient (uncommon)"
+     },
+     {
+      "oneOf": [
+       "crab-meat",
+       "giant-crab-meat",
+       "quipper-meat",
+       "reef-shark-fin"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Any shellfish or fish"
+     },
+     {
+      "m": "bladderwrack",
+      "q": 2,
+      "role": "supporting"
+     },
+     {
+      "m": "sea-salt",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "lore": "Pearl divers make it with seawater and never let it boil; the first spoonful feels like drowning, and the second like coming home."
+   }
+  },
+  {
+   "id": "ironhide-heart-curry",
+   "name": "Ironhide Heart Curry",
+   "tier": "uncommon",
+   "cat": "meal",
+   "value": 220,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food",
+    "toughness"
+   ],
+   "perish": "1 day",
+   "meal": {
+    "lasts": "8 hours"
+   },
+   "effect": "A slow, fiery curry of thick-skinned beast and diced heart over mashed oxheart tuber. When you finish a serving, you gain temporary hit points equal to 2d6 + your level, which last for 8 hours.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "kitchen",
+    "dc": 15,
+    "time": "6 hours",
+    "gp": 25,
+    "level": 3,
+    "yields": 4,
+    "components": [
+     {
+      "oneOf": [
+       "rhinoceros-meat",
+       "elephant-meat",
+       "giant-boar-meat"
+      ],
+      "q": 2,
+      "role": "base",
+      "label": "Thick-skinned beast meat"
+     },
+     {
+      "oneOf": [
+       "elephant-heart",
+       "stoneroot"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Elephant heart or stoneroot (uncommon)"
+     },
+     {
+      "m": "oxheart-tuber",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "garlic-bulb",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "salt",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "lore": "Savanna cooks simmer it in a clay pot sealed with dough and break the seal at the table; if the heart has gone soft, the curry was rushed."
+   }
+  },
+  {
+   "id": "antivenom-snake-broth",
+   "name": "Antivenom Snake Broth",
+   "tier": "uncommon",
+   "cat": "meal",
+   "value": 200,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food",
+    "poison",
+    "resistance"
+   ],
+   "perish": "1 day",
+   "meal": {
+    "lasts": "8 hours"
+   },
+   "effect": "A bitter fenland broth of snake meat and a boiled-out venom sac, cut with wyrmbane thistle so the body learns the poison without the bite. For 8 hours you have resistance to poison damage and advantage on saving throws against being poisoned.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils",
+     "herbalism-kit"
+    ],
+    "station": "kitchen",
+    "dc": 15,
+    "time": "5 hours",
+    "gp": 25,
+    "level": 3,
+    "yields": 4,
+    "components": [
+     {
+      "oneOf": [
+       "constrictor-snake-meat",
+       "giant-constrictor-snake-meat"
+      ],
+      "q": 2,
+      "role": "base",
+      "label": "Snake meat"
+     },
+     {
+      "m": "wyrmbane-thistle",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "oneOf": [
+       "giant-poisonous-snake-venom",
+       "flying-snake-venom",
+       "spider-venom"
+      ],
+      "q": 1,
+      "role": "supporting",
+      "label": "Venom sac, boiled out"
+     },
+     {
+      "m": "bog-myrtle",
+      "q": 1,
+      "role": "supporting"
+     }
+    ],
+    "lore": "The venom is boiled three times in fresh water and the water thrown out each time; skip the third boil and the broth teaches its lesson the hard way."
+   }
+  },
+  {
+   "id": "lorekeepers-memory-pudding",
+   "name": "Lorekeeper's Memory Pudding",
+   "tier": "uncommon",
+   "cat": "meal",
+   "value": 200,
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "food",
+    "psychic",
+    "knowledge"
+   ],
+   "perish": "1 week",
+   "meal": {
+    "lasts": "8 hours"
+   },
+   "effect": "A dark, steamed suet pudding of memory root and wakeful leaf, served to scholars before they open dangerous books. For 8 hours you have resistance to psychic damage and advantage on Intelligence saving throws.",
+   "recipe": {
+    "tools": [
+     "cooks-utensils"
+    ],
+    "station": "kitchen",
+    "dc": 15,
+    "time": "5 hours",
+    "gp": 25,
+    "level": 3,
+    "yields": 4,
+    "components": [
+     {
+      "m": "grain",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "oneOf": [
+       "memory-root",
+       "rememberwort",
+       "elk-memory-bloom"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Remembering herb (uncommon)"
+     },
+     {
+      "m": "awakened-shrub-wakeful-leaf",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "honey",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "tallow",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "lore": "Library cooks grate the root while reciting the day's date aloud, so the pudding remembers what it is for and doesn't send the eater wandering through old childhood afternoons."
+   }
+  }
+ ]
+}
