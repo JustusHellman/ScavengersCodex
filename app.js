@@ -135,13 +135,15 @@ async function loadRaw() {
 function buildIndex(parts) {
   const things = new Map(), monsters = new Map(), envs = new Map(), grow = new Map();
   for (const p of parts) {
+    const pk = p.homebrew ? (p.homebrew.title || p.homebrew.name || null) : null;
     for (const k of ['materials', 'items']) for (const t of p[k] || []) {
+      if (pk) t.pack = pk;
       t.kind = k === 'items' ? 'item' : 'material';
       t.tags = t.tags || [];
       things.set(t.id, t);
     }
-    for (const m of p.monsters || []) { m.kind = 'monster'; monsters.set(m.id, m); }
-    for (const e of p.environments || []) if (!e.extend) { e.kind = 'place'; envs.set(e.id, e); }
+    for (const m of p.monsters || []) { m.kind = 'monster'; if (pk) m.pack = pk; monsters.set(m.id, m); }
+    for (const e of p.environments || []) if (!e.extend) { e.kind = 'place'; if (pk) e.pack = pk; envs.set(e.id, e); }
     for (const c of p.cultivation || []) grow.set(c.m, c);
   }
   // A homebrew pack can add finds to an existing place ("extend": true). Applied after every base place exists.
@@ -782,7 +784,7 @@ function consume(pid, q) {
 /* ================================================================ nav */
 const NAV = [
   ['home', '#/', 'Home', 'home', 'desk'], ['items', '#/items', 'Items', 'star'], ['monsters', '#/monsters', 'Creatures', 'beast'],
-  ['materials', '#/materials', 'Materials', 'leaf'], ['places', '#/places', 'Places', 'map'], ['satchel', '#/satchel', 'Satchel', 'pack'], ['garden', '#/garden', 'Garden', 'plant'], ['journal', '#/journal', 'Journal', 'book'],
+  ['materials', '#/materials', 'Materials', 'leaf'], ['places', '#/places', 'Places', 'map'], ['satchel', '#/satchel', 'Satchel', 'pack'], ['garden', '#/garden', 'Garden', 'plant'], ['journal', '#/journal', 'Journal', 'book'], ['web', '#/web', 'The Web', 'web'],
   ['sep'], ['dm', '#/dm', 'DM tools', 'dust', 'desk'], ['rules', '#/rules', 'Rules', 'book', 'desk'], ['about', '#/about', 'About', 'info', 'desk']
 ];
 function renderNav(active) {
@@ -1894,6 +1896,7 @@ function pThing(id) {
     ${srcHtml}${gatHtml}${growSection(t)}
     ${!t.recipe && !srcA.length && !gatA.length ? fold('thing.buy', 'Where to get it', `<p class="small">A trade good. ${{ mundane: 'Any village store, market or peddler sells it.', common: 'Towns and cities stock it; villages rarely do.', uncommon: 'Only city specialists (alchemists, jewellers, arcane suppliers) sell it, and not always.' }[t.tier] || 'Very hard to buy. Ask your DM where one might be found.'} The <a href="#/rules/dm">DM tools</a> wandering trader can roll up stock.</p>`) : ''}
     ${usedInList(t)}
+    ${webFold(t)}
   </div>`;
 }
 /* ---- detail: monster ---- */
@@ -1930,6 +1933,7 @@ function pMonster(id) {
     ${harvestRoller(m)}
     ${fold('mon.craft', 'Craftable from this creature', `${hiddenCraft ? `<p class="small muted undisc">${clist.length ? '…and' : 'There are'} recipes your party hasn't learned yet.</p>` : ''}
       ${clist.length ? `<div class="list">${clist.slice(0, shown).map(x => rowFor(x.t, ` · uses ${[...x.parts].map(p => D.things.get(p).name.replace(m.name, '').trim() || D.things.get(p).name).join(', ')}`)).join('')}</div>${clist.length > shown ? `<button class="btn more" type="button" data-act="more" data-key="${key}" data-shown="${shown}" data-step="48">Show more (${clist.length - shown})</button>` : ''}` : (isDM() ? '<div class="empty">No recipe names these parts directly, but they fit many "any…" slots. Open a part to see where.</div>' : '')}`, { count: clist.length, hidden: !isDM() && !clist.length && !hiddenCraft })}
+    ${webFold(m)}
   </div>`;
 }
 /* ---- detail: place ---- */
@@ -1955,6 +1959,7 @@ function pPlace(id) {
     ${fold('place.mons', 'Creatures found here', `
       ${mons.length ? `<div class="list">${mons.slice(0, shown).map(m => rowFor(m)).join('')}</div>${mons.length > shown ? `<button class="btn more" type="button" data-act="more" data-key="${key}" data-shown="${shown}" data-step="60">Show more (${mons.length - shown})</button>` : ''}` : (isDM() ? '<div class="empty">No creatures listed here.</div>' : '')}
       ${monsA.length > mons.length ? `<p class="small muted undisc">${mons.length ? '…and' : 'Travellers speak of'} creatures you haven't encountered yet.</p>` : ''}`, { count: mons.length, open: false })}
+    ${webFold(e)}
   </div>`;
 }
 /* ---- tag page ---- */
@@ -2199,6 +2204,7 @@ function route() {
     case 'rules': pRules.open = b; html = pRules(); break;
     case 'about': html = pAbout(); break;
     case 'garden': html = pGarden(); break;
+    case 'web': html = pWeb(b, parts[2]); nav = 'web'; break;
     case 'print': html = pPrint(); nav = 'dm'; break;
     default: html = notFound();
   }
@@ -2210,6 +2216,8 @@ function route() {
   if (a === 'dm') wireDM();
   if (a === 'journal') wireJournal();
   if (nav === 'home') wireHome();
+  if (a === 'web') wireWeb();
+  wireWebs($('#view'));
   if (a === 'rules' && b) { const el = document.getElementById('r-' + b); if (el) { el.open = true; el.scrollIntoView(); } }
   else if (!sameView) window.scrollTo(0, 0);
   route.last = path;
@@ -2517,6 +2525,296 @@ document.addEventListener('input', ev => {
 document.addEventListener('keydown', ev => {
   if (ev.key === '/' && !/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)) { ev.preventDefault(); $('#q').focus(); }
 });
+
+/* ================================================================ the web: a map of how things connect
+   Columns run the way crafting does: places → creatures → found materials → things made from them.
+   Players only ever see links their own pages would show. Anything else becomes a "?" bubble,
+   one per kind of gap, with no name, count or rarity. */
+P.web = '<circle cx="5" cy="6" r="2.2"/><circle cx="19" cy="7" r="2.2"/><circle cx="12" cy="18" r="2.2"/><path d="M7.2 6.2l9.6.6M6.2 8l4.7 8.1M17.9 9l-4.8 7.2"/>';
+const WEB = new Map(); let webSeq = 0;
+const WEB_KEY = 'scavengers-codex.web.v1';
+const WEBS = Object.assign({ depth: 1, focus: 'players', tier: 'legendary' }, store.get(WEB_KEY, {}));
+const nkey = o => (o.kind === 'monster' ? 'm' : o.kind === 'place' ? 'p' : 't') + ':' + o.id;
+const webHref = o => `#/web/${o.kind}/${encodeURIComponent(o.id)}`;
+// every direct link of one entry, split into what feeds it (up) and what it feeds (down)
+function webLinks(o) {
+  const up = [], down = [], seen = new Set();
+  const put = (arr, x) => { const k = arr === up ? 'u' + nkey(x.o) : 'd' + nkey(x.o); if (seen.has(k)) return; seen.add(k); arr.push(x); };
+  if (o.kind === 'place') {
+    for (const g of o.gather || []) { const t = D.things.get(g.m); if (t) put(down, { o: t, rel: 'gather' }); }
+    for (const m of D.envMon.get(o.id) || []) put(down, { o: m, rel: 'habitat' });
+  } else if (o.kind === 'monster') {
+    for (const e of o.env || []) { const p = D.envs.get(e); if (p) put(up, { o: p, rel: 'habitat' }); }
+    for (const h of o.harvest || []) { const t = D.things.get(h.m); if (t) put(down, { o: t, rel: 'harvest' }); }
+  } else {
+    for (const { m } of D.src.get(o.id) || []) put(up, { o: m, rel: 'harvest' });
+    for (const { e } of D.gat.get(o.id) || []) put(up, { o: e, rel: 'gather' });
+    const comps = ((o.recipe || {}).components || []).slice().sort((a, b) => (a.m ? 0 : 1) - (b.m ? 0 : 1));
+    for (const c of comps) for (const id of c.m ? [c.m] : c.oneOf || []) { const t = D.things.get(id); if (t) put(up, { o: t, rel: 'part', role: c.role, opt: !c.m }); }
+    for (const u of D.usedIn.get(o.id) || []) put(down, { o: u.t, rel: 'part', role: u.c.role, opt: u.via === 'option' });
+  }
+  return { up, down };
+}
+// would a player's own pages show this link? (a feeds b)
+function webEdgeVis(a, b, rel) {
+  if (isDM()) return true;
+  if (!seeAny(a) || !seeAny(b)) return false;
+  return rel === 'part' ? known(b) : true;
+}
+// what a page says about a gap, and which column the gap sits in
+const FOG_TEXT = {
+  'up:harvest': ['An unknown creature', 'It comes from a creature your party hasn’t learned about yet.'],
+  'up:gather': ['Somewhere unexplored', 'It is found somewhere your party hasn’t explored yet.'],
+  'up:part': ['Something undiscovered', 'Part of how it is made is still a mystery. Learn the formula, or find the missing pieces.'],
+  'down:part': ['Other uses', 'Crafters whisper that it has other uses. Learn the right formula to find out.'],
+  'down:gather': ['More to find', 'More grows or lies hidden here. Forage to find it, or ask around for a survey map.'],
+  'down:harvest': ['More parts', 'Hunters say it yields more than your notes mention.'],
+  'down:habitat': ['Unknown creatures', 'Travellers speak of creatures here you haven’t encountered yet.']
+};
+function webBuild(spec) {
+  const N = new Map(), E = [], ek = new Set(), CAP = spec.cap || 170;
+  let cut = 0;
+  const add = (o, x = {}) => { const k = nkey(o); if (!N.has(k)) { if (N.size >= CAP) { cut++; return null; } N.set(k, { k, o, ...x }); } return N.get(k); };
+  const link = (a, b, rel, x = {}) => { const k = a.k + '>' + b.k; if (ek.has(k)) return; ek.add(k); E.push({ a: a.k, b: b.k, rel, ...x }); };
+  const extra = (n, d, rel, x) => {
+    const k = `${x.more ? '+' : '?'}:${n.k}:${d}:${rel}`;
+    if (!N.has(k)) { if (x.more && N.size >= CAP) { cut++; return; } N.set(k, { k, d, rel, anchor: n.k, ...x }); }
+    const f = N.get(k); if (x.more) f.more = x.more;
+    if (d === 'up') link(f, n, x.more ? 'more' : 'fog'); else link(n, f, x.more ? 'more' : 'fog');
+  };
+  const pri = (x, inS) => (inS && inS.has(nkey(x.o)) ? -100 : 0) + (N.has(nkey(x.o)) ? -50 : 0) + (x.role === 'keystone' ? -10 : 0) + ti(x.o.tier || 'mundane') + (x.o.kind === 'place' ? -3 : x.o.kind === 'monster' ? -2 : 0);
+  const tierOk = o => !o.tier || ti(o.tier) <= ti(spec.tier || 'legendary');
+  function expand(n, dirs, fan, inS) {
+    const L = webLinks(n.o), out = [];
+    for (const d of dirs) {
+      const vis = [], hid = new Set();
+      for (const x of L[d]) {
+        const [a, b] = d === 'up' ? [x.o, n.o] : [n.o, x.o];
+        if (webEdgeVis(a, b, x.rel)) { if (tierOk(x.o)) vis.push(x); }
+        else if (!(n.o.kind === 'monster' && x.rel === 'habitat')) hid.add(x.rel);
+      }
+      for (const rel of hid) extra(n, d, rel, { fog: true });
+      vis.sort((a, b) => pri(a, inS) - pri(b, inS) || a.o.name.localeCompare(b.o.name));
+      let shown = 0, over = 0; const lim = d === 'up' && spec.upFan != null ? spec.upFan : fan;
+      for (const x of vis) {
+        const always = (inS && inS.has(nkey(x.o))) || N.has(nkey(x.o));
+        if (!always && shown >= lim) { if (lim) over++; continue; }
+        const m = add(x.o); if (!m) { over++; continue; }
+        if (!always) shown++;
+        if (d === 'up') link(m, n, x.rel, { role: x.role, opt: x.opt }); else link(n, m, x.rel, { role: x.role, opt: x.opt });
+        if (m !== n) out.push([m, d]);
+      }
+      if (over) extra(n, d, 'all', { more: over });
+    }
+    return out;
+  }
+  if (spec.centre) {
+    const c = add(spec.centre, { centre: true });
+    const hop1 = expand(c, ['up', 'down'], spec.fan || 14);
+    if (spec.depth > 1) for (const [m, d] of hop1) expand(m, [d], 8);
+  } else {
+    const S = new Set(spec.seeds.map(nkey));
+    for (const o of spec.seeds) add(o, { seed: true });
+    for (const n of [...N.values()].filter(n => n.seed)) expand(n, ['up', 'down'], spec.fan || 5, S);
+  }
+  return { N, E, cut };
+}
+/* ---- layout: columns by crafting step, rows ordered to untangle the links */
+const WEB_COLNAME = ['Places', 'Creatures', 'Found & bought', 'Made', 'Made from those', 'And from those'];
+function webLayout(G) {
+  const col = new Map(), ups = new Map();
+  for (const e of G.E) { if (!ups.has(e.b)) ups.set(e.b, []); ups.get(e.b).push(e); }
+  const colOf = (k, guard = new Set()) => {
+    if (col.has(k)) return col.get(k);
+    const n = G.N.get(k); let c;
+    if (n.fog || n.more) {
+      const a = colOf(n.anchor, guard), r = n.rel;
+      const ak = G.N.get(n.anchor).o;
+      if (r === 'all') c = n.d === 'up' ? (ak.kind === 'monster' ? 0 : ak.recipe ? Math.max(2, a - 1) : 1) : (ak.kind === 'place' || ak.kind === 'monster' ? 2 : a + 1);
+      else c = n.d === 'up' ? (r === 'harvest' ? 1 : r === 'gather' || r === 'habitat' ? 0 : Math.max(2, a - 1)) : (r === 'habitat' ? 1 : r === 'gather' || r === 'harvest' ? 2 : a + 1);
+    } else if (n.o.kind === 'place') c = 0;
+    else if (n.o.kind === 'monster') c = 1;
+    else if (!n.o.recipe) c = 2;
+    else {
+      if (guard.has(k)) return 3; guard.add(k);
+      let best = 2;
+      for (const e of ups.get(k) || []) if (e.rel === 'part' || e.rel === 'fog') { const s = G.N.get(e.a); if (s && !s.fog && !s.more) best = Math.max(best, colOf(e.a, guard)); }
+      c = Math.min(best + 1, 6);
+    }
+    col.set(k, c); return c;
+  };
+  for (const k of G.N.keys()) colOf(k);
+  const used = [...new Set(col.values())].sort((a, b) => a - b), cols = used.map(c => [...G.N.values()].filter(n => col.get(n.k) === c));
+  const nb = new Map(); for (const k of G.N.keys()) nb.set(k, []);
+  for (const e of G.E) { nb.get(e.a).push(e.b); nb.get(e.b).push(e.a); }
+  const sortKey = n => n.centre ? -1 : n.fog || n.more ? 99 : ti(n.o.tier || 'mundane');
+  cols.forEach(c => c.sort((a, b) => sortKey(a) - sortKey(b) || (a.o && b.o ? a.o.name.localeCompare(b.o.name) : 0)));
+  const pos = new Map(); const setPos = () => cols.forEach(c => c.forEach((n, i) => pos.set(n.k, i - c.length / 2)));
+  setPos();
+  for (let it = 0; it < 6; it++) {
+    const order = it % 2 ? cols.slice().reverse() : cols;
+    for (const c of order) {
+      const bc = new Map();
+      for (const n of c) { const ns = nb.get(n.k).filter(k => col.get(k) !== col.get(n.k)); bc.set(n.k, n.fog || n.more ? (pos.get(n.anchor) ?? pos.get(n.k)) + 0.01 : ns.length ? ns.reduce((s, k) => s + pos.get(k), 0) / ns.length : pos.get(n.k)); }
+      c.sort((a, b) => bc.get(a.k) - bc.get(b.k));
+      c.forEach((n, i) => pos.set(n.k, i - c.length / 2));
+    }
+  }
+  return { cols, colIdx: new Map([...col].map(([k, c]) => [k, used.indexOf(c)])), names: used.map(c => WEB_COLNAME[Math.min(c, WEB_COLNAME.length - 1)]) };
+}
+function webModel(spec) {
+  const preview = spec.asPlayer && isDM(), was = mode;
+  if (preview) mode = 'player';
+  try {
+    const G = webBuild(spec); G.L = webLayout(G); G.player = !isDM();
+    if (G.player) for (const n of G.N.values()) if (n.o) n.heard = (n.o.kind === 'monster' && monLevel(n.o) === 1) || (n.o.kind === 'place' && placeLevel(n.o) === 1);
+    return G;
+  } finally { if (preview) mode = was; }
+}
+function webBlock(spec, o = {}) {
+  const G = webModel(spec), id = 'w' + (++webSeq);
+  WEB.set(id, G); if (WEB.size > 12) WEB.delete(WEB.keys().next().value);
+  const real = [...G.N.values()].filter(n => n.o).length;
+  if (real <= 1 && ![...G.N.values()].some(n => n.fog)) return `<div class="empty">${o.empty || 'Nothing connects here yet.'}</div>`;
+  return `<div class="webwrap${o.small ? ' small' : ''}" data-web="${id}" aria-label="Connection map"></div><div class="webinfo" id="wi-${id}" aria-live="polite"><span class="small muted">${o.hint || 'Hover or tap a bubble to light up everything it connects to. Tap again to open it.'}</span></div>${G.cut ? `<p class="small muted">The map stops at ${G.N.size} bubbles. Centre it on an entry to see more.</p>` : ''}`;
+}
+function webLegend() {
+  return `<div class="weblegend small"><span><i class="lg k-place"></i>Place</span><span><i class="lg k-monster"></i>Creature</span><span><i class="lg k-material"></i>Material</span><span><i class="lg k-item"></i>Item</span><span><i class="ln key"></i>Keystone</span><span><i class="ln opt"></i>One of several options</span><span><i class="lg fog">?</i>${isDM() ? 'Hidden from players' : 'Not yet discovered'}</span></div>`;
+}
+/* ---- drawing */
+function drawWeb(wrap) {
+  const G = WEB.get(wrap.dataset.web); if (!G) return;
+  const L = G.L, small = wrap.classList.contains('small');
+  const ROW = small ? 30 : 32, HEAD = 26, NH = 24;
+  // a very tall column is folded into several side-by-side sub-columns, so big maps grow sideways instead of into a wall
+  const total = L.cols.reduce((s, c) => s + c.length, 0), R = Math.max(12, Math.min(22, Math.ceil(Math.sqrt(total) * 1.5)));
+  const subs = L.cols.map(c => Math.max(1, Math.ceil(c.length / R))), nSub = subs.reduce((a, b) => a + b, 0);
+  const avail = wrap.clientWidth || (wrap.parentNode && wrap.parentNode.clientWidth) || 900;
+  const colW = Math.max(176, Math.min(250, Math.floor(avail / Math.max(1, nSub))));
+  const NW = colW - 34, maxLen = Math.max(...L.cols.map((c, i) => Math.ceil(c.length / subs[i])));
+  const W = colW * nSub, H = HEAD + maxLen * ROW + 6;
+  const xy = new Map(), colX = []; let sx = 0;
+  L.cols.forEach((c, ci) => {
+    colX.push([sx, subs[ci]]); const per = Math.ceil(c.length / subs[ci]);
+    for (let s = 0; s < subs[ci]; s++) { const chunk = c.slice(s * per, (s + 1) * per), top = HEAD + (maxLen - chunk.length) * ROW / 2; chunk.forEach((n, i) => xy.set(n.k, [(sx + s) * colW + 17, top + i * ROW + (ROW - NH) / 2])); }
+    sx += subs[ci];
+  });
+  const paths = G.E.map((e, i) => {
+    const a = xy.get(e.a), b = xy.get(e.b); if (!a || !b) return '';
+    const x1 = a[0] + NW, y1 = a[1] + NH / 2, x2 = b[0], y2 = b[1] + NH / 2;
+    const back = x2 <= x1, dx = back ? 40 : Math.max(24, (x2 - x1) / 2);
+    const d = back ? `M${a[0]} ${y1} C${a[0] - dx} ${y1} ${x2 - dx} ${y2} ${x2} ${y2}` : `M${x1} ${y1} C${x1 + dx} ${y1} ${x2 - dx} ${y2} ${x2} ${y2}`;
+    return `<path data-i="${i}" class="we r-${e.rel}${e.role === 'keystone' ? ' key' : ''}${e.opt ? ' opt' : ''}" d="${d}"/>`;
+  }).join('');
+  const heads = L.names.map((nm, ci) => `<div class="wcol" style="left:${colX[ci][0] * colW}px;width:${colX[ci][1] * colW}px">${esc(nm)}</div>`).join('');
+  const nodes = [...G.N.values()].map(n => {
+    const [x, y] = xy.get(n.k), st = `left:${x}px;top:${y}px;width:${NW}px`;
+    if (n.fog) { const t = FOG_TEXT[n.d + ':' + n.rel] || ['Undiscovered', '']; return `<button type="button" class="wn fog" data-k="${esc(n.k)}" style="${st}" title="${esc(t[1])}"><b class="q">?</b><span>${esc(G.player ? t[0] : 'Hidden: ' + t[0].toLowerCase())}</span></button>`; }
+    if (n.more) { const an = G.N.get(n.anchor).o; return `<a class="wn more" data-k="${esc(n.k)}" style="${st}" href="${webHref(an)}"><b class="q">+</b><span>${n.more} more</span></a>`; }
+    const o = n.o;
+    return `<a class="wn k-${o.kind} t-${o.tier || 'common'}${n.centre ? ' centre' : ''}${n.heard ? ' heard' : ''}" data-k="${esc(n.k)}" style="${st}" href="${linkOf(o)}" title="${esc(o.name)}">${svg(iconKey(o))}<span>${esc(o.name)}</span></a>`;
+  }).join('');
+  wrap.innerHTML = `<div class="webcanvas" style="width:${W}px;height:${H}px">${heads}<svg class="webedges" width="${W}" height="${H}" aria-hidden="true">${paths}</svg>${nodes}</div>`;
+  wrap._sel = null;
+  const c = [...G.N.values()].find(n => n.centre);
+  if (c && W > wrap.clientWidth) wrap.scrollLeft = Math.max(0, xy.get(c.k)[0] - (wrap.clientWidth - NW) / 2);
+}
+function webChain(G, k) {
+  const ups = new Map(), downs = new Map();
+  G.E.forEach((e, i) => { (ups.get(e.b) || ups.set(e.b, []).get(e.b)).push([e.a, i]); (downs.get(e.a) || downs.set(e.a, []).get(e.a)).push([e.b, i]); });
+  const nodes = new Set([k]), edges = new Set();
+  const walk = (map, s) => { const st = [s], seen = new Set([s]); while (st.length) { const x = st.pop(); for (const [y, i] of map.get(x) || []) { edges.add(i); nodes.add(y); if (!seen.has(y)) { seen.add(y); st.push(y); } } } };
+  walk(ups, k); walk(downs, k);
+  return { nodes, edges };
+}
+function webLight(wrap, k) {
+  const G = WEB.get(wrap.dataset.web); if (!G) return;
+  wrap.classList.toggle('lit', !!k);
+  if (!k) { wrap.querySelectorAll('.on').forEach(x => x.classList.remove('on')); return; }
+  const c = webChain(G, k);
+  wrap.querySelectorAll('.wn').forEach(x => x.classList.toggle('on', c.nodes.has(x.dataset.k)));
+  wrap.querySelectorAll('.we').forEach(x => x.classList.toggle('on', c.edges.has(+x.dataset.i)));
+}
+function webInfo(wrap, k) {
+  const G = WEB.get(wrap.dataset.web), box = document.getElementById('wi-' + wrap.dataset.web); if (!G || !box) return;
+  const n = G.N.get(k); if (!n) return;
+  if (n.fog) {
+    const t = FOG_TEXT[n.d + ':' + n.rel] || ['Undiscovered', ''];
+    box.innerHTML = `<b>${esc(t[0])}</b> <span class="small muted">${esc(t[1])}${G.player ? '' : ' Players see this as a “?” until they learn more.'}</span>${G.player && !isDM() ? ` <a class="btn sm" href="#/journal">${svg('book')}Enter a code</a>` : ''}`;
+    return;
+  }
+  if (n.more) { const an = G.N.get(n.anchor).o; box.innerHTML = `<b>${n.more} more</b> <span class="small muted">connected to ${esc(an.name)}.</span> <a class="btn sm" href="${webHref(an)}">${svg('web')}Centre the map on ${esc(an.name)}</a>`; return; }
+  const o = n.o, sub = o.kind === 'monster' ? `${cap(o.type)}${n.heard ? ' · known by reputation' : ''}` : o.kind === 'place' ? 'Place' : thingSub(o);
+  box.innerHTML = `${ico(o)}<span class="wi-t"><b>${esc(o.name)}</b><br><span class="small muted">${esc(sub)}</span></span>${o.tier ? pill(o.tier) : ''}<a class="btn sm primary" href="${linkOf(o)}">Open</a>${n.centre ? '' : `<a class="btn sm" href="${webHref(o)}">${svg('web')}Centre here</a>`}`;
+}
+function wireWebs(root = document) { root.querySelectorAll('[data-web]').forEach(w => { if (w.closest('details:not([open])')) return; drawWeb(w); }); }
+document.addEventListener('pointerover', ev => { const n = ev.target.closest && ev.target.closest('.wn'); if (!n) return; const w = n.closest('[data-web]'); if (w && !w._sel) webLight(w, n.dataset.k); });
+document.addEventListener('pointerout', ev => { const w = ev.target.closest && ev.target.closest('[data-web]'); if (!w || w._sel || (ev.relatedTarget && w.contains(ev.relatedTarget) && ev.relatedTarget.closest('.wn'))) return; webLight(w, null); });
+let webPtr = false;
+document.addEventListener('pointerdown', ev => { if (ev.target.closest && ev.target.closest('.wn')) { webPtr = true; setTimeout(() => { webPtr = false; }, 600); } });
+// keyboard: focusing a bubble selects it, so Enter then opens it
+document.addEventListener('focusin', ev => { const n = ev.target.closest && ev.target.closest('.wn'); if (!n || webPtr) return; const w = n.closest('[data-web]'); w._sel = n.dataset.k; webLight(w, n.dataset.k); webInfo(w, n.dataset.k); });
+// pointer: the first tap selects and lights the chain, a second tap on the same bubble opens it
+document.addEventListener('click', ev => {
+  const n = ev.target.closest && ev.target.closest('.wn'), w = ev.target.closest && ev.target.closest('[data-web]');
+  if (!w) return;
+  if (!n) { w._sel = null; webLight(w, null); return; }
+  if (w._sel === n.dataset.k) return;
+  ev.preventDefault(); w._sel = n.dataset.k; webLight(w, n.dataset.k); webInfo(w, n.dataset.k);
+});
+document.addEventListener('click', ev => { const b = ev.target.closest && ev.target.closest('[data-act=webdepth]'); if (!b) return; WEBS.depth = +b.dataset.v; store.set(WEB_KEY, WEBS); rerender(); });
+document.addEventListener('change', ev => { const s = ev.target; if (!s.dataset) return; if (s.dataset.act === 'webfocus') WEBS.focus = s.value; else if (s.dataset.act === 'webtier') WEBS.tier = s.value; else return; store.set(WEB_KEY, WEBS); rerender(); });
+document.addEventListener('toggle', ev => { const d = ev.target; if (d.open && d.querySelector) d.querySelectorAll('[data-web]').forEach(drawWeb); }, true);
+let webRT; window.addEventListener('resize', () => { clearTimeout(webRT); webRT = setTimeout(() => wireWebs(), 200); });
+// the "Connections" section on an entry page
+function webFold(o) {
+  return fold('x.web', 'Connections', `${webBlock({ centre: o, depth: 1, fan: 10 }, { small: true })}<p><a class="btn sm" href="${webHref(o)}">${svg('web')}Open the full map</a></p>`, { open: true });
+}
+/* ---- the Web page */
+function journalSeeds() {
+  const S = new Map(), put = o => { if (o && seeAny(o)) S.set(nkey(o), o); };
+  for (const k of Party.known) { const [p, id] = [k.slice(0, k.indexOf(':')), k.slice(k.indexOf(':') + 1)]; if (p === 't') put(D.things.get(id)); else if (p === 'm' || p === 'hm') put(D.monsters.get(id)); else if (p === 'p' || p === 'hp') put(D.envs.get(id)); }
+  for (const id of Party.learned) put(D.things.get(id));
+  for (const id of Object.keys(sat)) put(D.things.get(id));
+  for (const id of Object.keys(Party.items || {})) put(D.things.get(id));
+  return [...S.values()];
+}
+function webFocusSeeds(f) {
+  if (f.startsWith('place:')) { const e = D.envs.get(f.slice(6)); if (!e) return []; return [e, ...(e.gather || []).map(g => D.things.get(g.m)).filter(Boolean), ...(D.envMon.get(e.id) || [])]; }
+  if (f.startsWith('pack:')) { const nm = f.slice(5); return [...D.envs.values(), ...D.monsters.values(), ...D.things.values()].filter(o => o.pack === nm); }
+  return [];
+}
+function pWeb(kind, id) {
+  const ctrDepth = `<div class="seg" role="group" aria-label="How far to follow the links"><button type="button" class="btn sm${WEBS.depth === 1 ? ' on' : ''}" aria-pressed="${WEBS.depth === 1}" data-act="webdepth" data-v="1">One step</button><button type="button" class="btn sm${WEBS.depth === 2 ? ' on' : ''}" aria-pressed="${WEBS.depth === 2}" data-act="webdepth" data-v="2">Two steps</button></div>`;
+  const search = `<div class="search-wrap" style="max-width:420px"><svg class="search-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg><input id="webQ" type="search" placeholder="Centre the map on…" autocomplete="off" aria-label="Centre the map on an entry"><div id="webSug" class="suggest" hidden></div></div>`;
+  const head = `<div class="section-head"><h1>The Web</h1></div><p class="lede">${isDM() ? 'How everything connects: where things are found, who drops them and what they make. Pick a focus, or centre the map on any entry.' : 'Everything your party has learned, and how it connects. Each discovery fills in a little more of the map. The “?” bubbles are leads you haven’t followed yet.'}</p>`;
+  if (kind) {
+    const o = kind === 'monster' ? D.monsters.get(id) : kind === 'place' ? D.envs.get(id) : D.things.get(id);
+    if (!o) return notFound();
+    if (!seeAny(o)) return undiscovered(o, kind === 'monster' ? 'creature' : kind);
+    return `<div class="page web-page"><div class="crumbs"><a href="#/web">The Web</a><span>/</span><span>${esc(o.name)}</span></div>${head}
+      <div class="frow webctl">${search}${ctrDepth}<a class="btn sm" href="${linkOf(o)}">Open ${esc(o.name)}</a></div>${webLegend()}
+      ${webBlock({ centre: o, depth: WEBS.depth, fan: WEBS.depth > 1 ? 12 : 16 })}</div>`;
+  }
+  let body, ctl = '';
+  if (isDM()) {
+    const packs = [...new Set([...D.things.values(), ...D.monsters.values()].map(o => o.pack).filter(Boolean))].sort();
+    const places = [...D.envs.values()].sort(byName);
+    const f = WEBS.focus;
+    ctl = `<label class="small">Focus <select class="select" data-act="webfocus"><option value="players"${f === 'players' ? ' selected' : ''}>What my players have discovered</option>${packs.map(p => `<option value="pack:${esc(p)}"${f === 'pack:' + p ? ' selected' : ''}>Homebrew: ${esc(p)}</option>`).join('')}<optgroup label="A place, its finds and creatures">${places.map(e => `<option value="place:${e.id}"${f === 'place:' + e.id ? ' selected' : ''}>${esc(e.name)}</option>`).join('')}</optgroup></select></label>
+      ${f === 'players' ? '' : `<label class="small">Up to <select class="select" data-act="webtier">${TIERS.map(t => `<option value="${t}"${WEBS.tier === t ? ' selected' : ''}>${TIER_LABEL[t]}</option>`).join('')}</select></label>`}`;
+    body = f === 'players'
+      ? `<p class="small muted">This is exactly what your players see on their own Web page: their journal, satchels and learned formulas, with “?” where they haven't looked yet.</p>${webBlock({ seeds: (() => { const was = mode; mode = 'player'; try { return journalSeeds(); } finally { mode = was; } })(), asPlayer: true, fan: 4, upFan: 2 }, { empty: 'Your players haven’t discovered anything yet. Hand out a code, or add something to the party satchel.' })}`
+      : webBlock({ seeds: webFocusSeeds(f).filter(o => !o.tier || ti(o.tier) <= ti(WEBS.tier)), fan: 4, upFan: 0, tier: WEBS.tier, cap: 220 }, { empty: 'Nothing to show for that focus.' });
+  } else {
+    body = webBlock({ seeds: journalSeeds(), fan: 4, upFan: 2 }, { empty: 'Your journal is still empty. Meet creatures, forage, or enter a code from your DM, and the map starts to grow.' });
+  }
+  return `<div class="page web-page">${head}<div class="frow webctl">${search}${ctl}</div>${webLegend()}${body}</div>`;
+}
+function wireWeb() {
+  const inp = $('#webQ'); if (!inp) return;
+  wireTypeahead(inp, $('#webSug'), e => { if (!e) { const r = doSearch(inp.value, 1); e = r[0]; } if (e) location.hash = webHref(e.o); });
+}
 
 /* ================================================================ theme */
 function initTheme() {
