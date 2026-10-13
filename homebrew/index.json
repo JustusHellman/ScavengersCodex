@@ -29,14 +29,14 @@
    "file": "rooted-city.json",
    "name": "rooted-city",
    "title": "The Rooted City",
-   "desc": "Woods and fey materials, bent beasts, craftable items, meals and cultivation for The Rooted City and any forest campaign.",
+   "desc": "Woodland materials, creatures, craftable items, meals and cultivation for forest campaigns.",
    "default": false,
    "requires": [],
-   "version": 4,
+   "version": 5,
    "counts": {
-    "items": 110,
+    "items": 114,
     "materials": 75,
-    "monsters": 17
+    "monsters": 18
    }
   }
  ]
