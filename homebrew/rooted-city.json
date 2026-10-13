@@ -1567,7 +1567,7 @@
     "poison",
     "venom"
    ],
-   "effect": "Golden, metallic-smelling venom. Injury: apply to a weapon (1 action). A creature hit must succeed on a DC 15 Constitution save or take 7d6 poison damage (half on a save). Keeps 1 week once applied.",
+   "effect": "Golden, metallic-smelling venom. Injury: apply to a weapon (1 action). A creature hit must succeed on a DC 15 Constitution save or take 7d6 poison damage (half on a save). Once applied, it stays potent for 1 minute or until it hits.",
    "value": 1100,
    "recipe": {
     "components": [
@@ -1848,7 +1848,7 @@
     "light",
     "fey"
    ],
-   "effect": "Ten arrows fletched in grey and tipped with a pinch of circle ash. A creature hit is outlined in faint flame until the end of your next turn: attacks against it have advantage and it cannot benefit from being invisible.",
+   "effect": "Ten arrows fletched in grey and tipped with a pinch of circle ash. A creature hit is outlined in faint flame until the end of your next turn: the next attack roll against it has advantage, and it can't benefit from being invisible.",
    "value": 200,
    "recipe": {
     "components": [
@@ -2533,7 +2533,7 @@
     "primal",
     "toughness"
    ],
-   "effect": "+1 medium armor (attunement). While you are in a forest or standing on living earth and are not at 0 hit points, you regain 2 hit points at the start of each of your turns. Bark knits over its wounds each night.",
+   "effect": "+1 medium armor (attunement). While you are in a forest or standing on living earth, you gain 10 temporary hit points whenever you roll initiative, and once per long rest you can use a bonus action to gain 2d10 + 5 temporary hit points. Bark knits over its wounds each night.",
    "value": 3200,
    "recipe": {
     "components": [
@@ -2868,14 +2868,14 @@
    "name": "Gossamer Gloves",
    "cat": "wondrous",
    "tier": "uncommon",
-   "attune": false,
+   "attune": true,
    "src": "Homebrew",
    "tags": [
     "wondrous",
     "clothing",
     "climbing"
    ],
-   "effect": "While wearing the gloves, you have a climbing speed equal to your walking speed and can climb difficult surfaces, including upside down along ceilings, as long as your hands are free.",
+   "effect": "Attunement. While wearing the gloves, you have a climbing speed equal to your walking speed and can climb difficult surfaces, including upside down along ceilings, as long as your hands are free.",
    "value": 350,
    "recipe": {
     "components": [
@@ -4277,7 +4277,7 @@
     "gear",
     "growth"
    ],
-   "effect": "A canvas sack of faerie-ring loam. Once every 7 days, a herb or mushroom spawn planted in it is ready to harvest by the next dawn.",
+   "effect": "A canvas sack of faerie-ring loam. Once every 7 days, a mundane or common herb or mushroom spawn planted in it is ready to harvest by the next dawn.",
    "value": 60,
    "recipe": {
     "components": [
@@ -5055,7 +5055,7 @@
     "poison",
     "healing"
    ],
-   "effect": "A sharp green soup. For 8 hours you have resistance to poison damage.",
+   "effect": "A sharp green soup. For 8 hours you have advantage on saving throws against being poisoned, and the first time you take poison damage, you take 5 less.",
    "value": 70,
    "meal": {
     "lasts": "8 hours"
@@ -5316,7 +5316,7 @@
     "cold",
     "fire"
    ],
-   "effect": "A pot of tubers and venison kept simmering. For 8 hours you have resistance to cold damage.",
+   "effect": "A pot of tubers and venison kept simmering. For 8 hours you are comfortable in extreme cold, without needing saves against cold weather, and you have advantage on saving throws against cold damage.",
    "value": 65,
    "meal": {
     "lasts": "8 hours"

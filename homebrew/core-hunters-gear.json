@@ -11830,7 +11830,7 @@
     "fire",
     "infernal"
    ],
-   "effect": "Plate armor faced with blood-red pit fiend scales. It grants a +1 bonus to AC; you are immune to fire damage and have advantage on saving throws against spells. Its fang-tipped gauntlets add 1d6 poison damage to your unarmed strikes.",
+   "effect": "Plate armor faced with blood-red pit fiend scales. It grants a +1 bonus to AC; you are immune to fire damage and have advantage on saving throws against spells cast by fiends. Its fang-tipped gauntlets add 1d6 poison damage to your unarmed strikes.",
    "value": 45800,
    "recipe": {
     "components": [

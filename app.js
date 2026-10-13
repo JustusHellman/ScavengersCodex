@@ -1854,7 +1854,14 @@ function envCard(e) {
 }
 
 /* ---- browse pages with filters ---- */
-const F = { items: { q: '', cat: '', tier: '', src: '', att: '', lvl: '' }, materials: { q: '', tier: '', tag: '', aura: '', from: '' }, monsters: { q: '', type: '', env: '', size: '', cr: '', sort: 'name' } };
+const F = { items: { q: '', cat: '', tier: '', src: '', att: '', lvl: '', pack: '' }, materials: { q: '', tier: '', tag: '', aura: '', from: '', pack: '' }, monsters: { q: '', type: '', env: '', size: '', cr: '', sort: 'name', pack: '' } };
+// "Pack" filter: the base codex, or one homebrew pack that is switched on
+const packOk = (o, f) => !f.pack || (f.pack === '-' ? !o.pack : o.pack === f.pack);
+function packFilter(page, id, list) {
+  const titles = [...new Set(list.map(o => o.pack).filter(Boolean))].sort();
+  if (!titles.length) { F[page].pack = ''; return []; }
+  return [`<label for="${id}">Pack</label>${sel(id, 'pack', page, [['-', 'Base codex only'], ...titles.map(t => [t, t])], 'All packs')}`];
+}
 function sel(id, key, page, opts, all) {
   return `<select class="select" id="${id}" data-f="${page}" data-k="${key}">${`<option value="">${all}</option>`}${opts.map(([v, l]) => `<option value="${v}"${F[page][key] === v ? ' selected' : ''}>${esc(l)}</option>`).join('')}</select>`;
 }
@@ -1869,7 +1876,7 @@ function textFilter(arr, q) {
 function hiddenNote(n, what) { return !isDM() && n > 0 ? `<p class="small muted undisc">Rumour has it there are more ${what} out there than your journal holds. Find them in play, or look for notes, maps and old tomes. <a href="#/journal">Enter a code →</a></p>` : ''; }
 function pItems() {
   const f = F.items;
-  let arr = D.items.filter(i => (!f.cat || i.cat === f.cat) && (!f.tier || i.tier === f.tier) && (!f.src || (f.src === 'magic' ? i.tier !== 'mundane' : i.src === f.src)) && (!f.att || (f.att === 'yes' ? !!i.attune : !i.attune)) && (!f.lvl || !isDM() || (i.recipe && access(i.id) <= +f.lvl)));
+  let arr = D.items.filter(i => (!f.cat || i.cat === f.cat) && (!f.tier || i.tier === f.tier) && (!f.src || (f.src === 'magic' ? i.tier !== 'mundane' : i.src === f.src)) && packOk(i, f) && (!f.att || (f.att === 'yes' ? !!i.attune : !i.attune)) && (!f.lvl || !isDM() || (i.recipe && access(i.id) <= +f.lvl)));
   arr = textFilter(arr, f.q);
   const hidN = isDM() ? 0 : arr.filter(x => !seeThing(x)).length; arr = isDM() ? arr : arr.filter(seeThing);
   const cats = [...new Set(D.items.map(i => i.cat))].sort().map(c => [c, CAT_LABEL[c] || c]);
@@ -1878,27 +1885,28 @@ function pItems() {
       `<label for="f-cat">Type</label>${sel('f-cat', 'cat', 'items', cats, 'Any type')}`,
       `<label for="f-src">Source</label>${sel('f-src', 'src', 'items', [['magic', 'All magic items'], ['SRD 5.1', 'SRD magic items'], ['Homebrew', 'Homebrew'], ['PHB/SRD basic', 'Basic equipment']], 'Everything')}`,
       `<label for="f-att">Attunement</label>${sel('f-att', 'att', 'items', [['yes', 'Requires attunement'], ['no', 'No attunement']], 'Either')}`,
+      ...packFilter('items', 'f-pack', D.items),
       ...(isDM() ? [`<label for="f-lvl">Party level</label>${sel('f-lvl', 'lvl', 'items', Array.from({ length: 20 }, (_, i) => [String(i + 1), `Craftable by level ${i + 1}`]), 'Any level')}`] : [])])}
     ${listBlock(arr, 'items', 'No items match these filters.')}${hiddenNote(hidN, 'items')}</div>`;
 }
 function matFrom(t) { return D.src.has(t.id) ? 'monster' : D.gat.has(t.id) ? 'place' : t.recipe ? 'refined' : 'trade'; }
 function pMaterials() {
   const f = F.materials;
-  let arr = D.materials.filter(t => (!f.tier || t.tier === f.tier) && (!f.tag || t.tags.includes(f.tag)) && (!f.aura || t.tags.includes(f.aura)) && (!f.from || matFrom(t) === f.from));
+  let arr = D.materials.filter(t => (!f.tier || t.tier === f.tier) && (!f.tag || t.tags.includes(f.tag)) && (!f.aura || t.tags.includes(f.aura)) && (!f.from || matFrom(t) === f.from) && packOk(t, f));
   arr = textFilter(arr, f.q);
   const hidN = isDM() ? 0 : arr.filter(x => !seeThing(x)).length; arr = isDM() ? arr : arr.filter(seeThing);
   return `<div class="page"><div class="section-head"><h1>Materials</h1><span class="count">${arr.length}${isDM() ? ` of ${D.materials.length}` : ' discovered'}</span></div>
     ${filterBox('materials', sel('fm-tier', 'tier', 'materials', TIERS.map(t => [t, TIER_LABEL[t]]), 'Any tier'), [
       `<label for="fm-tag">Form</label>${sel('fm-tag', 'tag', 'materials', FORM_TAGS.map(t => [t, cap(t)]), 'Any form')}`,
       `<label for="fm-aura">Trait</label>${sel('fm-aura', 'aura', 'materials', [...AURA_TAGS, ...TRAIT_TAGS].map(t => [t, cap(t)]), 'Any aura or trait')}`,
-      `<label for="fm-from">Found</label>${sel('fm-from', 'from', 'materials', [['monster', 'Harvested from creatures'], ['place', 'Gathered in places'], ['refined', 'Refined / crafted'], ['trade', 'Bought as trade goods']], 'Anywhere')}`])}
+      `<label for="fm-from">Found</label>${sel('fm-from', 'from', 'materials', [['monster', 'Harvested from creatures'], ['place', 'Gathered in places'], ['refined', 'Refined / crafted'], ['trade', 'Bought as trade goods']], 'Anywhere')}`, ...packFilter('materials', 'fm-pack', D.materials)])}
     ${listBlock(arr, 'materials', 'No materials match these filters.')}${hiddenNote(hidN, 'materials')}</div>`;
 }
 const CR_BANDS = [['0-2', 'CR 0–2 (common parts)', 0, 2], ['3-6', 'CR 3–6 (uncommon)', 3, 6], ['7-12', 'CR 7–12 (rare)', 7, 12], ['13-18', 'CR 13–18 (very rare)', 13, 18], ['19-30', 'CR 19+ (legendary)', 19, 30]];
 function pMonsters() {
   const f = F.monsters;
   const band = showCR() ? CR_BANDS.find(b => b[0] === f.cr) : null;
-  let arr = D.monsterList.filter(m => (!f.type || m.type === f.type) && (!f.env || (m.env || []).includes(f.env)) && (!f.size || m.size === f.size) && (!band || (crNum(m.cr) >= band[2] && crNum(m.cr) <= band[3])));
+  let arr = D.monsterList.filter(m => (!f.type || m.type === f.type) && (!f.env || (m.env || []).includes(f.env)) && (!f.size || m.size === f.size) && packOk(m, f) && (!band || (crNum(m.cr) >= band[2] && crNum(m.cr) <= band[3])));
   arr = textFilter(arr, f.q);
   const hidN = isDM() ? 0 : arr.filter(x => !seeMon(x)).length; arr = isDM() ? arr : arr.filter(seeMon);
   if (f.sort === 'cr' && showCR()) arr = [...arr].sort((a, b) => crNum(a.cr) - crNum(b.cr) || byName(a, b));
@@ -1907,6 +1915,7 @@ function pMonsters() {
       ...(showCR() ? [`<label for="fc-cr">Challenge</label>${sel('fc-cr', 'cr', 'monsters', CR_BANDS.map(b => [b[0], b[1]]), 'Any CR')}`] : []),
       `<label for="fc-env">Habitat</label>${sel('fc-env', 'env', 'monsters', [...D.envs.values()].map(e => [e.id, e.name]), 'Anywhere')}`,
       `<label for="fc-size">Size</label>${sel('fc-size', 'size', 'monsters', SIZES.map(s => [s, s]), 'Any size')}`,
+      ...packFilter('monsters', 'fc-pack', D.monsterList),
       ...(showCR() ? [`<label for="fc-sort">Sort</label><select class="select" id="fc-sort" data-f="monsters" data-k="sort"><option value="name"${f.sort === 'name' ? ' selected' : ''}>By name</option><option value="cr"${f.sort === 'cr' ? ' selected' : ''}>By challenge rating</option></select>`] : [])])}
     ${listBlock(arr, 'monsters', 'No creatures match these filters.')}${hiddenNote(hidN, 'creatures')}</div>`;
 }
