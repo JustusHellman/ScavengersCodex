@@ -2,11 +2,11 @@
  "homebrew": {
   "name": "rooted-city",
   "title": "The Rooted City",
-  "credit": "Original homebrew for The Rooted City, a D&D 5e campaign: woods, fey, bent beasts, the Heartwood and their cooking.",
-  "version": 4,
+  "credit": "Original homebrew for a D&D 5e woodland campaign.",
+  "version": 5,
   "default": false,
   "requires": [],
-  "desc": "Woods and fey materials, bent beasts, craftable items, meals and cultivation for The Rooted City and any forest campaign."
+  "desc": "Woodland materials, creatures, craftable items, meals and cultivation for forest campaigns."
  },
  "materials": [
   {
@@ -31,7 +31,7 @@
     "water",
     "protection"
    ],
-   "desc": "Alder heartwood left a full year under the eaves until it runs a deep oxblood red. It keeps the damp out and, the Verge-folk say, the oath in.",
+   "desc": "Alder heartwood left a full year under the eaves until it runs a deep oxblood red. It keeps the damp out and, the Verge-folk say, bad luck too.",
    "perish": "stable",
    "value": 60,
    "recipe": null
@@ -345,7 +345,7 @@
     "primal",
     "strength"
    ],
-   "desc": "A beast's heart wrapped in root, still faintly warm. Cooks and alchemists pay for it; the Keepers do not like to see it carried.",
+   "desc": "A beast's heart wrapped in root, still faintly warm. Cooks and alchemists pay for it; the devout do not like to see it carried.",
    "perish": "1 day",
    "value": 200,
    "recipe": null
@@ -457,7 +457,7 @@
     "fey",
     "sleep"
    ],
-   "desc": "A pale, faintly sweet milk wrung from moonlit stone by the Court's herd-pixies. It brings sleep that no nightmare can pass.",
+   "desc": "A pale, faintly sweet milk wrung from moonlit stone by the herd-pixies of the old wood. It brings sleep that no nightmare can pass.",
    "perish": "1 week",
    "value": 60,
    "recipe": null
@@ -604,15 +604,15 @@
    "recipe": null
   },
   {
-   "id": "court-thorn",
-   "name": "Court Thorn",
+   "id": "black-thorn",
+   "name": "Black Thorn",
    "tier": "uncommon",
    "tags": [
     "stinger",
     "wood",
     "fey"
    ],
-   "desc": "A black thorn from the Court's briar-sworn. Its point is finer than any needle and dulls only after the wielder dies.",
+   "desc": "A black thorn grown on the wrist of a thorn-armed fey soldier. Its point is finer than any needle and dulls only after the wielder dies.",
    "perish": "stable",
    "value": 70,
    "recipe": null
@@ -626,21 +626,21 @@
     "leather",
     "metal"
    ],
-   "desc": "A fine leather glove wrapped in iron wire, worn by the Briar-sworn so they can hold iron without burning. A fey who wears it cannot take it off.",
+   "desc": "A fine leather glove wrapped in iron wire, made so the wearer can hold iron without being burned by it. A fey who wears it cannot take it off.",
    "perish": "stable",
    "value": 10,
    "recipe": null
   },
   {
-   "id": "market-heron-feather",
-   "name": "Market Heron Feather",
+   "id": "grey-heron-feather",
+   "name": "Grey Heron Feather",
    "tier": "rare",
    "tags": [
     "feather",
     "fey",
     "cunning"
    ],
-   "desc": "A long grey feather from the herons that wade the Hollow Market's flooded stair. It writes by itself, if what it writes is true.",
+   "desc": "A long grey feather from the herons that wade flooded cellar stairs. It writes by itself, if what it writes is true.",
    "perish": "stable",
    "value": 400,
    "recipe": null
@@ -654,21 +654,21 @@
     "fey",
     "flower"
    ],
-   "desc": "A golden dust that rises from Court flower-beds in the evening. It makes you sneeze truth.",
+   "desc": "A golden dust that rises from wild flower-beds in the evening. It makes you sneeze truth.",
    "perish": "1 week",
    "value": 50,
    "recipe": null
   },
   {
-   "id": "court-fire-ash",
-   "name": "Courtfire Ash",
+   "id": "circle-ash",
+   "name": "Circle Ash",
    "tier": "common",
    "tags": [
     "ash",
     "fey",
     "light"
    ],
-   "desc": "Grey ash from a Court bonfire. It does not smell of smoke but of cut grass.",
+   "desc": "Grey ash from an old fire-circle in the woods. It does not smell of smoke but of cut grass.",
    "perish": "stable",
    "value": 16,
    "recipe": null
@@ -697,7 +697,7 @@
     "healing",
     "blessing"
    ],
-   "desc": "The sap of the oldest root under the city. It runs clear as water and cools the hand. The Court gives it only for a memory.",
+   "desc": "The sap of the oldest root of the Heartwood. It runs clear as water and cools the hand. Those who trade in it ask a memory in payment.",
    "perish": "1 month",
    "value": 600,
    "recipe": null
@@ -709,7 +709,7 @@
    "tags": [
     "seed"
    ],
-   "desc": "A pouch of alder seeds, small as dust. A gift Thalenne accepts: a grove that was cut, promised back.",
+   "desc": "A pouch of alder seeds, small as dust. Old gardeners say a cut grove would accept them as a gift.",
    "perish": "1 year",
    "value": 3,
    "recipe": null
@@ -724,7 +724,7 @@
     "growth",
     "curse"
    ],
-   "desc": "A hard, black seed that sprouts a thicket in a day wherever it is planted. Skerrin's people give it for a cherished memory, and never say what it will do.",
+   "desc": "A hard, black seed that sprouts a thicket in a day wherever it is planted. Those who trade in it ask a cherished memory and never say what it will do. A thornseed that has been primed with a bargain is another matter (see Primed Thornseed).",
    "perish": "stable",
    "value": 800,
    "recipe": null
@@ -970,7 +970,7 @@
     "luck",
     "food"
    ],
-   "desc": "A hazelnut that grows only on trees by a Court well. It rattles with a small, bright sound.",
+   "desc": "A hazelnut that grows only on trees by an old well. It rattles with a small, bright sound.",
    "perish": "1 month",
    "value": 80,
    "recipe": null
@@ -991,15 +991,15 @@
    "recipe": null
   },
   {
-   "id": "court-flour",
-   "name": "Court Flour",
+   "id": "clearing-flour",
+   "name": "Clearing Flour",
    "tier": "common",
    "tags": [
     "seed",
     "fey",
     "food"
    ],
-   "desc": "Flour from the Court's own wheat. Bread made of it feeds twice what you would expect.",
+   "desc": "Flour from wild wheat grown in an old forest clearing. Bread made of it feeds twice what you would expect.",
    "perish": "stable",
    "value": 9,
    "recipe": null
@@ -1028,7 +1028,7 @@
     "fey",
     "sleep"
    ],
-   "desc": "A white puffball that grows in Hollow Market cellars. Squeezed, it breathes a drowsy smoke.",
+   "desc": "A white puffball that grows in damp cellars. Squeezed, it breathes a drowsy smoke.",
    "perish": "1 week",
    "value": 55,
    "recipe": null
@@ -1146,7 +1146,7 @@
      },
      {
       "m": "gilded-chanterelle",
-      "q": 4,
+      "q": 1,
       "role": "keystone"
      },
      {
@@ -1329,7 +1329,7 @@
     "fey"
    ],
    "effect": "A rose-scented elixir that clings to the lips. For 1 hour you have advantage on Charisma checks against fey and beasts, and you can cast speak with animals at will.",
-   "value": 900,
+   "value": 1300,
    "recipe": {
     "components": [
      {
@@ -1378,7 +1378,7 @@
     "blessing"
    ],
    "effect": "Thick, dark sap that smells of rain on old earth. Drink as an action: regain 8d4 + 8 hit points and end one curse or disease.",
-   "value": 1500,
+   "value": 1700,
    "recipe": {
     "components": [
      {
@@ -1568,7 +1568,7 @@
     "venom"
    ],
    "effect": "Golden, metallic-smelling venom. Injury: apply to a weapon (1 action). A creature hit must succeed on a DC 15 Constitution save or take 7d6 poison damage (half on a save). Keeps 1 week once applied.",
-   "value": 1000,
+   "value": 1100,
    "recipe": {
     "components": [
      {
@@ -1837,8 +1837,8 @@
    }
   },
   {
-   "id": "court-ash-arrows",
-   "name": "Court-ash Arrows (10)",
+   "id": "circle-ash-arrows",
+   "name": "Circle-ash Arrows (10)",
    "cat": "ammunition",
    "tier": "uncommon",
    "attune": false,
@@ -1848,8 +1848,8 @@
     "light",
     "fey"
    ],
-   "effect": "Ten arrows fletched in grey and tipped with a pinch of Court ash. A creature hit is outlined in faint flame until the end of your next turn: attacks against it have advantage and it cannot benefit from being invisible.",
-   "value": 180,
+   "effect": "Ten arrows fletched in grey and tipped with a pinch of circle ash. A creature hit is outlined in faint flame until the end of your next turn: attacks against it have advantage and it cannot benefit from being invisible.",
+   "value": 200,
    "recipe": {
     "components": [
      {
@@ -1858,12 +1858,12 @@
       "role": "base"
      },
      {
-      "m": "court-fire-ash",
+      "m": "circle-ash",
       "q": 3,
       "role": "supporting"
      },
      {
-      "m": "court-thorn",
+      "m": "black-thorn",
       "q": 1,
       "role": "keystone"
      },
@@ -2218,7 +2218,7 @@
       "role": "base"
      },
      {
-      "m": "court-thorn",
+      "m": "black-thorn",
       "q": 2,
       "role": "keystone"
      },
@@ -2241,7 +2241,7 @@
     "time": "5 days",
     "gp": 50,
     "level": 3,
-    "lore": "Court thorns do not lose their will to grow, only their roots."
+    "lore": "Black thorns do not lose their will to grow, only their roots."
    }
   },
   {
@@ -2680,7 +2680,7 @@
     "fey"
    ],
    "effect": "A glass jar with a living moth wing in a drop of dew. It sheds dim light in a 20-foot radius. As an action you can have it shed bright light in a 15-foot radius instead, for 10 minutes once per day.",
-   "value": 50,
+   "value": 65,
    "recipe": {
     "components": [
      {
@@ -2781,9 +2781,13 @@
       "role": "binding"
      },
      {
-      "m": "lichen-dye",
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "oneOf": [
+       "lichen-dye",
+       "alder-red-dye"
+      ],
+      "label": "Dye"
      },
      {
       "m": "glamour-dew",
@@ -3074,7 +3078,7 @@
       "role": "base"
      },
      {
-      "m": "court-thorn",
+      "m": "black-thorn",
       "q": 3,
       "role": "keystone"
      },
@@ -3105,8 +3109,8 @@
    }
   },
   {
-   "id": "staff-of-the-green-court",
-   "name": "Staff of the Green Court",
+   "id": "staff-of-the-green-wood",
+   "name": "Staff of the Green Wood",
    "cat": "staff",
    "tier": "rare",
    "attune": true,
@@ -3208,8 +3212,8 @@
    }
   },
   {
-   "id": "court-lantern-pipe",
-   "name": "Court-flame Pipe",
+   "id": "circle-flame-pipe",
+   "name": "Circle-flame Pipe",
    "cat": "wondrous",
    "tier": "uncommon",
    "attune": false,
@@ -3231,7 +3235,7 @@
       "role": "base"
      },
      {
-      "m": "court-fire-ash",
+      "m": "circle-ash",
       "q": 2,
       "role": "supporting"
      },
@@ -3241,7 +3245,7 @@
       "role": "binding"
      },
      {
-      "m": "court-thorn",
+      "m": "black-thorn",
       "q": 2,
       "role": "keystone"
      }
@@ -3254,7 +3258,7 @@
     "time": "5 days",
     "gp": 50,
     "level": 3,
-    "lore": "The Court plays its light as well as dances it.",
+    "lore": "The old wood plays its light as well as dances it.",
     "spells": [
      "dancing lights",
      "faerie fire"
@@ -3447,7 +3451,7 @@
    }
   },
   {
-   "id": "market-heron-cloak",
+   "id": "grey-heron-cloak",
    "name": "Heron-feather Cloak",
    "cat": "wondrous",
    "tier": "rare",
@@ -3469,7 +3473,7 @@
       "role": "base"
      },
      {
-      "m": "market-heron-feather",
+      "m": "grey-heron-feather",
       "q": 3,
       "role": "keystone"
      },
@@ -3555,7 +3559,7 @@
     "tool"
    ],
    "effect": "A coil of living briar and cord. Set as an action (DC 12 Survival): the first creature to enter the square must succeed on a DC 12 Dexterity save or be restrained until it escapes (DC 12 Strength).",
-   "value": 40,
+   "value": 55,
    "recipe": {
     "components": [
      {
@@ -3874,7 +3878,7 @@
     "light",
     "fey"
    ],
-   "effect": "In ordinary hands it gives no light. It glows green and warms within 30 feet of a village lamp, the Hollow Market's stair or a fey creature. The bearer has advantage on Wisdom (Survival) checks to find the way back to the last place they slept.",
+   "effect": "In ordinary hands it gives no light. It glows green and warms within 30 feet of a village lamp, certain old doors or a fey creature. The bearer has advantage on Wisdom (Survival) checks to find the way back to the last place they slept.",
    "value": 250,
    "recipe": null
   },
@@ -3956,7 +3960,7 @@
     "primal",
     "blessing"
    ],
-   "effect": "A gift Thalenne accepts, carried in a leather pouch. Consumable.",
+   "effect": "A leather pouch of alder seeds, a gift something very old might accept. Consumable.",
    "value": 300,
    "recipe": null
   },
@@ -4005,13 +4009,13 @@
     "primal",
     "blessing"
    ],
-   "effect": "One vial. Saves one servant or pseudodragon that drank little of the Tithe and has not yet turned. Nobody who has drunk deeply can be saved.",
+   "effect": "One vial. Saves one servant or pseudodragon who has only just begun to fail. Nobody who has failed far can be saved.",
    "value": 900,
    "recipe": null
   },
   {
    "id": "thornseed",
-   "name": "Thornseed",
+   "name": "Primed Thornseed",
    "cat": "wondrous",
    "tier": "rare",
    "attune": false,
@@ -4022,8 +4026,8 @@
     "primal",
     "growth"
    ],
-   "effect": "Planted in a street, it brings the Heartwood there within a day. Consumable.",
-   "value": 800,
+   "effect": "A thornseed that has been primed with a bargain. Planted in a street, it brings the Heartwood there within a day. Consumable.",
+   "value": 1000,
    "recipe": null
   },
   {
@@ -4170,6 +4174,187 @@
    "effect": "Attunement. A string of small tags. Once per long rest you can speak a dead creature's name and cast speak with dead without components.",
    "value": 500,
    "recipe": null
+  },
+  {
+   "id": "truthsneeze-snuff",
+   "name": "Truthsneeze Snuff",
+   "cat": "poison",
+   "tier": "uncommon",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "poison",
+    "charm",
+    "fey"
+   ],
+   "effect": "A pinch of golden snuff in a twist of paper. Blown in a creature's face from within 5 feet: it must succeed on a DC 13 Constitution save or sneeze violently, losing its reaction, and for 1 minute it cannot knowingly speak a lie.",
+   "value": 200,
+   "recipe": {
+    "components": [
+     {
+      "m": "glass-vial",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "wyrmwood-pollen",
+      "q": 1,
+      "role": "keystone"
+     },
+     {
+      "m": "salt",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "beeswax",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "poisoners-kit"
+    ],
+    "station": "alchemy-lab",
+    "dc": 15,
+    "time": "2 days",
+    "gp": 25,
+    "level": 3,
+    "lore": "Pollen rises with the truth, and the salt fixes it before it can be told otherwise."
+   }
+  },
+  {
+   "id": "mosshound-fang-charm",
+   "name": "Mosshound Fang Charm",
+   "cat": "wondrous",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "jewelry",
+    "senses"
+   ],
+   "effect": "A green-stained fang on a cord. While you wear it you have advantage on Wisdom (Perception) checks that rely on smell, and the plants and animals of the wood are slower to take alarm at you.",
+   "value": 60,
+   "recipe": {
+    "components": [
+     {
+      "m": "leather-strips",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "mosshound-tooth",
+      "q": 2,
+      "role": "keystone"
+     },
+     {
+      "m": "hemp-cord",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "workshop",
+    "dc": 12,
+    "time": "2 days",
+    "gp": 10,
+    "level": 1,
+    "lore": "A hound that follows by smell lends the wearer its nose."
+   }
+  },
+  {
+   "id": "ringbed-planting-sack",
+   "name": "Ringbed Planting Sack",
+   "cat": "gear",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "gear",
+    "growth"
+   ],
+   "effect": "A canvas sack of faerie-ring loam. Once every 7 days, a herb or mushroom spawn planted in it is ready to harvest by the next dawn.",
+   "value": 60,
+   "recipe": {
+    "components": [
+     {
+      "m": "canvas",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "ring-loam",
+      "q": 3,
+      "role": "keystone"
+     },
+     {
+      "m": "hemp-cord",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "herbalism-kit"
+    ],
+    "station": "workshop",
+    "dc": 12,
+    "time": "2 days",
+    "gp": 10,
+    "level": 1,
+    "lore": "Anything planted in a fairy ring grows a little faster and a little stranger, and the loam remembers."
+   }
+  },
+  {
+   "id": "wire-wrapped-gloves",
+   "name": "Wire-wrapped Gloves",
+   "cat": "wondrous",
+   "tier": "common",
+   "attune": false,
+   "src": "Homebrew",
+   "tags": [
+    "wondrous",
+    "clothing",
+    "protection"
+   ],
+   "effect": "Gloves of fine leather wound with iron wire. While you wear them you can handle iron, thorns and hot metal without harm from the contact, and your unarmed strikes count as magical.",
+   "value": 90,
+   "recipe": {
+    "components": [
+     {
+      "m": "gloves",
+      "q": 1,
+      "role": "base"
+     },
+     {
+      "m": "iron-wired-glove",
+      "q": 2,
+      "role": "keystone"
+     },
+     {
+      "m": "thornwood-limb",
+      "q": 1,
+      "role": "supporting"
+     },
+     {
+      "m": "hemp-cord",
+      "q": 1,
+      "role": "binding"
+     }
+    ],
+    "tools": [
+     "leatherworkers-tools"
+    ],
+    "station": "workshop",
+    "dc": 12,
+    "time": "2 days",
+    "gp": 10,
+    "level": 1,
+    "lore": "The wire keeps the iron from the skin, and the thorn keeps the wearer wary of it."
+   }
   },
   {
    "id": "ramson-broth",
@@ -4582,7 +4767,7 @@
     ],
     "station": "campfire",
     "dc": 12,
-    "time": "1 day",
+    "time": "3 hours",
     "gp": 5,
     "level": 1,
     "lore": "Venison and morels stewed down until the broth is dark.",
@@ -4635,7 +4820,7 @@
     ],
     "station": "campfire",
     "dc": 12,
-    "time": "1 day",
+    "time": "3 hours",
     "gp": 5,
     "level": 1,
     "lore": "Slow heat and a very little salt.",
@@ -4689,7 +4874,7 @@
     ],
     "station": "campfire",
     "dc": 12,
-    "time": "1 day",
+    "time": "3 hours",
     "gp": 5,
     "level": 1,
     "lore": "The apple takes the gamey edge off the meat.",
@@ -4743,7 +4928,7 @@
     ],
     "station": "kitchen",
     "dc": 12,
-    "time": "1 day",
+    "time": "3 hours",
     "gp": 5,
     "level": 1,
     "lore": "Plums folded into pastry; no one can say how it ends.",
@@ -4776,7 +4961,7 @@
       "role": "base"
      },
      {
-      "m": "court-flour",
+      "m": "clearing-flour",
       "q": 3,
       "role": "keystone"
      },
@@ -4796,7 +4981,7 @@
     ],
     "station": "kitchen",
     "dc": 12,
-    "time": "1 day",
+    "time": "3 hours",
     "gp": 5,
     "level": 1,
     "lore": "Ground nuts, flour and honey, baked slow.",
@@ -4849,7 +5034,7 @@
     ],
     "station": "campfire",
     "dc": 12,
-    "time": "1 day",
+    "time": "3 hours",
     "gp": 5,
     "level": 1,
     "lore": "Glaze, rest, glaze again.",
@@ -4903,7 +5088,7 @@
     ],
     "station": "campfire",
     "dc": 12,
-    "time": "1 day",
+    "time": "3 hours",
     "gp": 5,
     "level": 1,
     "lore": "Wild garlic and sorrel are older than most medicines.",
@@ -4936,7 +5121,7 @@
       "role": "base"
      },
      {
-      "m": "court-flour",
+      "m": "clearing-flour",
       "q": 3,
       "role": "keystone"
      },
@@ -4956,7 +5141,7 @@
     ],
     "station": "kitchen",
     "dc": 12,
-    "time": "1 day",
+    "time": "3 hours",
     "gp": 5,
     "level": 1,
     "lore": "Sap boiled to syrup, folded into oats.",
@@ -4965,8 +5150,8 @@
    "perish": "1 week"
   },
   {
-   "id": "court-flour-bread",
-   "name": "Courtbread",
+   "id": "clearing-bread",
+   "name": "Clearing Bread",
    "cat": "meal",
    "tier": "common",
    "attune": false,
@@ -4976,7 +5161,7 @@
     "food",
     "charm"
    ],
-   "effect": "A sweet, close-crumbed loaf, as sold in the Hollow Market. For 8 hours you have advantage on Charisma (Persuasion) checks against fey.",
+   "effect": "A sweet, close-crumbed loaf, as sold from cellar stalls. For 8 hours you have advantage on Charisma (Persuasion) checks against fey.",
    "value": 60,
    "meal": {
     "lasts": "8 hours"
@@ -4989,7 +5174,7 @@
       "role": "base"
      },
      {
-      "m": "court-flour",
+      "m": "clearing-flour",
       "q": 4,
       "role": "keystone"
      },
@@ -5009,10 +5194,10 @@
     ],
     "station": "kitchen",
     "dc": 12,
-    "time": "1 day",
+    "time": "3 hours",
     "gp": 5,
     "level": 1,
-    "lore": "Bread baked as the Court bakes it: slowly and without regrets.",
+    "lore": "Bread baked slowly and without regrets.",
     "yields": 4
    },
    "perish": "1 week"
@@ -5062,7 +5247,7 @@
     ],
     "station": "kitchen",
     "dc": 12,
-    "time": "1 day",
+    "time": "3 hours",
     "gp": 5,
     "level": 1,
     "lore": "Berries under a lid, left to sing in the oven.",
@@ -5110,7 +5295,7 @@
     ],
     "station": "campfire",
     "dc": 12,
-    "time": "1 day",
+    "time": "3 hours",
     "gp": 5,
     "level": 1,
     "lore": "Steep the fronds and strain.",
@@ -5164,7 +5349,7 @@
     ],
     "station": "campfire",
     "dc": 12,
-    "time": "1 day",
+    "time": "3 hours",
     "gp": 5,
     "level": 1,
     "lore": "Everything in the pot, and the pot on the coals.",
@@ -5218,7 +5403,7 @@
     ],
     "station": "kitchen",
     "dc": 15,
-    "time": "2 days",
+    "time": "6 hours",
     "gp": 25,
     "level": 3,
     "lore": "Figs steamed in their own sugar until they relax.",
@@ -5271,7 +5456,7 @@
     ],
     "station": "kitchen",
     "dc": 15,
-    "time": "2 days",
+    "time": "6 hours",
     "gp": 25,
     "level": 3,
     "lore": "Berries set in syrup; they keep their luck as long as they stay silvered.",
@@ -5324,7 +5509,7 @@
     ],
     "station": "kitchen",
     "dc": 15,
-    "time": "2 days",
+    "time": "6 hours",
     "gp": 25,
     "level": 3,
     "lore": "Nuts cooked in sugar until they crackle.",
@@ -5352,7 +5537,7 @@
    "recipe": {
     "components": [
      {
-      "m": "court-flour",
+      "m": "clearing-flour",
       "q": 3,
       "role": "base"
      },
@@ -5377,7 +5562,7 @@
     ],
     "station": "kitchen",
     "dc": 15,
-    "time": "2 days",
+    "time": "6 hours",
     "gp": 25,
     "level": 3,
     "lore": "Honey that kept its promises, folded into a cake.",
@@ -5431,7 +5616,7 @@
     ],
     "station": "kitchen",
     "dc": 15,
-    "time": "2 days",
+    "time": "6 hours",
     "gp": 25,
     "level": 3,
     "lore": "Heart and haunch, slow-cooked for most of a night.",
@@ -5485,7 +5670,7 @@
     ],
     "station": "kitchen",
     "dc": 15,
-    "time": "2 days",
+    "time": "6 hours",
     "gp": 25,
     "level": 3,
     "lore": "Glaze at the last moment; it burns easily.",
@@ -5538,7 +5723,7 @@
     ],
     "station": "kitchen",
     "dc": 15,
-    "time": "2 days",
+    "time": "6 hours",
     "gp": 25,
     "level": 3,
     "lore": "Slice the puffball while it is still white inside.",
@@ -5592,7 +5777,7 @@
     ],
     "station": "kitchen",
     "dc": 15,
-    "time": "2 days",
+    "time": "6 hours",
     "gp": 25,
     "level": 3,
     "lore": "Moonmilk thickens as it cools, and so does the person who eats it.",
@@ -5645,7 +5830,7 @@
     ],
     "station": "kitchen",
     "dc": 15,
-    "time": "2 days",
+    "time": "6 hours",
     "gp": 25,
     "level": 3,
     "lore": "Chanterelles under a lid of pastry.",
@@ -5668,7 +5853,7 @@
     "primal"
    ],
    "effect": "A feast that smells of rain, bread and a forest at morning. For 8 hours you gain 2d10 temporary hit points, advantage on saving throws against poison and fear, and immunity to the poisoned condition. It can only be eaten when everyone at the table is at peace.",
-   "value": 420,
+   "value": 550,
    "meal": {
     "lasts": "8 hours"
    },
@@ -5694,7 +5879,7 @@
       "role": "supporting"
      },
      {
-      "m": "court-flour",
+      "m": "clearing-flour",
       "q": 3,
       "role": "supporting"
      },
@@ -5709,7 +5894,7 @@
     ],
     "station": "kitchen",
     "dc": 18,
-    "time": "7 days",
+    "time": "1 day",
     "gp": 375,
     "level": 6,
     "lore": "A feast cooked for eight: the Heartwood's gift, shared.",
@@ -5717,8 +5902,8 @@
    }
   },
   {
-   "id": "court-of-plenty-banquet",
-   "name": "Banquet of the Green Court",
+   "id": "green-wood-banquet",
+   "name": "Banquet of the Green Wood",
    "cat": "meal",
    "tier": "rare",
    "attune": false,
@@ -5730,7 +5915,7 @@
     "fey"
    ],
    "effect": "A table-length banquet of fruit, honey and roasted game. For 8 hours you have advantage on Charisma checks and saving throws against being charmed or frightened, and you can cast charm person once (DC 15) without a spell slot.",
-   "value": 400,
+   "value": 550,
    "meal": {
     "lasts": "8 hours"
    },
@@ -5771,10 +5956,10 @@
     ],
     "station": "kitchen",
     "dc": 18,
-    "time": "7 days",
+    "time": "1 day",
     "gp": 375,
     "level": 6,
-    "lore": "A banquet laid out as the Court lays it: with more courses than anyone could count.",
+    "lore": "A banquet laid out with more courses than anyone could count.",
     "yields": 6
    }
   }
@@ -6022,11 +6207,11 @@
     "forest",
     "ruins"
    ],
-   "blurb": "One of the Dawnbriar Court's sworn: a thin, thorn-armed figure in iron-wrapped gloves, silent and exact. It will not parley before the first blow.",
+   "blurb": "A thin, thorn-armed fey in heavy wrapped gloves, silent and exact. It will not parley before the first blow.",
    "salvage": false,
    "harvest": [
     {
-     "m": "court-thorn",
+     "m": "black-thorn",
      "q": 1,
      "dc": 12,
      "skill": "Survival",
@@ -6162,15 +6347,15 @@
    "src": "Homebrew"
   },
   {
-   "id": "court-dryad",
-   "name": "Court Dryad",
+   "id": "elder-dryad",
+   "name": "Elder Dryad",
    "type": "fey",
    "size": "Medium",
-   "cr": "3",
+   "cr": "7",
    "env": [
     "forest"
    ],
-   "blurb": "A dryad of the Dawnbriar Court: pale-barked, quick to anger and bound to a single tree. She weeps resin on those she trusts.",
+   "blurb": "An ancient dryad: pale-barked, quick to anger and bound to a single tree. She weeps resin on those she trusts.",
    "salvage": false,
    "harvest": [
     {
@@ -6186,32 +6371,26 @@
      "dc": 16,
      "skill": "Nature",
      "note": "Only in spring, only once."
-    },
-    {
-     "m": "glamour-dew",
-     "q": 1,
-     "dc": 10,
-     "skill": "Nature"
     }
    ],
    "src": "Homebrew"
   },
   {
-   "id": "market-heron",
-   "name": "Market Heron",
+   "id": "old-grey-heron",
+   "name": "Old Grey Heron",
    "type": "fey",
    "size": "Medium",
-   "cr": "3",
+   "cr": "6",
    "env": [
     "urban",
     "ruins",
     "swamp"
    ],
-   "blurb": "A tall grey heron that stalks the Hollow Market's stair and is known to buy and sell secrets. It does not fight if it can bargain.",
+   "blurb": "A tall grey heron that stalks flooded cellar stairs and is known to buy and sell secrets. It does not fight if it can bargain.",
    "salvage": false,
    "harvest": [
     {
-     "m": "market-heron-feather",
+     "m": "grey-heron-feather",
      "q": 1,
      "dc": 16,
      "skill": "Survival",
@@ -6335,13 +6514,35 @@
      "dc": 16,
      "skill": "Nature",
      "note": "From a warden that has been felled, or one that gives it freely."
-    },
+    }
+   ],
+   "src": "Homebrew"
+  },
+  {
+   "id": "ancient-heartwood-warden",
+   "name": "Ancient Heartwood Warden",
+   "type": "plant",
+   "size": "Gargantuan",
+   "cr": "12",
+   "env": [
+    "forest",
+    "ruins"
+   ],
+   "blurb": "A living trunk as wide as a house, walking on roots like old cables. It guards the oldest heart of the wood and answers every blow it is dealt.",
+   "salvage": false,
+   "harvest": [
     {
      "m": "heartwood-core",
      "q": 1,
      "dc": 19,
      "skill": "Nature",
-     "note": "Only from a felled warden, and the grove will remember."
+     "note": "Only from one that has been felled, or one that gives it freely."
+    },
+    {
+     "m": "heartwood-burl",
+     "q": 1,
+     "dc": 16,
+     "skill": "Nature"
     }
    ],
    "src": "Homebrew"
@@ -6589,14 +6790,14 @@
      "foes": []
     },
     {
-     "m": "court-flour",
+     "m": "clearing-flour",
      "q": 1,
      "dice": "1d4",
      "dc": 10,
      "skill": "Nature",
-     "cond": "Wild court-wheat growing in an abandoned Dawnbriar clearing.",
+     "cond": "Wild wheat growing in an abandoned forest clearing.",
      "risk": 1,
-     "riskWhy": "The Court still watches its own clearings.",
+     "riskWhy": "Old clearings are still watched.",
      "foes": [
       "briar-sworn",
       "mosshound"
@@ -6655,14 +6856,14 @@
      ]
     },
     {
-     "m": "court-fire-ash",
+     "m": "circle-ash",
      "q": 1,
      "dice": "1d4",
      "dc": 10,
      "skill": "Nature",
-     "cond": "The cold ash of a Court fire-circle.",
+     "cond": "The cold ash of a fire-circle.",
      "risk": 1,
-     "riskWhy": "The Court tends its circles.",
+     "riskWhy": "Someone still tends the circles.",
      "foes": [
       "briar-sworn"
      ]
@@ -6843,14 +7044,14 @@
      ]
     },
     {
-     "m": "court-thorn",
+     "m": "black-thorn",
      "q": 1,
      "dice": "1d3",
      "dc": 13,
      "skill": "Survival",
-     "cond": "Court thorn growing wild at the edge of a clearing.",
+     "cond": "black thorn growing wild at the edge of a clearing.",
      "risk": 2,
-     "riskWhy": "The Court guards its own.",
+     "riskWhy": "Thorn-armed guards keep it.",
      "foes": [
       "briar-sworn"
      ]
@@ -6865,10 +7066,10 @@
      "risk": 2,
      "riskWhy": "The tree's dryad is watching.",
      "foes": [
-      "court-dryad"
+      "elder-dryad"
      ],
      "guard": {
-      "m": "court-dryad",
+      "m": "elder-dryad",
       "alt": [
        "mosshound",
        "bramble-sprite"
@@ -6885,10 +7086,10 @@
      "risk": 2,
      "riskWhy": "The tree's dryad is watching.",
      "foes": [
-      "court-dryad"
+      "elder-dryad"
      ],
      "guard": {
-      "m": "court-dryad",
+      "m": "elder-dryad",
       "alt": [
        "mosshound"
       ]
@@ -6945,12 +7146,13 @@
      "risk": 3,
      "riskWhy": "The wood remembers who cuts it.",
      "foes": [
-      "heartwood-warden"
+      "ancient-heartwood-warden"
      ],
      "guard": {
-      "m": "heartwood-warden",
+      "m": "ancient-heartwood-warden",
       "alt": [
-       "bent-owlbear"
+       "bent-owlbear",
+       "heartwood-warden"
       ]
      }
     }
@@ -7160,7 +7362,7 @@
      "skill": "Investigation",
      "cond": "Dropped in the street after a skirmish.",
      "risk": 1,
-     "riskWhy": "The Court wants its gloves back.",
+     "riskWhy": "Whoever lost them wants them back.",
      "foes": [
       "briar-sworn"
      ]
@@ -7235,14 +7437,14 @@
      ]
     },
     {
-     "m": "court-fire-ash",
+     "m": "circle-ash",
      "q": 1,
      "dice": "1d4",
      "dc": 10,
      "skill": "Nature",
-     "cond": "The cold ash of a Court fire-circle.",
+     "cond": "The cold ash of a fire-circle.",
      "risk": 1,
-     "riskWhy": "The Court tends its circles.",
+     "riskWhy": "Someone still tends the circles.",
      "foes": [
       "briar-sworn"
      ]
@@ -7274,14 +7476,14 @@
      ]
     },
     {
-     "m": "court-thorn",
+     "m": "black-thorn",
      "q": 1,
      "dice": "1d3",
      "dc": 13,
      "skill": "Survival",
-     "cond": "Court thorn growing wild among the stones.",
+     "cond": "black thorn growing wild among the stones.",
      "risk": 2,
-     "riskWhy": "The Court guards its own.",
+     "riskWhy": "Thorn-armed guards keep it.",
      "foes": [
       "briar-sworn"
      ]
@@ -7406,7 +7608,7 @@
    "yield": "1d4+1"
   },
   {
-   "m": "court-flour",
+   "m": "clearing-flour",
    "site": "plot",
    "days": 30,
    "regrows": true,
