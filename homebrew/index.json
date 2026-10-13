@@ -29,14 +29,14 @@
    "file": "rooted-city.json",
    "name": "rooted-city",
    "title": "The Rooted City",
-   "desc": "A campaign pack: creatures, finds and dishes for an overgrown city.",
+   "desc": "Woods and fey materials, bent beasts, craftable items, meals and cultivation for The Rooted City and any forest campaign.",
    "default": false,
    "requires": [],
-   "version": 3,
+   "version": 4,
    "counts": {
-    "items": 24,
-    "materials": 54,
-    "monsters": 22
+    "items": 110,
+    "materials": 75,
+    "monsters": 17
    }
   }
  ]
