@@ -648,6 +648,23 @@ function tradeSellDialog() {
       $('#fdHint').textContent = x ? `${T.nm} would pay ${fmtCoins(Math.round(sellValue(T, x) * 100))} each (${sellValue(T, x) === x.value ? 'their kind of goods' : 'half value'}).` : '';
     });
 }
+// DM, on an item or material page: hand it to a player or the party, or take it back.
+function giveThingDialog(id) {
+  const t = D.things.get(id); if (!t) return;
+  formDialog(`Give ${esc(t.name)}`, `
+    <label class="small">To / from <select class="select" name="who">${targetOpts(DMS.bankWho || 'party')}</select></label>
+    <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><label class="small">How many <input class="textin mono" name="q" type="number" min="1" value="1" style="max-width:90px"></label>
+      <label class="small"><select class="select" name="dir"><option value="1">Give</option><option value="-1">Take back</option></select></label></div>
+    <p class="small muted" id="fdHint"></p>`, 'Done',
+    f => {
+      const q = Math.floor(+f.q.value), sign = +f.dir.value, who = f.who.value, name = targetName(who);
+      if (!(q >= 1)) return 'Enter how many.';
+      const err = bankMove(who, { [t.id]: sign * q }, 0, sign > 0 ? `The DM gave ${name} ${q}× ${t.name}` : `The DM took ${q}× ${t.name} from ${name}`);
+      if (err) return err;
+      DMS.bankWho = who; toast(`${sign > 0 ? 'Gave' : 'Took'} ${q}× ${t.name}`); return '';
+    },
+    f => { const have = holdings(f.who.value).items[t.id] || 0; $('#fdHint').textContent = `${targetName(f.who.value)} has ${have}.`; });
+}
 // DM tools → Hand out: give or take anything, and see what everyone has.
 function bankTab() {
   const ts = bankTargets(), sel = DMS.bankWho && ts.some(t => t.key === DMS.bankWho) ? DMS.bankWho : 'party', it = DMS.bankItem && D.things.get(DMS.bankItem);
@@ -2351,7 +2368,7 @@ function pThing(id) {
     <div class="crumbs"><a href="#/${isItem ? 'items' : 'materials'}">${isItem ? 'Items' : 'Materials'}</a><span>/</span><span>${esc(t.name)}</span></div>
     <div class="dhero"><div class="dhead">${ico(t, true)}<div class="meta"><h1>${esc(t.name)}</h1>
       <div class="line">${pill(t.tier)}<span>${esc(isItem ? (CAT_LABEL[t.cat] || t.cat) : 'Material')}</span>${isItem && t.attune ? '<span>· requires attunement</span>' : ''}${t.src === 'Homebrew' ? '<span>· Homebrew</span>' : ''}</div>
-      <div class="actions"><button class="btn sm primary" type="button" data-act="add" data-id="${t.id}">${svg('plus')}Add to satchel</button>${HOSTED.on && isDM() ? `<button class="btn sm" type="button" data-act="hostrecord" data-id="${t.id}" title="Make it an item entry in DnDocs, on the character who has it">Record in DnDocs</button>` : ''}${t.recipe && known(t) ? `<button class="btn sm${goals.includes(t.id) ? ' on-goal' : ''}" type="button" data-act="goal" data-id="${t.id}" aria-pressed="${goals.includes(t.id)}">${svg('star')}${goals.includes(t.id) ? 'Tracking as goal' : 'Track as goal'}</button>` : ''}${formulaCtl(t)}${shareBtn(t)}${sat[t.id] || Party.qty(t.id) ? `<span class="small muted" style="align-self:center">You carry ${sat[t.id] || 0}${Party.qty(t.id) ? ` · party has ${Party.qty(t.id)}` : ''}</span>` : ''}${ext}</div></div></div>
+      <div class="actions"><button class="btn sm primary" type="button" data-act="add" data-id="${t.id}">${svg('plus')}Add to satchel</button>${isDM() ? `<button class="btn sm" type="button" data-act="dmgive" data-id="${t.id}" title="Hand it to a player or the party (or take it back)">Give to…</button>` : ''}${HOSTED.on && isDM() ? `<button class="btn sm" type="button" data-act="hostrecord" data-id="${t.id}" title="Make it an item entry in DnDocs, on the character who has it">Record in DnDocs</button>` : ''}${t.recipe && known(t) ? `<button class="btn sm${goals.includes(t.id) ? ' on-goal' : ''}" type="button" data-act="goal" data-id="${t.id}" aria-pressed="${goals.includes(t.id)}">${svg('star')}${goals.includes(t.id) ? 'Tracking as goal' : 'Track as goal'}</button>` : ''}${formulaCtl(t)}${shareBtn(t)}${sat[t.id] || Party.qty(t.id) ? `<span class="small muted" style="align-self:center">You carry ${sat[t.id] || 0}${Party.qty(t.id) ? ` · party has ${Party.qty(t.id)}` : ''}</span>` : ''}${ext}</div></div></div>
       ${figure(t)}
       <div class="dbody">${isItem ? `<p class="effect">${esc(t.effect)}</p>` : `<p class="lede">${esc(t.desc)}</p>`}</div>
       <div class="dfacts"><div class="facts">${facts.map(([k, v]) => `<div class="fact"><span class="k">${k}</span><span class="v">${esc(v)}</span></div>`).join('')}</div>${tags}</div></div>
@@ -2876,6 +2893,7 @@ document.addEventListener('click', ev => {
       toast(`Added ${plural(n, 'part')} to ${el.dataset.to === 'party' ? 'the party satchel' : 'your satchel'}`); el.disabled = true; break;
     }
     case 'hostrecord': { hostRecord(id); break; }
+    case 'dmgive': { giveThingDialog(id); break; }
     case 'giveto': { giveDialog({ id }); break; }
     case 'coingive': { giveDialog({ coins: true }); break; }
     case 'coinadd': case 'coinspend': case 'coinmove': {
