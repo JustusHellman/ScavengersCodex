@@ -1,0 +1,5 @@
+{
+  "about": "Old id -> new id, for things (materials and items) and monsters that were renamed or merged. DnDocs and saved satchels use these to find the new entry.",
+  "things": {},
+  "monsters": {}
+}

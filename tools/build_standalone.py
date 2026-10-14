@@ -24,7 +24,7 @@ def build():
     packs = [{**codexdata.index_entry(f, d), "data": d} for f, d in ((f, codexdata.read(f)) for f in codexdata.pack_files(ROOT))]
     packs.sort(key=lambda e: (not e["default"], e["title"].lower()))
     js = lambda o: json.dumps(o, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
-    data = "<script>window.CODEX_DATA=" + js(parts) + ";window.CODEX_PACKS=" + js([{k: v for k, v in p.items()} for p in packs]) + ";window.CODEX_CONFIG=" + read("config.json").strip() + ";</script>\n"
+    data = "<script>window.CODEX_DATA=" + js(parts) + ";window.CODEX_PACKS=" + js([{k: v for k, v in p.items()} for p in packs]) + ";window.CODEX_CONFIG=" + read("config.json").strip() + ";window.CODEX_ALIASES=" + (read("aliases.json").strip() if os.path.exists(os.path.join(ROOT, "aliases.json")) else "null") + ";</script>\n"
     first = True
 
     def inline(m):

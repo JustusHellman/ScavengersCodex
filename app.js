@@ -116,10 +116,110 @@ const fmtGp = v => v == null ? '—' : (v >= 1 ? `${Number(v).toLocaleString('en
 const crNum = cr => { if (cr == null) return 0; const s = String(cr); if (s.includes('/')) { const [a, b] = s.split('/'); return a / b; } return +s; };
 const envName = id => (D.envs.get(id) || {}).name || cap(id.replace(/-/g, ' '));
 function toast(msg) { const t = $('#toast'); t.textContent = msg; t.hidden = false; clearTimeout(toast._t); toast._t = setTimeout(() => { t.hidden = true; }, 2200); }
+/* ---- hosted by DnDocs: the campaign's database replaces this browser's storage ----
+   DnDocs opens the codex in a frame at ?embed=dndocs and sends everything it saved for this
+   campaign (party, this player's satchel and settings, homebrew). Every change goes back as
+   { key, prev, next } so DnDocs can store just the difference, and several players can change
+   the party satchel at the same time. Opened on its own, the codex uses localStorage as always. */
+const HOSTED = (() => {
+  let on = false;
+  try { on = new URLSearchParams(location.search).get('embed') === 'dndocs' && window.parent !== window; } catch (e) { on = false; }
+  return { on, ready: false, role: 'player', name: '', campaign: null, origin: null, mem: new Map(), queue: new Map(), timer: 0 };
+})();
+const jclone = v => (v === undefined ? undefined : JSON.parse(JSON.stringify(v)));
 const store = {
-  get(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } },
-  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { /* storage unavailable */ } }
+  get(k, d) {
+    if (HOSTED.on) return HOSTED.mem.has(k) && HOSTED.mem.get(k) != null ? jclone(HOSTED.mem.get(k)) : d;
+    try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; }
+  },
+  set(k, v) {
+    if (HOSTED.on) { hostSet(k, v); return; }
+    try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { /* storage unavailable */ }
+  },
+  keys() {
+    if (HOSTED.on) return [...HOSTED.mem.keys()].filter(k => HOSTED.mem.get(k) != null);
+    const out = []; try { for (let i = 0; i < localStorage.length; i++) out.push(localStorage.key(i)); } catch (e) { /* blocked */ } return out;
+  },
+  remove(k) {
+    if (HOSTED.on) { hostSet(k, null); return; }
+    try { localStorage.removeItem(k); } catch (e) { /* blocked */ }
+  }
 };
+function hostSet(k, v) {
+  const prev = HOSTED.mem.has(k) ? HOSTED.mem.get(k) : null, next = v === undefined ? null : jclone(v);
+  if (JSON.stringify(prev) === JSON.stringify(next)) return;
+  HOSTED.mem.set(k, next);
+  if (!HOSTED.ready) return;
+  const q = HOSTED.queue.get(k);
+  HOSTED.queue.set(k, { key: k, prev: q ? q.prev : prev, next });
+  clearTimeout(HOSTED.timer);
+  HOSTED.timer = setTimeout(hostFlush, 0);
+}
+function hostFlush() {
+  if (!HOSTED.queue.size) return;
+  const changes = [...HOSTED.queue.values()]; HOSTED.queue.clear();
+  hostPost({ type: 'codex:save', changes });
+}
+function hostPost(msg) { try { window.parent.postMessage(msg, HOSTED.origin || '*'); } catch (e) { /* parent gone */ } }
+// Who may host the codex: this site itself, or a local copy of DnDocs while developing.
+function hostAllowed(origin) { return origin === location.protocol + '//' + location.host || /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin); }
+function hostHello() {
+  return new Promise((resolve, reject) => {
+    let tries = 0;
+    const ping = () => { if (HOSTED.ready) return; hostPost({ type: 'codex:ready' }); if (++tries > 20) { clearInterval(iv); reject(new Error('DnDocs did not answer')); } };
+    const iv = setInterval(ping, 1000);
+    window.addEventListener('message', e => {
+      if (e.source !== window.parent || !hostAllowed(e.origin)) return;
+      const d = e.data || {};
+      if (d.type === 'dndocs:hello' && !HOSTED.ready) {
+        HOSTED.origin = e.origin; HOSTED.role = d.role === 'dm' ? 'dm' : 'player'; HOSTED.name = String(d.name || ''); HOSTED.campaign = d.campaign || null;
+        HOSTED.mem = new Map(Object.entries(d.keys || {}));
+        HOSTED.ready = true; clearInterval(iv); resolve(d);
+      } else if (HOSTED.ready && d.type === 'dndocs:state') hostApply(d.keys || {});
+      else if (HOSTED.ready && d.type === 'dndocs:open') hostOpen(d.open);
+      else if (HOSTED.ready && d.type === 'dndocs:saved' && d.ok === false) toast(d.error ? 'Not saved: ' + d.error : 'Not saved');
+      else if (HOSTED.ready && d.type === 'dndocs:entry') toast(d.ok ? `Recorded in DnDocs${d.name ? ': ' + d.name : ''}` : (d.error || 'Not recorded'));
+    });
+    ping();
+  });
+}
+// Someone else changed the party (or this player's satchel on another device).
+function hostApply(keys) {
+  const pk = PARTY_KEY + '.data.' + Party.code;
+  let repack = false;
+  for (const [k, v] of Object.entries(keys)) {
+    if (k === HB_KEY && JSON.stringify(v) !== JSON.stringify(HOSTED.mem.get(k))) repack = true;
+    if (k === pk && JSON.stringify((v || {}).packs || null) !== JSON.stringify((HOSTED.mem.get(k) || {}).packs || null)) repack = true;
+    HOSTED.mem.set(k, v);
+  }
+  if (!D) return;
+  if (repack) indexAll();
+  loadSat(); Party.load(); learnOwned(); syncStamps(); renderNav();
+  hostRefresh();
+}
+function hostRefresh() {
+  clearTimeout(hostRefresh.t);
+  hostRefresh.t = setTimeout(function tick() {
+    const a = document.activeElement;
+    if (a && /INPUT|TEXTAREA|SELECT/.test(a.tagName)) { hostRefresh.t = setTimeout(tick, 900); return; }
+    if (!document.querySelector('.modal')) rerender();
+  }, 150);
+}
+// DnDocs asks for a page: { hash: '#/item/…' } or the fallen of a battle: { fight: [{ id, n }] }.
+function hostOpen(o) {
+  if (!o || !D) return;
+  if (Array.isArray(o.fight) && isDM()) {
+    const ok = o.fight.filter(x => x && D.monsters.has(x.id));
+    DMS.drops = ok.map(x => ({ id: x.id, n: Math.max(1, Math.floor(+x.n || 1)) })); DMS.fight = {}; DMS.fightOut = []; DMS.tab = 'drops';
+    if (ok.length < o.fight.length) toast(`${plural(o.fight.length - ok.length, 'creature')} from the battle aren't in the codex (or their homebrew is off)`);
+    if (location.hash === '#/dm') rerender(); else location.hash = '#/dm';
+  } else if (typeof o.hash === 'string' && o.hash.startsWith('#/')) location.hash = o.hash;
+}
+// DM: put a crafted item on a character in DnDocs.
+function hostRecord(id) {
+  const t = D.things.get(id); if (!t) return;
+  hostPost({ type: 'codex:entry', action: 'record', thing: { id: t.id, kind: t.kind, name: t.name, tier: t.tier, cat: t.cat || null, attune: t.attune || false, value: t.value ?? null, desc: String((t.kind === 'item' ? t.effect : t.desc) || '') } });
+}
 
 /* ================================================================ data */
 let D = null;
@@ -154,6 +254,15 @@ function indexAll() {
 function reindex() { indexAll(); saveSat(); Party.load(); rerender(); }
 function checkPacks() { const w = wantPacks(); if (w.join('|') !== ACTIVE.join('|')) reindex(); }
 function setPacks(names) { Party.packs = names; Party.save(); reindex(); Party.note(`Homebrew in use: ${ACTIVE.map(n => (PACKS.find(p => p.name === n) || {}).title || n).join(', ') || 'none'}`); }
+// Renamed ids (aliases.json): old id -> new id, so saved satchels and DnDocs links keep working.
+let ALIAS = { things: {}, monsters: {} };
+async function loadAliases() {
+  if (window.CODEX_ALIASES) { ALIAS = window.CODEX_ALIASES; return; }
+  try { const r = await fetch('aliases.json', { cache: 'no-cache' }); if (r.ok) { const a = await r.json(); ALIAS = { things: a.things || {}, monsters: a.monsters || {} }; } } catch (e) { /* optional */ }
+}
+const canonT = id => (D && D.things.has(id) ? id : ALIAS.things[id] || id);
+const canonM = id => (D && D.monsters.has(id) ? id : ALIAS.monsters[id] || id);
+function canonMap(o) { const out = {}; for (const [k, v] of Object.entries(o || {})) { const c = canonT(k); out[c] = (out[c] || 0) + v; } return out; }
 async function loadRaw() {
   if (window.CODEX_DATA) return window.CODEX_DATA;
   const man = await (await fetch('data/manifest.json')).json();
@@ -351,6 +460,11 @@ function saveSat() {
   for (const k of Object.keys(sat)) { if (!(sat[k] > 0)) delete sat[k]; else if (!D.things.has(k)) { satParked[k] = sat[k]; delete sat[k]; } }
   store.set(LS_KEY, { ...satParked, ...sat }); if (typeof Party !== 'undefined' && Party.known) { learnOwned(); syncStamps(); } renderNav(); }
 function addSat(id, q = 1) { sat[id] = (sat[id] || 0) + q; saveSat(); }
+// Read the satchel again without saving it (after DnDocs sent a newer one).
+function loadSat() {
+  sat = canonMap(store.get(LS_KEY, {})); satParked = {};
+  for (const k of Object.keys(sat)) { if (!(sat[k] > 0)) delete sat[k]; else if (!D.things.has(k)) { satParked[k] = sat[k]; delete sat[k]; } }
+}
 /* ---- spoilage: one stamp per part (its oldest batch), on the party's clock ---- */
 const PERISH_H = { '1 minute': 1 / 60, '1 hour': 1, '1 day': 24, '1 week': 168 };
 const PRESERVE = {
@@ -549,8 +663,9 @@ async function loadConfig() {
 }
 // A peek-blocker, not security: anyone can read the site's files.
 function pinHash(pin) { let h = 0x811c9dc5; const s = 'scavenger:' + String(pin).trim(); for (let r = 0; r < 500; r++) for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i) + r; h = Math.imul(h, 0x01000193) >>> 0; } return h.toString(16).padStart(8, '0'); }
-const pinSet = () => CFG.dmPin || store.get('scavengers-codex.localPin', null);
-const dmUnlocked = () => !pinSet() || store.get('scavengers-codex.dmUnlocked', null) === pinSet();
+// Hosted: DnDocs says who is the DM, so there is no PIN.
+const pinSet = () => (HOSTED.on ? null : CFG.dmPin || store.get('scavengers-codex.localPin', null));
+const dmUnlocked = () => (HOSTED.on ? HOSTED.role === 'dm' : !pinSet() || store.get('scavengers-codex.dmUnlocked', null) === pinSet());
 
 /* ================================================================ party: shared satchel, formulas, discoveries */
 const PARTY_KEY = 'scavengers-codex.party.v1';
@@ -566,6 +681,7 @@ const Party = {
   init() { this.load(); },
   load() {
     const d = this.localData();
+    d.items = canonMap(d.items); d.learned = (d.learned || []).map(canonT);
     this.parked = { items: {}, learned: [], projects: [] };
     this.items = {}; for (const [k, v] of Object.entries(d.items || {})) if (+v > 0) { if (D.things.has(k)) this.items[k] = Math.floor(+v); else this.parked.items[k] = Math.floor(+v); }
     this.learned = new Set((d.learned || []).filter(id => D.things.has(id))); this.parked.learned = (d.learned || []).filter(id => !D.things.has(id));
@@ -628,6 +744,7 @@ const needsFormula = t => !!(t && t.recipe) && t.tier !== 'mundane' && t.tier !=
 function known(t) { return isDM() || !needsFormula(t) || Party.learned.has(t.id); }
 function setMode(m) { mode = m; store.set('scavengers-codex.mode', m); syncModeBtn(); rerender(); }
 function requestMode(m) {
+  if (m === 'dm' && HOSTED.on && HOSTED.role !== 'dm') { toast('Only the DM can switch to DM view'); return; }
   if (m === 'dm' && !dmUnlocked()) { pinDialog(); return; }
   setMode(m); toast(m === 'dm' ? 'DM view: everything is visible' : 'Player view: only what the party has discovered');
 }
@@ -725,7 +842,7 @@ function placeKeys(id) { const e = D.envs.get(id); if (!e) return []; const out 
 // Where players open the codex. Set "siteUrl" in config.json; on GitHub Pages the current address is used.
 function siteBase() {
   let u = (CFG.siteUrl || '').trim();
-  if (!u && /^https?:$/.test(location.protocol) && !window.CODEX_ARTIFACT) u = location.origin + location.pathname;
+  if (!u && /^https?:$/.test(location.protocol) && !window.CODEX_ARTIFACT) u = location.protocol + '//' + location.host + location.pathname;
   if (!u) return '';
   u = u.replace(/#.*$/, '').replace(/\?.*$/, '');
   return /\.html?$/i.test(u) || u.endsWith('/') ? u : u + '/';
@@ -864,11 +981,11 @@ function pHomebrew() {
     const c = p.counts || {}, bits = [c.items && plural(c.items, 'item'), c.materials && plural(c.materials, 'material'), c.monsters && plural(c.monsters, 'creature')].filter(Boolean).join(' · ');
     const needs = (p.requires || []).map(n => (by.get(n) || {}).title || n);
     const ctl = dm && !p.device ? `<label class="switch"><input type="checkbox" data-act="packtoggle" data-pack="${esc(p.name)}"${p.on ? ' checked' : ''}><span>${p.on ? 'In use' : 'Off'}</span></label>` : `<span class="pill ${p.on ? 't-uncommon' : 't-mundane'}">${p.on ? 'In use' : 'Not in use'}</span>`;
-    return `<div class="card pad pack${p.on ? ' on' : ''}"><div class="pack-h"><div><h3>${esc(p.title)}</h3><p class="small muted">${esc([bits, p.device ? 'on this device only' : '', needs.length ? 'needs ' + needs.join(', ') : ''].filter(Boolean).join(' · '))}</p></div>${ctl}</div>${p.desc ? `<p>${esc(p.desc)}</p>` : ''}</div>`;
+    return `<div class="card pad pack${p.on ? ' on' : ''}"><div class="pack-h"><div><h3>${esc(p.title)}</h3><p class="small muted">${esc([bits, p.device ? (HOSTED.on ? 'saved to the campaign' : 'on this device only') : '', needs.length ? 'needs ' + needs.join(', ') : ''].filter(Boolean).join(' · '))}</p></div>${ctl}</div>${p.desc ? `<p>${esc(p.desc)}</p>` : ''}</div>`;
   };
   return `<div class="page"><div class="section-head"><h1>Homebrew</h1></div>
     <p class="lede">${dm ? 'Pick the homebrew for this campaign. Ticked packs work like the rest of the codex, and players still only see what they discover.' : 'The homebrew your DM has chosen for this campaign. Packs in use work like the rest of the codex: you find their creatures, parts and recipes in play.'}</p>
-    ${dm ? `<p class="small muted">Your choice is saved with the party “${esc(Party.code)}” and goes to players with the party link (Satchel → Party satchel → Share). ${choice ? `<button class="btn sm" type="button" data-act="packreset">Use the site default</button>` : 'You are using the site default.'} To make your choice the default for everyone who opens the site, copy the settings from <a href="#/dm">DM tools → Player setup</a> into <span class="mono">config.json</span>.</p>`
+    ${dm && HOSTED.on ? `<p class="small muted">Your choice is saved for the campaign in DnDocs, so every player gets the same packs.</p>` : dm ? `<p class="small muted">Your choice is saved with the party “${esc(Party.code)}” and goes to players with the party link (Satchel → Party satchel → Share). ${choice ? `<button class="btn sm" type="button" data-act="packreset">Use the site default</button>` : 'You are using the site default.'} To make your choice the default for everyone who opens the site, copy the settings from <a href="#/dm">DM tools → Player setup</a> into <span class="mono">config.json</span>.</p>`
       : `<p class="small muted">Only the DM can change this. Opening your DM's party link brings their choice to this device.</p>`}
     <div class="packs">${list.map(row).join('') || '<div class="empty">No homebrew packs are installed.</div>'}</div>
     <p class="small muted">Switching a pack off hides its content but never deletes anything: satchel contents, learned formulas and journal entries come back when it's switched on again. ${dm ? 'New packs go in the repo’s <span class="mono">homebrew</span> folder, one file each (see the README).' : ''}</p></div>`;
@@ -1595,7 +1712,7 @@ function hbTab() {
   const sum = ['materials', 'items', 'monsters', 'environments', 'cultivation'].filter(k => c[k]).map(k => `${c[k]} ${k === 'monsters' ? 'creatures' : k === 'environments' ? 'place extensions' : k === 'cultivation' ? 'garden plants' : k}`).join(', ');
   const exists = HB.pack && list.some(p => p.name === HB.name);
   return `<div class="card pad"><h2>Homebrew packs</h2>
-    <p class="small muted">Add your own materials, items and creatures from a pack file. A pack is checked against the codex first and nothing is added if it has problems. A pack added here lives <b>on this device only</b>. To share it with your players, use “Download as repo file” and drop it into the repo’s <span class="mono">homebrew</span> folder. It then shows up on the <a href="#/homebrew">Homebrew</a> page for everyone.</p>
+    <p class="small muted">Add your own materials, items and creatures from a pack file. A pack is checked against the codex first and nothing is added if it has problems. ${HOSTED.on ? 'A pack added here is saved to the campaign in DnDocs, so every player gets it.' : 'A pack added here lives <b>on this device only</b>.'} To share it with your players, use “Download as repo file” and drop it into the repo’s <span class="mono">homebrew</span> folder. It then shows up on the <a href="#/homebrew">Homebrew</a> page for everyone.</p>
     ${hbLoadError ? `<div class="empty">A saved pack could not be loaded and was skipped: ${esc(hbLoadError)}. Remove it below.</div>` : ''}
     ${list.length ? `<div class="sat-list">${list.map(p => `<div class="sat-row"><div class="txt"><span class="name">${esc((p.data.homebrew && p.data.homebrew.title) || p.name)}</span><span class="small muted">Added ${esc(String(p.addedAt || '').slice(0, 10))} · on this device</span></div><button class="btn sm" type="button" data-act="hbdl" data-name="${esc(p.name)}">Download</button><button class="btn sm" type="button" data-act="hbrm" data-name="${esc(p.name)}">Remove</button></div>`).join('')}</div>` : '<p class="small muted">No packs added on this device yet.</p>'}
     <h3>Add a pack</h3>
@@ -1983,7 +2100,7 @@ function pThing(id) {
     <div class="crumbs"><a href="#/${isItem ? 'items' : 'materials'}">${isItem ? 'Items' : 'Materials'}</a><span>/</span><span>${esc(t.name)}</span></div>
     <div class="dhero"><div class="dhead">${ico(t, true)}<div class="meta"><h1>${esc(t.name)}</h1>
       <div class="line">${pill(t.tier)}<span>${esc(isItem ? (CAT_LABEL[t.cat] || t.cat) : 'Material')}</span>${isItem && t.attune ? '<span>· requires attunement</span>' : ''}${t.src === 'Homebrew' ? '<span>· Homebrew</span>' : ''}</div>
-      <div class="actions"><button class="btn sm primary" type="button" data-act="add" data-id="${t.id}">${svg('plus')}Add to satchel</button>${t.recipe && known(t) ? `<button class="btn sm${goals.includes(t.id) ? ' on-goal' : ''}" type="button" data-act="goal" data-id="${t.id}" aria-pressed="${goals.includes(t.id)}">${svg('star')}${goals.includes(t.id) ? 'Tracking as goal' : 'Track as goal'}</button>` : ''}${formulaCtl(t)}${shareBtn(t)}${sat[t.id] || Party.qty(t.id) ? `<span class="small muted" style="align-self:center">You carry ${sat[t.id] || 0}${Party.qty(t.id) ? ` · party has ${Party.qty(t.id)}` : ''}</span>` : ''}${ext}</div></div></div>
+      <div class="actions"><button class="btn sm primary" type="button" data-act="add" data-id="${t.id}">${svg('plus')}Add to satchel</button>${HOSTED.on && isDM() ? `<button class="btn sm" type="button" data-act="hostrecord" data-id="${t.id}" title="Make it an item entry in DnDocs, on the character who has it">Record in DnDocs</button>` : ''}${t.recipe && known(t) ? `<button class="btn sm${goals.includes(t.id) ? ' on-goal' : ''}" type="button" data-act="goal" data-id="${t.id}" aria-pressed="${goals.includes(t.id)}">${svg('star')}${goals.includes(t.id) ? 'Tracking as goal' : 'Track as goal'}</button>` : ''}${formulaCtl(t)}${shareBtn(t)}${sat[t.id] || Party.qty(t.id) ? `<span class="small muted" style="align-self:center">You carry ${sat[t.id] || 0}${Party.qty(t.id) ? ` · party has ${Party.qty(t.id)}` : ''}</span>` : ''}${ext}</div></div></div>
       ${figure(t)}
       <div class="dbody">${isItem ? `<p class="effect">${esc(t.effect)}</p>` : `<p class="lede">${esc(t.desc)}</p>`}</div>
       <div class="dfacts"><div class="facts">${facts.map(([k, v]) => `<div class="fact"><span class="k">${k}</span><span class="v">${esc(v)}</span></div>`).join('')}</div>${tags}</div></div>
@@ -2098,9 +2215,21 @@ function satRow(id, q, where) {
   const dis = where === 'party' && Party.readonly ? ' disabled' : '';
   return `<div class="sat-row">${ico(t)}<div class="txt"><a class="name" href="${linkOf(t)}">${esc(t.name)}</a><span class="small muted">${TIER_LABEL[t.tier]} · ${esc(thingSub(t))}</span>${spoilBadge(t)}</div>${move}<div class="stepper"><button type="button" data-act="${where === 'mine' ? 'dec' : 'pdec'}" data-id="${id}" aria-label="One fewer"${dis}>−</button><input type="number" min="0" value="${q}" data-act="${where === 'mine' ? 'qty' : 'pqty'}" data-id="${id}" aria-label="Quantity of ${esc(t.name)}"${dis}><button type="button" data-act="${where === 'mine' ? 'inc' : 'pinc'}" data-id="${id}" aria-label="One more"${dis}>+</button></div></div>`;
 }
+// Hosted: one party per campaign, saved in DnDocs. The DM can bring in a party from a link or code.
+function hostedPartyPanel(ids, learned) {
+  const camp = HOSTED.campaign && HOSTED.campaign.name ? esc(HOSTED.campaign.name) : 'this campaign';
+  return `<div class="card party-card"><div class="frow"><span class="pill t-uncommon">Live</span><span class="small muted">Shared with everyone in <b>${camp}</b> on DnDocs. Changes show up for the whole party right away.</span></div>
+      ${isDM() ? `<div class="frow"><input class="textin" id="pasteCode" placeholder="Bring in a party from a link or code…" autocomplete="off" aria-label="Paste a party code"><button class="btn sm" type="button" data-act="pastecode">Load</button></div>` : ''}</div>
+    <div class="addbox"><div class="search-wrap" style="max-width:none"><svg class="search-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg><input id="satAdd" type="search" placeholder="Add to the party satchel…" autocomplete="off" aria-label="Add to party satchel"><div id="satSug" class="suggest" hidden></div></div></div>
+    ${ids.length ? `<div class="sat-list">${ids.map(id => satRow(id, Party.items[id], 'party')).join('')}</div>` : '<div class="empty">The party satchel is empty. Add things here, or use <b>To party</b> in your own satchel.</div>'}
+    <section class="section"><div class="section-head"><h2>Learned formulas</h2><span class="count">${learned.length}</span></div>
+      ${learned.length ? `<div class="chips">${learned.map(t => `<a class="chip" href="${linkOf(t)}"><span class="t-${t.tier}">●</span> ${esc(t.name)}</a>`).join('')}</div>` : `<p class="small muted">None yet. ${isDM() ? 'Share formulas with <b>Share with players</b> on an item page.' : 'Your DM unlocks formulas as you find them.'}</p>`}</section>
+    ${Party.log.length ? `<section class="section"><div class="section-head"><h2>Recent activity</h2></div><ul class="plog">${Party.log.slice(0, 12).map(e => `<li><span class="mono muted">${new Date(e.at).toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}</span> ${esc(e.text)}</li>`).join('')}</ul></section>` : ''}`;
+}
 function partyPanel() {
   const ids = Object.keys(Party.items).filter(id => D.things.has(id)).sort((a, b) => byName(D.things.get(a), D.things.get(b)));
   const learned = [...Party.learned].map(id => D.things.get(id)).filter(Boolean).sort(byName);
+  if (HOSTED.on) return hostedPartyPanel(ids, learned);
   const status = Party.live
     ? `<span class="pill t-uncommon">Live</span><span class="small muted">Shared with everyone who opens this page and uses party code <b>${esc(Party.code)}</b>.${Party.readonly ? ' You can view it, but only people with edit access can change it.' : ''}</span>`
     : `<span class="pill t-common">On this device</span><span class="small muted">Share it with the party by sending a link. Anyone who opens the link can load it.</span>`;
@@ -2154,6 +2283,7 @@ function pSatchel() {
     </div></div>`;
 }
 function pPartyLink(code) {
+  if (HOSTED.on && !isDM()) return `<div class="page"><h1>Party links are for the DM</h1><p class="lede">In DnDocs the party satchel is shared already. Ask your DM to bring this party in.</p></div>`;
   const o = Party.parseShare(code || '');
   if (!o) return `<div class="page"><h1>That party link didn't work</h1><p class="lede">The link may have been cut short when it was copied. Ask for it again.</p></div>`;
   const items = Object.entries(o.i || {}).filter(([k]) => D.things.has(k));
@@ -2229,14 +2359,24 @@ function sessionPanel(dm) {
 }
 function backupObj() {
   const data = {};
-  try { for (let i = 0; i < localStorage.length; i++) { const k = localStorage.key(i); if (k && k.startsWith('scavengers-codex.') && !BACKUP_SKIP.includes(k)) data[k] = localStorage.getItem(k); } } catch (e) { /* storage blocked */ }
+  for (const k of store.keys()) if (k && k.startsWith('scavengers-codex.') && !BACKUP_SKIP.includes(k)) data[k] = JSON.stringify(store.get(k, null));
   return { app: 'scavengers-codex', v: 1, at: new Date().toISOString(), party: Party.code, data };
 }
 function restoreBackup(txt) {
   let o; try { o = JSON.parse(txt); } catch (e) { return 'That isn’t a codex backup (it isn’t valid JSON).'; }
   if (!o || o.app !== 'scavengers-codex' || !o.data) return 'That file isn’t a Scavenger’s Codex backup.';
+  if (HOSTED.on) {
+    // Into the campaign: the backup's party becomes the campaign's party, its satchel this player's.
+    if (HOSTED.role !== 'dm') return 'Only the DM can restore a backup into the campaign.';
+    const read = k => { try { return JSON.parse(o.data[k]); } catch (e) { return null; } };
+    const pk = Object.keys(o.data).find(k => k === PARTY_KEY + '.data.' + (o.party || '')) || Object.keys(o.data).find(k => k.startsWith(PARTY_KEY + '.data.'));
+    if (pk) store.set(PARTY_KEY + '.data.' + Party.code, read(pk));
+    if (o.data[LS_KEY]) store.set(LS_KEY, read(LS_KEY));
+    if (o.data[HB_KEY]) store.set(HB_KEY, read(HB_KEY));
+    return '';
+  }
   try {
-    const old = []; for (let i = 0; i < localStorage.length; i++) { const k = localStorage.key(i); if (k && k.startsWith('scavengers-codex.') && !BACKUP_SKIP.includes(k)) old.push(k); }
+    const old = store.keys().filter(k => k && k.startsWith('scavengers-codex.') && !BACKUP_SKIP.includes(k));
     old.forEach(k => localStorage.removeItem(k));
     for (const [k, v] of Object.entries(o.data)) if (k.startsWith('scavengers-codex.') && !BACKUP_SKIP.includes(k)) localStorage.setItem(k, v);
   } catch (e) { return 'This browser won’t let the codex save data here.'; }
@@ -2289,9 +2429,9 @@ function route() {
     case 'materials': html = pMaterials(); break;
     case 'monsters': html = pMonsters(); break;
     case 'places': html = pPlaces(); break;
-    case 'item': html = pThing(b); nav = 'items'; break;
-    case 'material': html = pThing(b); nav = 'materials'; break;
-    case 'monster': html = pMonster(b); nav = 'monsters'; break;
+    case 'item': html = pThing(canonT(b)); nav = 'items'; break;
+    case 'material': html = pThing(canonT(b)); nav = 'materials'; break;
+    case 'monster': html = pMonster(canonM(b)); nav = 'monsters'; break;
     case 'place': html = pPlace(b); nav = 'places'; break;
     case 'tag': html = pTag(parts.slice(1).join('/'), query); nav = 'materials'; break;
     case 'search': html = pSearch(query.get('q') || ''); nav = ''; break;
@@ -2483,6 +2623,7 @@ document.addEventListener('click', ev => {
       saveSat(); if (el.dataset.to === 'party' && n) Party.note(`Added ${plural(n, 'part')} from ${act === 'dmforageadd' ? 'a foraging trip' : 'the hunt'}`);
       toast(`Added ${plural(n, 'part')} to ${el.dataset.to === 'party' ? 'the party satchel' : 'your satchel'}`); el.disabled = true; break;
     }
+    case 'hostrecord': { hostRecord(id); break; }
     case 'teach': { const on = !Party.learned.has(id); Party.teach(id, on); if (on) Party.note(`The party learned the formula for ${D.things.get(id).name}`); toast(on ? 'Marked as learned on this device only. Use Share with players to send it to your players' : 'Formula removed on this device'); break; }
     case 'learn': Party.teach(id, true); Party.note(`The party learned the formula for ${D.things.get(id).name}`); toast('Formula learned'); break;
     case 'addroll': {
@@ -2928,19 +3069,32 @@ function initTheme() {
 
 /* ================================================================ boot */
 async function boot() {
+  let hello = null;
+  if (HOSTED.on) {
+    document.documentElement.classList.add('hosted');
+    try { hello = await hostHello(); }
+    catch (e) { $('#view').innerHTML = `<div class="page"><h1>Waiting for DnDocs</h1><p class="lede">The codex is open inside another page that didn’t answer. Reload DnDocs, or <a href="./" target="_blank" rel="noopener">open the codex on its own</a>.</p></div>`; return; }
+    Party.code = 'campaign';
+    sat = store.get(LS_KEY, {});
+  }
   initTheme();
   try {
     await loadConfig();
+    if (HOSTED.on) { CFG.dmPin = null; CFG.siteUrl = CFG.siteUrl0; }
     RAW = await loadRaw();
+    await loadAliases();
     PACKS = await loadPacks();
     indexAll();
     mode = pinSet() && !dmUnlocked() ? 'player' : (store.get('scavengers-codex.mode', null) || (CFG.startInPlayerView ? 'player' : 'dm'));
+    if (HOSTED.on) mode = HOSTED.role === 'dm' ? (store.get('scavengers-codex.mode', null) || 'dm') : 'player';
   }
   catch (e) {
+    if (HOSTED.on) hostPost({ type: 'codex:error', stage: 'load', message: String(e && e.message || e) });
     $('#view').innerHTML = `<div class="page"><h1>Couldn't load the codex data</h1><p class="lede">If you opened <span class="mono">index.html</span> straight from your disk, your browser blocks the data files. Serve the folder instead (for example <span class="mono">python3 -m http.server</span>) or use the standalone file.</p><p class="small muted">${esc(e.message)}</p></div>`;
     return;
   }
   Party.init();
+  sat = canonMap(sat);
   saveSat();
   const mb = $('#modeBtn'); if (mb) { mb.addEventListener('click', () => requestMode(mode === 'dm' ? 'player' : 'dm')); syncModeBtn(); }
   const q = $('#q');
@@ -2950,7 +3104,12 @@ async function boot() {
     if (e) location.hash = linkOf(e.o); else if (text.trim()) location.hash = '#/search?q=' + encodeURIComponent(text.trim()); q.blur();
   }, null, true);
   window.addEventListener('hashchange', route);
+  if (HOSTED.on) {
+    if (HOSTED.role !== 'dm' && mb) mb.hidden = true;
+    hostPost({ type: 'codex:loaded', packs: ACTIVE.slice() });
+  }
   route();
+  if (hello && hello.open) hostOpen(hello.open);
 }
 boot();
 })();

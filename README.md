@@ -72,6 +72,22 @@ To use an image hosted elsewhere, or to credit an artist, add `"img": "https://â
 - Original items and other homebrew live in **packs** in `homebrew/` (see below).
 - Check your edits with `python3 tools/validate.py`. It checks the base on its own, the base with each pack, and everything together, and reports broken ids, unknown tags and missing keystones.
 - `codex-standalone.html` is not updated automatically. Rebuild it with `python3 tools/build_standalone.py`, or just use the GitHub Pages version.
+- New ids? Run `python3 tools/validate.py --update-lock` (see *Inside DnDocs*).
+
+## Inside DnDocs
+
+[DnDocs](https://github.com/JustusHellman/DnDocs) shows the codex on its *Scavenger's Codex* page,
+at `?embed=dndocs`. There the codex saves to the DnDocs campaign instead of this browser: the party
+satchel, clock, workbench, garden and journal are shared live by everyone in the campaign, each player
+has their own satchel, and DnDocs says who the DM is (no PIN). The DM's homebrew choice and added
+packs apply to the whole campaign. *Record in DnDocs* on an item page (DM) makes it a DnDocs item
+entry. Opened on its own, the codex works exactly as before.
+
+DnDocs links its entries to codex ids and reads `catalog.json` (every creature, material and item;
+built by `tools/catalog.py` when the site deploys). So **ids are a promise**: `tools/validate.py`
+compares them with `tools/ids.lock` and fails if one disappears. To rename something, keep the old id
+working by adding it to `aliases.json` (`"things": {"old-id": "new-id"}`). After adding new things,
+run `python3 tools/validate.py --update-lock` and commit the lock.
 
 ## Homebrew packs
 Every homebrew set is one JSON file in the `homebrew/` folder. The codex ships with three:

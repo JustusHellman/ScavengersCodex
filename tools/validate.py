@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 """Validate Scavenger's Codex data. Usage: python3 tools/validate.py [file ...]
 Checks the base codex (data/) on its own, then the base with each homebrew pack (homebrew/) and
-the packs it requires, then everything together. With args, only reports problems in those files."""
+the packs it requires, then everything together. With args, only reports problems in those files.
+
+IDs are a promise: DnDocs and players' satchels refer to them. tools/ids.lock lists every id that
+has shipped. An id may only disappear if aliases.json points it at a replacement. After adding
+things, run `python3 tools/validate.py --update-lock` and commit the new lock."""
 import json, sys, glob, os, re
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import codexdata
@@ -151,15 +155,52 @@ def check(parts, only):
     return errs, len(things), len(monsters)
 
 ALLPACKS = {}
+LOCK = os.path.join(ROOT, "tools", "ids.lock")
+ALIASES = os.path.join(ROOT, "aliases.json")
+
+def all_ids():
+    ids = set()
+    for _, d in codexdata.load("all"):
+        for key in ("materials", "items"):
+            for t in d.get(key, []):
+                if t.get("id") and not t.get("extend"): ids.add("thing:" + t["id"])
+        for m in d.get("monsters", []):
+            if m.get("id") and not m.get("extend"): ids.add("monster:" + m["id"])
+    return ids
+
+def check_ids(update):
+    """Shipped ids must keep resolving: present, or aliased to something present."""
+    ids = all_ids()
+    aliases = codexdata.read(ALIASES) if os.path.exists(ALIASES) else {}
+    errs = []
+    for kind in ("things", "monsters"):
+        pre = "thing:" if kind == "things" else "monster:"
+        for old, new in (aliases.get(kind) or {}).items():
+            if pre + new not in ids: errs.append(f"aliases.json: {kind} alias '{old}' points to '{new}', which doesn't exist")
+            if pre + old in ids: errs.append(f"aliases.json: '{old}' still exists, so it can't be an alias")
+    if update:
+        with open(LOCK, "w", encoding="utf-8") as fh: fh.write("\n".join(sorted(ids | (set(open(LOCK).read().split()) if os.path.exists(LOCK) else set()))) + "\n")
+        print(f"tools/ids.lock updated ({len(ids)} ids in use)")
+    if os.path.exists(LOCK):
+        for line in open(LOCK, encoding="utf-8").read().split():
+            kind, _, i = line.partition(":")
+            ali = (aliases.get("things" if kind == "thing" else "monsters") or {})
+            if line not in ids and i not in ali:
+                errs.append(f"id '{i}' ({kind}) was removed. Keep it, or add it to aliases.json with its replacement")
+    return errs
+
 def main():
     ALLPACKS.update(codexdata.packs())
-    only = set(os.path.abspath(a) for a in sys.argv[1:])
+    update = "--update-lock" in sys.argv
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    only = set(os.path.abspath(a) for a in args)
     combos = [("base", "none")] + [(n, [n]) for n in ALLPACKS] + [("all packs", "all")]
     errs, seen = [], set()
     for label, which in combos:
         e, nt, nm = check(codexdata.load(which), only)
         for x in e:
             if x not in seen: seen.add(x); errs.append(f"[{label}] {x}")
+    if not only: errs += check_ids(update)
     for e in errs: print(e)
     print(f"--- {len(errs)} problems | {nt} things, {nm} monsters (base + {len(ALLPACKS)} packs: {', '.join(ALLPACKS)})")
     return 1 if errs else 0
