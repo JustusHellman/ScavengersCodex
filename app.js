@@ -666,7 +666,7 @@ function bankTab() {
 }
 // Read the satchel again without saving it (after DnDocs sent a newer one).
 function loadSat() {
-  sat = canonMap(store.get(LS_KEY, {})); satParked = {};
+  sat = canonMap(store.get(LS_KEY, {})); satParked = {}; satStamps = null;
   for (const k of Object.keys(sat)) { if (!(sat[k] > 0)) delete sat[k]; else if (!D.things.has(k)) { satParked[k] = sat[k]; delete sat[k]; } }
 }
 /* ---- spoilage: one stamp per part (its oldest batch), on the party's clock ---- */
@@ -680,31 +680,70 @@ const PRESERVE = {
 // Spoilage can be switched off for the party (clock bar), or by default in config.json ("spoilage": false).
 const spoilOn = () => Party.spoil != null ? !!Party.spoil : CFG.spoilage !== false;
 // Each perishable part keeps a list of batches, so a fresh harvest never inherits an old stack's clock.
-function batchesOf(id) {
-  let b = Party.stamps[id]; if (!b) return [];
-  if (!Array.isArray(b)) { b = [{ at: b.at, q: (sat[id] || 0) + Party.qty(id), pres: !!b.pres }]; Party.stamps[id] = b; }
+// The party satchel's batches live with the party (Party.stamps); your own satchel's batches live
+// with your satchel (satStamps). Everyone sees the party satchel, but only you see yours: when one
+// list covered both, every device "corrected" it to match its own satchel, forever (in DnDocs that
+// was a write to the shared party several times a second while two people had the codex open).
+const SATSTAMP_KEY = 'scavengers-codex.satstamps.v1';
+let satStamps = null; // loaded on first use (see satStampsReady)
+function stampList(map, id) {
+  let b = map[id]; if (!b) return [];
+  if (!Array.isArray(b)) { b = [{ at: b.at, q: 1, pres: !!b.pres }]; map[id] = b; }
   return b;
 }
-function batchLeft(t, x) { const life = x.pres ? PRESERVE[t.perish].life : PERISH_H[t.perish]; return { life, left: x.at + life - Party.clock }; }
-function syncStamps() {
-  if (typeof Party === 'undefined' || !Party.stamps) return;
-  let ch = false;
-  if (!spoilOn()) { if (Object.keys(Party.stamps).length) { Party.stamps = {}; Party.save(); } return; }
-  const have = new Set([...Object.keys(sat).filter(k => sat[k] > 0), ...Object.keys(Party.items), ...Object.keys(satParked), ...Object.keys(Party.parked.items)]);
-  for (const id of have) {
-    const t = D.things.get(id); if (!t || !PERISH_H[t.perish]) continue;
-    const bs = Party.stamps[id] ? batchesOf(id) : (Party.stamps[id] = []), total = (sat[id] || 0) + Party.qty(id), sum = bs.reduce((a, x) => a + x.q, 0);
-    if (total > sum) { bs.push({ at: Party.clock, q: total - sum }); ch = true; }
-    else if (total < sum) {
-      // parts that were used up come out of the oldest usable batch first, spoiled ones last
-      let n = sum - total; const order = [...bs].sort((a, b) => (batchLeft(t, a).left <= 0) - (batchLeft(t, b).left <= 0) || a.at - b.at);
-      for (const x of order) { const k = Math.min(x.q, n); x.q -= k; n -= k; if (!n) break; }
-      Party.stamps[id] = bs.filter(x => x.q > 0); ch = true;
-    }
-    if (Party.stamps[id] && !Party.stamps[id].length) delete Party.stamps[id];
+// Your satchel's batches. The first time (older saves kept them in the party's list), take the
+// oldest of the party's batches for what you carry; the party's list is trimmed to the party
+// satchel on the next sync.
+function satStampsReady() {
+  if (satStamps) return satStamps;
+  const saved = store.get(SATSTAMP_KEY, null);
+  if (saved && typeof saved === 'object') return (satStamps = saved);
+  satStamps = {};
+  for (const [id, q] of Object.entries(sat)) {
+    const bs = stampList(Party.stamps || {}, id); if (!bs.length || !(q > 0)) continue;
+    let need = q; const out = [];
+    for (const x of [...bs].sort((a, b) => a.at - b.at)) { const k = Math.min(x.q, need); if (k) out.push({ ...x, q: k }); need -= k; if (!need) break; }
+    if (out.length) satStamps[id] = out;
   }
-  for (const id of Object.keys(Party.stamps)) if (!have.has(id)) { delete Party.stamps[id]; ch = true; }
-  if (ch) Party.save();
+  return satStamps;
+}
+function batchesOf(id) { return [...stampList(Party.stamps, id), ...stampList(satStampsReady(), id)]; }
+function batchLeft(t, x) { const life = x.pres ? PRESERVE[t.perish].life : PERISH_H[t.perish]; return { life, left: x.at + life - Party.clock }; }
+// Make one list of batches add up to `total`: new parts are a fresh batch, parts used up come out
+// of the oldest usable batch first, spoiled ones last. Returns whether anything changed.
+function fitStamps(map, id, t, total) {
+  const bs = stampList(map, id), sum = bs.reduce((a, x) => a + x.q, 0);
+  if (total === sum) { if (map[id] && !bs.length) delete map[id]; return false; }
+  if (total > sum) bs.push({ at: Party.clock, q: total - sum });
+  else {
+    let n = sum - total; const order = [...bs].sort((a, b) => (batchLeft(t, a).left <= 0) - (batchLeft(t, b).left <= 0) || a.at - b.at);
+    for (const x of order) { const k = Math.min(x.q, n); x.q -= k; n -= k; if (!n) break; }
+  }
+  const left = bs.filter(x => x.q > 0);
+  if (left.length) map[id] = left; else delete map[id];
+  return true;
+}
+function saveSatStamps() { store.set(SATSTAMP_KEY, satStampsReady()); }
+// `opts.noPartySave`: the caller saves the party itself (one write instead of two).
+function syncStamps(opts) {
+  if (typeof Party === 'undefined' || !Party.stamps) return false;
+  const mine = satStampsReady();
+  if (!spoilOn()) {
+    if (Object.keys(mine).length) { satStamps = {}; saveSatStamps(); }
+    if (Object.keys(Party.stamps).length) { Party.stamps = {}; if (!(opts && opts.noPartySave)) Party.save(); return true; }
+    return false;
+  }
+  let chP = false, chS = false;
+  const partyHas = new Set([...Object.keys(Party.items), ...Object.keys(Party.parked.items)]);
+  const satHas = new Set([...Object.keys(sat).filter(k => sat[k] > 0), ...Object.keys(satParked)]);
+  for (const id of partyHas) { const t = D.things.get(id); if (t && PERISH_H[t.perish] && fitStamps(Party.stamps, id, t, Party.qty(id))) chP = true; }
+  for (const id of satHas) { const t = D.things.get(id); if (t && PERISH_H[t.perish] && fitStamps(mine, id, t, sat[id] || 0)) chS = true; }
+  // (Parked parts, from homebrew that is switched off, keep their batches for when it's back.)
+  for (const id of Object.keys(Party.stamps)) if (!partyHas.has(id)) { delete Party.stamps[id]; chP = true; }
+  for (const id of Object.keys(mine)) if (!satHas.has(id)) { delete mine[id]; chS = true; }
+  if (chS) saveSatStamps();
+  if (chP && !(opts && opts.noPartySave)) Party.save();
+  return chP;
 }
 function spoilInfo(t) {
   if (!spoilOn() || !PERISH_H[t.perish]) return null;
@@ -898,7 +937,7 @@ const Party = {
   },
   setCode(c) { this.code = slugify(c); store.set(PARTY_KEY + '.code', this.code); this.load(); checkPacks(); },
   qty(id) { return this.items[id] || 0; },
-  set(id, q) { q = Math.max(0, Math.floor(q || 0)); if (q) { this.items[id] = q; this.known.add('t:' + id); } else delete this.items[id]; this.save(); syncStamps(); partyChanged(); },
+  set(id, q) { q = Math.max(0, Math.floor(q || 0)); if (q) { this.items[id] = q; this.known.add('t:' + id); } else delete this.items[id]; syncStamps({ noPartySave: true }); this.save(); partyChanged(); },
   add(id, q) { this.set(id, this.qty(id) + q); },
   note(text) { this.log.unshift({ at: Date.now(), clock: this.clock, text: String(text).slice(0, 200) }); this.log = this.log.slice(0, 300); this.save(); },
   know(keys) { let n = 0; for (const k of keys) if (!this.known.has(k)) { this.known.add(k); n++; } if (n) { this.save(); partyChanged(); } return n; },
@@ -2971,13 +3010,14 @@ document.addEventListener('click', ev => {
       const t = D.things.get(id), P = PRESERVE[t.perish], s0 = spoilInfo(t); if (!P || !s0) break;
       if (P.need) { const have = usable()[P.need] || 0; if (!have) { toast(`You need ${(D.things.get(P.need) || {}).name || P.need} for that`); break; } consume(P.need, 1); saveSat(); }
       for (const x of batchesOf(id)) if (!x.pres && batchLeft(t, x).left > 0) { x.pres = true; x.at = Party.clock; }
-      Party.save(); toast(`${t.name}: ${P.done.toLowerCase()}`); rerender(); break;
+      saveSatStamps(); Party.save(); toast(`${t.name}: ${P.done.toLowerCase()}`); rerender(); break;
     }
     case 'toss': {
-      const t = D.things.get(id), bs = batchesOf(id); let n = 0;
-      Party.stamps[id] = bs.filter(x => { if (batchLeft(t, x).left <= 0) { n += x.q; return false; } return true; });
-      const mine = Math.min(sat[id] || 0, n); if (mine) sat[id] -= mine; if (n - mine) Party.add(id, -(n - mine)); saveSat();
-      Party.save(); toast(`Threw out ${n} spoiled ${t.name}`); rerender(); break;
+      const t = D.things.get(id), spoiled = map => { let n = 0; const left = stampList(map, id).filter(x => { if (batchLeft(t, x).left <= 0) { n += x.q; return false; } return true; }); if (left.length) map[id] = left; else delete map[id]; return n; };
+      const mine = Math.min(sat[id] || 0, spoiled(satStampsReady())), theirs = Math.min(Party.qty(id), spoiled(Party.stamps)), n = mine + theirs;
+      if (mine) sat[id] -= mine; saveSat();
+      if (theirs) Party.add(id, -theirs); else Party.save();
+      toast(`Threw out ${n} spoiled ${t.name}`); rerender(); break;
     }
     case 'clear': if (el.dataset.confirm) { sat = {}; saveSat(); rerender(); } else { el.dataset.confirm = '1'; el.innerHTML = 'Tap again to empty'; setTimeout(() => { if (el.isConnected) { delete el.dataset.confirm; el.innerHTML = svg('trash') + 'Empty satchel'; } }, 3000); } break;
     case 'sample': { for (const [k, v] of [['dire-wolf-pelt', 1], ['whisperleaf-vine', 3], ['cloak', 1], ['sprite-essence', 1], ['spider-silk-thread', 1], ['healers-moss', 3], ['glass-vial', 2], ['alchemical-base', 2], ['stone-giant-heartstone', 1], ['maul', 1]]) if (D.things.has(k)) sat[k] = v; saveSat(); rerender(); break; }
