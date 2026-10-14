@@ -72,7 +72,9 @@ svg{flex:none}
 .sug .kind{margin-left:auto;font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
 .sug-foot{padding:8px 14px;border-top:1px solid var(--line-2);font-size:.88rem;color:var(--muted)}
 
-.sidenav{position:sticky;top:calc(var(--top-h) + env(safe-area-inset-top,0px));align-self:start;height:calc(100vh - var(--top-h));padding:18px 12px;display:flex;flex-direction:column;gap:2px;border-right:1px solid var(--line)}
+.sidenav{position:sticky;top:calc(var(--top-h) + env(safe-area-inset-top,0px));align-self:start;height:calc(100vh - var(--top-h));height:calc(100dvh - var(--top-h));padding:18px 12px;display:flex;flex-direction:column;gap:2px;border-right:1px solid var(--line);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
+/* short screens: the menu scrolls on its own, so the last links and the homebrew list stay reachable */
+.sidenav > *{flex-shrink:0}
 .navlink{display:flex;align-items:center;gap:12px;padding:9px 12px;border-radius:8px;color:var(--ink-2);font-weight:500}
 .navlink svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .navlink:hover{background:var(--surface);text-decoration:none;color:var(--ink)}
@@ -267,11 +269,14 @@ textarea.io{width:100%;min-height:110px;border:1px solid var(--line);border-radi
   .brand{width:auto}
   .brand-name{display:none}
   .kbd-hint{display:none}
-  .sidenav{position:fixed;top:auto;bottom:0;left:0;right:0;height:auto;z-index:40;flex-direction:row;justify-content:space-around;padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));background:var(--surface);border-right:none;border-top:1px solid var(--line);gap:0}
-  .navlink{flex-direction:column;gap:2px;padding:6px 4px;font-size:.7rem;flex:1;min-width:0;position:relative}
+  .sidenav{position:fixed;top:auto;bottom:0;left:0;right:0;height:auto;z-index:40;flex-direction:row;justify-content:space-around;overflow-y:visible;overflow-x:auto;padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));background:var(--surface);border-right:none;border-top:1px solid var(--line);gap:0}
+  .navlink{flex-direction:column;gap:2px;padding:6px 4px;font-size:.7rem;flex:1 0 auto;min-width:64px;position:relative}
   .navlink span.lbl{white-space:nowrap}
   .navlink .badge{position:absolute;top:0;left:calc(50% + 6px);margin:0;height:17px;min-width:17px;font-size:10px;padding:0 4px}
-  .navlink.desk,.nav-sep,.nav-foot{display:none}
+  /* every page stays reachable on a phone: the bar scrolls sideways when it doesn't fit */
+  .sidenav{justify-content:flex-start;scrollbar-width:none}
+  .sidenav::-webkit-scrollbar{display:none}
+  .nav-sep,.nav-foot,#nav .nav-packs{display:none}
   main{padding:20px 16px calc(96px + env(safe-area-inset-bottom,0px))}
   .page{gap:22px}
   .hero{grid-template-columns:minmax(0,1fr)}
