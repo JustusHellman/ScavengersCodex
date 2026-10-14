@@ -222,7 +222,8 @@ td .note{font-size:.86rem;color:var(--muted);margin-top:2px}
 .sat-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:24px;align-items:start}
 .sat-list{display:flex;flex-direction:column;gap:6px}
 .sat-row{display:flex;align-items:center;gap:10px;padding:8px 10px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
-.sat-row .txt{flex:1;min-width:0}
+.sat-row .txt{flex:1 1 140px;min-width:0}
+.sat-row{flex-wrap:wrap;row-gap:6px}
 .sat-row .name{font-weight:700;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink)}
 .stepper{display:flex;align-items:center;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
 .stepper button{width:30px;height:30px;border:none;background:var(--surface-2);cursor:pointer;font-weight:700}
@@ -371,6 +372,12 @@ textarea.io{width:100%;min-height:110px;border:1px solid var(--line);border-radi
 .code{font-size:1.05rem;letter-spacing:.08em;color:var(--ink);word-break:break-all}
 .modal{position:fixed;inset:0;z-index:80;background:color-mix(in srgb,var(--ink) 45%,transparent);display:grid;place-items:center;padding:16px}
 .modal-card{width:min(520px,100%);max-height:86vh;overflow:auto;background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:12px}
+.purse{padding:14px 16px;display:flex;flex-direction:column;gap:10px;margin-bottom:14px}
+.purse-h{display:flex;align-items:center;gap:12px}
+.purse-h svg{width:30px;height:30px;fill:none;stroke:var(--brass);stroke-width:1.7;flex:none}
+.purse-h div{display:flex;flex-direction:column}
+.purse-amt{font:700 1.25rem var(--f-mono);color:var(--ink)}
+.sell-tbl td:last-child{text-align:right}
 .reveal h2{font-size:1.6rem}
 .rv-sec{display:flex;flex-direction:column;gap:6px}
 @media (prefers-reduced-motion:no-preference){

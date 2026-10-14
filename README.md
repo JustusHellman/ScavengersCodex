@@ -13,6 +13,8 @@ A harvesting and crafting handbook for D&D 5e. You skin, harvest and forage comp
 - **Party satchel:** a shared inventory plus learned formulas, kept on each device and shared by sending a link or party code. No server or database is needed.
 - **DM tools:** forage expeditions (every find has its own lore-based danger and fitting creatures, and guardians vary), wandering traders by settlement size and speciality, harvesting a whole fight at once, and a session recap.
 - **Party clock and spoilage:** move the clock as time passes in the game. Perishable parts count down, get flagged before they spoil, and can be preserved (salts, an essence vessel, drying).
+- **Coin purses:** your own purse and the party's, in gp/sp/cp. Starting a craft pays its reagent gold (your purse first, then the party's; abandoning it before any work gives it back). Leave both purses empty to ignore coin altogether.
+- **The DM is the bank:** DM tools → *Hand out* gives or takes items and coin for the party or any player, and shows what everyone carries. At a trader, *Sell…* and *Buy from the party…* move the goods and coin with the list price filled in, ready to change to whatever was haggled.
 - **Workbench:** starting a craft puts it on the workbench. Log the days of work, roll the final check and finish it.
 - **Garden:** grow herbs, fungi and rarer plants from cuttings in plots, glasshouses, mushroom cellars and warded groves. They grow on the party clock, need a weekly Nature check, can thrive or catch blight, and many grow back after harvest.
 - **Links and QR codes:** every handout comes with a clickable link and a QR code (also printed on the back of each card). Players tap or scan it and the entry unlocks in their journal. The code is cleared from the address straight away, so it never unlocks twice. Party links get a QR code too.
@@ -81,7 +83,10 @@ at `?embed=dndocs`. There the codex saves to the DnDocs campaign instead of this
 satchel, clock, workbench, garden and journal are shared live by everyone in the campaign, each player
 has their own satchel, and DnDocs says who the DM is (no PIN). The DM's homebrew choice and added
 packs apply to the whole campaign. *Record in DnDocs* on an item page (DM) makes it a DnDocs item
-entry. Opened on its own, the codex works exactly as before.
+entry. In a campaign players can also **give** items or coin straight to another player (*Give…* in
+the satchel and purse); it arrives in their satchel the next time they open DnDocs. DnDocs shows each
+character's satchel and purse under *Carried* on their page. Opened on its own, the codex works
+exactly as before.
 
 DnDocs links its entries to codex ids and reads `catalog.json` (every creature, material and item;
 built by `tools/catalog.py` when the site deploys). So **ids are a promise**: `tools/validate.py`

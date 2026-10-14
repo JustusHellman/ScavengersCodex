@@ -232,7 +232,8 @@ td .note{font-size:.86rem;color:var(--muted);margin-top:2px}
 .sat-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:24px;align-items:start}
 .sat-list{display:flex;flex-direction:column;gap:6px}
 .sat-row{display:flex;align-items:center;gap:10px;padding:8px 10px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
-.sat-row .txt{flex:1;min-width:0}
+.sat-row .txt{flex:1 1 140px;min-width:0}
+.sat-row{flex-wrap:wrap;row-gap:6px}
 .sat-row .name{font-weight:700;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink)}
 .stepper{display:flex;align-items:center;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
 .stepper button{width:30px;height:30px;border:none;background:var(--surface-2);cursor:pointer;font-weight:700}
@@ -381,6 +382,12 @@ textarea.io{width:100%;min-height:110px;border:1px solid var(--line);border-radi
 .code{font-size:1.05rem;letter-spacing:.08em;color:var(--ink);word-break:break-all}
 .modal{position:fixed;inset:0;z-index:80;background:color-mix(in srgb,var(--ink) 45%,transparent);display:grid;place-items:center;padding:16px}
 .modal-card{width:min(520px,100%);max-height:86vh;overflow:auto;background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:12px}
+.purse{padding:14px 16px;display:flex;flex-direction:column;gap:10px;margin-bottom:14px}
+.purse-h{display:flex;align-items:center;gap:12px}
+.purse-h svg{width:30px;height:30px;fill:none;stroke:var(--brass);stroke-width:1.7;flex:none}
+.purse-h div{display:flex;flex-direction:column}
+.purse-amt{font:700 1.25rem var(--f-mono);color:var(--ink)}
+.sell-tbl td:last-child{text-align:right}
 .reveal h2{font-size:1.6rem}
 .rv-sec{display:flex;flex-direction:column;gap:6px}
 @media (prefers-reduced-motion:no-preference){
@@ -4006,7 +4013,7 @@ function toast(msg) { const t = $('#toast'); t.textContent = msg; t.hidden = fal
 const HOSTED = (() => {
   let on = false;
   try { on = new URLSearchParams(location.search).get('embed') === 'dndocs' && window.parent !== window; } catch (e) { on = false; }
-  return { on, ready: false, role: 'player', name: '', campaign: null, origin: null, mem: new Map(), queue: new Map(), timer: 0 };
+  return { on, ready: false, role: 'player', name: '', campaign: null, members: [], gifts: new Map(), origin: null, mem: new Map(), queue: new Map(), timer: 0 };
 })();
 const jclone = v => (v === undefined ? undefined : JSON.parse(JSON.stringify(v)));
 const store = {
@@ -4054,12 +4061,15 @@ function hostHello() {
       if (e.source !== window.parent || !hostAllowed(e.origin)) return;
       const d = e.data || {};
       if (d.type === 'dndocs:hello' && !HOSTED.ready) {
-        HOSTED.origin = e.origin; HOSTED.role = d.role === 'dm' ? 'dm' : 'player'; HOSTED.name = String(d.name || ''); HOSTED.campaign = d.campaign || null;
+        HOSTED.origin = e.origin; HOSTED.role = d.role === 'dm' ? 'dm' : 'player'; HOSTED.name = String(d.name || ''); HOSTED.campaign = d.campaign || null; HOSTED.members = Array.isArray(d.members) ? d.members : [];
         HOSTED.mem = new Map(Object.entries(d.keys || {}));
         HOSTED.ready = true; clearInterval(iv); resolve(d);
       } else if (HOSTED.ready && d.type === 'dndocs:state') hostApply(d.keys || {});
       else if (HOSTED.ready && d.type === 'dndocs:open') hostOpen(d.open);
       else if (HOSTED.ready && d.type === 'dndocs:saved' && d.ok === false) toast(d.error ? 'Not saved: ' + d.error : 'Not saved');
+      else if (HOSTED.ready && d.type === 'dndocs:give') { if (d.ok === false) hostGiftFailed(d.id, d.error); else HOSTED.gifts.delete(d.id); }
+      else if (HOSTED.ready && d.type === 'dndocs:members') { HOSTED.members = Array.isArray(d.members) ? d.members : []; if (D && location.hash.startsWith('#/dm')) hostRefresh(); }
+      else if (HOSTED.ready && d.type === 'dndocs:bank' && d.ok === false) toast(`Not saved in DnDocs${d.error ? ': ' + d.error : ''}`);
       else if (HOSTED.ready && d.type === 'dndocs:entry') toast(d.ok ? `Recorded in DnDocs${d.name ? ': ' + d.name : ''}` : (d.error || 'Not recorded'));
     });
     ping();
@@ -4342,6 +4352,207 @@ function saveSat() {
   for (const k of Object.keys(sat)) { if (!(sat[k] > 0)) delete sat[k]; else if (!D.things.has(k)) { satParked[k] = sat[k]; delete sat[k]; } }
   store.set(LS_KEY, { ...satParked, ...sat }); if (typeof Party !== 'undefined' && Party.known) { learnOwned(); syncStamps(); } renderNav(); }
 function addSat(id, q = 1) { sat[id] = (sat[id] || 0) + q; saveSat(); }
+/* ---- coin purses: yours and the party's, counted in copper (10 cp = 1 sp, 100 cp = 1 gp) ---- */
+const PURSE_KEY = 'scavengers-codex.purse.v1';
+const purse = { get mine() { return Math.max(0, Math.floor(+store.get(PURSE_KEY, 0) || 0)); }, set mine(v) { store.set(PURSE_KEY, Math.max(0, Math.floor(v))); } };
+function fmtCoins(cp) {
+  cp = Math.max(0, Math.round(cp)); if (!cp) return '0 gp';
+  const gp = Math.floor(cp / 100), sp = Math.floor((cp % 100) / 10), c = cp % 10;
+  return [gp && `${gp.toLocaleString('en-US')} gp`, sp && `${sp} sp`, c && `${c} cp`].filter(Boolean).join(' ');
+}
+// "12", "12 gp", "3gp 5sp", "40 sp", "2 pp" → copper. A plain number means gold.
+function parseCoins(txt) {
+  const s = String(txt || '').toLowerCase().replace(/,/g, '').trim(); if (!s) return 0;
+  if (/^\d+(\.\d+)?$/.test(s)) return Math.round(parseFloat(s) * 100);
+  let total = 0, any = false;
+  for (const m of s.matchAll(/(\d+(?:\.\d+)?)\s*(pp|gp|ep|sp|cp)/g)) { any = true; total += parseFloat(m[1]) * { pp: 1000, gp: 100, ep: 50, sp: 10, cp: 1 }[m[2]]; }
+  return any ? Math.round(total) : NaN;
+}
+// Pay from your purse first, then the party's. Returns what came from where ([mine, party]), or null (and pays nothing) if both together are short.
+function payCoins(cp, what) {
+  if (!(cp > 0)) return [0, 0];
+  const mine = purse.mine, party = Party.cp;
+  if (mine + party < cp) return null;
+  const a = Math.min(mine, cp); purse.mine = mine - a; if (cp - a) { Party.cp = party - (cp - a); Party.save(); }
+  Party.note(`Paid ${fmtCoins(cp)}${what ? ' for ' + what : ''}${cp - a ? ` (${fmtCoins(cp - a)} from the party purse)` : ''}`);
+  return [a, cp - a];
+}
+function purseBar(where) {
+  const amt = where === 'mine' ? purse.mine : Party.cp, others = isDM() ? [] : hostPlayers();
+  return `<div class="card purse"><div class="purse-h">${svg('coin')}<div><span class="eyebrow">${where === 'mine' ? 'Your purse' : 'Party purse'}</span><b class="purse-amt">${fmtCoins(amt)}</b></div></div>
+    <div class="frow"><input class="textin mono" id="coinIn-${where}" data-coin placeholder="e.g. 12 gp 5 sp" autocomplete="off" aria-label="Amount of coin" style="max-width:150px">
+      <button class="btn sm" type="button" data-act="coinadd" data-w="${where}">Add</button><button class="btn sm" type="button" data-act="coinspend" data-w="${where}">Spend</button>
+      ${where === 'mine' ? '<button class="btn sm" type="button" data-act="coinmove" data-w="mine">To party</button>' : '<button class="btn sm" type="button" data-act="coinmove" data-w="party">Take</button>'}
+      ${where === 'mine' && others.length ? '<button class="btn sm" type="button" data-act="coingive">Give…</button>' : ''}<span class="small muted coin-read"></span></div></div>`;
+}
+P.coin = '<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4.5"/>';
+// Hosted: everyone else in the campaign (DnDocs also sends the DM each player's satchel and purse).
+function hostMembers() { return HOSTED.on && Array.isArray(HOSTED.members) ? HOSTED.members.filter(m => m && m.uid && m.name) : []; }
+// The other players: who you can give things to (the DM hands things out from DM tools instead).
+function hostPlayers() { return hostMembers().filter(m => m.role !== 'dm'); }
+// Give to another player: it leaves your satchel now and lands in theirs through DnDocs.
+function giveDialog(opts) {
+  const others = hostPlayers(); if (!others.length) { toast('Nobody else is in this campaign yet'); return; }
+  const isCoin = opts.coins, t = isCoin ? null : D.things.get(opts.id), max = isCoin ? purse.mine : (sat[opts.id] || 0);
+  if (!(max > 0)) { toast(isCoin ? 'Your purse is empty' : 'You have none of these'); return; }
+  const wrap = document.createElement('div'); wrap.className = 'modal'; wrap.setAttribute('role', 'dialog'); wrap.setAttribute('aria-modal', 'true'); wrap.setAttribute('aria-labelledby', 'giveTitle');
+  wrap.innerHTML = `<form class="modal-card" id="giveForm"><h2 id="giveTitle">Give ${isCoin ? 'coin' : esc(t.name)}</h2>
+    <label class="small">To <select class="select" id="giveTo">${others.map(m => `<option value="${esc(m.uid)}">${esc(m.name)}</option>`).join('')}</select></label>
+    <label class="small">${isCoin ? `How much (you have ${fmtCoins(max)})` : `How many (you have ${max})`} <input class="textin mono" id="giveQ" value="${isCoin ? '' : 1}" ${isCoin ? 'data-coin placeholder="e.g. 10 gp"' : `type="number" min="1" max="${max}"`} autocomplete="off"></label>
+    ${isCoin ? '<p class="small muted coin-read"></p>' : ''}<p class="small" id="giveErr" style="color:var(--danger)" hidden></p>
+    <div class="frow"><button class="btn primary" type="submit">Give</button><button class="btn" type="button" id="giveCancel">Cancel</button></div></form>`;
+  document.body.appendChild(wrap);
+  $('#giveQ').focus();
+  const close = () => wrap.remove();
+  $('#giveCancel').onclick = close; wrap.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+  $('#giveForm').onsubmit = e => {
+    e.preventDefault();
+    const to = others.find(m => m.uid === $('#giveTo').value); const q = isCoin ? parseCoins($('#giveQ').value) : Math.floor(+$('#giveQ').value);
+    const err = $('#giveErr');
+    if (!(q > 0) || q > max) { err.hidden = false; err.textContent = isCoin ? `Enter an amount up to ${fmtCoins(max)}.` : `Enter a number from 1 to ${max}.`; return; }
+    const gift = { id: Date.now().toString(36) + Math.random().toString(36).slice(2, 7), to: to.uid, toName: to.name, items: isCoin ? {} : { [t.id]: q }, cp: isCoin ? q : 0 };
+    if (isCoin) purse.mine = purse.mine - q; else { sat[t.id] -= q; saveSat(); }
+    HOSTED.gifts.set(gift.id, gift);
+    hostPost({ type: 'codex:give', gift });
+    Party.note(`${HOSTED.name || 'Someone'} gave ${to.name} ${isCoin ? fmtCoins(q) : `${q}× ${t.name}`}`);
+    toast(`Given to ${to.name}`); close(); rerender();
+  };
+}
+// DnDocs couldn't deliver a gift: it comes back.
+function hostGiftFailed(id, error) {
+  const g = HOSTED.gifts.get(id); if (!g) return; HOSTED.gifts.delete(id);
+  if (g.cp) purse.mine = purse.mine + g.cp;
+  for (const [k, q] of Object.entries(g.items || {})) sat[k] = (sat[k] || 0) + q;
+  saveSat(); rerender(); toast(`Couldn't give it to ${g.toName}${error ? ': ' + error : ''}. It's back in your satchel.`);
+}
+// Trader prices as shown: whole gold from 10 gp, tenths from 1 gp, else hundredths.
+const shownPrice = p => p >= 10 ? Math.round(p) : p >= 1 ? Math.round(p * 10) / 10 : Math.round(p * 100) / 100;
+
+// Under a coin field: what was typed, read back in gp/sp/cp ("2 gp 32 sp 9 cp" → 5 gp 2 sp 9 cp).
+function coinRead(inp) {
+  const near = sel => { const c = inp.closest(sel); return c && c.querySelector('.coin-read'); };
+  const out = near('label') || near('.frow') || near('form'); if (!out) return;
+  const v = inp.value.trim(), cp = parseCoins(v);
+  out.textContent = !v ? 'Write coins like 2 gp 32 sp 9 cp (a plain number is gold).' : Number.isNaN(cp) ? 'Write coins like 2 gp 32 sp 9 cp.' : `= ${fmtCoins(cp)}`;
+}
+document.addEventListener('input', ev => { if (ev.target && ev.target.dataset && 'coin' in ev.target.dataset) coinRead(ev.target); });
+document.addEventListener('focusin', ev => { if (ev.target && ev.target.dataset && 'coin' in ev.target.dataset) coinRead(ev.target); });
+
+/* ---- the DM is the bank: hands out and takes back items and coin, for the party or any player.
+   Nothing comes out of the DM's own satchel or purse. ---- */
+function bankTargets() {
+  const t = [{ key: 'party', name: 'The party (shared satchel & purse)' }];
+  if (HOSTED.on) for (const m of hostPlayers()) t.push({ key: m.uid, name: m.name });
+  else t.push({ key: 'mine', name: 'This device (your satchel & purse)' });
+  return t;
+}
+const targetName = key => (bankTargets().find(t => t.key === key) || { name: 'them' }).name.replace(/ \(.*\)$/, '');
+function holdings(key) {
+  if (key === 'party') return { items: Party.items, cp: Party.cp };
+  if (key === 'mine') return { items: sat, cp: purse.mine };
+  const m = hostMembers().find(x => x.uid === key);
+  return { items: (m && m.items) || {}, cp: Math.max(0, Math.floor(+(m && m.cp) || 0)) };
+}
+// items: { id: +q (give) / −q (take) }, cp: ± copper. Never takes more than is there: returns an error message instead.
+function bankMove(key, items, cp, note) {
+  const h = holdings(key), who = targetName(key);
+  for (const [id, q] of Object.entries(items)) if (q < 0 && (h.items[id] || 0) < -q) return `${who} only ${key === 'party' ? 'has' : 'has'} ${h.items[id] || 0}× ${D.things.get(id).name}.`;
+  if (cp < 0 && h.cp < -cp) return `${who} only has ${fmtCoins(h.cp)}.`;
+  if (key === 'party') { for (const [id, q] of Object.entries(items)) Party.add(id, q); Party.cp = Party.cp + cp; Party.save(); }
+  else if (key === 'mine') { for (const [id, q] of Object.entries(items)) sat[id] = (sat[id] || 0) + q; saveSat(); purse.mine = purse.mine + cp; }
+  else {
+    // DnDocs writes it to the player's satchel; meanwhile show it here already.
+    const m = hostMembers().find(x => x.uid === key);
+    if (m) { m.items = { ...(m.items || {}) }; for (const [id, q] of Object.entries(items)) { m.items[id] = (m.items[id] || 0) + q; if (!(m.items[id] > 0)) delete m.items[id]; } m.cp = Math.max(0, (+m.cp || 0) + cp); }
+    hostPost({ type: 'codex:bank', move: { id: Date.now().toString(36) + Math.random().toString(36).slice(2, 7), uid: key, items, cp } });
+  }
+  if (note) Party.note(note);
+  return '';
+}
+// A small form in a dialog. fields: html; onSubmit(form) returns an error message or '' to close.
+function formDialog(title, fields, submit, onSubmit, onInput) {
+  const wrap = document.createElement('div'); wrap.className = 'modal'; wrap.setAttribute('role', 'dialog'); wrap.setAttribute('aria-modal', 'true'); wrap.setAttribute('aria-labelledby', 'fdTitle');
+  wrap.innerHTML = `<form class="modal-card" id="fdForm"><h2 id="fdTitle">${title}</h2>${fields}<p class="small" id="fdErr" style="color:var(--danger)" hidden></p>
+    <div class="frow"><button class="btn primary" type="submit">${submit}</button><button class="btn" type="button" id="fdCancel">Cancel</button></div></form>`;
+  document.body.appendChild(wrap);
+  const form = $('#fdForm'), close = () => { wrap.remove(); rerender(); };
+  $('#fdCancel').onclick = close; wrap.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+  if (onInput) { form.addEventListener('input', e => onInput(form, e)); form.addEventListener('change', e => onInput(form, e)); onInput(form, null); }
+  const first = form.querySelector('select,input'); if (first) first.focus();
+  form.onsubmit = e => { e.preventDefault(); const err = onSubmit(form); const box = $('#fdErr'); if (err) { box.hidden = false; box.textContent = err; } else close(); };
+}
+const targetOpts = sel => bankTargets().map(t => `<option value="${esc(t.key)}"${t.key === sel ? ' selected' : ''}>${esc(t.name)}</option>`).join('');
+// What a trader pays for a thing: full value for its own kind of goods, half for the rest.
+const sellValue = (T, x) => (T.buys.some(b => (x.tags || []).includes(b) || x.cat === b) ? 1 : 0.5) * (x.value || 0);
+// DM: someone buys from the trader. Price starts at the list price; change it to whatever was haggled.
+function tradeBuyDialog(stockIdx) {
+  const T = DMS.trader, st = T && T.stock[stockIdx]; if (!st || !(st.q > 0)) return;
+  const each = Math.round(shownPrice(st.price) * 100);
+  formDialog(`Sell ${esc(st.x.name)}`, `
+    <label class="small">Who buys it <select class="select" name="who">${targetOpts('party')}</select></label>
+    <label class="small">How many (${st.q} in stock) <input class="textin mono" name="q" type="number" min="1" max="${st.q}" value="1"></label>
+    <label class="small">For how much in all <input class="textin mono" name="price" data-coin autocomplete="off"> <span class="muted coin-read"></span></label>
+    <label class="small"><input type="checkbox" name="pay" checked> Take the coin from their purse</label>
+    <p class="small muted" id="fdHint"></p>`, 'Hand it over',
+    f => {
+      const q = Math.floor(+f.q.value), price = parseCoins(f.price.value);
+      if (!(q >= 1 && q <= st.q)) return `Enter a number from 1 to ${st.q}.`;
+      if (!(price >= 0)) return 'Type a price, like 12 gp or 5 sp (0 for a gift).';
+      const err = bankMove(f.who.value, { [st.x.id]: q }, f.pay.checked ? -price : 0, `${targetName(f.who.value)} bought ${q}× ${st.x.name} from ${T.nm}${f.pay.checked && price ? ' for ' + fmtCoins(price) : ''}`);
+      if (err) return err;
+      st.q -= q; toast(`${q}× ${st.x.name} to ${targetName(f.who.value)}`); return '';
+    },
+    (f, e) => {
+      const q = Math.max(1, Math.floor(+f.q.value) || 1);
+      if (!e || e.target.name === 'q') f.price.value = fmtCoins(each * q);
+      const h = holdings(f.who.value); $('#fdHint').textContent = `List price ${fmtCoins(each)} each. ${targetName(f.who.value)} has ${fmtCoins(h.cp)}.`;
+    });
+}
+// DM: someone sells something to the trader. Price starts at what the trader would pay; change it as haggled.
+function tradeSellDialog() {
+  const T = DMS.trader; if (!T) return;
+  const things = key => Object.entries(holdings(key).items).map(([id, q]) => [D.things.get(id), q]).filter(([x, q]) => x && q > 0).sort((a, b) => a[0].name.localeCompare(b[0].name));
+  const itemOpts = key => { const l = things(key); return l.length ? l.map(([x, q]) => `<option value="${x.id}">${esc(x.name)} (${q})</option>`).join('') : '<option value="">Nothing to sell</option>'; };
+  let lastWho = 'party';
+  formDialog(`Buy from the party for ${esc(T.nm)}`, `
+    <label class="small">Who sells <select class="select" name="who">${targetOpts('party')}</select></label>
+    <label class="small">What <select class="select" name="thing">${itemOpts('party')}</select></label>
+    <label class="small">How many <input class="textin mono" name="q" type="number" min="1" value="1"></label>
+    <label class="small">For how much in all <input class="textin mono" name="price" data-coin autocomplete="off"> <span class="muted coin-read"></span></label>
+    <p class="small muted" id="fdHint"></p>`, 'Make the deal',
+    f => {
+      const x = D.things.get(f.thing.value), q = Math.floor(+f.q.value), price = parseCoins(f.price.value);
+      if (!x) return 'Pick something to sell.';
+      if (!(q >= 1)) return 'Enter how many.';
+      if (!(price >= 0)) return 'Type a price, like 12 gp or 5 sp.';
+      const err = bankMove(f.who.value, { [x.id]: -q }, price, `${targetName(f.who.value)} sold ${q}× ${x.name} to ${T.nm} for ${fmtCoins(price)}`);
+      if (err) return err;
+      toast(`Sold ${q}× ${x.name} for ${fmtCoins(price)}`); return '';
+    },
+    (f, e) => {
+      if (f.who.value !== lastWho) { lastWho = f.who.value; f.thing.innerHTML = itemOpts(lastWho); }
+      const x = D.things.get(f.thing.value), have = holdings(f.who.value).items[f.thing.value] || 0;
+      f.q.max = have || 1;
+      if (!e || ['who', 'thing', 'q'].includes(e.target.name)) f.price.value = x ? fmtCoins(Math.round(sellValue(T, x) * 100) * Math.max(1, Math.floor(+f.q.value) || 1)) : '';
+      $('#fdHint').textContent = x ? `${T.nm} would pay ${fmtCoins(Math.round(sellValue(T, x) * 100))} each (${sellValue(T, x) === x.value ? 'their kind of goods' : 'half value'}).` : '';
+    });
+}
+// DM tools → Hand out: give or take anything, and see what everyone has.
+function bankTab() {
+  const ts = bankTargets(), sel = DMS.bankWho && ts.some(t => t.key === DMS.bankWho) ? DMS.bankWho : 'party', it = DMS.bankItem && D.things.get(DMS.bankItem);
+  const list = t => { const h = holdings(t.key), rows = Object.entries(h.items).map(([id, q]) => [D.things.get(id), q]).filter(([x, q]) => x && q > 0).sort((a, b) => a[0].name.localeCompare(b[0].name));
+    return `<div class="card roller"><div class="section-head"><h2>${esc(t.name.replace(/ \(.*\)$/, ''))}</h2><span class="count mono">${fmtCoins(h.cp)}</span></div>
+      ${rows.length ? `<p class="small">${rows.map(([x, q]) => `<a href="${linkOf(x)}">${esc(x.name)}</a> <span class="mono muted">×${q}</span>`).join(' · ')}</p>` : '<p class="small muted">Nothing carried.</p>'}</div>`; };
+  return `<div class="card roller"><p class="small">You're the bank: hand out loot, rewards and purchases, or take things back (sold, spent, lost), for the party or any player. Nothing comes out of your own satchel or purse.</p>
+    <div class="frow"><label class="skill-in">To / from <select class="select" id="bankWho">${targetOpts(sel)}</select></label></div>
+    <div class="frow"><div class="addbox" style="flex:1;min-width:200px"><div class="search-wrap" style="max-width:none"><svg class="search-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg><input id="bankAdd" type="search" placeholder="${it ? esc(it.name) : 'Find an item or material…'}" autocomplete="off" aria-label="Item or material"><div id="bankSug" class="suggest" hidden></div></div></div>
+      <input class="textin mono" id="bankQ" type="number" min="1" value="1" aria-label="How many" style="max-width:80px">
+      <button class="btn sm primary" type="button" data-act="bankgive" ${it ? '' : 'disabled'}>Give${it ? ' ' + esc(it.name) : ''}</button><button class="btn sm" type="button" data-act="banktake" ${it ? '' : 'disabled'}>Take</button></div>
+    <div class="frow"><input class="textin mono" id="bankCoin" data-coin placeholder="e.g. 2 gp 5 sp" autocomplete="off" aria-label="Amount of coin" style="max-width:160px">
+      <button class="btn sm primary" type="button" data-act="bankcoin" data-dir="1">Give coin</button><button class="btn sm" type="button" data-act="bankcoin" data-dir="-1">Take coin</button><span class="small muted coin-read"></span></div></div>
+    ${!HOSTED.on ? '<p class="small muted">Opened on its own, the codex only knows this device. Inside DnDocs you can hand things to every player.</p>' : ''}
+    ${ts.map(list).join('')}`;
+}
 // Read the satchel again without saving it (after DnDocs sent a newer one).
 function loadSat() {
   sat = canonMap(store.get(LS_KEY, {})); satParked = {};
@@ -4554,10 +4765,10 @@ const PARTY_KEY = 'scavengers-codex.party.v1';
 const slugify = c => String(c || '').toLowerCase().replace(/[^a-z0-9-]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 40) || 'my-party';
 const Party = {
   code: slugify(store.get(PARTY_KEY + '.code', 'my-party')),
-  items: {}, learned: new Set(), known: new Set(), research: {}, log: [], clock: 8, stamps: {}, projects: [], beds: [], spoil: null, session: null, packs: null,
+  items: {}, learned: new Set(), known: new Set(), research: {}, log: [], clock: 8, stamps: {}, projects: [], beds: [], spoil: null, session: null, packs: null, cp: 0,
   parked: { items: {}, learned: [], projects: [] },
   localData() { return store.get(PARTY_KEY + '.data.' + this.code, {}); },
-  save() { const a = this.all(); store.set(PARTY_KEY + '.data.' + this.code, { items: a.items, learned: a.learned, known: [...this.known], research: this.research, log: this.log.slice(0, 300), session: this.session, clock: this.clock, stamps: this.stamps, projects: a.projects, beds: this.beds, spoil: this.spoil, packs: this.packs }); },
+  save() { const a = this.all(); store.set(PARTY_KEY + '.data.' + this.code, { items: a.items, learned: a.learned, known: [...this.known], research: this.research, log: this.log.slice(0, 300), session: this.session, clock: this.clock, stamps: this.stamps, projects: a.projects, beds: this.beds, spoil: this.spoil, packs: this.packs, cp: this.cp }); },
   // everything, including what belongs to homebrew packs that are switched off right now
   all() { return { items: { ...this.parked.items, ...this.items }, learned: [...this.learned, ...this.parked.learned.filter(id => !this.learned.has(id))], projects: [...this.projects, ...this.parked.projects] }; },
   init() { this.load(); },
@@ -4568,6 +4779,7 @@ const Party = {
     this.items = {}; for (const [k, v] of Object.entries(d.items || {})) if (+v > 0) { if (D.things.has(k)) this.items[k] = Math.floor(+v); else this.parked.items[k] = Math.floor(+v); }
     this.learned = new Set((d.learned || []).filter(id => D.things.has(id))); this.parked.learned = (d.learned || []).filter(id => !D.things.has(id));
     this.packs = Array.isArray(d.packs) ? d.packs : null;
+    this.cp = Math.max(0, Math.floor(+d.cp || 0));
     this.parked.projects = (d.projects || []).filter(p => !D.things.has(p.id));
     this.known = new Set(d.known || []); this.research = d.research || {}; this.log = d.log || [];
     this.clock = +d.clock || 8; this.stamps = d.stamps || {}; this.projects = (d.projects || []).filter(p => D.things.has(p.id)); this.beds = (d.beds || []).filter(b => SITES[b.site]); this.spoil = d.spoil ?? null; this.session = d.session || null;
@@ -4585,7 +4797,7 @@ const Party = {
   },
   shareCode() {
     const a = this.all();
-    const json = JSON.stringify({ c: this.code, i: a.items, l: a.learned, k: [...this.known], r: this.research, h: this.clock, s: this.stamps, j: a.projects, b: this.beds, sp: this.spoil, ...(this.packs ? { pk: this.packs } : {}) });
+    const json = JSON.stringify({ c: this.code, i: a.items, l: a.learned, k: [...this.known], r: this.research, h: this.clock, s: this.stamps, j: a.projects, b: this.beds, sp: this.spoil, ...(this.packs ? { pk: this.packs } : {}), ...(this.cp ? { pc: this.cp } : {}) });
     return btoa(unescape(encodeURIComponent(json))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
   },
   parseShare(code) {
@@ -4602,6 +4814,7 @@ const Party = {
     if (+o.h) this.clock = replace ? +o.h : Math.max(this.clock, +o.h);
     for (const [k, v] of Object.entries(o.s || {})) if (D.things.has(k) && v && (replace || !this.stamps[k])) this.stamps[k] = Array.isArray(v) ? v : [{ at: v.at, q: 1, pres: !!v.pres }];
     if (o.sp != null) this.spoil = o.sp;
+    if (+o.pc >= 0 && o.pc != null) this.cp = replace ? Math.floor(+o.pc) : Math.max(this.cp, Math.floor(+o.pc));
     if (replace) this.projects = []; for (const p of o.j || []) if (D.things.has(p.id) && !this.projects.some(x => x.uid === p.uid)) this.projects.push(p);
     if (replace) this.beds = []; for (const b of o.b || []) if (SITES[b.site] && !this.beds.some(x => x.uid === b.uid)) this.beds.push(b);
     this.save(); partyChanged(); checkPacks();
@@ -5628,7 +5841,7 @@ function hbAct(act, el) {
 function pDM() {
   const envOpts = [...D.envs.values()].map(e => `<option value="${e.id}"${DMS.env === e.id ? ' selected' : ''}>${esc(e.name)}</option>`).join('');
   if (!isDM()) return `<div class="page"><h1>DM tools</h1><div class="empty">These tools are for the DM. ${pinSet() ? 'Switch to DM view with the PIN to use them.' : 'Switch to DM view at the top to use them.'}</div></div>`;
-  const tabs = [['forage', 'Forage expedition'], ['trader', 'Wandering trader'], ['drops', 'After the fight'], ['session', 'Session'], ['handouts', 'Handouts'], ['settings', 'Player setup & PIN']];
+  const tabs = [['forage', 'Forage expedition'], ['trader', 'Wandering trader'], ['drops', 'After the fight'], ['bank', 'Hand out'], ['session', 'Session'], ['handouts', 'Handouts'], ['settings', 'Player setup & PIN']];
   if (window.CodexHomebrew) tabs.splice(5, 0, ['homebrew', 'Homebrew']);
   let body = '';
   if (DMS.tab === 'forage') {
@@ -5676,7 +5889,10 @@ function pDM() {
       ${T ? `<section class="section trader"><div class="section-head"><h2>${esc(T.nm)}</h2><span class="count">${esc(T.T.label)} · ${esc(T.S.label)}</span></div>
         <div class="card trader-card"><div class="eyebrow">${esc(T.th.name)}${T.region ? ` · goods from ${esc(envName(T.region))}` : ''}</div><p class="trader-blurb">${esc(T.th.blurb)}</p>
           <p class="small muted" style="margin:0">Pays full value for: ${T.buys.map(esc).join(', ')} goods. Everything else at half.</p></div>
-        <div class="tbl-wrap"><table><thead><tr><th>Goods</th><th>In stock</th><th>Price each</th><th></th></tr></thead><tbody>${[['core', 'The speciality'], ['day', 'Everyday stock'], ['odd', 'Odd lots']].map(([sec, label]) => { const rows = T.stock.filter(x => x.sec === sec); return rows.length ? `<tr class="tsec"><th colspan="4">${label}</th></tr>` + rows.map(s => `<tr><td><a href="${linkOf(s.x)}"><b>${esc(s.x.name)}</b></a> ${pill(s.x.tier)}${s.rare ? ' <span class="small muted">rare find</span>' : ''}${s.note ? `<div class="note">${esc(cap(s.note))}</div>` : ''}</td><td class="mono">${s.q}</td><td class="mono">${fmtGp(s.price >= 10 ? Math.round(s.price) : s.price >= 1 ? Math.round(s.price * 10) / 10 : Math.round(s.price * 100) / 100)}</td><td><button class="btn sm" type="button" data-act="add" data-id="${s.x.id}" aria-label="Buy ${esc(s.x.name)}">Buy</button></td></tr>`).join('') : ''; }).join('')}</tbody></table></div></section>` : ''}`;
+        <div class="tbl-wrap"><table><thead><tr><th>Goods</th><th>In stock</th><th>Price each</th><th></th></tr></thead><tbody>${[['core', 'The speciality'], ['day', 'Everyday stock'], ['odd', 'Odd lots']].map(([sec, label]) => { const rows = T.stock.filter(x => x.sec === sec); return rows.length ? `<tr class="tsec"><th colspan="4">${label}</th></tr>` + rows.map(s => `<tr><td><a href="${linkOf(s.x)}"><b>${esc(s.x.name)}</b></a> ${pill(s.x.tier)}${s.rare ? ' <span class="small muted">rare find</span>' : ''}${s.note ? `<div class="note">${esc(cap(s.note))}</div>` : ''}</td><td class="mono">${s.q}</td><td class="mono">${fmtCoins(Math.round(shownPrice(s.price) * 100))}</td><td><button class="btn sm" type="button" data-act="tradebuy" data-i="${T.stock.indexOf(s)}" aria-label="Sell ${esc(s.x.name)} to someone"${s.q > 0 ? '' : ' disabled'}>Sell…</button></td></tr>`).join('') : ''; }).join('')}</tbody></table></div>
+        <div class="frow" style="margin-top:12px"><button class="btn sm" type="button" data-act="tradesell">Buy from the party…</button><span class="small muted">Prices start at the list price (or what ${esc(T.nm)} would pay); change them to whatever was haggled.</span></div></section>` : ''}`;
+  } else if (DMS.tab === 'bank') {
+    body = bankTab();
   } else if (DMS.tab === 'handouts') {
     body = `<div class="card roller"><p class="small">Bundle several things into one handout, for example the formula for a Cloak of Elvenkind plus a map of the grove where the vines grow. Players enter the code in their <b>Journal</b>.</p>
       <div class="addbox"><div class="search-wrap" style="max-width:none"><svg class="search-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg><input id="hoAdd" type="search" placeholder="Add an item, creature, place or material…" autocomplete="off" aria-label="Add to handout"><div id="hoSug" class="suggest" hidden></div></div></div>
@@ -5745,6 +5961,9 @@ document.addEventListener('input', ev => { const el = ev.target; if (!el.dataset
 document.addEventListener('change', ev => { const el = ev.target; if (el.dataset && el.dataset.gk === 'ok') { DMS.fg[el.dataset.i + '|ok'] = el.checked; evalForage(); } });
 document.addEventListener('input', ev => { const el = ev.target; if (!el.dataset || !el.dataset.fk) return; const r = fightRows()[+el.dataset.i]; if (!r) return; DMS.fight[r.key + '|' + el.dataset.fk] = el.value; evalFight(); });
 function wireDM() {
+  const bw = $('#bankWho'); if (bw) bw.addEventListener('change', () => { DMS.bankWho = bw.value; });
+  const ba = $('#bankAdd'), bs = $('#bankSug');
+  if (ba && bs) wireTypeahead(ba, bs, e => { if (!e) { const r = doSearch(ba.value, 1, ['material', 'item']); e = r[0]; } if (e) { DMS.bankItem = e.o.id; rerender(); setTimeout(() => { const q = $('#bankQ'); if (q) q.focus(); }, 0); } }, ['material', 'item']);
   if (DMS.tab === 'drops') setTimeout(evalFight, 0);
   if (DMS.tab === 'forage') setTimeout(evalForage, 0);
   const hf = $('#hbFile');
@@ -6092,7 +6311,7 @@ let satView = store.get('scavengers-codex.satView', 'mine') === 'party' ? 'party
 function satRow(id, q, where) {
   const t = D.things.get(id);
   const move = where === 'mine'
-    ? `<button class="btn sm" type="button" data-act="give" data-id="${id}" title="Move one to the party satchel"${Party.readonly ? ' disabled' : ''}>To party</button>`
+    ? `<button class="btn sm" type="button" data-act="give" data-id="${id}" title="Move one to the party satchel"${Party.readonly ? ' disabled' : ''}>To party</button>${!isDM() && hostPlayers().length ? `<button class="btn sm" type="button" data-act="giveto" data-id="${id}" title="Give to another player">Give…</button>` : ''}`
     : `<button class="btn sm" type="button" data-act="take" data-id="${id}" title="Take one into your own satchel"${Party.readonly ? ' disabled' : ''}>Take</button>`;
   const dis = where === 'party' && Party.readonly ? ' disabled' : '';
   return `<div class="sat-row">${ico(t)}<div class="txt"><a class="name" href="${linkOf(t)}">${esc(t.name)}</a><span class="small muted">${TIER_LABEL[t.tier]} · ${esc(thingSub(t))}</span>${spoilBadge(t)}</div>${move}<div class="stepper"><button type="button" data-act="${where === 'mine' ? 'dec' : 'pdec'}" data-id="${id}" aria-label="One fewer"${dis}>−</button><input type="number" min="0" value="${q}" data-act="${where === 'mine' ? 'qty' : 'pqty'}" data-id="${id}" aria-label="Quantity of ${esc(t.name)}"${dis}><button type="button" data-act="${where === 'mine' ? 'inc' : 'pinc'}" data-id="${id}" aria-label="One more"${dis}>+</button></div></div>`;
@@ -6151,6 +6370,7 @@ function pSatchel() {
     <div class="sat-grid">
       <section class="section">
         <div class="tabs" role="tablist"><button class="tab${satView === 'mine' ? ' on' : ''}" type="button" role="tab" aria-selected="${satView === 'mine'}" data-act="satview" data-v="mine">My satchel <span class="mono">${ids.length}</span></button><button class="tab${satView === 'party' ? ' on' : ''}" type="button" role="tab" aria-selected="${satView === 'party'}" data-act="satview" data-v="party">Party satchel <span class="mono">${pc}</span></button></div>
+        ${purseBar(satView === 'mine' ? 'mine' : 'party')}
         ${satView === 'mine' ? mine : partyPanel()}
       </section>
       <section class="section">
@@ -6160,7 +6380,7 @@ function pSatchel() {
         <label class="small" style="display:flex;gap:8px;align-items:center"><input type="checkbox" data-act="satmeals"${satMeals ? ' checked' : ''}> Only meals (what can I cook?)</label>
         <div class="tabs" role="tablist">${tabs.map(([k, l, arr]) => `<button class="tab${satTab === k ? ' on' : ''}" type="button" role="tab" aria-selected="${satTab === k}" data-act="sattab" data-tab="${k}">${l} <span class="mono">${arr.length}</span></button>`).join('')}</div>
         ${curList.length ? curList.slice(0, shown).map(craftRow).join('') + (curList.length > shown ? `<button class="btn more" type="button" data-act="more" data-key="${key}" data-shown="${shown}" data-step="40">Show more (${curList.length - shown})</button>` : '') : `<div class="empty">${ids.length || pc ? (satTab === 'ready' ? 'Nothing is fully covered yet. Check “1–2 parts away”.' : 'Nothing in this list.') : 'Add a few parts to see what they make.'}</div>`}
-        <p class="small muted">Tools, stations and reagent gold aren't tracked here, so check the recipe before you craft.${mode === 'player' ? ' Player view: only formulas your party has learned are listed.' : ''}</p>
+        <p class="small muted">Tools and stations aren't tracked here, so check the recipe before you craft. Reagent gold is paid from the purses when you start a project (if anyone has coin in them).${mode === 'player' ? ' Player view: only formulas your party has learned are listed.' : ''}</p>
       </section>
     </div></div>`;
 }
@@ -6506,6 +6726,34 @@ document.addEventListener('click', ev => {
       toast(`Added ${plural(n, 'part')} to ${el.dataset.to === 'party' ? 'the party satchel' : 'your satchel'}`); el.disabled = true; break;
     }
     case 'hostrecord': { hostRecord(id); break; }
+    case 'giveto': { giveDialog({ id }); break; }
+    case 'coingive': { giveDialog({ coins: true }); break; }
+    case 'coinadd': case 'coinspend': case 'coinmove': {
+      const w = el.dataset.w, inp = $('#coinIn-' + w), v = parseCoins(inp && inp.value);
+      if (!(v > 0)) { toast('Type an amount, like 12 gp or 5 sp'); if (inp) inp.focus(); break; }
+      const have = w === 'mine' ? purse.mine : Party.cp;
+      if (act !== 'coinadd' && v > have) { toast(`There's only ${fmtCoins(have)} in that purse`); break; }
+      const set = (where, n) => { if (where === 'mine') purse.mine = n; else { Party.cp = n; Party.save(); } };
+      if (act === 'coinadd') { set(w, have + v); Party.note(`Added ${fmtCoins(v)} to ${w === 'mine' ? (HOSTED.name ? HOSTED.name + '’s' : 'a') + ' purse' : 'the party purse'}`); }
+      else if (act === 'coinspend') { set(w, have - v); Party.note(`Spent ${fmtCoins(v)} from ${w === 'mine' ? (HOSTED.name ? HOSTED.name + '’s' : 'a') + ' purse' : 'the party purse'}`); }
+      else { const other = w === 'mine' ? 'party' : 'mine'; set(w, have - v); set(other, (other === 'mine' ? purse.mine : Party.cp) + v); Party.note(w === 'mine' ? `Put ${fmtCoins(v)} in the party purse` : `Took ${fmtCoins(v)} from the party purse`); }
+      rerender(); break;
+    }
+    case 'tradebuy': tradeBuyDialog(+el.dataset.i); break;
+    case 'tradesell': tradeSellDialog(); break;
+    case 'bankgive': case 'banktake': case 'bankcoin': {
+      const who = ($('#bankWho') || {}).value || 'party', name = targetName(who); let err;
+      if (act === 'bankcoin') {
+        const v = parseCoins(($('#bankCoin') || {}).value); if (!(v > 0)) { toast('Type an amount, like 50 gp'); break; }
+        const sign = +el.dataset.dir; err = bankMove(who, {}, sign * v, sign > 0 ? `The DM gave ${name} ${fmtCoins(v)}` : `The DM took ${fmtCoins(v)} from ${name}`);
+        if (!err) toast(`${sign > 0 ? 'Gave' : 'Took'} ${fmtCoins(v)}`);
+      } else {
+        const t = D.things.get(DMS.bankItem), q = Math.floor(+($('#bankQ') || {}).value); if (!t || !(q > 0)) break;
+        const sign = act === 'bankgive' ? 1 : -1; err = bankMove(who, { [t.id]: sign * q }, 0, sign > 0 ? `The DM gave ${name} ${q}× ${t.name}` : `The DM took ${q}× ${t.name} from ${name}`);
+        if (!err) toast(`${sign > 0 ? 'Gave' : 'Took'} ${q}× ${t.name}`);
+      }
+      if (err) toast(err); else rerender(); break;
+    }
     case 'teach': { const on = !Party.learned.has(id); Party.teach(id, on); if (on) Party.note(`The party learned the formula for ${D.things.get(id).name}`); toast(on ? 'Marked as learned on this device only. Use Share with players to send it to your players' : 'Formula removed on this device'); break; }
     case 'learn': Party.teach(id, true); Party.note(`The party learned the formula for ${D.things.get(id).name}`); toast('Formula learned'); break;
     case 'addroll': {
@@ -6535,10 +6783,14 @@ document.addEventListener('click', ev => {
       if (!known(t)) { toast('Your party has not learned this formula yet'); break; }
       const a = allocate(t.recipe, usable());
       if (!a.ok) { toast('Some parts are missing'); break; }
+      // Reagent gold comes from the purses (yours first). Tables that don't track coin (both purses empty) skip it.
+      const cost = Math.round((+t.recipe.gp || 0) * 100);
+      let paid = [0, 0];
+      if (cost && purse.mine + Party.cp > 0) { paid = payCoins(cost, `reagents for ${t.name}`); if (!paid) { toast(`Not enough coin for the reagents: ${fmtCoins(cost)} needed, ${fmtCoins(purse.mine + Party.cp)} in the purses`); break; } }
       let fromParty = 0; const parts = [];
       for (const s of a.slots) for (const [pid, q] of s.used) { const mine = Math.min(sat[pid] || 0, q); const p = consume(pid, q); fromParty += p; parts.push([pid, mine, p]); }
       saveSat();
-      Party.projects.push({ uid: Date.now().toString(36) + Math.random().toString(36).slice(2, 5), id, need: workHours(t.recipe.time), done: 0, parts, at: Party.clock });
+      Party.projects.push({ uid: Date.now().toString(36) + Math.random().toString(36).slice(2, 5), id, need: workHours(t.recipe.time), done: 0, parts, at: Party.clock, ...(paid[0] || paid[1] ? { paid } : {}) });
       Party.note(`Started crafting ${t.name}${fromParty ? ` (with ${plural(fromParty, 'part')} from the party satchel)` : ''}`); Party.save();
       toast(`${t.name} is on the workbench. Track it in the Satchel.`); rerender(); break;
     }
@@ -6552,7 +6804,12 @@ document.addEventListener('click', ev => {
       if (!el.dataset.confirm) { el.dataset.confirm = '1'; el.textContent = 'Tap again to abandon'; setTimeout(() => { if (el.isConnected) { delete el.dataset.confirm; el.textContent = 'Abandon'; } }, 3000); break; }
       const i = Party.projects.findIndex(x => x.uid === el.dataset.uid); if (i < 0) break; const p = Party.projects[i];
       Party.projects.splice(i, 1);
-      if (!p.done) { for (const [pid, mine, fromP] of p.parts) { if (mine) sat[pid] = (sat[pid] || 0) + mine; if (fromP) Party.add(pid, fromP); } saveSat(); toast('Abandoned. No work was done, so the parts are back in the satchels'); }
+      if (!p.done) {
+        for (const [pid, mine, fromP] of p.parts) { if (mine) sat[pid] = (sat[pid] || 0) + mine; if (fromP) Party.add(pid, fromP); } saveSat();
+        // The reagent gold comes back too: what came from a purse goes back to it (yours: to whoever abandons it).
+        const [pm, pp] = Array.isArray(p.paid) ? p.paid : [0, 0]; if (pm) purse.mine = purse.mine + pm; if (pp) { Party.cp = Party.cp + pp; Party.save(); }
+        toast(`Abandoned. No work was done, so the parts${pm || pp ? ' and reagent gold' : ''} are back`);
+      }
       else toast('Abandoned. The parts were already bound into the work and are lost');
       Party.note(`Abandoned crafting ${D.things.get(p.id).name}`); Party.save(); rerender(); break;
     }
