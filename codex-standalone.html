@@ -101,6 +101,8 @@ main{min-width:0;padding:28px 32px 80px;outline:none}
 .badge{display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:22px;padding:0 7px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font:600 12px var(--f-mono)}
 .pill{display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;border-radius:999px;font-size:.8rem;font-weight:700;letter-spacing:.02em;border:1px solid currentColor;white-space:nowrap}
 .pill::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.pill svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.pill:has(svg)::before{display:none}
 .t-mundane{color:var(--t-mundane)} .t-common{color:var(--t-common)} .t-uncommon{color:var(--t-uncommon)}
 .t-rare{color:var(--t-rare)} .t-very-rare{color:var(--t-very-rare)} .t-legendary{color:var(--t-legendary)}
 .chip{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 11px;border-radius:999px;background:var(--surface);border:1px solid var(--line);color:var(--ink-2);font-size:.88rem;cursor:pointer;white-space:nowrap}
@@ -287,7 +289,7 @@ textarea.io{width:100%;min-height:110px;border:1px solid var(--line);border-radi
   /* every page stays reachable on a phone: the bar scrolls sideways when it doesn't fit */
   .sidenav{justify-content:flex-start;scrollbar-width:none}
   .sidenav::-webkit-scrollbar{display:none}
-  .nav-sep,.nav-foot,#nav .nav-packs{display:none}
+  .nav-sep,.nav-foot{display:none}
   main{padding:20px 16px calc(96px + env(safe-area-inset-bottom,0px))}
   .page{gap:22px}
   .hero{grid-template-columns:minmax(0,1fr)}
@@ -642,14 +644,6 @@ table.fight td{vertical-align:top}
 
 /* ---------- homebrew packs ---------- */
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.nav-packs{margin:10px 0 0;padding:10px 0 0;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:2px}
-.nav-packs .nav-h{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--muted);padding:2px 12px 4px}
-.nav-packs .np{display:flex;align-items:center;gap:8px;padding:5px 12px;border-radius:8px;color:var(--ink-2);font-size:.88rem;line-height:1.25;cursor:pointer}
-.nav-packs .np:hover{background:var(--surface);text-decoration:none}
-.nav-packs .np input{accent-color:var(--accent);margin:0;flex:none}
-.nav-packs .np .dot{width:9px;height:9px;border-radius:50%;border:1.5px solid var(--muted);flex:none}
-.nav-packs .np.on .dot{background:var(--ok);border-color:var(--ok)}
-.nav-packs .np:not(.on){color:var(--muted)}
 .packs{display:grid;gap:12px;margin:14px 0}
 .pack{border-left:4px solid var(--line)}
 .pack.on{border-left-color:var(--ok)}
@@ -688,6 +682,23 @@ html.embedded .btn.primary{box-shadow:inset 0 1px 0 rgb(255 255 255 / .18),inset
 .sb-text p{margin:0 0 8px}
 .sb-h{font-family:var(--f-display);font-size:1.05rem;margin:12px 0 6px;padding-bottom:3px;border-bottom:1px solid var(--line);color:var(--accent)}
 @media (max-width:460px){ .sb-abs{grid-template-columns:repeat(3,minmax(0,1fr))} }
+.miss a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+.miss .unk{display:inline-block;min-width:1.2em;text-align:center;border:1px dashed currentColor;border-radius:4px;padding:0 3px;font-weight:700;cursor:help}
+.sat-grid .tabs{flex-wrap:wrap;row-gap:2px}
+/* unidentified & cursed items (inside DnDocs) */
+.t-curse{color:var(--danger)}
+.pill.t-curse{height:20px;padding:0 8px;font-size:.72rem;margin-top:3px}
+.unid-card{margin:0 0 12px;padding:10px 12px;border:1px dashed var(--line);border-radius:var(--radius);background:var(--surface-2,var(--surface))}
+.unid-card h3{margin:0 0 8px;font-size:.95rem}
+.unid-card .sat-row .name{font-style:italic}
+.curse-box{margin-top:12px;padding:10px 12px;border-left:3px solid var(--danger);background:color-mix(in srgb,var(--danger) 9%,transparent);border-radius:6px}
+.curse-box b{color:var(--danger)}
+.curse-note{display:block;color:var(--danger);white-space:normal}
+.modal-card .chk{display:flex;gap:8px;align-items:flex-start}
+.modal-card .chk input{margin-top:3px}
+.unid-opts{display:flex;flex-direction:column;gap:8px;padding:10px;border:1px solid var(--line);border-radius:var(--radius)}
+.unid-opts textarea{width:100%;min-height:54px;resize:vertical;display:block;margin-top:4px}
+.unid-opts input[name=look]{width:100%;display:block;margin-top:4px}
 </style>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23245F54'/%3E%3Cpath d='M9 23 L16 7 L23 23 M12 17 H20' stroke='%23F2E2B8' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 </head>
@@ -4113,6 +4124,7 @@ function hostHello() {
       else if (HOSTED.ready && d.type === 'dndocs:give') { if (d.ok === false) hostGiftFailed(d.id, d.error); else HOSTED.gifts.delete(d.id); }
       else if (HOSTED.ready && d.type === 'dndocs:members') { HOSTED.members = Array.isArray(d.members) ? d.members : []; if (D && location.hash.startsWith('#/dm')) hostRefresh(); }
       else if (HOSTED.ready && d.type === 'dndocs:bank' && d.ok === false) toast(`Not saved in DnDocs${d.error ? ': ' + d.error : ''}`);
+      else if (HOSTED.ready && d.type === 'dndocs:unid') { toast(d.ok ? (HOSTED.unidMsg || 'Saved') : `Not saved in DnDocs${d.error ? ': ' + d.error : ''}`); HOSTED.unidMsg = ''; }
       else if (HOSTED.ready && d.type === 'dndocs:entry') toast(d.ok ? `DnDocs page made${d.name ? ': ' + d.name : ''}` : (d.error || 'No page made'));
     });
     ping();
@@ -4155,6 +4167,19 @@ function hostRecord(id) {
   const t = D.things.get(id); if (!t) return;
   hostPost({ type: 'codex:entry', action: 'record', thing: { id: t.id, kind: t.kind, name: t.name, tier: t.tier, cat: t.cat || null, attune: t.attune || false, value: t.value ?? null, desc: String((t.kind === 'item' ? t.effect : t.desc) || '') } });
 }
+
+/* ---- unidentified and cursed items (inside DnDocs only). A player's satchel holds only how an
+   unidentified item looks; what it really is, and any curse, stays in a document only the DM can
+   read until the DM identifies it or reveals the curse. */
+const UNID_KEY = 'scavengers-codex.unid.v1', CURSES_KEY = 'scavengers-codex.curses.v1', SECRETS_KEY = 'scavengers-codex.dmsecrets.v1';
+const myUnid = () => (HOSTED.on && store.get(UNID_KEY, {})) || {};
+const myCurses = () => (HOSTED.on && store.get(CURSES_KEY, {})) || {};
+const dmSecrets = () => (HOSTED.on && isDM() && store.get(SECRETS_KEY, {})) || {};
+// Only when this DnDocs knows how to keep the secret (it sends the DM's secrets list).
+const unidReady = () => HOSTED.on && isDM() && HOSTED.mem.has(SECRETS_KEY);
+const LOOK_NOUN = { wondrous: 'wondrous item', armor: 'armor', weapon: 'weapon', ammunition: 'ammunition', ring: 'ring', rod: 'rod', staff: 'staff', wand: 'wand', potion: 'potion', oil: 'oil', poison: 'vial', scroll: 'scroll', gear: 'item', tool: 'tool' };
+const canHide = t => !!t && t.kind === 'item' && t.tier !== 'mundane' && t.cat !== 'meal' && t.cat !== 'provision';
+function unidAsk(req, msg) { HOSTED.unidMsg = msg || ''; hostPost({ type: 'codex:unid', req }); }
 
 /* ================================================================ data */
 let D = null;
@@ -4581,37 +4606,80 @@ function tradeSellDialog() {
     });
 }
 // DM, on an item or material page: hand it to a player or the party, or take it back.
-function giveThingDialog(id) {
+function giveThingDialog(id, pre) {
   const t = D.things.get(id); if (!t) return;
+  const secret = unidReady(), hide = secret && canHide(t);
   formDialog(`Give ${esc(t.name)}`, `
-    <label class="small">To / from <select class="select" name="who">${targetOpts(DMS.bankWho || 'party')}</select></label>
+    <label class="small">To / from <select class="select" name="who">${targetOpts((pre && pre.who) || DMS.bankWho || 'party')}</select></label>
     <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><label class="small">How many <input class="textin mono" name="q" type="number" min="1" value="1" style="max-width:90px"></label>
       <label class="small"><select class="select" name="dir"><option value="1">Give</option><option value="-1">Take back</option></select></label></div>
+    ${secret ? `<div class="unid-opts" id="fdSecret" hidden>
+      ${hide ? `<label class="small chk"><input type="checkbox" name="unid"${pre && pre.unid ? ' checked' : ''}> <span><b>Unidentified</b>: they only see how it looks until you identify it</span></label>
+      <div id="fdLook" hidden><label class="small">They see it as <input class="textin" name="look" maxlength="80" value="Unidentified ${esc(LOOK_NOUN[t.cat] || 'item')}" autocomplete="off"></label>
+        <label class="small chk"><input type="checkbox" name="tier" checked> <span>Show the rarity (${esc(TIER_LABEL[t.tier] || t.tier)})</span></label></div>` : ''}
+      <label class="small">Curse <span class="muted">(optional, hidden from them until you reveal it)</span><textarea class="textin" name="curse" rows="2" maxlength="600" placeholder="e.g. Once attuned, you can't bring yourself to part with it."></textarea></label></div>` : ''}
     <p class="small muted" id="fdHint"></p>`, 'Done',
     f => {
       const q = Math.floor(+f.q.value), sign = +f.dir.value, who = f.who.value, name = targetName(who);
       if (!(q >= 1)) return 'Enter how many.';
+      const box = $('#fdSecret'), unid = !!(box && !box.hidden && f.unid && f.unid.checked), curse = box && !box.hidden && f.curse ? f.curse.value.trim() : '';
+      if (unid || curse) {
+        if (q > 10) return 'Hand out at most 10 at a time.';
+        const look = unid ? f.look.value.trim().slice(0, 80) : '';
+        if (unid && !look) return 'Say what they see, like “Unidentified ring”.';
+        unidAsk({ action: 'give', uid: who, id: t.id, q, look: unid ? { name: look, ...(f.tier.checked ? { tier: t.tier } : {}), ...(t.attune ? { att: true } : {}) } : null, curse },
+          unid ? `Gave ${name} ${q}× ${look} (really ${t.name})` : `Gave ${q}× ${t.name}, curse hidden`);
+        Party.note(`The DM gave ${name} ${q}× ${unid ? look : t.name}`);
+        DMS.bankWho = who; return '';
+      }
       const err = bankMove(who, { [t.id]: sign * q }, 0, sign > 0 ? `The DM gave ${name} ${q}× ${t.name}` : `The DM took ${q}× ${t.name} from ${name}`);
       if (err) return err;
       DMS.bankWho = who; toast(`${sign > 0 ? 'Gave' : 'Took'} ${q}× ${t.name}`); return '';
     },
-    f => { const have = holdings(f.who.value).items[t.id] || 0; $('#fdHint').textContent = `${targetName(f.who.value)} has ${have}.`; });
+    f => {
+      const have = holdings(f.who.value).items[t.id] || 0; $('#fdHint').textContent = `${targetName(f.who.value)} has ${have}.`;
+      // Unidentified and cursed: only when giving to a player.
+      const box = $('#fdSecret'); if (!box) return;
+      box.hidden = !(+f.dir.value > 0 && !['party', 'mine'].includes(f.who.value));
+      const look = $('#fdLook'); if (look) look.hidden = !(f.unid && f.unid.checked);
+    });
 }
 // DM tools → Hand out: give or take anything, and see what everyone has.
 function bankTab() {
   const ts = bankTargets(), sel = DMS.bankWho && ts.some(t => t.key === DMS.bankWho) ? DMS.bankWho : 'party', it = DMS.bankItem && D.things.get(DMS.bankItem);
+  const secrets = dmSecrets();
   const list = t => { const h = holdings(t.key), rows = Object.entries(h.items).map(([id, q]) => [D.things.get(id), q]).filter(([x, q]) => x && q > 0).sort((a, b) => a[0].name.localeCompare(b[0].name));
+    const m = hostMembers().find(x => x.uid === t.key), unid = Object.entries((m && m.unid) || {}), curses = (m && m.curses) || {};
+    const bits = rows.map(([x, q]) => `<a href="${linkOf(x)}">${esc(x.name)}</a> <span class="mono muted">×${q}</span>${curses[x.id] ? ' <span class="pill t-curse">cursed</span>' : ''}`)
+      .concat(unid.map(([k, l]) => { const e = secrets[k], x = e && D.things.get(e.id); return `<i>${esc(l.name)}</i>${x ? ` <span class="muted">(<a href="${linkOf(x)}">${esc(x.name)}</a>)</span>` : ''}`; }));
     return `<div class="card roller"><div class="section-head"><h2>${esc(t.name.replace(/ \(.*\)$/, ''))}</h2><span class="count mono">${fmtCoins(h.cp)}</span></div>
-      ${rows.length ? `<p class="small">${rows.map(([x, q]) => `<a href="${linkOf(x)}">${esc(x.name)}</a> <span class="mono muted">×${q}</span>`).join(' · ')}</p>` : '<p class="small muted">Nothing carried.</p>'}</div>`; };
+      ${bits.length ? `<p class="small">${bits.join(' · ')}</p>` : '<p class="small muted">Nothing carried.</p>'}</div>`; };
   return `<div class="card roller"><p class="small">You're the bank: hand out loot, rewards and purchases, or take things back (sold, spent, lost), for the party or any player. Nothing comes out of your own satchel or purse.</p>
     <div class="frow"><label class="skill-in">To / from <select class="select" id="bankWho">${targetOpts(sel)}</select></label></div>
     <div class="frow"><div class="addbox" style="flex:1;min-width:200px"><div class="search-wrap" style="max-width:none"><svg class="search-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg><input id="bankAdd" type="search" placeholder="${it ? esc(it.name) : 'Find an item or material…'}" autocomplete="off" aria-label="Item or material"><div id="bankSug" class="suggest" hidden></div></div></div>
       <input class="textin mono" id="bankQ" type="number" min="1" value="1" aria-label="How many" style="max-width:80px">
-      <button class="btn sm primary" type="button" data-act="bankgive" ${it ? '' : 'disabled'}>Give${it ? ' ' + esc(it.name) : ''}</button><button class="btn sm" type="button" data-act="banktake" ${it ? '' : 'disabled'}>Take</button></div>
+      <button class="btn sm primary" type="button" data-act="bankgive" ${it ? '' : 'disabled'}>Give${it ? ' ' + esc(it.name) : ''}</button><button class="btn sm" type="button" data-act="banktake" ${it ? '' : 'disabled'}>Take</button>${unidReady() ? `<button class="btn sm" type="button" data-act="bankunid" ${it ? '' : 'disabled'} title="Give it unidentified, or with a hidden curse">Unidentified / cursed…</button>` : ''}</div>
     <div class="frow"><input class="textin mono" id="bankCoin" data-coin placeholder="e.g. 2 gp 5 sp" autocomplete="off" aria-label="Amount of coin" style="max-width:160px">
       <button class="btn sm primary" type="button" data-act="bankcoin" data-dir="1">Give coin</button><button class="btn sm" type="button" data-act="bankcoin" data-dir="-1">Take coin</button><span class="small muted coin-read"></span></div></div>
     ${!HOSTED.on ? '<p class="small muted">Opened on its own, the codex only knows this device. Inside DnDocs you can hand things to every player.</p>' : ''}
+    ${unidReady() ? secretsCard(secrets) : ''}
     ${ts.map(list).join('')}`;
+}
+// DM tools → Hand out: everything unidentified or with a hidden (or revealed) curse.
+function secretsCard(secrets) {
+  const who = uid => { const m = hostMembers().find(x => x.uid === uid); return m ? m.name.replace(/ \(.*\)$/, '') : 'Someone who left'; };
+  const btn = (a, k, label, primary) => `<button class="btn sm${primary ? ' primary' : ''}" type="button" data-act="unid" data-u="${a}" data-key="${esc(k)}">${label}</button>`;
+  const rows = Object.entries(secrets).sort((a, b) => (a[1].at || 0) - (b[1].at || 0)).map(([k, e]) => {
+    const x = D.things.get(e.id), m = hostMembers().find(y => y.uid === e.uid), held = e.state !== 'unid' || !!(m && m.unid && m.unid[k]);
+    const what = x ? `<a class="name" href="${linkOf(x)}">${esc(x.name)}</a>` : `<span class="name">${esc(e.id)}</span>`;
+    const sub = e.state === 'unid' ? (held ? `${esc(who(e.uid))} sees “${esc(e.look || 'Unidentified item')}”` : `${esc(who(e.uid))} no longer carries it`) : `${esc(who(e.uid))} · identified, curse still hidden`;
+    const acts = e.state === 'unid' ? (held ? btn('identify', k, 'Identify', true) + (e.curse ? btn('reveal', k, 'Reveal curse') : '') + btn('take', k, 'Take back') : btn('forget', k, 'Remove from list')) : btn('reveal', k, 'Reveal curse', true) + btn('forget', k, 'Remove from list');
+    return `<div class="sat-row">${x ? ico(x) : ''}<div class="txt">${what}<span class="small muted">${sub}</span>${e.curse ? `<span class="small curse-note">Curse: ${esc(e.curse)}</span>` : ''}</div>${acts}</div>`;
+  });
+  const lifted = hostPlayers().flatMap(m => Object.entries(m.curses || {}).map(([id, c]) => { const x = D.things.get(id); return `<div class="sat-row">${x ? ico(x) : ''}<div class="txt"><span class="name">${esc(x ? x.name : id)}</span><span class="small muted">${esc(m.name.replace(/ \(.*\)$/, ''))} knows it's cursed</span><span class="small curse-note">${esc(c)}</span></div><button class="btn sm" type="button" data-act="unidlift" data-uid="${esc(m.uid)}" data-id="${esc(id)}" title="For example after remove curse">Lift curse</button></div>`; }));
+  return `<div class="card roller"><div class="section-head"><h2>Unidentified &amp; cursed</h2><span class="count">${rows.length + lifted.length}</span></div>
+    ${rows.length || lifted.length ? `<div class="sat-list">${rows.concat(lifted).join('')}</div>` : '<p class="small muted">Nothing yet. Pick an item above and press <b>Unidentified / cursed…</b>, or use <b>Give to…</b> on its page.</p>'}
+    <p class="small muted">Players see only how an unidentified item looks, and never a curse you haven't revealed. <b>Identify</b> tells only the player carrying it.</p></div>`;
 }
 // Read the satchel again without saving it (after DnDocs sent a newer one).
 function loadSat() {
@@ -4864,10 +4932,10 @@ const PARTY_KEY = 'scavengers-codex.party.v1';
 const slugify = c => String(c || '').toLowerCase().replace(/[^a-z0-9-]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 40) || 'my-party';
 const Party = {
   code: slugify(store.get(PARTY_KEY + '.code', 'my-party')),
-  items: {}, learned: new Set(), known: new Set(), research: {}, log: [], clock: 8, stamps: {}, projects: [], beds: [], spoil: null, session: null, packs: null, cp: 0,
+  items: {}, learned: new Set(), known: new Set(), research: {}, log: [], clock: 8, stamps: {}, projects: [], beds: [], spoil: null, session: null, packs: null, cp: 0, goals: [],
   parked: { items: {}, learned: [], projects: [] },
   localData() { return store.get(PARTY_KEY + '.data.' + this.code, {}); },
-  save() { const a = this.all(); store.set(PARTY_KEY + '.data.' + this.code, { items: a.items, learned: a.learned, known: [...this.known], research: this.research, log: this.log.slice(0, 300), session: this.session, clock: this.clock, stamps: this.stamps, projects: a.projects, beds: this.beds, spoil: this.spoil, packs: this.packs, cp: this.cp }); },
+  save() { const a = this.all(); store.set(PARTY_KEY + '.data.' + this.code, { items: a.items, learned: a.learned, known: [...this.known], research: this.research, log: this.log.slice(0, 300), session: this.session, clock: this.clock, stamps: this.stamps, projects: a.projects, beds: this.beds, spoil: this.spoil, packs: this.packs, cp: this.cp, goals: this.goals }); },
   // everything, including what belongs to homebrew packs that are switched off right now
   all() { return { items: { ...this.parked.items, ...this.items }, learned: [...this.learned, ...this.parked.learned.filter(id => !this.learned.has(id))], projects: [...this.projects, ...this.parked.projects] }; },
   init() { this.load(); },
@@ -4879,6 +4947,7 @@ const Party = {
     this.learned = new Set((d.learned || []).filter(id => D.things.has(id))); this.parked.learned = (d.learned || []).filter(id => !D.things.has(id));
     this.packs = Array.isArray(d.packs) ? d.packs : null;
     this.cp = Math.max(0, Math.floor(+d.cp || 0));
+    this.goals = (Array.isArray(d.goals) ? d.goals : []).map(canonT).filter((id, i, a) => typeof id === 'string' && a.indexOf(id) === i);
     this.parked.projects = (d.projects || []).filter(p => !D.things.has(p.id));
     this.known = new Set(d.known || []); this.research = d.research || {}; this.log = d.log || [];
     this.clock = +d.clock || 8; this.stamps = d.stamps || {}; this.projects = (d.projects || []).filter(p => D.things.has(p.id)); this.beds = (d.beds || []).filter(b => SITES[b.site]); this.spoil = d.spoil ?? null; this.session = d.session || null;
@@ -4896,7 +4965,7 @@ const Party = {
   },
   shareCode() {
     const a = this.all();
-    const json = JSON.stringify({ c: this.code, i: a.items, l: a.learned, k: [...this.known], r: this.research, h: this.clock, s: this.stamps, j: a.projects, b: this.beds, sp: this.spoil, ...(this.packs ? { pk: this.packs } : {}), ...(this.cp ? { pc: this.cp } : {}) });
+    const json = JSON.stringify({ c: this.code, i: a.items, l: a.learned, k: [...this.known], r: this.research, h: this.clock, s: this.stamps, j: a.projects, b: this.beds, sp: this.spoil, ...(this.packs ? { pk: this.packs } : {}), ...(this.cp ? { pc: this.cp } : {}), ...(this.goals.length ? { g: this.goals } : {}) });
     return btoa(unescape(encodeURIComponent(json))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
   },
   parseShare(code) {
@@ -4914,6 +4983,7 @@ const Party = {
     for (const [k, v] of Object.entries(o.s || {})) if (D.things.has(k) && v && (replace || !this.stamps[k])) this.stamps[k] = Array.isArray(v) ? v : [{ at: v.at, q: 1, pres: !!v.pres }];
     if (o.sp != null) this.spoil = o.sp;
     if (+o.pc >= 0 && o.pc != null) this.cp = replace ? Math.floor(+o.pc) : Math.max(this.cp, Math.floor(+o.pc));
+    if (Array.isArray(o.g)) this.goals = replace ? o.g.filter(x => typeof x === 'string') : [...new Set([...this.goals, ...o.g.filter(x => typeof x === 'string')])];
     if (replace) this.projects = []; for (const p of o.j || []) if (D.things.has(p.id) && !this.projects.some(x => x.uid === p.uid)) this.projects.push(p);
     if (replace) this.beds = []; for (const b of o.b || []) if (SITES[b.site] && !this.beds.some(x => x.uid === b.uid)) this.beds.push(b);
     this.save(); partyChanged(); checkPacks();
@@ -5151,9 +5221,10 @@ const NAV = [
 function renderNav(active) {
   if (active !== undefined) renderNav.a = active;
   const a = renderNav.a;
-  $('#nav').innerHTML = NAV.map(n => n[0] === 'sep' ? '<div class="nav-sep"></div>' :
+  // players inside DnDocs can't switch to DM view, so the DM tools link would only lead to a locked page
+  const hidden = n => n[0] === 'dm' && HOSTED.on && !isDM();
+  $('#nav').innerHTML = NAV.filter(n => !hidden(n)).map(n => n[0] === 'sep' ? '<div class="nav-sep"></div>' :
     `<a class="navlink${a === n[0] ? ' on' : ''}${n[4] ? ' ' + n[4] : ''}" href="${n[1]}"${a === n[0] ? ' aria-current="page"' : ''}>${svg(n[3])}<span class="lbl">${n[2]}</span>${n[0] === 'satchel' && (satCount() || Object.keys(Party.items).length) ? `<span class="badge">${satCount() + Object.keys(Party.items).length}</span>` : ''}</a>`).join('')
-    + navPacks()
     + `<div class="nav-foot">SRD 5.1 &amp; 5.2.1 content under CC-BY-4.0. Unofficial fan content.</div>`;
 }
 
@@ -5163,14 +5234,8 @@ function packList() {
   const dev = localPacks().map(p => ({ name: 'device:' + p.name, title: (p.data.homebrew && p.data.homebrew.title) || p.name, desc: (p.data.homebrew && p.data.homebrew.desc) || 'Added on this device.', device: true, on: true }));
   return PACKS.map(p => ({ ...p, on: ACTIVE.includes(p.name) })).concat(dev);
 }
-function navPacks() {
-  if (!D || !PACKS.length && !localPacks().length) return '';
-  return `<div class="nav-packs desk"><a class="nav-h" href="#/homebrew">Homebrew</a>${packList().map(p => isDM() && !p.device
-    ? `<label class="np" title="${esc(p.desc || '')}"><input type="checkbox" data-act="packtoggle" data-pack="${esc(p.name)}"${p.on ? ' checked' : ''}><span>${esc(p.title)}</span></label>`
-    : `<a class="np${p.on ? ' on' : ''}" href="#/homebrew" title="${esc(p.on ? 'In use' : 'Not in use')}"><span class="dot" aria-hidden="true"></span><span>${esc(p.title)}</span><span class="sr-only">${p.on ? ' (in use)' : ' (not in use)'}</span></a>`).join('')}</div>`;
-}
 function pHomebrew() {
-  const list = packList(), dm = isDM(), choice = packChoice();
+  const dm = isDM(), choice = packChoice(), list = packList().filter(p => dm || p.on);
   const by = new Map(PACKS.map(p => [p.name, p]));
   const row = p => {
     const c = p.counts || {}, bits = [c.items && plural(c.items, 'item'), c.materials && plural(c.materials, 'material'), c.monsters && plural(c.monsters, 'creature')].filter(Boolean).join(' · ');
@@ -5181,8 +5246,8 @@ function pHomebrew() {
   return `<div class="page"><div class="section-head"><h1>Homebrew</h1></div>
     <p class="lede">${dm ? 'Pick the homebrew for this campaign. Ticked packs work like the rest of the codex, and players still only see what they discover.' : 'The homebrew your DM has chosen for this campaign. Packs in use work like the rest of the codex: you find their creatures, parts and recipes in play.'}</p>
     ${dm && HOSTED.on ? `<p class="small muted">Your choice is saved for the campaign in DnDocs, so every player gets the same packs.</p>` : dm ? `<p class="small muted">Your choice is saved with the party “${esc(Party.code)}” and goes to players with the party link (Satchel → Party satchel → Share). ${choice ? `<button class="btn sm" type="button" data-act="packreset">Use the site default</button>` : 'You are using the site default.'} To make your choice the default for everyone who opens the site, copy the settings from <a href="#/dm">DM tools → Player setup</a> into <span class="mono">config.json</span>.</p>`
-      : `<p class="small muted">Only the DM can change this. Opening your DM's party link brings their choice to this device.</p>`}
-    <div class="packs">${list.map(row).join('') || '<div class="empty">No homebrew packs are installed.</div>'}</div>
+      : `<p class="small muted">Only the DM can change this.${HOSTED.on ? '' : " Opening your DM's party link brings their choice to this device."}</p>`}
+    <div class="packs">${list.map(row).join('') || `<div class="empty">${dm ? 'No homebrew packs are installed.' : 'No homebrew is in use in this campaign.'}</div>`}</div>
     <p class="small muted">Switching a pack off hides its content but never deletes anything: satchel contents, learned formulas and journal entries come back when it's switched on again. ${dm ? 'New packs go in the repo’s <span class="mono">homebrew</span> folder, one file each (see the README).' : ''}</p></div>`;
 }
 document.addEventListener('change', ev => {
@@ -5224,6 +5289,17 @@ function listBlock(arr, key, empty = 'Nothing here yet.') {
 }
 listBlock.state = {};
 const tagChip = (tag, extra = '') => `<a class="chip" href="#/tag/${encodeURIComponent(tag)}">${esc(tag)}${extra}</a>`;
+// One missing part for a recipe, linked to its page when the party knows it; "?" when it doesn't.
+function missPart(c, n) {
+  const q = `${n}× `, unknown = '<span class="unk" title="A part your party hasn’t discovered yet">?</span>' + (c.role && !c.oneOf ? ` <span class="muted">(${esc(ROLE_LABEL[c.role] || c.role).toLowerCase()})</span>` : '');
+  if (c.m) { const t = D.things.get(c.m); return q + (t && seeThing(t) ? `<a href="${linkOf(t)}">${esc(t.name)}</a>` : unknown); }
+  if (c.oneOf) {
+    const opts = c.oneOf.map(id => D.things.get(id)).filter(Boolean), seen = opts.filter(seeThing), more = opts.length - seen.length;
+    return q + `${esc(c.label || 'One of')}${seen.length || more ? ': ' + [...seen.map(t => `<a href="${linkOf(t)}">${esc(t.name)}</a>`), ...(more ? [unknown] : [])].join(', ') : ''}`;
+  }
+  return q + esc(slotLabel(c));
+}
+function missList(t, a) { return t.recipe.components.map((c, i) => ({ c, s: a.slots[i] })).filter(x => x.s.missing).map(x => missPart(x.c, x.s.missing)); }
 function slotLabel(c) {
   if (c.m) { const t = D.things.get(c.m); return t ? t.name : c.m; }
   return c.label || (c.any ? 'Any ' + c.any.join(' + ') : 'One of…');
@@ -5941,7 +6017,7 @@ function hbAct(act, el) {
 }
 function pDM() {
   const envOpts = [...D.envs.values()].map(e => `<option value="${e.id}"${DMS.env === e.id ? ' selected' : ''}>${esc(e.name)}</option>`).join('');
-  if (!isDM()) return `<div class="page"><h1>DM tools</h1><div class="empty">These tools are for the DM. ${pinSet() ? 'Switch to DM view with the PIN to use them.' : 'Switch to DM view at the top to use them.'}</div></div>`;
+  if (!isDM()) return `<div class="page"><h1>DM tools</h1><div class="empty">These tools are for the DM.${HOSTED.on ? '' : pinSet() ? ' Switch to DM view with the PIN to use them.' : ' Switch to DM view at the top to use them.'}</div></div>`;
   const tabs = [['forage', 'Forage expedition'], ['trader', 'Wandering trader'], ['drops', 'After the fight'], ['bank', 'Hand out'], ['session', 'Session'], ['handouts', 'Handouts'], ['settings', 'Player setup & PIN']];
   if (window.CodexHomebrew) tabs.splice(5, 0, ['homebrew', 'Homebrew']);
   let body = '';
@@ -6303,9 +6379,9 @@ function pThing(id) {
     <div class="crumbs"><a href="#/${isItem ? 'items' : 'materials'}">${isItem ? 'Items' : 'Materials'}</a><span>/</span><span>${esc(t.name)}</span></div>
     <div class="dhero"><div class="dhead">${ico(t, true)}<div class="meta"><h1>${esc(t.name)}</h1>
       <div class="line">${pill(t.tier)}<span>${esc(isItem ? (CAT_LABEL[t.cat] || t.cat) : 'Material')}</span>${isItem && t.attune ? '<span>· requires attunement</span>' : ''}${t.src === 'Homebrew' ? '<span>· Homebrew</span>' : ''}</div>
-      <div class="actions"><button class="btn sm primary" type="button" data-act="add" data-id="${t.id}">${svg('plus')}Add to satchel</button>${isDM() ? `<button class="btn sm" type="button" data-act="dmgive" data-id="${t.id}" title="Hand it to a player or the party (or take it back)">Give to…</button>` : ''}${HOSTED.on && isDM() ? `<button class="btn sm" type="button" data-act="hostrecord" data-id="${t.id}" title="A DnDocs page for it: lore, pictures, secrets. Who carries it stays in the satchels.">Make a DnDocs page</button>` : ''}${t.recipe && known(t) ? `<button class="btn sm${goals.includes(t.id) ? ' on-goal' : ''}" type="button" data-act="goal" data-id="${t.id}" aria-pressed="${goals.includes(t.id)}">${svg('star')}${goals.includes(t.id) ? 'Tracking as goal' : 'Track as goal'}</button>` : ''}${formulaCtl(t)}${shareBtn(t)}${sat[t.id] || Party.qty(t.id) ? `<span class="small muted" style="align-self:center">You carry ${sat[t.id] || 0}${Party.qty(t.id) ? ` · party has ${Party.qty(t.id)}` : ''}</span>` : ''}${ext}</div></div></div>
+      <div class="actions"><button class="btn sm primary" type="button" data-act="add" data-id="${t.id}">${svg('plus')}Add to satchel</button>${isDM() ? `<button class="btn sm" type="button" data-act="dmgive" data-id="${t.id}" title="Hand it to a player or the party (or take it back)">Give to…</button>` : ''}${HOSTED.on && isDM() ? `<button class="btn sm" type="button" data-act="hostrecord" data-id="${t.id}" title="A DnDocs page for it: lore, pictures, secrets. Who carries it stays in the satchels.">Make a DnDocs page</button>` : ''}${t.recipe && known(t) ? `<button class="btn sm${goals.includes(t.id) ? ' on-goal' : ''}" type="button" data-act="goal" data-id="${t.id}" aria-pressed="${goals.includes(t.id)}">${svg('star')}${goals.includes(t.id) ? 'Tracking as goal' : 'Track as goal'}</button><button class="btn sm${Party.goals.includes(t.id) ? ' on-goal' : ''}" type="button" data-act="pgoal" data-id="${t.id}" aria-pressed="${Party.goals.includes(t.id)}" title="Everyone in the party sees it in their satchel's goals">${svg('person')}${Party.goals.includes(t.id) ? 'Party goal' : 'Party goal'}</button>` : ''}${formulaCtl(t)}${shareBtn(t)}${sat[t.id] || Party.qty(t.id) ? `<span class="small muted" style="align-self:center">You carry ${sat[t.id] || 0}${Party.qty(t.id) ? ` · party has ${Party.qty(t.id)}` : ''}</span>` : ''}${ext}</div></div></div>
       ${figure(t)}
-      <div class="dbody">${isItem ? `<p class="effect">${esc(t.effect)}</p>` : `<p class="lede">${esc(t.desc)}</p>`}</div>
+      <div class="dbody">${isItem ? `<p class="effect">${esc(t.effect)}</p>` : `<p class="lede">${esc(t.desc)}</p>`}${!isDM() && myCurses()[t.id] ? `<div class="curse-box"><b>Cursed.</b> ${esc(myCurses()[t.id])}</div>` : ''}</div>
       <div class="dfacts"><div class="facts">${facts.map(([k, v]) => `<div class="fact"><span class="k">${k}</span><span class="v">${esc(v)}</span></div>`).join('')}</div>${tags}</div></div>
     <div id="sharebox"></div>
     ${t.recipe ? (known(t) ? recipeCard(t, { title: t.cat === 'meal' ? 'How to cook it' : isItem ? 'How to craft it' : 'How to make it' }) + (t.cat === 'meal' ? cookPanel(t) : finalCheck(t)) : lockedCard(t)) : ''}
@@ -6444,7 +6520,7 @@ function satRow(id, q, where) {
     ? `<button class="btn sm" type="button" data-act="give" data-id="${id}" title="Move one to the party satchel"${Party.readonly ? ' disabled' : ''}>To party</button>${!isDM() && hostPlayers().length ? `<button class="btn sm" type="button" data-act="giveto" data-id="${id}" title="Give to another player">Give…</button>` : ''}`
     : `<button class="btn sm" type="button" data-act="take" data-id="${id}" title="Take one into your own satchel"${Party.readonly ? ' disabled' : ''}>Take</button>`;
   const dis = where === 'party' && Party.readonly ? ' disabled' : '';
-  return `<div class="sat-row">${ico(t)}<div class="txt"><a class="name" href="${linkOf(t)}">${esc(t.name)}</a><span class="small muted">${TIER_LABEL[t.tier]} · ${esc(thingSub(t))}</span>${spoilBadge(t)}</div>${move}<div class="stepper"><button type="button" data-act="${where === 'mine' ? 'dec' : 'pdec'}" data-id="${id}" aria-label="One fewer"${dis}>−</button><input type="number" min="0" value="${q}" data-act="${where === 'mine' ? 'qty' : 'pqty'}" data-id="${id}" aria-label="Quantity of ${esc(t.name)}"${dis}><button type="button" data-act="${where === 'mine' ? 'inc' : 'pinc'}" data-id="${id}" aria-label="One more"${dis}>+</button></div></div>`;
+  return `<div class="sat-row">${ico(t)}<div class="txt"><a class="name" href="${linkOf(t)}">${esc(t.name)}</a><span class="small muted">${TIER_LABEL[t.tier]} · ${esc(thingSub(t))}</span>${spoilBadge(t)}${where === 'mine' && myCurses()[id] ? '<span class="pill t-curse">Cursed</span>' : ''}</div>${move}<div class="stepper"><button type="button" data-act="${where === 'mine' ? 'dec' : 'pdec'}" data-id="${id}" aria-label="One fewer"${dis}>−</button><input type="number" min="0" value="${q}" data-act="${where === 'mine' ? 'qty' : 'pqty'}" data-id="${id}" aria-label="Quantity of ${esc(t.name)}"${dis}><button type="button" data-act="${where === 'mine' ? 'inc' : 'pinc'}" data-id="${id}" aria-label="One more"${dis}>+</button></div></div>`;
 }
 // Hosted: one party per campaign, saved in DnDocs. The DM can bring in a party from a link or code.
 function hostedPartyPanel(ids, learned) {
@@ -6479,17 +6555,17 @@ function pSatchel() {
   const ids = Object.keys(sat).filter(id => D.things.has(id)).sort((a, b) => byName(D.things.get(a), D.things.get(b)));
   const csAll = craftables(), cs = satMeals ? csAll.filter(x => x.t.cat === 'meal') : csAll;
   const ready = cs.filter(x => x.a.ok), close = cs.filter(x => !x.a.ok && x.a.missingSlots <= 2), rest = cs.filter(x => !x.a.ok && x.a.missingSlots > 2);
-  const tabs = [['ready', 'Ready to craft', ready], ['close', '1–2 parts away', close], ['rest', 'Uses your parts', rest]];
+  const tabs = [['ready', 'Ready to craft', ready], ['close', '1–2 parts away', close], ['rest', 'Uses your parts', rest], ['recipes', 'Recipes', ourRecipes()]];
   const curList = (tabs.find(t => t[0] === satTab) || tabs[0])[2];
   const key = 'sat-' + satTab, shown = listBlock.state[key] || 30;
   const craftRow = ({ t, a }) => {
-    const miss = t.recipe.components.map((c, i) => ({ c, s: a.slots[i] })).filter(x => x.s.missing).map(x => `${x.s.missing}× ${esc(slotLabel(x.c))}`);
+    const miss = missList(t, a);
     return `<div class="craft-row"><div class="top">${ico(t)}<a class="txt" href="${linkOf(t)}"><b>${esc(t.name)}</b><br><span class="small muted">${esc(CAT_LABEL[t.cat] || 'Material')}${showDC() ? ` · DC ${esc(t.recipe.dc)}` : ''} · ${esc(t.recipe.time)}</span></a>${pill(t.tier)}${a.ok ? `<button class="btn sm primary" type="button" data-act="craft" data-id="${t.id}">${t.cat === 'meal' ? 'Cook' : 'Start'}</button>` : ''}</div>
       <div class="meter${a.ok ? '' : ' part'}"><i style="width:${Math.round(a.frac * 100)}%"></i></div>
       ${miss.length ? `<div class="miss">Missing: ${miss.join(' · ')}</div>` : `<div class="small muted">Tools: ${esc((t.recipe.tools || []).map(x => TOOL_NAMES[x] || x).join(', ') || '—')} · ${fmtGp(t.recipe.gp)} in reagents</div>`}</div>`;
   };
   const pc = Object.keys(Party.items).length;
-  const mine = `<div class="addbox"><div class="search-wrap" style="max-width:none"><svg class="search-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg><input id="satAdd" type="search" placeholder="Add a material or item…" autocomplete="off" aria-label="Add to satchel"><div id="satSug" class="suggest" hidden></div></div></div>
+  const mine = unidBlock() + `<div class="addbox"><div class="search-wrap" style="max-width:none"><svg class="search-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg><input id="satAdd" type="search" placeholder="Add a material or item…" autocomplete="off" aria-label="Add to satchel"><div id="satSug" class="suggest" hidden></div></div></div>
         ${ids.length ? `<div class="sat-list">${ids.map(id => satRow(id, sat[id], 'mine')).join('')}</div>
           <div class="frow"><button class="btn sm" type="button" data-act="export">Export</button><button class="btn sm" type="button" data-act="import">Import</button><button class="btn sm" type="button" data-act="clear">${svg('trash')}Empty satchel</button></div>`
           : `<div class="empty">Your satchel is empty. Search above, use “Add to satchel” on any page, or <button class="btn sm" type="button" data-act="sample">load a sample haul</button></div>`}
@@ -6509,10 +6585,29 @@ function pSatchel() {
         <label class="small" style="display:flex;gap:8px;align-items:center"><input type="checkbox" data-act="useparty"${useParty ? ' checked' : ''}> Count the party satchel when working out what can be crafted</label>
         <label class="small" style="display:flex;gap:8px;align-items:center"><input type="checkbox" data-act="satmeals"${satMeals ? ' checked' : ''}> Only meals (what can I cook?)</label>
         <div class="tabs" role="tablist">${tabs.map(([k, l, arr]) => `<button class="tab${satTab === k ? ' on' : ''}" type="button" role="tab" aria-selected="${satTab === k}" data-act="sattab" data-tab="${k}">${l} <span class="mono">${arr.length}</span></button>`).join('')}</div>
-        ${curList.length ? curList.slice(0, shown).map(craftRow).join('') + (curList.length > shown ? `<button class="btn more" type="button" data-act="more" data-key="${key}" data-shown="${shown}" data-step="40">Show more (${curList.length - shown})</button>` : '') : `<div class="empty">${ids.length || pc ? (satTab === 'ready' ? 'Nothing is fully covered yet. Check “1–2 parts away”.' : 'Nothing in this list.') : 'Add a few parts to see what they make.'}</div>`}
+        ${curList.length ? curList.slice(0, shown).map(craftRow).join('') + (curList.length > shown ? `<button class="btn more" type="button" data-act="more" data-key="${key}" data-shown="${shown}" data-step="40">Show more (${curList.length - shown})</button>` : '') : `<div class="empty">${ids.length || pc ? (satTab === 'ready' ? 'Nothing is fully covered yet. Check “1–2 parts away”.' : satTab === 'recipes' ? (isDM() ? 'The party hasn’t learned any formulas yet. Teach them from an item page.' : 'No recipes yet. Your DM hands out formulas; everyday recipes show up once you know their parts.') : 'Nothing in this list.') : 'Add a few parts to see what they make.'}</div>`}
         <p class="small muted">Tools and stations aren't tracked here, so check the recipe before you craft. Reagent gold is paid from the purses when you start a project (if anyone has coin in them).${mode === 'player' ? ' Player view: only formulas your party has learned are listed.' : ''}</p>
       </section>
     </div></div>`;
+}
+// Inside DnDocs: what the DM handed you unidentified. Only how it looks is ever on this device.
+function unidBlock() {
+  const u = Object.entries(myUnid()).sort((a, b) => (a[1].at || 0) - (b[1].at || 0)); if (!u.length) return '';
+  return `<div class="unid-card"><h3>Unidentified <span class="mono muted">${u.length}</span></h3><div class="sat-list">${u.map(([, l]) => `<div class="sat-row"><span class="ico t-${esc(l.tier || 'common')}">${svg('sparkle')}</span><div class="txt"><span class="name">${esc(l.name)}</span><span class="small muted">${esc([l.tier ? TIER_LABEL[l.tier] || l.tier : 'Rarity unknown', l.att ? 'requires attunement' : 'magical'].join(' · '))}</span></div></div>`).join('')}</div>
+    <p class="small muted">You can tell it's magical, not what it does. Study it over a short rest, cast <i>identify</i> on it, or attune to it, and your DM will tell you what you learn.</p></div>`;
+}
+// Recipes the party can plan for: every formula it has learned, plus everyday recipes (no formula
+// needed) whose parts it has all discovered. Closest to done first.
+function ourRecipes() {
+  const inv = usable(), out = [];
+  for (const t of D.things.values()) {
+    if (!t.recipe || !t.recipe.components) continue;
+    if (satMeals && t.cat !== 'meal') continue;
+    const mine = Party.learned.has(t.id) || (!isDM() && !needsFormula(t) && t.recipe.components.every(c => !c.m || seeThing(D.things.get(c.m))) && seeThing(t));
+    if (!mine) continue;
+    out.push({ t, a: allocate(t.recipe, inv) });
+  }
+  return out.sort((x, y) => y.a.frac - x.a.frac || byName(x.t, y.t));
 }
 function pPartyLink(code) {
   if (HOSTED.on && !isDM()) return `<div class="page"><h1>Party links are for the DM</h1><p class="lede">In DnDocs the party satchel is shared already. Ask your DM to bring this party in.</p></div>`;
@@ -6544,13 +6639,14 @@ function workbench() {
   }).join('') + '<p class="small muted">A day of work is 8 hours. The parts are bound into the work, so they no longer spoil.</p>';
 }
 function goalBlock() {
-  const gs = goals.map(id => D.things.get(id)).filter(t => t && t.recipe);
-  if (!gs.length) return `<div class="empty small">Tip: open any item and press <b>Track as goal</b> to follow your progress here.</div>`;
-  return `<div class="section-head"><h2>Goals</h2><span class="count">${gs.length}</span></div>` + gs.map(t => {
-    const a = allocate(t.recipe, usable());
-    const miss = t.recipe.components.map((c, i) => ({ c, s: a.slots[i] })).filter(x => x.s.missing).map(x => `${x.s.missing}× ${esc(slotLabel(x.c))}`);
-    return `<div class="craft-row goal"><div class="top">${ico(t)}<a class="txt" href="${linkOf(t)}"><b>${esc(t.name)}</b><br><span class="small muted">${known(t) ? `${Math.round(a.frac * 100)}% of parts in hand` : 'Formula not learned yet'}</span></a>${pill(t.tier)}${a.ok && known(t) ? `<button class="btn sm primary" type="button" data-act="craft" data-id="${t.id}">Craft</button>` : ''}<button class="btn sm" type="button" data-act="goal" data-id="${t.id}" aria-label="Stop tracking ${esc(t.name)}">✕</button></div>
-      <div class="meter${a.ok ? '' : ' part'}"><i style="width:${Math.round(a.frac * 100)}%"></i></div>${miss.length ? `<div class="miss">Still need: ${miss.join(' · ')}</div>` : '<div class="small" style="color:var(--ok)">Every part is in hand.</div>'}</div>`;
+  // The party's goals (everyone sees them) and your own; one row each.
+  const rows = [...Party.goals.map(id => [id, 'party']), ...goals.filter(id => !Party.goals.includes(id)).map(id => [id, 'mine'])]
+    .map(([id, who]) => ({ t: D.things.get(id), who })).filter(x => x.t && x.t.recipe);
+  if (!rows.length) return `<div class="empty small">Tip: open any item and press <b>Track as goal</b> (just you) or <b>Party goal</b> (everyone) to follow progress here.</div>`;
+  return `<div class="section-head"><h2>Goals</h2><span class="count">${rows.length}</span></div>` + rows.map(({ t, who }) => {
+    const a = allocate(t.recipe, usable()), miss = missList(t, a), gp = +t.recipe.gp || 0;
+    return `<div class="craft-row goal"><div class="top">${ico(t)}<a class="txt" href="${linkOf(t)}"><b>${esc(t.name)}</b><br><span class="small muted">${who === 'party' ? '<span class="pill t-uncommon" style="font-size:.7rem;padding:0 6px">Party</span> ' : ''}${known(t) ? `${Math.round(a.frac * 100)}% of parts in hand` : 'Formula not learned yet'}</span></a>${pill(t.tier)}${a.ok && known(t) ? `<button class="btn sm primary" type="button" data-act="craft" data-id="${t.id}">Craft</button>` : ''}<button class="btn sm" type="button" data-act="${who === 'party' ? 'pgoal' : 'goal'}" data-id="${t.id}" aria-label="Stop tracking ${esc(t.name)}" title="${who === 'party' ? 'Stop tracking it for the party' : 'Stop tracking it'}">✕</button></div>
+      <div class="meter${a.ok ? '' : ' part'}"><i style="width:${Math.round(a.frac * 100)}%"></i></div>${miss.length ? `<div class="miss">Still need: ${miss.join(' · ')}${gp ? ` · ${fmtGp(gp)} in reagents` : ''}</div>` : `<div class="small" style="color:var(--ok)">Every part is in hand${gp ? ` (plus ${fmtGp(gp)} in reagents)` : ''}.</div>`}</div>`;
   }).join('');
 }
 /* ---- journal: codes, discoveries, research ---- */
@@ -6681,7 +6777,7 @@ function route() {
   }
   const v = $('#view');
   const sameView = route.last === path;
-  v.innerHTML = html + `<footer class="foot"><a href="#/dm">DM tools</a><a href="#/rules">Rules</a><a href="#/about">About &amp; licence</a><span>Includes SRD 5.1 and 5.2.1 material (CC-BY-4.0). Unofficial fan content.</span></footer>`;
+  v.innerHTML = html + `<footer class="foot">${HOSTED.on && !isDM() ? '' : '<a href="#/dm">DM tools</a>'}<a href="#/rules">Rules</a><a href="#/about">About &amp; licence</a><span>Includes SRD 5.1 and 5.2.1 material (CC-BY-4.0). Unofficial fan content.</span></footer>`;
   renderNav(nav);
   if (a === 'satchel') wireSatchel();
   if (a === 'dm') wireDM();
@@ -6767,6 +6863,12 @@ document.addEventListener('click', ev => {
     case 'partyload': { const o = Party.parseShare(el.dataset.code); if (o) { if (o.c) Party.setCode(o.c); Party.applyShare(o, el.dataset.mode === 'replace'); satView = 'party'; store.set('scavengers-codex.satView', 'party'); toast('Party satchel loaded'); try { history.replaceState(null, '', location.pathname + location.search + '#/satchel'); } catch (e) { /* ignore */ } route.last = 'satchel'; rerender(); } break; }
     case 'mode': setMode(mode === 'dm' ? 'player' : 'dm'); toast(mode === 'dm' ? 'DM view: every recipe is visible' : 'Player view: only learned formulas are shown'); break;
     case 'goal': toggleGoal(id); toast(goals.includes(id) ? 'Tracking in your satchel' : 'Stopped tracking'); rerender(); break;
+    case 'pgoal': {
+      const t = D.things.get(id), on = !Party.goals.includes(id);
+      Party.goals = on ? [...Party.goals, id] : Party.goals.filter(x => x !== id);
+      Party.note(on ? `New party goal: ${t.name}` : `${t.name} is no longer a party goal`); Party.save();
+      toast(on ? 'A party goal: everyone sees it in their satchel' : 'No longer a party goal'); rerender(); break;
+    }
     case 'rollh': doRoll(D.monsters.get(id)); break;
     case 'fcroll': doFinalCheck(D.things.get(id)); break;
     case 'research': doResearch(D.things.get(id), !!el.dataset.roll); break;
@@ -6865,6 +6967,12 @@ document.addEventListener('click', ev => {
     }
     case 'dmgive': { giveThingDialog(id); break; }
     case 'giveto': { giveDialog({ id }); break; }
+    case 'bankunid': { if (DMS.bankItem) giveThingDialog(DMS.bankItem, { who: ($('#bankWho') || {}).value, unid: true }); break; }
+    case 'unid': {
+      const a = el.dataset.u, e = dmSecrets()[el.dataset.key], x = e && D.things.get(e.id);
+      unidAsk({ action: a, key: el.dataset.key }, { identify: `Identified: ${x ? x.name : 'it'}`, reveal: 'Curse revealed', take: 'Taken back', forget: 'Removed from the list' }[a]); break;
+    }
+    case 'unidlift': { unidAsk({ action: 'lift', uid: el.dataset.uid, id: el.dataset.id }, 'Curse lifted'); break; }
     case 'coingive': { giveDialog({ coins: true }); break; }
     case 'coinadd': case 'coinspend': case 'coinmove': {
       const w = el.dataset.w, inp = $('#coinIn-' + w), v = parseCoins(inp && inp.value);

@@ -5,7 +5,8 @@ A harvesting and crafting handbook for D&D 5e. You skin, harvest and forage comp
 - **Cross-linked:** every item shows its recipe and what it is used in. Every material shows where it comes from and what it makes, and every creature shows its parts and everything craftable from them.
 - **Satchel:** add what your party carries (or "add all parts" from a slain creature) to see what you can craft now and what you're 1–2 parts away from. The satchel is saved in your browser, with export and import.
 - **Full breakdown:** item pages trace the whole crafting chain (e.g. ore → ingot → armour) down to raw parts, and say where to get each one.
-- **Goals:** track the items you're working towards, and the satchel shows what's still missing.
+- **Goals:** track the items you're working towards (just you, or as a **party goal** everyone sees), and the satchel shows what's still missing, each part linked to where it comes from (a "?" for parts the party hasn't discovered).
+- **Recipes:** the satchel's *Recipes* tab lists every formula the party has learned plus the everyday recipes whose parts it knows, closest to done first (tick *Only meals* for the cook).
 - **Harvest rolls:** on a creature's page, each harvester writes in their own total and sees the outcome (flawless, success, flawed or ruined, with hazards), or the codex rolls for everyone. Then add the results to your satchel.
 - **Player view as a journal:** players see only what the party has discovered. On a first visit that's mundane gear, common materials, ordinary beasts and people, and the places of the world. DCs, CRs (shown as a rough danger word instead), exact prices of magic goods (shown as bands like "a small fortune") and stat-block links stay hidden. The DM shares in-world handouts with unlock codes (a formula code reveals the recipe and its components, and adds the creatures and places they come from as "heard of": name, look, habitat and only the parts you need; a creature or place code gives the full entry). Players can also research a formula by studying a keystone, and anything in the satchel is known.
 - **DM PIN:** DM view can be locked with a PIN set in `config.json`, so curious players stay in player view.
@@ -89,9 +90,11 @@ the satchel and purse); it arrives in their satchel the next time they open DnDo
 character's satchel and purse under *Carried* on their page. Opened on its own, the codex works
 exactly as before.
 
-Inside DnDocs the codex keeps its own sidebar and search but takes on DnDocs' parchment look. Sharing works through the campaign: *Teach the party* (DM) gives a formula to
+Inside DnDocs the codex keeps its own sidebar and search but takes on DnDocs' parchment look. Players don't see the DM tools link there, since their role comes from DnDocs. Sharing works through the campaign: *Teach the party* (DM) gives a formula to
 everyone at once, handout links and QR codes open DnDocs and unlock for the whole party, and *Post as
 a handout in DnDocs* turns a handout into a DnDocs note for everyone or chosen players.
+
+**Unidentified and cursed items (inside DnDocs).** When you give a magic item to a player (*Give to…* on its page, or *Unidentified / cursed…* in DM tools → Hand out), tick *Unidentified* and say what they see ("Unidentified ring"), with or without its rarity. You can also type a curse. The player's satchel shows only the look; the real item and the curse stay in a DM-only part of the campaign. DM tools → Hand out → *Unidentified & cursed* lists them: *Identify* puts the real item in the player's satchel (only that player learns what it is), *Reveal curse* shows the curse on their item page, and *Lift curse* removes it again. Opened on its own (outside DnDocs) the codex has no way to keep this secret from players, so the option isn't there. Note that some SRD items (like the Berserker Axe) mention their curse in their own description.
 
 DnDocs links its entries to codex ids and reads `catalog.json` (every creature, material and item;
 built by `tools/catalog.py` when the site deploys). So **ids are a promise**: `tools/validate.py`
@@ -108,7 +111,7 @@ Every homebrew set is one JSON file in the `homebrew/` folder. The codex ships w
 | Core+: The Cookbook (42 meals) | `homebrew/core-cookbook.json` | yes |
 | The Rooted City (a campaign pack) | `homebrew/rooted-city.json` | no |
 
-**Choosing packs for a campaign.** Everyone sees the list in the left-hand column and on the *Homebrew* page (on phones, via the Journal). In DM view the packs have tick boxes. The DM's choice is saved with the party and travels to the players with the party link (Satchel → Party satchel → Share), so every player's codex matches. Players can't change it. Content from a pack in use works like the rest of the codex and still follows the discovery rules. Switching a pack off hides its content but never deletes anything: satchel contents, learned formulas and journal entries come back when it's switched on again. To make a choice the default for everyone who opens the site, copy the settings from DM tools → Player setup into `config.json` (the `"packs"` list). Without that, each pack's own `"default"` decides.
+**Choosing packs for a campaign.** The DM switches packs on and off on the *Homebrew* page (on phones, via the Journal). Players see the same page, listing only the packs in use. The DM's choice is saved with the party and travels to the players with the party link (Satchel → Party satchel → Share), so every player's codex matches. Players can't change it. Content from a pack in use works like the rest of the codex and still follows the discovery rules. Switching a pack off hides its content but never deletes anything: satchel contents, learned formulas and journal entries come back when it's switched on again. To make a choice the default for everyone who opens the site, copy the settings from DM tools → Player setup into `config.json` (the `"packs"` list). Without that, each pack's own `"default"` decides.
 
 **Adding a pack.** Drop the file into `homebrew/` and push. The deploy workflow rebuilds `homebrew/index.json` (the list the site reads) and checks the pack. Locally, `python3 tools/pack_index.py` rebuilds the index, or use the helper, which checks first and changes nothing if the pack has problems:
 
