@@ -532,5 +532,17 @@
       R(0, 0, 320, 220, 'fill="var(--surface-2)"') + R(0, 0, 320, 220, `fill="url(#${tex})"`) + body + over + R(0, 0, 320, 220, `fill="url(#${vig})"`) + spk + frame + cap + '</svg>';
   }
 
-  window.CodexPlates = { plate };
+  /* A round battle-map token: just the creature, centred, in fixed colours (no CSS variables), so it
+     can be drawn onto a canvas outside the codex. palette: { ink, bg, ring }. */
+  function token(e, palette) {
+    e = e || {}; const pal = Object.assign({ ink: '#2a1c14', bg: '#efe3c6', ring: '#9a7428' }, palette || {});
+    const [w, h, draw] = CR[e.type] || CR.beast, flip = e.type === 'dragon' || e.type === 'beast' || e.type === 'monstrosity' ? -1 : 1;
+    const side = Math.max(w, h) * 1.5, cy = -h / 2;
+    const body = G(`scale(${flip} 1)`, draw(pal.ink, pal.bg), `fill="${pal.ink}" stroke="${pal.ink}" stroke-linecap="round" stroke-linejoin="round"`);
+    let svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${n(-side / 2)} ${n(cy - side / 2)} ${n(side)} ${n(side)}" width="240" height="240">` +
+      C(0, cy, side / 2, `fill="${pal.bg}"`) + C(0, cy, side / 2 - side * .03, `fill="none" stroke="${pal.ring}" stroke-width="${n(side * .03)}"`) + body + '</svg>';
+    // Anything that still points at the codex's colour variables gets the token's ink.
+    return svg.replace(/var\(--[a-z0-9-]+\)/gi, pal.ink).replace(/color-mix\([^()]*(\([^()]*\)[^()]*)*\)/gi, pal.ink);
+  }
+  window.CodexPlates = { plate, token };
 })();

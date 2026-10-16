@@ -173,6 +173,7 @@ function hostHello() {
       const d = e.data || {};
       if (d.type === 'dndocs:hello' && !HOSTED.ready) {
         HOSTED.origin = e.origin; HOSTED.role = d.role === 'dm' ? 'dm' : 'player'; HOSTED.name = String(d.name || ''); HOSTED.campaign = d.campaign || null; HOSTED.members = Array.isArray(d.members) ? d.members : [];
+        HOSTED.embed = !!d.embed; HOSTED.home = typeof d.home === 'string' && /^https?:\/\//.test(d.home) ? d.home.replace(/#.*$/, '') : '';
         HOSTED.mem = new Map(Object.entries(d.keys || {}));
         HOSTED.ready = true; clearInterval(iv); resolve(d);
       } else if (HOSTED.ready && d.type === 'dndocs:state') hostApply(d.keys || {});
@@ -181,7 +182,7 @@ function hostHello() {
       else if (HOSTED.ready && d.type === 'dndocs:give') { if (d.ok === false) hostGiftFailed(d.id, d.error); else HOSTED.gifts.delete(d.id); }
       else if (HOSTED.ready && d.type === 'dndocs:members') { HOSTED.members = Array.isArray(d.members) ? d.members : []; if (D && location.hash.startsWith('#/dm')) hostRefresh(); }
       else if (HOSTED.ready && d.type === 'dndocs:bank' && d.ok === false) toast(`Not saved in DnDocs${d.error ? ': ' + d.error : ''}`);
-      else if (HOSTED.ready && d.type === 'dndocs:entry') toast(d.ok ? `Recorded in DnDocs${d.name ? ': ' + d.name : ''}` : (d.error || 'Not recorded'));
+      else if (HOSTED.ready && d.type === 'dndocs:entry') toast(d.ok ? `DnDocs page made${d.name ? ': ' + d.name : ''}` : (d.error || 'No page made'));
     });
     ping();
   });
@@ -218,7 +219,7 @@ function hostOpen(o) {
     if (location.hash === '#/dm') rerender(); else location.hash = '#/dm';
   } else if (typeof o.hash === 'string' && o.hash.startsWith('#/')) location.hash = o.hash;
 }
-// DM: put a crafted item on a character in DnDocs.
+// DM: make a DnDocs item page for it (lore and pictures; the satchels still say who has it).
 function hostRecord(id) {
   const t = D.things.get(id); if (!t) return;
   hostPost({ type: 'codex:entry', action: 'record', thing: { id: t.id, kind: t.kind, name: t.name, tier: t.tier, cat: t.cat || null, attune: t.attune || false, value: t.value ?? null, desc: String((t.kind === 'item' ? t.effect : t.desc) || '') } });
@@ -1109,7 +1110,8 @@ function siteBase() {
   u = u.replace(/#.*$/, '').replace(/\?.*$/, '');
   return /\.html?$/i.test(u) || u.endsWith('/') ? u : u + '/';
 }
-const codeLink = code => siteBase() ? siteBase() + '#/journal/' + code : '';
+// Inside DnDocs, links and QR codes open DnDocs, so what they unlock goes to the campaign.
+const codeLink = code => HOSTED.on && HOSTED.home ? HOSTED.home + '#/codex?open=' + encodeURIComponent('#/journal/' + code) : siteBase() ? siteBase() + '#/journal/' + code : '';
 function qrSVG(text, cls = 'qr') {
   if (!text || typeof qrcode !== 'function') return '';
   try {
@@ -1531,6 +1533,7 @@ const MASTERWORKS = [
 function formulaCtl(t) {
   if (!needsFormula(t)) return '';
   const has = Party.learned.has(t.id);
+  if (mode === 'dm' && HOSTED.on) return `<button class="btn sm${has ? ' on-goal' : ''}" type="button" data-act="teach" data-id="${t.id}" aria-pressed="${has}" title="${has ? 'Everyone in the campaign knows this formula. Press to take it back.' : 'Everyone in the campaign learns it right away'}">${svg('book')}${has ? 'The party knows it · Unteach' : 'Teach the party'}</button>`;
   if (mode === 'dm') return `<button class="btn sm${has ? ' on-goal' : ''}" type="button" data-act="teach" data-id="${t.id}" aria-pressed="${has}" title="Only changes this device's party journal. To reach your players' devices, use Share with players.">${svg('book')}${has ? 'Learned on this device' : 'Mark as learned here'}</button>`;
   return has ? `<span class="pill t-uncommon" style="align-self:center">Formula learned</span>` : '';
 }
@@ -2341,7 +2344,8 @@ function shareHTML(entries) {
     ${link ? '' : `<p class="small muted">${window.CODEX_ARTIFACT || location.protocol === 'file:' ? 'Links and QR codes need your site’s address: set it under DM tools → Player setup (or <span class="mono">siteUrl</span> in config.json).' : ''}</p>`}
     <p class="small">Players open <b>Journal</b> and enter the code to unlock:</p><ul class="small">${what}</ul>
     <p class="small muted">Click the note to reword it before you copy it or make a card.${entries.length > 1 ? ' Cards are one per entry, each with its own code.' : ''}</p>
-    <div class="frow">${link ? `<button class="btn sm primary" type="button" data-act="copytext" data-text="${esc(link)}">Copy link</button>` : ''}<button class="btn sm${link ? '' : ' primary'}" type="button" data-act="copytext" data-text="${esc(code)}">Copy code</button><button class="btn sm" type="button" data-act="copyhandout" data-code="${esc(code)}">Copy note + ${link ? 'link' : 'code'}</button><button class="btn sm" type="button" data-act="printadd" data-entries="${esc(entries.map(e => e.join(':')).join(','))}">${svg('scroll')}${entries.length > 1 ? `Make ${entries.length} cards` : 'Make a card'}</button>${location.hash.startsWith('#/dm') ? '' : `<button class="btn sm" type="button" data-act="bundle" data-entries="${esc(entries.map(e => e.join(':')).join(','))}">Bundle with more…</button>`}</div></div>`;
+    ${HOSTED.on ? `<div class="frow"><button class="btn sm primary" type="button" data-act="hosthandout" data-code="${esc(code)}" data-entries="${esc(entries.map(e => e.join(':')).join(','))}">${svg('scroll')}Post as a handout in DnDocs…</button><span class="small muted">Players get the note in DnDocs; opening it unlocks this for the party.</span></div>` : ''}
+    <div class="frow">${link ? `<button class="btn sm${HOSTED.on ? '' : ' primary'}" type="button" data-act="copytext" data-text="${esc(link)}">Copy link</button>` : ''}<button class="btn sm${link ? '' : ' primary'}" type="button" data-act="copytext" data-text="${esc(code)}">Copy code</button><button class="btn sm" type="button" data-act="copyhandout" data-code="${esc(code)}">Copy note + ${link ? 'link' : 'code'}</button><button class="btn sm" type="button" data-act="printadd" data-entries="${esc(entries.map(e => e.join(':')).join(','))}">${svg('scroll')}${entries.length > 1 ? `Make ${entries.length} cards` : 'Make a card'}</button>${location.hash.startsWith('#/dm') ? '' : `<button class="btn sm" type="button" data-act="bundle" data-entries="${esc(entries.map(e => e.join(':')).join(','))}">Bundle with more…</button>`}</div></div>`;
 }
 function dcCell(skill, dc) { return showDC() ? `${esc(skill)} <span class="mono">DC ${esc(dc)}</span>` : esc(skill); }
 function pThing(id) {
@@ -2368,7 +2372,7 @@ function pThing(id) {
     <div class="crumbs"><a href="#/${isItem ? 'items' : 'materials'}">${isItem ? 'Items' : 'Materials'}</a><span>/</span><span>${esc(t.name)}</span></div>
     <div class="dhero"><div class="dhead">${ico(t, true)}<div class="meta"><h1>${esc(t.name)}</h1>
       <div class="line">${pill(t.tier)}<span>${esc(isItem ? (CAT_LABEL[t.cat] || t.cat) : 'Material')}</span>${isItem && t.attune ? '<span>· requires attunement</span>' : ''}${t.src === 'Homebrew' ? '<span>· Homebrew</span>' : ''}</div>
-      <div class="actions"><button class="btn sm primary" type="button" data-act="add" data-id="${t.id}">${svg('plus')}Add to satchel</button>${isDM() ? `<button class="btn sm" type="button" data-act="dmgive" data-id="${t.id}" title="Hand it to a player or the party (or take it back)">Give to…</button>` : ''}${HOSTED.on && isDM() ? `<button class="btn sm" type="button" data-act="hostrecord" data-id="${t.id}" title="Make it an item entry in DnDocs, on the character who has it">Record in DnDocs</button>` : ''}${t.recipe && known(t) ? `<button class="btn sm${goals.includes(t.id) ? ' on-goal' : ''}" type="button" data-act="goal" data-id="${t.id}" aria-pressed="${goals.includes(t.id)}">${svg('star')}${goals.includes(t.id) ? 'Tracking as goal' : 'Track as goal'}</button>` : ''}${formulaCtl(t)}${shareBtn(t)}${sat[t.id] || Party.qty(t.id) ? `<span class="small muted" style="align-self:center">You carry ${sat[t.id] || 0}${Party.qty(t.id) ? ` · party has ${Party.qty(t.id)}` : ''}</span>` : ''}${ext}</div></div></div>
+      <div class="actions"><button class="btn sm primary" type="button" data-act="add" data-id="${t.id}">${svg('plus')}Add to satchel</button>${isDM() ? `<button class="btn sm" type="button" data-act="dmgive" data-id="${t.id}" title="Hand it to a player or the party (or take it back)">Give to…</button>` : ''}${HOSTED.on && isDM() ? `<button class="btn sm" type="button" data-act="hostrecord" data-id="${t.id}" title="A DnDocs page for it: lore, pictures, secrets. Who carries it stays in the satchels.">Make a DnDocs page</button>` : ''}${t.recipe && known(t) ? `<button class="btn sm${goals.includes(t.id) ? ' on-goal' : ''}" type="button" data-act="goal" data-id="${t.id}" aria-pressed="${goals.includes(t.id)}">${svg('star')}${goals.includes(t.id) ? 'Tracking as goal' : 'Track as goal'}</button>` : ''}${formulaCtl(t)}${shareBtn(t)}${sat[t.id] || Party.qty(t.id) ? `<span class="small muted" style="align-self:center">You carry ${sat[t.id] || 0}${Party.qty(t.id) ? ` · party has ${Party.qty(t.id)}` : ''}</span>` : ''}${ext}</div></div></div>
       ${figure(t)}
       <div class="dbody">${isItem ? `<p class="effect">${esc(t.effect)}</p>` : `<p class="lede">${esc(t.desc)}</p>`}</div>
       <div class="dfacts"><div class="facts">${facts.map(([k, v]) => `<div class="fact"><span class="k">${k}</span><span class="v">${esc(v)}</span></div>`).join('')}</div>${tags}</div></div>
@@ -2406,6 +2410,7 @@ function pMonster(id) {
       <div class="dbody"><p class="lede">${esc(m.blurb || '')}</p>
       ${(m.env || []).filter(e => seePlace(D.envs.get(e))).length ? `<div class="chips"><span class="small muted">Found in</span>${m.env.filter(e => seePlace(D.envs.get(e))).map(e => `<a class="chip" href="#/place/${e}"><span style="color:${ENV_COLOR[e] || 'inherit'}">●</span> ${esc(envName(e))}</a>`).join('')}</div>` : ''}</div></div>
     <div id="sharebox"></div>
+    ${isDM() ? statFold(m) : ''}
     ${fold('mon.parts', m.salvage ? 'Salvage' : 'Harvestable parts', `
       ${!parts.length ? '<div class="empty">Your notes say nothing about what can be taken from it.</div>' : ''}${hiddenParts && !isDM() ? `<p class="small muted undisc">${parts.length ? 'Hunters say it yields more than your notes mention.' : ''} A hunter’s field notes or a close look at a slain one would tell you more.</p>` : ''}
       <div class="tbl-wrap"${parts.length ? '' : ' hidden'}><table class="ptable"><thead><tr><th>Part</th><th>Yield</th><th>Check</th><th>Keeps</th><th>Harvesting notes</th><th></th></tr></thead><tbody>
@@ -2417,6 +2422,33 @@ function pMonster(id) {
       ${clist.length ? `<div class="list">${clist.slice(0, shown).map(x => rowFor(x.t, ` · uses ${[...x.parts].map(p => D.things.get(p).name.replace(m.name, '').trim() || D.things.get(p).name).join(', ')}`)).join('')}</div>${clist.length > shown ? `<button class="btn more" type="button" data-act="more" data-key="${key}" data-shown="${shown}" data-step="48">Show more (${clist.length - shown})</button>` : ''}` : (isDM() ? '<div class="empty">No recipe names these parts directly, but they fit many "any…" slots. Open a part to see where.</div>' : '')}`, { count: clist.length, hidden: !isDM() && !clist.length && !hiddenCraft })}
     ${webFold(m)}
   </div>`;
+}
+/* ---- SRD stat blocks (statblocks.json, built by tools/statblocks.py), DM view only ---- */
+let STATS = window.CODEX_STATS || null, statsLoading = null;
+function loadStats() {
+  if (STATS || statsLoading) return statsLoading || Promise.resolve(STATS);
+  statsLoading = fetch('statblocks.json').then(r => r.ok ? r.json() : { creatures: {} }).catch(() => ({ creatures: {} })).then(d => { STATS = d.creatures || {}; statsLoading = null; return STATS; });
+  return statsLoading;
+}
+// The few bits of Markdown the stat blocks use: ***Name.*** text, **Label** text, ### Heading, paragraphs.
+function mdLite(txt) {
+  return String(txt || '').split(/\n{2,}/).map(par => {
+    const h = par.match(/^###\s+(.*)$/); if (h) return `<h4 class="sb-h">${esc(h[1])}</h4>`;
+    return `<p>${esc(par).replace(/\*\*\*(.+?)\*\*\*/g, '<b><i>$1</i></b>').replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/ {2}\n/g, '<br>')}</p>`;
+  }).join('');
+}
+function statFold(m) {
+  if (!STATS) { loadStats().then(() => { if (location.hash === '#/monster/' + m.id) rerender(); }); return ''; }
+  const sb = STATS[m.id]; if (!sb) return '';
+  const mod = n => { const v = Math.floor((n - 10) / 2); return (v >= 0 ? '+' : '') + v; };
+  const ab = ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA'].map((a, i) => `<div class="sb-ab"><span>${a}</span><b>${sb.ab[i]}</b><span class="muted">${mod(sb.ab[i])}</span></div>`).join('');
+  const line = (k, v) => v ? `<div><b>${k}</b> ${esc(v)}</div>` : '';
+  return fold('mon.stats', 'Stat block', `<div class="card statblock">
+      <p class="small muted" style="margin:0 0 8px">${esc([sb.size, sb.type].filter(Boolean).join(' ') + (sb.align ? ', ' + sb.align : ''))} · SRD ${sb.ed === '2024' ? '5.2.1' : '5.1'}</p>
+      <div class="sb-lines">${line('Armor Class', sb.ac)}${line('Hit Points', sb.hp)}${line('Speed', sb.speed)}</div>
+      <div class="sb-abs">${ab}</div>
+      <div class="sb-lines">${line('Skills', sb.skills)}${line('Senses', sb.senses)}${line('Languages', sb.languages)}${line('Challenge', sb.cr + (sb.pb ? ' · Proficiency ' + sb.pb : ''))}</div>
+      <div class="sb-text">${mdLite(sb.text)}</div></div>`, { open: false });
 }
 /* ---- detail: place ---- */
 function pPlace(id) {
@@ -2893,6 +2925,13 @@ document.addEventListener('click', ev => {
       toast(`Added ${plural(n, 'part')} to ${el.dataset.to === 'party' ? 'the party satchel' : 'your satchel'}`); el.disabled = true; break;
     }
     case 'hostrecord': { hostRecord(id); break; }
+    case 'hosthandout': {
+      // DnDocs makes it a note for the players (who sees it is chosen there).
+      const entries = el.dataset.entries.split(',').map(x => x.split(':')), box = el.closest('.handout'), note = box && box.querySelector('.handout-text');
+      const names = entries.map(([ty, id]) => { const o = ty === 'C' ? D.monsters.get(id) : ty === 'P' ? D.envs.get(id) : D.things.get(id); return o ? o.name : id; });
+      hostPost({ type: 'codex:entry', action: 'handout', handout: { code: el.dataset.code, title: (entries[0][0] === 'F' ? 'Formula: ' : '') + names.join(', '), text: note ? note.innerText.trim() : '', what: entries.map(([ty], i) => `${cap(CODE_TYPES[ty])}: ${names[i]}`) } });
+      break;
+    }
     case 'dmgive': { giveThingDialog(id); break; }
     case 'giveto': { giveDialog({ id }); break; }
     case 'coingive': { giveDialog({ coins: true }); break; }
@@ -2922,7 +2961,7 @@ document.addEventListener('click', ev => {
       }
       if (err) toast(err); else rerender(); break;
     }
-    case 'teach': { const on = !Party.learned.has(id); Party.teach(id, on); if (on) Party.note(`The party learned the formula for ${D.things.get(id).name}`); toast(on ? 'Marked as learned on this device only. Use Share with players to send it to your players' : 'Formula removed on this device'); break; }
+    case 'teach': { const on = !Party.learned.has(id); Party.teach(id, on); if (on) Party.note(`The party learned the formula for ${D.things.get(id).name}`); toast(HOSTED.on ? (on ? 'The whole party learned it' : 'Taken back from the party') : on ? 'Marked as learned on this device only. Use Share with players to send it to your players' : 'Formula removed on this device'); break; }
     case 'learn': Party.teach(id, true); Party.note(`The party learned the formula for ${D.things.get(id).name}`); toast('Formula learned'); break;
     case 'addroll': {
       if (!lastRoll) break; let n = 0; const toParty = el.dataset.to === 'party';
@@ -3366,8 +3405,15 @@ function wireWeb() {
 
 /* ================================================================ theme */
 function initTheme() {
+  if (HOSTED.embed) {
+    // DnDocs' look (parchment, Cinzel and Spectral).
+    document.documentElement.classList.add('embedded'); document.documentElement.setAttribute('data-theme', 'light');
+    const f = document.createElement('link'); f.rel = 'stylesheet'; f.href = 'https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap'; document.head.appendChild(f);
+    return;
+  }
+  // Dark unless someone picked light (the moon/sun button remembers it).
   const saved = store.get('scavengers-codex.theme', null);
-  if (saved) document.documentElement.setAttribute('data-theme', saved);
+  document.documentElement.setAttribute('data-theme', saved === 'light' ? 'light' : 'dark');
   $('#themeBtn').addEventListener('click', () => {
     const cur = document.documentElement.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     const next = cur === 'dark' ? 'light' : 'dark';

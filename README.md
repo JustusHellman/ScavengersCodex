@@ -11,6 +11,7 @@ A harvesting and crafting handbook for D&D 5e. You skin, harvest and forage comp
 - **DM PIN:** DM view can be locked with a PIN set in `config.json`, so curious players stay in player view.
 - **Specimen plates:** every creature, item, material and place has a generated illustration. Real pictures can be dropped in at any time (see below).
 - **Party satchel:** a shared inventory plus learned formulas, kept on each device and shared by sending a link or party code. No server or database is needed.
+- **Stat blocks:** every SRD creature's stat block (AC, hit points, abilities, traits, actions) on its page in DM view. DnDocs uses them for battle-map tokens. `statblocks.json` is built once by `tools/statblocks.py` (see its header). `tokens.json` holds a round token picture for each kind of creature, drawn from the specimen plates (`node tools/tokens.js` after changing `plates.js`).
 - **DM tools:** forage expeditions (every find has its own lore-based danger and fitting creatures, and guardians vary), wandering traders by settlement size and speciality, harvesting a whole fight at once, and a session recap.
 - **Party clock and spoilage:** move the clock as time passes in the game. Perishable parts count down, get flagged before they spoil, and can be preserved (salts, an essence vessel, drying).
 - **Coin purses:** your own purse and the party's, in gp/sp/cp. Starting a craft pays its reagent gold (your purse first, then the party's; abandoning it before any work gives it back). Leave both purses empty to ignore coin altogether.
@@ -82,11 +83,15 @@ To use an image hosted elsewhere, or to credit an artist, add `"img": "https://�
 at `?embed=dndocs`. There the codex saves to the DnDocs campaign instead of this browser: the party
 satchel, clock, workbench, garden and journal are shared live by everyone in the campaign, each player
 has their own satchel, and DnDocs says who the DM is (no PIN). The DM's homebrew choice and added
-packs apply to the whole campaign. *Record in DnDocs* on an item page (DM) makes it a DnDocs item
-entry. In a campaign players can also **give** items or coin straight to another player (*Give…* in
+packs apply to the whole campaign. *Make a DnDocs page* on an item page (DM) gives it a DnDocs item
+entry for lore and pictures; who carries it is still the satchels' business. In a campaign players can also **give** items or coin straight to another player (*Give…* in
 the satchel and purse); it arrives in their satchel the next time they open DnDocs. DnDocs shows each
 character's satchel and purse under *Carried* on their page. Opened on its own, the codex works
 exactly as before.
+
+Inside DnDocs the codex keeps its own sidebar and search but takes on DnDocs' parchment look. Sharing works through the campaign: *Teach the party* (DM) gives a formula to
+everyone at once, handout links and QR codes open DnDocs and unlock for the whole party, and *Post as
+a handout in DnDocs* turns a handout into a DnDocs note for everyone or chosen players.
 
 DnDocs links its entries to codex ids and reads `catalog.json` (every creature, material and item;
 built by `tools/catalog.py` when the site deploys). So **ids are a promise**: `tools/validate.py`
@@ -134,6 +139,8 @@ A pack may use anything in the base codex. If it uses another pack's content, li
 See `PLAYTEST.md`. Run `python3 tools/playtest.py` after editing data to catch unreachable items, dead-end materials, grind and mis-tiered keystones. It also simulates 3,000 growing seasons for every plant in `data/cultivation.json` and flags any bed that earns more than a skilled worker's wage.
 
 ## Third-party code
+`statblocks.json` (the SRD stat blocks of the codex creatures) was converted from the 5e-database project by Adrian Padua, Christopher Ward and contributors (MIT licence, https://github.com/5e-bits/5e-database) with `tools/statblocks.py`; the stat blocks themselves are SRD content (see below).
+
 `qrcode.js` is the QR Code Generator for JavaScript by Kazuhiko Arase (MIT licence, https://github.com/kazuhikoarase/qrcode-generator). "QR Code" is a registered trademark of DENSO WAVE INCORPORATED.
 
 ## Legal
@@ -141,4 +148,4 @@ This work includes material from the System Reference Document 5.2.1 ("SRD 5.2.1
 
 This work includes material taken from the System Reference Document 5.1 ("SRD 5.1") by Wizards of the Coast LLC, available at https://dnd.wizards.com/resources/systems-reference-document. The SRD 5.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.
 
-Item effects are short paraphrases. Harvest data, recipes, places and Homebrew items are original. This is unofficial fan content, not approved or endorsed by Wizards of the Coast.
+Creature stat blocks are reproduced from the SRD 5.1 and SRD 5.2.1. Item effects are short paraphrases. Harvest data, recipes, places and Homebrew items are original. This is unofficial fan content, not approved or endorsed by Wizards of the Coast.
