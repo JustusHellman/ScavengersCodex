@@ -180,7 +180,7 @@ function hostHello() {
       else if (HOSTED.ready && d.type === 'dndocs:open') hostOpen(d.open);
       else if (HOSTED.ready && d.type === 'dndocs:saved' && d.ok === false) toast(d.error ? 'Not saved: ' + d.error : 'Not saved');
       else if (HOSTED.ready && d.type === 'dndocs:give') { if (d.ok === false) hostGiftFailed(d.id, d.error); else HOSTED.gifts.delete(d.id); }
-      else if (HOSTED.ready && d.type === 'dndocs:members') { HOSTED.members = Array.isArray(d.members) ? d.members : []; if (D && location.hash.startsWith('#/dm')) hostRefresh(); }
+      else if (HOSTED.ready && d.type === 'dndocs:members') { HOSTED.members = Array.isArray(d.members) ? d.members : []; if (D && (location.hash.startsWith('#/dm') || (location.hash.startsWith('#/satchel') && satView === 'players'))) hostRefresh(); }
       else if (HOSTED.ready && d.type === 'dndocs:bank' && d.ok === false) toast(`Not saved in DnDocs${d.error ? ': ' + d.error : ''}`);
       else if (HOSTED.ready && d.type === 'dndocs:unid') { toast(d.ok ? (HOSTED.unidMsg || 'Saved') : `Not saved in DnDocs${d.error ? ': ' + d.error : ''}`); HOSTED.unidMsg = ''; }
       else if (HOSTED.ready && d.type === 'dndocs:entry') toast(d.ok ? `DnDocs page made${d.name ? ': ' + d.name : ''}` : (d.error || 'No page made'));
@@ -1732,7 +1732,7 @@ function rollHarvest(m, bon, adv, dis) {
     return { h, t: D.things.get(h.m), nat, tot, q, out: bd, hazard: bd[0] === 'Ruined' && HAZARD_RE.test(h.note || '') ? h.note : '' };
   });
 }
-const DMS = { bundle: [], player: null, startPlayer: null, newPin: '', tab: 'forage', env: 'forest', hours: 4, bonus: 4, adv: false, lvl: 5, forage: null, trader: null, drops: [], dropOut: null, fight: {}, fightOut: [], fg: {}, fgOut: [], town: 'town', spec: 'general', theme: '', region: '' };
+const DMS = { place: 'hovel', wealth: '', lookFor: '', search: null, srchWho: 'party', bundle: [], player: null, startPlayer: null, newPin: '', tab: 'forage', env: 'forest', hours: 4, bonus: 4, adv: false, lvl: 5, forage: null, trader: null, drops: [], dropOut: null, fight: {}, fightOut: [], fg: {}, fgOut: [], town: 'town', spec: 'general', theme: '', region: '' };
 const TOWN = { hamlet: { n: 5, cap: 'mundane', gp: 25, label: 'Hamlet' }, village: { n: 8, cap: 'common', gp: 150, label: 'Village' }, town: { n: 12, cap: 'uncommon', gp: 1000, label: 'Town' }, city: { n: 18, cap: 'uncommon', rare: 0.08, gp: 5000, label: 'City' }, metropolis: { n: 26, cap: 'rare', rare: 0.05, gp: Infinity, label: 'Metropolis' } };
 const SPEC = {
   general: { label: 'General goods', tags: null },
@@ -1893,6 +1893,113 @@ function rollTrader() {
   const nm = `${TRADER_A[rnd(TRADER_A.length)]} ${TRADER_B[rnd(TRADER_B.length)]}'s ${TRADER_C[DMS.spec][rnd(3)]}`;
   const buys = [...new Set([...(th.tags || []).slice(0, 4)])];
   DMS.trader = { nm, T, S, th, stock, buys, region: DMS.region };
+}
+// ---- searching a place: what a looted home, crypt or camp turns up ------------------------------
+// Each place says what fits there (tags, kinds of item, specific things), where things turn up,
+// and how rich it usually is. The roll is generous on purpose: the DM ticks what was really found.
+const WEALTH = {
+  poor: { label: 'Poor', cap: 'common', magic: 0.02, extra: 0, coin: () => d(2, 10) + 10 * d(1, 6) },
+  modest: { label: 'Modest', cap: 'common', magic: 0.05, extra: 1, coin: () => 10 * d(2, 6) + 100 * d(1, 4) },
+  comfortable: { label: 'Comfortable', cap: 'uncommon', magic: 0.1, extra: 2, coin: () => 100 * d(2, 10) },
+  wealthy: { label: 'Wealthy', cap: 'rare', magic: 0.18, extra: 3, coin: () => 100 * (d(4, 10) + 10 * d(1, 4)) },
+  hoard: { label: 'A hoard', cap: 'very-rare', magic: 0.32, extra: 5, coin: lvl => 100 * 10 * d(Math.max(2, Math.ceil(lvl / 2)), 10) }
+};
+function d(n, s) { let t = 0; for (let i = 0; i < n; i++) t += 1 + rnd(s); return t; }
+// What the party's level allows at most, whatever the place.
+const LEVEL_CAP = lvl => lvl <= 4 ? 'uncommon' : lvl <= 10 ? 'rare' : lvl <= 16 ? 'very-rare' : 'legendary';
+const PLACES = {
+  hovel: { label: 'Poor home or hovel', wealth: 'poor', n: 8, tags: ['food', 'cloth', 'herb', 'thread', 'wood', 'wax', 'salt'], cats: ['provision', 'tool'], ids: ['candle', 'blanket', 'bowl', 'jug', 'bucket', 'clothes-common', 'rope', 'soap', 'dagger', 'tinderbox', 'iron-pot', 'commoners-sundries', 'whetstone'], spots: ['under the straw mattress', 'in a cracked jug on the shelf', 'behind a loose stone by the hearth', 'tucked up in the rafters', 'in a sack by the door', 'wrapped in a rag under the floorboards'] },
+  townhouse: { label: 'Townhouse', wealth: 'comfortable', n: 10, tags: ['cloth', 'glass', 'ink', 'food', 'wax', 'silk'], cats: ['gear', 'tool', 'potion'], ids: ['clothes-fine', 'lamp', 'mirror', 'hourglass', 'tome', 'deck-of-cards', 'dice-set', 'brooch', 'necklace', 'candle', 'chest', 'box', 'ink-pen', 'ink-bottle', 'parchment', 'lock', 'coin-purse', 'potion-of-healing'], spots: ['in a locked writing desk', 'in a jewellery box on the dresser', 'in the wardrobe, behind the winter cloaks', 'in the pantry', 'under a loose board beneath the bed', 'in a strongbox in the cellar'] },
+  manor: { label: 'Noble manor', wealth: 'wealthy', n: 12, tags: ['gem', 'pearl', 'silk', 'cloth', 'charm', 'relic', 'glass', 'metal'], cats: ['ring', 'wondrous', 'weapon', 'potion'], ids: ['clothes-fine', 'mirror', 'brooch', 'necklace', 'circlet', 'ring-band', 'medallion', 'carpet', 'spyglass', 'hourglass', 'fan', 'noble-signet', 'fine-silk-scraps', 'tome', 'gold-leaf', 'pearl', 'chest', 'lock'], spots: ['in the lord’s study safe', 'in a hidden drawer of the dressing table', 'in the wine cellar', 'behind a portrait in the gallery', 'in the armoury', 'in the lady’s jewellery case', 'in a locked chest in the master bedroom'] },
+  tavern: { label: 'Tavern or inn', wealth: 'modest', n: 10, tags: ['food', 'liquid', 'salt', 'wax', 'cloth'], cats: ['provision', 'tool'], ids: ['deck-of-cards', 'dice-set', 'jug', 'bottle', 'candle', 'lantern', 'coin-purse', 'commoners-sundries', 'brewers-supplies', 'cooks-utensils', 'iron-pot', 'barrel', 'blanket', 'bedroll'], spots: ['behind the bar', 'in the cellar among the casks', 'left in a guest room', 'in the cashbox under the counter', 'in the kitchen', 'under a table in the corner'] },
+  shop: { label: 'Merchant’s shop', wealth: 'comfortable', n: 12, tags: ['cloth', 'metal', 'glass', 'wood', 'leather', 'thread', 'wax', 'oil'], cats: ['gear', 'tool', 'weapon', 'armor', 'ammunition', 'potion'], ids: ['chest', 'lock', 'coin-purse', 'ink-pen', 'parchment', 'lantern', 'rope', 'backpack', 'pouch', 'bag'], spots: ['on the shelves', 'in the stockroom', 'in the strongbox under the counter', 'in crates waiting to be unpacked', 'in the merchant’s ledger drawer'] },
+  smithy: { label: 'Smithy or forge', wealth: 'modest', n: 10, tags: ['metal', 'ingot', 'ore', 'stone', 'fire', 'leather'], cats: ['weapon', 'armor', 'ammunition', 'tool'], ids: ['smiths-tools', 'scrap-steel', 'salvaged-arrowheads', 'scrap-chain-links', 'whetstone', 'chain', 'iron-spikes', 'tinkers-tools', 'gold-wire'], spots: ['on the weapon rack', 'in a bin of offcuts', 'beside the anvil', 'in the smith’s coin tin', 'among unfinished commissions'] },
+  alchemist: { label: 'Alchemist’s or herbalist’s workshop', wealth: 'comfortable', n: 12, tags: ['herb', 'flower', 'root', 'fungus', 'moss', 'reagent', 'liquid', 'salt', 'resin', 'sap', 'healing', 'poison', 'oil'], cats: ['potion', 'poison', 'oil'], ids: ['alchemists-supplies', 'herbalism-kit', 'poisoners-kit', 'bottle', 'flask', 'quicksilver', 'healers-kit'], spots: ['on the drying racks', 'in labelled jars on the shelf', 'in a locked cabinet', 'on the workbench, half-finished', 'in the cold cellar'] },
+  wizard: { label: 'Wizard’s study or tower', wealth: 'wealthy', n: 12, tags: ['arcane', 'ink', 'knowledge', 'crystal', 'essence', 'dust', 'reagent', 'gem'], cats: ['scroll', 'wand', 'staff', 'rod', 'ring', 'wondrous', 'potion'], ids: ['spellbook', 'tome', 'orb', 'crystal', 'lens', 'component-pouch', 'spellbook-pages', 'arcane-focus-shard', 'mage-spell-component-pouch', 'mage-spellbook-folio', 'arcane-ink', 'ink-pen', 'parchment', 'hourglass', 'magnifying-glass', 'scroll-case'], spots: ['on the cluttered desk', 'inside a warded chest', 'on a high bookshelf', 'in the summoning room', 'in a drawer that hums faintly', 'in a jar labelled in a language no one reads'] },
+  temple: { label: 'Temple or shrine', wealth: 'comfortable', n: 10, tags: ['radiant', 'blessing', 'celestial', 'relic', 'healing', 'wax', 'cloth'], cats: ['potion', 'scroll', 'wondrous'], ids: ['holy-symbol', 'censer', 'candle', 'priest-blessed-holy-water', 'acolyte-prayer-beads', 'holy-symbol-fragment', 'holy-spring-water', 'healers-kit', 'tome'], spots: ['on the altar', 'in the offering box', 'in the vestry', 'in the reliquary behind the altar', 'in the priest’s quarters'] },
+  library: { label: 'Library or scriptorium', wealth: 'comfortable', n: 10, tags: ['ink', 'knowledge', 'wax', 'cloth'], cats: ['scroll'], ids: ['tome', 'spellbook-pages', 'calligraphers-supplies', 'scroll-case', 'lens', 'magnifying-glass', 'candle', 'ink-pen', 'ink-bottle', 'parchment', 'paper', 'scout-trail-map', 'spy-cipher-notes'], spots: ['in the restricted section', 'on the copying desks', 'between the pages of a dull tome', 'in the librarian’s locked drawer', 'in the map room'] },
+  bandit: { label: 'Bandit camp or hideout', wealth: 'modest', n: 12, tags: ['salvage', 'metal', 'leather', 'food', 'cloth'], cats: ['weapon', 'armor', 'ammunition', 'provision'], ids: ['coin-purse', 'bandit-hideout-map', 'thieves-tools-picks', 'rope', 'tent', 'bedroll', 'rations', 'waterskin', 'torch', 'tinderbox', 'manacles', 'chest', 'goblin-scrap-trinkets', 'scrap-steel', 'potion-of-healing'], spots: ['in the leader’s tent', 'buried under the campfire ashes', 'in a strongbox stolen from a caravan', 'on a bedroll', 'in the lookout post', 'in a sack of stolen goods'] },
+  thieves: { label: 'Thieves’ den', wealth: 'comfortable', n: 12, tags: ['stealth', 'cunning', 'poison', 'gem', 'metal', 'cloth'], cats: ['poison', 'weapon', 'tool', 'potion'], ids: ['thieves-tools-picks', 'thieves-tools', 'spy-cipher-notes', 'assassins-garrote-wire', 'disguise-kit', 'forgery-kit', 'coin-purse', 'lock', 'dagger', 'noble-signet', 'brooch', 'necklace', 'ring-band'], spots: ['in the fence’s strongbox', 'behind a false wall', 'in a hollowed-out book', 'under the floor of the counting room', 'on the planning table'] },
+  barracks: { label: 'Guard post or barracks', wealth: 'modest', n: 10, tags: ['metal', 'leather', 'protection', 'food'], cats: ['weapon', 'armor', 'ammunition', 'provision'], ids: ['guard-watch-insignia', 'veteran-campaign-medal', 'scrap-chain-links', 'hobgoblin-military-kit', 'rations', 'whetstone', 'manacles', 'lantern', 'signal-whistle', 'guard-captain-signal-horn', 'dice-set', 'deck-of-cards', 'healers-kit'], spots: ['in the armoury', 'in a soldier’s footlocker', 'in the captain’s office', 'in the mess hall', 'in the lock-up'] },
+  battlefield: { label: 'Old battlefield', wealth: 'poor', n: 12, tags: ['salvage', 'metal', 'bone', 'leather', 'protection'], cats: ['weapon', 'armor', 'ammunition'], ids: ['scrap-steel', 'salvaged-arrowheads', 'battered-shield-planks', 'scrap-chain-links', 'veteran-campaign-medal', 'knight-heraldic-plate', 'hobgoblin-war-banner', 'skeleton-grave-gear', 'coin-purse'], spots: ['on a fallen soldier', 'half-buried in the mud', 'under a broken wagon', 'in an abandoned trench', 'by the shattered standard'] },
+  ruins: { label: 'Ancient ruins', wealth: 'modest', n: 12, tags: ['relic', 'stone', 'metal', 'gem', 'salvage', 'knowledge', 'arcane', 'dust'], cats: ['wondrous', 'ring', 'weapon', 'scroll'], ids: ['tome', 'polished-stone', 'figurine-blank', 'medallion', 'holy-symbol-fragment', 'skeleton-grave-gear', 'scout-trail-map'], env: ['ruins'], spots: ['under fallen masonry', 'in a sealed alcove', 'in the old treasury', 'behind a collapsed door', 'on a crumbling statue’s plinth', 'in the dust of a forgotten shrine'] },
+  crypt: { label: 'Crypt or tomb', wealth: 'wealthy', n: 12, tags: ['undead', 'necrotic', 'death', 'relic', 'bone', 'dust', 'gem', 'metal', 'curse'], cats: ['wondrous', 'ring', 'weapon', 'armor'], ids: ['skeleton-grave-gear', 'wight-barrow-blade', 'holy-symbol-fragment', 'medallion', 'circlet', 'necklace', 'ring-band', 'censer', 'candle', 'vampire-familiar-sigil-ring', 'warhorse-skeleton-barding'], env: ['ruins', 'shadowfell'], spots: ['in the sarcophagus, on the body', 'among the grave goods', 'in a niche of the ossuary', 'under the funerary slab', 'in an offering bowl', 'on a skeletal hand that will not let go'] },
+  lair: { label: 'Cave or monster lair', wealth: 'modest', n: 12, parts: true, tags: ['bone', 'hide', 'tooth', 'claw', 'horn', 'salvage', 'gem', 'ore', 'fungus', 'stone'], cats: ['weapon', 'armor', 'wondrous'], ids: ['gelatinous-cube-undigested-hoard', 'ogre-sack-trophies', 'hill-giant-sack-trinkets', 'goblin-scrap-trinkets', 'coin-purse', 'skeleton-grave-gear', 'scrap-steel', 'deep-gem-cluster'], env: ['underdark', 'mountain', 'hill'], spots: ['in the nest of bones', 'on a long-dead adventurer', 'scattered across the cave floor', 'in a pile the creature hoarded', 'in a crevice at the back', 'half-digested, but salvageable'] },
+  wildcamp: { label: 'Abandoned camp in the wilds', wealth: 'poor', n: 9, tags: ['food', 'herb', 'salvage', 'leather', 'thread', 'wood'], cats: ['provision', 'ammunition'], ids: ['tent', 'bedroll', 'rope', 'torch', 'rations', 'waterskin', 'hunting-trap', 'mess-kit', 'tinderbox', 'scout-trail-map', 'coin-purse', 'healers-kit'], env: ['forest', 'grassland', 'hill'], spots: ['in a torn tent', 'by the cold firepit', 'hung from a tree to keep it from animals', 'in an abandoned pack', 'under a bedroll'] },
+  hunter: { label: 'Hunter’s or trapper’s cabin', wealth: 'modest', n: 10, parts: true, tags: ['hide', 'fur', 'bone', 'horn', 'feather', 'sinew', 'leather', 'tooth', 'claw', 'meat', 'fat'], cats: ['weapon', 'ammunition', 'provision'], ids: ['hunting-trap', 'longbow', 'shortbow', 'arrows', 'quiver', 'dagger', 'rope', 'leatherworkers-tools', 'harvesting-kit', 'bowstring', 'tinderbox', 'waterskin'], env: ['forest', 'hill', 'arctic'], spots: ['stretched on the drying frames', 'hung from the rafters', 'in the smokehouse', 'on the workbench', 'in a chest under the bunk'] },
+  ship: { label: 'Ship’s hold or dock warehouse', wealth: 'comfortable', n: 12, tags: ['salt', 'cloth', 'silk', 'thread', 'food', 'pearl', 'coral', 'shell', 'water', 'oil', 'resin'], cats: ['provision', 'weapon'], ids: ['rope', 'barrel', 'chest', 'lantern', 'spyglass', 'pirate-belaying-pin', 'pirate-captain-treasure-chart', 'pearl', 'coin-purse', 'rations', 'navigators-tools'], env: ['coast', 'underwater'], spots: ['in a crate marked for another port', 'in the captain’s cabin', 'among the ballast', 'in a sealed barrel', 'in a smuggler’s compartment under the deck'] },
+  sewer: { label: 'Sewers', wealth: 'poor', n: 9, tags: ['slime', 'ooze', 'salvage', 'fungus', 'metal'], cats: [], ids: ['commoners-sundries', 'coin-purse', 'ring-band', 'gelatinous-cube-undigested-hoard', 'scrap-steel', 'goblin-scrap-trinkets', 'dagger', 'lantern'], env: ['urban', 'underdark'], spots: ['caught in a grate', 'in the muck at the bottom of a cistern', 'on a drowned body', 'in a smugglers’ cache behind a loose brick', 'in a rat’s nest'] },
+  mine: { label: 'Mine', wealth: 'modest', n: 10, tags: ['ore', 'metal', 'stone', 'gem', 'crystal', 'earth'], cats: ['tool'], ids: ['miners-pick', 'shovel', 'lantern', 'rope', 'chain', 'iron-spikes', 'torch', 'gold-ore', 'deep-gem-cluster', 'masons-tools'], env: ['mountain', 'underdark', 'hill'], spots: ['in an ore cart', 'at the end of an abandoned shaft', 'in the foreman’s hut', 'in a collapsed side tunnel', 'glinting in the rock face'] },
+  cult: { label: 'Cultist hideout', wealth: 'comfortable', n: 12, tags: ['fiendish', 'curse', 'infernal', 'abyssal', 'relic', 'necrotic', 'poison', 'shadow'], cats: ['poison', 'wondrous', 'scroll', 'weapon'], ids: ['cult-idol', 'cultist-ritual-dagger', 'cult-fanatic-dark-pact-page', 'candle', 'censer', 'tome', 'gnoll-bone-fetish', 'coin-purse'], env: ['lower-planes'], spots: ['on the ritual altar', 'in the high priest’s chamber', 'inside a hollow idol', 'in the novices’ dormitory', 'in a chest sealed with wax and blood'] },
+  farm: { label: 'Farm or barn', wealth: 'poor', n: 8, tags: ['food', 'seed', 'herb', 'wood', 'hair', 'fat', 'fruit', 'leather'], cats: ['provision', 'tool'], ids: ['rope', 'bucket', 'hunting-trap', 'shovel', 'lantern', 'blanket', 'iron-pot', 'clothes-common', 'whetstone'], env: ['grassland', 'forest'], spots: ['in the hayloft', 'in the root cellar', 'in the tack room', 'in a tin buried by the well', 'in the farmhouse kitchen'] },
+  dragon: { label: 'Dragon’s hoard', wealth: 'hoard', n: 18, tags: ['gem', 'pearl', 'metal', 'relic', 'crystal', 'dragon'], cats: ['wondrous', 'ring', 'weapon', 'armor', 'staff', 'wand', 'rod', 'potion', 'scroll'], ids: ['gold-ingot', 'gold-leaf', 'pearl', 'black-pearl', 'circlet', 'necklace', 'medallion', 'chest'], spots: ['heaped in the hoard', 'beneath the sleeping dragon', 'in a chest the dragon could not open', 'on the bones of a would-be thief', 'pressed into the dragon’s bed of coins'] }
+};
+// Fresh body parts don't lie around waiting to be found; only lairs and hunters keep (dried) trophies.
+const BODY_TAGS = ['heart', 'blood', 'ichor', 'organ', 'brain', 'eye', 'tongue', 'gland', 'meat', 'essence', 'ectoplasm'];
+const lasts = x => !x.perish || x.perish === 'stable' || x.perish === '1 week';
+function searchScore(x, P, words) {
+  let sc = 0;
+  for (const tg of P.tags || []) if (x.tags.includes(tg)) sc += 1;
+  if (x.kind === 'item' && (P.cats || []).includes(x.cat)) sc += 2;
+  if ((P.ids || []).includes(x.id)) sc += 4;
+  if ((P.env || []).length) { const lands = landsOf(x.id); if (P.env.some(e => lands.has(e))) sc += 1; }
+  for (const w of words) if (x.tags.includes(w) || x.name.toLowerCase().includes(w) || (x.cat || '') === w) sc += 3;
+  return sc;
+}
+function searchQty(x) {
+  if (x.cat === 'ammunition') return d(2, 10);
+  if (x.kind === 'material') return [d(1, 6), d(1, 4), d(1, 3), 1, 1, 1][ti(x.tier)];
+  if (['potion', 'poison', 'oil', 'provision', 'scroll'].includes(x.cat)) return ti(x.tier) <= 1 ? d(1, 3) : 1;
+  return 1;
+}
+function rollSearch(more) {
+  const P = PLACES[DMS.place] || PLACES.hovel, W = WEALTH[DMS.wealth || P.wealth] || WEALTH.poor;
+  const capI = Math.min(ti(W.cap), ti(LEVEL_CAP(DMS.lvl))), words = String(DMS.lookFor || '').toLowerCase().split(/[^a-z-]+/).filter(w => w.length > 2);
+  const prev = more && DMS.search ? DMS.search : null, seen = new Set(prev ? prev.rows.map(r => r.x.id) : []);
+  const ok = x => x.value != null && !seen.has(x.id) && ti(x.tier) <= capI && (x.kind === 'item' || (lasts(x) && (P.parts || !BODY_TAGS.some(t => x.tags.includes(t)))));
+  const all = [...D.things.values()].filter(ok);
+  // Magic items only come through the (wealth-dependent) magic roll below; everyday finds are
+  // mundane gear, materials and the odd common potion or scroll.
+  const everyday = x => x.kind === 'material' || x.tier === 'mundane' || (ti(x.tier) <= 1 && ['potion', 'poison', 'oil', 'ammunition', 'scroll', 'provision'].includes(x.cat));
+  const fitting = all.filter(everyday).map(x => ({ x, sc: searchScore(x, P, words) })).filter(o => o.sc >= 2);
+  const magicPool = all.filter(x => x.kind === 'item' && x.tier !== 'mundane' && ((P.cats || []).includes(x.cat) || searchScore(x, P, words) >= 2));
+  const formOf = x => x.kind === 'item' ? 'cat:' + x.cat : (x.tags.find(tg => FORM_TAGS.includes(tg)) || 'other'), formN = {};
+  const rows = [];
+  const take = x => { if (!x || seen.has(x.id)) return; seen.add(x.id); formN[formOf(x)] = (formN[formOf(x)] || 0) + 1; rows.push({ x, q: searchQty(x), where: P.spots[rnd(P.spots.length)], dc: Math.random() < 0.3 ? 10 + 2 * rnd(4) + ti(x.tier) : 0, on: false }); };
+  const n = more ? 6 : P.n + W.extra;
+  for (let i = 0; i < n * 8 && rows.length < n; i++) {
+    if (magicPool.length && Math.random() < W.magic) { take(pickW(magicPool.filter(x => !seen.has(x.id)), x => 1 / (1 + ti(x.tier)))); continue; }
+    const pool = fitting.filter(o => !seen.has(o.x.id)); if (!pool.length) break;
+    // fits the place best, more ordinary things more often, and some variety
+    take(pickW(pool, o => o.sc * o.sc * (ti(o.x.tier) === 0 ? 1.6 : 1 / ti(o.x.tier)) / (1 + 2 * (formN[formOf(o.x)] || 0))).x);
+  }
+  rows.sort((a, b) => ti(b.x.tier) - ti(a.x.tier) || byName(a.x, b.x));
+  if (prev) { prev.rows.push(...rows); return; }
+  DMS.search = { P, W, rows, coin: W.coin(DMS.lvl), coinOn: false, lvl: DMS.lvl };
+}
+function searchTab() {
+  const S = DMS.search, P = PLACES[DMS.place] || PLACES.hovel, wealth = DMS.wealth || P.wealth;
+  const picked = S ? S.rows.filter(r => r.on) : [];
+  return `<div class="card roller"><h2 style="margin-top:0">1 · Where are they looking?</h2><div class="frow">
+      <label class="skill-in" for="dmPlace">Place <select class="select" id="dmPlace" data-dm="place">${Object.entries(PLACES).map(([k, v]) => `<option value="${k}"${(DMS.place || 'hovel') === k ? ' selected' : ''}>${esc(v.label)}</option>`).join('')}</select></label>
+      <label class="skill-in" for="dmWealth">How well off <select class="select" id="dmWealth" data-dm="wealth">${Object.entries(WEALTH).map(([k, v]) => `<option value="${k}"${wealth === k ? ' selected' : ''}>${v.label}${k === P.wealth ? ' (usual)' : ''}</option>`).join('')}</select></label>
+      <label class="skill-in" for="dmLvl2">Party level <input class="textin mono" type="number" min="1" max="20" id="dmLvl2" data-dm="lvl" value="${DMS.lvl}"></label>
+      <label class="skill-in" for="dmLook">Also look for <input class="textin" id="dmLook" data-dm="lookFor" placeholder="e.g. fire, books, dwarven" value="${esc(DMS.lookFor || '')}" style="width:180px"></label>
+      <button class="btn primary sm" type="button" data-act="dmsearch">Search the place</button></div>
+      <p class="small muted">Turns up more than they will really find, on purpose: tick what fits the scene and hand it out. Rarer things are less likely, poorer places hold less, and nothing goes past what suits the party's level. About a third of the finds are hidden (a check and DC is suggested). “Also look for” favours things matching those words (tags like <i>fire</i>, <i>holy</i> or <i>poison</i>, or parts of names).</p></div>
+    ${S ? `<div class="card roller"><h2 style="margin-top:0">2 · What turns up · ${esc(S.P.label)}</h2>
+      <div class="tbl-wrap"><table class="hman"><thead><tr><th></th><th>Find</th><th>How many</th><th>Where</th><th>Worth</th></tr></thead><tbody>
+      <tr><td><input type="checkbox" data-sk="coinOn"${S.coinOn ? ' checked' : ''} aria-label="Coins found"></td><td><b>Coins</b><div class="note">loose change, purses and savings</div></td><td colspan="2"><input class="textin mono" data-sk="coin" data-coin value="${esc(fmtCoins(S.coin))}" aria-label="How much coin" style="max-width:160px"> <span class="small muted coin-read"></span></td><td></td></tr>
+      ${S.rows.map((r, i) => `<tr><td><input type="checkbox" data-sk="on" data-i="${i}"${r.on ? ' checked' : ''} aria-label="${esc(r.x.name)} found"></td>
+        <td><a href="${linkOf(r.x)}"><b>${esc(r.x.name)}</b></a> ${pill(r.x.tier)}<div class="note">${esc(thingSub(r.x))}</div></td>
+        <td><input class="textin mono" type="number" min="1" data-sk="q" data-i="${i}" value="${r.q}" aria-label="How many ${esc(r.x.name)}" style="width:64px"></td>
+        <td class="small">${esc(cap(r.where))}${r.dc ? `<div class="note">Hidden: Investigation DC ${r.dc}</div>` : ''}</td>
+        <td class="mono small">${r.x.value != null ? fmtGp(r.x.value * r.q) : '—'}</td></tr>`).join('')}
+      </tbody></table></div>
+      <div class="frow" style="margin-top:10px"><button class="btn sm" type="button" data-act="srchmore">Search a bit more</button><button class="btn sm" type="button" data-act="srchall">${S.rows.every(r => r.on) ? 'Untick all' : 'Tick all'}</button></div></div>
+    <div class="card roller"><h2 style="margin-top:0">3 · Hand it out</h2>
+      <div class="frow"><label class="skill-in">To <select class="select" id="srchWho">${targetOpts(DMS.srchWho || 'party')}</select></label><button class="btn primary sm" type="button" data-act="srchgive"${picked.length || S.coinOn ? '' : ' disabled'}>${svg('plus')}Give ${picked.length ? plural(picked.length, 'find') : ''}${picked.length && S.coinOn ? ' and ' : ''}${S.coinOn ? 'the coins' : ''}${!picked.length && !S.coinOn ? 'what’s ticked' : ''}</button></div>
+      <p class="small muted">Nothing comes out of your own satchel or purse. Hand out the rest to someone else, or search again.</p></div>` : ''}`;
 }
 // one row per part per kind of creature; the yield covers every body of that kind
 function fightRows() {
@@ -2076,7 +2183,7 @@ function hbAct(act, el) {
 function pDM() {
   const envOpts = [...D.envs.values()].map(e => `<option value="${e.id}"${DMS.env === e.id ? ' selected' : ''}>${esc(e.name)}</option>`).join('');
   if (!isDM()) return `<div class="page"><h1>DM tools</h1><div class="empty">These tools are for the DM.${HOSTED.on ? '' : pinSet() ? ' Switch to DM view with the PIN to use them.' : ' Switch to DM view at the top to use them.'}</div></div>`;
-  const tabs = [['forage', 'Forage expedition'], ['trader', 'Wandering trader'], ['drops', 'After the fight'], ['bank', 'Hand out'], ['session', 'Session'], ['handouts', 'Handouts'], ['settings', 'Player setup & PIN']];
+  const tabs = [['forage', 'Forage expedition'], ['search', 'Search a place'], ['trader', 'Wandering trader'], ['drops', 'After the fight'], ['bank', 'Hand out'], ['session', 'Session'], ['handouts', 'Handouts'], ['settings', 'Player setup & PIN']];
   if (window.CodexHomebrew) tabs.splice(5, 0, ['homebrew', 'Homebrew']);
   let body = '';
   if (DMS.tab === 'forage') {
@@ -2126,6 +2233,8 @@ function pDM() {
           <p class="small muted" style="margin:0">Pays full value for: ${T.buys.map(esc).join(', ')} goods. Everything else at half.</p></div>
         <div class="tbl-wrap"><table><thead><tr><th>Goods</th><th>In stock</th><th>Price each</th><th></th></tr></thead><tbody>${[['core', 'The speciality'], ['day', 'Everyday stock'], ['odd', 'Odd lots']].map(([sec, label]) => { const rows = T.stock.filter(x => x.sec === sec); return rows.length ? `<tr class="tsec"><th colspan="4">${label}</th></tr>` + rows.map(s => `<tr><td><a href="${linkOf(s.x)}"><b>${esc(s.x.name)}</b></a> ${pill(s.x.tier)}${s.rare ? ' <span class="small muted">rare find</span>' : ''}${s.note ? `<div class="note">${esc(cap(s.note))}</div>` : ''}</td><td class="mono">${s.q}</td><td class="mono">${fmtCoins(Math.round(shownPrice(s.price) * 100))}</td><td><button class="btn sm" type="button" data-act="tradebuy" data-i="${T.stock.indexOf(s)}" aria-label="Sell ${esc(s.x.name)} to someone"${s.q > 0 ? '' : ' disabled'}>Sell…</button></td></tr>`).join('') : ''; }).join('')}</tbody></table></div>
         <div class="frow" style="margin-top:12px"><button class="btn sm" type="button" data-act="tradesell">Buy from the party…</button><span class="small muted">Prices start at the list price (or what ${esc(T.nm)} would pay); change them to whatever was haggled.</span></div></section>` : ''}`;
+  } else if (DMS.tab === 'search') {
+    body = searchTab();
   } else if (DMS.tab === 'bank') {
     body = bankTab();
   } else if (DMS.tab === 'handouts') {
@@ -2192,6 +2301,17 @@ function pDM() {
     <div class="tabs" role="tablist">${tabs.map(([k, l]) => `<button class="tab${DMS.tab === k ? ' on' : ''}" type="button" role="tab" aria-selected="${DMS.tab === k}" data-act="dmtab" data-tab="${k}">${l}</button>`).join('')}</div>
     ${body}</div>`;
 }
+document.addEventListener('input', ev => {
+  const el = ev.target, S = DMS.search; if (!el.dataset || !el.dataset.sk || !S) return;
+  const k = el.dataset.sk, r = S.rows[+el.dataset.i];
+  if (k === 'coin') { const v = parseCoins(el.value); if (v >= 0) S.coin = v; return; }
+  if (k === 'q' && r) { r.q = Math.max(1, parseInt(el.value, 10) || 1); return; }
+});
+document.addEventListener('change', ev => {
+  const el = ev.target, S = DMS.search; if (!el.dataset || !el.dataset.sk || !S) return;
+  if (el.dataset.sk === 'coinOn') S.coinOn = el.checked; else if (el.dataset.sk === 'on' && S.rows[+el.dataset.i]) S.rows[+el.dataset.i].on = el.checked; else return;
+  rerender();
+});
 document.addEventListener('input', ev => { const el = ev.target; if (!el.dataset || !el.dataset.gk) return; DMS.fg[el.dataset.i + '|' + el.dataset.gk] = el.type === 'checkbox' ? el.checked : el.value; evalForage(); });
 document.addEventListener('change', ev => { const el = ev.target; if (el.dataset && el.dataset.gk === 'ok') { DMS.fg[el.dataset.i + '|ok'] = el.checked; evalForage(); } });
 document.addEventListener('input', ev => { const el = ev.target; if (!el.dataset || !el.dataset.fk) return; const r = fightRows()[+el.dataset.i]; if (!r) return; DMS.fight[r.key + '|' + el.dataset.fk] = el.value; evalFight(); });
@@ -2571,7 +2691,24 @@ function pSearch(q) {
 /* ---- satchel ---- */
 let satTab = 'ready';
 let satMeals = store.get('scavengers-codex.satMeals', false);
-let satView = store.get('scavengers-codex.satView', 'mine') === 'party' ? 'party' : 'mine';
+let satView = ['party', 'players'].includes(store.get('scavengers-codex.satView', 'mine')) ? store.get('scavengers-codex.satView', 'mine') : 'mine';
+// The DM inside DnDocs: every player's satchel and purse at a glance (DnDocs sends them to the DM).
+const canSeePlayers = () => HOSTED.on && isDM() && hostPlayers().length > 0;
+function playersPanel() {
+  const secrets = dmSecrets();
+  const cards = hostPlayers().map(m => {
+    const name = m.name.replace(/ \(.*\)$/, '');
+    const rows = Object.entries(m.items || {}).map(([id, q]) => [D.things.get(id), q]).filter(([x, q]) => x && q > 0).sort((a, b) => ti(b[0].tier) - ti(a[0].tier) || byName(a[0], b[0]));
+    const unid = Object.entries(m.unid || {}), curses = m.curses || {};
+    const worth = rows.reduce((a, [x, q]) => a + (+x.value || 0) * q, 0);
+    const list = rows.map(([x, q]) => `<div class="sat-row">${ico(x)}<div class="txt"><a class="name" href="${linkOf(x)}">${esc(x.name)}</a><span class="small muted">${TIER_LABEL[x.tier]} · ${esc(thingSub(x))}</span>${curses[x.id] ? '<span class="pill t-curse">Cursed</span>' : ''}</div><span class="mono">×${q}</span></div>`)
+      .concat(unid.map(([k, l]) => { const e = secrets[k], x = e && D.things.get(e.id); return `<div class="sat-row">${x ? ico(x) : ''}<div class="txt"><span class="name"><i>${esc(l.name || 'Unidentified item')}</i></span><span class="small muted">Unidentified${x ? ` · really <a href="${linkOf(x)}">${esc(x.name)}</a>` : ''}</span></div></div>`; }));
+    return `<div class="card roller"><div class="section-head"><h2>${esc(name)}</h2><span class="count mono">${fmtCoins(Math.max(0, +m.cp || 0))}</span></div>
+      ${list.length ? `<div class="sat-list">${list.join('')}</div>` : '<p class="small muted">Nothing carried.</p>'}
+      <div class="frow"><span class="small muted">${plural(rows.length, 'kind')} of things${worth ? ` · worth about ${fmtGp(worth)}` : ''}</span><button class="btn sm" type="button" data-act="bankfor" data-uid="${esc(m.uid)}">Give or take…</button></div></div>`;
+  });
+  return `<p class="small muted">What each player carries right now. Players can't see each other's satchels; only you can. To hand out or take back, use <b>Give or take…</b>.</p>${cards.join('')}`;
+}
 function satRow(id, q, where) {
   const t = D.things.get(id);
   const move = where === 'mine'
@@ -2623,6 +2760,7 @@ function pSatchel() {
       ${miss.length ? `<div class="miss">Missing: ${miss.join(' · ')}</div>` : `<div class="small muted">Tools: ${esc((t.recipe.tools || []).map(x => TOOL_NAMES[x] || x).join(', ') || '—')} · ${fmtGp(t.recipe.gp)} in reagents</div>`}</div>`;
   };
   const pc = Object.keys(Party.items).length;
+  const view = satView === 'players' && !canSeePlayers() ? 'mine' : satView;
   const mine = unidBlock() + `<div class="addbox"><div class="search-wrap" style="max-width:none"><svg class="search-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg><input id="satAdd" type="search" placeholder="Add a material or item…" autocomplete="off" aria-label="Add to satchel"><div id="satSug" class="suggest" hidden></div></div></div>
         ${ids.length ? `<div class="sat-list">${ids.map(id => satRow(id, sat[id], 'mine')).join('')}</div>
           <div class="frow"><button class="btn sm" type="button" data-act="export">Export</button><button class="btn sm" type="button" data-act="import">Import</button><button class="btn sm" type="button" data-act="clear">${svg('trash')}Empty satchel</button></div>`
@@ -2633,9 +2771,8 @@ function pSatchel() {
     ${clockBar()}
     <div class="sat-grid">
       <section class="section">
-        <div class="tabs" role="tablist"><button class="tab${satView === 'mine' ? ' on' : ''}" type="button" role="tab" aria-selected="${satView === 'mine'}" data-act="satview" data-v="mine">My satchel <span class="mono">${ids.length}</span></button><button class="tab${satView === 'party' ? ' on' : ''}" type="button" role="tab" aria-selected="${satView === 'party'}" data-act="satview" data-v="party">Party satchel <span class="mono">${pc}</span></button></div>
-        ${purseBar(satView === 'mine' ? 'mine' : 'party')}
-        ${satView === 'mine' ? mine : partyPanel()}
+        <div class="tabs" role="tablist"><button class="tab${view === 'mine' ? ' on' : ''}" type="button" role="tab" aria-selected="${view === 'mine'}" data-act="satview" data-v="mine">My satchel <span class="mono">${ids.length}</span></button><button class="tab${view === 'party' ? ' on' : ''}" type="button" role="tab" aria-selected="${view === 'party'}" data-act="satview" data-v="party">Party satchel <span class="mono">${pc}</span></button>${canSeePlayers() ? `<button class="tab${view === 'players' ? ' on' : ''}" type="button" role="tab" aria-selected="${view === 'players'}" data-act="satview" data-v="players">Players <span class="mono">${hostPlayers().length}</span></button>` : ''}</div>
+        ${view === 'players' ? playersPanel() : purseBar(view === 'mine' ? 'mine' : 'party') + (view === 'mine' ? mine : partyPanel())}
       </section>
       <section class="section">
         ${workbench()}
@@ -2901,6 +3038,7 @@ document.addEventListener('click', ev => {
     case 'ftoggle': { const b = document.getElementById('filters-' + el.dataset.page); b.classList.toggle('open'); el.textContent = b.classList.contains('open') ? 'Fewer filters' : 'More filters'; break; }
     case 'sattab': satTab = el.dataset.tab; rerender(); break;
     case 'satview': satView = el.dataset.v; store.set('scavengers-codex.satView', satView); rerender(); break;
+    case 'bankfor': DMS.tab = 'bank'; DMS.bankWho = el.dataset.uid; location.hash = '#/dm'; if (location.hash === '#/dm') rerender(); break;
     case 'pinc': Party.add(id, 1); break;
     case 'pdec': Party.add(id, -1); break;
     case 'give': { if (!(sat[id] > 0)) break; sat[id] -= 1; saveSat(); Party.add(id, 1); Party.note(`Put 1× ${D.things.get(id).name} in the party satchel`); toast('Moved to the party satchel'); rerender(); break; }
@@ -2968,6 +3106,20 @@ document.addEventListener('click', ev => {
     case 'hbcheck': case 'hbuse': case 'hbdl': case 'hbrm': hbAct(el.dataset.act, el); break;
     case 'dmforage': rollForage(); rerender(); break;
     case 'dmtrader': rollTrader(); rerender(); break;
+    case 'dmsearch': rollSearch(false); rerender(); break;
+    case 'srchmore': rollSearch(true); rerender(); break;
+    case 'srchall': { const S = DMS.search; if (S) { const on = !S.rows.every(r => r.on); S.rows.forEach(r => { r.on = on; }); } rerender(); break; }
+    case 'srchgive': {
+      const S = DMS.search; if (!S) break;
+      const who = ($('#srchWho') || {}).value || 'party', name = targetName(who); DMS.srchWho = who;
+      const items = {}; for (const r of S.rows) if (r.on) items[r.x.id] = (items[r.x.id] || 0) + Math.max(1, r.q | 0);
+      const cp = S.coinOn ? Math.max(0, S.coin) : 0, n = Object.values(items).reduce((a, q) => a + q, 0);
+      if (!n && !cp) break;
+      const err = bankMove(who, items, cp, `Searched ${S.P.label.toLowerCase()}: ${name} got ${[n ? plural(n, 'find') : '', cp ? fmtCoins(cp) : ''].filter(Boolean).join(' and ')}`);
+      if (err) { toast(err); break; }
+      S.rows = S.rows.filter(r => !r.on); if (cp) { S.coin = 0; S.coinOn = false; }
+      toast(`Gave ${name} ${[n ? plural(n, 'find') : '', cp ? fmtCoins(cp) : ''].filter(Boolean).join(' and ')}`); rerender(); break;
+    }
     case 'dmdrops': rollDrops(); rerender(); break;
     case 'fightyield': { const r = fightRows()[+el.dataset.i]; if (!r) break; DMS.fight[r.key + '|y'] = rollDiceN(r.h.dice, r.n); const inp = document.querySelector(`[data-fk="y"][data-i="${el.dataset.i}"]`); if (inp) { inp.value = DMS.fight[r.key + '|y']; inp.classList.add('flash'); setTimeout(() => inp.classList.remove('flash'), 500); } evalFight(); break; }
     case 'fightroll': {
@@ -3187,7 +3339,7 @@ document.addEventListener('change', ev => {
   const el = ev.target;
   if (el.dataset.act === 'bdbuy') { bdBuy = el.checked; rerender(); return; }
   if (el.id === 'fcNat1') { const v = $('#fcTotal').value, b = document.querySelector('[data-act=fcroll]'); if (b && v !== '') doFinalCheck(D.things.get(b.dataset.id), v); return; }
-  if (el.dataset.dm) { const k = el.dataset.dm; DMS[k] = el.type === 'checkbox' ? el.checked : el.tagName === 'SELECT' || el.type === 'text' || k === 'siteUrl' ? el.value : (parseInt(el.value, 10) || 0); if (k === 'hours') DMS.hours = Math.min(12, Math.max(1, DMS.hours)); if (k === 'lvl') DMS.lvl = Math.min(20, Math.max(1, DMS.lvl)); if (k === 'spec') { DMS.theme = ''; rerender(); } return; }
+  if (el.dataset.dm) { const k = el.dataset.dm; DMS[k] = el.type === 'checkbox' ? el.checked : el.tagName === 'SELECT' || el.type === 'text' || k === 'siteUrl' ? el.value : (parseInt(el.value, 10) || 0); if (k === 'hours') DMS.hours = Math.min(12, Math.max(1, DMS.hours)); if (k === 'lvl') DMS.lvl = Math.min(20, Math.max(1, DMS.lvl)); if (k === 'spec') { DMS.theme = ''; rerender(); } if (k === 'place') { DMS.wealth = ''; rerender(); } return; }
   if (el.dataset.hoty !== undefined) { DMS.bundle[+el.dataset.hoty][0] = el.value; rerender(); return; }
   if (el.dataset.pl) { DMS.player = DMS.player || { ...CFG.player }; if (el.dataset.pl === 'startPlayer') DMS.startPlayer = el.checked; else if (el.dataset.pl === 'spoilage') DMS.spoilage = el.checked; else DMS.player[el.dataset.pl] = el.value; rerender(); return; }
   if (el.id === 'newPin') { DMS.newPin = el.value; rerender(); return; }
