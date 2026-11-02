@@ -12,7 +12,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import codexdata
 PACKS = next((a.split("=", 1)[1] for a in sys.argv if a.startswith("--packs=")), "all")
 things = codexdata.merged(codexdata.load(PACKS if PACKS in ("all", "none", "default") else PACKS.split(",")))[0]
-def match(t, c): return all(x in t["tags"] for x in c["any"]) and ti(t["tier"]) >= ti(c.get("min", "mundane"))
+def match(t, c): return all(x in t["tags"] for x in c["any"]) and ti(t["tier"]) >= ti(c.get("min", "mundane")) and not (t.get("_k") == "items" and t["tier"] != "mundane")  # magic items never fill an any-slot
 def opts(c):
     if "m" in c: return [things[c["m"]]]
     if "oneOf" in c: return [things[x] for x in c["oneOf"]]
@@ -47,6 +47,13 @@ for k in T:
     med = lambda f: sorted(f(x) for x in v)[len(v) // 2]
     prof = med(lambda x: (x[0]["value"] - x[1] - x[2]) / max(days(x[0]["recipe"].get("time")), 0.125))
     print(f"{k:10} {len(v):4} {med(lambda x: x[0]['value']):>12,.0f} {med(lambda x: x[1]):>13,.0f} {med(lambda x: x[2]):>9,.0f} {med(lambda x: x[3]):>7,.0f} {prof:>11,.0f}")
+# refined materials (ingots, leather, inks...) should be worth at least the parts and gold that go into them,
+# or nobody would bother refining. Labour is left out here, so this only catches real inversions.
+for t in things.values():
+    if t["_k"] != "materials" or not t.get("recipe") or t.get("value") is None: continue
+    r = t["recipe"]; y = r.get("yields") or 1
+    inp = (sum(min([o.get("value") or 0 for o in opts(c)] or [0]) * c.get("q", 1) for c in r["components"]) + (r.get("gp") or 0)) / y
+    if inp > t["value"] * 1.0001: issues["refined material worth less than its inputs"].append(f"{t['id']} [{t['tier']}] value {t['value']} < inputs {inp:.2f}")
 for k, v in issues.items():
     print(f"\n## {k}: {len(v)}"); [print("  ", x) for x in v[:12 if "--all" not in sys.argv else 999]]
 if "--fix" in sys.argv:

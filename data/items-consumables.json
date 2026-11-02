@@ -40,7 +40,8 @@
     "time": "3 days",
     "gp": 150,
     "level": 5,
-    "lore": "Six bushels of violets reduce to one drop; moonpetal keeps the fey virtue from fading, and quicksilver holds it in suspension."
+    "lore": "Six bushels of violets reduce to one drop; moonpetal keeps the fey virtue from fading, and quicksilver holds it in suspension.",
+    "yields": 3
    }
   },
   {
@@ -125,9 +126,13 @@
       "label": "Common healing herb"
      },
      {
-      "m": "yarrow-sprig",
+      "any": [
+       "herb",
+       "healing"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any healing herb"
      },
      {
       "m": "honey",
@@ -180,14 +185,24 @@
       "label": "Potent restorative (uncommon+)"
      },
      {
-      "m": "healers-moss",
+      "any": [
+       "herb",
+       "healing"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any healing herb (common or better)",
+      "min": "common"
      },
      {
-      "m": "bloodwood-sap",
+      "any": [
+       "sap",
+       "healing"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any healing sap (uncommon or better)",
+      "min": "uncommon"
      },
      {
       "m": "alchemical-base",
@@ -308,14 +323,14 @@
       "label": "Very rare life-giving keystone"
      },
      {
-      "m": "sunmend-orchid",
-      "q": 1,
-      "role": "supporting"
-     },
-     {
-      "m": "kingsbalm-lily",
-      "q": 1,
-      "role": "supporting"
+      "any": [
+       "flower",
+       "healing"
+      ],
+      "q": 2,
+      "role": "supporting",
+      "label": "Any healing flower (rare or better)",
+      "min": "rare"
      },
      {
       "m": "celestial-dew",
@@ -749,9 +764,12 @@
       "role": "supporting"
      },
      {
-      "m": "sweetgrass",
+      "any": [
+       "herb"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any herb"
      },
      {
       "m": "honey",
@@ -874,9 +892,12 @@
       "role": "supporting"
      },
      {
-      "m": "pine-resin",
+      "any": [
+       "resin"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any resin"
      }
     ],
     "tools": [
@@ -922,14 +943,22 @@
       "role": "keystone"
      },
      {
-      "m": "moonpetal",
+      "any": [
+       "flower",
+       "fey"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any fey flower (uncommon or better)",
+      "min": "uncommon"
      },
      {
-      "m": "rat-tail",
+      "any": [
+       "hair"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any hair"
      },
      {
       "m": "alchemical-base",
@@ -995,9 +1024,14 @@
       "role": "supporting"
      },
      {
-      "m": "giant-eagle-pinion",
+      "any": [
+       "feather",
+       "flight"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any flight feather (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -1238,9 +1272,14 @@
       "role": "supporting"
      },
      {
-      "m": "octopus-ink",
+      "any": [
+       "ink",
+       "stealth"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any stealth ink (common or better)",
+      "min": "common"
      },
      {
       "m": "alchemical-base",
@@ -1358,9 +1397,13 @@
       "label": "Treacherous toxin (uncommon+)"
      },
      {
-      "m": "healers-moss",
+      "any": [
+       "herb"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any herb (common or better)",
+      "min": "common"
      },
      {
       "m": "dye-red",
@@ -1426,9 +1469,13 @@
       "role": "supporting"
      },
      {
-      "m": "black-dragon-wyrmling-scales",
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "oneOf": [
+       "black-dragon-wyrmling-scales",
+       "copper-dragon-wyrmling-scales"
+      ],
+      "label": "Acid-proof wyrmling scales"
      },
      {
       "m": "alchemical-base",
@@ -1485,9 +1532,14 @@
       "label": "Cold-proof keystone (uncommon+)"
      },
      {
-      "m": "polar-bear-fat",
+      "any": [
+       "fat",
+       "cold"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any cold fat (common or better)",
+      "min": "common"
      },
      {
       "m": "snowcap-berry",
@@ -1675,9 +1727,13 @@
       "label": "Lightning-proof keystone (uncommon+)"
      },
      {
-      "m": "blue-dragon-wyrmling-scales",
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "oneOf": [
+       "blue-dragon-wyrmling-scales",
+       "bronze-dragon-wyrmling-scales"
+      ],
+      "label": "Lightning-proof wyrmling scales"
      },
      {
       "m": "copper-wire",
@@ -1743,9 +1799,13 @@
       "role": "supporting"
      },
      {
-      "m": "garlic-bulb",
+      "any": [
+       "herb",
+       "resistance"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any resistance herb"
      },
      {
       "m": "alchemical-base",
@@ -1802,9 +1862,14 @@
       "label": "Poison-proof keystone (uncommon+)"
      },
      {
-      "m": "cleansing-sage",
+      "any": [
+       "herb",
+       "resistance"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any protective herb (common or better)",
+      "min": "common"
      },
      {
       "m": "vulture-gizzard",
@@ -2059,9 +2124,14 @@
       "role": "supporting"
      },
      {
-      "m": "hawk-flight-feathers",
+      "any": [
+       "feather",
+       "speed"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any speed feather (common or better)",
+      "min": "common"
      },
      {
       "m": "quicksilver",
@@ -2117,9 +2187,13 @@
       "label": "Deep-breath keystone (uncommon+)"
      },
      {
-      "m": "bladderwrack",
+      "any": [
+       "herb",
+       "water"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any water herb"
      },
      {
       "m": "sea-salt",
@@ -2190,9 +2264,14 @@
       "role": "supporting"
      },
      {
-      "m": "healers-moss",
+      "any": [
+       "herb",
+       "healing"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any healing herb (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -2253,9 +2332,12 @@
       "role": "supporting"
      },
      {
-      "m": "lamp-oil",
+      "any": [
+       "oil"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any oil"
      }
     ],
     "tools": [
@@ -2314,9 +2396,12 @@
       "role": "supporting"
      },
      {
-      "m": "lamp-oil",
+      "any": [
+       "oil"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any oil"
      }
     ],
     "tools": [
@@ -2375,9 +2460,12 @@
       "role": "supporting"
      },
      {
-      "m": "lamp-oil",
+      "any": [
+       "oil"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any oil"
      }
     ],
     "tools": [
@@ -2431,9 +2519,13 @@
       "role": "supporting"
      },
      {
-      "m": "fragrant-flowers",
+      "any": [
+       "flower",
+       "charm"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any charm flower"
      },
      {
       "m": "honey",
@@ -2552,9 +2644,13 @@
       "label": "Restorative keystone (uncommon+)"
      },
      {
-      "m": "aloe-leaf",
+      "any": [
+       "leaf",
+       "healing"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any healing leaf"
      },
      {
       "m": "willow-bark",
@@ -2562,9 +2658,12 @@
       "role": "supporting"
      },
      {
-      "m": "beeswax",
+      "any": [
+       "wax"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any wax"
      }
     ],
     "tools": [
@@ -2678,9 +2777,14 @@
       "role": "supporting"
      },
      {
-      "m": "roper-strand",
+      "any": [
+       "sinew",
+       "binding"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any binding sinew (uncommon or better)",
+      "min": "uncommon"
      },
      {
       "m": "oil-of-slipperiness",
@@ -2793,9 +2897,13 @@
       "label": "Water-drinking keystone (uncommon+)"
      },
      {
-      "m": "natron",
+      "any": [
+       "salt"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any salt (common or better)",
+      "min": "common"
      },
      {
       "m": "glass-sand",
@@ -2843,7 +2951,8 @@
      {
       "oneOf": [
        "vrock-spores",
-       "hezrou-stench-gland"
+       "hezrou-stench-gland",
+       "dread-nettle"
       ],
       "q": 1,
       "role": "keystone",
@@ -3012,13 +3121,13 @@
      },
      {
       "oneOf": [
+       "vrock-spores",
        "hezrou-stench-gland",
-       "black-lotus",
-       "iron-golem-vent-slag"
+       "black-lotus"
       ],
       "q": 1,
       "role": "keystone",
-      "label": "Choking toxin (uncommon+)"
+      "label": "Choking fume source"
      },
      {
       "m": "sulfur",
@@ -3078,9 +3187,14 @@
       "role": "supporting"
      },
      {
-      "m": "stiffweed",
+      "any": [
+       "herb",
+       "poison"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any poison herb (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -3130,9 +3244,14 @@
       "role": "supporting"
      },
      {
-      "m": "bellshade",
+      "any": [
+       "herb",
+       "poison"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any poison herb (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -3182,9 +3301,13 @@
       "role": "supporting"
      },
      {
-      "m": "chamomile",
+      "any": [
+       "flower",
+       "sleep"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any sleep flower"
      }
     ],
     "tools": [
@@ -3336,14 +3459,22 @@
       "label": "Slumber keystone (uncommon+)"
      },
      {
-      "m": "bellshade",
+      "any": [
+       "herb",
+       "poison"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any poison herb (common or better)",
+      "min": "common"
      },
      {
-      "m": "lamp-oil",
+      "any": [
+       "oil"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any oil"
      }
     ],
     "tools": [
@@ -3434,7 +3565,9 @@
      {
       "oneOf": [
        "purple-worm-venom",
-       "purple-worm-stinger"
+       "purple-worm-stinger",
+       "spirit-naga-venom",
+       "wyvern-venom-sac"
       ],
       "q": 1,
       "role": "keystone",
@@ -3482,7 +3615,9 @@
       "oneOf": [
        "medusa-snake-venom",
        "guardian-naga-spit-gland",
-       "hydra-fang"
+       "hydra-fang",
+       "couatl-venom",
+       "phase-spider-venom"
       ],
       "q": 1,
       "role": "keystone",
@@ -3539,14 +3674,22 @@
       "label": "Slowing or slumber keystone (uncommon+)"
      },
      {
-      "m": "chamomile",
+      "any": [
+       "herb"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any herb"
      },
      {
-      "m": "bellshade",
+      "any": [
+       "herb",
+       "poison"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any poison herb (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -3593,9 +3736,13 @@
       "label": "Truth-telling keystone (uncommon+)"
      },
      {
-      "m": "eyebright",
+      "any": [
+       "herb"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any herb (common or better)",
+      "min": "common"
      },
      {
       "m": "spirits",
@@ -3728,7 +3875,7 @@
      },
      {
       "m": "arcane-ink",
-      "q": 1,
+      "q": 2,
       "role": "keystone"
      },
      {
@@ -3816,7 +3963,7 @@
      },
      {
       "m": "potent-arcane-ink",
-      "q": 1,
+      "q": 2,
       "role": "keystone"
      },
      {
@@ -3909,7 +4056,7 @@
      },
      {
       "m": "greater-arcane-ink",
-      "q": 1,
+      "q": 2,
       "role": "keystone"
      },
      {
@@ -4061,7 +4208,7 @@
      },
      {
       "m": "sublime-arcane-ink",
-      "q": 1,
+      "q": 2,
       "role": "keystone"
      },
      {

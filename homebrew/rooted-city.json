@@ -60,7 +60,7 @@
    ],
    "desc": "A deep, slow red dye that does not run in water. Boatwrights use it on hulls, and bell-founders on the ropes.",
    "perish": "stable",
-   "value": 5,
+   "value": 7,
    "recipe": {
     "components": [
      {
@@ -1102,14 +1102,22 @@
       "role": "keystone"
      },
      {
-      "m": "healers-moss",
+      "any": [
+       "herb",
+       "healing"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any healing herb (common or better)",
+      "min": "common"
      },
      {
-      "m": "beeswax",
+      "any": [
+       "wax"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any wax"
      }
     ],
     "tools": [
@@ -1150,9 +1158,13 @@
       "role": "keystone"
      },
      {
-      "m": "mendwort",
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "oneOf": [
+       "medicinal-herbs",
+       "mendwort"
+      ],
+      "label": "Healing herbs"
      },
      {
       "m": "honey",
@@ -1198,9 +1210,12 @@
       "role": "keystone"
      },
      {
-      "m": "salt",
+      "any": [
+       "salt"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any salt"
      },
      {
       "m": "honey",
@@ -1247,9 +1262,14 @@
       "role": "keystone"
      },
      {
-      "m": "dreamfig",
+      "any": [
+       "fruit",
+       "fey"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any fey fruit (uncommon or better)",
+      "min": "uncommon"
      },
      {
       "m": "honey",
@@ -1295,9 +1315,12 @@
       "role": "keystone"
      },
      {
-      "m": "birch-sap",
+      "any": [
+       "sap"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any sap"
      },
      {
       "m": "vinegar",
@@ -1328,7 +1351,7 @@
     "charm",
     "fey"
    ],
-   "effect": "A rose-scented elixir that clings to the lips. For 1 hour you have advantage on Charisma checks against fey and beasts, and you can cast speak with animals at will.",
+   "effect": "A rose-scented elixir that clings to the lips. For 1 hour you have advantage on Charisma checks against fey and beasts, and you can cast speak with animals at will. Once during that hour, you can also cast charm person (save DC 15) and speak with plants without spending a spell slot.",
    "value": 1300,
    "recipe": {
     "components": [
@@ -1440,14 +1463,20 @@
       "role": "keystone"
      },
      {
-      "m": "tallow",
+      "any": [
+       "fat"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any fat"
      },
      {
-      "m": "salt",
+      "any": [
+       "salt"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any salt"
      }
     ],
     "tools": [
@@ -1492,9 +1521,12 @@
       "role": "supporting"
      },
      {
-      "m": "beeswax",
+      "any": [
+       "wax"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any wax"
      }
     ],
     "tools": [
@@ -1535,9 +1567,12 @@
       "role": "keystone"
      },
      {
-      "m": "pitch",
+      "any": [
+       "resin"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any resin"
      },
      {
       "m": "thornwood-limb",
@@ -1587,9 +1622,12 @@
       "role": "supporting"
      },
      {
-      "m": "beeswax",
+      "any": [
+       "wax"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any wax"
      }
     ],
     "tools": [
@@ -1634,9 +1672,12 @@
       "role": "supporting"
      },
      {
-      "m": "salt",
+      "any": [
+       "salt"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any salt"
      }
     ],
     "tools": [
@@ -1683,9 +1724,12 @@
       "role": "supporting"
      },
      {
-      "m": "beeswax",
+      "any": [
+       "wax"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any wax"
      }
     ],
     "tools": [
@@ -1726,14 +1770,22 @@
       "role": "keystone"
      },
      {
-      "m": "dreamfig",
+      "any": [
+       "fruit",
+       "fey"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any fey fruit (uncommon or better)",
+      "min": "uncommon"
      },
      {
-      "m": "salt",
+      "any": [
+       "salt"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any salt"
      }
     ],
     "tools": [
@@ -1777,9 +1829,12 @@
       "role": "supporting"
      },
      {
-      "m": "beeswax",
+      "any": [
+       "wax"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any wax"
      }
     ],
     "tools": [
@@ -1811,7 +1866,7 @@
     "components": [
      {
       "m": "arrows",
-      "q": 10,
+      "q": 1,
       "role": "base"
      },
      {
@@ -1820,9 +1875,12 @@
       "role": "keystone"
      },
      {
-      "m": "feather-fletching",
+      "any": [
+       "feather"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any feather"
      }
     ],
     "tools": [
@@ -1854,7 +1912,7 @@
     "components": [
      {
       "m": "arrows",
-      "q": 10,
+      "q": 1,
       "role": "base"
      },
      {
@@ -1868,9 +1926,12 @@
       "role": "keystone"
      },
      {
-      "m": "feather-fletching",
+      "any": [
+       "feather"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any feather"
      }
     ],
     "tools": [
@@ -1947,9 +2008,12 @@
       "role": "keystone"
      },
      {
-      "m": "oakgall-ink",
+      "any": [
+       "ink"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any ink"
      }
     ],
     "tools": [
@@ -1978,7 +2042,7 @@
     "protection",
     "primal"
    ],
-   "effect": "Spell scroll of barkskin (DC 13). Cast from the scroll as normal.",
+   "effect": "Spell scroll of barkskin. Cast from the scroll as normal.",
    "value": 150,
    "recipe": {
     "components": [
@@ -1993,9 +2057,12 @@
       "role": "keystone"
      },
      {
-      "m": "oakgall-ink",
+      "any": [
+       "ink"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any ink"
      }
     ],
     "tools": [
@@ -2039,9 +2106,12 @@
       "role": "keystone"
      },
      {
-      "m": "oakgall-ink",
+      "any": [
+       "ink"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any ink"
      }
     ],
     "tools": [
@@ -2085,9 +2155,12 @@
       "role": "keystone"
      },
      {
-      "m": "oakgall-ink",
+      "any": [
+       "ink"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any ink"
      }
     ],
     "tools": [
@@ -2130,9 +2203,12 @@
       "role": "keystone"
      },
      {
-      "m": "oakgall-ink",
+      "any": [
+       "ink"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any ink"
      }
     ],
     "tools": [
@@ -2175,14 +2251,20 @@
       "role": "keystone"
      },
      {
-      "m": "bowstring",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any thread"
      },
      {
-      "m": "beeswax",
+      "any": [
+       "wax"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any wax"
      }
     ],
     "tools": [
@@ -2223,14 +2305,20 @@
       "role": "keystone"
      },
      {
-      "m": "hemp-cord",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any thread"
      },
      {
-      "m": "beeswax",
+      "any": [
+       "wax"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any wax"
      }
     ],
     "tools": [
@@ -2271,14 +2359,20 @@
       "role": "keystone"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any leather"
      },
      {
-      "m": "hemp-cord",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread"
      }
     ],
     "tools": [
@@ -2318,9 +2412,12 @@
       "role": "keystone"
      },
      {
-      "m": "hemp-cord",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any thread"
      }
     ],
     "tools": [
@@ -2360,14 +2457,20 @@
       "role": "keystone"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any leather"
      },
      {
-      "m": "hemp-cord",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread"
      }
     ],
     "tools": [
@@ -2393,7 +2496,7 @@
     "tool",
     "luck"
    ],
-   "effect": "A forked hazel rod. Held in both hands, it dips toward fresh water within 100 feet. Once per dawn you can ask it where the nearest safe path out of the wood lies, as the find the path spell's direction (no duration).",
+   "effect": "A forked hazel rod. Held in both hands, it dips toward fresh water within 100 feet. Once per dawn you can ask it where the nearest safe path out of the wood lies, and it points toward the nearest road, trail or settlement within 1 mile.",
    "value": 90,
    "recipe": {
     "components": [
@@ -2408,9 +2511,12 @@
       "role": "base"
      },
      {
-      "m": "beeswax",
+      "any": [
+       "wax"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any wax"
      }
     ],
     "tools": [
@@ -2441,7 +2547,7 @@
    "recipe": {
     "components": [
      {
-      "m": "hide-armor",
+      "m": "leather-armor",
       "q": 1,
       "role": "base"
      },
@@ -2451,14 +2557,20 @@
       "role": "keystone"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any leather"
      },
      {
-      "m": "beeswax",
+      "any": [
+       "wax"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any wax"
      }
     ],
     "tools": [
@@ -2499,14 +2611,20 @@
       "role": "keystone"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any leather"
      },
      {
-      "m": "beeswax",
+      "any": [
+       "wax"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any wax"
      }
     ],
     "tools": [
@@ -2553,9 +2671,12 @@
       "role": "supporting"
      },
      {
-      "m": "beeswax",
+      "any": [
+       "wax"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any wax"
      }
     ],
     "tools": [
@@ -2592,19 +2713,29 @@
       "role": "base"
      },
      {
-      "m": "gilded-bark",
-      "q": 4,
-      "role": "keystone"
+      "oneOf": [
+       "gilded-bark",
+       "heartwood-burl"
+      ],
+      "q": 1,
+      "role": "keystone",
+      "label": "Keystone (one of)"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any leather"
      },
      {
-      "m": "beeswax",
+      "any": [
+       "wax"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any wax"
      }
     ],
     "tools": [
@@ -2630,7 +2761,7 @@
     "light-armor",
     "speed"
    ],
-   "effect": "Light armor. Your walking speed increases by 5 feet while you wear it, and you do not suffer disadvantage from difficult terrain made of non-magical plants.",
+   "effect": "Light armor. Your walking speed increases by 5 feet while you wear it, and difficult terrain made of non-magical plants costs you no extra movement.",
    "value": 380,
    "recipe": {
     "components": [
@@ -2645,14 +2776,20 @@
       "role": "keystone"
      },
      {
-      "m": "hardened-leather",
+      "any": [
+       "leather"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any leather"
      },
      {
-      "m": "hemp-cord",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread"
      }
     ],
     "tools": [
@@ -2694,9 +2831,12 @@
       "role": "keystone"
      },
      {
-      "m": "beeswax",
+      "any": [
+       "wax"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any wax"
      }
     ],
     "tools": [
@@ -2737,9 +2877,12 @@
       "role": "keystone"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -2778,7 +2921,7 @@
      {
       "m": "moss-felt",
       "q": 1,
-      "role": "binding"
+      "role": "supporting"
      },
      {
       "q": 2,
@@ -2839,14 +2982,21 @@
       "role": "keystone"
      },
      {
-      "m": "silk-thread",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any thread (common or better)",
+      "min": "common"
      },
      {
-      "m": "hemp-cord",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread"
      }
     ],
     "tools": [
@@ -2890,9 +3040,13 @@
       "role": "supporting"
      },
      {
-      "m": "silk-thread",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread (common or better)",
+      "min": "common"
      },
      {
       "m": "phase-silk",
@@ -2944,7 +3098,7 @@
       "role": "binding"
      },
      {
-      "m": "dryad-bloom",
+      "m": "grey-heron-feather",
       "q": 2,
       "role": "keystone"
      }
@@ -2972,7 +3126,7 @@
     "protection",
     "fey"
    ],
-   "effect": "Attunement. You have advantage on saving throws against being charmed, and fey cannot charm you without your consent. It tingles whenever a fey creature is within 30 feet.",
+   "effect": "You have advantage on saving throws against being charmed, and fey cannot charm you without your consent. It tingles whenever a fey creature is within 30 feet.",
    "value": 500,
    "recipe": {
     "components": [
@@ -2987,14 +3141,17 @@
       "role": "keystone"
      },
      {
-      "m": "silk-thread",
       "q": 1,
-      "role": "base"
+      "role": "base",
+      "m": "ring-band"
      },
      {
-      "m": "salt",
+      "any": [
+       "salt"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any salt"
      }
     ],
     "tools": [
@@ -3025,9 +3182,13 @@
    "recipe": {
     "components": [
      {
-      "m": "rowan-twig",
+      "any": [
+       "wood"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any wood (common or better)",
+      "min": "common"
      },
      {
       "m": "bent-heart",
@@ -3035,14 +3196,17 @@
       "role": "keystone"
      },
      {
-      "m": "silk-thread",
       "q": 1,
-      "role": "base"
+      "role": "base",
+      "m": "ring-band"
      },
      {
-      "m": "beeswax",
+      "any": [
+       "wax"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any wax"
      }
     ],
     "tools": [
@@ -3068,7 +3232,7 @@
     "growth",
     "primal"
    ],
-   "effect": "Attunement. 7 charges, regaining 1d6 + 1 at dawn (on a 1, it turns to a bramble). Expend 1 charge to cast entangle (DC 13), or 2 charges to cast spike growth (DC 13).",
+   "effect": "Attunement. 7 charges, regaining 1d6 + 1 at dawn (if you expend the last charge, roll a d20: on a 1 the wand crumbles into a bramble). Expend 1 charge to cast entangle (DC 13), or 2 charges to cast spike growth (DC 13).",
    "value": 500,
    "recipe": {
     "components": [
@@ -3083,14 +3247,22 @@
       "role": "keystone"
      },
      {
-      "m": "bentwood",
+      "any": [
+       "wood",
+       "primal"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any primal wood (common or better)",
+      "min": "common"
      },
      {
-      "m": "beeswax",
+      "any": [
+       "wax"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any wax"
      }
     ],
     "tools": [
@@ -3192,9 +3364,12 @@
       "role": "base"
      },
      {
-      "m": "beeswax",
+      "any": [
+       "wax"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any wax"
      }
     ],
     "tools": [
@@ -3287,14 +3462,17 @@
       "role": "keystone"
      },
      {
-      "m": "hemp-cord",
+      "m": "horn",
       "q": 1,
       "role": "base"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -3302,7 +3480,7 @@
     ],
     "station": "workshop",
     "dc": 12,
-    "time": "2 days",
+    "time": "1 day",
     "gp": 10,
     "level": 1,
     "lore": "A horn that gives its call to those who want to hear it."
@@ -3313,7 +3491,7 @@
    "name": "Wishnut Charm",
    "cat": "wondrous",
    "tier": "uncommon",
-   "attune": true,
+   "attune": false,
    "src": "Homebrew",
    "tags": [
     "wondrous",
@@ -3321,7 +3499,7 @@
     "luck",
     "fey"
    ],
-   "effect": "Attunement. Once per long rest, when you fail an ability check, you can roll a d4 and add it to the check, possibly turning the failure into a success.",
+   "effect": "A number of times equal to your proficiency bonus per long rest, when you fail an ability check, you can roll a d4 and add it to the check, possibly turning the failure into a success.",
    "value": 380,
    "recipe": {
     "components": [
@@ -3336,9 +3514,12 @@
       "role": "base"
      },
      {
-      "m": "beeswax",
+      "any": [
+       "wax"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any wax"
      }
     ],
     "tools": [
@@ -3375,14 +3556,17 @@
       "role": "keystone"
      },
      {
-      "m": "silk-thread",
       "q": 1,
-      "role": "base"
+      "role": "base",
+      "m": "brooch"
      },
      {
-      "m": "salt",
+      "any": [
+       "salt"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any salt"
      }
     ],
     "tools": [
@@ -3429,9 +3613,12 @@
       "role": "supporting"
      },
      {
-      "m": "beeswax",
+      "any": [
+       "wax"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any wax"
      }
     ],
     "tools": [
@@ -3478,9 +3665,13 @@
       "role": "keystone"
      },
      {
-      "m": "silk-thread",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any thread (common or better)",
+      "min": "common"
      },
      {
       "m": "glamour-dew",
@@ -3530,9 +3721,12 @@
       "role": "base"
      },
      {
-      "m": "beeswax",
+      "any": [
+       "wax"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any wax"
      }
     ],
     "tools": [
@@ -3568,9 +3762,12 @@
       "role": "base"
      },
      {
-      "m": "hemp-cord",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread"
      },
      {
       "m": "bentwood",
@@ -3720,14 +3917,17 @@
       "role": "keystone"
      },
      {
-      "m": "hemp-cord",
+      "m": "dagger",
       "q": 1,
       "role": "base"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -3763,14 +3963,17 @@
       "role": "keystone"
      },
      {
-      "m": "dagger",
+      "m": "sickle",
       "q": 1,
       "role": "base"
      },
      {
-      "m": "beeswax",
+      "any": [
+       "wax"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any wax"
      }
     ],
     "tools": [
@@ -4202,14 +4405,20 @@
       "role": "keystone"
      },
      {
-      "m": "salt",
+      "any": [
+       "salt"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any salt"
      },
      {
-      "m": "beeswax",
+      "any": [
+       "wax"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any wax"
      }
     ],
     "tools": [
@@ -4250,9 +4459,12 @@
       "role": "keystone"
      },
      {
-      "m": "hemp-cord",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread"
      }
     ],
     "tools": [
@@ -4288,13 +4500,16 @@
      },
      {
       "m": "ring-loam",
-      "q": 3,
+      "q": 2,
       "role": "keystone"
      },
      {
-      "m": "hemp-cord",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread"
      }
     ],
     "tools": [
@@ -4340,9 +4555,12 @@
       "role": "supporting"
      },
      {
-      "m": "hemp-cord",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread"
      }
     ],
     "tools": [
@@ -4752,9 +4970,12 @@
       "role": "keystone"
      },
      {
-      "m": "wild-garlic-ramson",
+      "any": [
+       "herb"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any herb"
      },
      {
       "m": "salt",
@@ -4859,9 +5080,12 @@
       "role": "keystone"
      },
      {
-      "m": "wild-garlic-ramson",
+      "any": [
+       "herb"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any herb"
      },
      {
       "m": "salt",
@@ -5001,7 +5225,7 @@
     "food",
     "toughness"
    ],
-   "effect": "Trout lacquered with maple. For 8 hours your hit point maximum is increased by 5 and you have advantage on saving throws against being frightened by hunger or exhaustion.",
+   "effect": "Trout lacquered with maple. For 8 hours your hit point maximum increases by 5, and you have advantage on Constitution saving throws against exhaustion from hunger, thirst or forced marches.",
    "value": 60,
    "meal": {
     "lasts": "8 hours"
@@ -5316,7 +5540,7 @@
     "cold",
     "fire"
    ],
-   "effect": "A pot of tubers and venison kept simmering. For 8 hours you are comfortable in extreme cold, without needing saves against cold weather, and you have advantage on saving throws against cold damage.",
+   "effect": "A pot of tubers and venison kept simmering. For 8 hours you are comfortable in extreme cold and don't need to make saving throws against cold weather.",
    "value": 65,
    "meal": {
     "lasts": "8 hours"
@@ -5334,9 +5558,12 @@
       "role": "keystone"
      },
      {
-      "m": "wild-garlic-ramson",
+      "any": [
+       "herb"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any herb"
      },
      {
       "m": "salt",
@@ -5601,9 +5828,12 @@
       "role": "keystone"
      },
      {
-      "m": "wild-garlic-ramson",
+      "any": [
+       "herb"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any herb"
      },
      {
       "m": "salt",
@@ -5655,9 +5885,12 @@
       "role": "keystone"
      },
      {
-      "m": "wild-garlic-ramson",
+      "any": [
+       "herb"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any herb"
      },
      {
       "m": "salt",
@@ -5852,7 +6085,7 @@
     "blessing",
     "primal"
    ],
-   "effect": "A feast that smells of rain, bread and a forest at morning. For 8 hours you gain 2d10 temporary hit points, advantage on saving throws against poison and fear, and immunity to the poisoned condition. It can only be eaten when everyone at the table is at peace.",
+   "effect": "A feast that smells of rain, bread and a forest at morning. For 8 hours you gain 2d10 temporary hit points, resistance to poison damage, immunity to the poisoned condition and advantage on saving throws against being frightened.",
    "value": 550,
    "meal": {
     "lasts": "8 hours"
@@ -5894,7 +6127,7 @@
     ],
     "station": "kitchen",
     "dc": 18,
-    "time": "1 day",
+    "time": "12 hours",
     "gp": 375,
     "level": 6,
     "lore": "A feast cooked for eight: the Heartwood's gift, shared.",
@@ -5956,7 +6189,7 @@
     ],
     "station": "kitchen",
     "dc": 18,
-    "time": "1 day",
+    "time": "12 hours",
     "gp": 375,
     "level": 6,
     "lore": "A banquet laid out with more courses than anyone could count.",

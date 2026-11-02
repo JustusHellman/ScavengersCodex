@@ -441,7 +441,7 @@
    ],
    "desc": "Spiked iron balls from an ettin's twin weapons, crude but massive. Good heavy scrap for smiths.",
    "perish": "stable",
-   "value": 4,
+   "value": 25,
    "recipe": null
   },
   {
@@ -575,7 +575,7 @@
    ],
    "desc": "Rubbery, warty green hide that slowly regrows where it is cut. Tanners must sear the edges or it will seal every stitch shut.",
    "perish": "1 week",
-   "value": 300,
+   "value": 100,
    "recipe": null
   },
   {
@@ -1121,6 +1121,7 @@
    "name": "Fine Silk Scraps",
    "tier": "common",
    "tags": [
+    "silk",
     "salvage",
     "cloth",
     "charm"

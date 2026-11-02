@@ -40,7 +40,7 @@
    ],
    "desc": "A serrated, triangular fang the size of a thumb, endlessly replaced in life. Set into clubs, necklaces and saw-blades.",
    "perish": "stable",
-   "value": 1,
+   "value": 20,
    "recipe": null
   },
   {
@@ -365,7 +365,7 @@
    ],
    "desc": "An inch-thick hide tough as boiled leather even raw. Makes heavy hide armour and yurt walls.",
    "perish": "1 day",
-   "value": 1,
+   "value": 35,
    "recipe": null
   },
   {
@@ -466,7 +466,7 @@
    ],
    "desc": "A small, hard hoof, sure on scree. Rendered into glue or carved into charms for sure-footedness.",
    "perish": "stable",
-   "value": 1,
+   "value": 20,
    "recipe": null
   },
   {
@@ -689,7 +689,7 @@
    ],
    "desc": "A hollow, needle-thin fang. Tinkerers use them as poison-injection needles.",
    "perish": "stable",
-   "value": 1,
+   "value": 20,
    "recipe": null
   },
   {
@@ -791,7 +791,7 @@
    ],
    "desc": "Tiny razor-edged teeth that interlock like a saw. Set in rows along weapon edges to make them rend.",
    "perish": "stable",
-   "value": 1,
+   "value": 10,
    "recipe": null
   },
   {
@@ -877,7 +877,7 @@
    ],
    "desc": "A small, sharp triangular tooth. Strung into necklaces and set in coral weapons.",
    "perish": "stable",
-   "value": 1,
+   "value": 10,
    "recipe": null
   },
   {
@@ -936,7 +936,7 @@
    ],
    "desc": "Plated grey hide nearly two fingers thick. Tanned into shields and hide armour that turns blades.",
    "perish": "1 day",
-   "value": 2,
+   "value": 35,
    "recipe": null
   },
   {
@@ -1040,7 +1040,7 @@
    ],
    "desc": "A dense, pale-striped pelt made for snow-shadow ambushes. Warm and hard to spot in winter woods.",
    "perish": "1 day",
-   "value": 1,
+   "value": 25,
    "recipe": null
   },
   {
@@ -1144,7 +1144,7 @@
    ],
    "desc": "Rich orange fur banded with black, perfect camouflage among reeds. A prestige cloak and hunter's mantle.",
    "perish": "1 day",
-   "value": 1,
+   "value": 15,
    "recipe": null
   },
   {
@@ -1247,7 +1247,7 @@
    ],
    "desc": "Pebbly, thick hide that tans into sturdy armour.",
    "perish": "1 day",
-   "value": 2,
+   "value": 35,
    "recipe": null
   },
   {
@@ -1376,6 +1376,7 @@
    "name": "Weasel Pelt",
    "tier": "common",
    "tags": [
+    "hide",
     "fur",
     "stealth",
     "cunning",
@@ -1485,7 +1486,7 @@
    ],
    "desc": "Iridescent green-and-bronze shell chips. Glued in overlapping rows they make lacquered armour inlays.",
    "perish": "stable",
-   "value": 2,
+   "value": 20,
    "recipe": null
   },
   {
@@ -1499,7 +1500,7 @@
    ],
    "desc": "Crushed beetles yield a deep crimson paste. Dyers and scribes prize it.",
    "perish": "1 week",
-   "value": 2,
+   "value": 15,
    "recipe": null
   },
   {

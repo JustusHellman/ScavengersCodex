@@ -133,7 +133,7 @@
    ],
    "desc": "Grey-green leather that still knits its own nicks closed overnight, smelling faintly of swamp. Armourers value it because it never cracks or wears thin.",
    "perish": "stable",
-   "value": 34,
+   "value": 130,
    "recipe": {
     "components": [
      {
@@ -308,9 +308,12 @@
       "label": "Frost herb"
      },
      {
-      "m": "beeswax",
+      "any": [
+       "wax"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any wax"
      }
     ],
     "tools": [
@@ -342,7 +345,7 @@
     "components": [
      {
       "m": "arrows",
-      "q": 10,
+      "q": 1,
       "role": "base"
      },
      {
@@ -356,9 +359,13 @@
       "role": "supporting"
      },
      {
-      "m": "amberpine-sap",
+      "any": [
+       "sap"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any sap (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -560,9 +567,12 @@
       "label": "Carrion-eater's gut lining"
      },
      {
-      "m": "cured-leather",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any leather"
      },
      {
       "m": "cleansing-sage",
@@ -760,14 +770,21 @@
       "role": "keystone"
      },
      {
-      "m": "four-leaf-clover",
+      "any": [
+       "herb"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any herb (common or better)",
+      "min": "common"
      },
      {
-      "m": "instrument-strings",
+      "any": [
+       "sinew"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any sinew"
      }
     ],
     "tools": [
@@ -796,7 +813,7 @@
     "acid",
     "container"
    ],
-   "effect": "A waxed ceramic flask of ankheg spit. As an action, throw it up to 20 feet to shatter it in a 5-foot radius: each creature there makes a DC 12 Dexterity save, taking 2d6 acid damage on a failure (half on success) and 1d6 more acid at the start of its next turn if it failed. The flask is used up.",
+   "effect": "A waxed ceramic flask of ankheg spit. As an action, throw it up to 20 feet to shatter it in a 5-foot radius: each creature there makes a DC 12 Dexterity save, taking 2d6 acid damage on a failure (half on success). The flask is used up.",
    "value": 50,
    "recipe": {
     "components": [
@@ -816,9 +833,12 @@
       "role": "supporting"
      },
      {
-      "m": "beeswax",
+      "any": [
+       "wax"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any wax"
      }
     ],
     "tools": [
@@ -870,9 +890,13 @@
       "label": "Any soft fur for the lining"
      },
      {
-      "m": "silk-thread",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -980,9 +1004,13 @@
       "role": "supporting"
      },
      {
-      "m": "potent-arcane-ink",
+      "any": [
+       "ink"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any ink (uncommon or better)",
+      "min": "uncommon"
      }
     ],
     "tools": [
@@ -1023,18 +1051,22 @@
      },
      {
       "oneOf": [
-       "nautilus-shell",
+       "mummy-embalming-resin",
        "stone-golem-lethargy-stone",
        "gynosphinx-tear"
       ],
       "q": 1,
       "role": "keystone",
-      "label": "Time-slowing keystone"
+      "label": "Preserving keystone"
      },
      {
-      "m": "mummy-embalming-resin",
+      "any": [
+       "resin"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any resin (uncommon or better)",
+      "min": "uncommon"
      },
      {
       "m": "quellsalt-brine",
@@ -1042,9 +1074,13 @@
       "role": "supporting"
      },
      {
-      "m": "natron",
+      "any": [
+       "salt"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any salt (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -1147,11 +1183,6 @@
      },
      {
       "m": "troll-leather",
-      "q": 2,
-      "role": "supporting"
-     },
-     {
-      "m": "knotwood-bracket",
       "q": 1,
       "role": "supporting"
      }
@@ -1320,9 +1351,13 @@
       "label": "Plane-slipping reagent (colour-pool glass, blink dog fang or faerie-ring mushroom)"
      },
      {
-      "m": "silk-thread",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -1485,9 +1520,14 @@
       "role": "supporting"
      },
      {
-      "m": "hippogriff-feather",
+      "any": [
+       "feather",
+       "flight"
+      ],
       "q": 4,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any flight feather (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -1533,9 +1573,13 @@
       "role": "keystone"
      },
      {
-      "m": "minotaur-hide",
+      "any": [
+       "hide"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any hide (uncommon or better)",
+      "min": "uncommon"
      },
      {
       "m": "lodestone",
@@ -1591,9 +1635,13 @@
       "role": "supporting"
      },
      {
-      "m": "fine-silk-scraps",
+      "any": [
+       "silk"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any silk (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -1753,9 +1801,14 @@
       "label": "Great voice-organ (uncommon+)"
      },
      {
-      "m": "lion-mane",
+      "any": [
+       "fur",
+       "fear"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any fear fur (common or better)",
+      "min": "common"
      },
      {
       "m": "resonant-crystal",
@@ -2083,9 +2136,13 @@
       "role": "supporting"
      },
      {
-      "m": "bladderwrack",
+      "any": [
+       "herb",
+       "water"
+      ],
       "q": 3,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any water herb"
      }
     ],
     "tools": [
@@ -2127,14 +2184,23 @@
       "role": "keystone"
      },
      {
-      "m": "lovers-rose",
+      "any": [
+       "flower",
+       "charm"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any charm flower (uncommon or better)",
+      "min": "uncommon"
      },
      {
-      "m": "fragrant-flowers",
+      "any": [
+       "flower",
+       "charm"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any charm flower"
      }
     ],
     "tools": [
@@ -2185,9 +2251,12 @@
       "role": "supporting"
      },
      {
-      "m": "pitch",
+      "any": [
+       "resin"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any resin"
      }
     ],
     "tools": [
@@ -2463,9 +2532,14 @@
       "role": "supporting"
      },
      {
-      "m": "bloodwood-sap",
+      "any": [
+       "sap",
+       "healing"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any healing sap (uncommon or better)",
+      "min": "uncommon"
      },
      {
       "m": "bloodstone",
@@ -2764,9 +2838,14 @@
       "role": "supporting"
      },
      {
-      "m": "hippogriff-feather",
+      "any": [
+       "feather",
+       "flight"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any flight feather (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -2855,7 +2934,7 @@
     "components": [
      {
       "m": "chain",
-      "q": 1,
+      "q": 2,
       "role": "base"
      },
      {
@@ -2927,9 +3006,13 @@
       "role": "supporting"
      },
      {
-      "m": "dragons-blood-resin",
+      "any": [
+       "resin"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any resin (uncommon or better)",
+      "min": "uncommon"
      }
     ],
     "tools": [
@@ -2976,9 +3059,14 @@
       "role": "keystone"
      },
      {
-      "m": "ironwood",
+      "any": [
+       "wood",
+       "toughness"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any toughness wood (uncommon or better)",
+      "min": "uncommon"
      },
      {
       "m": "awakened-tree-sap",
@@ -3307,9 +3395,13 @@
       "role": "supporting"
      },
      {
-      "m": "feywood",
+      "any": [
+       "wood"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any wood (uncommon or better)",
+      "min": "uncommon"
      }
     ],
     "tools": [
@@ -3415,9 +3507,13 @@
       "role": "base"
      },
      {
-      "m": "lich-dust",
+      "oneOf": [
+       "lich-dust",
+       "mummy-lord-essence"
+      ],
       "q": 1,
-      "role": "keystone"
+      "role": "keystone",
+      "label": "Keystone (one of)"
      },
      {
       "m": "lich-finger-bones",
@@ -3592,7 +3688,7 @@
     "necrotic",
     "regeneration"
    ],
-   "effect": "+1 rapier with a fang-shaped guard. Its hits deal an extra 1d6 necrotic damage, and once per turn you regain hit points equal to the necrotic damage dealt, to a maximum of 20 hit points regained this way per long rest. Drawback: while you stand in sunlight the blade's magic (including the +1) is suppressed and you have disadvantage on Constitution saving throws.",
+   "effect": "+2 rapier with a fang-shaped guard. Its hits deal an extra 1d6 necrotic damage, and once per turn you regain hit points equal to the necrotic damage dealt. Drawback: while you stand in sunlight the blade's magic (including the +2) is suppressed and you have disadvantage on Constitution saving throws.",
    "value": 30000,
    "recipe": {
     "components": [
@@ -3882,7 +3978,7 @@
     "antimagic",
     "protection"
    ],
-   "effect": "+3 shield carved from the Tarrasque's carapace. You have advantage on saving throws against spells and magical effects. When a magic missile spell, a line spell, or a spell requiring a ranged attack targets only you, roll a d6: on a 1–5 you are unaffected, and on a 6 the spell rebounds, targeting its caster as if you had cast it.",
+   "effect": "+3 shield carved from a colossal carapace. You have advantage on saving throws against spells and magical effects. When a magic missile spell, a line spell, or a spell requiring a ranged attack targets only you, roll a d6: on a 1–5 you are unaffected, and on a 6 the spell rebounds, targeting its caster as if you had cast it.",
    "value": 120000,
    "recipe": {
     "components": [
@@ -3892,14 +3988,18 @@
       "role": "base"
      },
      {
-      "m": "tarrasque-carapace",
+      "oneOf": [
+       "tarrasque-carapace",
+       "dragon-turtle-heart"
+      ],
       "q": 1,
-      "role": "keystone"
+      "role": "keystone",
+      "label": "Colossal shell keystone"
      },
      {
-      "m": "tarrasque-horn",
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "m": "dragon-turtle-shell-plate"
      },
      {
       "m": "adamantine-ingot",
@@ -4933,7 +5033,7 @@
     "gear",
     "flight"
    ],
-   "effect": "A long flight feather with a quicksilver-filled shaft. Dropped from any height, it always drifts down to point its tip toward magnetic north, even in a windless cave or underwater.",
+   "effect": "A long flight feather with a shaft filled with quicksilver and iron filings. Dropped from any height, it always drifts down to point its tip toward magnetic north, even in a windless cave or underwater.",
    "value": 68,
    "recipe": {
     "components": [
@@ -4953,9 +5053,9 @@
       "role": "supporting"
      },
      {
-      "m": "iron-ore",
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "m": "iron-ore"
      }
     ],
     "tools": [
@@ -5102,9 +5202,12 @@
       "label": "Any wyrmling scale"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -5208,9 +5311,12 @@
       "label": "Vulture feathers"
      },
      {
-      "m": "hemp-cord",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread"
      }
     ],
     "tools": [
@@ -5290,12 +5396,13 @@
     "components": [
      {
       "oneOf": [
-       "bat-wing",
+       "bat-ear",
+       "giant-bat-ear",
        "swarm-of-bats-ears"
       ],
       "q": 2,
       "role": "keystone",
-      "label": "Bat wing or ears"
+      "label": "Bat ears"
      },
      {
       "m": "signal-whistle",
@@ -5303,9 +5410,12 @@
       "role": "supporting"
      },
      {
-      "m": "beeswax",
+      "any": [
+       "wax"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any wax"
      }
     ],
     "tools": [
@@ -5345,9 +5455,12 @@
       "label": "Gnawing tooth or digging claw"
      },
      {
-      "m": "hemp-cord",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any thread"
      },
      {
       "m": "giant-rat-diseased-plague-blood",
@@ -5679,9 +5792,12 @@
       "label": "Octopus beak (nib)"
      },
      {
-      "m": "common-ink",
+      "any": [
+       "ink"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any ink"
      }
     ],
     "tools": [
@@ -5737,7 +5853,7 @@
     ],
     "station": "none",
     "dc": 12,
-    "time": "2 days",
+    "time": "1 day",
     "gp": 10,
     "level": 1,
     "lore": "A shark can taste one drop of blood a mile off. Pearl divers wear this charm to know when to leave the water."
@@ -5841,9 +5957,12 @@
       "label": "Boar tusk"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -5878,19 +5997,25 @@
        "black-bear-claws",
        "polar-bear-claw"
       ],
-      "q": 4,
+      "q": 2,
       "role": "keystone",
       "label": "Climbing bear claws"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any leather"
      },
      {
-      "m": "black-bear-pelt",
+      "any": [
+       "fur"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any fur"
      }
     ],
     "tools": [
@@ -6135,9 +6260,12 @@
       "role": "supporting"
      },
      {
-      "m": "medicinal-herbs",
+      "any": [
+       "herb"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any herb"
      },
      {
       "m": "bottle",
@@ -6183,14 +6311,23 @@
       "label": "Regrowing flesh"
      },
      {
-      "m": "medicinal-herbs",
+      "any": [
+       "herb",
+       "healing"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any healing herb"
      },
      {
-      "m": "centaur-herb-pouch",
+      "any": [
+       "herb",
+       "healing"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any healing herb (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -6543,9 +6680,12 @@
       "role": "keystone"
      },
      {
-      "m": "tallow",
+      "any": [
+       "fat"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any fat"
      },
      {
       "m": "rust-monster-gut",
@@ -6595,9 +6735,12 @@
       "role": "supporting"
      },
      {
-      "m": "beeswax",
+      "any": [
+       "wax"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any wax"
      }
     ],
     "tools": [
@@ -6685,7 +6828,7 @@
      },
      {
       "m": "gibbering-mouther-tongue",
-      "q": 2,
+      "q": 1,
       "role": "supporting"
      },
      {
@@ -6741,9 +6884,13 @@
       "role": "supporting"
      },
      {
-      "m": "silk-thread",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any thread (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -6828,13 +6975,18 @@
     "components": [
      {
       "m": "mule-hoof",
-      "q": 2,
+      "q": 1,
       "role": "keystone"
      },
      {
-      "m": "mule-sinew",
+      "any": [
+       "sinew",
+       "strength"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any strength sinew (common or better)",
+      "min": "common"
      },
      {
       "oneOf": [
@@ -6885,15 +7037,20 @@
       "role": "supporting"
      },
      {
+      "any": [
+       "hair"
+      ],
       "q": 1,
       "role": "supporting",
-      "label": "Horse hair",
-      "m": "horsehair"
+      "label": "Any hair"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -7265,9 +7422,12 @@
       "role": "keystone"
      },
      {
-      "m": "salt",
+      "any": [
+       "salt"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any salt"
      },
      {
       "m": "pouch",
@@ -7411,9 +7571,13 @@
       "label": "Centipede venom"
      },
      {
-      "m": "toxic-herbs",
+      "any": [
+       "herb",
+       "poison"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any poison herb"
      },
      {
       "m": "glass-vial",
@@ -7510,9 +7674,13 @@
       "label": "Dragon sleep venom"
      },
      {
-      "m": "toxic-herbs",
+      "any": [
+       "herb",
+       "poison"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any poison herb"
      },
      {
       "m": "glass-vial",
@@ -7554,9 +7722,13 @@
       "role": "keystone"
      },
      {
-      "m": "medicinal-herbs",
+      "any": [
+       "herb",
+       "healing"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any healing herb"
      },
      {
       "m": "frog-skin",
@@ -7699,9 +7871,12 @@
       "label": "Any wyrmling breath gland"
      },
      {
-      "m": "salt",
+      "any": [
+       "salt"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any salt"
      },
      {
       "m": "flask",
@@ -7757,9 +7932,12 @@
       "role": "supporting"
      },
      {
-      "m": "medicinal-herbs",
+      "any": [
+       "herb"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any herb"
      }
     ],
     "tools": [
@@ -7950,9 +8128,13 @@
       "role": "keystone"
      },
      {
-      "m": "frog-skin",
+      "any": [
+       "hide",
+       "swimming"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any swimming hide"
      },
      {
       "oneOf": [
@@ -8052,7 +8234,7 @@
      },
      {
       "m": "harpy-talon",
-      "q": 3,
+      "q": 1,
       "role": "supporting"
      },
      {
@@ -8066,7 +8248,7 @@
     ],
     "station": "workshop",
     "dc": 12,
-    "time": "2 days",
+    "time": "1 day",
     "gp": 10,
     "level": 1,
     "lore": "Harpies sing to lure the curious; a trapper strings their talons into a chime that sings only to animals."
@@ -8103,9 +8285,13 @@
       "label": "Cockatrice part"
      },
      {
-      "m": "medicinal-herbs",
+      "any": [
+       "herb",
+       "healing"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any healing herb"
      },
      {
       "m": "crystal-vial",
@@ -8131,7 +8317,7 @@
   {
    "id": "gorgon-breath-flask",
    "name": "Gorgon-Breath Flask",
-   "cat": "poison",
+   "cat": "wondrous",
    "tier": "uncommon",
    "attune": false,
    "src": "Homebrew",
@@ -8227,14 +8413,20 @@
       "label": "Thick beast hide"
      },
      {
-      "m": "elephant-bone",
+      "any": [
+       "bone"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any bone"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 3,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -8316,7 +8508,7 @@
     "strength",
     "toughness"
    ],
-   "effect": "A heavy helm mounted with a great horn. Once per turn, if you move at least 20 feet straight toward a creature and hit it with a melee attack on the same turn, it takes an extra 1d8 piercing damage and must succeed on a DC 13 Strength save or be knocked prone.",
+   "effect": "A heavy helm mounted with a great horn. Once per short rest, if you move at least 20 feet straight toward a creature and hit it with a melee attack on the same turn, it takes an extra 1d8 piercing damage and must succeed on a DC 13 Strength save or be knocked prone.",
    "value": 400,
    "recipe": {
     "components": [
@@ -8392,14 +8584,21 @@
       "label": "Roaring-beast trophy (uncommon+)"
      },
      {
-      "m": "ape-arm-sinew",
+      "any": [
+       "sinew"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any sinew (common or better)",
+      "min": "common"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -8448,9 +8647,12 @@
       "role": "supporting"
      },
      {
-      "m": "pitch",
+      "any": [
+       "resin"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any resin"
      }
     ],
     "tools": [
@@ -8474,14 +8676,14 @@
    "name": "Roaring Mane Mantle",
    "cat": "wondrous",
    "tier": "uncommon",
-   "attune": true,
+   "attune": false,
    "src": "Homebrew",
    "tags": [
     "wondrous",
     "clothing",
     "fear"
    ],
-   "effect": "A shaggy shoulder-mantle of a monstrous lion's mane. Once per long rest, as an action, you roar; each creature of your choice within 15 feet must succeed on a DC 13 Wisdom save or be frightened of you for 1 minute, repeating the save at the end of each of its turns.",
+   "effect": "A shaggy shoulder-mantle of a monstrous lion's mane. Once per long rest, as an action, you roar; each creature of your choice within 15 feet must succeed on a DC 13 Wisdom save or be frightened of you for 1 minute, repeating the save at the end of each of its turns. While you wear it, you have advantage on Charisma (Intimidation) checks.",
    "value": 450,
    "recipe": {
     "components": [
@@ -8551,9 +8753,14 @@
       "role": "keystone"
      },
      {
-      "m": "chimera-dragon-scale",
+      "any": [
+       "scale",
+       "fire"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any fire scale (uncommon or better)",
+      "min": "uncommon"
      },
      {
       "oneOf": [
@@ -8615,9 +8822,13 @@
       "label": "Cursing claw"
      },
      {
-      "m": "lamia-pelt",
+      "any": [
+       "fur"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any fur (uncommon or better)",
+      "min": "uncommon"
      }
     ],
     "tools": [
@@ -8708,9 +8919,14 @@
       "role": "keystone"
      },
      {
-      "m": "centaur-herb-pouch",
+      "any": [
+       "herb",
+       "healing"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any healing herb (common or better)",
+      "min": "common"
      },
      {
       "m": "honey",
@@ -8809,7 +9025,7 @@
     "clothing",
     "flight"
    ],
-   "effect": "A cloak with ribbed wing-panels sewn into the sleeves. When you fall and aren't incapacitated, you can spread your arms to glide, moving up to 2 feet horizontally for every 1 foot you descend, and you take no falling damage.",
+   "effect": "A cloak with ribbed wing-panels sewn into the sleeves. When you fall and aren't incapacitated, you can spread your arms to glide, moving up to 2 feet horizontally for every 1 foot you descend, and you take no falling damage. Once per short rest, you can also gain a flying speed of 30 feet until the end of your turn.",
    "value": 450,
    "recipe": {
     "components": [
@@ -8839,9 +9055,13 @@
       "label": "Feathers or leathery wing"
      },
      {
-      "m": "silk-thread",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -8945,9 +9165,13 @@
       "role": "supporting"
      },
      {
-      "m": "pitch",
+      "any": [
+       "resin",
+       "fire"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any fire resin"
      }
     ],
     "tools": [
@@ -9004,9 +9228,12 @@
       "label": "Fire-proof scale soles"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -9029,7 +9256,7 @@
    "name": "Devilhide Barbed Jerkin",
    "cat": "armor",
    "tier": "uncommon",
-   "attune": true,
+   "attune": false,
    "src": "Homebrew",
    "tags": [
     "armor",
@@ -9056,9 +9283,12 @@
       "role": "supporting"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -9204,9 +9434,13 @@
       "role": "base"
      },
      {
-      "m": "vrock-essence",
+      "oneOf": [
+       "vrock-essence",
+       "barbed-devil-essence"
+      ],
       "q": 1,
-      "role": "keystone"
+      "role": "keystone",
+      "label": "Keystone (one of)"
      },
      {
       "m": "vrock-feathers",
@@ -9261,9 +9495,13 @@
       "role": "supporting"
      },
      {
-      "m": "silk-thread",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any thread (common or better)",
+      "min": "common"
      },
      {
       "m": "bat-wing",
@@ -9310,14 +9548,21 @@
       "role": "keystone"
      },
      {
-      "m": "brown-bear-claws",
+      "any": [
+       "claw"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any claw (common or better)",
+      "min": "common"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -9367,9 +9612,12 @@
       "label": "Great pincer"
      },
      {
-      "m": "crab-shell",
+      "any": [
+       "shell"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any shell"
      }
     ],
     "tools": [
@@ -9420,9 +9668,12 @@
       "role": "supporting"
      },
      {
-      "m": "pitch",
+      "any": [
+       "resin"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any resin"
      }
     ],
     "tools": [
@@ -9524,9 +9775,14 @@
       "role": "supporting"
      },
      {
-      "m": "constrictor-snake-coil-muscle",
+      "any": [
+       "sinew",
+       "binding"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any binding sinew (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -9580,9 +9836,13 @@
       "label": "Spider chitin or silk"
      },
      {
-      "m": "silk-thread",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -9617,9 +9877,13 @@
    "recipe": {
     "components": [
      {
-      "m": "drider-blade",
+      "oneOf": [
+       "drider-blade",
+       "phase-spider-venom"
+      ],
       "q": 1,
-      "role": "keystone"
+      "role": "keystone",
+      "label": "Keystone (one of)"
      },
      {
       "m": "ettercap-venom",
@@ -9632,9 +9896,13 @@
       "role": "supporting"
      },
      {
-      "m": "ettercap-web-silk",
+      "any": [
+       "silk"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any silk (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -9732,9 +10000,13 @@
       "role": "keystone"
      },
      {
-      "m": "killer-whale-tooth",
+      "any": [
+       "tooth"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any tooth (common or better)",
+      "min": "common"
      },
      {
       "oneOf": [
@@ -9746,9 +10018,12 @@
       "label": "Orca hide or plesiosaur vertebrae"
      },
      {
-      "m": "pitch",
+      "any": [
+       "resin"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any resin"
      }
     ],
     "tools": [
@@ -9840,7 +10115,7 @@
      },
      {
       "m": "giant-crocodile-teeth",
-      "q": 6,
+      "q": 2,
       "role": "keystone"
      },
      {
@@ -9902,9 +10177,12 @@
       "role": "supporting"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -10032,7 +10310,7 @@
   {
    "id": "wyrmfire-grenade",
    "name": "Wyrmfire Grenade",
-   "cat": "poison",
+   "cat": "wondrous",
    "tier": "uncommon",
    "attune": false,
    "src": "Homebrew",
@@ -10104,9 +10382,13 @@
       "role": "keystone"
      },
      {
-      "m": "gold-dragon-wyrmling-scales",
+      "any": [
+       "scale"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any scale (common or better)",
+      "min": "common"
      },
      {
       "m": "crystal-vial",
@@ -10142,7 +10424,7 @@
     "telepathy",
     "psychic"
    ],
-   "effect": "A circlet of pale, slime-slick coral. While you wear it you can communicate telepathically with any creature within 60 feet that knows a language, and once per long rest you can cast detect thoughts (save DC 15) from it.",
+   "effect": "A circlet of pale, slime-slick coral. While you wear it you can communicate telepathically with any creature within 60 feet that knows a language, and it has 3 charges, regaining 1d3 at dawn: expend 1 to cast detect thoughts or 2 to cast suggestion (save DC 15 for both).",
    "value": 4100,
    "recipe": {
     "components": [
@@ -10213,9 +10495,13 @@
       "label": "Storm-serpent essence"
      },
      {
-      "m": "young-blue-dragon-blood",
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "oneOf": [
+       "behir-scale",
+       "young-blue-dragon-blood"
+      ],
+      "label": "Lightning-proof wrap"
      },
      {
       "m": "copper-wire",
@@ -10250,7 +10536,7 @@
     "fire",
     "cold"
    ],
-   "effect": "A breastplate lined with the glowing back-plates of a remorhaz. You have resistance to cold damage and are comfortable in any cold climate, and a creature that hits you with a melee attack while within 5 feet of you takes 2d6 fire damage.",
+   "effect": "A breastplate lined with the glowing back-plates of a remorhaz. You have resistance to cold damage and are comfortable in any cold climate, and a creature that hits you with a melee attack while within 5 feet of you takes 1d6 fire damage.",
    "value": 4800,
    "recipe": {
     "components": [
@@ -10301,7 +10587,7 @@
     "hammer",
     "strength"
    ],
-   "effect": "A two-handed maul whose head is a roc's hooked beak. You gain a +2 bonus to attack and damage rolls with it. Once per turn, when you hit a Large or smaller creature, it must succeed on a DC 15 Strength save or be pushed up to 10 feet away and knocked prone.",
+   "effect": "A two-handed maul whose head is a roc's hooked beak. You gain a +1 bonus to attack and damage rolls with it. Once per turn, when you hit a Large or smaller creature, it must succeed on a DC 15 Strength save or be pushed up to 10 feet away and knocked prone.",
    "value": 4000,
    "recipe": {
     "components": [
@@ -10316,14 +10602,20 @@
       "role": "keystone"
      },
      {
-      "m": "elephant-bone",
+      "any": [
+       "bone"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any bone"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -10369,9 +10661,14 @@
       "role": "keystone"
      },
      {
-      "m": "lizard-tail",
+      "any": [
+       "meat",
+       "regeneration"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any regeneration meat (common or better)",
+      "min": "common"
      },
      {
       "m": "silver-wire",
@@ -10571,9 +10868,13 @@
    "recipe": {
     "components": [
      {
-      "m": "erinyes-blood",
+      "oneOf": [
+       "erinyes-blood",
+       "spirit-naga-venom"
+      ],
       "q": 1,
-      "role": "keystone"
+      "role": "keystone",
+      "label": "Keystone (one of)"
      },
      {
       "m": "bearded-devil-beard",
@@ -10581,9 +10882,13 @@
       "role": "supporting"
      },
      {
-      "m": "toxic-herbs",
+      "any": [
+       "herb",
+       "poison"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any poison herb"
      },
      {
       "m": "crystal-vial",
@@ -10633,9 +10938,14 @@
       "role": "keystone"
      },
      {
-      "m": "hell-hound-fang",
+      "any": [
+       "tooth",
+       "fire"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any fire tooth (uncommon or better)",
+      "min": "uncommon"
      },
      {
       "m": "steel-ingot",
@@ -10692,9 +11002,13 @@
       "label": "Young chromatic or metallic dragon essence"
      },
      {
-      "m": "wyvern-hide",
+      "any": [
+       "hide"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any hide (uncommon or better)",
+      "min": "uncommon"
      },
      {
       "m": "gold-wire",
@@ -10805,7 +11119,9 @@
        "adult-blue-dragon-fangs",
        "adult-green-dragon-fangs",
        "adult-red-dragon-fangs",
-       "adult-white-dragon-fangs"
+       "adult-white-dragon-fangs",
+       "young-red-dragon-breath-gland",
+       "young-blue-dragon-breath-gland"
       ],
       "q": 1,
       "role": "keystone",
@@ -10867,7 +11183,9 @@
        "adult-brass-dragon-wing-membrane",
        "adult-copper-dragon-wing-membrane",
        "adult-gold-dragon-wing-membrane",
-       "adult-silver-dragon-wing-membrane"
+       "adult-silver-dragon-wing-membrane",
+       "young-bronze-dragon-scales",
+       "young-silver-dragon-scales"
       ],
       "q": 1,
       "role": "keystone",
@@ -10883,9 +11201,13 @@
       "label": "Flier's trim"
      },
      {
-      "m": "silk-thread",
+      "any": [
+       "thread"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -11048,9 +11370,13 @@
       "role": "supporting"
      },
      {
-      "m": "dragon-turtle-flipper-hide",
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "oneOf": [
+       "dragon-turtle-flipper-hide",
+       "giant-shark-skin"
+      ],
+      "label": "Sea-beast hide"
      }
     ],
     "tools": [
@@ -11109,9 +11435,12 @@
       "label": "Marine hide or scale"
      },
      {
-      "m": "pitch",
+      "any": [
+       "resin"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any resin"
      }
     ],
     "tools": [
@@ -11394,9 +11723,14 @@
       "label": "Adult bronze dragon heart or essence"
      },
      {
-      "m": "bronze-dragon-wyrmling-scales",
+      "any": [
+       "scale",
+       "lightning"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any lightning scale (common or better)",
+      "min": "common"
      },
      {
       "m": "bronze-ingot",
@@ -11544,7 +11878,7 @@
     "curse",
     "strength"
    ],
-   "effect": "A gilded lantern whose light makes enemies feeble. As an action you can unshutter it; each creature of your choice in a 30-foot cone must succeed on a DC 18 Strength save or have disadvantage on Strength-based attacks, checks and saves for 1 minute (repeating the save each turn). Once per long rest.",
+   "effect": "A gilded lantern whose light makes enemies feeble. As an action you can unshutter it; each creature of your choice in a 30-foot cone must succeed on a DC 18 Strength save or have disadvantage on Strength-based attacks, checks and saves for 1 minute (repeating the save each turn). It has 3 charges and regains 1d3 expended charges at dawn; each use costs 1 charge.",
    "value": 25000,
    "recipe": {
     "components": [
@@ -11563,9 +11897,9 @@
       "label": "Great gold dragon weakening gland"
      },
      {
-      "m": "young-gold-dragon-breath-gland",
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "m": "young-gold-dragon-weakening-gland"
      },
      {
       "m": "gold-leaf",
@@ -11617,9 +11951,13 @@
       "role": "keystone"
      },
      {
-      "m": "dragon-turtle-beak",
+      "any": [
+       "tooth"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any tooth (rare or better)",
+      "min": "rare"
      },
      {
       "m": "steel-ingot",
@@ -11671,9 +12009,9 @@
       "role": "keystone"
      },
      {
-      "m": "dragon-turtle-flipper-hide",
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "m": "magma-glass"
      },
      {
       "m": "bronze-ingot",
@@ -11740,9 +12078,12 @@
       "role": "supporting"
      },
      {
-      "m": "pitch",
+      "any": [
+       "resin"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any resin"
      }
     ],
     "tools": [
@@ -11840,14 +12181,23 @@
       "role": "base"
      },
      {
-      "m": "pit-fiend-scale",
+      "oneOf": [
+       "pit-fiend-scale",
+       "adult-red-dragon-scales"
+      ],
       "q": 1,
-      "role": "keystone"
+      "role": "keystone",
+      "label": "Keystone (one of)"
      },
      {
-      "m": "pit-fiend-fang",
+      "any": [
+       "tooth",
+       "fire"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any fire tooth (very-rare or better)",
+      "min": "very-rare"
      },
      {
       "m": "adamantine-ingot",
@@ -11898,9 +12248,14 @@
       "role": "keystone"
      },
      {
-      "m": "winter-wolf-fang",
+      "any": [
+       "tooth",
+       "cold"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any cold tooth (uncommon or better)",
+      "min": "uncommon"
      },
      {
       "m": "sublime-arcane-ink",
@@ -11950,9 +12305,14 @@
       "role": "keystone"
      },
      {
-      "m": "giant-boar-tusks",
+      "any": [
+       "tooth",
+       "strength"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any strength tooth (common or better)",
+      "min": "common"
      },
      {
       "m": "adamantine-ingot",
@@ -12426,11 +12786,11 @@
      {
       "oneOf": [
        "ancient-gold-dragon-essence",
-       "ancient-gold-dragon-weakening-gland"
+       "ancient-gold-dragon-heart"
       ],
       "q": 1,
       "role": "keystone",
-      "label": "Ancient gold dragon essence or gland"
+      "label": "Ancient gold dragon keystone"
      },
      {
       "m": "adult-gold-dragon-essence",
@@ -12495,9 +12855,14 @@
       "role": "supporting"
      },
      {
-      "m": "adult-red-dragon-fangs",
+      "any": [
+       "tooth",
+       "fire"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any fire tooth (rare or better)",
+      "min": "rare"
      },
      {
       "m": "primordial-arcane-ink",
@@ -13135,9 +13500,12 @@
       "role": "keystone"
      },
      {
-      "m": "thread",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any thread"
      },
      {
       "m": "rat-incisors",
@@ -13189,9 +13557,9 @@
       "role": "supporting"
      },
      {
-      "m": "coin-purse",
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "m": "silver-wire"
      }
     ],
     "tools": [
@@ -13431,9 +13799,12 @@
       "role": "supporting"
      },
      {
-      "m": "heather",
+      "any": [
+       "herb"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any herb"
      }
     ],
     "tools": [
@@ -13475,9 +13846,12 @@
       "role": "supporting"
      },
      {
-      "m": "pitch",
+      "any": [
+       "resin"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any resin"
      }
     ],
     "tools": [
@@ -13717,9 +14091,12 @@
       "role": "keystone"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -13801,9 +14178,14 @@
       "role": "base"
      },
      {
-      "m": "rug-of-smothering-fibres",
+      "any": [
+       "thread",
+       "binding"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any binding thread (common or better)",
+      "min": "common"
      },
      {
       "m": "rug-of-smothering-animus",
@@ -13934,9 +14316,13 @@
       "role": "base"
      },
      {
-      "m": "veteran-campaign-medal",
+      "oneOf": [
+       "veteran-campaign-medal",
+       "hobgoblin-military-kit"
+      ],
       "q": 1,
-      "role": "keystone"
+      "role": "keystone",
+      "label": "A soldier's keepsake"
      },
      {
       "m": "dye-red",
@@ -13944,9 +14330,9 @@
       "role": "supporting"
      },
      {
-      "m": "coin-purse",
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "m": "silver-wire"
      }
     ],
     "tools": [
@@ -13985,11 +14371,12 @@
       "oneOf": [
        "gladiator-champions-shield-boss",
        "veteran-campaign-medal",
-       "knight-heraldic-plate"
+       "knight-heraldic-plate",
+       "hobgoblin-war-banner"
       ],
       "q": 1,
       "role": "keystone",
-      "label": "A fighter's trophy of renown (champion's shield boss, campaign medal or heraldic plate)"
+      "label": "A champion's token"
      },
      {
       "m": "scrap-chain-links",
@@ -14036,9 +14423,12 @@
       "role": "keystone"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -14157,7 +14547,7 @@
     "gear",
     "undeath"
    ],
-   "effect": "A sealed pot of twitching grave-flesh. Opened, it draws mindless undead: zombies and skeletons within 60 feet that fail a DC 11 Wisdom save move toward the pot and spend 1 minute worrying at it instead of attacking.",
+   "effect": "A sealed pot of twitching grave-flesh. Opened, it draws mindless flesh-eaters: zombies and ghouls within 60 feet that fail a DC 11 Wisdom save move toward the pot and spend 1 minute worrying at it instead of attacking. The effect ends for a creature that takes damage, and the pot is used up.",
    "value": 64,
    "recipe": {
     "components": [
@@ -14182,8 +14572,8 @@
     ],
     "station": "campfire",
     "dc": 12,
-    "time": "2 days",
-    "gp": 10,
+    "time": "1 day",
+    "gp": 5,
     "level": 1,
     "yields": 1,
     "lore": "Zombies are drawn to dead flesh that still twitches, as if calling to kin. Gutter cap is the rat-catcher's bait; it works as well on the dead as on rats."
@@ -14265,9 +14655,13 @@
       "role": "keystone"
      },
      {
-      "m": "yew-wood",
+      "any": [
+       "wood"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any wood (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -14294,7 +14688,7 @@
     "darkvision",
     "shadow"
    ],
-   "effect": "Smoked goggles fogged with a shadow's essence. While wearing them you see in dim light within 30 feet as if it were bright light, but they give no sight in total darkness.",
+   "effect": "Smoked goggles fogged with a shadow's essence. While wearing them you see in dim light within 30 feet as if it were bright light, and you have advantage on saving throws against being blinded by bright light, but they give no sight in total darkness.",
    "value": 110,
    "recipe": {
     "components": [
@@ -14397,9 +14791,12 @@
       "role": "keystone"
      },
      {
-      "m": "marsh-mallow-root",
+      "any": [
+       "herb"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any herb"
      },
      {
       "m": "holy-water",
@@ -14485,14 +14882,22 @@
       "role": "keystone"
      },
      {
-      "m": "rotbloom",
+      "any": [
+       "flower",
+       "poison"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any poison flower (common or better)",
+      "min": "common"
      },
      {
-      "m": "tallow",
+      "any": [
+       "fat"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any fat"
      }
     ],
     "tools": [
@@ -14587,9 +14992,12 @@
       "role": "supporting"
      },
      {
-      "m": "thread",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread"
      }
     ],
     "tools": [
@@ -14637,9 +15045,12 @@
       "role": "supporting"
      },
      {
-      "m": "cured-fur",
+      "any": [
+       "fur"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any fur"
      }
     ],
     "tools": [
@@ -14682,9 +15093,12 @@
       "role": "keystone"
      },
      {
-      "m": "beeswax",
+      "any": [
+       "wax"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any wax"
      }
     ],
     "tools": [
@@ -14725,9 +15139,12 @@
       "role": "supporting"
      },
      {
-      "m": "tallow",
+      "any": [
+       "fat"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any fat"
      }
     ],
     "tools": [
@@ -14779,9 +15196,12 @@
       "role": "supporting"
      },
      {
-      "m": "common-ink",
+      "any": [
+       "ink"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any ink"
      }
     ],
     "tools": [
@@ -14821,11 +15241,11 @@
       "oneOf": [
        "arcane-focus-shard",
        "deepglow-lichen",
-       "animated-armor-animus-rune"
+       "will-o-wisp-marsh-glow"
       ],
       "q": 1,
       "role": "keystone",
-      "label": "Small arcane spark (focus shard, deepglow lichen or an animus rune)"
+      "label": "Light source"
      },
      {
       "m": "cave-glowcrystal",
@@ -14928,14 +15348,21 @@
       "label": "Deep-cold fur (a frost giant's mammoth cloak, mammoth wool or a polar bear pelt)"
      },
      {
-      "m": "cured-fur",
+      "any": [
+       "fur",
+       "cold"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any cold fur"
      },
      {
-      "m": "thread",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread"
      }
     ],
     "tools": [
@@ -14955,7 +15382,7 @@
    "name": "Rime-Iron Bearded Axe",
    "cat": "weapon",
    "tier": "uncommon",
-   "attune": true,
+   "attune": false,
    "src": "Homebrew",
    "tags": [
     "weapon",
@@ -14987,9 +15414,14 @@
       "role": "supporting"
      },
      {
-      "m": "polar-bear-pelt",
+      "any": [
+       "fur",
+       "cold"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any cold fur (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -15078,7 +15510,7 @@
     "fear",
     "fiendish"
    ],
-   "effect": "A glaive whose blade is an oni's reforged edge or steel quenched in bearded-devil ichor, blackened with umbral soot. Once per dawn, when you hit with it, the target must succeed on a DC 13 Wisdom save or be frightened of you until the end of your next turn. It counts as magical against resistance.",
+   "effect": "A glaive whose blade is an oni's reforged edge or steel bound with a bearded devil's beard, blackened with umbral soot. Once per short rest, when you hit with it, the target must succeed on a DC 13 Wisdom save or be frightened of you until the end of your next turn. It counts as magical against resistance.",
    "value": 400,
    "recipe": {
     "components": [
@@ -15090,11 +15522,11 @@
      {
       "oneOf": [
        "oni-glaive-edge",
-       "bearded-devil-ichor"
+       "bearded-devil-beard"
       ],
       "q": 1,
       "role": "keystone",
-      "label": "Fiendish dread keystone (uncommon+)"
+      "label": "Dread edge"
      },
      {
       "m": "shadow-umbral-residue",
@@ -15144,9 +15576,12 @@
       "role": "keystone"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any leather"
      },
      {
       "m": "magmin-lava-crust",
@@ -15254,9 +15689,13 @@
       "role": "supporting"
      },
      {
-      "m": "arcane-ink",
+      "any": [
+       "ink"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any ink (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -15354,9 +15793,12 @@
       "role": "keystone"
      },
      {
-      "m": "scrap-leather",
+      "any": [
+       "leather"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any leather"
      },
      {
       "m": "black-sand",
@@ -15566,9 +16008,12 @@
       "role": "keystone"
      },
      {
-      "m": "cured-fur",
+      "any": [
+       "fur"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any fur"
      },
      {
       "m": "silver-wire",
@@ -15647,7 +16092,7 @@
   {
    "id": "gravebinder-circle-chalk",
    "name": "Gravebinder's Circle Chalk",
-   "cat": "potion",
+   "cat": "wondrous",
    "tier": "uncommon",
    "attune": false,
    "src": "Homebrew",
@@ -15675,9 +16120,12 @@
       "role": "supporting"
      },
      {
-      "m": "rock-salt",
+      "any": [
+       "salt"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any salt"
      }
     ],
     "tools": [
@@ -15708,7 +16156,7 @@
     "necrotic",
     "regeneration"
    ],
-   "effect": "A slender dagger set with a vampire spawn's fang. Once per dawn, when you hit with it, the target takes an extra 1d6 necrotic damage and you regain hit points equal to that amount.",
+   "effect": "A slender dagger set with a vampire spawn's fang. It has 3 charges and regains 1d3 expended charges at dawn. When you hit with it, you can expend 1 charge: the target takes an extra 1d6 necrotic damage and you regain hit points equal to that amount.",
    "value": 400,
    "recipe": {
     "components": [
@@ -15770,9 +16218,14 @@
       "role": "keystone"
      },
      {
-      "m": "ghast-grave-dust",
+      "any": [
+       "dust",
+       "undeath"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any undeath dust (common or better)",
+      "min": "common"
      },
      {
       "m": "iron-ingot",
@@ -15827,9 +16280,12 @@
       "role": "supporting"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -15932,9 +16388,12 @@
       "role": "supporting"
      },
      {
-      "m": "pitch",
+      "any": [
+       "resin"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any resin"
      }
     ],
     "tools": [
@@ -15981,9 +16440,14 @@
       "role": "keystone"
      },
      {
-      "m": "gargoyle-stoneskin",
+      "any": [
+       "hide",
+       "toughness"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any toughness hide (common or better)",
+      "min": "common"
      },
      {
       "m": "limestone",
@@ -16029,14 +16493,20 @@
       "role": "keystone"
      },
      {
-      "m": "rock-salt",
+      "any": [
+       "salt"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any salt"
      },
      {
-      "m": "beeswax",
+      "any": [
+       "wax"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any wax"
      }
     ],
     "tools": [
@@ -16143,9 +16613,12 @@
       "role": "supporting"
      },
      {
-      "m": "wooden-haft",
+      "any": [
+       "wood"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any wood"
      }
     ],
     "tools": [
@@ -16244,9 +16717,13 @@
       "role": "supporting"
      },
      {
-      "m": "petrified-wood",
+      "any": [
+       "wood"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any wood (uncommon or better)",
+      "min": "uncommon"
      },
      {
       "m": "cut-stone",
@@ -16283,7 +16760,7 @@
     "regeneration",
     "death"
    ],
-   "effect": "A gold-wrapped periapt around a mummy lord's preserved heart. You have resistance to necrotic damage and your hit point maximum can't be reduced. Once per dawn, when you drop to 0 hit points, you instead rise at the start of your next turn with half your hit points — but you have vulnerability to fire until your next long rest.",
+   "effect": "A gold-wrapped periapt around a mummy lord's preserved heart. You have resistance to necrotic damage and your hit point maximum can't be reduced. Once per dawn, when you drop to 0 hit points, you drop to 1 hit point instead and regain hit points equal to half your hit point maximum at the start of your next turn — but you have vulnerability to fire until your next long rest.",
    "value": 40000,
    "recipe": {
     "components": [
@@ -16416,9 +16893,12 @@
       "role": "supporting"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -16461,14 +16941,23 @@
       "role": "keystone"
      },
      {
-      "m": "orc-war-totem",
+      "any": [
+       "bone"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any bone (common or better)",
+      "min": "common"
      },
      {
       "m": "dye-red",
       "q": 1,
       "role": "binding"
+     },
+     {
+      "m": "orc-war-totem",
+      "q": 1,
+      "role": "supporting"
      }
     ],
     "tools": [
@@ -16565,9 +17054,12 @@
       "role": "supporting"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -16661,9 +17153,14 @@
       "role": "keystone"
      },
      {
-      "m": "sphinx-of-wonder-riddle-feather",
+      "any": [
+       "feather",
+       "knowledge"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any knowledge feather (common or better)",
+      "min": "common"
      },
      {
       "m": "gold-wire",
@@ -16764,9 +17261,12 @@
       "role": "binding"
      },
      {
-      "m": "sea-salt",
+      "any": [
+       "salt"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any salt"
      }
     ],
     "tools": [
@@ -16858,14 +17358,22 @@
       "role": "keystone"
      },
      {
-      "m": "crawling-claw-hand-bones",
+      "any": [
+       "bone",
+       "undeath"
+      ],
       "q": 3,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any undeath bone (common or better)",
+      "min": "common"
      },
      {
-      "m": "thread",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread"
      }
     ],
     "tools": [
@@ -17012,9 +17520,12 @@
       "role": "keystone"
      },
      {
-      "m": "thread",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread"
      }
     ],
     "tools": [
@@ -17048,16 +17559,20 @@
      {
       "oneOf": [
        "guard-captain-signal-horn",
-       "hobgoblin-captain-war-horn"
+       "hobgoblin-captain-war-horn",
+       "hobgoblin-war-banner"
       ],
       "q": 1,
       "role": "keystone",
-      "label": "An officer's horn (guard or hobgoblin captain)"
+      "label": "An officer's horn or banner"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      },
      {
       "m": "bronze-ingot",
@@ -17109,9 +17624,12 @@
       "role": "supporting"
      },
      {
-      "m": "thread",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread"
      }
     ],
     "tools": [

@@ -327,6 +327,7 @@
    "name": "Hell Hound Pelt",
    "tier": "uncommon",
    "tags": [
+    "hide",
     "fur",
     "fire",
     "resistance",
@@ -1774,6 +1775,7 @@
    "name": "Blink Dog Pelt",
    "tier": "common",
    "tags": [
+    "hide",
     "fur",
     "teleport",
     "fey"

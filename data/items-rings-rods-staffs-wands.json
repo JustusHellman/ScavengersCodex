@@ -39,9 +39,14 @@
       "role": "supporting"
      },
      {
-      "m": "lion-mane",
+      "any": [
+       "fur",
+       "fear"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any fear fur (common or better)",
+      "min": "common"
      },
      {
       "m": "druidic-mistletoe",
@@ -455,9 +460,14 @@
       "role": "supporting"
      },
      {
-      "m": "panther-hamstring",
+      "any": [
+       "sinew",
+       "speed"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any speed sinew (common or better)",
+      "min": "common"
      },
      {
       "m": "quicksilver",
@@ -524,9 +534,13 @@
       "role": "supporting"
      },
      {
-      "m": "owl-feather",
+      "any": [
+       "feather"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any feather (common or better)",
+      "min": "common"
      },
      {
       "m": "silver-wire",
@@ -717,14 +731,23 @@
       "role": "supporting"
      },
      {
-      "m": "axe-beak-leg-sinew",
+      "any": [
+       "sinew",
+       "speed"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any speed sinew (common or better)",
+      "min": "common"
      },
      {
-      "m": "giant-goat-hooves",
+      "any": [
+       "horn"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any horn (common or better)",
+      "min": "common"
      },
      {
       "m": "silver-wire",
@@ -1178,9 +1201,13 @@
       "role": "supporting"
      },
      {
-      "m": "ironbark",
+      "any": [
+       "bark"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any bark (uncommon or better)",
+      "min": "uncommon"
      },
      {
       "m": "silver-wire",
@@ -1303,9 +1330,13 @@
       "role": "supporting"
      },
      {
-      "m": "garlic-bulb",
+      "any": [
+       "herb",
+       "resistance"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any resistance herb"
      },
      {
       "m": "silver-wire",
@@ -1689,9 +1720,14 @@
       "role": "supporting"
      },
      {
-      "m": "spellbook-pages",
+      "any": [
+       "ink",
+       "arcane"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any arcane ink (common or better)",
+      "min": "common"
      },
      {
       "m": "gold-wire",
@@ -1815,9 +1851,13 @@
       "role": "supporting"
      },
      {
-      "m": "bladderwrack",
+      "any": [
+       "herb",
+       "water"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any water herb"
      },
      {
       "m": "silver-wire",
@@ -1945,14 +1985,14 @@
       "role": "supporting"
      },
      {
-      "m": "minotaur-horn",
+      "any": [
+       "horn",
+       "strength"
+      ],
       "q": 1,
-      "role": "supporting"
-     },
-     {
-      "m": "giant-goat-horns",
-      "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any strength horn (uncommon or better)",
+      "min": "uncommon"
      },
      {
       "m": "jewelers-solder",
@@ -2077,9 +2117,14 @@
       "role": "supporting"
      },
      {
-      "m": "azer-flame-hair",
+      "any": [
+       "hair",
+       "fire"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any fire hair (common or better)",
+      "min": "common"
      },
      {
       "m": "gold-wire",
@@ -2134,9 +2179,13 @@
       "label": "Buoyant water keystone (uncommon+)"
      },
      {
-      "m": "driftwood",
+      "any": [
+       "wood",
+       "water"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any water wood"
      },
      {
       "m": "reef-shark-oil",
@@ -2478,7 +2527,7 @@
      },
      {
       "m": "kobold-trap-springs",
-      "q": 6,
+      "q": 1,
       "role": "supporting"
      },
      {
@@ -2746,9 +2795,14 @@
       "label": "Beguiling keystone (rare+): mirage lotus, vampire essence, glabrezu tongue or young green dragon essence"
      },
      {
-      "m": "feywood",
+      "any": [
+       "wood",
+       "fey"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any fey wood (uncommon or better)",
+      "min": "uncommon"
      },
      {
       "m": "harpy-vocal-cords",
@@ -2761,9 +2815,13 @@
       "role": "supporting"
      },
      {
-      "m": "amberpine-sap",
+      "any": [
+       "sap"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any sap (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -2815,9 +2873,14 @@
       "label": "Heart of undying flame (very-rare)"
      },
      {
-      "m": "salamander-scales",
+      "any": [
+       "scale",
+       "fire"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any fire scale (uncommon or better)",
+      "min": "uncommon"
      },
      {
       "m": "fire-giant-forge-ash",
@@ -2949,9 +3012,14 @@
       "label": "Celestial remedy (rare)"
      },
      {
-      "m": "healers-moss",
+      "any": [
+       "herb",
+       "healing"
+      ],
       "q": 3,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any healing herb (common or better)",
+      "min": "common"
      },
      {
       "m": "bloodstone",
@@ -2959,9 +3027,13 @@
       "role": "supporting"
      },
      {
-      "m": "rowan-wood",
+      "any": [
+       "wood"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any wood (common or better)",
+      "min": "common"
      },
      {
       "m": "priest-blessed-holy-water",
@@ -3029,9 +3101,14 @@
       "role": "supporting"
      },
      {
-      "m": "archmage-annotated-spellbook-folio",
+      "any": [
+       "ink",
+       "arcane"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any arcane ink (rare or better)",
+      "min": "rare"
      },
      {
       "m": "sublime-arcane-ink",
@@ -3090,9 +3167,13 @@
       "label": "Mighty keystone (very-rare)"
      },
      {
-      "m": "ironwood",
+      "any": [
+       "wood"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any wood (uncommon or better)",
+      "min": "uncommon"
      },
      {
       "m": "adamantine-ingot",
@@ -3100,9 +3181,13 @@
       "role": "supporting"
      },
      {
-      "m": "amberpine-sap",
+      "any": [
+       "sap"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any sap (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -3144,13 +3229,9 @@
       "role": "base"
      },
      {
-      "oneOf": [
-       "emerald",
-       "treant-essence"
-      ],
+      "m": "treant-essence",
       "q": 1,
-      "role": "keystone",
-      "label": "Emerald or treant essence (rare primal)"
+      "role": "keystone"
      },
      {
       "m": "swarm-of-insects-wings",
@@ -3163,14 +3244,21 @@
       "role": "supporting"
      },
      {
-      "m": "swarm-of-wasps-paper-nest",
+      "any": [
+       "wood"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any wood (common or better)",
+      "min": "common"
      },
      {
-      "m": "beeswax",
+      "any": [
+       "wax"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any wax"
      }
     ],
     "tools": [
@@ -3285,23 +3373,23 @@
      },
      {
       "oneOf": [
-       "doppelganger-blood",
+       "couatl-essence",
        "medusa-snake-hair",
        "roper-strand"
       ],
       "q": 1,
       "role": "keystone",
-      "label": "Shape-shifting or snake-born keystone (uncommon+)"
+      "label": "Serpent keystone"
      },
      {
-      "m": "giant-constrictor-snake-skin",
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "m": "giant-constrictor-snake-skin"
      },
      {
-      "m": "giant-constrictor-snake-coil-muscle",
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "m": "giant-constrictor-snake-coil-muscle"
      },
      {
       "m": "amberpine-sap",
@@ -3360,14 +3448,24 @@
       "label": "Living heartwood (rare)"
      },
      {
-      "m": "dryad-heartwood",
+      "any": [
+       "wood",
+       "growth"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any growth wood (uncommon or better)",
+      "min": "uncommon"
      },
      {
-      "m": "awakened-tree-sap",
+      "any": [
+       "sap",
+       "primal"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any primal sap (common or better)",
+      "min": "common"
      },
      {
       "m": "druidic-mistletoe",
@@ -3504,9 +3602,13 @@
       "label": "Death-touched keystone (rare)"
      },
      {
-      "m": "gloomwood",
+      "any": [
+       "wood"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any wood (uncommon or better)",
+      "min": "uncommon"
      },
      {
       "m": "soulless-ash",
@@ -3573,9 +3675,14 @@
       "label": "Binding keystone (rare)"
      },
      {
-      "m": "roper-strand",
+      "any": [
+       "sinew",
+       "binding"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any binding sinew (uncommon or better)",
+      "min": "uncommon"
      },
      {
       "m": "mimic-adhesive",
@@ -3583,9 +3690,13 @@
       "role": "supporting"
      },
      {
-      "m": "greater-arcane-ink",
+      "any": [
+       "ink"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any ink (rare or better)",
+      "min": "rare"
      }
     ],
     "tools": [
@@ -3644,9 +3755,13 @@
       "role": "supporting"
      },
      {
-      "m": "greater-arcane-ink",
+      "any": [
+       "ink"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any ink (rare or better)",
+      "min": "rare"
      }
     ],
     "tools": [
@@ -3702,14 +3817,23 @@
       "role": "supporting"
      },
      {
-      "m": "quasit-horn",
+      "any": [
+       "horn",
+       "fear"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any fear horn (common or better)",
+      "min": "common"
      },
      {
-      "m": "greater-arcane-ink",
+      "any": [
+       "ink"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any ink (rare or better)",
+      "min": "rare"
      }
     ],
     "tools": [
@@ -3775,9 +3899,13 @@
       "role": "supporting"
      },
      {
-      "m": "greater-arcane-ink",
+      "any": [
+       "ink"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any ink (rare or better)",
+      "min": "rare"
      }
     ],
     "tools": [
@@ -3837,9 +3965,13 @@
       "role": "supporting"
      },
      {
-      "m": "greater-arcane-ink",
+      "any": [
+       "ink"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any ink (rare or better)",
+      "min": "rare"
      }
     ],
     "tools": [
@@ -3898,9 +4030,14 @@
       "role": "supporting"
      },
      {
-      "m": "arcane-ink",
+      "any": [
+       "ink",
+       "arcane"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any arcane ink (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -3960,9 +4097,14 @@
       "role": "supporting"
      },
      {
-      "m": "arcane-ink",
+      "any": [
+       "ink",
+       "arcane"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any arcane ink (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -4012,9 +4154,14 @@
       "label": "Paralyzing keystone (rare+)"
      },
      {
-      "m": "ghoul-claw",
+      "any": [
+       "claw",
+       "paralysis"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any paralysis claw (common or better)",
+      "min": "common"
      },
      {
       "m": "chuul-tentacle",
@@ -4022,9 +4169,13 @@
       "role": "supporting"
      },
      {
-      "m": "greater-arcane-ink",
+      "any": [
+       "ink"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any ink (rare or better)",
+      "min": "rare"
      }
     ],
     "tools": [
@@ -4084,9 +4235,13 @@
       "role": "supporting"
      },
      {
-      "m": "sublime-arcane-ink",
+      "any": [
+       "ink"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any ink (very-rare or better)",
+      "min": "very-rare"
      }
     ],
     "tools": [
@@ -4141,14 +4296,23 @@
       "role": "supporting"
      },
      {
-      "m": "spy-cipher-notes",
+      "any": [
+       "ink",
+       "knowledge"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any knowledge ink (common or better)",
+      "min": "common"
      },
      {
-      "m": "arcane-ink",
+      "any": [
+       "ink"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any ink (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -4208,9 +4372,14 @@
       "role": "supporting"
      },
      {
-      "m": "potent-arcane-ink",
+      "any": [
+       "ink",
+       "arcane"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any arcane ink (uncommon or better)",
+      "min": "uncommon"
      }
     ],
     "tools": [
@@ -4271,9 +4440,14 @@
       "role": "supporting"
      },
      {
-      "m": "greater-arcane-ink",
+      "any": [
+       "ink",
+       "arcane"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any arcane ink (rare or better)",
+      "min": "rare"
      }
     ],
     "tools": [
@@ -4386,19 +4560,23 @@
       "label": "Drider silk gland or phase spider silk (uncommon)"
      },
      {
-      "m": "giant-spider-silk",
-      "q": 3,
-      "role": "supporting"
+      "any": [
+       "silk",
+       "binding"
+      ],
+      "q": 4,
+      "role": "supporting",
+      "label": "Any binding silk (common or better)",
+      "min": "common"
      },
      {
-      "m": "ettercap-web-silk",
+      "any": [
+       "ink"
+      ],
       "q": 1,
-      "role": "supporting"
-     },
-     {
-      "m": "arcane-ink",
-      "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any ink (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -4466,9 +4644,13 @@
       "role": "supporting"
      },
      {
-      "m": "greater-arcane-ink",
+      "any": [
+       "ink"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any ink (rare or better)",
+      "min": "rare"
      }
     ],
     "tools": [

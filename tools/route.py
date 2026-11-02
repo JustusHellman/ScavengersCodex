@@ -9,7 +9,7 @@ for m in mons.values():
     for h in m["harvest"]: src[h["m"]].append((m, h))
 for e in envs.values():
     for g in e["gather"]: gat[g["m"]].append((e, g))
-def match(t, c): return all(x in t["tags"] for x in c["any"]) and ti(t["tier"]) >= ti(c.get("min", "mundane"))
+def match(t, c): return all(x in t["tags"] for x in c["any"]) and ti(t["tier"]) >= ti(c.get("min", "mundane")) and not (t.get("_k") == "items" and t["tier"] != "mundane")  # magic items never fill an any-slot
 def opts(c):
     if "m" in c: return [things[c["m"]]]
     if "oneOf" in c: return [things[x] for x in c["oneOf"]]

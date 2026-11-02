@@ -206,9 +206,13 @@
       "label": "Deep-diver ingredient"
      },
      {
-      "m": "bladderwrack",
+      "any": [
+       "herb",
+       "swimming"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any swimming herb"
      },
      {
       "m": "sea-salt",
@@ -244,7 +248,7 @@
     "senses",
     "darkvision"
    ],
-   "effect": "For 8 hours you have advantage on Wisdom (Perception) checks that rely on sight in dim light, and you can't be surprised while on watch if you are awake.",
+   "effect": "For 8 hours you have advantage on Wisdom (Perception) checks that rely on sight in dim light, and on checks to notice creatures approaching while you keep watch.",
    "value": 50,
    "recipe": {
     "components": [
@@ -302,7 +306,7 @@
     "protection",
     "fear"
    ],
-   "effect": "For 1 hour after eating one, you have advantage on saving throws against being frightened.",
+   "effect": "For 8 hours after eating one, you have advantage on saving throws against being frightened.",
    "value": 60,
    "recipe": {
     "components": [
@@ -326,9 +330,12 @@
       "role": "supporting"
      },
      {
-      "m": "sweetgrass",
+      "any": [
+       "herb"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any herb"
      }
     ],
     "tools": [
@@ -344,7 +351,7 @@
    },
    "perish": "1 week",
    "meal": {
-    "lasts": "1 hour"
+    "lasts": "8 hours"
    }
   },
   {
@@ -781,9 +788,9 @@
       "role": "supporting"
      },
      {
-      "m": "draft-horse-sinew",
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "m": "oxheart-tuber"
      }
     ],
     "tools": [
@@ -1498,7 +1505,7 @@
    "meal": {
     "lasts": "8 hours"
    },
-   "effect": "Paper-thin fried bat ears dusted with shaved truffle and salt. For 8 hours you have advantage on Wisdom (Perception) checks that rely on hearing, and while you are blinded or in total darkness you still know the direction of any creature within 30 feet that isn't moving silently.",
+   "effect": "Paper-thin fried bat ears dusted with shaved truffle and salt. For 8 hours you have advantage on Wisdom (Perception) checks that rely on hearing.",
    "recipe": {
     "tools": [
      "cooks-utensils"
@@ -1561,7 +1568,7 @@
    "meal": {
     "lasts": "8 hours"
    },
-   "effect": "A dense, savoury bake of cave truffle and gloomsight caps set with stone milk. For 8 hours you gain darkvision out to 30 feet; if you already have darkvision, its range increases by 30 feet.",
+   "effect": "A dense, savoury bake of cave truffle and gloomsight caps set with stone milk. For 8 hours you have advantage on Wisdom (Perception) checks that rely on sight in dim light or darkness.",
    "recipe": {
     "tools": [
      "cooks-utensils"
@@ -1646,9 +1653,12 @@
       "label": "Keen-nosed snout"
      },
      {
-      "m": "medicinal-herbs",
+      "any": [
+       "herb"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any herb"
      },
      {
       "m": "vinegar",
@@ -1675,7 +1685,7 @@
    "meal": {
     "lasts": "8 hours"
    },
-   "effect": "A wobbling, faintly grey honey custard in a hard crust, baked from a cockatrice egg. For 8 hours you have advantage on saving throws against being petrified, and if you are restrained while turning to stone you may repeat the save at the start of each of your turns.",
+   "effect": "A wobbling, faintly grey honey custard in a hard crust, baked from a cockatrice egg. For 8 hours you have advantage on saving throws against being petrified, and if you are restrained by a petrifying effect, you can repeat the saving throw at the end of each of your turns.",
    "recipe": {
     "tools": [
      "cooks-utensils"
@@ -1765,9 +1775,12 @@
       "role": "supporting"
      },
      {
-      "m": "camel-hump-fat",
+      "any": [
+       "fat"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any fat"
      }
     ],
     "lore": "Desert guides say the vulture eats death and never sickens; the gizzard is scrubbed in salt three times and simmered whole, then sliced into the pot."
@@ -1932,9 +1945,12 @@
       "role": "supporting"
      },
      {
-      "m": "sweetgrass",
+      "any": [
+       "herb"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any herb"
      },
      {
       "m": "honeycomb",
@@ -1993,9 +2009,13 @@
       "label": "Self-mending flesh"
      },
      {
-      "m": "healers-moss",
+      "any": [
+       "herb"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any herb (common or better)",
+      "min": "common"
      },
      {
       "m": "salt",
@@ -2119,9 +2139,13 @@
       "role": "supporting"
      },
      {
-      "m": "garlic-bulb",
+      "any": [
+       "herb",
+       "resistance"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any resistance herb"
      }
     ],
     "lore": "The gland is lanced over the kettle and its oil cooked out for hours behind a wet curtain; cooks who taste too early lose their eyebrows and their sense of taste for a tenday."
@@ -2253,9 +2277,13 @@
       "label": "Any shellfish or fish"
      },
      {
-      "m": "bladderwrack",
+      "any": [
+       "herb",
+       "swimming"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any swimming herb"
      },
      {
       "m": "sea-salt",
@@ -2282,7 +2310,7 @@
    "meal": {
     "lasts": "8 hours"
    },
-   "effect": "A slow, fiery curry of thick-skinned beast and diced heart over mashed oxheart tuber. When you finish a serving, you gain temporary hit points equal to 2d6 + your level, which last for 8 hours.",
+   "effect": "A slow, fiery curry of thick-skinned beast and diced heart over mashed oxheart tuber. When you finish a serving, you gain temporary hit points equal to 2d6 + twice your proficiency bonus, which last for 8 hours.",
    "recipe": {
     "tools": [
      "cooks-utensils"
@@ -2319,9 +2347,12 @@
       "role": "supporting"
      },
      {
-      "m": "garlic-bulb",
+      "any": [
+       "herb"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any herb"
      },
      {
       "m": "salt",
@@ -2387,9 +2418,12 @@
       "label": "Venom sac, boiled out"
      },
      {
-      "m": "bog-myrtle",
+      "any": [
+       "herb"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any herb"
      }
     ],
     "lore": "The venom is boiled three times in fresh water and the water thrown out each time; skip the third boil and the broth teaches its lesson the hard way."
@@ -2445,9 +2479,12 @@
       "role": "supporting"
      },
      {
-      "m": "tallow",
+      "any": [
+       "fat"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any fat"
      }
     ],
     "lore": "Library cooks grate the root while reciting the day's date aloud, so the pudding remembers what it is for and doesn't send the eater wandering through old childhood afternoons."

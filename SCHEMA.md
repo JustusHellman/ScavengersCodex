@@ -212,6 +212,20 @@ Giant Strength; basilisk eye → petrification; red dragon scales → Red Dragon
 Refined intermediates (tanned leather, ingots, distilled essences, inks) are **materials with a
 recipe** (tier = what they are, time in hours/days, station e.g. tannery/forge/alchemy-lab).
 
+**Pricing principle.** An item's `value` comes from what it does and its rarity, and stays put.
+A recipe should cost less than the item: cheapest parts + reagent gold + labour ≤ value (labour
+per day: common 10, uncommon 20, rare 50, very rare 150, legendary 300 gp). If a recipe costs more,
+trim the recipe (fewer or cheaper parts, a `oneOf` with a cheaper option) instead of raising the
+item's price, or prices creep upward. A refined material (ingot, leather, ink) must be worth at
+least the parts and gold that go into it. A pricier alternative part never changes an item's value.
+The rarity's price range is counted on top of a base item's own price, so a Basilisk-Hide Shield is a 10 gp shield plus up to 500 gp, and Adamantine Plate is 1,500 gp of plate plus the adamantine. `python3 tools/economy.py` checks all of this.
+
+**Flexible parts, unique recipes.** A supporting or binding part that is really just "a hide", "a
+thread" or "an herb" is an `any` slot with a `min` tier, keeping the item's theme when the original
+part carried one (`{"any": ["herb", "cold"], "min": "common", "label": "Any cold herb (common or
+better)"}`). Keystones, bases, precious materials and parts the item is named after stay named.
+No two magic items may have exactly the same components; ordinary gear made from the same iron is fine.
+
 ### Environment
 ```json
 {

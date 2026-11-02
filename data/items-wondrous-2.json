@@ -218,9 +218,14 @@
       "role": "supporting"
      },
      {
-      "m": "panther-hamstring",
+      "any": [
+       "sinew",
+       "speed"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any speed sinew (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -569,9 +574,14 @@
       "role": "supporting"
      },
      {
-      "m": "lovers-rose",
+      "any": [
+       "flower",
+       "charm"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any charm flower (uncommon or better)",
+      "min": "uncommon"
      }
     ],
     "tools": [
@@ -972,14 +982,24 @@
       "label": "Binding part (rare+)"
      },
      {
-      "m": "roper-strand",
+      "any": [
+       "sinew",
+       "binding"
+      ],
       "q": 3,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any binding sinew (uncommon or better)",
+      "min": "uncommon"
      },
      {
-      "m": "giant-constrictor-snake-coil-muscle",
+      "any": [
+       "sinew",
+       "binding"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any binding sinew (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -1153,14 +1173,23 @@
       "label": "Spell-warding part (rare+): rakshasa hide, nullthorn, archmage focus, or a clay golem's shem or stone golem's core"
      },
      {
-      "m": "pseudodragon-scales",
+      "any": [
+       "scale",
+       "resistance"
+      ],
       "q": 6,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any resistance scale (common or better)",
+      "min": "common"
      },
      {
-      "m": "silk-thread",
+      "any": [
+       "thread"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -1221,9 +1250,13 @@
       "role": "supporting"
      },
      {
-      "m": "greater-arcane-ink",
+      "any": [
+       "ink"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any ink (rare or better)",
+      "min": "rare"
      }
     ],
     "tools": [
@@ -1283,9 +1316,13 @@
       "role": "supporting"
      },
      {
-      "m": "greater-arcane-ink",
+      "any": [
+       "ink"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any ink (rare or better)",
+      "min": "rare"
      }
     ],
     "tools": [
@@ -1346,9 +1383,13 @@
       "role": "supporting"
      },
      {
-      "m": "greater-arcane-ink",
+      "any": [
+       "ink"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any ink (rare or better)",
+      "min": "rare"
      }
     ],
     "tools": [
@@ -1407,9 +1448,13 @@
       "role": "supporting"
      },
      {
-      "m": "sublime-arcane-ink",
+      "any": [
+       "ink"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any ink (very-rare or better)",
+      "min": "very-rare"
      }
     ],
     "tools": [
@@ -1474,9 +1519,13 @@
       "role": "supporting"
      },
      {
-      "m": "greater-arcane-ink",
+      "any": [
+       "ink"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any ink (rare or better)",
+      "min": "rare"
      }
     ],
     "tools": [
@@ -1537,9 +1586,13 @@
       "role": "supporting"
      },
      {
-      "m": "greater-arcane-ink",
+      "any": [
+       "ink"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any ink (rare or better)",
+      "min": "rare"
      }
     ],
     "tools": [
@@ -1598,9 +1651,13 @@
       "role": "supporting"
      },
      {
-      "m": "sublime-arcane-ink",
+      "any": [
+       "ink"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any ink (very-rare or better)",
+      "min": "very-rare"
      }
     ],
     "tools": [
@@ -1659,9 +1716,13 @@
       "role": "supporting"
      },
      {
-      "m": "sublime-arcane-ink",
+      "any": [
+       "ink"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any ink (very-rare or better)",
+      "min": "very-rare"
      }
     ],
     "tools": [
@@ -1721,9 +1782,13 @@
       "role": "supporting"
      },
      {
-      "m": "sublime-arcane-ink",
+      "any": [
+       "ink"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any ink (very-rare or better)",
+      "min": "very-rare"
      }
     ],
     "tools": [
@@ -1783,9 +1848,13 @@
       "role": "supporting"
      },
      {
-      "m": "sublime-arcane-ink",
+      "any": [
+       "ink"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any ink (very-rare or better)",
+      "min": "very-rare"
      }
     ],
     "tools": [
@@ -2021,9 +2090,13 @@
       "label": "Breath-giving part (uncommon+)"
      },
      {
-      "m": "cleansing-sage",
+      "any": [
+       "herb"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any herb (common or better)",
+      "min": "common"
      },
      {
       "m": "giant-sea-horse-swim-bladder",
@@ -2209,9 +2282,14 @@
       "role": "supporting"
      },
      {
-      "m": "potent-arcane-ink",
+      "any": [
+       "ink",
+       "arcane"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any arcane ink (uncommon or better)",
+      "min": "uncommon"
      }
     ],
     "tools": [
@@ -2387,9 +2465,14 @@
       "role": "supporting"
      },
      {
-      "m": "healers-moss",
+      "any": [
+       "herb",
+       "healing"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any healing herb (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -2441,9 +2524,13 @@
       "label": "Dread-voiced part (uncommon+)"
      },
      {
-      "m": "skeleton-bone-dust",
+      "any": [
+       "bone"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any bone (common or better)",
+      "min": "common"
      },
      {
       "m": "sorrowbloom",
@@ -2497,9 +2584,12 @@
       "min": "uncommon"
      },
      {
-      "m": "rat-tail",
-      "q": 12,
-      "role": "supporting"
+      "any": [
+       "hair"
+      ],
+      "q": 2,
+      "role": "supporting",
+      "label": "Any hair"
      },
      {
       "m": "wererat-blood",
@@ -2507,9 +2597,12 @@
       "role": "supporting"
      },
      {
-      "m": "giant-rat-incisors",
+      "any": [
+       "tooth"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any tooth"
      }
     ],
     "tools": [
@@ -2634,9 +2727,13 @@
       "role": "supporting"
      },
      {
-      "m": "spider-silk-thread",
+      "any": [
+       "thread"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -2698,9 +2795,13 @@
       "role": "supporting"
      },
      {
-      "m": "silk-thread",
+      "any": [
+       "thread"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -2827,14 +2928,23 @@
       "role": "supporting"
      },
      {
-      "m": "archmage-annotated-spellbook-folio",
+      "any": [
+       "ink",
+       "arcane"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any arcane ink (rare or better)",
+      "min": "rare"
      },
      {
-      "m": "astral-silver-thread",
+      "any": [
+       "thread"
+      ],
       "q": 3,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread (rare or better)",
+      "min": "rare"
      }
     ],
     "tools": [
@@ -2890,14 +3000,21 @@
       "role": "supporting"
      },
      {
-      "m": "fine-silk-scraps",
+      "any": [
+       "silk"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any silk (common or better)",
+      "min": "common"
      },
      {
-      "m": "thread",
+      "any": [
+       "thread"
+      ],
       "q": 3,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread"
      }
     ],
     "tools": [
@@ -2940,21 +3057,31 @@
       "oneOf": [
        "drider-silk-gland",
        "behir-claw",
-       "giant-ape-arm-sinew"
+       "giant-ape-arm-sinew",
+       "spidergrip-moss"
       ],
       "q": 1,
       "role": "keystone",
       "label": "Climber's part (uncommon+)"
      },
      {
-      "m": "giant-constrictor-snake-coil-muscle",
+      "any": [
+       "sinew"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any sinew (common or better)",
+      "min": "common"
      },
      {
-      "m": "spider-silk",
+      "any": [
+       "silk",
+       "climbing"
+      ],
       "q": 3,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any climbing silk (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -3004,9 +3131,14 @@
       "label": "Grasping keystone (rare+)"
      },
      {
-      "m": "roper-strand",
+      "any": [
+       "sinew",
+       "binding"
+      ],
       "q": 3,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any binding sinew (uncommon or better)",
+      "min": "uncommon"
      },
      {
       "m": "shambling-mound-vines",
@@ -3492,9 +3624,13 @@
       "role": "supporting"
      },
      {
-      "m": "astral-silver-thread",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread (rare or better)",
+      "min": "rare"
      }
     ],
     "tools": [
@@ -3675,9 +3811,13 @@
       "label": "Wind source (uncommon+)"
      },
      {
-      "m": "giant-eagle-pinion",
+      "any": [
+       "feather"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any feather (common or better)",
+      "min": "common"
      },
      {
       "m": "air-elemental-skygrit",
@@ -3732,19 +3872,22 @@
       "label": "Flight keystone (uncommon+)"
      },
      {
-      "m": "griffon-feather",
-      "q": 4,
-      "role": "supporting"
+      "any": [
+       "feather",
+       "flight"
+      ],
+      "q": 6,
+      "role": "supporting",
+      "label": "Any flight feather (common or better)",
+      "min": "common"
      },
      {
-      "m": "hippogriff-feather",
+      "any": [
+       "leather"
+      ],
       "q": 2,
-      "role": "supporting"
-     },
-     {
-      "m": "leather-strips",
-      "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -3795,9 +3938,14 @@
       "label": "Great-winged keystone (rare+)"
      },
      {
-      "m": "pegasus-feather",
+      "any": [
+       "feather",
+       "flight"
+      ],
       "q": 6,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any flight feather (common or better)",
+      "min": "common"
      },
      {
       "m": "giant-bat-wing",
@@ -3805,9 +3953,13 @@
       "role": "supporting"
      },
      {
-      "m": "silk-thread",
+      "any": [
+       "thread"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -3858,9 +4010,14 @@
       "label": "Fey-touched part (uncommon+)"
      },
      {
-      "m": "satyr-horn",
+      "any": [
+       "horn",
+       "sound"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any sound horn (common or better)",
+      "min": "common"
      },
      {
       "m": "emberbloom",
@@ -3868,9 +4025,12 @@
       "role": "supporting"
      },
      {
-      "m": "instrument-strings",
+      "any": [
+       "sinew"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any sinew"
      }
     ],
     "tools": [
@@ -3921,14 +4081,13 @@
       "label": "Wild-magic part (uncommon+)"
      },
      {
-      "m": "druidic-mistletoe",
-      "q": 1,
-      "role": "supporting"
-     },
-     {
-      "m": "awakened-shrub-wakeful-leaf",
-      "q": 2,
-      "role": "supporting"
+      "any": [
+       "herb"
+      ],
+      "q": 3,
+      "role": "supporting",
+      "label": "Any herb (common or better)",
+      "min": "common"
      },
      {
       "m": "harpy-vocal-cords",
@@ -3936,9 +4095,12 @@
       "role": "supporting"
      },
      {
-      "m": "instrument-strings",
+      "any": [
+       "sinew"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any sinew"
      }
     ],
     "tools": [
@@ -3989,9 +4151,13 @@
       "label": "Bark-and-healing part (uncommon+)"
      },
      {
-      "m": "awakened-tree-bark",
+      "any": [
+       "bark"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any bark (common or better)",
+      "min": "common"
      },
      {
       "m": "satyr-essence",
@@ -3999,9 +4165,12 @@
       "role": "supporting"
      },
      {
-      "m": "instrument-strings",
+      "any": [
+       "sinew"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any sinew"
      }
     ],
     "tools": [
@@ -4052,9 +4221,13 @@
       "label": "Healing-or-storm part (rare+)"
      },
      {
-      "m": "unicorn-mane",
+      "any": [
+       "hair"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any hair (uncommon or better)",
+      "min": "uncommon"
      },
      {
       "m": "lamia-tongue",
@@ -4062,9 +4235,12 @@
       "role": "supporting"
      },
      {
-      "m": "instrument-strings",
+      "any": [
+       "sinew"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any sinew"
      }
     ],
     "tools": [
@@ -4132,9 +4308,12 @@
       "role": "supporting"
      },
      {
-      "m": "instrument-strings",
+      "any": [
+       "sinew"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any sinew"
      }
     ],
     "tools": [
@@ -4190,19 +4369,30 @@
       "role": "supporting"
      },
      {
-      "m": "treant-sap",
+      "any": [
+       "sap"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any sap (rare or better)",
+      "min": "rare"
      },
      {
-      "m": "storm-giant-lightning-veined-hair",
+      "any": [
+       "hair"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any hair (rare or better)",
+      "min": "rare"
      },
      {
-      "m": "instrument-strings",
+      "any": [
+       "sinew"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any sinew"
      }
     ],
     "tools": [
@@ -4253,9 +4443,13 @@
       "label": "Primordial keystone (legendary)"
      },
      {
-      "m": "ancient-oak-heartwood",
+      "any": [
+       "wood"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any wood (rare or better)",
+      "min": "rare"
      },
      {
       "m": "gold-wire",
@@ -4268,9 +4462,12 @@
       "role": "supporting"
      },
      {
-      "m": "instrument-strings",
+      "any": [
+       "sinew"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any sinew"
      }
     ],
     "tools": [

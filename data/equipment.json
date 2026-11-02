@@ -140,7 +140,7 @@
    ],
    "desc": "Retted hemp stalks combed into long, tough, straw-coloured strands.",
    "perish": "stable",
-   "value": 0.05,
+   "value": 0.01,
    "recipe": null
   },
   {
@@ -217,7 +217,7 @@
    ],
    "desc": "Sharp, sour wine gone deliberately bad. Pickles food, cleans wounds and etches metal.",
    "perish": "stable",
-   "value": 0.05,
+   "value": 0.25,
    "recipe": {
     "components": [
      {
@@ -297,7 +297,7 @@
       "any": [
        "shell"
       ],
-      "q": 3,
+      "q": 1,
       "role": "base",
       "label": "Any sea shells (murex snails)"
      },
@@ -400,7 +400,7 @@
    ],
    "desc": "Amber glue boiled from bones and hide scraps. Sets hard and holds a bow's laminations together.",
    "perish": "stable",
-   "value": 0.06,
+   "value": 0.1,
    "recipe": {
     "components": [
      {
@@ -433,7 +433,7 @@
    ],
    "desc": "Black, sticky resin cooked from pine. Waterproofs seams, seals barrels and makes torches burn.",
    "perish": "stable",
-   "value": 0.05,
+   "value": 0.2,
    "recipe": {
     "components": [
      {
@@ -460,7 +460,7 @@
    ],
    "desc": "Fine grey ash from a hardwood fire. Leached for lye or mixed into glaze.",
    "perish": "stable",
-   "value": 0.06,
+   "value": 0.1,
    "recipe": {
     "components": [
      {
@@ -487,7 +487,7 @@
    ],
    "desc": "A caustic liquor leached from ash. Eats skin, cuts grease, and is the heart of soap and glass.",
    "perish": "stable",
-   "value": 0.05,
+   "value": 0.3,
    "recipe": {
     "components": [
      {
@@ -516,7 +516,7 @@
    ],
    "desc": "Clear, fiery liquor, strong enough to burn. Alchemists use it to draw out and carry volatile essences.",
    "perish": "stable",
-   "value": 0.3,
+   "value": 1.2,
    "recipe": {
     "components": [
      {
@@ -546,12 +546,12 @@
    ],
    "desc": "A heavy, oily acid that chars wood and bites through cloth. Stored only in glass or wax-sealed clay.",
    "perish": "stable",
-   "value": 4,
+   "value": 5,
    "recipe": {
     "components": [
      {
       "m": "sulfur",
-      "q": 2,
+      "q": 1,
       "role": "base"
      },
      {
@@ -919,7 +919,7 @@
    ],
    "desc": "A soft, silvery bar that crackles when bent.",
    "perish": "stable",
-   "value": 0.9,
+   "value": 1.1,
    "recipe": {
     "components": [
      {
@@ -952,7 +952,7 @@
    ],
    "desc": "A dull, surprisingly heavy bar. Sling bullets, seals, pipe and solder.",
    "perish": "stable",
-   "value": 0.45,
+   "value": 0.5,
    "recipe": {
     "components": [
      {
@@ -986,7 +986,7 @@
    ],
    "desc": "Warm golden bronze that rings like a bell when struck. Cast into horns, bells, censers and holy symbols.",
    "perish": "stable",
-   "value": 1,
+   "value": 5.5,
    "recipe": {
     "components": [
      {
@@ -1090,7 +1090,7 @@
    ],
    "desc": "A spool of fine drawn copper wire. Jewellers wrap settings with it; artificers swear it carries a spark.",
    "perish": "stable",
-   "value": 0.5,
+   "value": 1.5,
    "recipe": {
     "components": [
      {
@@ -1119,7 +1119,7 @@
    ],
    "desc": "Bright drawn silver wire for filigree, rings and circlets.",
    "perish": "stable",
-   "value": 4,
+   "value": 5,
    "recipe": {
     "components": [
      {
@@ -1135,7 +1135,7 @@
     "dc": 8,
     "time": "4 hours",
     "gp": 0,
-    "yields": 3
+    "yields": 12
    }
   },
   {
@@ -1176,7 +1176,7 @@
    ],
    "desc": "Thin rods of low-melting tin-lead alloy for joining settings and clasps.",
    "perish": "stable",
-   "value": 0.2,
+   "value": 0.4,
    "recipe": {
     "components": [
      {
@@ -1226,7 +1226,7 @@
     "dc": 8,
     "time": "1 day",
     "gp": 0,
-    "yields": 6,
+    "yields": 25,
     "lore": "An ingot is beaten between sheets of vellum for a day until it covers a table."
    }
   },
@@ -1257,7 +1257,7 @@
     "dc": 8,
     "time": "4 hours",
     "gp": 0,
-    "yields": 3
+    "yields": 4
    }
   },
   {
@@ -1329,7 +1329,8 @@
     "dc": 15,
     "time": "1 day",
     "gp": 20,
-    "lore": "A captured essence is bled into ink through a thread of quicksilver, which keeps the magic from boiling off."
+    "lore": "A captured essence is bled into ink through a thread of quicksilver, which keeps the magic from boiling off.",
+    "yields": 8
    }
   },
   {
@@ -1378,7 +1379,8 @@
     "dc": 18,
     "time": "3 days",
     "gp": 150,
-    "lore": "Powdered silver steadies the ink so a longer, stronger formula doesn't smear itself apart mid-casting."
+    "lore": "Powdered silver steadies the ink so a longer, stronger formula doesn't smear itself apart mid-casting.",
+    "yields": 3
    }
   },
   {
@@ -1432,7 +1434,8 @@
     "dc": 21,
     "time": "7 days",
     "gp": 1000,
-    "lore": "Gold and diamond anchor a very-rare essence; without them the ink eats through the vellum."
+    "lore": "Gold and diamond anchor a very-rare essence; without them the ink eats through the vellum.",
+    "yields": 3
    }
   },
   {
@@ -1486,7 +1489,8 @@
     "dc": 25,
     "time": "15 days",
     "gp": 5000,
-    "lore": "The distillation must run unbroken for fifteen days; a single lapse and the essence tears free."
+    "lore": "The distillation must run unbroken for fifteen days; a single lapse and the essence tears free.",
+    "yields": 4
    }
   }
  ],
@@ -5552,9 +5556,12 @@
       "role": "keystone"
      },
      {
-      "m": "beeswax",
+      "any": [
+       "wax"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any wax"
      },
      {
       "m": "fine-sand",
@@ -5741,9 +5748,12 @@
       "role": "supporting"
      },
      {
-      "m": "timber",
+      "any": [
+       "wood"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any wood"
      }
     ],
     "tools": [

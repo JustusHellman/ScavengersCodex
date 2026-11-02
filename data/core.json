@@ -11,7 +11,7 @@
    ],
    "desc": "Rust-streaked rock heavy with iron. The backbone of every smithy.",
    "perish": "stable",
-   "value": 5
+   "value": 0.05
   },
   {
    "id": "copper-ore",
@@ -63,7 +63,7 @@
    ],
    "desc": "Silvery ore so light it seems to float in the hand. Found in deep veins beneath mountains.",
    "perish": "stable",
-   "value": 100
+   "value": 12
   },
   {
    "id": "adamantine-ore",
@@ -76,7 +76,7 @@
    ],
    "desc": "Black-green ore that dulls ordinary picks. Often found near meteorite falls and the Underdark.",
    "perish": "stable",
-   "value": 150
+   "value": 6
   },
   {
    "id": "coal",
@@ -135,7 +135,7 @@
    ],
    "desc": "Folded, carbon-hardened iron that holds an edge.",
    "perish": "stable",
-   "value": 0.22,
+   "value": 0.6,
    "recipe": {
     "components": [
      {
@@ -295,7 +295,7 @@
     "station": "forge",
     "dc": 15,
     "time": "2 days",
-    "gp": 20,
+    "gp": 10,
     "lore": "Mithral only flows at a white heat that ordinary forges struggle to reach; dwarven bellows help."
    }
   },
@@ -334,7 +334,7 @@
     "station": "forge",
     "dc": 16,
     "time": "3 days",
-    "gp": 30,
+    "gp": 0,
     "lore": "Coal alone cannot melt adamantine; smiths feed their forge with a fire elemental's core or salamander heart."
    }
   },
@@ -347,7 +347,7 @@
    ],
    "desc": "Dry, straight-grained hardwood for hafts, bows and staves.",
    "perish": "stable",
-   "value": 5
+   "value": 0.5
   },
   {
    "id": "cured-leather",
@@ -510,7 +510,7 @@
    "tier": "common",
    "tags": [
     "reagent",
-    "hide"
+    "leather"
    ],
    "desc": "Calfskin vellum, smooth enough to hold spell-script without bleeding.",
    "perish": "stable",

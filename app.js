@@ -350,10 +350,12 @@ function buildIndex(parts) {
 }
 const byName = (a, b) => a.name.localeCompare(b.name);
 const matches = (t, c) => c.any.every(x => t.tags.includes(x)) && ti(t.tier) >= ti(c.min || 'mundane');
+// what can fill an "any…" recipe slot: matching parts and plain gear, never a finished magic item
+const fitsSlot = (t, c) => matches(t, c) && !(t.kind === 'item' && t.tier !== 'mundane');
 function slotOptions(c) {
   if (c.m) return [D.things.get(c.m)].filter(Boolean);
   if (c.oneOf) return c.oneOf.map(id => D.things.get(id)).filter(Boolean);
-  const out = []; for (const t of D.things.values()) if (matches(t, c)) out.push(t);
+  const out = []; for (const t of D.things.values()) if (fitsSlot(t, c)) out.push(t);
   return out.sort((a, b) => ti(a.tier) - ti(b.tier) || byName(a, b));
 }
 function thingSub(t) {
@@ -367,7 +369,7 @@ function thingSub(t) {
   if (t.recipe) return 'Refined / crafted';
   return 'Trade good';
 }
-function linkOf(o) { return o.kind === 'monster' ? `#/monster/${o.id}` : o.kind === 'place' ? `#/place/${o.id}` : `#/${o.kind}/${o.id}`; }
+function linkOf(o) { if (o.kind === 'any') return o.href; return o.kind === 'monster' ? `#/monster/${o.id}` : o.kind === 'place' ? `#/place/${o.id}` : `#/${o.kind}/${o.id}`; }
 
 
 /* ================================================================ reachability (mirrors tools/playtest.py) */
@@ -398,7 +400,8 @@ function access(id, stack = new Set()) {
     stack.delete(id);
     if (ok) best = Math.min(best, lv);
   }
-  accMemo.set(id, best);
+  // a dead end met inside a loop (A needs B needs A) may only be a dead end on that path: only remember it from the top
+  if (best < 99 || !stack.size) accMemo.set(id, best);
   return best;
 }
 
@@ -609,7 +612,9 @@ function formDialog(title, fields, submit, onSubmit, onInput) {
 }
 const targetOpts = sel => bankTargets().map(t => `<option value="${esc(t.key)}"${t.key === sel ? ' selected' : ''}>${esc(t.name)}</option>`).join('');
 // What a trader pays for a thing: full value for its own kind of goods, half for the rest.
-const sellValue = (T, x) => (T.buys.some(b => (x.tags || []).includes(b) || x.cat === b) ? 1 : 0.5) * (x.value || 0);
+// The "Traders pay" setting scales it: 1 = list price (generous), 0.5 = half (closer to official treasure).
+const sellRate = () => { const r = +(DMS.sellRate ?? CFG.sellRate); return r > 0 && r <= 1 ? r : 1; };
+const sellValue = (T, x) => (T.buys.some(b => (x.tags || []).includes(b) || x.cat === b) ? 1 : 0.5) * (x.value || 0) * sellRate();
 // DM: someone buys from the trader. Price starts at the list price; change it to whatever was haggled.
 function tradeBuyDialog(stockIdx) {
   const T = DMS.trader, st = T && T.stock[stockIdx]; if (!st || !(st.q > 0)) return;
@@ -753,6 +758,9 @@ const PRESERVE = {
   '1 week': { need: null, life: 720, label: 'Seal it dry', done: 'Sealed dry' }
 };
 // Spoilage can be switched off for the party (clock bar), or by default in config.json ("spoilage": false).
+// optional rule: finer materials than a recipe needs give +2 on the crafting or cooking check
+const fineOn = () => (DMS.fineMat ?? CFG.fineMaterials) === true;
+const FINE_BOX = id => fineOn() ? `<label class="small" style="display:flex;gap:6px;align-items:center" title="Optional rule: at least one part of a higher tier than the recipe needs"><input type="checkbox" id="${id}"> Finer materials (+2)</label>` : '';
 const spoilOn = () => Party.spoil != null ? !!Party.spoil : CFG.spoilage !== false;
 // Each perishable part keeps a list of batches, so a fresh harvest never inherits an old stack's clock.
 // The party satchel's batches live with the party (Party.stamps); your own satchel's batches live
@@ -941,7 +949,7 @@ function allocate(r, inv) {
     let cands;
     if (c.m) cands = [c.m];
     else if (c.oneOf) cands = c.oneOf;
-    else cands = [...pool.keys()].filter(id => { const t = D.things.get(id); return t && matches(t, c); }).sort((a, b) => ti(D.things.get(a).tier) - ti(D.things.get(b).tier));
+    else cands = [...pool.keys()].filter(id => { const t = D.things.get(id); return t && fitsSlot(t, c); }).sort((a, b) => ti(D.things.get(a).tier) - ti(D.things.get(b).tier));
     for (const id of cands) {
       const have = pool.get(id) || 0; if (!have) continue;
       const take = Math.min(have, n); pool.set(id, have - take); used.push([id, take]); n -= take; if (!n) break;
@@ -960,7 +968,7 @@ function craftables() {
   const out = [];
   for (const t of D.things.values()) {
     const r = t.recipe; if (!r || !known(t)) continue;
-    const touches = r.components.some(c => c.m ? idSet.has(c.m) : c.oneOf ? c.oneOf.some(o => idSet.has(o)) : satThings.some(s => matches(s, c)));
+    const touches = r.components.some(c => c.m ? idSet.has(c.m) : c.oneOf ? c.oneOf.some(o => idSet.has(o)) : satThings.some(s => fitsSlot(s, c)));
     if (!touches) continue;
     const a = allocate(r, pool);
     out.push({ t, a });
@@ -970,7 +978,7 @@ function craftables() {
 
 
 /* ================================================================ config (site-wide, from config.json) */
-const CFG_DEFAULT = { dmPin: null, startInPlayerView: false, spoilage: true, packs: null, player: { places: 'all', creatures: 'beasts', materials: 'common', items: 'mundane', threat: 'vague' } };
+const CFG_DEFAULT = { dmPin: null, startInPlayerView: false, spoilage: true, fineMaterials: false, sellRate: 1, packs: null, player: { places: 'all', creatures: 'beasts', materials: 'common', items: 'mundane', threat: 'vague' } };
 let CFG = CFG_DEFAULT;
 async function loadConfig() {
   let c = window.CODEX_CONFIG || null;
@@ -1131,7 +1139,7 @@ function seeThing(t) {
   const src = D.src.get(t.id) || [];
   return !src.length || (D.gat.get(t.id) || []).length > 0 || src.some(x => monLevel(x.m) >= 2);
 }
-const seeAny = o => o.kind === 'monster' ? seeMon(o) : o.kind === 'place' ? seePlace(o) : seeThing(o);
+const seeAny = o => o.kind === 'any' ? true : o.kind === 'monster' ? seeMon(o) : o.kind === 'place' ? seePlace(o) : seeThing(o);
 function knowLink(o, cls = '') {
   if (seeAny(o)) return `<a href="${linkOf(o)}"${cls ? ` class="${cls}"` : ''}>${esc(o.name)}</a>`;
   return `<span class="unknown">${o.kind === 'monster' ? 'an unknown creature' : o.kind === 'place' ? 'an undiscovered place' : 'something undiscovered'}</span>`;
@@ -1415,7 +1423,7 @@ function usedInList(t) {
   for (const u of direct) { if (seen.has(u.t.id)) continue; seen.add(u.t.id); rows.push(u); }
   let fits = [];
   if (t.kind === 'material' || t.kind === 'item') {
-    for (const s of D.anySlots) if (!seen.has(s.t.id) && matches(t, s.c)) { seen.add(s.t.id); fits.push(s); }
+    for (const s of D.anySlots) if (!seen.has(s.t.id) && fitsSlot(t, s.c)) { seen.add(s.t.id); fits.push(s); }
   }
   const sortU = (a, b) => ti(a.t.tier) - ti(b.t.tier) || byName(a.t, b.t);
   rows.sort(sortU); fits.sort(sortU);
@@ -1676,7 +1684,7 @@ function cookPanel(t) {
   const C = COOK && COOK.id === t.id ? COOK : null, O = C && COOK_OUT[C.k];
   return fold('thing.cook', 'Cook it', `<p class="small muted">One ${esc((r.tools || []).map(x => TOOL_NAMES[x] || x).join(' or ') || "cook's utensils")} check${showDC() ? ` against DC ${esc(r.dc)}` : ''}, about ${esc(r.time)} at a ${esc((STATION_NAMES[r.station] || 'fire').toLowerCase())}. Makes ${plural(n, 'serving')}${t.perish ? `, which keep ${esc(t.perish)}` : ''}. See the <a href="#/rules/cook">cooking rules</a>.</p>
     <div class="frow"><label class="skill-in" for="ckBonus">Cook's bonus <input class="textin mono" type="number" id="ckBonus" value="${esc(b)}"></label><button class="btn sm" type="button" data-act="ckroll" data-id="${t.id}">Roll for me</button>
-      <label class="skill-in" for="ckTotal">…or the total you rolled <input class="textin mono" type="number" inputmode="numeric" id="ckTotal" placeholder="—"></label><button class="btn sm" type="button" data-act="ckcheck" data-id="${t.id}">Check</button></div>
+      <label class="skill-in" for="ckTotal">…or the total you rolled <input class="textin mono" type="number" inputmode="numeric" id="ckTotal" placeholder="—"></label><button class="btn sm" type="button" data-act="ckcheck" data-id="${t.id}">Check</button>${FINE_BOX('ckFine')}</div>
     ${O ? `<div class="cook-out"><span class="pill ${O[1]}">${O[0]}</span> <b>${plural(C.q, 'serving')}</b> <span class="small muted">${C.nat != null ? `rolled ${C.nat} → ${C.tot}` : `total ${C.tot}`}</span><p class="small" style="margin:6px 0 0">${esc(O[2])}${C.sick ? ' Anyone who tastes it makes a DC 10 Constitution save or is poisoned for 1 hour.' : ''}</p>
       <div class="frow" style="margin-top:8px">${miss.length ? `<span class="small" style="color:var(--danger)">Missing: ${miss.join(' · ')}</span>` : `<button class="btn sm primary" type="button" data-act="ckserve" data-id="${t.id}" data-to="mine">${svg('check')}${C.q ? `Serve: add ${plural(C.q, 'serving')} to my satchel` : 'Throw it out (the ingredients are used)'}</button>${C.q ? `<button class="btn sm" type="button" data-act="ckserve" data-id="${t.id}" data-to="party">…to the party satchel</button>` : ''}`}</div></div>` : (miss.length ? `<p class="small muted">Still missing: ${miss.join(' · ')}</p>` : '<p class="small" style="color:var(--ok)">Every ingredient is in hand.</p>')}
     <p class="small muted">Well fed: a creature enjoys one meal's effect at a time. Eating another replaces it.</p>`, { cls: 'card roller', id: 'cook', h: 'h3' });
@@ -1685,18 +1693,19 @@ function finalCheck(t) {
   const b = store.get('scavengers-codex.craftBonus', 5);
   return fold('thing.final', 'Roll the final check', `<p class="small muted">One ${esc((t.recipe.tools || []).map(x => TOOL_NAMES[x] || x).join(' or ') || 'tool')} check${showDC() ? ` against DC ${esc(t.recipe.dc)}` : ''}, following the <a href="#/rules/fail">success &amp; failure rules</a>.</p>
     <div class="frow"><label class="skill-in" for="fcBonus">Tool bonus <input class="textin mono" type="number" id="fcBonus" value="${esc(b)}"></label>
-    <label class="small" style="display:flex;gap:6px;align-items:center"><input type="checkbox" id="fcAdv"> Advantage (inspiration, a spell, a master's guidance)</label>
+    <label class="small" style="display:flex;gap:6px;align-items:center"><input type="checkbox" id="fcAdv"> Advantage (inspiration, a spell, a master's guidance)</label>${FINE_BOX('fcFine')}
     <button class="btn primary sm" type="button" data-act="fcroll" data-id="${t.id}">Roll for me</button></div>
     <div class="frow"><label class="skill-in" for="fcTotal">…or enter the total you rolled <input class="textin mono" type="number" inputmode="numeric" id="fcTotal" placeholder="—"></label><label class="small" style="display:flex;gap:6px;align-items:center"><input type="checkbox" id="fcNat1"> It was a natural 1</label></div><div id="fcOut"></div>`, { open: false, cls: 'card roller', id: 'fcheck', h: 'h3' });
 }
 function doFinalCheck(t, manual) {
   const bonus = parseInt($('#fcBonus').value, 10) || 0; store.set('scavengers-codex.craftBonus', bonus);
+  const fine = $('#fcFine') && $('#fcFine').checked ? 2 : 0;
   let nat, tot;
   if (manual !== undefined) {
     if (manual === '' || isNaN(+manual)) { $('#fcOut').innerHTML = ''; return; }
-    tot = +manual; nat = $('#fcNat1').checked ? 1 : null;
+    tot = +manual + fine; nat = $('#fcNat1').checked ? 1 : null;
   } else {
-    const a = d20(), b2 = d20(); nat = $('#fcAdv').checked ? Math.max(a, b2) : a; tot = nat + bonus;
+    const a = d20(), b2 = d20(); nat = $('#fcAdv').checked ? Math.max(a, b2) : a; tot = nat + bonus + fine;
     const ti2 = $('#fcTotal'); if (ti2) ti2.value = '';
   }
   const dc = t.recipe.dc, diff = tot - dc;
@@ -1708,7 +1717,7 @@ function doFinalCheck(t, manual) {
   else if (diff >= 10) { cls = 't-uncommon'; head = 'Masterwork!'; body = `The item is complete, and exceptional (d10): ${pick(MASTERWORKS)}`; }
   else { cls = 't-uncommon'; head = 'Success'; body = 'The item is complete. If it needs attunement, the crafter may attune to it now.'; }
   const vs = showDC() ? ` vs DC ${dc}` : '';
-  const how = manual !== undefined ? `total <b>${tot}</b>${vs}` : `d20 ${nat}${bonus >= 0 ? '+' : ''}${bonus} = <b>${tot}</b>${vs}`;
+  const how = (manual !== undefined ? `total <b>${tot}</b>${vs}` : `d20 ${nat}${bonus >= 0 ? '+' : ''}${bonus}${fine ? '+2' : ''} = <b>${tot}</b>${vs}`) + (fine ? ' <span class="small muted">(incl. +2 finer materials)</span>' : '');
   $('#fcOut').innerHTML = `<div class="fc-result"><span class="pill ${cls}">${head}</span> <span class="mono">${how}</span><p>${body}</p>${manual !== undefined ? '<p class="small muted">Quirks and masterwork boons above were rolled for you. Reroll by retyping the total.</p>' : ''}</div>`;
 }
 function quirkTables() {
@@ -2249,7 +2258,7 @@ function pDM() {
   } else if (DMS.tab === 'session') {
     body = sessionPanel(true);
   } else if (DMS.tab === 'settings') {
-    const P = CFG.player, cfgText = JSON.stringify({ dmPin: DMS.newPin ? pinHash(DMS.newPin) : (CFG.dmPin || store.get('scavengers-codex.localPin', null) || null), siteUrl: (DMS.siteUrl ?? CFG.siteUrl) || null, startInPlayerView: DMS.startPlayer ?? CFG.startInPlayerView, spoilage: DMS.spoilage ?? CFG.spoilage !== false, player: DMS.player || P, packs: Party.packs || CFG.packs || null }, null, 2);
+    const P = CFG.player, cfgText = JSON.stringify({ dmPin: DMS.newPin ? pinHash(DMS.newPin) : (CFG.dmPin || store.get('scavengers-codex.localPin', null) || null), siteUrl: (DMS.siteUrl ?? CFG.siteUrl) || null, startInPlayerView: DMS.startPlayer ?? CFG.startInPlayerView, spoilage: DMS.spoilage ?? CFG.spoilage !== false, fineMaterials: DMS.fineMat ?? CFG.fineMaterials === true, sellRate: sellRate(), player: DMS.player || P, packs: Party.packs || CFG.packs || null }, null, 2);
     const sel2 = (k, opts) => `<select class="select" data-pl="${k}">${opts.map(([v, l]) => `<option value="${v}"${(DMS.player || P)[k] === v ? ' selected' : ''}>${l}</option>`).join('')}</select>`;
     body = `<div class="card roller"><h2>What players know by default</h2>
         <p class="small muted">Everything else stays hidden in player view until it's discovered through a handout code, research, or by owning it.</p>
@@ -2260,7 +2269,9 @@ function pDM() {
           <label class="skill-in">Creature danger ${sel2('threat', [['vague', 'A vague word (“Deadly”)'], ['cr', 'Exact CR'], ['none', 'Nothing']])}</label></div>
         <p class="small muted">Players never see DCs or stat-block links, and see magic values only as a rough band (“a small fortune”).</p>
         <label class="small" style="display:flex;gap:6px;align-items:center"><input type="checkbox" data-pl="startPlayer"${(DMS.startPlayer ?? CFG.startInPlayerView) ? ' checked' : ''}> New visitors start in player view</label>
-        <label class="small" style="display:flex;gap:6px;align-items:center"><input type="checkbox" data-pl="spoilage"${(DMS.spoilage ?? CFG.spoilage !== false) ? ' checked' : ''}> Parts can spoil (a party can still switch it off on its clock)</label></div>
+        <label class="small" style="display:flex;gap:6px;align-items:center"><input type="checkbox" data-pl="spoilage"${(DMS.spoilage ?? CFG.spoilage !== false) ? ' checked' : ''}> Parts can spoil (a party can still switch it off on its clock)</label>
+        <label class="small" style="display:flex;gap:6px;align-items:center"><input type="checkbox" data-pl="fineMaterials"${(DMS.fineMat ?? CFG.fineMaterials === true) ? ' checked' : ''}> Optional rule: finer materials give +2 on crafting and cooking checks (<a href="#/rules/fail">rules</a>)</label>
+        <label class="small" style="display:flex;gap:6px;align-items:center">Traders pay <select class="select" data-pl="sellRate"><option value="1"${sellRate() === 1 ? ' selected' : ''}>the listed value (generous)</option><option value="0.5"${sellRate() === 0.5 ? ' selected' : ''}>half the listed value (closer to official treasure)</option></select></label></div>
       <div class="card roller"><h2>Your site’s address</h2>
         <p class="small muted">Used for clickable links and QR codes on handouts, so players never type a code. On GitHub Pages this is filled in for you; set it when you run the codex from a file or this preview.</p>
         <div class="frow"><input class="textin" id="siteUrl" data-dm="siteUrl" placeholder="https://you.github.io/codex/" value="${esc(DMS.siteUrl ?? CFG.siteUrl ?? '')}"><button class="btn sm" type="button" data-act="siteurl">Use on this device</button></div>
@@ -3221,8 +3232,9 @@ document.addEventListener('click', ev => {
     }
     case 'ckroll': case 'ckcheck': {
       const t = D.things.get(id); let tot, nat = null;
-      if (act === 'ckroll') { const b = parseInt(($('#ckBonus') || {}).value, 10) || 0; store.set('scavengers-codex.cookBonus', b); nat = d20(); tot = nat + b; }
-      else { const v = ($('#ckTotal') || {}).value; if (v === '' || v == null || isNaN(+v)) { toast('Type in the check total first'); break; } tot = +v; }
+      const fine = $('#ckFine') && $('#ckFine').checked ? 2 : 0;
+      if (act === 'ckroll') { const b = parseInt(($('#ckBonus') || {}).value, 10) || 0; store.set('scavengers-codex.cookBonus', b); nat = d20(); tot = nat + b + fine; }
+      else { const v = ($('#ckTotal') || {}).value; if (v === '' || v == null || isNaN(+v)) { toast('Type in the check total first'); break; } tot = +v + fine; }
       COOK = cookResult(t, tot, nat); rerender(); break;
     }
     case 'ckserve': {
@@ -3338,10 +3350,11 @@ document.addEventListener('toggle', ev => { if (ev.target.id === 'roller') store
 document.addEventListener('change', ev => {
   const el = ev.target;
   if (el.dataset.act === 'bdbuy') { bdBuy = el.checked; rerender(); return; }
+  if (el.id === 'fcFine') { const v = $('#fcTotal').value, b = document.querySelector('[data-act=fcroll]'); if (b && v !== '') doFinalCheck(D.things.get(b.dataset.id), v); return; }
   if (el.id === 'fcNat1') { const v = $('#fcTotal').value, b = document.querySelector('[data-act=fcroll]'); if (b && v !== '') doFinalCheck(D.things.get(b.dataset.id), v); return; }
   if (el.dataset.dm) { const k = el.dataset.dm; DMS[k] = el.type === 'checkbox' ? el.checked : el.tagName === 'SELECT' || el.type === 'text' || k === 'siteUrl' ? el.value : (parseInt(el.value, 10) || 0); if (k === 'hours') DMS.hours = Math.min(12, Math.max(1, DMS.hours)); if (k === 'lvl') DMS.lvl = Math.min(20, Math.max(1, DMS.lvl)); if (k === 'spec') { DMS.theme = ''; rerender(); } if (k === 'place') { DMS.wealth = ''; rerender(); } return; }
   if (el.dataset.hoty !== undefined) { DMS.bundle[+el.dataset.hoty][0] = el.value; rerender(); return; }
-  if (el.dataset.pl) { DMS.player = DMS.player || { ...CFG.player }; if (el.dataset.pl === 'startPlayer') DMS.startPlayer = el.checked; else if (el.dataset.pl === 'spoilage') DMS.spoilage = el.checked; else DMS.player[el.dataset.pl] = el.value; rerender(); return; }
+  if (el.dataset.pl) { DMS.player = DMS.player || { ...CFG.player }; if (el.dataset.pl === 'startPlayer') DMS.startPlayer = el.checked; else if (el.dataset.pl === 'spoilage') DMS.spoilage = el.checked; else if (el.dataset.pl === 'fineMaterials') DMS.fineMat = el.checked; else if (el.dataset.pl === 'sellRate') DMS.sellRate = +el.value; else DMS.player[el.dataset.pl] = el.value; rerender(); return; }
   if (el.id === 'newPin') { DMS.newPin = el.value; rerender(); return; }
   if (el.dataset.act === 'useparty') { useParty = el.checked; store.set('scavengers-codex.useParty', useParty); rerender(); return; }
   if (el.dataset.act === 'pqty') { Party.set(el.dataset.id, parseInt(el.value, 10) || 0); return; }
@@ -3370,7 +3383,14 @@ P.web = '<circle cx="5" cy="6" r="2.2"/><circle cx="19" cy="7" r="2.2"/><circle 
 const WEB = new Map(); let webSeq = 0;
 const WEB_KEY = 'scavengers-codex.web.v1';
 const WEBS = Object.assign({ depth: 1, focus: 'players', tier: 'legendary' }, store.get(WEB_KEY, {}));
-const nkey = o => (o.kind === 'monster' ? 'm' : o.kind === 'place' ? 'p' : 't') + ':' + o.id;
+const nkey = o => (o.kind === 'monster' ? 'm' : o.kind === 'place' ? 'p' : o.kind === 'any' ? 'a' : 't') + ':' + o.id;
+// an "any hide (common or better)" slot shows up on the map as one bubble that opens the matching parts
+const ANYN = new Map();
+function anyNode(c) {
+  const min = c.min || 'mundane', id = [...c.any].sort().join('+') + '@' + min;
+  if (!ANYN.has(id)) ANYN.set(id, { kind: 'any', id, name: c.label || 'Any ' + c.any.join(' '), tier: min === 'mundane' ? undefined : min, tags: c.any, href: `#/tag/${c.any.map(encodeURIComponent).join('+')}${min !== 'mundane' ? '?min=' + min : ''}` });
+  return ANYN.get(id);
+}
 const webHref = o => `#/web/${o.kind}/${encodeURIComponent(o.id)}`;
 // every direct link of one entry, split into what feeds it (up) and what it feeds (down)
 function webLinks(o) {
@@ -3386,7 +3406,10 @@ function webLinks(o) {
     for (const { m } of D.src.get(o.id) || []) put(up, { o: m, rel: 'harvest' });
     for (const { e } of D.gat.get(o.id) || []) put(up, { o: e, rel: 'gather' });
     const comps = ((o.recipe || {}).components || []).slice().sort((a, b) => (a.m ? 0 : 1) - (b.m ? 0 : 1));
-    for (const c of comps) for (const id of c.m ? [c.m] : c.oneOf || []) { const t = D.things.get(id); if (t) put(up, { o: t, rel: 'part', role: c.role, opt: !c.m }); }
+    for (const c of comps) {
+      if (c.any) { put(up, { o: anyNode(c), rel: 'part', role: c.role, opt: true }); continue; }
+      for (const id of c.m ? [c.m] : c.oneOf || []) { const t = D.things.get(id); if (t) put(up, { o: t, rel: 'part', role: c.role, opt: !c.m }); }
+    }
     for (const u of D.usedIn.get(o.id) || []) put(down, { o: u.t, rel: 'part', role: u.c.role, opt: u.via === 'option' });
   }
   return { up, down };
@@ -3580,8 +3603,8 @@ function webInfo(wrap, k) {
     return;
   }
   if (n.more) { const an = G.N.get(n.anchor).o; box.innerHTML = `<b>${n.more} more</b> <span class="small muted">connected to ${esc(an.name)}.</span> <a class="btn sm" href="${webHref(an)}">${svg('web')}Centre the map on ${esc(an.name)}</a>`; return; }
-  const o = n.o, sub = o.kind === 'monster' ? `${cap(o.type)}${n.heard ? ' · known by reputation' : ''}` : o.kind === 'place' ? 'Place' : thingSub(o);
-  box.innerHTML = `${ico(o)}<span class="wi-t"><b>${esc(o.name)}</b><br><span class="small muted">${esc(sub)}</span></span>${o.tier ? pill(o.tier) : ''}<a class="btn sm primary" href="${linkOf(o)}">Open</a>${n.centre ? '' : `<a class="btn sm" href="${webHref(o)}">${svg('web')}Centre here</a>`}`;
+  const o = n.o, sub = o.kind === 'any' ? 'Any part that fits: open it to see them all' : o.kind === 'monster' ? `${cap(o.type)}${n.heard ? ' · known by reputation' : ''}` : o.kind === 'place' ? 'Place' : thingSub(o);
+  box.innerHTML = `${ico(o)}<span class="wi-t"><b>${esc(o.name)}</b><br><span class="small muted">${esc(sub)}</span></span>${o.tier ? pill(o.tier) : ''}<a class="btn sm primary" href="${linkOf(o)}">Open</a>${n.centre || o.kind === 'any' ? '' : `<a class="btn sm" href="${webHref(o)}">${svg('web')}Centre here</a>`}`;
 }
 function wireWebs(root = document) { root.querySelectorAll('[data-web]').forEach(w => { if (w.closest('details:not([open])')) return; drawWeb(w); }); }
 document.addEventListener('pointerover', ev => { const n = ev.target.closest && ev.target.closest('.wn'); if (!n) return; const w = n.closest('[data-web]'); if (w && !w._sel) webLight(w, n.dataset.k); });

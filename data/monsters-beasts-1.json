@@ -323,7 +323,7 @@
    ],
    "desc": "A vast, heavy pelt of brown fur. Sleeping under one is like sleeping beside a banked hearth.",
    "perish": "1 day",
-   "value": 1,
+   "value": 15,
    "recipe": null
   },
   {
@@ -437,7 +437,7 @@
    ],
    "desc": "Patterned, glossy skin that stretches and grips. Wrapped around hilts and bow grips it never slips.",
    "perish": "1 day",
-   "value": 1,
+   "value": 15,
    "recipe": null
   },
   {
@@ -452,7 +452,7 @@
    ],
    "desc": "Bands of flat, fibrous muscle that still clench when cut. Dried into cords of unnatural holding strength.",
    "perish": "1 day",
-   "value": 1,
+   "value": 10,
    "recipe": null
   },
   {
@@ -509,7 +509,7 @@
    ],
    "desc": "Ridged, armoured skin with bony plates in the back. Tanned, it makes stiff, dagger-proof leather.",
    "perish": "1 day",
-   "value": 1,
+   "value": 15,
    "recipe": null
   },
   {
@@ -789,7 +789,7 @@
    ],
    "desc": "A broad, palmate antler rack. Carvers make bows, pick-handles and battle charms from it.",
    "perish": "stable",
-   "value": 1,
+   "value": 20,
    "recipe": null
   },
   {
@@ -853,6 +853,7 @@
    "name": "Frog Skin",
    "tier": "mundane",
    "tags": [
+    "hide",
     "slime",
     "swimming",
     "beast"
@@ -1061,7 +1062,7 @@
    ],
    "desc": "Bristle-covered hide a thumb thick. Tans into scarred, sturdy leather for armour.",
    "perish": "1 day",
-   "value": 2,
+   "value": 35,
    "recipe": null
   },
   {
@@ -1351,7 +1352,7 @@
    ],
    "desc": "A vast crown of antler spanning twice a man's height. Carved into bows, staves and druidic totems.",
    "perish": "stable",
-   "value": 1,
+   "value": 40,
    "recipe": null
   },
   {
@@ -1365,7 +1366,7 @@
    ],
    "desc": "A huge, soft, fawn-brown hide. Enough for a lodge's walls.",
    "perish": "1 day",
-   "value": 2,
+   "value": 35,
    "recipe": null
   },
   {
@@ -2316,12 +2317,12 @@
    ],
    "desc": "A slender, pale rope twisted from cleaned spider silk. Lighter and stronger than hemp and barely sticky to the touch.",
    "perish": "stable",
-   "value": 30,
+   "value": 35,
    "recipe": {
     "components": [
      {
       "m": "giant-spider-silk",
-      "q": 2,
+      "q": 1,
       "role": "base"
      },
      {

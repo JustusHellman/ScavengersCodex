@@ -139,7 +139,7 @@ A pack may use anything in the base codex. If it uses another pack's content, li
 `node tools/test_homebrew.js` checks that the in-browser checker and `tools/validate.py` agree.
 
 ## Balance and playtesting
-See `PLAYTEST.md`. Run `python3 tools/playtest.py` after editing data to catch unreachable items, dead-end materials, grind and mis-tiered keystones. It also simulates 3,000 growing seasons for every plant in `data/cultivation.json` and flags any bed that earns more than a skilled worker's wage.
+See `PLAYTEST.md`. Run `python3 tools/playtest.py` after editing data to catch unreachable items, dead-end materials, grind and mis-tiered keystones. It also simulates 3,000 growing seasons for every plant in `data/cultivation.json` and flags any bed that earns more than a skilled worker's wage. `python3 tools/economy.py` checks prices: recipes that cost more than the item, refined materials worth less than their inputs, and items priced outside their rarity's range. When a recipe costs too much, trim the recipe rather than raising the item's price (see SCHEMA.md, "Pricing principle").
 
 ## Third-party code
 `statblocks.json` (the SRD stat blocks of the codex creatures) was converted from the 5e-database project by Adrian Padua, Christopher Ward and contributors (MIT licence, https://github.com/5e-bits/5e-database) with `tools/statblocks.py`; the stat blocks themselves are SRD content (see below).

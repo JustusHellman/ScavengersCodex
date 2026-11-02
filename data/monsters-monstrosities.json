@@ -212,7 +212,7 @@
    ],
    "desc": "Serrated pincers strong enough to crush a horse's leg; make fine picks and digging tools.",
    "perish": "stable",
-   "value": 2,
+   "value": 20,
    "recipe": null
   },
   {
@@ -1036,7 +1036,7 @@
    ],
    "desc": "Doughy flesh that turns the ground to sticky mire when pressed down.",
    "perish": "1 day",
-   "value": 3,
+   "value": 20,
    "recipe": null
   },
   {
@@ -1126,7 +1126,7 @@
    ],
    "desc": "A sharp, horn-coloured beak that crushes bone. Carved into picks and war-hooks.",
    "perish": "stable",
-   "value": 2,
+   "value": 20,
    "recipe": null
   },
   {
@@ -1212,7 +1212,7 @@
    ],
    "desc": "Tawny lion pelt with a feathered ruff.",
    "perish": "1 day",
-   "value": 1,
+   "value": 25,
    "recipe": null
   },
   {
@@ -1390,7 +1390,7 @@
    ],
    "desc": "Filthy hooked talons, sharp as knives and never quite clean. Set into grapnel hooks and cruel hand-claws.",
    "perish": "stable",
-   "value": 3,
+   "value": 20,
    "recipe": null
   },
   {
@@ -1889,7 +1889,7 @@
    ],
    "desc": "Jagged tusks stained dark from demonic rites.",
    "perish": "stable",
-   "value": 1,
+   "value": 20,
    "recipe": null
   },
   {
@@ -2732,6 +2732,7 @@
    "name": "Winter Wolf Pelt",
    "tier": "uncommon",
    "tags": [
+    "hide",
     "fur",
     "cold",
     "stealth",

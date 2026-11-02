@@ -600,7 +600,7 @@ table.fight td{vertical-align:top}
   position:relative;overflow:auto;max-height:78vh;border:1px solid var(--line);border-radius:var(--radius);background:
   radial-gradient(circle at 1px 1px,var(--line-2) 1px,transparent 0) 0 0/18px 18px,var(--surface-2);overscroll-behavior:contain}
 .webwrap.small{max-height:60vh}
-.k-place{--kc:var(--accent)} .k-monster{--kc:var(--danger)} .k-material{--kc:var(--warn)} .k-item{--kc:var(--t-rare)}
+.k-place{--kc:var(--accent)} .k-monster{--kc:var(--danger)} .k-material{--kc:var(--warn)} .k-any{--kc:var(--warn)} .k-item{--kc:var(--t-rare)}
 .weblegend .lg.fog{border-style:dashed;--kc:var(--muted);color:var(--muted)}
 .webcanvas{position:relative;margin:0 auto}
 .webedges{position:absolute;inset:0;pointer-events:none;overflow:visible}
@@ -689,3 +689,5 @@ html.embedded .btn.primary{box-shadow:inset 0 1px 0 rgb(255 255 255 / .18),inset
 .unid-opts{display:flex;flex-direction:column;gap:8px;padding:10px;border:1px solid var(--line);border-radius:var(--radius)}
 .unid-opts textarea{width:100%;min-height:54px;resize:vertical;display:block;margin-top:4px}
 .unid-opts input[name=look]{width:100%;display:block;margin-top:4px}
+
+.wn.k-any{border-style:dashed}

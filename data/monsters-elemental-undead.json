@@ -496,7 +496,7 @@
    ],
    "desc": "A chipped, granite-hard claw. Ground down it makes a potent abrasive; whole, a vicious dagger-point.",
    "perish": "stable",
-   "value": 2,
+   "value": 20,
    "recipe": null
   },
   {

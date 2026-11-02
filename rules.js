@@ -118,6 +118,7 @@ window.CODEX_RULES = `
 <li><b>Failure by 5–9:</b> a supporting or binding component is spoiled (DM's choice). Replace it and spend 25% more time.</li>
 <li><b>Failure by 10 or more, or a natural 1 on a rare+ item:</b> the enchantment backfires. The keystone survives, but the base and other components are lost. The DM may add a <i>quirk</i> instead of destroying everything.</li>
 <li><b>Success by 10 or more:</b> a <b>masterwork</b>. Roll on the masterwork table below.</li>
+<li><b>Optional rule, finer materials</b> (switch it on in DM tools → Player setup): if at least one part is of a higher tier than its slot needs, for example a dire wolf pelt where any common hide would do, the crafter gets +2 on the final check. It doesn't stack, and it never changes what the item is worth. The same applies to cooking.</li>
 <li><b>Optional quirks:</b> on a failure by 5 or more, the DM may let the crafter push on. The item is finished, but it carries a random <b>quirk</b> (see below).</li>
 </ul>
 
@@ -152,7 +153,8 @@ window.CODEX_RULES = `
 <h2 id="r-dm">11. Guidance for the DM</h2>
 <ul>
 <li><b>Keystones are the throttle.</b> Don't let shops sell keystones freely. Supporting parts and bindings can be bought in cities at their listed value.</li>
-<li><b>Selling parts:</b> specialists (alchemists, tanners, wizards) pay the listed value, and general merchants pay half.</li>
+<li><b>Selling parts:</b> specialists (alchemists, tanners, wizards) pay the listed value, and general merchants pay half. Harvesting every creature adds up fast: a fight's parts are often worth about as much as a treasure hoard. If gold piles up too quickly, set traders to pay half in DM tools → Player setup.</li>
+<li><b>Selling crafted magic items</b> (a common table rule, not enforced by the codex): most buyers pay about half an item's value, and finding someone to pay full price is an adventure of its own. That keeps crafting rewarding without turning it into a gold mine.</li>
 <li><b>Homebrew items</b> are marked <i>Homebrew</i>. They were balanced against SRD items of the same rarity, but treat them as proposals.</li>
 <li><b>Swap freely.</b> If a keystone doesn't exist in your campaign, any material with the same tags and tier is a fair substitute. That's what the tags are for.</li>
 <li><b>"Craftable from party level"</b> on each item is an estimate. It takes the easiest source for every component (lowest-CR creature, a guardian's CR, planar travel at about level 11–15) and assumes a party can take on a creature of CR ≈ its level. Use the <i>Party level</i> filter on Items to see what your group could realistically make right now.</li>

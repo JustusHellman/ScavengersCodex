@@ -38,9 +38,12 @@
       "label": "Forge heat source"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -89,9 +92,13 @@
       "role": "supporting"
      },
      {
-      "m": "silk-cloth",
+      "any": [
+       "silk"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any silk (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -145,9 +152,12 @@
       "label": "Forge heat source"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -196,9 +206,13 @@
       "role": "supporting"
      },
      {
-      "m": "silk-cloth",
+      "any": [
+       "silk"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any silk (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -252,9 +266,12 @@
       "label": "Forge heat source"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -303,9 +320,13 @@
       "role": "supporting"
      },
      {
-      "m": "silk-cloth",
+      "any": [
+       "silk"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any silk (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -359,9 +380,12 @@
       "label": "Forge heat source"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -410,9 +434,13 @@
       "role": "supporting"
      },
      {
-      "m": "silk-cloth",
+      "any": [
+       "silk"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any silk (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -466,9 +494,12 @@
       "label": "Forge heat source"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -517,9 +548,13 @@
       "role": "supporting"
      },
      {
-      "m": "silk-cloth",
+      "any": [
+       "silk"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any silk (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -573,9 +608,12 @@
       "label": "Forge heat source"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -624,9 +662,13 @@
       "role": "supporting"
      },
      {
-      "m": "silk-cloth",
+      "any": [
+       "silk"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any silk (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -680,9 +722,12 @@
       "label": "Forge heat source"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -731,9 +776,13 @@
       "role": "supporting"
      },
      {
-      "m": "silk-cloth",
+      "any": [
+       "silk"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any silk (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -787,9 +836,12 @@
       "label": "Forge heat source"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -838,9 +890,13 @@
       "role": "supporting"
      },
      {
-      "m": "silk-cloth",
+      "any": [
+       "silk"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any silk (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -900,9 +956,13 @@
       "role": "supporting"
      },
      {
-      "m": "hardened-leather",
+      "any": [
+       "leather",
+       "toughness"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any toughness leather"
      }
     ],
     "tools": [
@@ -965,9 +1025,13 @@
       "role": "supporting"
      },
      {
-      "m": "hardened-leather",
+      "any": [
+       "leather",
+       "toughness"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any toughness leather"
      }
     ],
     "tools": [
@@ -1030,9 +1094,13 @@
       "role": "supporting"
      },
      {
-      "m": "hardened-leather",
+      "any": [
+       "leather",
+       "toughness"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any toughness leather"
      }
     ],
     "tools": [
@@ -1091,9 +1159,12 @@
       "label": "Tough timber backing"
      },
      {
-      "m": "hardened-leather",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -1152,9 +1223,12 @@
       "label": "Tough timber backing"
      },
      {
-      "m": "hardened-leather",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -1213,9 +1287,12 @@
       "label": "Tough timber backing"
      },
      {
-      "m": "hardened-leather",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -1545,13 +1622,14 @@
       "label": "Bundle of ammunition"
      },
      {
-      "any": [
-       "feather"
-      ],
       "q": 1,
       "role": "keystone",
-      "min": "very-rare",
-      "label": "Magical flight feather (very-rare+)"
+      "oneOf": [
+       "earthheart-geode",
+       "planetar-feather",
+       "solar-feather"
+      ],
+      "label": "Very rare tip or fletching"
      },
      {
       "m": "silver-dust",
@@ -1620,9 +1698,12 @@
       "role": "supporting"
      },
      {
-      "m": "hardened-leather",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -1681,9 +1762,12 @@
       "role": "supporting"
      },
      {
-      "m": "hardened-leather",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -1731,7 +1815,8 @@
        "young-red-dragon-scales",
        "remorhaz-carapace",
        "efreeti-ember-blood",
-       "fire-giant-blood"
+       "fire-giant-blood",
+       "eternal-coal"
       ],
       "q": 1,
       "role": "keystone",
@@ -1743,9 +1828,12 @@
       "role": "supporting"
      },
      {
-      "m": "hardened-leather",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -1803,9 +1891,12 @@
       "role": "supporting"
      },
      {
-      "m": "hardened-leather",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -1865,9 +1956,12 @@
       "role": "supporting"
      },
      {
-      "m": "hardened-leather",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -1926,9 +2020,12 @@
       "role": "supporting"
      },
      {
-      "m": "hardened-leather",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -1987,9 +2084,12 @@
       "role": "supporting"
      },
      {
-      "m": "hardened-leather",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -2048,9 +2148,12 @@
       "role": "supporting"
      },
      {
-      "m": "hardened-leather",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -2109,9 +2212,12 @@
       "role": "supporting"
      },
      {
-      "m": "hardened-leather",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -2159,7 +2265,8 @@
        "thunderhead-shard",
        "djinni-tempest-core",
        "androsphinx-roar-larynx",
-       "young-blue-dragon-essence"
+       "young-blue-dragon-essence",
+       "stormglass"
       ],
       "q": 1,
       "role": "keystone",
@@ -2171,9 +2278,12 @@
       "role": "supporting"
      },
      {
-      "m": "hardened-leather",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -2337,21 +2447,29 @@
       "oneOf": [
        "djinni-tempest-core",
        "cloud-giant-cloudstuff",
-       "roc-feather"
+       "roc-feather",
+       "stormglass"
       ],
       "q": 1,
       "role": "keystone",
       "label": "Wind-bending part"
      },
      {
-      "m": "giant-eagle-talons",
+      "any": [
+       "claw"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any claw (common or better)",
+      "min": "common"
      },
      {
-      "m": "hardened-leather",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -2395,12 +2513,12 @@
      {
       "oneOf": [
        "chain-devil-chains",
-       "clay-golem-shem-tablet",
+       "meteoric-iron",
        "rakshasa-claw"
       ],
       "q": 1,
       "role": "keystone",
-      "label": "Binding cursed relic"
+      "label": "Attraction keystone"
      },
      {
       "m": "lodestone",
@@ -2524,9 +2642,12 @@
       "role": "supporting"
      },
      {
-      "m": "hardened-leather",
+      "any": [
+       "leather"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -2646,9 +2767,12 @@
       "role": "supporting"
      },
      {
-      "m": "cured-leather",
+      "any": [
+       "leather"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -2704,9 +2828,12 @@
       "role": "supporting"
      },
      {
-      "m": "cured-leather",
+      "any": [
+       "leather"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -2762,9 +2889,12 @@
       "role": "supporting"
      },
      {
-      "m": "cured-leather",
+      "any": [
+       "leather"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -2820,9 +2950,12 @@
       "role": "supporting"
      },
      {
-      "m": "cured-leather",
+      "any": [
+       "leather"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -2878,9 +3011,12 @@
       "role": "supporting"
      },
      {
-      "m": "cured-leather",
+      "any": [
+       "leather"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -2936,9 +3072,12 @@
       "role": "supporting"
      },
      {
-      "m": "cured-leather",
+      "any": [
+       "leather"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -2994,9 +3133,12 @@
       "role": "supporting"
      },
      {
-      "m": "cured-leather",
+      "any": [
+       "leather"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -3052,9 +3194,12 @@
       "role": "supporting"
      },
      {
-      "m": "cured-leather",
+      "any": [
+       "leather"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -3110,9 +3255,12 @@
       "role": "supporting"
      },
      {
-      "m": "cured-leather",
+      "any": [
+       "leather"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -3168,9 +3316,12 @@
       "role": "supporting"
      },
      {
-      "m": "cured-leather",
+      "any": [
+       "leather"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -3232,9 +3383,13 @@
       "role": "supporting"
      },
      {
-      "m": "hardened-leather",
+      "any": [
+       "leather",
+       "toughness"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any toughness leather"
      }
     ],
     "tools": [
@@ -3291,9 +3446,14 @@
       "role": "supporting"
      },
      {
-      "m": "moonpetal",
+      "any": [
+       "flower",
+       "fey"
+      ],
       "q": 3,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any fey flower (uncommon or better)",
+      "min": "uncommon"
      }
     ],
     "tools": [
@@ -3406,9 +3566,14 @@
       "label": "Sea-born part"
      },
      {
-      "m": "current-kelp",
+      "any": [
+       "herb",
+       "water"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any water herb (uncommon or better)",
+      "min": "uncommon"
      },
      {
       "m": "merfolk-coral-charm",
@@ -3531,14 +3696,23 @@
       "label": "Heart of a raging brute"
      },
      {
-      "m": "minotaur-horn",
+      "any": [
+       "horn",
+       "strength"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any strength horn (uncommon or better)",
+      "min": "uncommon"
      },
      {
-      "m": "dread-nettle",
+      "any": [
+       "herb"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any herb (uncommon or better)",
+      "min": "uncommon"
      }
     ],
     "tools": [
@@ -3594,9 +3768,14 @@
       "role": "supporting"
      },
      {
-      "m": "giant-poisonous-snake-fangs",
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "oneOf": [
+       "giant-poisonous-snake-fangs",
+       "poisonous-snake-fang",
+       "basilisk-fang"
+      ],
+      "label": "Venomous fangs"
      }
     ],
     "tools": [
@@ -3781,9 +3960,13 @@
       "label": "Dragon fang, beak or heart-blood (rare+)"
      },
      {
-      "m": "wyrmbane-thistle",
+      "any": [
+       "herb"
+      ],
       "q": 3,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any herb (uncommon or better)",
+      "min": "uncommon"
      },
      {
       "m": "dragons-blood-resin",
@@ -4599,19 +4782,30 @@
       "label": "Unerring celestial part"
      },
      {
-      "m": "erinyes-feather",
+      "any": [
+       "feather"
+      ],
       "q": 3,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any feather (rare or better)",
+      "min": "rare"
      },
      {
-      "m": "ancient-oak-heartwood",
+      "any": [
+       "wood"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any wood (rare or better)",
+      "min": "rare"
      },
      {
-      "m": "bowstring",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread"
      }
     ],
     "tools": [
@@ -4654,11 +4848,11 @@
       "oneOf": [
        "marilith-scales",
        "marilith-essence",
-       "ageless-lotus"
+       "marilith-hand"
       ],
       "q": 1,
       "role": "keystone",
-      "label": "Very rare swiftness"
+      "label": "Marilith part"
      },
      {
       "m": "quickthorn-berry",
@@ -4787,9 +4981,14 @@
       "role": "supporting"
      },
      {
-      "m": "wight-barrow-dust",
+      "any": [
+       "dust",
+       "necrotic"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any necrotic dust (uncommon or better)",
+      "min": "uncommon"
      }
     ],
     "tools": [
@@ -4824,12 +5023,14 @@
    "recipe": {
     "components": [
      {
-      "any": [
-       "sword"
-      ],
       "q": 1,
       "role": "base",
-      "label": "Any slashing sword"
+      "oneOf": [
+       "longsword",
+       "greatsword",
+       "scimitar"
+      ],
+      "label": "A slashing sword"
      },
      {
       "any": [
@@ -4901,9 +5102,13 @@
       "label": "Unhealing wound source"
      },
      {
-      "m": "hydra-fang",
+      "any": [
+       "tooth"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any tooth (uncommon or better)",
+      "min": "uncommon"
      },
      {
       "m": "bloodmoss",
@@ -4959,9 +5164,14 @@
       "label": "Sea-ruling part"
      },
      {
-      "m": "sahuagin-shark-call-shell",
+      "any": [
+       "shell",
+       "water"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any water shell (common or better)",
+      "min": "common"
      },
      {
       "m": "sahuagin-shark-tooth-trident-tip",
@@ -5024,9 +5234,14 @@
       "label": "Savage rare part"
      },
      {
-      "m": "giant-shark-teeth",
+      "any": [
+       "tooth",
+       "strength"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any strength tooth (uncommon or better)",
+      "min": "uncommon"
      }
     ],
     "tools": [
@@ -5061,12 +5276,14 @@
    "recipe": {
     "components": [
      {
-      "any": [
-       "sword"
-      ],
       "q": 1,
       "role": "base",
-      "label": "Any slashing sword"
+      "oneOf": [
+       "longsword",
+       "greatsword",
+       "scimitar"
+      ],
+      "label": "A slashing sword"
      },
      {
       "oneOf": [
@@ -5384,9 +5601,13 @@
       "label": "Very rare monstrosity part"
      },
      {
-      "m": "wyrmbane-thistle",
+      "any": [
+       "herb"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any herb (uncommon or better)",
+      "min": "uncommon"
      },
      {
       "m": "bone-glue",

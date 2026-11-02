@@ -51,7 +51,7 @@ def main():
     for e in envs.values():
         for g in e["gather"]:
             if g["m"] in things: gat[g["m"]].append((e, g))
-    def match(t, c): return all(x in t["tags"] for x in c["any"]) and ti(t["tier"]) >= ti(c.get("min", "mundane"))
+    def match(t, c): return all(x in t["tags"] for x in c["any"]) and ti(t["tier"]) >= ti(c.get("min", "mundane")) and not (t.get("_k") == "items" and t["tier"] != "mundane")  # magic items never fill an any-slot
     def options(c):
         if "m" in c: return [things[c["m"]]]
         if "oneOf" in c: return [things[x] for x in c["oneOf"]]
@@ -84,7 +84,9 @@ def main():
                 if a[0] >= 99: ok = False; break
                 lv = max(lv, a[0])
             if ok: best = min(best, (lv, "craft"))
-        memo[tid] = best
+        # a dead end found while inside a loop (A needs B needs A) may only be a dead end on that path,
+        # so only remember it when it was worked out from the top
+        if best[0] < 99 or not stack: memo[tid] = best
         return best
 
     rep = collections.defaultdict(list)

@@ -303,7 +303,7 @@
     "station": "alchemy-lab",
     "dc": 23,
     "time": "3 days",
-    "gp": 5000,
+    "gp": 3500,
     "level": 17,
     "spells": [
      "enlarge/reduce"
@@ -744,9 +744,12 @@
       "role": "supporting"
      },
      {
-      "m": "pitch",
+      "any": [
+       "resin"
+      ],
       "q": 10,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any resin"
      }
     ],
     "tools": [
@@ -926,19 +929,22 @@
       "label": "Space-folding keystone (uncommon+)"
      },
      {
-      "m": "silk-cloth",
-      "q": 2,
-      "role": "supporting"
+      "any": [
+       "silk"
+      ],
+      "q": 4,
+      "role": "supporting",
+      "label": "Any silk (common or better)",
+      "min": "common"
      },
      {
-      "m": "giant-spider-silk",
-      "q": 2,
-      "role": "supporting"
-     },
-     {
-      "m": "spider-silk-thread",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -1004,9 +1010,13 @@
       "role": "supporting"
      },
      {
-      "m": "horsehair",
+      "any": [
+       "hair",
+       "beast"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any beast hair"
      }
     ],
     "tools": [
@@ -1073,9 +1083,13 @@
       "role": "supporting"
      },
      {
-      "m": "horsehair",
+      "any": [
+       "hair",
+       "beast"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any beast hair"
      }
     ],
     "tools": [
@@ -1142,9 +1156,13 @@
       "role": "supporting"
      },
      {
-      "m": "horsehair",
+      "any": [
+       "hair",
+       "beast"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any beast hair"
      }
     ],
     "tools": [
@@ -1212,9 +1230,12 @@
       "role": "supporting"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any leather"
      }
     ],
     "tools": [
@@ -1276,9 +1297,14 @@
       "role": "supporting"
      },
      {
-      "m": "giant-constrictor-snake-coil-muscle",
+      "any": [
+       "sinew",
+       "strength"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any strength sinew (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -1341,9 +1367,14 @@
       "role": "supporting"
      },
      {
-      "m": "giant-constrictor-snake-coil-muscle",
+      "any": [
+       "sinew",
+       "strength"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any strength sinew (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -1402,9 +1433,14 @@
       "role": "supporting"
      },
      {
-      "m": "giant-constrictor-snake-coil-muscle",
+      "any": [
+       "sinew",
+       "strength"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any strength sinew (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -1463,9 +1499,14 @@
       "role": "supporting"
      },
      {
-      "m": "giant-constrictor-snake-coil-muscle",
+      "any": [
+       "sinew",
+       "strength"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any strength sinew (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -1524,9 +1565,14 @@
       "role": "supporting"
      },
      {
-      "m": "giant-constrictor-snake-coil-muscle",
+      "any": [
+       "sinew",
+       "strength"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any strength sinew (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -1585,9 +1631,14 @@
       "role": "supporting"
      },
      {
-      "m": "giant-constrictor-snake-coil-muscle",
+      "any": [
+       "sinew",
+       "strength"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any strength sinew (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -1814,7 +1865,7 @@
     "clothing",
     "speed"
    ],
-   "effect": "Your walking speed becomes 30 feet no matter how laden you are, and you can leap three times as far as normal.",
+   "effect": "While you wear these boots, your walking speed becomes 30 feet unless it is higher, and it isn't reduced by encumbrance or heavy armor. You can also jump three times the normal distance, though no farther than your remaining movement allows.",
    "value": 500,
    "recipe": {
     "components": [
@@ -1834,14 +1885,23 @@
       "label": "Swift-hoof or wing keystone (uncommon+)"
      },
      {
-      "m": "axe-beak-leg-sinew",
+      "any": [
+       "sinew",
+       "speed"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any speed sinew (common or better)",
+      "min": "common"
      },
      {
-      "m": "giant-goat-hooves",
+      "any": [
+       "horn"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any horn (common or better)",
+      "min": "common"
      },
      {
       "m": "giant-frog-skin",
@@ -1899,14 +1959,24 @@
       "label": "Arctic keystone (uncommon+)"
      },
      {
-      "m": "polar-bear-pelt",
+      "any": [
+       "fur",
+       "cold"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any cold fur (common or better)",
+      "min": "common"
      },
      {
-      "m": "polar-bear-fat",
+      "any": [
+       "fat",
+       "cold"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any cold fat (common or better)",
+      "min": "common"
      },
      {
       "m": "frost-lichen",
@@ -2105,9 +2175,13 @@
       "role": "supporting"
      },
      {
-      "m": "frankincense",
+      "any": [
+       "resin"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any resin (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -2151,12 +2225,11 @@
      {
       "oneOf": [
        "manticore-tail-spike",
-       "hell-hound-essence",
        "erinyes-eye"
       ],
       "q": 1,
       "role": "keystone",
-      "label": "Unerring hunter keystone (uncommon+)"
+      "label": "Marksman keystone (manticore spike or erinyes eye)"
      },
      {
       "m": "giant-eagle-eye",
@@ -2169,9 +2242,12 @@
       "role": "supporting"
      },
      {
-      "m": "bowstring",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread"
      }
     ],
     "tools": [
@@ -2350,14 +2426,23 @@
       "role": "supporting"
      },
      {
-      "m": "hippogriff-feather",
+      "any": [
+       "feather",
+       "flight"
+      ],
       "q": 3,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any flight feather (common or better)",
+      "min": "common"
      },
      {
-      "m": "elder-wood",
+      "any": [
+       "wood"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any wood (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -2410,9 +2495,12 @@
       "label": "Divine or infernal messenger essence (very rare)"
      },
      {
-      "m": "beeswax",
+      "any": [
+       "wax"
+      ],
       "q": 3,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any wax"
      },
      {
       "m": "frankincense",
@@ -2485,9 +2573,13 @@
       "label": "Air bladder or lung"
      },
      {
-      "m": "bladderwrack",
+      "any": [
+       "herb",
+       "water"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any water herb"
      }
     ],
     "tools": [
@@ -2609,14 +2701,22 @@
       "role": "supporting"
      },
      {
-      "m": "silk-cloth",
-      "q": 10,
-      "role": "supporting"
+      "any": [
+       "silk"
+      ],
+      "q": 4,
+      "role": "supporting",
+      "label": "Any silk (common or better)",
+      "min": "common"
      },
      {
-      "m": "silk-thread",
+      "any": [
+       "thread"
+      ],
       "q": 4,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -2785,9 +2885,13 @@
       "role": "keystone"
      },
      {
-      "m": "phase-spider-silk",
+      "any": [
+       "silk"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any silk (uncommon or better)",
+      "min": "uncommon"
      },
      {
       "m": "giant-spider-eyes",
@@ -2908,9 +3012,14 @@
       "role": "base"
      },
      {
-      "m": "dire-wolf-pelt",
+      "any": [
+       "fur",
+       "stealth"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any stealth fur (common or better)",
+      "min": "common"
      },
      {
       "m": "whisperleaf-vine",
@@ -2928,9 +3037,13 @@
       "label": "Minor fey essence"
      },
      {
-      "m": "spider-silk-thread",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -2991,9 +3104,14 @@
       "role": "supporting"
      },
      {
-      "m": "rowan-wood",
+      "any": [
+       "wood",
+       "protection"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any protection wood (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -3121,9 +3239,14 @@
       "label": "Shark skin"
      },
      {
-      "m": "plesiosaurus-flipper",
+      "any": [
+       "hide",
+       "swimming"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any swimming hide (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -3600,9 +3723,13 @@
       "role": "supporting"
      },
      {
-      "m": "arcane-ink",
+      "any": [
+       "ink"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any ink (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -3859,9 +3986,13 @@
       "role": "supporting"
      },
      {
-      "m": "spider-silk-thread",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -3893,7 +4024,7 @@
     "planar",
     "binding"
    ],
-   "effect": "A sealed brass bottle; open it and an efreeti bursts out in smoke, and depending on its mood it may serve you, grant wishes or attack.",
+   "effect": "A sealed bottle bound in brass; open it and an efreeti bursts out in smoke, and depending on its mood it may serve you, grant wishes or attack.",
    "value": 20000,
    "recipe": {
     "components": [
@@ -4178,9 +4309,12 @@
       "role": "supporting"
      },
      {
-      "m": "pine-resin",
+      "any": [
+       "resin"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any resin"
      },
      {
       "m": "darkmantle-darkness-gland",
@@ -4341,14 +4475,14 @@
       "role": "base"
      },
      {
-      "any": [
-       "eye",
-       "senses"
-      ],
-      "min": "uncommon",
       "q": 1,
       "role": "keystone",
-      "label": "Supernatural eye (uncommon+)"
+      "oneOf": [
+       "phase-spider-eye",
+       "ettin-wakeful-eye",
+       "green-hag-eye"
+      ],
+      "label": "Keen supernatural eye"
      },
      {
       "m": "giant-eagle-eye",
@@ -4472,14 +4606,13 @@
       "label": "Great-bird feather (rare+): roc feather or essence, or a deva's feather"
      },
      {
-      "m": "giant-eagle-pinion",
-      "q": 2,
-      "role": "supporting"
-     },
-     {
-      "m": "griffon-feather",
-      "q": 1,
-      "role": "supporting"
+      "any": [
+       "feather"
+      ],
+      "q": 3,
+      "role": "supporting",
+      "label": "Any feather (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -4594,14 +4727,21 @@
       "label": "Keystone (rare+)"
      },
      {
-      "m": "driftwood",
+      "any": [
+       "wood"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any wood"
      },
      {
-      "m": "current-kelp",
+      "any": [
+       "herb"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any herb (uncommon or better)",
+      "min": "uncommon"
      }
     ],
     "tools": [
@@ -4659,9 +4799,12 @@
       "role": "supporting"
      },
      {
-      "m": "oak-gall",
+      "any": [
+       "ink"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any ink"
      }
     ],
     "tools": [
@@ -4715,14 +4858,20 @@
       "label": "Keystone (rare+)"
      },
      {
-      "m": "leather-strips",
+      "any": [
+       "leather"
+      ],
       "q": 3,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any leather"
      },
      {
-      "m": "bowstring",
+      "any": [
+       "thread"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any thread"
      }
     ],
     "tools": [
@@ -4827,15 +4976,20 @@
       "role": "base"
      },
      {
-      "m": "gloomwood",
+      "any": [
+       "wood"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any wood (uncommon or better)",
+      "min": "uncommon"
      },
      {
       "oneOf": [
        "erinyes-essence",
        "bone-devil-wing",
-       "horned-devil-wing"
+       "horned-devil-wing",
+       "skyfloat-thistle"
       ],
       "q": 1,
       "role": "keystone",
@@ -4901,16 +5055,22 @@
      {
       "oneOf": [
        "gynosphinx-essence",
-       "androsphinx-mane-hair"
+       "androsphinx-mane-hair",
+       "sun-amber"
       ],
       "q": 1,
       "role": "keystone",
       "label": "Sphinx keystone (rare+)"
      },
      {
-      "m": "lion-mane",
+      "any": [
+       "fur",
+       "beast"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any beast fur (common or better)",
+      "min": "common"
      },
      {
       "m": "lion-heart",
@@ -4963,28 +5123,17 @@
      },
      {
       "oneOf": [
-       "hydra-essence",
        "stone-giant-essence",
-       "horned-devil-essence"
+       "frost-giant-essence"
       ],
       "q": 1,
       "role": "keystone",
-      "label": "Keystone of many terrors (rare+)"
+      "label": "Mountain-giant essence"
      },
      {
-      "m": "giant-goat-horns",
       "q": 3,
-      "role": "supporting"
-     },
-     {
-      "m": "chimera-goat-horn",
-      "q": 1,
-      "role": "supporting"
-     },
-     {
-      "m": "goat-hide",
-      "q": 3,
-      "role": "supporting"
+      "role": "supporting",
+      "m": "giant-goat-horns"
      }
     ],
     "tools": [
@@ -5113,9 +5262,13 @@
       "role": "supporting"
      },
      {
-      "m": "nightmare-mane",
+      "any": [
+       "hair"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any hair (uncommon or better)",
+      "min": "uncommon"
      }
     ],
     "tools": [
@@ -5178,9 +5331,13 @@
       "role": "supporting"
      },
      {
-      "m": "mastiff-fang",
+      "any": [
+       "tooth",
+       "beast"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any beast tooth"
      }
     ],
     "tools": [
@@ -5237,9 +5394,14 @@
       "label": "Telepathic keystone (rare+)"
      },
      {
-      "m": "giant-owl-feathers",
+      "any": [
+       "feather",
+       "beast"
+      ],
       "q": 3,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any beast feather (common or better)",
+      "min": "common"
      },
      {
       "m": "giant-owl-eyes",
@@ -5371,14 +5533,22 @@
       "role": "supporting"
      },
      {
-      "m": "fine-hardwood",
+      "any": [
+       "wood"
+      ],
       "q": 6,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any wood (common or better)",
+      "min": "common"
      },
      {
-      "m": "driftwood",
+      "any": [
+       "wood",
+       "water"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any water wood"
      }
     ],
     "tools": [
@@ -5562,9 +5732,13 @@
       "role": "supporting"
      },
      {
-      "m": "eyebright",
+      "any": [
+       "herb"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any herb (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -5682,9 +5856,14 @@
       "role": "supporting"
      },
      {
-      "m": "giant-frog-skin",
+      "any": [
+       "hide",
+       "swimming"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any swimming hide (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -5808,9 +5987,13 @@
       "label": "Plane-slipping reagent (colour-pool glass, blink dog fang or faerie-ring mushroom)"
      },
      {
-      "m": "spider-silk-thread",
+      "any": [
+       "thread"
+      ],
       "q": 2,
-      "role": "binding"
+      "role": "binding",
+      "label": "Any thread (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -5862,9 +6045,14 @@
       "label": "Many-faced keystone (uncommon+)"
      },
      {
-      "m": "octopus-skin",
+      "any": [
+       "hide",
+       "illusion"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any illusion hide (common or better)",
+      "min": "common"
      },
      {
       "m": "mimic-pseudopod",
@@ -5926,9 +6114,14 @@
       "role": "supporting"
      },
      {
-      "m": "raven-feather",
+      "any": [
+       "feather",
+       "knowledge"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any knowledge feather (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -6178,9 +6371,13 @@
       "role": "supporting"
      },
      {
-      "m": "scout-trail-map",
+      "any": [
+       "ink"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any ink (common or better)",
+      "min": "common"
      }
     ],
     "tools": [
@@ -6303,14 +6500,18 @@
       "role": "supporting"
      },
      {
-      "m": "berserker-trophy-necklace",
+      "any": [
+       "tooth"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any tooth (common or better)",
+      "min": "common"
      },
      {
-      "m": "mammoth-ivory",
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "m": "mammoth-ivory"
      }
     ],
     "tools": [
@@ -6355,7 +6556,7 @@
       "oneOf": [
        "deva-essence",
        "fire-giant-essence",
-       "horned-devil-essence"
+       "frost-giant-essence"
       ],
       "q": 1,
       "role": "keystone",
@@ -6367,14 +6568,18 @@
       "role": "supporting"
      },
      {
-      "m": "berserker-trophy-necklace",
+      "any": [
+       "tooth"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any tooth (common or better)",
+      "min": "common"
      },
      {
-      "m": "mammoth-ivory",
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "m": "mammoth-ivory"
      }
     ],
     "tools": [
@@ -6431,14 +6636,22 @@
       "role": "supporting"
      },
      {
-      "m": "berserker-trophy-necklace",
+      "any": [
+       "tooth"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any tooth (common or better)",
+      "min": "common"
      },
      {
-      "m": "mammoth-ivory",
+      "any": [
+       "horn"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any horn (uncommon or better)",
+      "min": "uncommon"
      }
     ],
     "tools": [
@@ -6495,14 +6708,22 @@
       "role": "supporting"
      },
      {
-      "m": "berserker-trophy-necklace",
+      "any": [
+       "tooth"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any tooth (common or better)",
+      "min": "common"
      },
      {
-      "m": "mammoth-ivory",
+      "any": [
+       "horn"
+      ],
       "q": 1,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any horn (uncommon or better)",
+      "min": "uncommon"
      }
     ],
     "tools": [
@@ -6555,9 +6776,14 @@
       "label": "Weightless keystone (very rare)"
      },
      {
-      "m": "pegasus-flight-feather",
+      "any": [
+       "feather",
+       "flight"
+      ],
       "q": 4,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any flight feather (uncommon or better)",
+      "min": "uncommon"
      },
      {
       "m": "solid-cloud",
@@ -6612,14 +6838,24 @@
       "label": "Quickening keystone (rare+)"
      },
      {
-      "m": "warhorse-hoof",
+      "any": [
+       "horn",
+       "speed"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any speed horn (common or better)",
+      "min": "common"
      },
      {
-      "m": "riding-horse-sinew",
+      "any": [
+       "sinew",
+       "speed"
+      ],
       "q": 2,
-      "role": "supporting"
+      "role": "supporting",
+      "label": "Any speed sinew (common or better)",
+      "min": "common"
      },
      {
       "m": "unicorn-hooves",
