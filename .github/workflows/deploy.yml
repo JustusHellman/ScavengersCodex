@@ -27,6 +27,13 @@ jobs:
       - name: Check the data for broken links and ids
         run: python3 tools/validate.py
 
+      # The lists other sites and the app read: rebuilt from the data, so a new pack, creature or
+      # item shows up everywhere without remembering to regenerate them by hand.
+      - name: Rebuild the homebrew index and the catalog (DnDocs reads catalog.json)
+        run: |
+          python3 tools/pack_index.py
+          python3 tools/catalog.py
+
       - name: Set up Pages
         uses: actions/configure-pages@v5
 
